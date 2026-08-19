@@ -1,15 +1,79 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const capabilityRows = [
-  ["运力吞吐", 91, "1,284 t", 71, "462 t"],
-  ["地外能源", 88, "29.4 MW", 64, "7.8 MW"],
-  ["地月节点", 82, "8 ACTIVE", 77, "6 ACTIVE"],
-  ["原位利用", 54, "6 DEMOS", 62, "7 DEMOS"],
-  ["轨道算力", 96, "7,800+ SAT", 58, "1,100+ SAT"],
-  ["深空驻留", 86, "2,114 人·日", 49, "827 人·日"],
-] as const;
+type Metric = {
+  id: string;
+  title: string;
+  eyebrow: string;
+  unit: string;
+  years: string[];
+  us: number[];
+  cn: number[];
+  decimals?: number;
+  note: string;
+};
+
+const metricSeries: Metric[] = [
+  { id: "mass", title: "年度入轨质量", eyebrow: "MASS TO ORBIT", unit: "吨", years: ["2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [214, 261, 384, 471, 612, 746, 880, 1004, 1120], cn: [96, 118, 132, 178, 213, 257, 312, 361, 415], note: "年度入轨干质量 + 推演值" },
+  { id: "power", title: "地外在役功率", eyebrow: "OFF-PLANET POWER", unit: "MW", years: ["2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [16.2, 17.1, 18.4, 20.3, 22.6, 24.1, 26.5, 28.1, 29.4], cn: [0.3, 0.5, 1.1, 2.8, 4.9, 5.8, 6.6, 7.2, 7.8], decimals: 1, note: "在役平台装机功率衰减模型" },
+  { id: "nodes", title: "地月活跃节点", eyebrow: "CISLUNAR NODES", unit: "个", years: ["2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [2, 2, 3, 3, 4, 5, 6, 7, 8], cn: [1, 1, 1, 2, 2, 3, 5, 5, 6], note: "L1 / L2 / NRHO / ELFO / 月面在役资产" },
+  { id: "isru", title: "ISRU 验证任务", eyebrow: "ISRU DEMONSTRATIONS", unit: "项", years: ["2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [1, 1, 2, 2, 3, 3, 4, 5, 6], cn: [2, 3, 3, 4, 4, 5, 6, 6, 7], note: "累计完成或在役的原位资源验证" },
+  { id: "mesh", title: "活跃宽带卫星", eyebrow: "ORBITAL MESH", unit: "颗", years: ["2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [67, 183, 1018, 1944, 3271, 4892, 6350, 7100, 7800], cn: [0, 0, 6, 24, 78, 196, 420, 760, 1100], note: "活跃宽带星座对象数" },
+  { id: "human", title: "地外人类活动量", eyebrow: "OFF-PLANET HUMAN DAYS", unit: "人·日", years: ["2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [1288, 1354, 1431, 1610, 1728, 1840, 1965, 2050, 2114], cn: [0, 0, 0, 196, 547, 694, 731, 788, 827], note: "按国籍归属的年度在轨驻留人·日" },
+];
+
+function LineChart({ years, us, cn, label }: { years: string[]; us: number[]; cn: number[]; label: string }) {
+  const ref = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = ref.current;
+    if (!canvas) return;
+    const draw = () => {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.max(1, rect.width * dpr);
+      canvas.height = Math.max(1, rect.height * dpr);
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      ctx.scale(dpr, dpr);
+      const width = rect.width;
+      const height = rect.height;
+      const pad = { l: 42, r: 16, t: 18, b: 28 };
+      const plotW = width - pad.l - pad.r;
+      const plotH = height - pad.t - pad.b;
+      const max = Math.max(...us, ...cn, 1) * 1.08;
+      ctx.clearRect(0, 0, width, height);
+      ctx.font = "9px ui-monospace, SFMono-Regular, Menlo, monospace";
+      ctx.textBaseline = "middle";
+      for (let i = 0; i < 4; i++) {
+        const y = pad.t + (plotH * i) / 3;
+        ctx.strokeStyle = "#363a43";
+        ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(width - pad.r, y); ctx.stroke();
+        ctx.fillStyle = "#747985";
+        const value = max * (1 - i / 3);
+        ctx.fillText(value >= 1000 ? `${(value / 1000).toFixed(1)}k` : value.toFixed(value < 10 ? 1 : 0), 3, y);
+      }
+      const x = (i: number) => pad.l + (plotW * i) / Math.max(years.length - 1, 1);
+      const y = (v: number) => pad.t + plotH - (v / max) * plotH;
+      const plot = (values: number[], color: string) => {
+        ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.lineJoin = "round"; ctx.lineCap = "round";
+        ctx.beginPath(); values.forEach((v, i) => i ? ctx.lineTo(x(i), y(v)) : ctx.moveTo(x(i), y(v))); ctx.stroke();
+        values.forEach((v, i) => { ctx.fillStyle = color; ctx.beginPath(); ctx.arc(x(i), y(v), i === values.length - 1 ? 3.5 : 2, 0, Math.PI * 2); ctx.fill(); });
+      };
+      plot(us, "#d9ff43"); plot(cn, "#ff6045");
+      ctx.fillStyle = "#747985"; ctx.textBaseline = "bottom";
+      [0, Math.floor((years.length - 1) / 2), years.length - 1].forEach((i) => { const text = years[i]; const tw = ctx.measureText(text).width; ctx.fillText(text, Math.min(Math.max(x(i) - tw / 2, pad.l), width - pad.r - tw), height - 4); });
+    };
+    draw();
+    const observer = new ResizeObserver(draw);
+    observer.observe(canvas);
+    return () => observer.disconnect();
+  }, [years, us, cn]);
+
+  return <canvas ref={ref} className="metric-canvas" role="img" aria-label={`${label}：美国与中国的连续时间序列`} />;
+}
 
 const launchYears = [
   { y: "1957", us: 2, cn: 0, other: 8 }, { y: "1970", us: 52, cn: 1, other: 31 },
@@ -30,6 +94,7 @@ const domains = [
 
 export default function Home() {
   const [orbit, setOrbit] = useState<"nrho" | "elfo">("nrho");
+  const [range, setRange] = useState<"5y" | "all">("all");
 
   return (
     <main id="top" className="dashboard-shell">
@@ -41,50 +106,44 @@ export default function Home() {
 
       <section id="overview" className="rivalry-hero">
         <div className="hero-copy">
-          <p className="eyebrow">US × CHINA · 地月工业能力竞速</p>
-          <h1>谁先建成<br />地月工业链？</h1>
-          <p className="dek">这不是一次“插旗竞赛”，而是运力、能源、战略节点、原位资源与轨道算力的系统对决。六个物理维度，直接观察中美能力差距与增长斜率。</p>
-          <div className="hero-actions"><a className="primary-button" href="#comparison">查看完整对比 <span>↓</span></a><span className="updated">当前快照<br /><strong>2026 YTD · D 级样例</strong></span></div>
+          <p className="eyebrow">US × CHINA · RAW TELEMETRY</p>
+          <h1>中美地月<br />工业竞速</h1>
+          <p className="dek">拒绝主观打分，只追踪可以回到任务、载荷和工程状态的原始数字。每项能力单独成图，用连续时间序列观察真实差距与发展斜率。</p>
+          <div className="hero-actions"><a className="primary-button" href="#comparison">进入时序看板 <span>↓</span></a><span className="updated">数据模式<br /><strong>RAW VALUES · D 级样例</strong></span></div>
         </div>
-        <aside className="hero-duel" aria-label="中美综合工业能力直接对比">
-          <div className="duel-kicker"><span>综合工业能力指数</span><span>FRONTIER = 100</span></div>
-          <div className="duel-scores">
-            <div className="duel-country us"><span>US · 美国</span><strong>83.0</strong><small>运力 / 算力领先</small></div>
-            <div className="duel-center"><span>Δ</span><strong>19.5</strong><small>指数点</small></div>
-            <div className="duel-country cn"><span>CN · 中国</span><strong>63.5</strong><small>节点 / ISRU 追近</small></div>
-          </div>
-          <div className="duel-mini-list">
-            {capabilityRows.map(([label, usScore, , cnScore]) => <div className="duel-mini-row" key={label}>
-              <b>{usScore}</b><div className="mini-track us"><i style={{ width: `${usScore}%` }} /></div><span>{label}</span><div className="mini-track cn"><i style={{ width: `${cnScore}%` }} /></div><b>{cnScore}</b>
-            </div>)}
-          </div>
-          <div className="duel-legend"><span><i />美国</span><b>六域直观对照</b><span><i />中国</span></div>
+        <aside className="hero-telemetry" aria-label="中美关键原始数据快照">
+          <div className="telemetry-head"><span>2026 YTD / RAW SNAPSHOT</span><span>6 SIGNALS ONLINE</span></div>
+          <div className="telemetry-country-head"><span>指标</span><b>US · 美国</b><b>CN · 中国</b></div>
+          {metricSeries.slice(0, 4).map((metric) => <div className="telemetry-row" key={metric.id}><span>{metric.title}<small>{metric.unit}</small></span><strong>{metric.us.at(-1)?.toLocaleString()}</strong><strong>{metric.cn.at(-1)?.toLocaleString()}</strong></div>)}
+          <div className="telemetry-foot"><span><i className="legend-us" />美国</span><span><i className="legend-cn" />中国</span><b>连续时间序列 ↓</b></div>
         </aside>
       </section>
 
-      <section className="mission-strip" aria-label="关键任务读数">
-        <div><span>01 / 年入轨质量</span><strong>1,842<small> t</small></strong><em>+31.4% YOY</em></div>
-        <div><span>02 / 地外在役功率</span><strong>38.6<small> MW</small></strong><em>+8.7% YOY</em></div>
-        <div><span>03 / 地月节点</span><strong>14<small> 个</small></strong><em>6 ACTIVE</em></div>
-        <div><span>04 / 地外人类活动</span><strong>2,941<small> 人·日</small></strong><em>2026 YTD</em></div>
+      <section className="dashboard-toolbar" aria-label="时序看板控制栏">
+        <div><span className="live-dot" /> 数据截止：2026.08.18</div>
+        <div className="series-legend"><span><i className="legend-us" />US · 美国</span><span><i className="legend-cn" />CN · 中国</span></div>
+        <div className="range-control" role="group" aria-label="选择时间范围"><button className={range === "5y" ? "selected" : ""} onClick={() => setRange("5y")}>近 5 年</button><button className={range === "all" ? "selected" : ""} onClick={() => setRange("all")}>全部可用</button></div>
       </section>
 
-      <section id="comparison" className="section comparison-section">
+      <section id="comparison" className="section metric-console-section">
         <div className="section-heading">
-          <div><p className="section-index">01 — BILATERAL CAPABILITY</p><h2>双边能力剖面</h2></div>
-          <p>同一物理口径下的中美地月工业能力比较。<br />指数以该指标域的可观察全球前沿为 100。</p>
+          <div><p className="section-index">01 — CONTINUOUS METRICS</p><h2>双边时序看板</h2></div>
+          <p>每个面板只表达一个工程量。纵轴使用原始单位；<br />两国曲线共享同一量程，不做归一化评分。</p>
         </div>
-        <div className="direct-comparison" aria-label="中美六项能力直接对照">
-          <div className="comparison-head"><div><span>US · UNITED STATES</span><strong>83.0</strong><small>综合指数</small></div><p>差距正在从“能否抵达”转向<br />“能否高频、低成本、持续运营”</p><div><span>CN · CHINA</span><strong>63.5</strong><small>综合指数</small></div></div>
-          <div className="comparison-column-labels"><span>工程读数</span><span>指数</span><b>指标域</b><span>指数</span><span>工程读数</span></div>
-          {capabilityRows.map(([label, usScore, usMetric, cnScore, cnMetric]) => <div className="pair-row" key={label}>
-            <div className="metric-reading us"><b>{usMetric}</b><span>美国</span></div>
-            <div className="pair-score us"><strong>{usScore}</strong><div><i style={{ width: `${usScore}%` }} /></div></div>
-            <h3>{label}<small>{Math.abs(usScore - cnScore)} PT GAP</small></h3>
-            <div className="pair-score cn"><div><i style={{ width: `${cnScore}%` }} /></div><strong>{cnScore}</strong></div>
-            <div className="metric-reading cn"><b>{cnMetric}</b><span>中国</span></div>
-          </div>)}
-          <div className="comparison-foot"><span>← 美国相对优势</span><b>同一物理口径 · FRONTIER = 100</b><span>中国相对优势 →</span></div>
+        <div className="metric-dashboard">
+          {metricSeries.map((metric, index) => {
+            const start = range === "5y" ? -5 : 0;
+            const years = metric.years.slice(start);
+            const us = metric.us.slice(start);
+            const cn = metric.cn.slice(start);
+            const format = (v: number) => v.toLocaleString("zh-CN", { minimumFractionDigits: metric.decimals ?? 0, maximumFractionDigits: metric.decimals ?? 0 });
+            return <article className="metric-panel" key={metric.id}>
+              <header><div><span>{String(index + 1).padStart(2, "0")} / {metric.eyebrow}</span><h3>{metric.title}</h3></div><b>{metric.unit}</b></header>
+              <div className="metric-current"><div><span><i className="legend-us" />US</span><strong>{format(us.at(-1) ?? 0)}<small>{metric.unit}</small></strong></div><div><span><i className="legend-cn" />CN</span><strong>{format(cn.at(-1) ?? 0)}<small>{metric.unit}</small></strong></div></div>
+              <LineChart years={years} us={us} cn={cn} label={metric.title} />
+              <div className="metric-panel-foot"><span>{metric.note}</span><b>D 级 · 演示数据</b></div>
+            </article>;
+          })}
         </div>
       </section>
 

@@ -19,7 +19,7 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
   assert.match(html, /Project Cislunar/);
-  assert.match(html, /谁先建成/);
+  assert.match(html, /中美地月/);
   assert.match(html, /US · 美国/);
   assert.match(html, /CN · 中国/);
   assert.match(html, /0\.73042/);
@@ -34,7 +34,10 @@ test("ships product UI without starter dependencies", async () => {
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
   assert.match(page, /useState/);
-  assert.match(page, /中美六项能力直接对照/);
+  assert.match(page, /双边时序看板/);
+  assert.match(page, /metric-canvas/);
+  assert.match(page, /选择时间范围/);
+  assert.doesNotMatch(page, /83\.0|63\.5|综合工业能力指数/);
   assert.doesNotMatch(page, /aria-label="选择国家"/);
   assert.match(layout, /lang="zh-CN"/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
