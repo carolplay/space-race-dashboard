@@ -2,16 +2,14 @@
 
 import { useState } from "react";
 
-const capability = {
-  us: [
-    ["运力吞吐", 91, "1,284 t"], ["地外能源", 88, "29.4 MW"], ["地月节点", 82, "8 ACTIVE"],
-    ["原位利用", 54, "6 DEMOS"], ["轨道算力", 96, "7,800+ SAT"], ["深空驻留", 86, "2,114 人·日"],
-  ],
-  cn: [
-    ["运力吞吐", 71, "462 t"], ["地外能源", 64, "7.8 MW"], ["地月节点", 77, "6 ACTIVE"],
-    ["原位利用", 62, "7 DEMOS"], ["轨道算力", 58, "1,100+ SAT"], ["深空驻留", 49, "827 人·日"],
-  ],
-} as const;
+const capabilityRows = [
+  ["运力吞吐", 91, "1,284 t", 71, "462 t"],
+  ["地外能源", 88, "29.4 MW", 64, "7.8 MW"],
+  ["地月节点", 82, "8 ACTIVE", 77, "6 ACTIVE"],
+  ["原位利用", 54, "6 DEMOS", 62, "7 DEMOS"],
+  ["轨道算力", 96, "7,800+ SAT", 58, "1,100+ SAT"],
+  ["深空驻留", 86, "2,114 人·日", 49, "827 人·日"],
+] as const;
 
 const launchYears = [
   { y: "1957", us: 2, cn: 0, other: 8 }, { y: "1970", us: 52, cn: 1, other: 31 },
@@ -31,9 +29,7 @@ const domains = [
 ] as const;
 
 export default function Home() {
-  const [selected, setSelected] = useState<"us" | "cn">("us");
   const [orbit, setOrbit] = useState<"nrho" | "elfo">("nrho");
-  const profile = capability[selected];
 
   return (
     <main id="top" className="dashboard-shell">
@@ -43,19 +39,26 @@ export default function Home() {
         <div className="signal"><span /> 模型在线 · 2026</div>
       </header>
 
-      <section id="overview" className="hero-grid">
+      <section id="overview" className="rivalry-hero">
         <div className="hero-copy">
-          <p className="eyebrow">CIVILIZATION STATUS · 地月工业化追踪</p>
-          <h1>人类距离<br />I 型文明还有多远？</h1>
-          <p className="dek">从进入轨道的每一千克质量，到地外捕获的每一瓦能量。用可核验的工程数据，观察地月空间从探索前沿转向工业疆域。</p>
-          <div className="hero-actions"><a className="primary-button" href="#comparison">进入任务控制台 <span>↗</span></a><span className="updated">数据版本<br /><strong>ALPHA 0.1 · 示例模型</strong></span></div>
+          <p className="eyebrow">US × CHINA · 地月工业能力竞速</p>
+          <h1>谁先建成<br />地月工业链？</h1>
+          <p className="dek">这不是一次“插旗竞赛”，而是运力、能源、战略节点、原位资源与轨道算力的系统对决。六个物理维度，直接观察中美能力差距与增长斜率。</p>
+          <div className="hero-actions"><a className="primary-button" href="#comparison">查看完整对比 <span>↓</span></a><span className="updated">当前快照<br /><strong>2026 YTD · D 级样例</strong></span></div>
         </div>
-        <aside className="k-card" aria-label="卡尔达肖夫文明等级">
-          <div className="k-head"><span>卡尔达肖夫指数</span><span>MODEL / EST.</span></div>
-          <div className="k-number">0.73042</div><div className="k-delta">↗ +0.00018 <span>/ 年</span></div>
-          <div className="progress-track"><span /></div>
-          <div className="scale-labels"><span>K 0.70</span><strong>当前：近地轨道工业化</strong><span>K 1.00</span></div>
-          <div className="formula">K = ( log₁₀ P − 6 ) / 10</div>
+        <aside className="hero-duel" aria-label="中美综合工业能力直接对比">
+          <div className="duel-kicker"><span>综合工业能力指数</span><span>FRONTIER = 100</span></div>
+          <div className="duel-scores">
+            <div className="duel-country us"><span>US · 美国</span><strong>83.0</strong><small>运力 / 算力领先</small></div>
+            <div className="duel-center"><span>Δ</span><strong>19.5</strong><small>指数点</small></div>
+            <div className="duel-country cn"><span>CN · 中国</span><strong>63.5</strong><small>节点 / ISRU 追近</small></div>
+          </div>
+          <div className="duel-mini-list">
+            {capabilityRows.map(([label, usScore, , cnScore]) => <div className="duel-mini-row" key={label}>
+              <b>{usScore}</b><div className="mini-track us"><i style={{ width: `${usScore}%` }} /></div><span>{label}</span><div className="mini-track cn"><i style={{ width: `${cnScore}%` }} /></div><b>{cnScore}</b>
+            </div>)}
+          </div>
+          <div className="duel-legend"><span><i />美国</span><b>六域直观对照</b><span><i />中国</span></div>
         </aside>
       </section>
 
@@ -71,23 +74,17 @@ export default function Home() {
           <div><p className="section-index">01 — BILATERAL CAPABILITY</p><h2>双边能力剖面</h2></div>
           <p>同一物理口径下的中美地月工业能力比较。<br />指数以该指标域的可观察全球前沿为 100。</p>
         </div>
-        <div className="comparison-grid">
-          <div className="profile-panel">
-            <div className="country-tabs" role="group" aria-label="选择国家">
-              <button className={selected === "us" ? "selected" : ""} onClick={() => setSelected("us")}><span>US</span> 美国</button>
-              <button className={selected === "cn" ? "selected" : ""} onClick={() => setSelected("cn")}><span>CN</span> 中国</button>
-            </div>
-            <div className="profile-summary"><strong>{selected === "us" ? "83.0" : "63.5"}</strong><span>综合工业能力指数<br /><b>{selected === "us" ? "领先：运力 / 轨道算力" : "领先：地月任务密度"}</b></span></div>
-            <div className="capability-list">
-              {profile.map(([label, score, metric]) => <div className="cap-row" key={label}><div><span>{label}</span><b>{metric}</b></div><div className="cap-track"><i style={{ width: `${score}%` }} /></div><em>{score}</em></div>)}
-            </div>
-          </div>
-          <div className="versus-panel" aria-label="中美能力总览">
-            <div className="versus-title"><span>US</span><b>能力差值</b><span>CN</span></div>
-            <div className="orbit-rings"><div className="ring ring-a" /><div className="ring ring-b" /><div className="planet-dot">Δ</div><span className="sat-dot sat-one" /><span className="sat-dot sat-two" /></div>
-            <div className="versus-score"><div><strong>83.0</strong><span>美国</span></div><div className="delta-box">+19.5<br /><small>指数点</small></div><div><strong>63.5</strong><span>中国</span></div></div>
-            <p>差距正在从“能否抵达”转向“能否高频、低成本、持续运营”。</p>
-          </div>
+        <div className="direct-comparison" aria-label="中美六项能力直接对照">
+          <div className="comparison-head"><div><span>US · UNITED STATES</span><strong>83.0</strong><small>综合指数</small></div><p>差距正在从“能否抵达”转向<br />“能否高频、低成本、持续运营”</p><div><span>CN · CHINA</span><strong>63.5</strong><small>综合指数</small></div></div>
+          <div className="comparison-column-labels"><span>工程读数</span><span>指数</span><b>指标域</b><span>指数</span><span>工程读数</span></div>
+          {capabilityRows.map(([label, usScore, usMetric, cnScore, cnMetric]) => <div className="pair-row" key={label}>
+            <div className="metric-reading us"><b>{usMetric}</b><span>美国</span></div>
+            <div className="pair-score us"><strong>{usScore}</strong><div><i style={{ width: `${usScore}%` }} /></div></div>
+            <h3>{label}<small>{Math.abs(usScore - cnScore)} PT GAP</small></h3>
+            <div className="pair-score cn"><div><i style={{ width: `${cnScore}%` }} /></div><strong>{cnScore}</strong></div>
+            <div className="metric-reading cn"><b>{cnMetric}</b><span>中国</span></div>
+          </div>)}
+          <div className="comparison-foot"><span>← 美国相对优势</span><b>同一物理口径 · FRONTIER = 100</b><span>中国相对优势 →</span></div>
         </div>
       </section>
 
@@ -128,8 +125,19 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section civilization-section" aria-labelledby="civilization-title">
+        <div className="civilization-copy"><p className="section-index">06 — CIVILIZATION OUTCOME</p><h2 id="civilization-title">竞争是过程。<br />文明进阶是结果。</h2><p>中美能力对比回答“谁正在建立地月工业链”；卡尔达肖夫指数则把全人类掌控的总能流压缩为最终文明读数。它是六大能力长期积累后的结果，而不是看板的起点。</p><div className="outcome-flow"><span>运力</span><i>→</i><span>能源</span><i>→</i><span>工业</span><i>→</i><strong>K</strong></div></div>
+        <aside className="k-card final-k-card" aria-label="卡尔达肖夫文明等级">
+          <div className="k-head"><span>卡尔达肖夫指数</span><span>MODEL / EST.</span></div>
+          <div className="k-number">0.73042</div><div className="k-delta">↗ +0.00018 <span>/ 年</span></div>
+          <div className="progress-track"><span /></div>
+          <div className="scale-labels"><span>K 0.70</span><strong>当前：近地轨道工业化</strong><span>K 1.00</span></div>
+          <div className="formula">K = ( log₁₀ P − 6 ) / 10</div>
+        </aside>
+      </section>
+
       <section id="method" className="section method-section">
-        <div className="method-intro"><p className="section-index">06 — DATA PROTOCOL</p><h2>每一个数字，<br />都有证据等级。</h2><p>首版建立统一口径与置信度协议。在真实数据管道接入前，界面读数均作为产品演示样例，不代表实时官方统计。</p></div>
+        <div className="method-intro"><p className="section-index">07 — DATA PROTOCOL</p><h2>每一个数字，<br />都有证据等级。</h2><p>首版建立统一口径与置信度协议。在真实数据管道接入前，界面读数均作为产品演示样例，不代表实时官方统计。</p></div>
         <div className="confidence-list">
           <div><span className="grade grade-a">A</span><strong>官方观测</strong><p>任务公报、对象目录、能源年鉴</p><em>可直接引用</em></div>
           <div><span className="grade grade-b">B</span><strong>多源校验</strong><p>公开数据库交叉比对后的工程值</p><em>置信度 ≥ 80%</em></div>
@@ -138,7 +146,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer><div className="footer-brand"><span className="brand-mark">CI</span><div><strong>PROJECT CISLUNAR–I</strong><p>让文明进步成为可测量的工程问题。</p></div></div><div className="footer-meta"><span>VERSION 0.1 ALPHA</span><span>DATA: DEMONSTRATION MODEL</span><a href="#top">返回顶部 ↑</a></div></footer>
+      <footer><div className="footer-brand"><span className="brand-mark">CI</span><div><strong>PROJECT CISLUNAR–I</strong><p>让文明进步成为可测量的工程问题。</p></div></div><div className="footer-meta"><span>VERSION 0.2 ALPHA</span><span>DATA: DEMONSTRATION MODEL</span><a href="#top">返回顶部 ↑</a></div></footer>
     </main>
   );
 }
