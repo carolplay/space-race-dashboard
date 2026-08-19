@@ -335,7 +335,7 @@ P(t) = SUM [ P0_i * (1 - delta_i)^delta_t_i ] + SUM [ P_nuclear_j ]
 
 ## 12. 已确认架构方向：GitHub 源码管理与托管分工
 
-> 状态：源码同步进入执行；GitHub Pages 暂不迁移。
+> 状态：源码已同步至 GitHub 私有仓库；GitHub Pages 暂不迁移。
 
 ### 决策
 
