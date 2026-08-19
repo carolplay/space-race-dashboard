@@ -1,8 +1,6 @@
-# vinext-starter
+# Project Cislunar-I
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+A public dashboard for tracking observable launch-industrial and cislunar capability metrics. It runs on [vinext](https://github.com/cloudflare/vinext) and is published with OpenAI Sites.
 
 ## Prerequisites
 
@@ -15,6 +13,16 @@ npm install
 npm run dev
 npm run build
 ```
+
+## Data updates
+
+The first observed metrics—orbital launch attempts and successful orbital missions—are derived from Git-tracked [Launch Library 2](https://thespacedevs.com/llapi) event snapshots. Most sources are intended to update monthly rather than in real time.
+
+```bash
+npm run data:update:launches -- --from=2026-07-01 --to=2026-08-31
+```
+
+See [`data/README.md`](data/README.md) for storage, classification, status rules, and audit notes. Other dashboard metrics remain clearly labeled product samples until their source adapters are implemented.
 
 This starter does not use `wrangler.jsonc`.
 

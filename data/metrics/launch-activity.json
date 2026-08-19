@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-19T06:40:23.910Z",
+  "coverage": {
+    "from": "2024-01-01",
+    "to": "2026-08-18"
+  },
+  "source": {
+    "name": "Launch Library 2",
+    "publisher": "The Space Devs",
+    "url": "https://thespacedevs.com/llapi",
+    "apiVersion": "2.3.0",
+    "license": "Apache-2.0"
+  },
+  "methodology": {
+    "orbitalOnly": true,
+    "attemptStatusIds": [
+      3,
+      4,
+      7
+    ],
+    "successStatusIds": [
+      3
+    ],
+    "grouping": "Launch service provider country when present in pad agency data; pad country fallback otherwise."
+  },
+  "metrics": {
+    "attempts": [
+      {
+        "year": "2024",
+        "label": "2024",
+        "us": 154,
+        "cn": 69,
+        "other": 37,
+        "global": 260
+      },
+      {
+        "year": "2025",
+        "label": "2025",
+        "us": 193,
+        "cn": 93,
+        "other": 38,
+        "global": 324
+      },
+      {
+        "year": "2026",
+        "label": "2026 YTD",
+        "us": 117,
+        "cn": 59,
+        "other": 20,
+        "global": 196
+      }
+    ],
+    "success": [
+      {
+        "year": "2024",
+        "label": "2024",
+        "us": 153,
+        "cn": 66,
+        "other": 34,
+        "global": 253
+      },
+      {
+        "year": "2025",
+        "label": "2025",
+        "us": 192,
+        "cn": 90,
+        "other": 33,
+        "global": 315
+      },
+      {
+        "year": "2026",
+        "label": "2026 YTD",
+        "us": 116,
+        "cn": 55,
+        "other": 18,
+        "global": 189
+      }
+    ]
+  }
+}

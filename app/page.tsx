@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import launchActivity from "@/data/metrics/launch-activity.json";
 
 type Metric = {
   id: string;
@@ -15,19 +16,44 @@ type Metric = {
   decimals?: number;
   note: string;
   grade: "B" | "C" | "D";
+  dataState: "observed" | "sample";
+  sourceUrl?: string;
 };
 
+type LaunchActivityPoint = {
+  year: string;
+  label: string;
+  us: number;
+  cn: number;
+  other: number;
+  global: number;
+};
+
+function observedLaunchSeries(metric: "attempts" | "success") {
+  const points = launchActivity.metrics[metric] as LaunchActivityPoint[];
+  return {
+    years: points.map((point) => point.label),
+    us: points.map((point) => point.us),
+    cn: points.map((point) => point.cn),
+    other: points.map((point) => point.other),
+    global: points.map((point) => point.global),
+  };
+}
+
 const metricSeries: Metric[] = [
-  { id: "attempts", title: "轨道发射尝试", eyebrow: "ORBITAL ATTEMPTS", unit: "次/年", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [29, 31, 27, 44, 51, 87, 116, 158, 181, 205], cn: [18, 39, 34, 39, 56, 64, 67, 68, 76, 88], other: [44, 44, 41, 31, 38, 35, 40, 36, 42, 48], global: [91, 114, 102, 114, 145, 186, 223, 262, 299, 341], note: "按发射服务商控制主体归属", grade: "B" },
-  { id: "success", title: "成功入轨任务", eyebrow: "SUCCESSFUL MISSIONS", unit: "次/年", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [29, 31, 26, 40, 48, 84, 113, 153, 176, 199], cn: [16, 38, 32, 35, 53, 62, 66, 66, 74, 85], other: [41, 43, 40, 29, 36, 33, 38, 34, 39, 45], global: [86, 112, 98, 104, 137, 179, 217, 253, 289, 329], note: "成功完成预定轨道注入的任务", grade: "B" },
-  { id: "mass", title: "年度入轨质量", eyebrow: "MASS TO ORBIT", unit: "吨", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [160, 204, 261, 384, 471, 612, 746, 880, 1004, 1120], cn: [55, 78, 96, 132, 178, 213, 257, 312, 361, 415], other: [85, 89, 97, 122, 135, 154, 172, 194, 238, 307], global: [300, 371, 454, 638, 784, 979, 1175, 1386, 1603, 1842], note: "年度入轨干质量 + 未公开载荷推演", grade: "C" },
-  { id: "mass-per-launch", title: "单次平均入轨质量", eyebrow: "MASS PER SUCCESS", unit: "吨/次", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [5.5, 6.6, 10, 9.6, 9.8, 7.3, 6.6, 5.8, 5.7, 5.6], cn: [3.4, 2.1, 3, 3.8, 3.4, 3.4, 3.9, 4.7, 4.9, 4.9], other: [2.1, 2.1, 2.4, 4.2, 3.8, 4.7, 4.5, 5.7, 6.1, 6.8], global: [3.5, 3.3, 4.6, 6.1, 5.7, 5.5, 5.4, 5.5, 5.5, 5.6], decimals: 1, note: "年度入轨质量 ÷ 成功任务数", grade: "C" },
-  { id: "reflight-share", title: "飞行验证一级使用率", eyebrow: "FLIGHT-PROVEN SHARE", unit: "%", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [12, 45, 59, 62, 71, 79, 88, 92, 95, 96], cn: [null, null, null, null, null, null, 2, 8, 18, 33], other: [null, null, null, null, null, null, null, 2, 3, 4], global: [4, 13, 16, 22, 28, 36, 48, 58, 65, 70], note: "飞行验证一级任务数 ÷ 可判定轨道发射数", grade: "B" },
-  { id: "recovery", title: "一级回收成功率", eyebrow: "BOOSTER RECOVERY", unit: "%", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [73, 85, 92, 91, 95, 96, 97, 98, 98, 99], cn: [null, null, null, null, null, null, 75, 82, 88, 92], other: [null, null, null, null, null, null, null, 60, 67, 72], global: [73, 85, 92, 91, 95, 96, 96, 96, 97, 98], note: "成功回收次数 ÷ 回收尝试次数", grade: "B" },
-  { id: "turnaround", title: "助推器中位周转时间", eyebrow: "BOOSTER TURNAROUND", unit: "天", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [225, 180, 128, 106, 74, 52, 42, 31, 25, 21], cn: [null, null, null, null, null, null, null, 180, 120, 92], other: [null, null, null, null, null, null, null, null, 210, 165], global: [225, 180, 128, 106, 74, 52, 42, 35, 29, 25], note: "同一一级序列号两次轨道任务的中位天数", grade: "B" },
-  { id: "flight-number", title: "助推器中位飞行轮次", eyebrow: "MEDIAN FLIGHT NUMBER", unit: "第 N 飞", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [2, 2, 3, 4, 5, 7, 10, 13, 16, 19], cn: [null, null, null, null, null, null, null, 2, 2, 3], other: [null, null, null, null, null, null, null, null, 2, 2], global: [2, 2, 3, 4, 5, 7, 9, 12, 15, 18], note: "仅统计飞行验证一级参与的任务", grade: "B" },
-  { id: "cost-per-kg", title: "平均单位重量入轨成本", eyebrow: "EST. COST TO ORBIT", unit: "2026 USD/kg", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [5600, 4600, 3800, 3100, 2500, 2100, 1800, 1550, 1350, 1200], cn: [7200, 6800, 6300, 5900, 5400, 4900, 4500, 4100, 3800, 3500], other: [11800, 11200, 10600, 10100, 9600, 9200, 8900, 8600, 8200, 7900], global: [7600, 6800, 6000, 5300, 4600, 4000, 3400, 2900, 2500, 2200], note: "Σ估算任务价格 ÷ Σ入轨质量；恒定 2026 美元", grade: "C" },
+  { id: "attempts", title: "轨道发射尝试", eyebrow: "ORBITAL ATTEMPTS", unit: "次/年", ...observedLaunchSeries("attempts"), note: "LL2 任务事件；按服务商国家优先归属", grade: "B", dataState: "observed", sourceUrl: launchActivity.source.url },
+  { id: "success", title: "成功入轨任务", eyebrow: "SUCCESSFUL MISSIONS", unit: "次/年", ...observedLaunchSeries("success"), note: "LL2 状态 ID 3：成功完成目标轨道注入", grade: "B", dataState: "observed", sourceUrl: launchActivity.source.url },
+  { id: "mass", title: "年度入轨质量", eyebrow: "MASS TO ORBIT", unit: "吨", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [160, 204, 261, 384, 471, 612, 746, 880, 1004, 1120], cn: [55, 78, 96, 132, 178, 213, 257, 312, 361, 415], other: [85, 89, 97, 122, 135, 154, 172, 194, 238, 307], global: [300, 371, 454, 638, 784, 979, 1175, 1386, 1603, 1842], note: "年度入轨干质量 + 未公开载荷推演", grade: "D", dataState: "sample" },
+  { id: "mass-per-launch", title: "单次平均入轨质量", eyebrow: "MASS PER SUCCESS", unit: "吨/次", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [5.5, 6.6, 10, 9.6, 9.8, 7.3, 6.6, 5.8, 5.7, 5.6], cn: [3.4, 2.1, 3, 3.8, 3.4, 3.4, 3.9, 4.7, 4.9, 4.9], other: [2.1, 2.1, 2.4, 4.2, 3.8, 4.7, 4.5, 5.7, 6.1, 6.8], global: [3.5, 3.3, 4.6, 6.1, 5.7, 5.5, 5.4, 5.5, 5.5, 5.6], decimals: 1, note: "年度入轨质量 ÷ 成功任务数", grade: "D", dataState: "sample" },
+  { id: "reflight-share", title: "飞行验证一级使用率", eyebrow: "FLIGHT-PROVEN SHARE", unit: "%", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [12, 45, 59, 62, 71, 79, 88, 92, 95, 96], cn: [null, null, null, null, null, null, 2, 8, 18, 33], other: [null, null, null, null, null, null, null, 2, 3, 4], global: [4, 13, 16, 22, 28, 36, 48, 58, 65, 70], note: "飞行验证一级任务数 ÷ 可判定轨道发射数", grade: "D", dataState: "sample" },
+  { id: "recovery", title: "一级回收成功率", eyebrow: "BOOSTER RECOVERY", unit: "%", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [73, 85, 92, 91, 95, 96, 97, 98, 98, 99], cn: [null, null, null, null, null, null, 75, 82, 88, 92], other: [null, null, null, null, null, null, null, 60, 67, 72], global: [73, 85, 92, 91, 95, 96, 96, 96, 97, 98], note: "成功回收次数 ÷ 回收尝试次数", grade: "D", dataState: "sample" },
+  { id: "turnaround", title: "助推器中位周转时间", eyebrow: "BOOSTER TURNAROUND", unit: "天", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [225, 180, 128, 106, 74, 52, 42, 31, 25, 21], cn: [null, null, null, null, null, null, null, 180, 120, 92], other: [null, null, null, null, null, null, null, null, 210, 165], global: [225, 180, 128, 106, 74, 52, 42, 35, 29, 25], note: "同一一级序列号两次轨道任务的中位天数", grade: "D", dataState: "sample" },
+  { id: "flight-number", title: "助推器中位飞行轮次", eyebrow: "MEDIAN FLIGHT NUMBER", unit: "第 N 飞", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [2, 2, 3, 4, 5, 7, 10, 13, 16, 19], cn: [null, null, null, null, null, null, null, 2, 2, 3], other: [null, null, null, null, null, null, null, null, 2, 2], global: [2, 2, 3, 4, 5, 7, 9, 12, 15, 18], note: "仅统计飞行验证一级参与的任务", grade: "D", dataState: "sample" },
+  { id: "cost-per-kg", title: "平均单位重量入轨成本", eyebrow: "EST. COST TO ORBIT", unit: "2026 USD/kg", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [5600, 4600, 3800, 3100, 2500, 2100, 1800, 1550, 1350, 1200], cn: [7200, 6800, 6300, 5900, 5400, 4900, 4500, 4100, 3800, 3500], other: [11800, 11200, 10600, 10100, 9600, 9200, 8900, 8600, 8200, 7900], global: [7600, 6800, 6000, 5300, 4600, 4000, 3400, 2900, 2500, 2200], note: "Σ估算任务价格 ÷ Σ入轨质量；恒定 2026 美元", grade: "D", dataState: "sample" },
 ];
+
+const observedMetricCount = metricSeries.filter((metric) => metric.dataState === "observed").length;
+const launchDataCutoff = (launchActivity.coverage.to as string | null)?.replaceAll("-", ".") ?? "尚未导入";
 
 type ChartSeries = { name: string; color: string; values: Array<number | null>; dashed?: boolean };
 
@@ -129,10 +155,10 @@ export default function Home() {
           <p className="eyebrow">US × CHINA · RAW TELEMETRY</p>
           <h1>中美地月<br />工业竞速</h1>
           <p className="dek">拒绝主观打分，只追踪可以回到任务、载荷和工程状态的原始数字。每项能力单独成图，用连续时间序列观察真实差距与发展斜率。</p>
-          <div className="hero-actions"><a className="primary-button" href="#comparison">进入时序看板 <span>↓</span></a><span className="updated">数据模式<br /><strong>RAW VALUES · D 级样例</strong></span></div>
+          <div className="hero-actions"><a className="primary-button" href="#comparison">进入时序看板 <span>↓</span></a><span className="updated">数据模式<br /><strong>{observedMetricCount} REAL · {metricSeries.length - observedMetricCount} SAMPLE</strong></span></div>
         </div>
         <aside className="hero-telemetry" aria-label="中美关键原始数据快照">
-          <div className="telemetry-head"><span>2026 YTD / RAW SNAPSHOT</span><span>9 SIGNALS ONLINE</span></div>
+          <div className="telemetry-head"><span>2026 YTD / RAW SNAPSHOT</span><span>{observedMetricCount} REAL SIGNALS</span></div>
           <div className="telemetry-country-head"><span>指标</span><b>US · 美国</b><b>CN · 中国</b></div>
           {metricSeries.slice(0, 4).map((metric) => <div className="telemetry-row" key={metric.id}><span>{metric.title}<small>{metric.unit}</small></span><strong>{metric.us.at(-1)?.toLocaleString()}</strong><strong>{metric.cn.at(-1)?.toLocaleString()}</strong></div>)}
           <div className="telemetry-foot"><span><i className="legend-us" />美国</span><span><i className="legend-cn" />中国</span><b>连续时间序列 ↓</b></div>
@@ -140,7 +166,7 @@ export default function Home() {
       </section>
 
       <section className="dashboard-toolbar" aria-label="时序看板控制栏">
-        <div><span className="live-dot" /> 数据截止：2026.08.18</div>
+        <div><span className="live-dot" /> 发射数据截止：{launchDataCutoff}</div>
         <div className="series-legend"><span><i className="legend-global" />全球</span><span><i className="legend-us" />美国</span><span><i className="legend-cn" />中国</span><span><i className="legend-other" />其他</span></div>
         <div className="range-control" role="group" aria-label="选择时间范围"><button className={range === "5y" ? "selected" : ""} onClick={() => setRange("5y")}>近 5 年</button><button className={range === "all" ? "selected" : ""} onClick={() => setRange("all")}>全部可用</button></div>
       </section>
@@ -169,7 +195,7 @@ export default function Home() {
               <header><div><span>{String(index + 1).padStart(2, "0")} / {metric.eyebrow}</span><h3>{metric.title}</h3></div><b>{metric.unit}</b></header>
               <div className="metric-current four-series"><div><span><i className="legend-global" />GLOBAL</span><strong>{format(global.at(-1))}</strong></div><div><span><i className="legend-us" />US</span><strong>{format(us.at(-1))}</strong></div><div><span><i className="legend-cn" />CN</span><strong>{format(cn.at(-1))}</strong></div><div><span><i className="legend-other" />OTHER</span><strong>{format(other.at(-1))}</strong></div></div>
               <LineChart years={years} series={chartSeries} label={metric.title} />
-              <div className="metric-panel-foot"><span>{metric.note}</span><b>{metric.grade} 级 · {metric.grade === "C" ? "模型估算" : "多源校验"}</b></div>
+              <div className="metric-panel-foot"><span>{metric.note}</span>{metric.sourceUrl ? <a href={metric.sourceUrl} target="_blank" rel="noreferrer">{metric.grade} 级 · 真实事件 ↗</a> : <b>{metric.grade} 级 · 产品样例</b>}</div>
             </article>;
           })}
         </div>
@@ -226,16 +252,16 @@ export default function Home() {
       </section>
 
       <section id="method" className="section method-section">
-        <div className="method-intro"><p className="section-index">07 — DATA PROTOCOL</p><h2>每一个数字，<br />都有证据等级。</h2><p>首版建立统一口径与置信度协议。在真实数据管道接入前，界面读数均作为产品演示样例，不代表实时官方统计。</p></div>
+        <div className="method-intro"><p className="section-index">07 — DATA PROTOCOL</p><h2>每一个数字，<br />都有证据等级。</h2><p>轨道发射尝试与成功任务已接入 Launch Library 2 任务级快照；其余七项仍明确标为产品样例，直到对应来源与复算规则完成。</p></div>
         <div className="confidence-list">
           <div><span className="grade grade-a">A</span><strong>官方观测</strong><p>任务公报、对象目录、能源年鉴</p><em>可直接引用</em></div>
-          <div><span className="grade grade-b">B</span><strong>多源校验</strong><p>公开数据库交叉比对后的工程值</p><em>置信度 ≥ 80%</em></div>
+          <div><span className="grade grade-b">B</span><strong>结构化公共数据</strong><p>任务级数据库，可复算并等待官方交叉校验</p><em>当前：2 项</em></div>
           <div><span className="grade grade-c">C</span><strong>确定性推演</strong><p>运力包线、平台匹配与衰减模型</p><em>必须展示区间</em></div>
           <div><span className="grade grade-d">D</span><strong>产品样例</strong><p>用于验证界面结构与叙事的占位值</p><em>当前版本</em></div>
         </div>
       </section>
 
-      <footer><div className="footer-brand"><span className="brand-mark">CI</span><div><strong>PROJECT CISLUNAR–I</strong><p>让文明进步成为可测量的工程问题。</p></div></div><div className="footer-meta"><span>VERSION 0.4 ALPHA</span><span>DATA: DEMONSTRATION MODEL</span><a href="#top">返回顶部 ↑</a></div></footer>
+      <footer><div className="footer-brand"><span className="brand-mark">CI</span><div><strong>PROJECT CISLUNAR–I</strong><p>让文明进步成为可测量的工程问题。</p></div></div><div className="footer-meta"><span>VERSION 0.5 ALPHA</span><span>DATA: {observedMetricCount} OBSERVED / {metricSeries.length - observedMetricCount} SAMPLE</span><a href="#top">返回顶部 ↑</a></div></footer>
     </main>
   );
 }

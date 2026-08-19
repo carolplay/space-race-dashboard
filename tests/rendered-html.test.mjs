@@ -23,7 +23,9 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /US · 美国/);
   assert.match(html, /CN · 中国/);
   assert.match(html, /0\.73042/);
-  assert.match(html, /D 级样例/);
+  assert.match(html, /REAL SIGNALS/);
+  assert.match(html, /真实事件/);
+  assert.match(html, /产品样例/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
 });
 
@@ -47,4 +49,22 @@ test("ships product UI without starter dependencies", async () => {
   assert.match(layout, /lang="zh-CN"/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   await assert.rejects(access(new URL("../app/_sites-preview/SkeletonPreview.tsx", import.meta.url)));
+});
+
+test("ships auditable launch snapshots and internally consistent aggregates", async () => {
+  const [snapshot, metrics] = await Promise.all([
+    readFile(new URL("../data/snapshots/launch-library-2.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../data/metrics/launch-activity.json", import.meta.url), "utf8").then(JSON.parse),
+  ]);
+  assert.equal(snapshot.source, "Launch Library 2");
+  assert.ok(snapshot.records.length >= 700);
+  assert.ok(snapshot.records.every((record) => record.id && record.net && record.sourceUrl));
+  assert.deepEqual(metrics.methodology.attemptStatusIds, [3, 4, 7]);
+  assert.deepEqual(metrics.methodology.successStatusIds, [3]);
+  for (const series of [metrics.metrics.attempts, metrics.metrics.success]) {
+    assert.ok(series.length >= 3);
+    for (const point of series) {
+      assert.equal(point.global, point.us + point.cn + point.other);
+    }
+  }
 });
