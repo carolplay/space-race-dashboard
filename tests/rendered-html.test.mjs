@@ -34,7 +34,12 @@ test("ships product UI without starter dependencies", async () => {
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
   assert.match(page, /useState/);
-  assert.match(page, /双边时序看板/);
+  assert.match(page, /全球发射工业看板/);
+  assert.match(page, /平均单位重量入轨成本/);
+  assert.match(page, /BOOSTER TURNAROUND/);
+  assert.match(page, /kardashevSeries/);
+  assert.match(page, /legend-global/);
+  assert.match(page, /legend-other/);
   assert.match(page, /metric-canvas/);
   assert.match(page, /选择时间范围/);
   assert.doesNotMatch(page, /83\.0|63\.5|综合工业能力指数/);
