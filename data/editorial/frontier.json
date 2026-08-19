@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "asOf": "2026-08-19",
   "cislunar": {
     "assets": [
@@ -61,111 +61,98 @@
         "publisher": "CNSA"
       }
     ],
-    "plans": {
-      "us": [
-        {
-          "date": "2026-04",
-          "titleZh": "Artemis II 载人绕月",
-          "titleEn": "Artemis II crewed lunar flyby",
-          "statusZh": "已完成",
-          "statusEn": "Completed",
-          "detailZh": "四名航天员完成近十天绕月飞行并安全返回。",
-          "detailEn": "Four astronauts completed a nearly ten-day lunar flyby and returned safely.",
-          "tone": "done",
-          "source": "https://www.nasa.gov/mission/artemis-ii/"
-        },
-        {
-          "date": "2027 MID",
-          "titleZh": "Artemis III 近地轨道系统演示",
-          "titleEn": "Artemis III LEO systems demonstration",
-          "statusZh": "计划",
-          "statusEn": "Planned",
-          "detailZh": "在近地轨道验证 Orion 与商业载人月球着陆系统交会对接。",
-          "detailEn": "Test Orion rendezvous and docking with commercial human landing systems in LEO.",
-          "tone": "planned",
-          "source": "https://www.nasa.gov/directorates/esdmd/nasa-strengthens-artemis-adds-mission-refines-overall-architecture/"
-        },
-        {
-          "date": "2027+",
-          "titleZh": "Gateway 路径复审",
-          "titleEn": "Gateway architecture review",
-          "statusZh": "政策复审",
-          "statusEn": "Policy review",
-          "detailZh": "NASA 项目页与预算/终止审计信息仍存在冲突，时间不作为确定承诺。",
-          "detailEn": "NASA project pages and budget/termination records remain inconsistent; timing is not treated as firm.",
-          "tone": "review",
-          "source": "https://oig.nasa.gov/audits/nasas-management-of-programs-and-projects-after-mission-termination-canceled-or-repurposed-artemis-campaign-systems/"
-        },
-        {
-          "date": "2028 EARLY",
-          "titleZh": "Artemis IV 月面着陆",
-          "titleEn": "Artemis IV lunar landing",
-          "statusZh": "目标",
-          "statusEn": "Target",
-          "detailZh": "NASA 当前架构将首次新一代 Artemis 月面着陆目标放在 2028 年初。",
-          "detailEn": "NASA's current architecture targets the first new-generation Artemis surface landing for early 2028.",
-          "tone": "planned",
-          "source": "https://www.nasa.gov/directorates/esdmd/nasa-strengthens-artemis-adds-mission-refines-overall-architecture/"
-        },
-        {
-          "date": "2028 LATE",
-          "titleZh": "Artemis V 月面任务",
-          "titleEn": "Artemis V surface mission",
-          "statusZh": "目标",
-          "statusEn": "Target",
-          "detailZh": "计划在同年晚些时候执行后续月面任务，并逐步形成年度节奏。",
-          "detailEn": "A follow-on surface mission is targeted later in the year, moving toward an annual cadence.",
-          "tone": "planned",
-          "source": "https://www.nasa.gov/directorates/esdmd/nasa-strengthens-artemis-adds-mission-refines-overall-architecture/"
-        }
-      ],
-      "cn": [
-        {
-          "date": "2026-02",
-          "titleZh": "长征十号 / 梦舟最大动压逃逸试验",
-          "titleEn": "Long March 10 / Mengzhou max-Q abort test",
-          "statusZh": "已完成",
-          "statusEn": "Completed",
-          "detailZh": "低空演示验证与最大动压逃逸飞行试验成功实施。",
-          "detailEn": "Low-altitude demonstration and maximum dynamic pressure abort flight test completed.",
-          "tone": "done",
-          "source": "https://www.cmse.gov.cn/xwzx/202602/t20260211_57264.html"
-        },
-        {
-          "date": "2026 H2",
-          "titleZh": "嫦娥七号月球南极探测",
-          "titleEn": "Chang'e-7 lunar south pole mission",
-          "statusZh": "发射准备",
-          "statusEn": "Launch preparation",
-          "detailZh": "探测器与长征五号遥十四已运抵文昌，计划下半年择机发射。",
-          "detailEn": "The spacecraft and Long March 5 Y14 are at Wenchang for a launch opportunity in the second half of 2026.",
-          "tone": "active",
-          "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10762022/content.html"
-        },
-        {
-          "date": "2029±",
-          "titleZh": "嫦娥八号资源利用验证",
-          "titleEn": "Chang'e-8 resource utilization demonstration",
-          "statusZh": "计划",
-          "statusEn": "Planned",
-          "detailZh": "计划在月球南极附近开展资源开发利用验证，并与嫦娥七号协同。",
-          "detailEn": "Planned resource-utilization demonstrations near the lunar south pole in coordination with Chang'e-7.",
-          "tone": "planned",
-          "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10663391/content.html"
-        },
-        {
-          "date": "BEFORE 2030",
-          "titleZh": "中国首次载人登月",
-          "titleEn": "China's first crewed lunar landing",
-          "statusZh": "工程目标",
-          "statusEn": "Program goal",
-          "detailZh": "目标保持为 2030 年前实现中国人首次登陆月球。",
-          "detailEn": "The program goal remains a first Chinese crewed lunar landing before 2030.",
-          "tone": "planned",
-          "source": "https://www.cmse.gov.cn/gygc/gcjj/"
-        }
-      ]
-    }
+    "timeline": [
+      {
+        "date": "1968-12",
+        "us": [{ "titleZh": "Apollo 8 首次载人绕月", "titleEn": "Apollo 8: first crewed lunar orbit", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "人类首次离开近地轨道并载人环绕月球。", "detailEn": "Humans left low Earth orbit and circled the Moon for the first time.", "tone": "done", "source": "https://science.nasa.gov/solar-system/moon/history-of-lunar-exploration/" }],
+        "cn": []
+      },
+      {
+        "date": "1969-07",
+        "us": [{ "titleZh": "Apollo 11 首次载人登月", "titleEn": "Apollo 11: first crewed lunar landing", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "首次实现载人月面着陆、活动并安全返回。", "detailEn": "First crewed lunar landing, surface operations and safe return.", "tone": "done", "source": "https://www.nasa.gov/history/apollo-11-mission-overview/" }],
+        "cn": []
+      },
+      {
+        "date": "1972-12",
+        "us": [{ "titleZh": "Apollo 17 完成阿波罗月面阶段", "titleEn": "Apollo 17 closed the Apollo surface era", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "阿波罗计划最后一次月面任务，完成三次月面行走。", "detailEn": "The final Apollo lunar surface mission completed three moonwalks.", "tone": "done", "source": "https://www.nasa.gov/the-apollo-program/" }],
+        "cn": []
+      },
+      {
+        "date": "2007-10",
+        "us": [],
+        "cn": [{ "titleZh": "嫦娥一号开启中国绕月探测", "titleEn": "Chang'e-1 began China's lunar-orbit program", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "中国首颗月球探测器发射，随后进入环月轨道。", "detailEn": "China's first lunar probe launched and subsequently entered lunar orbit.", "tone": "done", "source": "https://www.cnsa.gov.cn/n6758823/n6758844/n6760026/n6760028/c6804681/content.html" }]
+      },
+      {
+        "date": "2009-06",
+        "us": [{ "titleZh": "LRO 进入月球极轨", "titleEn": "LRO entered lunar polar orbit", "statusZh": "已完成 / 运行中", "statusEn": "Completed / Operational", "detailZh": "建立持续至今的高分辨率月面测绘与环境观测能力。", "detailEn": "Established a high-resolution mapping and environment-observation capability that remains active.", "tone": "done", "source": "https://science.nasa.gov/mission/lro/about/" }],
+        "cn": []
+      },
+      {
+        "date": "2013-12",
+        "us": [],
+        "cn": [{ "titleZh": "嫦娥三号 / 玉兔实现月面软着陆", "titleEn": "Chang'e-3 / Yutu achieved a soft landing", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "中国首次地外天体软着陆和巡视探测。", "detailEn": "China's first soft landing and rover exploration on another celestial body.", "tone": "done", "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c6770734/content.html" }]
+      },
+      {
+        "date": "2019-01",
+        "us": [],
+        "cn": [{ "titleZh": "嫦娥四号首次月背软着陆", "titleEn": "Chang'e-4 made the first lunar far-side landing", "statusZh": "已完成 / 延寿运行", "statusEn": "Completed / Extended operations", "detailZh": "首次实现月背软着陆，并通过鹊桥中继通信。", "detailEn": "First soft landing on the lunar far side, linked through the Queqiao relay.", "tone": "done", "source": "https://www.cnsa.gov.cn/n6758823/n6758844/n6760026/n6760027/c6805041/content.html" }]
+      },
+      {
+        "date": "2020-12",
+        "us": [],
+        "cn": [{ "titleZh": "嫦娥五号完成月球采样返回", "titleEn": "Chang'e-5 completed lunar sample return", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "完成中国首次地外天体采样返回。", "detailEn": "Completed China's first sample return from another celestial body.", "tone": "done", "source": "https://www.cnsa.gov.cn/n6758823/n6758844/n6760243/n6760244/c6810873/content.html" }]
+      },
+      {
+        "date": "2022-11",
+        "us": [{ "titleZh": "Artemis I 完成无人绕月试飞", "titleEn": "Artemis I completed its uncrewed lunar flight", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "SLS、Orion 与地面系统完成首次一体化深空飞行试验。", "detailEn": "SLS, Orion and ground systems completed their first integrated deep-space flight test.", "tone": "done", "source": "https://www.nasa.gov/mission/artemis-i/" }],
+        "cn": []
+      },
+      {
+        "date": "2024-03/06",
+        "us": [],
+        "cn": [{ "titleZh": "鹊桥二号部署；嫦娥六号月背采样返回", "titleEn": "Queqiao-2 deployed; Chang'e-6 returned far-side samples", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "建立新一代月背中继能力，并带回人类首份月背样品。", "detailEn": "Established a new far-side relay and returned humanity's first samples from the lunar far side.", "tone": "done", "source": "https://www.cnsa.gov.cn/n6758823/n6758844/n10518102/n10518147/c10565180/content.html" }]
+      },
+      {
+        "date": "2026-02",
+        "us": [],
+        "cn": [{ "titleZh": "长征十号 / 梦舟最大动压逃逸试验", "titleEn": "Long March 10 / Mengzhou max-Q abort test", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "低空演示验证与最大动压逃逸飞行试验成功实施。", "detailEn": "Low-altitude demonstration and maximum dynamic-pressure abort flight test completed.", "tone": "done", "source": "https://www.cmse.gov.cn/xwzx/202602/t20260211_57264.html" }]
+      },
+      {
+        "date": "2026-04",
+        "us": [{ "titleZh": "Artemis II 载人绕月", "titleEn": "Artemis II crewed lunar flyby", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "四名航天员完成近十天绕月飞行并安全返回。", "detailEn": "Four astronauts completed a nearly ten-day lunar flyby and returned safely.", "tone": "done", "source": "https://www.nasa.gov/mission/artemis-ii/" }],
+        "cn": []
+      },
+      {
+        "date": "2026 H2",
+        "us": [],
+        "cn": [{ "titleZh": "嫦娥七号月球南极探测", "titleEn": "Chang'e-7 lunar south pole mission", "statusZh": "发射准备", "statusEn": "Launch preparation", "detailZh": "探测器与长征五号遥十四已运抵文昌，计划下半年择机发射。", "detailEn": "The spacecraft and Long March 5 Y14 are at Wenchang for a launch opportunity in the second half of 2026.", "tone": "active", "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10762022/content.html" }]
+      },
+      {
+        "date": "2027 MID",
+        "us": [{ "titleZh": "Artemis III 近地轨道系统演示", "titleEn": "Artemis III LEO systems demonstration", "statusZh": "计划", "statusEn": "Planned", "detailZh": "验证 Orion 与商业载人月球着陆系统交会对接。", "detailEn": "Test Orion rendezvous and docking with commercial human landing systems.", "tone": "planned", "source": "https://www.nasa.gov/directorates/esdmd/nasa-strengthens-artemis-adds-mission-refines-overall-architecture/" }],
+        "cn": []
+      },
+      {
+        "date": "2027+",
+        "us": [{ "titleZh": "Gateway 路径复审", "titleEn": "Gateway architecture review", "statusZh": "政策复审", "statusEn": "Policy review", "detailZh": "项目页与预算 / 终止审计信息存在冲突，时间不视为确定承诺。", "detailEn": "Project pages and budget / termination records conflict; timing is not treated as firm.", "tone": "review", "source": "https://oig.nasa.gov/audits/nasas-management-of-programs-and-projects-after-mission-termination-canceled-or-repurposed-artemis-campaign-systems/" }],
+        "cn": []
+      },
+      {
+        "date": "2028",
+        "us": [{ "titleZh": "Artemis IV / V 月面任务", "titleEn": "Artemis IV / V surface missions", "statusZh": "目标", "statusEn": "Target", "detailZh": "当前架构分别以 2028 年初和晚些时候为两次月面任务目标。", "detailEn": "The current architecture targets surface missions in early and later 2028.", "tone": "planned", "source": "https://www.nasa.gov/directorates/esdmd/nasa-strengthens-artemis-adds-mission-refines-overall-architecture/" }],
+        "cn": []
+      },
+      {
+        "date": "2029±",
+        "us": [],
+        "cn": [{ "titleZh": "嫦娥八号资源利用验证", "titleEn": "Chang'e-8 resource utilization demonstration", "statusZh": "计划", "statusEn": "Planned", "detailZh": "计划在月球南极附近开展资源利用验证，并与嫦娥七号协同。", "detailEn": "Planned resource-utilization demonstrations near the lunar south pole with Chang'e-7.", "tone": "planned", "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10663391/content.html" }]
+      },
+      {
+        "date": "BEFORE 2030",
+        "us": [],
+        "cn": [{ "titleZh": "中国首次载人登月", "titleEn": "China's first crewed lunar landing", "statusZh": "工程目标", "statusEn": "Program goal", "detailZh": "目标保持为 2030 年前实现中国人首次登陆月球。", "detailEn": "The program goal remains a first Chinese crewed lunar landing before 2030.", "tone": "planned", "source": "https://www.cmse.gov.cn/gygc/gcjj/" }]
+      }
+    ]
   },
   "stations": [
     {

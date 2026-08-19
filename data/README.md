@@ -64,4 +64,15 @@ npm run data:update:orbit -- --date=2026-08-19
 
 `data/editorial/frontier.json` stores manually reviewed cislunar and space-station facts that are better represented as status and events than as sparse time series. Visible editorial fields are stored in Chinese and English. Every asset, milestone, and station record includes an official or program source URL.
 
-The cislunar module uses separate US and Chinese program timelines so completed events, active preparations, planned dates, and policy review are not visually conflated. Official LRO, Queqiao-2, Chang'e-4/Yutu-2, ISS, and Tiangong images are stored locally in `public/`, with credits and source URLs preserved in the JSON.
+The cislunar module uses one shared date axis with US and Chinese program events on opposite sides, so completed events, active preparations, planned dates, and policy review remain visually distinct but time-aligned. Official LRO, Queqiao-2, Chang'e-4/Yutu-2, ISS, and Tiangong images are stored locally in `public/`, with credits and source URLs preserved in the JSON.
+
+## Launch development programs
+
+`data/editorial/launch-development.json` tracks launch vehicles that are still proving engineering capabilities. It is intentionally separate from orbital payload-launch totals.
+
+- Programs are compared against six independent capabilities: ground systems, vertical takeoff and landing, integrated flight, orbit insertion, first-stage recovery, and routine payload service.
+- A capability can be achieved out of sequence; for example, a booster recovery demonstration does not imply that routine payload delivery has begun.
+- Each milestone keeps an official program or regulator source. A development flight that also reaches orbit may appear once in orbital launch activity and once as an engineering milestone, but the two views are never added together.
+- The initial reviewed set covers Starship / Super Heavy, Zhuque-3, and the Long March 10 family.
+
+The cislunar chronology now uses a shared row for each date. US milestones render to the left, Chinese milestones to the right, and the central date is common to both. This keeps historical accomplishments and future plans visually aligned rather than presenting two unrelated vertical lists.

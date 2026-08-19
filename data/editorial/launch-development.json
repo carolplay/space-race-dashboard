@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-08-19",
+  "methodologyZh": "研发项目按工程能力节点追踪，不把试验次数直接加入正式载荷发射总量。一次飞行若完成入轨任务，仍可同时出现在轨道发射统计中。",
+  "methodologyEn": "Development programs are tracked by engineering milestones, not added as a second launch total. A test flight that reaches orbit may still appear in the orbital launch series.",
+  "capabilities": [
+    { "id": "ground", "labelZh": "地面系统", "labelEn": "Ground systems" },
+    { "id": "vtvl", "labelZh": "垂直起降", "labelEn": "VTVL" },
+    { "id": "integrated", "labelZh": "全系统飞行", "labelEn": "Integrated flight" },
+    { "id": "orbit", "labelZh": "进入轨道", "labelEn": "Orbit insertion" },
+    { "id": "recovery", "labelZh": "一级回收", "labelEn": "Stage recovery" },
+    { "id": "service", "labelZh": "常态载荷", "labelEn": "Routine payloads" }
+  ],
+  "programs": [
+    {
+      "id": "starship",
+      "country": "US",
+      "name": "Starship / Super Heavy",
+      "provider": "SpaceX",
+      "phaseZh": "综合飞行试验",
+      "phaseEn": "Integrated flight test",
+      "headline": "12",
+      "headlineZh": "次综合飞行试验",
+      "headlineEn": "integrated flight tests",
+      "capabilities": { "ground": true, "vtvl": true, "integrated": true, "orbit": false, "recovery": true, "service": false },
+      "statusZh": "尚未开始常态载荷入轨；Flight 12 后处于事故调查与后续试验阶段。",
+      "statusEn": "Routine payload delivery has not begun; the program is in post-Flight 12 investigation and further testing.",
+      "nextZh": "首次轨道载荷交付；SpaceX 当前目标为 2026 年下半年。",
+      "nextEn": "First orbital payload delivery; SpaceX currently targets the second half of 2026.",
+      "source": "https://www.spacex.com/launches",
+      "milestones": [
+        { "date": "2021-05", "titleZh": "SN15 高空飞行并着陆", "titleEn": "SN15 high-altitude flight and landing", "tone": "done", "source": "https://www.spacex.com/launches/starship-sn15" },
+        { "date": "2023-04", "titleZh": "首次全系统飞行试验", "titleEn": "First integrated flight test", "tone": "done", "source": "https://www.spacex.com/launches/mission/?missionId=starship-flight-1" },
+        { "date": "2024-10", "titleZh": "首次塔架捕获 Super Heavy", "titleEn": "First tower catch of Super Heavy", "tone": "done", "source": "https://www.spacex.com/launches/mission/?missionId=starship-flight-5" },
+        { "date": "2025-10", "titleZh": "Flight 11 完成主要试验目标", "titleEn": "Flight 11 met its major test objectives", "tone": "done", "source": "https://www.spacex.com/launches/starship-flight-11" },
+        { "date": "2026-05", "titleZh": "Flight 12 发射；一级返程异常", "titleEn": "Flight 12 launched; booster flyback anomaly", "tone": "review", "source": "https://www.faa.gov/newsroom/statements/general-statements" }
+      ]
+    },
+    {
+      "id": "zhuque-3",
+      "country": "CN",
+      "name": "朱雀三号 / Zhuque-3",
+      "provider": "蓝箭航天 / LandSpace",
+      "phaseZh": "入轨与回收验证",
+      "phaseEn": "Orbital and recovery validation",
+      "headline": "2",
+      "headlineZh": "个关键飞行节点",
+      "headlineEn": "major flight milestones",
+      "capabilities": { "ground": true, "vtvl": true, "integrated": true, "orbit": true, "recovery": false, "service": false },
+      "statusZh": "遥一二级成功进入预定轨道；一级软着陆回收失败。",
+      "statusEn": "The Y1 second stage reached its planned orbit; first-stage soft-landing recovery failed.",
+      "nextZh": "完成一级可靠回收并转入可重复使用发射服务。",
+      "nextEn": "Demonstrate reliable first-stage recovery and transition to reusable launch service.",
+      "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10720622/content.html",
+      "milestones": [
+        { "date": "2024-09", "titleZh": "VTVL-1 完成 10 公里级垂直起降", "titleEn": "VTVL-1 completed a 10 km vertical takeoff and landing", "tone": "done", "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10696020/content.html" },
+        { "date": "2025-12", "titleZh": "遥一二级入轨；一级回收失败", "titleEn": "Y1 reached orbit; first-stage recovery failed", "tone": "review", "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10720622/content.html" }
+      ]
+    },
+    {
+      "id": "long-march-10",
+      "country": "CN",
+      "name": "长征十号系列 / Long March 10 family",
+      "provider": "中国航天科技集团 / CASC",
+      "phaseZh": "工程飞行验证",
+      "phaseEn": "Engineering flight validation",
+      "headline": "3",
+      "headlineZh": "个关键验证节点",
+      "headlineEn": "major validation milestones",
+      "capabilities": { "ground": true, "vtvl": true, "integrated": true, "orbit": true, "recovery": true, "service": false },
+      "statusZh": "系列已完成系留点火、低空飞行，并由长征十号乙完成入轨与一级海上回收。",
+      "statusEn": "The family has completed captive firing and low-altitude flight, while Long March 10B demonstrated orbit insertion and at-sea first-stage recovery.",
+      "nextZh": "把验证结果转化为稳定的载荷和载人运输任务。",
+      "nextEn": "Convert the demonstrations into sustained cargo and crew transportation missions.",
+      "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10761540/content.html",
+      "milestones": [
+        { "date": "2025-08", "titleZh": "七机并联系留点火成功", "titleEn": "Seven-engine captive firing completed", "tone": "done", "source": "https://www.spacechina.com/n25/n2014789/n2414549/c4403161/content.html" },
+        { "date": "2026-02", "titleZh": "低空演示验证并完成海上打捞", "titleEn": "Low-altitude demonstration and sea recovery", "tone": "done", "source": "https://www.cmse.gov.cn/xwzx/202602/t20260213_57272.html" },
+        { "date": "2026-07", "titleZh": "长征十号乙入轨并完成一级海上网系回收", "titleEn": "Long March 10B reached orbit and recovered its first stage at sea", "tone": "done", "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10761540/content.html" }
+      ]
+    }
+  ]
+}
