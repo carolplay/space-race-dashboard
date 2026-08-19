@@ -20,12 +20,14 @@ test("server-renders the Cislunar-I dashboard", async () => {
   const html = await response.text();
   assert.match(html, /Project Cislunar/);
   assert.match(html, /太空工业/);
-  assert.match(html, /US · 美国/);
-  assert.match(html, /CN · 中国/);
+  assert.match(html, /2026 \/ 当前快照/);
+  assert.match(html, />中文</);
+  assert.match(html, />EN</);
   assert.match(html, /0\.73042/);
-  assert.match(html, /在轨资产/);
-  assert.match(html, /发射工业与火箭家族/);
-  assert.match(html, /地月专题/);
+  assert.match(html, /当前资产与历史存量/);
+  assert.match(html, /当前产能与十五年斜率/);
+  assert.match(html, /现存资产与中美计划节点/);
+  assert.match(html, /2011 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
   assert.match(html, /产品样例/);
@@ -39,17 +41,22 @@ test("ships product UI without starter dependencies", async () => {
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
   assert.match(page, /useState/);
-  assert.match(page, /谁把什么放在轨道上/);
+  assert.match(page, /historicalSeries/);
+  assert.match(page, /language-switch/);
+  assert.match(page, /document\.documentElement\.lang/);
+  assert.match(page, /dual-roadmap/);
+  assert.match(page, /lunar-asset-grid/);
   assert.match(page, /火箭构型/);
+  assert.match(page, /Rocket configurations/);
   assert.match(page, /frontierData/);
   assert.match(page, /station-grid/);
   assert.match(page, /平均单位重量入轨成本/);
+  assert.match(page, /Average cost to orbit/);
   assert.match(page, /BOOSTER TURNAROUND/);
   assert.match(page, /kardashevSeries/);
-  assert.match(page, /legend-global/);
-  assert.match(page, /legend-other/);
+  assert.match(page, /regionLabel\[lang\]/);
   assert.match(page, /metric-canvas/);
-  assert.match(page, /选择时间范围/);
+  assert.match(page, /2011 至今/);
   assert.doesNotMatch(page, /83\.0|63\.5|综合工业能力指数/);
   assert.doesNotMatch(page, /aria-label="选择国家"/);
   assert.match(layout, /lang="zh-CN"/);
@@ -93,10 +100,38 @@ test("ships auditable orbit snapshots with consistent regional totals", async ()
     for (const row of rows) assert.equal(row.global, row.us + row.cn + row.other);
   }
   assert.equal(editorial.cislunar.assets.length, 3);
+  assert.ok(editorial.cislunar.assets.every((asset) => asset.nameZh && asset.nameEn && asset.image && asset.source.startsWith("https://")));
+  assert.ok(editorial.cislunar.plans.us.length >= 4);
+  assert.ok(editorial.cislunar.plans.cn.length >= 4);
+  assert.ok([...editorial.cislunar.plans.us, ...editorial.cislunar.plans.cn].every((event) => event.titleZh && event.titleEn && event.source.startsWith("https://")));
   assert.equal(editorial.stations.length, 2);
-  assert.ok(editorial.stations.every((station) => station.source.startsWith("https://")));
+  assert.ok(editorial.stations.every((station) => station.nameZh && station.nameEn && station.source.startsWith("https://")));
   await Promise.all([
+    access(new URL("../public/lro.jpg", import.meta.url)),
+    access(new URL("../public/queqiao-2.jpg", import.meta.url)),
+    access(new URL("../public/change-4.jpg", import.meta.url)),
     access(new URL("../public/iss.jpg", import.meta.url)),
     access(new URL("../public/tiangong.jpg", import.meta.url)),
   ]);
+});
+
+test("ships a continuous and internally consistent 2011-present history", async () => {
+  const history = await readFile(new URL("../data/metrics/historical-series.json", import.meta.url), "utf8").then(JSON.parse);
+  assert.equal(history.coverage.fromYear, 2011);
+  assert.equal(history.coverage.toYear, 2026);
+  assert.equal(history.launchActivity.length, 16);
+  assert.equal(history.orbitInventory.length, 16);
+  assert.equal(history.coverage.currentYearIsPartial, true);
+  assert.ok([history.source.satcat.sha256, history.source.launchlog.sha256].every((checksum) => /^[a-f0-9]{64}$/.test(checksum)));
+  for (const point of history.launchActivity) {
+    for (const metric of [point.attempts, point.success]) {
+      assert.equal(metric.global, metric.us + metric.cn + metric.other);
+    }
+  }
+  for (const point of history.orbitInventory) {
+    for (const metric of [point.payloadObjects, point.catalogObjects]) {
+      assert.equal(metric.global, metric.us + metric.cn + metric.other);
+    }
+    assert.ok(Math.abs(point.knownPayloadMassKg.global - (point.knownPayloadMassKg.us + point.knownPayloadMassKg.cn + point.knownPayloadMassKg.other)) < 1e-6);
+  }
 });

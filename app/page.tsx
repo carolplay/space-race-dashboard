@@ -4,60 +4,95 @@
 import { useEffect, useRef, useState } from "react";
 import launchActivity from "@/data/metrics/launch-activity.json";
 import orbitAssets from "@/data/metrics/orbit-assets.json";
+import historicalSeries from "@/data/metrics/historical-series.json";
 import frontierData from "@/data/editorial/frontier.json";
 
+type Lang = "zh" | "en";
+type Region = "us" | "cn" | "other";
+type Regions = Record<Region | "global", number>;
+type ChartSeries = { name: string; color: string; values: Array<number | null>; dashed?: boolean };
+type LaunchPoint = { year: string; label: string; us: number; cn: number; other: number; global: number };
+type HistoricalLaunchPoint = { year: string; label: string; attempts: Regions; success: Regions };
 type Metric = {
-  id: string;
-  title: string;
+  id: keyof typeof metricText;
   eyebrow: string;
-  unit: string;
   years: string[];
   us: Array<number | null>;
   cn: Array<number | null>;
   other: Array<number | null>;
   global: Array<number | null>;
   decimals?: number;
-  note: string;
   grade: "B" | "D";
   dataState: "observed" | "sample";
   sourceUrl?: string;
 };
 
-type LaunchActivityPoint = {
-  year: string;
-  label: string;
-  us: number;
-  cn: number;
-  other: number;
-  global: number;
-};
+const copy = {
+  zh: {
+    nav: ["总览", "在轨资产", "发射工业", "地月", "空间站", "方法"], signal: "数据截止 · 2026", language: "语言",
+    heroEyebrow: "美国 × 中国 × 全球 · 原始遥测", heroTitle: <>太空工业<br />连续看板</>, heroDek: "主视角仍是中美对比，同时把全球与其他参与者放回同一坐标系。当前值和 2011 年以来的真实历史同屏展示；尚未形成连续运营的数据改用状态与事件。", enter: "进入全景看板", dataMode: "数据模式", modeValue: "观测值 + 明确标注的样例",
+    snapshot: "2026 / 当前快照", metric: "指标", activePayloads: "活跃在轨载荷", knownMass: "已知活跃载荷质量", launchAttempts: "轨道发射尝试", fourModules: "四模块连续展示", objectsUnit: "对象数", tonnesUnit: "吨", ytdShort: "年内截至目前", activeCatalog: "活跃目录", payloadInventoryLabel: "载荷库存", knownPayloadMassLabel: "已知载荷质量", orbitDistributionLabel: "轨道分布", missionCategoryLabel: "任务用途", catalogCategory: "GCAT 分类", attemptsLabel: "尝试", successLabel: "成功", successRateLabel: "成功率", configurationsLabel: "构型", statusLegend: "已完成 · 进行中 · 计划 · 复审", modelEstimate: "模型 / 估算", perYear: "每年", version: "版本",
+    orbitIndex: "01 — 在轨资产", orbitTitle: "当前资产与历史存量", orbitDek: "当前活跃载荷来自 Active Catalog；历史曲线是每年末仍在轨的载荷对象，包含已失效载荷。两个口径并列展示，不混用。", currentSnapshot: "当前静态快照", historySince: "历史序列始于 2011", activePayloadKpi: "活跃有效载荷", catalogObjectsKpi: "当前目录对象 · 含碎片与火箭体", knownActiveMassKpi: "有质量字段的活跃载荷", massCoverageKpi: "有质量数据的对象数", payloadHistory: "年末在轨载荷对象", payloadHistoryNote: "GCAT 主目录 · 包含活跃与失效载荷", massHistory: "年末已知载荷质量", massHistoryNote: "GCAT 主目录已知质量之和 · 不把缺失值当零", orbitDistribution: "轨道分布", satelliteType: "卫星类型", objectComposition: "目录对象构成", allObjectsNote: "全部当前目录对象，不等同于有效卫星", global: "全球", crossCheck: "ESA 交叉参照", allObjectMass: "所有在轨物体总质量", monthlyHistory: "月度历史", snapshotStarts: "真实快照积累始于",
+    launchIndex: "02 — 发射工业", launchTitle: "当前产能与十五年斜率", launchDek: "2026 当前值保留 LL2 任务级快照；2011—2026 历史采用 GCAT LaunchLog 统一重算。火箭家族、任务频次和数据成熟度在同一模块呈现。", launchCutoff: "发射数据截止", range5: "近 5 年", rangeAll: "2011 至今", currentYtd: "2026 年截至目前", successMissions: "成功入轨任务", successRate: "任务成功率", activeFamilies: "活跃火箭构型", topFamily: "最常用构型", launches: "次发射", rocketMix: "火箭构型", topSix: "前六构型发射", success: "成功", familyMethod: "2026 火箭构型由已存 LL2 任务名归并；历史任务频次来自 GCAT LaunchLog。下一次 LL2 月更将优先使用正式 configuration ID 回填。", realEvents: "真实事件", productSample: "产品样例",
+    cislunarIndex: "03 — 地月专题", cislunarTitle: "现存资产与中美计划节点", cislunarDek: "先看仍在工作的地月资产，再沿两条独立时间轴读取中美已完成、正在准备和计划中的节点。计划日期与已发生日期使用不同状态色。", existingAssets: "现存地月资产", operationalSince: "运行起点", source: "官方来源", roadmap: "计划时间轴", usTrack: "美国 / Artemis", cnTrack: "中国 / 月球探测工程", verified: "核验日期",
+    stationIndex: "04 — 空间站", stationTitle: "近地轨道的人类前哨", stationDek: "空间站是状态型基础设施：展示当前构型、质量、轨道和驻留能力，不用稀疏事件强行生成月度曲线。", mass: "质量", altitude: "轨道高度", inclination: "轨道倾角", crew: "额定乘员", volume: "加压容积", power: "供电能力", configuration: "构型", life: "寿命 / 历史", technicalSource: "官方技术资料",
+    outcomeIndex: "05 — 文明结果", outcomeTitle: <>竞争是过程。<br />文明进阶是结果。</>, outcomeDek: "中美对比回答谁正在建立太空工业链；卡尔达肖夫指数把全人类掌控的总能流压缩为最终文明读数。它是长期积累后的结果，不是看板的起点。", flow: ["在轨资产", "运力", "基础设施"], currentCivilization: "当前：近地轨道工业化", history: "历史演进", kardashev: "卡尔达肖夫指数",
+    methodIndex: "06 — 数据协议", methodTitle: <>每一个数字，<br />都有来源与边界。</>, methodDek: "当前快照和历史重建使用不同但可审计的 GCAT 派生目录；发射近期快照来自 LL2。地月与空间站采用 NASA、CNSA、CMSE 官方项目页。每条计划节点保留状态、日期和来源。", official: "官方观测", officialDesc: "任务公报、机构事实页与工程状态", structured: "结构化公共数据", structuredDesc: "GCAT 对象目录与 LaunchLog、LL2 任务库", inferred: "确定性推演", inferredDesc: "运力包线、平台匹配与衰减模型", sample: "产品样例", sampleDesc: "尚未接入来源的质量、复用与成本序列", currentUse: "当前使用", rangeRequired: "必须展示区间", panels: "个面板", footer: "让文明进步成为可测量的工程问题。", backTop: "返回顶部",
+  },
+  en: {
+    nav: ["Overview", "Orbital Assets", "Launch Industry", "Cislunar", "Stations", "Method"], signal: "DATA CUTOFF · 2026", language: "Language",
+    heroEyebrow: "UNITED STATES × CHINA × WORLD · RAW TELEMETRY", heroTitle: <>A continuous view<br />of the space economy</>, heroDek: "The United States–China comparison remains the primary lens, with the rest of the world shown in the same frame. Current readings sit beside observed history from 2011 onward; capabilities without continuous operations are shown as status and events.", enter: "Enter dashboard", dataMode: "DATA MODE", modeValue: "OBSERVED + LABELED SAMPLE",
+    snapshot: "2026 / CURRENT SNAPSHOT", metric: "Metric", activePayloads: "Active payloads", knownMass: "Known active mass", launchAttempts: "Orbital launch attempts", fourModules: "Four continuous modules", objectsUnit: "OBJECTS", tonnesUnit: "TONNES", ytdShort: "YTD", activeCatalog: "ACTIVE CATALOG", payloadInventoryLabel: "PAYLOAD INVENTORY", knownPayloadMassLabel: "KNOWN PAYLOAD MASS", orbitDistributionLabel: "ORBIT DISTRIBUTION", missionCategoryLabel: "MISSION CATEGORY", catalogCategory: "GCAT CATEGORY", attemptsLabel: "ATTEMPTS", successLabel: "SUCCESS", successRateLabel: "SUCCESS RATE", configurationsLabel: "CONFIGURATIONS", statusLegend: "COMPLETED · ACTIVE · PLANNED · REVIEW", modelEstimate: "MODEL / EST.", perYear: "PER YEAR", version: "VERSION",
+    orbitIndex: "01 — ORBITAL ASSETS", orbitTitle: "Current assets and historical inventory", orbitDek: "Current active payloads come from the Active Catalog. Historical lines count payload objects still in orbit at each year end, including inactive spacecraft. The two definitions are displayed together but never conflated.", currentSnapshot: "Current static snapshot", historySince: "History begins in 2011", activePayloadKpi: "Active payloads", catalogObjectsKpi: "Current objects, including debris and rocket bodies", knownActiveMassKpi: "Active payloads with known mass", massCoverageKpi: "Objects with a recorded mass", payloadHistory: "Payload objects in orbit at year end", payloadHistoryNote: "GCAT main catalog · active and inactive payloads", massHistory: "Known payload mass at year end", massHistoryNote: "Known GCAT payload mass · missing values are not treated as zero", orbitDistribution: "Orbit distribution", satelliteType: "Mission category", objectComposition: "Catalog composition", allObjectsNote: "All current catalog objects; not equivalent to active satellites", global: "Global", crossCheck: "ESA cross-check", allObjectMass: "Total mass of all orbital objects", monthlyHistory: "Monthly history", snapshotStarts: "Observed snapshots begin",
+    launchIndex: "02 — LAUNCH INDUSTRY", launchTitle: "Current capacity and the fifteen-year slope", launchDek: "Current 2026 readings retain the mission-level LL2 snapshot. The 2011–2026 history is recomputed from GCAT LaunchLog, with rocket mix, cadence and data maturity shown in one module.", launchCutoff: "Launch data cutoff", range5: "Last 5 years", rangeAll: "Since 2011", currentYtd: "2026 year to date", successMissions: "Successful orbital missions", successRate: "Mission success rate", activeFamilies: "Active configurations", topFamily: "Most-used configuration", launches: "launches", rocketMix: "Rocket configurations", topSix: "Top-six launches", success: "successful", familyMethod: "2026 configurations are initially grouped from stored LL2 launch-name prefixes; historical cadence comes from GCAT LaunchLog. The next LL2 refresh will prefer formal configuration IDs.", realEvents: "Observed events", productSample: "Product sample",
+    cislunarIndex: "03 — CISLUNAR FRONTIER", cislunarTitle: "Existing assets and US–China milestones", cislunarDek: "Start with the assets still operating beyond Earth orbit, then follow separate US and Chinese timelines for completed, active and planned milestones. Planned dates and completed events use distinct status colors.", existingAssets: "Existing cislunar assets", operationalSince: "Operational since", source: "Official source", roadmap: "Program timeline", usTrack: "United States / Artemis", cnTrack: "China / Lunar Exploration Program", verified: "Verified",
+    stationIndex: "04 — SPACE STATIONS", stationTitle: "Human outposts in low Earth orbit", stationDek: "Space stations are stateful infrastructure. The dashboard shows current configuration, mass, orbit and occupancy capacity without forcing sparse events into a monthly curve.", mass: "Mass", altitude: "Orbital altitude", inclination: "Inclination", crew: "Nominal crew", volume: "Pressurized volume", power: "Power", configuration: "Configuration", life: "Life / history", technicalSource: "Official technical source",
+    outcomeIndex: "05 — CIVILIZATION OUTCOME", outcomeTitle: <>Competition is the process.<br />Civilizational capacity is the outcome.</>, outcomeDek: "The US–China comparison asks who is building the space-industrial chain. The Kardashev index compresses the total power available to humanity into a final reading. It is an outcome of long-run capability, not the dashboard's starting point.", flow: ["Orbital assets", "Lift capacity", "Infrastructure"], currentCivilization: "Current: early orbital industrialization", history: "Historical evolution", kardashev: "Kardashev index",
+    methodIndex: "06 — DATA PROTOCOL", methodTitle: <>Every number has<br />a source and a boundary.</>, methodDek: "Current snapshots and historical reconstruction use distinct, auditable GCAT derivatives; recent launch snapshots come from LL2. Cislunar and station records use official NASA, CNSA and CMSE program pages. Every milestone retains its status, date and source.", official: "Official observation", officialDesc: "Mission releases, agency fact sheets and engineering status", structured: "Structured public data", structuredDesc: "GCAT object catalog and LaunchLog; LL2 mission database", inferred: "Deterministic estimate", inferredDesc: "Performance envelopes, platform matching and decay models", sample: "Product sample", sampleDesc: "Mass, reuse and cost series awaiting sourced pipelines", currentUse: "In use", rangeRequired: "Show ranges", panels: "panels", footer: "Make civilizational progress a measurable engineering problem.", backTop: "Back to top",
+  },
+} as const;
 
-type ChartSeries = { name: string; color: string; values: Array<number | null>; dashed?: boolean };
+const metricText = {
+  attempts: { zh: ["轨道发射尝试", "次/年", "GCAT 唯一 Launch_Tag；O/D 类发射，失败仍计为尝试"], en: ["Orbital launch attempts", "per year", "Unique GCAT Launch_Tag; O/D launch codes, with failures retained as attempts"] },
+  success: { zh: ["成功入轨任务", "次/年", "GCAT O/D 类任务中不含失败标记的发射"], en: ["Successful orbital missions", "per year", "GCAT O/D launch codes without a failure marker"] },
+  mass: { zh: ["年度入轨质量", "吨", "年度入轨干质量 + 未公开载荷推演"], en: ["Annual mass to orbit", "tonnes", "Annual dry mass to orbit plus inferred undisclosed payloads"] },
+  "mass-per-launch": { zh: ["单次平均入轨质量", "吨/次", "年度入轨质量 ÷ 成功任务数"], en: ["Average mass per success", "t/mission", "Annual orbital mass divided by successful missions"] },
+  "reflight-share": { zh: ["飞行验证一级使用率", "%", "飞行验证一级任务数 ÷ 可判定轨道发射数"], en: ["Flight-proven first-stage share", "%", "Missions using flight-proven first stages divided by classifiable launches"] },
+  recovery: { zh: ["一级回收成功率", "%", "成功回收次数 ÷ 回收尝试次数"], en: ["Booster recovery success", "%", "Successful recoveries divided by recovery attempts"] },
+  turnaround: { zh: ["助推器中位周转时间", "天", "同一一级序列号两次轨道任务的中位天数"], en: ["Median booster turnaround", "days", "Median days between orbital missions for the same first-stage serial"] },
+  "flight-number": { zh: ["助推器中位飞行轮次", "第 N 飞", "仅统计飞行验证一级参与的任务"], en: ["Median booster flight number", "flight no.", "Only missions using flight-proven first stages"] },
+  "cost-per-kg": { zh: ["平均单位重量入轨成本", "2026 USD/kg", "Σ估算任务价格 ÷ Σ入轨质量；恒定 2026 美元"], en: ["Average cost to orbit", "2026 USD/kg", "Estimated mission prices divided by orbital mass; constant 2026 USD"] },
+} as const;
 
+const regionLabel = {
+  zh: { us: "美国", cn: "中国", other: "其他", global: "全球" },
+  en: { us: "United States", cn: "China", other: "Other", global: "Global" },
+} as const;
+
+const categoryEn: Record<string, string> = { "通信": "Communications", "地球观测": "Earth observation", "导航定位": "Navigation", "科学": "Science", "技术验证": "Technology", "载人航天": "Human spaceflight", "国防/未公开": "Defense / undisclosed", "其他": "Other" };
+const objectTypeEn: Record<string, string> = { "有效载荷/失效载荷": "Payloads / inactive payloads", "火箭体": "Rocket bodies", "任务组件/其他": "Mission components / other", "碎片": "Debris" };
 const orbitCurrent = orbitAssets.current;
-const launchDataCutoff = (launchActivity.coverage.to as string | null)?.replaceAll("-", ".") ?? "尚未导入";
+const launchCutoff = (launchActivity.coverage.to as string | null)?.replaceAll("-", ".") ?? "—";
 
-function observedLaunchSeries(metric: "attempts" | "success") {
-  const points = launchActivity.metrics[metric] as LaunchActivityPoint[];
-  return {
-    years: points.map((point) => point.label),
-    us: points.map((point) => point.us),
-    cn: points.map((point) => point.cn),
-    other: points.map((point) => point.other),
-    global: points.map((point) => point.global),
-  };
+function local(item: unknown, field: string, lang: Lang) {
+  return (item as Record<string, string>)[`${field}${lang === "zh" ? "Zh" : "En"}`];
+}
+
+function historicalLaunchSeries(metric: "attempts" | "success") {
+  const points = historicalSeries.launchActivity as HistoricalLaunchPoint[];
+  return { years: points.map((point) => point.label), us: points.map((point) => point[metric].us), cn: points.map((point) => point[metric].cn), other: points.map((point) => point[metric].other), global: points.map((point) => point[metric].global) };
 }
 
 const metricSeries: Metric[] = [
-  { id: "attempts", title: "轨道发射尝试", eyebrow: "ORBITAL ATTEMPTS", unit: "次/年", ...observedLaunchSeries("attempts"), note: "LL2 任务事件；按服务商国家优先归属", grade: "B", dataState: "observed", sourceUrl: launchActivity.source.url },
-  { id: "success", title: "成功入轨任务", eyebrow: "SUCCESSFUL MISSIONS", unit: "次/年", ...observedLaunchSeries("success"), note: "LL2 状态 ID 3：成功完成目标轨道注入", grade: "B", dataState: "observed", sourceUrl: launchActivity.source.url },
-  { id: "mass", title: "年度入轨质量", eyebrow: "MASS TO ORBIT", unit: "吨", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [160, 204, 261, 384, 471, 612, 746, 880, 1004, 1120], cn: [55, 78, 96, 132, 178, 213, 257, 312, 361, 415], other: [85, 89, 97, 122, 135, 154, 172, 194, 238, 307], global: [300, 371, 454, 638, 784, 979, 1175, 1386, 1603, 1842], note: "年度入轨干质量 + 未公开载荷推演", grade: "D", dataState: "sample" },
-  { id: "mass-per-launch", title: "单次平均入轨质量", eyebrow: "MASS PER SUCCESS", unit: "吨/次", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [5.5, 6.6, 10, 9.6, 9.8, 7.3, 6.6, 5.8, 5.7, 5.6], cn: [3.4, 2.1, 3, 3.8, 3.4, 3.4, 3.9, 4.7, 4.9, 4.9], other: [2.1, 2.1, 2.4, 4.2, 3.8, 4.7, 4.5, 5.7, 6.1, 6.8], global: [3.5, 3.3, 4.6, 6.1, 5.7, 5.5, 5.4, 5.5, 5.5, 5.6], decimals: 1, note: "年度入轨质量 ÷ 成功任务数", grade: "D", dataState: "sample" },
-  { id: "reflight-share", title: "飞行验证一级使用率", eyebrow: "FLIGHT-PROVEN SHARE", unit: "%", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [12, 45, 59, 62, 71, 79, 88, 92, 95, 96], cn: [null, null, null, null, null, null, 2, 8, 18, 33], other: [null, null, null, null, null, null, null, 2, 3, 4], global: [4, 13, 16, 22, 28, 36, 48, 58, 65, 70], note: "飞行验证一级任务数 ÷ 可判定轨道发射数", grade: "D", dataState: "sample" },
-  { id: "recovery", title: "一级回收成功率", eyebrow: "BOOSTER RECOVERY", unit: "%", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [73, 85, 92, 91, 95, 96, 97, 98, 98, 99], cn: [null, null, null, null, null, null, 75, 82, 88, 92], other: [null, null, null, null, null, null, 60, 67, 72], global: [73, 85, 92, 91, 95, 96, 96, 96, 97, 98], note: "成功回收次数 ÷ 回收尝试次数", grade: "D", dataState: "sample" },
-  { id: "turnaround", title: "助推器中位周转时间", eyebrow: "BOOSTER TURNAROUND", unit: "天", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [225, 180, 128, 106, 74, 52, 42, 31, 25, 21], cn: [null, null, null, null, null, null, null, 180, 120, 92], other: [null, null, null, null, null, null, null, null, 210, 165], global: [225, 180, 128, 106, 74, 52, 42, 35, 29, 25], note: "同一一级序列号两次轨道任务的中位天数", grade: "D", dataState: "sample" },
-  { id: "flight-number", title: "助推器中位飞行轮次", eyebrow: "MEDIAN FLIGHT NUMBER", unit: "第 N 飞", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [2, 2, 3, 4, 5, 7, 10, 13, 16, 19], cn: [null, null, null, null, null, null, null, 2, 2, 3], other: [null, null, null, null, null, null, null, null, 2, 2], global: [2, 2, 3, 4, 5, 7, 9, 12, 15, 18], note: "仅统计飞行验证一级参与的任务", grade: "D", dataState: "sample" },
-  { id: "cost-per-kg", title: "平均单位重量入轨成本", eyebrow: "EST. COST TO ORBIT", unit: "2026 USD/kg", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [5600, 4600, 3800, 3100, 2500, 2100, 1800, 1550, 1350, 1200], cn: [7200, 6800, 6300, 5900, 5400, 4900, 4500, 4100, 3800, 3500], other: [11800, 11200, 10600, 10100, 9600, 9200, 8900, 8600, 8200, 7900], global: [7600, 6800, 6000, 5300, 4600, 4000, 3400, 2900, 2500, 2200], note: "Σ估算任务价格 ÷ Σ入轨质量；恒定 2026 美元", grade: "D", dataState: "sample" },
+  { id: "attempts", eyebrow: "ORBITAL ATTEMPTS", ...historicalLaunchSeries("attempts"), grade: "B", dataState: "observed", sourceUrl: historicalSeries.source.url },
+  { id: "success", eyebrow: "SUCCESSFUL MISSIONS", ...historicalLaunchSeries("success"), grade: "B", dataState: "observed", sourceUrl: historicalSeries.source.url },
+  { id: "mass", eyebrow: "MASS TO ORBIT", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [160, 204, 261, 384, 471, 612, 746, 880, 1004, 1120], cn: [55, 78, 96, 132, 178, 213, 257, 312, 361, 415], other: [85, 89, 97, 122, 135, 154, 172, 194, 238, 307], global: [300, 371, 454, 638, 784, 979, 1175, 1386, 1603, 1842], grade: "D", dataState: "sample" },
+  { id: "mass-per-launch", eyebrow: "MASS PER SUCCESS", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [5.5, 6.6, 10, 9.6, 9.8, 7.3, 6.6, 5.8, 5.7, 5.6], cn: [3.4, 2.1, 3, 3.8, 3.4, 3.4, 3.9, 4.7, 4.9, 4.9], other: [2.1, 2.1, 2.4, 4.2, 3.8, 4.7, 4.5, 5.7, 6.1, 6.8], global: [3.5, 3.3, 4.6, 6.1, 5.7, 5.5, 5.4, 5.5, 5.5, 5.6], decimals: 1, grade: "D", dataState: "sample" },
+  { id: "reflight-share", eyebrow: "FLIGHT-PROVEN SHARE", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [12, 45, 59, 62, 71, 79, 88, 92, 95, 96], cn: [null, null, null, null, null, null, 2, 8, 18, 33], other: [null, null, null, null, null, null, null, 2, 3, 4], global: [4, 13, 16, 22, 28, 36, 48, 58, 65, 70], grade: "D", dataState: "sample" },
+  { id: "recovery", eyebrow: "BOOSTER RECOVERY", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [73, 85, 92, 91, 95, 96, 97, 98, 98, 99], cn: [null, null, null, null, null, null, 75, 82, 88, 92], other: [null, null, null, null, null, null, 60, 67, 72], global: [73, 85, 92, 91, 95, 96, 96, 96, 97, 98], grade: "D", dataState: "sample" },
+  { id: "turnaround", eyebrow: "BOOSTER TURNAROUND", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [225, 180, 128, 106, 74, 52, 42, 31, 25, 21], cn: [null, null, null, null, null, null, null, 180, 120, 92], other: [null, null, null, null, null, null, null, null, 210, 165], global: [225, 180, 128, 106, 74, 52, 42, 35, 29, 25], grade: "D", dataState: "sample" },
+  { id: "flight-number", eyebrow: "MEDIAN FLIGHT NUMBER", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [2, 2, 3, 4, 5, 7, 10, 13, 16, 19], cn: [null, null, null, null, null, null, null, 2, 2, 3], other: [null, null, null, null, null, null, null, null, 2, 2], global: [2, 2, 3, 4, 5, 7, 9, 12, 15, 18], grade: "D", dataState: "sample" },
+  { id: "cost-per-kg", eyebrow: "EST. COST TO ORBIT", years: ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026E"], us: [5600, 4600, 3800, 3100, 2500, 2100, 1800, 1550, 1350, 1200], cn: [7200, 6800, 6300, 5900, 5400, 4900, 4500, 4100, 3800, 3500], other: [11800, 11200, 10600, 10100, 9600, 9200, 8900, 8600, 8200, 7900], global: [7600, 6800, 6000, 5300, 4600, 4000, 3400, 2900, 2500, 2200], grade: "D", dataState: "sample" },
 ];
 
 const kardashevSeries = { years: ["1965", "1975", "1985", "1995", "2005", "2015", "2020", "2024", "2026E"], values: [0.7131, 0.7184, 0.7215, 0.7242, 0.7271, 0.729, 0.7297, 0.7302, 0.73042] };
@@ -70,138 +105,83 @@ function LineChart({ years, series, label, zeroBased = true, axisDecimals }: { y
     const draw = () => {
       const rect = canvas.getBoundingClientRect();
       const dpr = window.devicePixelRatio || 1;
-      canvas.width = Math.max(1, rect.width * dpr);
-      canvas.height = Math.max(1, rect.height * dpr);
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return;
+      canvas.width = Math.max(1, rect.width * dpr); canvas.height = Math.max(1, rect.height * dpr);
+      const ctx = canvas.getContext("2d"); if (!ctx) return;
       ctx.scale(dpr, dpr);
-      const width = rect.width;
-      const height = rect.height;
-      const pad = { l: 42, r: 16, t: 18, b: 28 };
-      const plotW = width - pad.l - pad.r;
-      const plotH = height - pad.t - pad.b;
+      const width = rect.width, height = rect.height, pad = { l: 46, r: 16, t: 18, b: 30 };
+      const plotW = width - pad.l - pad.r, plotH = height - pad.t - pad.b;
       const numeric = series.flatMap((item) => item.values.filter((value): value is number => value !== null));
-      const rawMax = Math.max(...numeric, 1);
-      const rawMin = Math.min(...numeric);
-      const span = Math.max(rawMax - rawMin, rawMax * 0.01, 0.0001);
-      const min = zeroBased ? 0 : rawMin - span * 0.18;
-      const max = rawMax + span * 0.08;
-      ctx.clearRect(0, 0, width, height);
-      ctx.font = "9px ui-monospace, SFMono-Regular, Menlo, monospace";
-      ctx.textBaseline = "middle";
+      const rawMax = Math.max(...numeric, 1), rawMin = Math.min(...numeric), span = Math.max(rawMax - rawMin, rawMax * 0.01, 0.0001);
+      const min = zeroBased ? 0 : rawMin - span * 0.18, max = rawMax + span * 0.08;
+      ctx.clearRect(0, 0, width, height); ctx.font = "9px ui-monospace, SFMono-Regular, Menlo, monospace"; ctx.textBaseline = "middle";
       for (let index = 0; index < 4; index += 1) {
-        const gridY = pad.t + (plotH * index) / 3;
-        ctx.strokeStyle = "#363a43";
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(pad.l, gridY);
-        ctx.lineTo(width - pad.r, gridY);
-        ctx.stroke();
-        ctx.fillStyle = "#747985";
-        const value = max - ((max - min) * index) / 3;
-        ctx.fillText(value >= 1000 ? `${(value / 1000).toFixed(1)}k` : value.toFixed(axisDecimals ?? (value < 10 ? 1 : 0)), 3, gridY);
+        const gridY = pad.t + (plotH * index) / 3; ctx.strokeStyle = "#363a43"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(pad.l, gridY); ctx.lineTo(width - pad.r, gridY); ctx.stroke(); ctx.fillStyle = "#747985";
+        const value = max - ((max - min) * index) / 3; ctx.fillText(value >= 1000 ? `${(value / 1000).toFixed(1)}k` : value.toFixed(axisDecimals ?? (value < 10 ? 1 : 0)), 3, gridY);
       }
-      const x = (index: number) => pad.l + (plotW * index) / Math.max(years.length - 1, 1);
-      const y = (value: number) => pad.t + plotH - ((value - min) / Math.max(max - min, 0.0001)) * plotH;
-      series.forEach(({ values, color, dashed }) => {
-        ctx.strokeStyle = color;
-        ctx.lineWidth = color === "#f4f2ec" ? 2.4 : 1.8;
-        ctx.lineJoin = "round";
-        ctx.lineCap = "round";
-        ctx.setLineDash(dashed ? [6, 4] : []);
-        let started = false;
-        ctx.beginPath();
-        values.forEach((value, index) => {
-          if (value === null) { started = false; return; }
-          if (!started) { ctx.moveTo(x(index), y(value)); started = true; }
-          else ctx.lineTo(x(index), y(value));
-        });
-        ctx.stroke();
-        ctx.setLineDash([]);
-        values.forEach((value, index) => {
-          if (value === null) return;
-          ctx.fillStyle = color;
-          ctx.beginPath();
-          ctx.arc(x(index), y(value), index === values.length - 1 ? 3.2 : 1.8, 0, Math.PI * 2);
-          ctx.fill();
-        });
-      });
-      ctx.fillStyle = "#747985";
-      ctx.textBaseline = "bottom";
-      [0, Math.floor((years.length - 1) / 2), years.length - 1].forEach((index) => {
-        const value = years[index];
-        const textWidth = ctx.measureText(value).width;
-        ctx.fillText(value, Math.min(Math.max(x(index) - textWidth / 2, pad.l), width - pad.r - textWidth), height - 4);
-      });
+      const x = (index: number) => pad.l + (plotW * index) / Math.max(years.length - 1, 1); const y = (value: number) => pad.t + plotH - ((value - min) / Math.max(max - min, 0.0001)) * plotH;
+      series.forEach(({ values, color, dashed }) => { ctx.strokeStyle = color; ctx.lineWidth = color === "#f4f2ec" ? 2.4 : 1.8; ctx.lineJoin = "round"; ctx.lineCap = "round"; ctx.setLineDash(dashed ? [6, 4] : []); let started = false; ctx.beginPath(); values.forEach((value, index) => { if (value === null) { started = false; return; } if (!started) { ctx.moveTo(x(index), y(value)); started = true; } else ctx.lineTo(x(index), y(value)); }); ctx.stroke(); ctx.setLineDash([]); values.forEach((value, index) => { if (value === null) return; ctx.fillStyle = color; ctx.beginPath(); ctx.arc(x(index), y(value), index === values.length - 1 ? 3.2 : 1.8, 0, Math.PI * 2); ctx.fill(); }); });
+      ctx.fillStyle = "#747985"; ctx.textBaseline = "bottom"; [0, Math.floor((years.length - 1) / 2), years.length - 1].forEach((index) => { const value = years[index], textWidth = ctx.measureText(value).width; ctx.fillText(value, Math.min(Math.max(x(index) - textWidth / 2, pad.l), width - pad.r - textWidth), height - 4); });
     };
-    draw();
-    const observer = new ResizeObserver(draw);
-    observer.observe(canvas);
-    return () => observer.disconnect();
+    draw(); const observer = new ResizeObserver(draw); observer.observe(canvas); return () => observer.disconnect();
   }, [years, series, zeroBased, axisDecimals]);
-  return <canvas ref={ref} className="metric-canvas" role="img" aria-label={`${label}连续时间序列`} />;
+  return <canvas ref={ref} className="metric-canvas" role="img" aria-label={label} />;
 }
 
 function SegmentedBar({ us, cn, other, total }: { us: number; cn: number; other: number; total: number }) {
-  return <div className="segment-bar" aria-label={`美国 ${us}，中国 ${cn}，其他 ${other}`}><i className="segment-us" style={{ width: `${(us / total) * 100}%` }} /><i className="segment-cn" style={{ width: `${(cn / total) * 100}%` }} /><i className="segment-other" style={{ width: `${(other / total) * 100}%` }} /></div>;
+  return <div className="segment-bar"><i className="segment-us" style={{ width: `${(us / total) * 100}%` }} /><i className="segment-cn" style={{ width: `${(cn / total) * 100}%` }} /><i className="segment-other" style={{ width: `${(other / total) * 100}%` }} /></div>;
 }
 
 const observedMetricCount = metricSeries.filter((metric) => metric.dataState === "observed").length;
-const launch2026 = (launchActivity.metrics.attempts as LaunchActivityPoint[]).find((point) => point.year === "2026")!;
-const regionLabels = { us: "美国", cn: "中国", other: "其他" } as const;
-const regionCodes = { us: "US", cn: "CN", other: "OTHER" } as const;
-const rocketFamilies2026 = (launchActivity.metrics.rocketFamilies as Array<{ year: string; region: "us" | "cn" | "other"; family: string; attempts: number; success: number }>).filter((item) => item.year === "2026");
-function topRocketFamilies(region: "us" | "cn" | "other") { return rocketFamilies2026.filter((item) => item.region === region).sort((a, b) => b.attempts - a.attempts).slice(0, 6); }
+const ll2Attempts = (launchActivity.metrics.attempts as LaunchPoint[]).find((point) => point.year === "2026")!;
+const ll2Success = (launchActivity.metrics.success as LaunchPoint[]).find((point) => point.year === "2026")!;
+const rocketFamilies = (launchActivity.metrics.rocketFamilies as Array<{ year: string; region: Region; family: string; attempts: number; success: number }>).filter((item) => item.year === "2026");
+const topFamilies = (region: Region) => rocketFamilies.filter((item) => item.region === region).sort((a, b) => b.attempts - a.attempts).slice(0, 6);
+const regions: Region[] = ["us", "cn", "other"];
 
 export default function Home() {
+  const [lang, setLang] = useState<Lang>("zh");
   const [range, setRange] = useState<"5y" | "all">("all");
-  return <main id="top" className="dashboard-shell">
-    <header className="topbar">
-      <a className="brand" href="#top" aria-label="Project Cislunar-I 首页"><span className="brand-mark">CI</span><span>PROJECT CISLUNAR–I</span></a>
-      <nav className="topnav" aria-label="主导航"><a className="active" href="#overview">总览</a><a href="#orbit-assets">在轨资产</a><a href="#launch-industry">发射工业</a><a href="#cislunar">地月</a><a href="#stations">空间站</a><a href="#method">方法</a></nav>
-      <div className="signal"><span /> 数据截止 · 2026</div>
-    </header>
+  const t = copy[lang];
+  useEffect(() => { document.documentElement.lang = lang === "zh" ? "zh-CN" : "en"; }, [lang]);
 
-    <section id="overview" className="rivalry-hero">
-      <div className="hero-copy"><p className="eyebrow">US × CHINA × WORLD · RAW TELEMETRY</p><h1>太空工业<br />连续看板</h1><p className="dek">主视角仍是中美对比，同时把全球与其他参与者放回同一坐标系。这里只展示可复算的原始数字；未形成连续运营的能力，则改用状态与事件。</p><div className="hero-actions"><a className="primary-button" href="#orbit-assets">进入全景看板 <span>↓</span></a><span className="updated">数据模式<br /><strong>OBSERVED + LABELED SAMPLE</strong></span></div></div>
-      <aside className="hero-telemetry" aria-label="中美关键原始数据快照"><div className="telemetry-head"><span>2026 / RAW SNAPSHOT</span><span>US × CN</span></div><div className="telemetry-country-head"><span>指标</span><b>US · 美国</b><b>CN · 中国</b></div><div className="telemetry-row"><span>活跃在轨载荷<small>GCAT · OBJECTS</small></span><strong>{orbitCurrent.activePayloads.us.toLocaleString()}</strong><strong>{orbitCurrent.activePayloads.cn.toLocaleString()}</strong></div><div className="telemetry-row"><span>已知活跃载荷质量<small>KNOWN MASS · TONNES</small></span><strong>{(orbitCurrent.knownActivePayloadMassKg.us / 1e3).toFixed(0)}</strong><strong>{(orbitCurrent.knownActivePayloadMassKg.cn / 1e3).toFixed(0)}</strong></div><div className="telemetry-row"><span>轨道发射尝试<small>2026 YTD · MISSIONS</small></span><strong>{launch2026.us}</strong><strong>{launch2026.cn}</strong></div><div className="telemetry-foot"><span><i className="legend-us" />美国</span><span><i className="legend-cn" />中国</span><b>四模块连续展示 ↓</b></div></aside>
+  const inventory = historicalSeries.orbitInventory.slice(range === "5y" ? -5 : 0);
+  const inventoryYears = inventory.map((point) => point.label);
+  const inventorySeries = (key: "payloadObjects" | "knownPayloadMassKg", divisor = 1): ChartSeries[] => [
+    { name: regionLabel[lang].global, color: "#f4f2ec", values: inventory.map((point) => point[key].global / divisor), dashed: true },
+    { name: regionLabel[lang].us, color: "#d9ff43", values: inventory.map((point) => point[key].us / divisor) },
+    { name: regionLabel[lang].cn, color: "#ff6045", values: inventory.map((point) => point[key].cn / divisor) },
+    { name: regionLabel[lang].other, color: "#6a9eff", values: inventory.map((point) => point[key].other / divisor) },
+  ];
+
+  return <main id="top" className={`dashboard-shell lang-${lang}`}>
+    <header className="topbar"><a className="brand" href="#top"><span className="brand-mark">CI</span><span>PROJECT CISLUNAR–I</span></a><nav className="topnav">{[["#overview", 0], ["#orbit-assets", 1], ["#launch-industry", 2], ["#cislunar", 3], ["#stations", 4], ["#method", 5]].map(([href, index]) => <a className={index === 0 ? "active" : ""} href={String(href)} key={String(href)}>{t.nav[Number(index)]}</a>)}</nav><div className="language-switch" role="group" aria-label={t.language}><button className={lang === "zh" ? "selected" : ""} onClick={() => setLang("zh")}>中文</button><button className={lang === "en" ? "selected" : ""} onClick={() => setLang("en")}>EN</button></div><div className="signal"><span />{t.signal}</div></header>
+
+    <section id="overview" className="rivalry-hero"><div className="hero-copy"><p className="eyebrow">{t.heroEyebrow}</p><h1>{t.heroTitle}</h1><p className="dek">{t.heroDek}</p><div className="hero-actions"><a className="primary-button" href="#orbit-assets">{t.enter}<span>↓</span></a><span className="updated">{t.dataMode}<br /><strong>{t.modeValue}</strong></span></div></div><aside className="hero-telemetry"><div className="telemetry-head"><span>{t.snapshot}</span><span>US × CN</span></div><div className="telemetry-country-head"><span>{t.metric}</span><b>US</b><b>CN</b></div><div className="telemetry-row"><span>{t.activePayloads}<small>GCAT · {t.objectsUnit}</small></span><strong>{orbitCurrent.activePayloads.us.toLocaleString()}</strong><strong>{orbitCurrent.activePayloads.cn.toLocaleString()}</strong></div><div className="telemetry-row"><span>{t.knownMass}<small>{t.tonnesUnit}</small></span><strong>{(orbitCurrent.knownActivePayloadMassKg.us / 1e3).toFixed(0)}</strong><strong>{(orbitCurrent.knownActivePayloadMassKg.cn / 1e3).toFixed(0)}</strong></div><div className="telemetry-row"><span>{t.launchAttempts}<small>2026 {t.ytdShort}</small></span><strong>{ll2Attempts.us}</strong><strong>{ll2Attempts.cn}</strong></div><div className="telemetry-foot"><span><i className="legend-us" />US</span><span><i className="legend-cn" />CN</span><b>{t.fourModules} ↓</b></div></aside></section>
+
+    <section id="orbit-assets" className="section orbital-section"><div className="section-heading"><div><p className="section-index">{t.orbitIndex}</p><h2>{t.orbitTitle}</h2></div><div className="heading-controls"><p>{t.orbitDek}</p><div className="range-control light"><button className={range === "5y" ? "selected" : ""} onClick={() => setRange("5y")}>{t.range5}</button><button className={range === "all" ? "selected" : ""} onClick={() => setRange("all")}>{t.rangeAll}</button></div></div></div>
+      <div className="subsection-label"><span>{t.currentSnapshot}</span><b>GCAT · {t.activeCatalog} · {orbitCurrent.date}</b></div><div className="asset-kpis"><article><span>{t.activePayloadKpi}</span><strong>{orbitCurrent.activePayloads.global.toLocaleString()}</strong><p>{t.activePayloadKpi}</p></article><article><span>{t.catalogObjectsKpi}</span><strong>{orbitCurrent.catalogObjects.global.toLocaleString()}</strong><p>{t.catalogObjectsKpi}</p></article><article><span>{t.knownActiveMassKpi}</span><strong>{(orbitCurrent.knownActivePayloadMassKg.global / 1e3).toLocaleString(undefined, { maximumFractionDigits: 1 })}<small> t</small></strong><p>{t.knownActiveMassKpi}</p></article><article><span>{t.massCoverageKpi}</span><strong>{orbitCurrent.massCoverage.knownObjects.toLocaleString()}<small> / {orbitCurrent.massCoverage.totalObjects.toLocaleString()}</small></strong><p>{t.massCoverageKpi}</p></article></div>
+      <div className="asset-country-strip">{regions.map((region) => <div key={region}><span>{region.toUpperCase()}</span><strong>{orbitCurrent.activePayloads[region].toLocaleString()}</strong><p>{regionLabel[lang][region]} · {t.activePayloadKpi}</p></div>)}<div className="snapshot-start"><span>{t.monthlyHistory}</span><strong>01</strong><p>{t.snapshotStarts} {orbitCurrent.date}</p></div></div>
+      <div className="subsection-label history-label"><span>{t.historySince}</span><b>GCAT SATCAT · 2011—2026</b></div><div className="history-grid"><article className="history-panel"><header><div><span>{t.payloadInventoryLabel}</span><h3>{t.payloadHistory}</h3></div><b>{t.objectsUnit}</b></header><div className="metric-current four-series">{(["global", "us", "cn", "other"] as const).map((region) => <div key={region}><span><i className={`legend-${region}`} />{regionLabel[lang][region]}</span><strong>{inventory.at(-1)!.payloadObjects[region].toLocaleString()}</strong></div>)}</div><LineChart years={inventoryYears} series={inventorySeries("payloadObjects")} label={t.payloadHistory} /><footer>{t.payloadHistoryNote}</footer></article><article className="history-panel"><header><div><span>{t.knownPayloadMassLabel}</span><h3>{t.massHistory}</h3></div><b>{t.tonnesUnit}</b></header><div className="metric-current four-series">{(["global", "us", "cn", "other"] as const).map((region) => <div key={region}><span><i className={`legend-${region}`} />{regionLabel[lang][region]}</span><strong>{Math.round(inventory.at(-1)!.knownPayloadMassKg[region] / 1e3).toLocaleString()}</strong></div>)}</div><LineChart years={inventoryYears} series={inventorySeries("knownPayloadMassKg", 1e3)} label={t.massHistory} /><footer>{t.massHistoryNote}</footer></article></div>
+      <div className="distribution-grid"><article className="distribution-card"><header><div><span>{t.orbitDistributionLabel}</span><h3>{t.orbitDistribution}</h3></div><b>{t.activePayloads}</b></header><div className="distribution-list">{orbitCurrent.byOrbit.map((item) => <div className="distribution-row" key={item.name}><div><b>{item.name}</b><strong>{item.global.toLocaleString()}</strong></div><SegmentedBar {...item} total={item.global} /><small>US {item.us.toLocaleString()} · CN {item.cn.toLocaleString()} · {regionLabel[lang].other} {item.other.toLocaleString()}</small></div>)}</div></article><article className="distribution-card"><header><div><span>{t.missionCategoryLabel}</span><h3>{t.satelliteType}</h3></div><b>{t.catalogCategory}</b></header><div className="distribution-list compact">{orbitCurrent.byCategory.map((item) => <div className="distribution-row" key={item.name}><div><b>{lang === "zh" ? item.name : categoryEn[item.name]}</b><strong>{item.global.toLocaleString()}</strong></div><SegmentedBar {...item} total={item.global} /><small>US {item.us.toLocaleString()} · CN {item.cn.toLocaleString()} · {regionLabel[lang].other} {item.other.toLocaleString()}</small></div>)}</div></article></div>
+      <div className="object-ledger"><div><span>{t.objectComposition}</span><b>{t.allObjectsNote}</b></div>{orbitCurrent.byObjectType.map((item) => <div key={item.name}><span>{lang === "zh" ? item.name : objectTypeEn[item.name]}</span><strong>{item.global.toLocaleString()}</strong><small>{t.global}</small></div>)}<a href={orbitCurrent.validation.esaUrl} target="_blank" rel="noreferrer"><span>{t.crossCheck}</span><strong>&gt;{orbitCurrent.validation.esaEnvironmentMassTonnes.toLocaleString()} t</strong><small>{t.allObjectMass} ↗</small></a></div>
     </section>
 
-    <section id="orbit-assets" className="section orbital-section">
-      <div className="section-heading"><div><p className="section-index">01 — ORBITAL ASSETS</p><h2>谁把什么放在轨道上</h2></div><p>“活跃载荷”与“全部目录对象”严格分开。今天是首个按月快照；此后每月追加，不回填虚构历史。</p></div>
-      <div className="asset-kpis"><article><span>ACTIVE PAYLOADS</span><strong>{orbitCurrent.activePayloads.global.toLocaleString()}</strong><p>活跃有效载荷</p></article><article><span>CATALOG OBJECTS</span><strong>{orbitCurrent.catalogObjects.global.toLocaleString()}</strong><p>在轨目录对象 · 含碎片与火箭体</p></article><article><span>KNOWN ACTIVE MASS</span><strong>{(orbitCurrent.knownActivePayloadMassKg.global / 1e3).toLocaleString("zh-CN", { maximumFractionDigits: 1 })}<small> t</small></strong><p>有质量字段的活跃载荷</p></article><article><span>MASS COVERAGE</span><strong>{orbitCurrent.massCoverage.knownObjects.toLocaleString()}<small> / {orbitCurrent.massCoverage.totalObjects.toLocaleString()}</small></strong><p>有质量数据的对象数</p></article></div>
-      <div className="asset-country-strip">{(["us", "cn", "other"] as const).map((region) => <div key={region}><span>{regionCodes[region]}</span><strong>{orbitCurrent.activePayloads[region].toLocaleString()}</strong><p>{regionLabels[region]} · 活跃载荷</p></div>)}<div className="snapshot-start"><span>MONTHLY HISTORY</span><strong>01</strong><p>时序积累始于 {orbitCurrent.date.replaceAll("-", ".")}</p></div></div>
-      <div className="distribution-grid">
-        <article className="distribution-card"><header><div><span>ORBIT DISTRIBUTION</span><h3>轨道分布</h3></div><b>ACTIVE PAYLOADS</b></header><div className="distribution-list">{orbitCurrent.byOrbit.map((item) => <div className="distribution-row" key={item.name}><div><b>{item.name}</b><strong>{item.global.toLocaleString()}</strong></div><SegmentedBar {...item} total={item.global} /><small>US {item.us.toLocaleString()} · CN {item.cn.toLocaleString()} · OTHER {item.other.toLocaleString()}</small></div>)}</div></article>
-        <article className="distribution-card"><header><div><span>MISSION CATEGORY</span><h3>卫星类型</h3></div><b>GCAT CATEGORY</b></header><div className="distribution-list compact">{orbitCurrent.byCategory.map((item) => <div className="distribution-row" key={item.name}><div><b>{item.name}</b><strong>{item.global.toLocaleString()}</strong></div><SegmentedBar {...item} total={item.global} /><small>US {item.us.toLocaleString()} · CN {item.cn.toLocaleString()} · OTHER {item.other.toLocaleString()}</small></div>)}</div></article>
-      </div>
-      <div className="object-ledger"><div><span>目录对象构成</span><b>全部当前目录对象，不等同于有效卫星</b></div>{orbitCurrent.byObjectType.map((item) => <div key={item.name}><span>{item.name}</span><strong>{item.global.toLocaleString()}</strong><small>全球</small></div>)}<a href={orbitCurrent.validation.esaUrl} target="_blank" rel="noreferrer"><span>ESA 交叉参照</span><strong>&gt;{orbitCurrent.validation.esaEnvironmentMassTonnes.toLocaleString()} t</strong><small>所有在轨物体总质量 ↗</small></a></div>
+    <div className="dashboard-toolbar"><div><span className="live-dot" />{t.launchCutoff}: {launchCutoff}</div><div className="series-legend">{(["global", "us", "cn", "other"] as const).map((region) => <span key={region}><i className={`legend-${region}`} />{regionLabel[lang][region]}</span>)}</div><div className="range-control"><button className={range === "5y" ? "selected" : ""} onClick={() => setRange("5y")}>{t.range5}</button><button className={range === "all" ? "selected" : ""} onClick={() => setRange("all")}>{t.rangeAll}</button></div></div>
+
+    <section id="launch-industry" className="section metric-console-section"><div className="section-heading"><div><p className="section-index">{t.launchIndex}</p><h2>{t.launchTitle}</h2></div><p>{t.launchDek}</p></div><div className="subsection-label dark"><span>{t.currentYtd}</span><b>LL2 · {launchCutoff}</b></div><div className="launch-kpis"><article><span>{t.attemptsLabel}</span><strong>{ll2Attempts.global}</strong><p>{t.launchAttempts}</p></article><article><span>{t.successLabel}</span><strong>{ll2Success.global}</strong><p>{t.successMissions}</p></article><article><span>{t.successRateLabel}</span><strong>{((ll2Success.global / ll2Attempts.global) * 100).toFixed(1)}<small>%</small></strong><p>{t.successRate}</p></article><article><span>{t.configurationsLabel}</span><strong>{new Set(rocketFamilies.map((item) => item.family)).size}</strong><p>{t.activeFamilies}</p></article></div>
+      <div className="rocket-family-grid">{regions.map((region) => { const families = topFamilies(region), max = Math.max(...families.map((item) => item.attempts), 1); return <article className={`family-column ${region}`} key={region}><header><div><span>{region.toUpperCase()} · 2026 {t.ytdShort}</span><h3>{regionLabel[lang][region]} · {t.rocketMix}</h3></div><strong>{families.reduce((sum, item) => sum + item.attempts, 0)}<small> {t.topSix}</small></strong></header><div>{families.map((item, index) => <div className="family-row" key={item.family}><span>{String(index + 1).padStart(2, "0")}</span><b>{item.family}</b><div><i style={{ width: `${(item.attempts / max) * 100}%` }} /></div><strong>{item.attempts}</strong><small>{item.success}/{item.attempts} {t.success}</small></div>)}</div></article>; })}</div><p className="family-method">{t.familyMethod}</p>
+      <div className="metric-dashboard">{metricSeries.map((metric, index) => { const start = range === "5y" ? -5 : 0, years = metric.years.slice(start), us = metric.us.slice(start), cn = metric.cn.slice(start), other = metric.other.slice(start), global = metric.global.slice(start), text = metricText[metric.id][lang]; const format = (value: number | null | undefined) => value == null ? "—" : value.toLocaleString(undefined, { minimumFractionDigits: metric.decimals ?? 0, maximumFractionDigits: metric.decimals ?? 0 }); const series: ChartSeries[] = [{ name: regionLabel[lang].global, color: "#f4f2ec", values: global, dashed: true }, { name: regionLabel[lang].us, color: "#d9ff43", values: us }, { name: regionLabel[lang].cn, color: "#ff6045", values: cn }, { name: regionLabel[lang].other, color: "#6a9eff", values: other }]; return <article className="metric-panel" key={metric.id}><header><div><span>{String(index + 1).padStart(2, "0")} / {t.metric}</span><h3>{text[0]}</h3></div><b>{text[1]}</b></header><div className="metric-current four-series">{([['global', global], ['us', us], ['cn', cn], ['other', other]] as const).map(([region, values]) => <div key={region}><span><i className={`legend-${region}`} />{regionLabel[lang][region]}</span><strong>{format(values.at(-1))}</strong></div>)}</div><LineChart years={years} series={series} label={text[0]} /><div className="metric-panel-foot"><span>{text[2]}</span>{metric.sourceUrl ? <a href={metric.sourceUrl} target="_blank" rel="noreferrer">{metric.grade} · {t.realEvents} ↗</a> : <b>{metric.grade} · {t.productSample}</b>}</div></article>; })}</div>
     </section>
 
-    <div className="dashboard-toolbar" aria-label="时序看板控制栏"><div><span className="live-dot" /> 发射数据截止：{launchDataCutoff}</div><div className="series-legend"><span><i className="legend-global" />全球</span><span><i className="legend-us" />美国</span><span><i className="legend-cn" />中国</span><span><i className="legend-other" />其他</span></div><div className="range-control" role="group" aria-label="选择时间范围"><button className={range === "5y" ? "selected" : ""} onClick={() => setRange("5y")}>近 5 年</button><button className={range === "all" ? "selected" : ""} onClick={() => setRange("all")}>全部可用</button></div></div>
-
-    <section id="launch-industry" className="section metric-console-section">
-      <div className="section-heading"><div><p className="section-index">02 — LAUNCH INDUSTRY</p><h2>发射工业与火箭家族</h2></div><p>先看真实任务频次与构型，再看仍待数据化的质量、复用和成本。样例指标始终明确标为 D 级。</p></div>
-      <div className="rocket-family-grid">{(["us", "cn", "other"] as const).map((region) => { const families = topRocketFamilies(region); const max = Math.max(...families.map((item) => item.attempts), 1); return <article className={`family-column ${region}`} key={region}><header><div><span>{regionCodes[region]} · 2026 YTD</span><h3>{regionLabels[region]}火箭构型</h3></div><strong>{families.reduce((sum, item) => sum + item.attempts, 0)}<small> TOP-6 发射</small></strong></header><div>{families.map((item, index) => <div className="family-row" key={item.family}><span>{String(index + 1).padStart(2, "0")}</span><b>{item.family}</b><div><i style={{ width: `${(item.attempts / max) * 100}%` }} /></div><strong>{item.attempts}</strong><small>{item.success}/{item.attempts} 成功</small></div>)}</div></article>; })}</div>
-      <p className="family-method">本期火箭家族由已存 LL2 任务名中的构型前缀归并；下一次月度抓取将优先用正式 configuration ID 回填。</p>
-      <div className="metric-dashboard">{metricSeries.map((metric, index) => { const start = range === "5y" ? -5 : 0; const years = metric.years.slice(start); const us = metric.us.slice(start); const cn = metric.cn.slice(start); const other = metric.other.slice(start); const global = metric.global.slice(start); const format = (value: number | null | undefined) => value === null || value === undefined ? "—" : value.toLocaleString("zh-CN", { minimumFractionDigits: metric.decimals ?? 0, maximumFractionDigits: metric.decimals ?? 0 }); const chartSeries: ChartSeries[] = [{ name: "全球", color: "#f4f2ec", values: global, dashed: true }, { name: "美国", color: "#d9ff43", values: us }, { name: "中国", color: "#ff6045", values: cn }, { name: "其他", color: "#6a9eff", values: other }]; return <article className="metric-panel" key={metric.id}><header><div><span>{String(index + 1).padStart(2, "0")} / {metric.eyebrow}</span><h3>{metric.title}</h3></div><b>{metric.unit}</b></header><div className="metric-current four-series"><div><span><i className="legend-global" />GLOBAL</span><strong>{format(global.at(-1))}</strong></div><div><span><i className="legend-us" />US</span><strong>{format(us.at(-1))}</strong></div><div><span><i className="legend-cn" />CN</span><strong>{format(cn.at(-1))}</strong></div><div><span><i className="legend-other" />OTHER</span><strong>{format(other.at(-1))}</strong></div></div><LineChart years={years} series={chartSeries} label={metric.title} /><div className="metric-panel-foot"><span>{metric.note}</span>{metric.sourceUrl ? <a href={metric.sourceUrl} target="_blank" rel="noreferrer">{metric.grade} 级 · 真实事件 ↗</a> : <b>{metric.grade} 级 · 产品样例</b>}</div></article>; })}</div>
+    <section id="cislunar" className="section cislunar-section"><div className="section-heading"><div><p className="section-index">{t.cislunarIndex}</p><h2>{t.cislunarTitle}</h2></div><p>{t.cislunarDek}</p></div><div className="subsection-label"><span>{t.existingAssets}</span><b>{t.verified} · {frontierData.asOf}</b></div><div className="lunar-asset-grid">{frontierData.cislunar.assets.map((asset) => <article className="lunar-asset-card" key={asset.shortName}><figure><img src={asset.image} alt={local(asset, "name", lang)} /><figcaption>{asset.imageCredit}</figcaption></figure><div className="lunar-asset-body"><div><span className={`country-pill ${asset.country.toLowerCase()}`}>{asset.country}</span><em>{local(asset, "status", lang)}</em></div><h3>{local(asset, "name", lang)}</h3><p>{local(asset, "type", lang)} · {local(asset, "location", lang)}</p><small>{t.operationalSince} {asset.since} · {local(asset, "next", lang)}</small><a href={asset.source} target="_blank" rel="noreferrer">{asset.publisher} · {t.source} ↗</a></div></article>)}</div>
+      <div className="subsection-label timeline-label"><span>{t.roadmap}</span><b>{t.statusLegend}</b></div><div className="dual-roadmap">{(["us", "cn"] as const).map((track) => <section className={`roadmap-track ${track}`} key={track}><header><span>{track.toUpperCase()}</span><h3>{track === "us" ? t.usTrack : t.cnTrack}</h3></header><div>{frontierData.cislunar.plans[track].map((event) => <article className={`roadmap-event ${event.tone}`} key={`${event.date}-${event.titleEn}`}><time>{event.date}</time><i /><div><span>{local(event, "status", lang)}</span><h4>{local(event, "title", lang)}</h4><p>{local(event, "detail", lang)}</p><a href={event.source} target="_blank" rel="noreferrer">{t.source} ↗</a></div></article>)}</div></section>)}</div>
     </section>
 
-    <section id="cislunar" className="section topology-section">
-      <div className="section-heading"><div><p className="section-index">03 — CISLUNAR FRONTIER</p><h2>地月专题：节点与事件</h2></div><p>这一阶段没有足够密度的连续工业数据。用真实运行节点、计划状态和事件时间轴表达，不把“未发生”画成零。</p></div>
-      <div className="cislunar-layout"><div className="space-map elfo"><div className="earth"><span>地球</span></div><div className="trajectory"><span className="node l1">L1</span><span className="node l2">L2</span></div><div className="moon"><i /><span>月球</span></div><div className="active-orbit"><span>QUEQIAO-2 · ELFO</span></div><p className="map-caption">EARTH–MOON DISTANCE · 384,400 KM / NOT TO SCALE</p></div><div className="asset-ledger"><header><span>ACTIVE / OPERATIONAL</span><b>{frontierData.cislunar.assets.length} 个公开节点</b></header>{frontierData.cislunar.assets.map((asset) => <article key={asset.shortName}><div><span className={`country-pill ${asset.country.toLowerCase()}`}>{asset.country}</span><em>{asset.status}</em></div><h3>{asset.name}</h3><p>{asset.type} · {asset.location}</p><small>SINCE {asset.since} · {asset.next}</small><a href={asset.source} target="_blank" rel="noreferrer">{asset.publisher} 来源 ↗</a></article>)}</div></div>
-      <div className="event-timeline"><header><span>MISSION TIMELINE</span><h3>已发生、计划与政策不确定性</h3></header>{frontierData.cislunar.events.map((event) => <article key={`${event.date}-${event.title}`}><time>{event.date}</time><i /><div><span>{event.status}</span><h4>{event.title}</h4><p>{event.detail}</p><a href={event.source} target="_blank" rel="noreferrer">官方 / 项目来源 ↗</a></div></article>)}</div>
-    </section>
+    <section id="stations" className="section station-section"><div className="section-heading"><div><p className="section-index">{t.stationIndex}</p><h2>{t.stationTitle}</h2></div><p>{t.stationDek}</p></div><div className="station-grid">{frontierData.stations.map((station) => <article className="station-card" key={station.shortName}><figure><img src={station.image} alt={local(station, "name", lang)} /><figcaption>{station.imageCredit}</figcaption></figure><header><div><span>{station.shortName} · {local(station, "country", lang)}</span><h3>{local(station, "name", lang)}</h3></div><em><i />{local(station, "status", lang)}</em></header><div className="station-data-grid"><div><span>{t.mass}</span><strong>{station.mass}</strong></div><div><span>{t.altitude}</span><strong>{station.altitude}</strong></div><div><span>{t.inclination}</span><strong>{station.inclination}</strong></div><div><span>{t.crew}</span><strong>{station.nominalCrew}</strong></div><div><span>{t.volume}</span><strong>{local(station, "pressurizedVolume", lang)}</strong></div><div><span>{t.power}</span><strong>{local(station, "power", lang)}</strong></div></div><div className="station-foot"><p><b>{t.configuration}</b>{local(station, "configuration", lang)}</p><p><b>{t.life}</b>{local(station, "designLife", lang)}</p><a href={station.source} target="_blank" rel="noreferrer">{t.technicalSource} ↗</a></div></article>)}</div></section>
 
-    <section id="stations" className="section station-section">
-      <div className="section-heading"><div><p className="section-index">04 — SPACE STATIONS</p><h2>近地轨道的人类前哨</h2></div><p>空间站是状态型基础设施：展示当前构型、质量、轨道和驻留能力，并保留来源，而不是强行生成月度曲线。</p></div>
-      <div className="station-grid">{frontierData.stations.map((station) => <article className="station-card" key={station.shortName}><figure><img src={station.image} alt={`${station.name}官方图片`} /><figcaption>{station.imageCredit}</figcaption></figure><header><div><span>{station.shortName} · {station.country}</span><h3>{station.name}</h3></div><em><i />{station.status}</em></header><div className="station-data-grid"><div><span>质量</span><strong>{station.mass}</strong></div><div><span>轨道高度</span><strong>{station.altitude}</strong></div><div><span>轨道倾角</span><strong>{station.inclination}</strong></div><div><span>额定乘员</span><strong>{station.nominalCrew}</strong></div><div><span>加压容积</span><strong>{station.pressurizedVolume}</strong></div><div><span>供电能力</span><strong>{station.power}</strong></div></div><div className="station-foot"><p><b>构型</b>{station.configuration}</p><p><b>寿命 / 历史</b>{station.designLife}</p><a href={station.source} target="_blank" rel="noreferrer">官方技术资料 ↗</a></div></article>)}</div>
-    </section>
+    <section className="section civilization-section"><div className="civilization-copy"><p className="section-index">{t.outcomeIndex}</p><h2>{t.outcomeTitle}</h2><p>{t.outcomeDek}</p><div className="outcome-flow">{t.flow.map((item) => <span key={item}>{item}</span>)}<i>→</i><strong>K</strong></div></div><aside className="k-card final-k-card"><div className="k-head"><span>{t.kardashev}</span><span>{t.modelEstimate}</span></div><div className="k-number">0.73042</div><div className="k-delta">↗ +0.00018 <span>/ {t.perYear}</span></div><div className="progress-track"><span /></div><div className="scale-labels"><span>K 0.70</span><strong>{t.currentCivilization}</strong><span>K 1.00</span></div><div className="formula">K = ( log₁₀ P − 6 ) / 10</div><div className="k-history-head"><span>{t.history}</span><b>1965—2026E · {t.global}</b></div><LineChart years={kardashevSeries.years} series={[{ name: `${t.global} K`, color: "#d9ff43", values: kardashevSeries.values }]} label={t.kardashev} zeroBased={false} axisDecimals={4} /></aside></section>
 
-    <section className="section civilization-section" aria-labelledby="civilization-title"><div className="civilization-copy"><p className="section-index">05 — CIVILIZATION OUTCOME</p><h2 id="civilization-title">竞争是过程。<br />文明进阶是结果。</h2><p>中美对比回答“谁正在建立太空工业链”；卡尔达肖夫指数把全人类掌控的总能流压缩为最终文明读数。它是长期积累后的结果，不是看板的起点。</p><div className="outcome-flow"><span>在轨资产</span><i>→</i><span>运力</span><i>→</i><span>基础设施</span><i>→</i><strong>K</strong></div></div><aside className="k-card final-k-card" aria-label="卡尔达肖夫文明等级"><div className="k-head"><span>卡尔达肖夫指数</span><span>MODEL / EST.</span></div><div className="k-number">0.73042</div><div className="k-delta">↗ +0.00018 <span>/ 年</span></div><div className="progress-track"><span /></div><div className="scale-labels"><span>K 0.70</span><strong>当前：近地轨道工业化</strong><span>K 1.00</span></div><div className="formula">K = ( log₁₀ P − 6 ) / 10</div><div className="k-history-head"><span>历史演进</span><b>1965—2026E · GLOBAL</b></div><LineChart years={kardashevSeries.years} series={[{ name: "全球 K", color: "#d9ff43", values: kardashevSeries.values }]} label="卡尔达肖夫指数" zeroBased={false} axisDecimals={4} /></aside></section>
-
-    <section id="method" className="section method-section"><div className="method-intro"><p className="section-index">06 — DATA PROTOCOL</p><h2>每一个数字，<br />都有来源与边界。</h2><p>在轨资产来自 GCAT 月度快照，发射事件来自 Launch Library 2；地月与空间站采用 NASA、CNSA、CMSE 等官方项目页。质量覆盖按“有质量字段对象数 / 活跃载荷数”同时展示，不用四舍五入后的百分比掩盖缺口。</p></div><div className="confidence-list"><div><span className="grade grade-a">A</span><strong>官方观测</strong><p>任务公报、机构事实页与工程状态</p><em>地月 / 空间站</em></div><div><span className="grade grade-b">B</span><strong>结构化公共数据</strong><p>GCAT 对象目录与 LL2 任务级数据库，可复算</p><em>轨道 / 发射</em></div><div><span className="grade grade-c">C</span><strong>确定性推演</strong><p>运力包线、平台匹配与衰减模型</p><em>必须展示区间</em></div><div><span className="grade grade-d">D</span><strong>产品样例</strong><p>尚未接入来源的质量、复用与成本序列</p><em>{metricSeries.length - observedMetricCount} 个面板</em></div></div></section>
-
-    <footer><div className="footer-brand"><span className="brand-mark">CI</span><div><strong>PROJECT CISLUNAR–I</strong><p>让文明进步成为可测量的工程问题。</p></div></div><div className="footer-meta"><span>VERSION 0.6 ALPHA</span><span>GCAT {orbitCurrent.date} · LL2 {launchDataCutoff}</span><a href="#top">返回顶部 ↑</a></div></footer>
+    <section id="method" className="section method-section"><div className="method-intro"><p className="section-index">{t.methodIndex}</p><h2>{t.methodTitle}</h2><p>{t.methodDek}</p></div><div className="confidence-list"><div><span className="grade grade-a">A</span><strong>{t.official}</strong><p>{t.officialDesc}</p><em>{t.currentUse}</em></div><div><span className="grade grade-b">B</span><strong>{t.structured}</strong><p>{t.structuredDesc}</p><em>{t.currentUse}</em></div><div><span className="grade grade-c">C</span><strong>{t.inferred}</strong><p>{t.inferredDesc}</p><em>{t.rangeRequired}</em></div><div><span className="grade grade-d">D</span><strong>{t.sample}</strong><p>{t.sampleDesc}</p><em>{metricSeries.length - observedMetricCount} {t.panels}</em></div></div></section>
+    <footer><div className="footer-brand"><span className="brand-mark">CI</span><div><strong>PROJECT CISLUNAR–I</strong><p>{t.footer}</p></div></div><div className="footer-meta"><span>{t.version} 0.7 ALPHA</span><span>GCAT {orbitCurrent.date} · LL2 {launchCutoff}</span><a href="#top">{t.backTop} ↑</a></div></footer>
   </main>;
 }

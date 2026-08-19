@@ -30,6 +30,22 @@ When one task exposes the launch service provider's country and another task for
 
 The production API's free tier is rate-limited. Prefer one monthly run with a bounded date window rather than repeated exploratory requests.
 
+## Historical series
+
+- Source: [GCAT](https://planet4589.org/space/gcat/) SATCAT main catalog and LaunchLog.
+- Stored dashboard series: `data/metrics/historical-series.json`.
+- Coverage currently runs from 2011 through the source cutoff in 2026. The current year is explicitly marked as partial.
+- Launch attempts are unique orbital/deep-space `Launch_Tag` values; failed attempts remain in the attempt count, while launch codes marked failed are excluded from the success count.
+- Historical orbital inventory is reconstructed at each calendar year end from catalog start and descent dates. It includes active and inactive payload objects, so it is deliberately not presented as the same measure as the current Active Catalog KPI.
+- Known payload mass is summed only where GCAT supplies a mass. Missing mass is never imputed as zero.
+- Both upstream file hashes and the full classification methodology are stored beside the generated series.
+
+Refresh the complete annual history ad hoc:
+
+```bash
+npm run data:update:history -- --from=2011 --to=2026
+```
+
 ## Orbital assets
 
 - Source: [GCAT](https://planet4589.org/space/gcat/), release 1.8.5, CC-BY-4.0.
@@ -46,4 +62,6 @@ npm run data:update:orbit -- --date=2026-08-19
 
 ## Editorial frontier data
 
-`data/editorial/frontier.json` stores manually reviewed cislunar and space-station facts that are better represented as status and events than as sparse time series. Every asset, event, and station record includes an official or program source URL. Official station images are stored locally in `public/` with credits preserved in the JSON.
+`data/editorial/frontier.json` stores manually reviewed cislunar and space-station facts that are better represented as status and events than as sparse time series. Visible editorial fields are stored in Chinese and English. Every asset, milestone, and station record includes an official or program source URL.
+
+The cislunar module uses separate US and Chinese program timelines so completed events, active preparations, planned dates, and policy review are not visually conflated. Official LRO, Queqiao-2, Chang'e-4/Yutu-2, ISS, and Tiangong images are stored locally in `public/`, with credits and source URLs preserved in the JSON.
