@@ -50,6 +50,7 @@ function countryFor(launch) {
 
 function normalize(launch) {
   const { countryCode, classificationBasis } = countryFor(launch);
+  const configuration = launch.rocket?.configuration;
   return {
     id: launch.id,
     name: launch.name,
@@ -63,6 +64,10 @@ function normalize(launch) {
     region: regionFor(countryCode),
     classificationBasis,
     orbit: launch.mission?.orbit?.abbrev ?? null,
+    rocketConfigurationId: configuration?.id ?? null,
+    rocketConfiguration: configuration?.name ?? null,
+    rocketFullName: configuration?.full_name ?? configuration?.name ?? null,
+    rocketFamily: configuration?.families?.at(-1)?.name ?? configuration?.name ?? "未分类",
     lastUpdated: launch.last_updated ?? null,
     sourceUrl: launch.url,
   };
@@ -85,6 +90,32 @@ function resolveProviderCountries(records) {
       classificationBasis: "lsp_country_inferred_from_peer",
     };
   });
+}
+
+function inferRocketFields(record) {
+  if (record.rocketFamily) return record;
+  const configuration = record.name?.split("|")[0]?.trim() || "未分类";
+  let family = configuration;
+  if (/^Falcon 9\b/.test(configuration)) family = "Falcon 9";
+  else if (/^Falcon Heavy\b/.test(configuration)) family = "Falcon Heavy";
+  else if (/^Soyuz 2\b/.test(configuration)) family = "Soyuz 2";
+  else if (/^Electron\b/.test(configuration)) family = "Electron";
+  else if (/^Atlas V\b/.test(configuration)) family = "Atlas V";
+  else if (/^Vulcan\b/.test(configuration)) family = "Vulcan";
+  else if (/^Ariane 6\b/.test(configuration)) family = "Ariane 6";
+  else if (/^Ariane 5\b/.test(configuration)) family = "Ariane 5";
+  else if (/^Vega[ -]/.test(configuration)) family = "Vega";
+  else if (/^PSLV\b/.test(configuration)) family = "PSLV";
+  else if (/^GSLV\b/.test(configuration)) family = "GSLV";
+  else if (/^H-?IIA\b/.test(configuration)) family = "H-IIA";
+  else if (/^H3\b/.test(configuration)) family = "H3";
+  return {
+    ...record,
+    rocketConfiguration: configuration,
+    rocketFullName: configuration,
+    rocketFamily: family,
+    rocketClassificationBasis: "launch_name_prefix",
+  };
 }
 
 async function fetchLaunches(from, to) {
@@ -130,6 +161,7 @@ async function readExisting() {
 
 function aggregate(records, generatedAt, from, to) {
   const byYear = new Map();
+  const rocketFamilies = new Map();
   for (const record of records) {
     if (!ATTEMPT_STATUS_IDS.has(record.statusId)) continue;
     const year = record.net.slice(0, 4);
@@ -142,6 +174,20 @@ function aggregate(records, generatedAt, from, to) {
     const bucket = byYear.get(year);
     bucket.attempts[record.region] += 1;
     if (SUCCESS_STATUS_IDS.has(record.statusId)) bucket.success[record.region] += 1;
+
+    const familyKey = `${year}\t${record.region}\t${record.rocketFamily ?? "未分类"}`;
+    if (!rocketFamilies.has(familyKey)) {
+      rocketFamilies.set(familyKey, {
+        year,
+        region: record.region,
+        family: record.rocketFamily ?? "未分类",
+        attempts: 0,
+        success: 0,
+      });
+    }
+    const family = rocketFamilies.get(familyKey);
+    family.attempts += 1;
+    if (SUCCESS_STATUS_IDS.has(record.statusId)) family.success += 1;
   }
 
   const currentYear = to.slice(0, 4);
@@ -174,6 +220,11 @@ function aggregate(records, generatedAt, from, to) {
     metrics: {
       attempts: makeSeries("attempts"),
       success: makeSeries("success"),
+      rocketFamilies: [...rocketFamilies.values()].sort((a, b) =>
+        a.year.localeCompare(b.year)
+        || a.region.localeCompare(b.region)
+        || b.attempts - a.attempts
+        || a.family.localeCompare(b.family)),
     },
   };
 }
@@ -193,7 +244,8 @@ const retained = rebuildOnly ? (existing.records ?? []) : (existing.records ?? [
   });
 const merged = resolveProviderCountries([...retained, ...fetched.records]
   .filter((record, index, all) => all.findIndex((candidate) => candidate.id === record.id) === index)
-  .sort((a, b) => a.net.localeCompare(b.net)));
+  .sort((a, b) => a.net.localeCompare(b.net)))
+  .map(inferRocketFields);
 
 const snapshot = {
   schemaVersion: 1,

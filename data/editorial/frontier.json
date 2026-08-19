@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-08-19",
+  "cislunar": {
+    "assets": [
+      {
+        "name": "Lunar Reconnaissance Orbiter",
+        "shortName": "LRO",
+        "country": "US",
+        "type": "月球轨道器",
+        "location": "月球极轨",
+        "status": "运行中",
+        "since": "2009-06-23",
+        "next": "延寿运行；剩余推进剂是后续寿命的主要约束",
+        "source": "https://science.nasa.gov/mission/lro/",
+        "publisher": "NASA"
+      },
+      {
+        "name": "鹊桥二号",
+        "shortName": "Queqiao-2",
+        "country": "CN",
+        "type": "通信中继",
+        "location": "24 小时周期环月大椭圆轨道",
+        "status": "运行中",
+        "since": "2024-04-02",
+        "next": "支持探月工程四期及后续月球任务",
+        "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10503942/content.html",
+        "publisher": "CNSA"
+      },
+      {
+        "name": "嫦娥四号 / 玉兔二号",
+        "shortName": "Chang'e-4",
+        "country": "CN",
+        "type": "月面探测",
+        "location": "月球背面 · 冯·卡门撞击坑",
+        "status": "运行中",
+        "since": "2019-01-03",
+        "next": "按月昼窗口开展科学探测",
+        "source": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c10489434/content.html",
+        "publisher": "CNSA"
+      }
+    ],
+    "events": [
+      {
+        "date": "2019-01-03",
+        "title": "嫦娥四号月背软着陆",
+        "status": "已发生",
+        "detail": "首次实现月球背面软着陆和巡视探测。",
+        "source": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c10489434/content.html"
+      },
+      {
+        "date": "2024-04-02",
+        "title": "鹊桥二号进入任务轨道",
+        "status": "已发生",
+        "detail": "完成近月制动并进入 24 小时周期环月大椭圆轨道。",
+        "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10503942/content.html"
+      },
+      {
+        "date": "2026+",
+        "title": "嫦娥七号月球南极探测",
+        "status": "计划 · 日期待确认",
+        "detail": "面向月球南极环境与水冰等资源开展综合探测。",
+        "source": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c6811490/content.html"
+      },
+      {
+        "date": "NET 2027",
+        "title": "Gateway 首批组件",
+        "status": "政策复审",
+        "detail": "NASA 项目页仍列出不早于 2027 年；预算与项目路径存在政策不确定性。",
+        "source": "https://www.nasa.gov/reference/gateway-about/"
+      }
+    ]
+  },
+  "stations": [
+    {
+      "name": "国际空间站",
+      "shortName": "ISS",
+      "country": "US-led / International",
+      "status": "载人运行",
+      "mass": "419.7 t",
+      "altitude": "370–460 km",
+      "inclination": "51.6°",
+      "pressurizedVolume": "1,005 m³",
+      "power": "75–90 kW",
+      "nominalCrew": "7",
+      "configuration": "15 国 · 5 机构合作体系",
+      "designLife": "持续有人驻留始于 2000",
+      "image": "/iss.jpg",
+      "imageCredit": "NASA · STS-130 / S130E006575",
+      "source": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+    },
+    {
+      "name": "中国空间站",
+      "shortName": "Tiangong",
+      "country": "CN",
+      "status": "载人运行",
+      "mass": "约 66 t",
+      "altitude": "约 390 km",
+      "inclination": "41.5°",
+      "pressurizedVolume": "未统一公开",
+      "power": "未统一公开",
+      "nominalCrew": "3",
+      "configuration": "天和 + 问天 + 梦天",
+      "designLife": "设计寿命 10 年",
+      "image": "/tiangong.jpg",
+      "imageCredit": "China Manned Space",
+      "source": "https://en.cmse.gov.cn/constitutes/mannedspacestation/"
+    }
+  ]
+}
