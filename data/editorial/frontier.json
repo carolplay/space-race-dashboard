@@ -63,21 +63,6 @@
     ],
     "timeline": [
       {
-        "date": "1968-12",
-        "us": [{ "titleZh": "Apollo 8 首次载人绕月", "titleEn": "Apollo 8: first crewed lunar orbit", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "人类首次离开近地轨道并载人环绕月球。", "detailEn": "Humans left low Earth orbit and circled the Moon for the first time.", "tone": "done", "source": "https://science.nasa.gov/solar-system/moon/history-of-lunar-exploration/" }],
-        "cn": []
-      },
-      {
-        "date": "1969-07",
-        "us": [{ "titleZh": "Apollo 11 首次载人登月", "titleEn": "Apollo 11: first crewed lunar landing", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "首次实现载人月面着陆、活动并安全返回。", "detailEn": "First crewed lunar landing, surface operations and safe return.", "tone": "done", "source": "https://www.nasa.gov/history/apollo-11-mission-overview/" }],
-        "cn": []
-      },
-      {
-        "date": "1972-12",
-        "us": [{ "titleZh": "Apollo 17 完成阿波罗月面阶段", "titleEn": "Apollo 17 closed the Apollo surface era", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "阿波罗计划最后一次月面任务，完成三次月面行走。", "detailEn": "The final Apollo lunar surface mission completed three moonwalks.", "tone": "done", "source": "https://www.nasa.gov/the-apollo-program/" }],
-        "cn": []
-      },
-      {
         "date": "2007-10",
         "us": [],
         "cn": [{ "titleZh": "嫦娥一号开启中国绕月探测", "titleEn": "Chang'e-1 began China's lunar-orbit program", "statusZh": "已完成", "statusEn": "Completed", "detailZh": "中国首颗月球探测器发射，随后进入环月轨道。", "detailEn": "China's first lunar probe launched and subsequently entered lunar orbit.", "tone": "done", "source": "https://www.cnsa.gov.cn/n6758823/n6758844/n6760026/n6760028/c6804681/content.html" }]

@@ -64,7 +64,7 @@ npm run data:update:orbit -- --date=2026-08-19
 
 `data/editorial/frontier.json` stores manually reviewed cislunar and space-station facts that are better represented as status and events than as sparse time series. Visible editorial fields are stored in Chinese and English. Every asset, milestone, and station record includes an official or program source URL.
 
-The cislunar module uses one shared date axis with US and Chinese program events on opposite sides, so completed events, active preparations, planned dates, and policy review remain visually distinct but time-aligned. Official LRO, Queqiao-2, Chang'e-4/Yutu-2, ISS, and Tiangong images are stored locally in `public/`, with credits and source URLs preserved in the JSON.
+The cislunar module uses a proportional 2007–2030 calendar axis, with US events above and Chinese events below. Apollo-era rows are intentionally omitted from this modern program comparison. The orbit atlas adds official references for LRO's polar orbit, Queqiao-2's ELFO, DRO-A/B's distant retrograde orbit, and CAPSTONE's NRHO. Official LRO, Queqiao-2, Chang'e-4/Yutu-2, ISS, and Tiangong images are stored locally in `public/`, with credits and source URLs preserved in the JSON.
 
 ## Launch development programs
 
@@ -74,5 +74,6 @@ The cislunar module uses one shared date axis with US and Chinese program events
 - A capability can be achieved out of sequence; for example, a booster recovery demonstration does not imply that routine payload delivery has begun.
 - Each milestone keeps an official program or regulator source. A development flight that also reaches orbit may appear once in orbital launch activity and once as an engineering milestone, but the two views are never added together.
 - The initial reviewed set covers Starship / Super Heavy, Zhuque-3, and the Long March 10 family.
+- Zhuque-3 stage recovery is marked achieved from the official Y2 orbital launch and landing-leg touchdown on 2026-08-19. Routine service remains unachieved until recovered-stage inspection, reflight, and sustained payload operations are demonstrated.
 
-The cislunar chronology now uses a shared row for each date. US milestones render to the left, Chinese milestones to the right, and the central date is common to both. This keeps historical accomplishments and future plans visually aligned rather than presenting two unrelated vertical lists.
+Rocket-family lift classes are a presentation overlay, not a new launch metric. They use published maximum payload envelopes: small under 2 t, medium 2–20 t, heavy 20–50 t, and super-heavy at least 50 t. LEO capacity is preferred; high-energy configurations use the published reference orbit. Suborbital test vehicles are labeled separately.

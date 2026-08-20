@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "asOf": "2026-08-19",
   "methodologyZh": "研发项目按工程能力节点追踪，不把试验次数直接加入正式载荷发射总量。一次飞行若完成入轨任务，仍可同时出现在轨道发射统计中。",
   "methodologyEn": "Development programs are tracked by engineering milestones, not added as a second launch total. A test flight that reaches orbit may still appear in the orbital launch series.",
@@ -41,20 +41,21 @@
       "country": "CN",
       "name": "朱雀三号 / Zhuque-3",
       "provider": "蓝箭航天 / LandSpace",
-      "phaseZh": "入轨与回收验证",
-      "phaseEn": "Orbital and recovery validation",
-      "headline": "2",
+      "phaseZh": "工程化复用验证",
+      "phaseEn": "Engineering reuse validation",
+      "headline": "3",
       "headlineZh": "个关键飞行节点",
       "headlineEn": "major flight milestones",
-      "capabilities": { "ground": true, "vtvl": true, "integrated": true, "orbit": true, "recovery": false, "service": false },
-      "statusZh": "遥一二级成功进入预定轨道；一级软着陆回收失败。",
-      "statusEn": "The Y1 second stage reached its planned orbit; first-stage soft-landing recovery failed.",
-      "nextZh": "完成一级可靠回收并转入可重复使用发射服务。",
-      "nextEn": "Demonstrate reliable first-stage recovery and transition to reusable launch service.",
-      "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10720622/content.html",
+      "capabilities": { "ground": true, "vtvl": true, "integrated": true, "orbit": true, "recovery": true, "service": false },
+      "statusZh": "遥二将鸿鹄03星送入预定轨道，一级依靠着陆支腿在陆地场坪完成软着陆；项目已从回收技术验证进入工程化复用验证。",
+      "statusEn": "Y2 delivered Honghu 03 to orbit and its first stage completed a landing-leg touchdown on a land pad; the program has moved from recovery demonstration into engineering reuse validation.",
+      "nextZh": "完成回收箭体检查、维护与首次复飞，再验证高频商业服务。",
+      "nextEn": "Inspect and refurbish the recovered stage, then demonstrate its first reflight before high-cadence commercial service.",
+      "source": "https://www.landspace.com/news-detail.html?itemid=76",
       "milestones": [
         { "date": "2024-09", "titleZh": "VTVL-1 完成 10 公里级垂直起降", "titleEn": "VTVL-1 completed a 10 km vertical takeoff and landing", "tone": "done", "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10696020/content.html" },
-        { "date": "2025-12", "titleZh": "遥一二级入轨；一级回收失败", "titleEn": "Y1 reached orbit; first-stage recovery failed", "tone": "review", "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10720622/content.html" }
+        { "date": "2025-12", "titleZh": "遥一二级入轨；一级回收失败", "titleEn": "Y1 reached orbit; first-stage recovery failed", "tone": "review", "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10720622/content.html" },
+        { "date": "2026-08", "titleZh": "遥二入轨并完成一级陆地软着陆", "titleEn": "Y2 reached orbit and landed its first stage on land", "tone": "done", "source": "https://www.landspace.com/news-detail.html?itemid=76" }
       ]
     },
     {

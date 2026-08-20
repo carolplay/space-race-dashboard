@@ -27,7 +27,8 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /当前资产与历史存量/);
   assert.match(html, /当前产能与十五年斜率/);
   assert.match(html, /现存资产与对齐的中美路径/);
-  assert.match(html, /不把试飞伪装成运载产能/);
+  assert.match(html, /常规运载之后，再看下一代火箭/);
+  assert.match(html, /任务轨道图谱/);
   assert.match(html, /Starship \/ Super Heavy/);
   assert.match(html, /2011 至今/);
   assert.match(html, /近地轨道的人类前哨/);
@@ -46,7 +47,10 @@ test("ships product UI without starter dependencies", async () => {
   assert.match(page, /historicalSeries/);
   assert.match(page, /language-switch/);
   assert.match(page, /document\.documentElement\.lang/);
-  assert.match(page, /aligned-roadmap/);
+  assert.match(page, /scaled-chronology/);
+  assert.match(page, /orbit-atlas/);
+  assert.match(page, /rocketPerformance/);
+  assert.ok(page.indexOf("development-label") > page.indexOf("metric-dashboard"));
   assert.match(page, /launchDevelopment/);
   assert.match(page, /capability-matrix/);
   assert.match(page, /lunar-asset-grid/);
@@ -105,8 +109,9 @@ test("ships auditable orbit snapshots with consistent regional totals", async ()
   }
   assert.equal(editorial.cislunar.assets.length, 3);
   assert.ok(editorial.cislunar.assets.every((asset) => asset.nameZh && asset.nameEn && asset.image && asset.source.startsWith("https://")));
-  assert.ok(editorial.cislunar.timeline.length >= 16);
-  assert.equal(editorial.cislunar.timeline[0].date, "1968-12");
+  assert.ok(editorial.cislunar.timeline.length >= 13);
+  assert.equal(editorial.cislunar.timeline[0].date, "2007-10");
+  assert.ok(editorial.cislunar.timeline.every((row) => Number(row.date.match(/\d{4}/)?.[0]) >= 2007));
   assert.ok(editorial.cislunar.timeline.every((row) => Array.isArray(row.us) && Array.isArray(row.cn)));
   const timelineEvents = editorial.cislunar.timeline.flatMap((row) => [...row.us, ...row.cn]);
   assert.ok(timelineEvents.every((event) => event.titleZh && event.titleEn && event.source.startsWith("https://")));
@@ -129,6 +134,8 @@ test("keeps development validation separate from payload launch capacity", async
   assert.equal(development.capabilities.length, 6);
   assert.ok(development.methodologyZh.includes("不把试验次数直接加入正式载荷发射总量"));
   assert.ok(development.programs.some((program) => program.id === "starship" && program.headline === "12"));
+  assert.ok(development.programs.some((program) => program.id === "zhuque-3" && program.capabilities.recovery === true));
+  assert.ok(development.programs.some((program) => program.id === "zhuque-3" && program.milestones.some((milestone) => milestone.date === "2026-08" && milestone.tone === "done")));
   assert.ok(development.programs.every((program) => program.statusZh && program.statusEn && program.source.startsWith("https://")));
   assert.ok(development.programs.flatMap((program) => program.milestones).every((milestone) => milestone.titleZh && milestone.titleEn && milestone.source.startsWith("https://")));
 });
