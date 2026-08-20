@@ -59,7 +59,7 @@ async function fetchText(url) {
   return response.text();
 }
 
-const fromYear = Number(arg("from", "2011"));
+const fromYear = Number(arg("from", "2000"));
 const currentYear = new Date().getUTCFullYear();
 const toYear = Number(arg("to", String(currentYear)));
 if (!Number.isInteger(fromYear) || !Number.isInteger(toYear) || fromYear > toYear) throw new Error("Expected integer --from and --to years");
@@ -113,9 +113,65 @@ const orbitInventory = years.map((year) => {
   };
 });
 
+const payloadFlow = years.map((year) => {
+  const additions = emptyRegions();
+  const retirements = emptyRegions();
+  const knownDeliveredMassKg = emptyRegions();
+  let knownDeliveredMassObjects = 0;
+  for (const row of satelliteRows) {
+    if (row.Primary !== "Earth" || !row.Type?.startsWith("P")) continue;
+    const startYear = yearFromVagueDate(row.SDate) ?? yearFromVagueDate(row.LDate);
+    const decayYear = yearFromVagueDate(row.DDate);
+    const region = regionFor(row.State);
+    if (startYear === year) {
+      add(additions, region);
+      const mass = Number.parseFloat(row.Mass);
+      if (Number.isFinite(mass) && mass > 0) {
+        add(knownDeliveredMassKg, region, mass);
+        knownDeliveredMassObjects += 1;
+      }
+    }
+    if (decayYear === year) add(retirements, region);
+  }
+  return {
+    year: String(year),
+    label: year === currentYear ? `${year} YTD` : String(year),
+    additions,
+    retirements,
+    netChange: Object.fromEntries(Object.keys(additions).map((region) => [region, additions[region] - retirements[region]])),
+    knownDeliveredMassKg,
+    knownDeliveredMassObjects,
+  };
+});
+
+function codeLabel(value) {
+  return (value || "Unknown").replaceAll("?", "").replaceAll("*", "").trim() || "Unknown";
+}
+
+const manufacturerMap = new Map();
+for (const row of satelliteRows) {
+  if (row.Primary !== "Earth" || !row.Type?.startsWith("P")) continue;
+  const startYear = yearFromVagueDate(row.SDate) ?? yearFromVagueDate(row.LDate);
+  if (!startYear || startYear < Math.max(fromYear, toYear - 4) || startYear > toYear) continue;
+  const manufacturer = codeLabel(row.Manufacturer);
+  const region = regionFor(row.State);
+  if (!manufacturerMap.has(manufacturer)) manufacturerMap.set(manufacturer, { manufacturer, ...emptyRegions(), knownMassKg: 0, knownMassObjects: 0 });
+  const item = manufacturerMap.get(manufacturer);
+  item[region] += 1;
+  item.global += 1;
+  const mass = Number.parseFloat(row.Mass);
+  if (Number.isFinite(mass) && mass > 0) {
+    item.knownMassKg += mass;
+    item.knownMassObjects += 1;
+  }
+}
+const recentManufacturers = [...manufacturerMap.values()]
+  .sort((a, b) => b.global - a.global || b.knownMassKg - a.knownMassKg || a.manufacturer.localeCompare(b.manufacturer))
+  .slice(0, 16);
+
 const generatedAt = new Date().toISOString();
 const output = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   generatedAt,
   coverage: { fromYear, toYear, currentYearIsPartial: toYear === currentYear },
   source: {
@@ -132,12 +188,15 @@ const output = {
     launchSuccess: "Attempt rows whose Launch_Code does not contain F.",
     orbitInventory: "Earth-primary objects present at calendar year end from separation and descent years. Current year is as-of source update.",
     payloadDefinition: "GCAT object Type beginning P; includes active and inactive payload objects, unlike the current Active Catalog KPI.",
+    payloadFlow: "Earth-primary payload starts, descents, and known mass by GCAT separation/descent year. Mass totals include only objects with a positive published mass.",
+    recentManufacturers: `Payload objects first present during ${Math.max(fromYear, toYear - 4)}-${toYear}, grouped by GCAT Manufacturer code; this measures observed delivery, not factory capacity.`,
   },
   launchActivity,
   orbitInventory,
+  payloadFlow,
+  recentManufacturers,
 };
 
 await mkdir(dirname(outputPath), { recursive: true });
 await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`);
 console.log(`Stored GCAT historical series ${fromYear}-${toYear}: ${uniqueLaunches.length} unique launch tags, ${satelliteRows.length} object rows.`);
-

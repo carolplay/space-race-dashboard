@@ -8,6 +8,7 @@ const ATTEMPT_STATUS_IDS = new Set([3, 4, 7]);
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const snapshotPath = resolve(projectRoot, "data/snapshots/launch-library-2.json");
 const metricsPath = resolve(projectRoot, "data/metrics/launch-activity.json");
+const infrastructurePath = resolve(projectRoot, "data/metrics/launch-infrastructure.json");
 
 function readArg(name) {
   const prefix = `--${name}=`;
@@ -68,8 +69,144 @@ function normalize(launch) {
     rocketConfiguration: configuration?.name ?? null,
     rocketFullName: configuration?.full_name ?? configuration?.name ?? null,
     rocketFamily: configuration?.families?.at(-1)?.name ?? configuration?.name ?? "未分类",
+    padId: launch.pad?.id ?? null,
+    padName: launch.pad?.name ?? null,
+    padActive: launch.pad?.active ?? null,
+    padLatitude: launch.pad?.latitude ?? null,
+    padLongitude: launch.pad?.longitude ?? null,
+    padCountryCode: launch.pad?.country?.alpha_2_code ?? launch.pad?.location?.country?.alpha_2_code ?? null,
+    locationId: launch.pad?.location?.id ?? null,
+    locationName: launch.pad?.location?.name ?? null,
+    locationCountryCode: launch.pad?.location?.country?.alpha_2_code ?? launch.pad?.country?.alpha_2_code ?? null,
     lastUpdated: launch.last_updated ?? null,
     sourceUrl: launch.url,
+  };
+}
+
+function median(values) {
+  if (!values.length) return null;
+  const sorted = [...values].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
+}
+
+function aggregateInfrastructure(records, generatedAt, from, to) {
+  const attempts = records.filter((record) => ATTEMPT_STATUS_IDS.has(record.statusId) && record.padId);
+  const padMap = new Map();
+  const siteMap = new Map();
+  for (const record of attempts) {
+    const padKey = String(record.padId);
+    const siteKey = String(record.locationId ?? `site:${record.locationName ?? record.padCountryCode ?? "unknown"}`);
+    if (!padMap.has(padKey)) {
+      padMap.set(padKey, {
+        id: record.padId,
+        name: record.padName ?? "Unknown pad",
+        siteId: record.locationId,
+        site: record.locationName ?? "Unknown site",
+        countryCode: record.locationCountryCode ?? record.padCountryCode,
+        region: regionFor(record.locationCountryCode ?? record.padCountryCode),
+        active: record.padActive,
+        latitude: record.padLatitude,
+        longitude: record.padLongitude,
+        attempts: 0,
+        success: 0,
+        launchDates: [],
+        rocketFamilies: new Set(),
+        annual: new Map(),
+      });
+    }
+    if (!siteMap.has(siteKey)) {
+      siteMap.set(siteKey, {
+        id: record.locationId,
+        name: record.locationName ?? "Unknown site",
+        countryCode: record.locationCountryCode ?? record.padCountryCode,
+        region: regionFor(record.locationCountryCode ?? record.padCountryCode),
+        attempts: 0,
+        success: 0,
+        pads: new Set(),
+        rocketFamilies: new Set(),
+        annual: new Map(),
+      });
+    }
+    const year = record.net.slice(0, 4);
+    const pad = padMap.get(padKey);
+    const site = siteMap.get(siteKey);
+    pad.attempts += 1;
+    site.attempts += 1;
+    if (SUCCESS_STATUS_IDS.has(record.statusId)) {
+      pad.success += 1;
+      site.success += 1;
+    }
+    pad.launchDates.push(record.net);
+    pad.rocketFamilies.add(record.rocketFamily ?? "未分类");
+    site.pads.add(padKey);
+    site.rocketFamilies.add(record.rocketFamily ?? "未分类");
+    pad.annual.set(year, (pad.annual.get(year) ?? 0) + 1);
+    site.annual.set(year, (site.annual.get(year) ?? 0) + 1);
+  }
+
+  const pads = [...padMap.values()].map((pad) => {
+    const dates = pad.launchDates.sort().map((value) => new Date(value).getTime());
+    const intervals = dates.slice(1).map((value, index) => (value - dates[index]) / 86_400_000).filter((value) => value > 0);
+    return {
+      id: pad.id,
+      name: pad.name,
+      siteId: pad.siteId,
+      site: pad.site,
+      countryCode: pad.countryCode,
+      region: pad.region,
+      active: pad.active,
+      latitude: pad.latitude,
+      longitude: pad.longitude,
+      attempts: pad.attempts,
+      success: pad.success,
+      successRate: Number(((pad.success / Math.max(pad.attempts, 1)) * 100).toFixed(1)),
+      firstLaunch: pad.launchDates[0]?.slice(0, 10) ?? null,
+      lastLaunch: pad.launchDates.at(-1)?.slice(0, 10) ?? null,
+      medianIntervalDays: intervals.length ? Number(median(intervals).toFixed(1)) : null,
+      fastestIntervalDays: intervals.length ? Number(Math.min(...intervals).toFixed(1)) : null,
+      rocketFamilies: [...pad.rocketFamilies].sort(),
+      annual: [...pad.annual.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([year, value]) => ({ year, attempts: value })),
+    };
+  }).sort((a, b) => b.attempts - a.attempts || a.name.localeCompare(b.name));
+
+  const sites = [...siteMap.values()].map((site) => ({
+    id: site.id,
+    name: site.name,
+    countryCode: site.countryCode,
+    region: site.region,
+    attempts: site.attempts,
+    success: site.success,
+    successRate: Number(((site.success / Math.max(site.attempts, 1)) * 100).toFixed(1)),
+    padCount: site.pads.size,
+    rocketFamilies: [...site.rocketFamilies].sort(),
+    annual: [...site.annual.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([year, value]) => ({ year, attempts: value })),
+  })).sort((a, b) => b.attempts - a.attempts || a.name.localeCompare(b.name));
+
+  return {
+    schemaVersion: 1,
+    generatedAt,
+    coverage: { from, to },
+    source: {
+      name: "Launch Library 2",
+      publisher: "The Space Devs",
+      url: "https://thespacedevs.com/llapi",
+      apiVersion: "2.3.0",
+      license: "Apache-2.0",
+    },
+    methodology: {
+      scope: "Orbital launch attempts with a resolved LL2 pad in the stored coverage window.",
+      caution: "Site and pad counts are observed activity, not a complete census of inactive infrastructure.",
+      cadence: "Median and fastest interval use NET timestamps between observed attempts on the same pad.",
+    },
+    summary: {
+      observedSites: sites.length,
+      observedPads: pads.length,
+      orbitalAttempts: attempts.length,
+      activePads: pads.filter((pad) => pad.active !== false).length,
+    },
+    sites,
+    pads,
   };
 }
 
@@ -257,14 +394,17 @@ const snapshot = {
 const availableFrom = merged[0]?.net.slice(0, 10) ?? from;
 const availableTo = merged.at(-1)?.net.slice(0, 10) ?? to;
 const metrics = aggregate(merged, generatedAt, availableFrom, availableTo);
+const infrastructure = aggregateInfrastructure(merged, generatedAt, availableFrom, availableTo);
 
 await mkdir(dirname(snapshotPath), { recursive: true });
 await mkdir(dirname(metricsPath), { recursive: true });
 await writeFile(snapshotPath, `${JSON.stringify(snapshot, null, 2)}\n`);
 await writeFile(metricsPath, `${JSON.stringify(metrics, null, 2)}\n`);
+await writeFile(infrastructurePath, `${JSON.stringify(infrastructure, null, 2)}\n`);
 
 console.log(rebuildOnly
   ? `Rebuilt aggregates from ${merged.length} stored launches without network requests.`
   : `Stored ${fetched.records.length} fetched launches (${merged.length} total) from ${fetched.requestCount} requests.`);
 console.log(`Updated ${snapshotPath}`);
 console.log(`Updated ${metricsPath}`);
+console.log(`Updated ${infrastructurePath}`);

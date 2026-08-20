@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-19T07:48:28.435Z",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-20T07:56:54.698Z",
   "coverage": {
-    "fromYear": 2011,
+    "fromYear": 2000,
     "toYear": 2026,
     "currentYearIsPartial": true
   },
@@ -25,9 +25,187 @@
     "launchAttempts": "Unique Launch_Tag rows whose Launch_Code begins O or D; failure codes remain attempts.",
     "launchSuccess": "Attempt rows whose Launch_Code does not contain F.",
     "orbitInventory": "Earth-primary objects present at calendar year end from separation and descent years. Current year is as-of source update.",
-    "payloadDefinition": "GCAT object Type beginning P; includes active and inactive payload objects, unlike the current Active Catalog KPI."
+    "payloadDefinition": "GCAT object Type beginning P; includes active and inactive payload objects, unlike the current Active Catalog KPI.",
+    "payloadFlow": "Earth-primary payload starts, descents, and known mass by GCAT separation/descent year. Mass totals include only objects with a positive published mass.",
+    "recentManufacturers": "Payload objects first present during 2022-2026, grouped by GCAT Manufacturer code; this measures observed delivery, not factory capacity."
   },
   "launchActivity": [
+    {
+      "year": "2000",
+      "label": "2000",
+      "attempts": {
+        "us": 29,
+        "cn": 5,
+        "other": 51,
+        "global": 85
+      },
+      "success": {
+        "us": 29,
+        "cn": 5,
+        "other": 47,
+        "global": 81
+      }
+    },
+    {
+      "year": "2001",
+      "label": "2001",
+      "attempts": {
+        "us": 24,
+        "cn": 1,
+        "other": 34,
+        "global": 59
+      },
+      "success": {
+        "us": 23,
+        "cn": 1,
+        "other": 33,
+        "global": 57
+      }
+    },
+    {
+      "year": "2002",
+      "label": "2002",
+      "attempts": {
+        "us": 18,
+        "cn": 5,
+        "other": 42,
+        "global": 65
+      },
+      "success": {
+        "us": 18,
+        "cn": 4,
+        "other": 39,
+        "global": 61
+      }
+    },
+    {
+      "year": "2003",
+      "label": "2003",
+      "attempts": {
+        "us": 26,
+        "cn": 7,
+        "other": 30,
+        "global": 63
+      },
+      "success": {
+        "us": 26,
+        "cn": 6,
+        "other": 29,
+        "global": 61
+      }
+    },
+    {
+      "year": "2004",
+      "label": "2004",
+      "attempts": {
+        "us": 19,
+        "cn": 8,
+        "other": 27,
+        "global": 54
+      },
+      "success": {
+        "us": 18,
+        "cn": 8,
+        "other": 25,
+        "global": 51
+      }
+    },
+    {
+      "year": "2005",
+      "label": "2005",
+      "attempts": {
+        "us": 16,
+        "cn": 6,
+        "other": 34,
+        "global": 56
+      },
+      "success": {
+        "us": 16,
+        "cn": 5,
+        "other": 31,
+        "global": 52
+      }
+    },
+    {
+      "year": "2006",
+      "label": "2006",
+      "attempts": {
+        "us": 23,
+        "cn": 6,
+        "other": 37,
+        "global": 66
+      },
+      "success": {
+        "us": 22,
+        "cn": 6,
+        "other": 34,
+        "global": 62
+      }
+    },
+    {
+      "year": "2007",
+      "label": "2007",
+      "attempts": {
+        "us": 20,
+        "cn": 10,
+        "other": 38,
+        "global": 68
+      },
+      "success": {
+        "us": 18,
+        "cn": 10,
+        "other": 37,
+        "global": 65
+      }
+    },
+    {
+      "year": "2008",
+      "label": "2008",
+      "attempts": {
+        "us": 20,
+        "cn": 11,
+        "other": 38,
+        "global": 69
+      },
+      "success": {
+        "us": 19,
+        "cn": 11,
+        "other": 36,
+        "global": 66
+      }
+    },
+    {
+      "year": "2009",
+      "label": "2009",
+      "attempts": {
+        "us": 25,
+        "cn": 6,
+        "other": 47,
+        "global": 78
+      },
+      "success": {
+        "us": 24,
+        "cn": 5,
+        "other": 45,
+        "global": 74
+      }
+    },
+    {
+      "year": "2010",
+      "label": "2010",
+      "attempts": {
+        "us": 15,
+        "cn": 15,
+        "other": 44,
+        "global": 74
+      },
+      "success": {
+        "us": 15,
+        "cn": 15,
+        "other": 40,
+        "global": 70
+      }
+    },
     {
       "year": "2011",
       "label": "2011",
@@ -286,6 +464,259 @@
     }
   ],
   "orbitInventory": [
+    {
+      "year": "2000",
+      "label": "2000 EOY",
+      "payloadObjects": {
+        "us": 887,
+        "cn": 30,
+        "other": 1690,
+        "global": 2607
+      },
+      "catalogObjects": {
+        "us": 4515,
+        "cn": 466,
+        "other": 5496,
+        "global": 10477
+      },
+      "knownPayloadMassKg": {
+        "us": 763974.6849999999,
+        "cn": 37836,
+        "other": 1663346.5,
+        "global": 2465157.185
+      },
+      "knownPayloadMassObjects": 2605
+    },
+    {
+      "year": "2001",
+      "label": "2001 EOY",
+      "payloadObjects": {
+        "us": 898,
+        "cn": 30,
+        "other": 1640,
+        "global": 2568
+      },
+      "catalogObjects": {
+        "us": 4423,
+        "cn": 419,
+        "other": 5843,
+        "global": 10685
+      },
+      "knownPayloadMassKg": {
+        "us": 796188.9349999999,
+        "cn": 37836,
+        "other": 1538818.5,
+        "global": 2372843.435
+      },
+      "knownPayloadMassObjects": 2566
+    },
+    {
+      "year": "2002",
+      "label": "2002 EOY",
+      "payloadObjects": {
+        "us": 913,
+        "cn": 33,
+        "other": 1663,
+        "global": 2609
+      },
+      "catalogObjects": {
+        "us": 4352,
+        "cn": 401,
+        "other": 5653,
+        "global": 10406
+      },
+      "knownPayloadMassKg": {
+        "us": 848242.485,
+        "cn": 42648,
+        "other": 1592699,
+        "global": 2483589.485
+      },
+      "knownPayloadMassObjects": 2607
+    },
+    {
+      "year": "2003",
+      "label": "2003 EOY",
+      "payloadObjects": {
+        "us": 931,
+        "cn": 39,
+        "other": 1691,
+        "global": 2661
+      },
+      "catalogObjects": {
+        "us": 4376,
+        "cn": 392,
+        "other": 5748,
+        "global": 10516
+      },
+      "knownPayloadMassKg": {
+        "us": 885697.6849999999,
+        "cn": 51611,
+        "other": 1626963,
+        "global": 2564271.685
+      },
+      "knownPayloadMassObjects": 2659
+    },
+    {
+      "year": "2004",
+      "label": "2004 EOY",
+      "payloadObjects": {
+        "us": 946,
+        "cn": 46,
+        "other": 1718,
+        "global": 2710
+      },
+      "catalogObjects": {
+        "us": 4477,
+        "cn": 427,
+        "other": 5845,
+        "global": 10749
+      },
+      "knownPayloadMassKg": {
+        "us": 922468.6849999999,
+        "cn": 54234,
+        "other": 1675324,
+        "global": 2652026.685
+      },
+      "knownPayloadMassObjects": 2708
+    },
+    {
+      "year": "2005",
+      "label": "2005 EOY",
+      "payloadObjects": {
+        "us": 963,
+        "cn": 50,
+        "other": 1738,
+        "global": 2751
+      },
+      "catalogObjects": {
+        "us": 4514,
+        "cn": 431,
+        "other": 5922,
+        "global": 10867
+      },
+      "knownPayloadMassKg": {
+        "us": 994301.6849999999,
+        "cn": 61660,
+        "other": 1708967,
+        "global": 2764928.685
+      },
+      "knownPayloadMassObjects": 2749
+    },
+    {
+      "year": "2006",
+      "label": "2006 EOY",
+      "payloadObjects": {
+        "us": 969,
+        "cn": 56,
+        "other": 1779,
+        "global": 2804
+      },
+      "catalogObjects": {
+        "us": 4622,
+        "cn": 450,
+        "other": 6120,
+        "global": 11192
+      },
+      "knownPayloadMassKg": {
+        "us": 978896.8099999999,
+        "cn": 73798,
+        "other": 1799278,
+        "global": 2851972.81
+      },
+      "knownPayloadMassObjects": 2802
+    },
+    {
+      "year": "2007",
+      "label": "2007 EOY",
+      "payloadObjects": {
+        "us": 991,
+        "cn": 62,
+        "other": 1814,
+        "global": 2867
+      },
+      "catalogObjects": {
+        "us": 4680,
+        "cn": 4107,
+        "other": 6264,
+        "global": 15051
+      },
+      "knownPayloadMassKg": {
+        "us": 972876.6849999999,
+        "cn": 89235,
+        "other": 1861866,
+        "global": 2923977.685
+      },
+      "knownPayloadMassObjects": 2865
+    },
+    {
+      "year": "2008",
+      "label": "2008 EOY",
+      "payloadObjects": {
+        "us": 1001,
+        "cn": 74,
+        "other": 1863,
+        "global": 2938
+      },
+      "catalogObjects": {
+        "us": 4704,
+        "cn": 4140,
+        "other": 6457,
+        "global": 15301
+      },
+      "knownPayloadMassKg": {
+        "us": 979249.085,
+        "cn": 103464,
+        "other": 1963963,
+        "global": 3046676.085
+      },
+      "knownPayloadMassObjects": 2936
+    },
+    {
+      "year": "2009",
+      "label": "2009 EOY",
+      "payloadObjects": {
+        "us": 1026,
+        "cn": 76,
+        "other": 1910,
+        "global": 3012
+      },
+      "catalogObjects": {
+        "us": 5392,
+        "cn": 4129,
+        "other": 8192,
+        "global": 17713
+      },
+      "knownPayloadMassKg": {
+        "us": 1029268.1849999999,
+        "cn": 101899,
+        "other": 2022244,
+        "global": 3153411.185
+      },
+      "knownPayloadMassObjects": 3010
+    },
+    {
+      "year": "2010",
+      "label": "2010 EOY",
+      "payloadObjects": {
+        "us": 1047,
+        "cn": 95,
+        "other": 1941,
+        "global": 3083
+      },
+      "catalogObjects": {
+        "us": 5371,
+        "cn": 4166,
+        "other": 8334,
+        "global": 17871
+      },
+      "knownPayloadMassKg": {
+        "us": 1083303.785,
+        "cn": 132000,
+        "other": 2087444.95,
+        "global": 3302748.7350000003
+      },
+      "knownPayloadMassObjects": 3081
+    },
     {
       "year": "2011",
       "label": "2011 EOY",
@@ -653,6 +1084,937 @@
         "global": 12792002.936999941
       },
       "knownPayloadMassObjects": 18979
+    }
+  ],
+  "payloadFlow": [
+    {
+      "year": "2000",
+      "label": "2000",
+      "additions": {
+        "us": 52,
+        "cn": 6,
+        "other": 72,
+        "global": 130
+      },
+      "retirements": {
+        "us": 14,
+        "cn": 0,
+        "other": 45,
+        "global": 59
+      },
+      "netChange": {
+        "us": 38,
+        "cn": 6,
+        "other": 27,
+        "global": 71
+      },
+      "knownDeliveredMassKg": {
+        "us": 575313.685,
+        "cn": 9097,
+        "other": 150650,
+        "global": 735060.685
+      },
+      "knownDeliveredMassObjects": 130
+    },
+    {
+      "year": "2001",
+      "label": "2001",
+      "additions": {
+        "us": 35,
+        "cn": 2,
+        "other": 49,
+        "global": 86
+      },
+      "retirements": {
+        "us": 24,
+        "cn": 2,
+        "other": 99,
+        "global": 125
+      },
+      "netChange": {
+        "us": 11,
+        "cn": 0,
+        "other": -50,
+        "global": -39
+      },
+      "knownDeliveredMassKg": {
+        "us": 673403.25,
+        "cn": 5000,
+        "other": 104456,
+        "global": 782859.25
+      },
+      "knownDeliveredMassObjects": 86
+    },
+    {
+      "year": "2002",
+      "label": "2002",
+      "additions": {
+        "us": 31,
+        "cn": 6,
+        "other": 52,
+        "global": 89
+      },
+      "retirements": {
+        "us": 16,
+        "cn": 3,
+        "other": 29,
+        "global": 48
+      },
+      "netChange": {
+        "us": 15,
+        "cn": 3,
+        "other": 23,
+        "global": 41
+      },
+      "knownDeliveredMassKg": {
+        "us": 554859.8,
+        "cn": 11154,
+        "other": 121804,
+        "global": 687817.8
+      },
+      "knownDeliveredMassObjects": 89
+    },
+    {
+      "year": "2003",
+      "label": "2003",
+      "additions": {
+        "us": 29,
+        "cn": 10,
+        "other": 51,
+        "global": 90
+      },
+      "retirements": {
+        "us": 11,
+        "cn": 4,
+        "other": 23,
+        "global": 38
+      },
+      "netChange": {
+        "us": 18,
+        "cn": 6,
+        "other": 28,
+        "global": 52
+      },
+      "knownDeliveredMassKg": {
+        "us": 148436,
+        "cn": 19357,
+        "other": 83630,
+        "global": 251423
+      },
+      "knownDeliveredMassObjects": 90
+    },
+    {
+      "year": "2004",
+      "label": "2004",
+      "additions": {
+        "us": 20,
+        "cn": 10,
+        "other": 42,
+        "global": 72
+      },
+      "retirements": {
+        "us": 5,
+        "cn": 3,
+        "other": 15,
+        "global": 23
+      },
+      "netChange": {
+        "us": 15,
+        "cn": 7,
+        "other": 27,
+        "global": 49
+      },
+      "knownDeliveredMassKg": {
+        "us": 52570,
+        "cn": 6843,
+        "other": 99314,
+        "global": 158727
+      },
+      "knownDeliveredMassObjects": 72
+    },
+    {
+      "year": "2005",
+      "label": "2005",
+      "additions": {
+        "us": 22,
+        "cn": 7,
+        "other": 42,
+        "global": 71
+      },
+      "retirements": {
+        "us": 5,
+        "cn": 3,
+        "other": 22,
+        "global": 30
+      },
+      "netChange": {
+        "us": 17,
+        "cn": 4,
+        "other": 20,
+        "global": 41
+      },
+      "knownDeliveredMassKg": {
+        "us": 174547,
+        "cn": 13246,
+        "other": 94586,
+        "global": 282379
+      },
+      "knownDeliveredMassObjects": 71
+    },
+    {
+      "year": "2006",
+      "label": "2006",
+      "additions": {
+        "us": 32,
+        "cn": 7,
+        "other": 54,
+        "global": 93
+      },
+      "retirements": {
+        "us": 26,
+        "cn": 1,
+        "other": 13,
+        "global": 40
+      },
+      "netChange": {
+        "us": 6,
+        "cn": 6,
+        "other": 41,
+        "global": 53
+      },
+      "knownDeliveredMassKg": {
+        "us": 336621.125,
+        "cn": 13398,
+        "other": 140261,
+        "global": 490280.125
+      },
+      "knownDeliveredMassObjects": 93
+    },
+    {
+      "year": "2007",
+      "label": "2007",
+      "additions": {
+        "us": 46,
+        "cn": 9,
+        "other": 55,
+        "global": 110
+      },
+      "retirements": {
+        "us": 24,
+        "cn": 3,
+        "other": 20,
+        "global": 47
+      },
+      "netChange": {
+        "us": 22,
+        "cn": 6,
+        "other": 35,
+        "global": 63
+      },
+      "knownDeliveredMassKg": {
+        "us": 338475,
+        "cn": 19097,
+        "other": 119870,
+        "global": 477442
+      },
+      "knownDeliveredMassObjects": 110
+    },
+    {
+      "year": "2008",
+      "label": "2008",
+      "additions": {
+        "us": 24,
+        "cn": 14,
+        "other": 63,
+        "global": 101
+      },
+      "retirements": {
+        "us": 14,
+        "cn": 2,
+        "other": 14,
+        "global": 30
+      },
+      "netChange": {
+        "us": 10,
+        "cn": 12,
+        "other": 49,
+        "global": 71
+      },
+      "knownDeliveredMassKg": {
+        "us": 429932.4,
+        "cn": 19229,
+        "other": 166921,
+        "global": 616082.4
+      },
+      "knownDeliveredMassObjects": 101
+    },
+    {
+      "year": "2009",
+      "label": "2009",
+      "additions": {
+        "us": 37,
+        "cn": 7,
+        "other": 79,
+        "global": 123
+      },
+      "retirements": {
+        "us": 12,
+        "cn": 5,
+        "other": 32,
+        "global": 49
+      },
+      "netChange": {
+        "us": 25,
+        "cn": 2,
+        "other": 47,
+        "global": 74
+      },
+      "knownDeliveredMassKg": {
+        "us": 562642.1,
+        "cn": 11010,
+        "other": 170731,
+        "global": 744383.1
+      },
+      "knownDeliveredMassObjects": 123
+    },
+    {
+      "year": "2010",
+      "label": "2010",
+      "additions": {
+        "us": 41,
+        "cn": 20,
+        "other": 57,
+        "global": 118
+      },
+      "retirements": {
+        "us": 20,
+        "cn": 1,
+        "other": 26,
+        "global": 47
+      },
+      "netChange": {
+        "us": 21,
+        "cn": 19,
+        "other": 31,
+        "global": 71
+      },
+      "knownDeliveredMassKg": {
+        "us": 364638,
+        "cn": 32581,
+        "other": 132977.95,
+        "global": 530196.95
+      },
+      "knownDeliveredMassObjects": 118
+    },
+    {
+      "year": "2011",
+      "label": "2011",
+      "additions": {
+        "us": 40,
+        "cn": 18,
+        "other": 70,
+        "global": 128
+      },
+      "retirements": {
+        "us": 25,
+        "cn": 1,
+        "other": 29,
+        "global": 55
+      },
+      "netChange": {
+        "us": 15,
+        "cn": 17,
+        "other": 41,
+        "global": 73
+      },
+      "knownDeliveredMassKg": {
+        "us": 350471.6,
+        "cn": 44621,
+        "other": 189244,
+        "global": 584336.6
+      },
+      "knownDeliveredMassObjects": 128
+    },
+    {
+      "year": "2012",
+      "label": "2012",
+      "additions": {
+        "us": 36,
+        "cn": 25,
+        "other": 74,
+        "global": 135
+      },
+      "retirements": {
+        "us": 12,
+        "cn": 1,
+        "other": 39,
+        "global": 52
+      },
+      "netChange": {
+        "us": 24,
+        "cn": 24,
+        "other": 35,
+        "global": 83
+      },
+      "knownDeliveredMassKg": {
+        "us": 97009.90000000001,
+        "cn": 48190,
+        "other": 176482,
+        "global": 321681.89999999997
+      },
+      "knownDeliveredMassObjects": 135
+    },
+    {
+      "year": "2013",
+      "label": "2013",
+      "additions": {
+        "us": 86,
+        "cn": 18,
+        "other": 104,
+        "global": 208
+      },
+      "retirements": {
+        "us": 11,
+        "cn": 2,
+        "other": 31,
+        "global": 44
+      },
+      "netChange": {
+        "us": 75,
+        "cn": 16,
+        "other": 73,
+        "global": 164
+      },
+      "knownDeliveredMassKg": {
+        "us": 82395.62999999999,
+        "cn": 24715,
+        "other": 191755.817,
+        "global": 298866.44700000004
+      },
+      "knownDeliveredMassObjects": 208
+    },
+    {
+      "year": "2014",
+      "label": "2014",
+      "additions": {
+        "us": 96,
+        "cn": 25,
+        "other": 119,
+        "global": 240
+      },
+      "retirements": {
+        "us": 59,
+        "cn": 3,
+        "other": 48,
+        "global": 110
+      },
+      "netChange": {
+        "us": 37,
+        "cn": 22,
+        "other": 71,
+        "global": 130
+      },
+      "knownDeliveredMassKg": {
+        "us": 79644.91,
+        "cn": 36388,
+        "other": 180461.78300000002,
+        "global": 296494.693
+      },
+      "knownDeliveredMassObjects": 240
+    },
+    {
+      "year": "2015",
+      "label": "2015",
+      "additions": {
+        "us": 109,
+        "cn": 38,
+        "other": 80,
+        "global": 227
+      },
+      "retirements": {
+        "us": 57,
+        "cn": 2,
+        "other": 28,
+        "global": 87
+      },
+      "netChange": {
+        "us": 52,
+        "cn": 36,
+        "other": 52,
+        "global": 140
+      },
+      "knownDeliveredMassKg": {
+        "us": 71370.20000000001,
+        "cn": 41648.3,
+        "other": 193393.665,
+        "global": 306412.16500000004
+      },
+      "knownDeliveredMassObjects": 227
+    },
+    {
+      "year": "2016",
+      "label": "2016",
+      "additions": {
+        "us": 105,
+        "cn": 38,
+        "other": 78,
+        "global": 221
+      },
+      "retirements": {
+        "us": 54,
+        "cn": 12,
+        "other": 25,
+        "global": 91
+      },
+      "netChange": {
+        "us": 51,
+        "cn": 26,
+        "other": 53,
+        "global": 130
+      },
+      "knownDeliveredMassKg": {
+        "us": 99831.39999999997,
+        "cn": 51211,
+        "other": 134789.35,
+        "global": 285831.7500000001
+      },
+      "knownDeliveredMassObjects": 221
+    },
+    {
+      "year": "2017",
+      "label": "2017",
+      "additions": {
+        "us": 286,
+        "cn": 36,
+        "other": 134,
+        "global": 456
+      },
+      "retirements": {
+        "us": 45,
+        "cn": 2,
+        "other": 23,
+        "global": 70
+      },
+      "netChange": {
+        "us": 241,
+        "cn": 34,
+        "other": 111,
+        "global": 386
+      },
+      "knownDeliveredMassKg": {
+        "us": 129227.25999999998,
+        "cn": 49791.72,
+        "other": 160554.33,
+        "global": 339573.31000000006
+      },
+      "knownDeliveredMassObjects": 456
+    },
+    {
+      "year": "2018",
+      "label": "2018",
+      "additions": {
+        "us": 189,
+        "cn": 95,
+        "other": 166,
+        "global": 450
+      },
+      "retirements": {
+        "us": 87,
+        "cn": 5,
+        "other": 32,
+        "global": 124
+      },
+      "netChange": {
+        "us": 102,
+        "cn": 90,
+        "other": 134,
+        "global": 326
+      },
+      "knownDeliveredMassKg": {
+        "us": 97120.10199999993,
+        "cn": 60717,
+        "other": 167215.60000000003,
+        "global": 325052.7020000001
+      },
+      "knownDeliveredMassObjects": 450
+    },
+    {
+      "year": "2019",
+      "label": "2019",
+      "additions": {
+        "us": 249,
+        "cn": 72,
+        "other": 138,
+        "global": 459
+      },
+      "retirements": {
+        "us": 41,
+        "cn": 8,
+        "other": 42,
+        "global": 91
+      },
+      "netChange": {
+        "us": 208,
+        "cn": 64,
+        "other": 96,
+        "global": 368
+      },
+      "knownDeliveredMassKg": {
+        "us": 131888.446,
+        "cn": 69376,
+        "other": 130785.88399999999,
+        "global": 332050.3300000001
+      },
+      "knownDeliveredMassObjects": 459
+    },
+    {
+      "year": "2020",
+      "label": "2020",
+      "additions": {
+        "us": 985,
+        "cn": 72,
+        "other": 217,
+        "global": 1274
+      },
+      "retirements": {
+        "us": 90,
+        "cn": 5,
+        "other": 27,
+        "global": 122
+      },
+      "netChange": {
+        "us": 895,
+        "cn": 67,
+        "other": 190,
+        "global": 1152
+      },
+      "knownDeliveredMassKg": {
+        "us": 311808.16800000035,
+        "cn": 85101,
+        "other": 99006.90400000002,
+        "global": 495916.0719999995
+      },
+      "knownDeliveredMassObjects": 1273
+    },
+    {
+      "year": "2021",
+      "label": "2021",
+      "additions": {
+        "us": 1224,
+        "cn": 110,
+        "other": 471,
+        "global": 1805
+      },
+      "retirements": {
+        "us": 136,
+        "cn": 8,
+        "other": 33,
+        "global": 177
+      },
+      "netChange": {
+        "us": 1088,
+        "cn": 102,
+        "other": 438,
+        "global": 1628
+      },
+      "knownDeliveredMassKg": {
+        "us": 383313.5639999998,
+        "cn": 154591,
+        "other": 160504.044,
+        "global": 698408.6079999992
+      },
+      "knownDeliveredMassObjects": 1805
+    },
+    {
+      "year": "2022",
+      "label": "2022",
+      "additions": {
+        "us": 1895,
+        "cn": 190,
+        "other": 354,
+        "global": 2439
+      },
+      "retirements": {
+        "us": 307,
+        "cn": 10,
+        "other": 67,
+        "global": 384
+      },
+      "netChange": {
+        "us": 1588,
+        "cn": 180,
+        "other": 287,
+        "global": 2055
+      },
+      "knownDeliveredMassKg": {
+        "us": 661605.1960000002,
+        "cn": 159961.2,
+        "other": 133529.728,
+        "global": 955096.1240000008
+      },
+      "knownDeliveredMassObjects": 2439
+    },
+    {
+      "year": "2023",
+      "label": "2023",
+      "additions": {
+        "us": 2234,
+        "cn": 210,
+        "other": 456,
+        "global": 2900
+      },
+      "retirements": {
+        "us": 447,
+        "cn": 48,
+        "other": 189,
+        "global": 684
+      },
+      "netChange": {
+        "us": 1787,
+        "cn": 162,
+        "other": 267,
+        "global": 2216
+      },
+      "knownDeliveredMassKg": {
+        "us": 1140026.115999998,
+        "cn": 107939,
+        "other": 150244.25899999996,
+        "global": 1398209.3749999984
+      },
+      "knownDeliveredMassObjects": 2900
+    },
+    {
+      "year": "2024",
+      "label": "2024",
+      "additions": {
+        "us": 2241,
+        "cn": 266,
+        "other": 325,
+        "global": 2832
+      },
+      "retirements": {
+        "us": 694,
+        "cn": 134,
+        "other": 294,
+        "global": 1122
+      },
+      "netChange": {
+        "us": 1547,
+        "cn": 132,
+        "other": 31,
+        "global": 1710
+      },
+      "knownDeliveredMassKg": {
+        "us": 1736545.709999998,
+        "cn": 145230.40000000002,
+        "other": 146675.26800000004,
+        "global": 2028451.3779999986
+      },
+      "knownDeliveredMassObjects": 2832
+    },
+    {
+      "year": "2025",
+      "label": "2025",
+      "additions": {
+        "us": 3713,
+        "cn": 372,
+        "other": 421,
+        "global": 4506
+      },
+      "retirements": {
+        "us": 826,
+        "cn": 115,
+        "other": 247,
+        "global": 1188
+      },
+      "netChange": {
+        "us": 2887,
+        "cn": 257,
+        "other": 174,
+        "global": 3318
+      },
+      "knownDeliveredMassKg": {
+        "us": 2266873.7799999984,
+        "cn": 288333,
+        "other": 139686.00800000003,
+        "global": 2694892.7880000067
+      },
+      "knownDeliveredMassObjects": 4505
+    },
+    {
+      "year": "2026",
+      "label": "2026 YTD",
+      "additions": {
+        "us": 2089,
+        "cn": 262,
+        "other": 244,
+        "global": 2595
+      },
+      "retirements": {
+        "us": 410,
+        "cn": 57,
+        "other": 107,
+        "global": 574
+      },
+      "netChange": {
+        "us": 1679,
+        "cn": 205,
+        "other": 137,
+        "global": 2021
+      },
+      "knownDeliveredMassKg": {
+        "us": 1211789.2999999998,
+        "cn": 148225,
+        "other": 44942.40000000001,
+        "global": 1404956.6999999997
+      },
+      "knownDeliveredMassObjects": 2595
+    }
+  ],
+  "recentManufacturers": [
+    {
+      "manufacturer": "SPXS",
+      "us": 10747,
+      "cn": 0,
+      "other": 0,
+      "global": 10747,
+      "knownMassKg": 6160721,
+      "knownMassObjects": 10747
+    },
+    {
+      "manufacturer": "KUIP",
+      "us": 398,
+      "cn": 0,
+      "other": 0,
+      "global": 398,
+      "knownMassKg": 195240,
+      "knownMassObjects": 398
+    },
+    {
+      "manufacturer": "ONEWUS",
+      "us": 0,
+      "cn": 0,
+      "other": 262,
+      "global": 262,
+      "knownMassKg": 38776,
+      "knownMassObjects": 262
+    },
+    {
+      "manufacturer": "SECM",
+      "us": 0,
+      "cn": 240,
+      "other": 1,
+      "global": 241,
+      "knownMassKg": 99874,
+      "knownMassObjects": 241
+    },
+    {
+      "manufacturer": "PLAN",
+      "us": 232,
+      "cn": 0,
+      "other": 1,
+      "global": 233,
+      "knownMassKg": 3015.399999999997,
+      "knownMassObjects": 233
+    },
+    {
+      "manufacturer": "CAST",
+      "us": 0,
+      "cn": 188,
+      "other": 3,
+      "global": 191,
+      "knownMassKg": 395643,
+      "knownMassObjects": 191
+    },
+    {
+      "manufacturer": "CGSTL",
+      "us": 0,
+      "cn": 175,
+      "other": 0,
+      "global": 175,
+      "knownMassKg": 10693.5,
+      "knownMassObjects": 175
+    },
+    {
+      "manufacturer": "SPIREG",
+      "us": 76,
+      "cn": 0,
+      "other": 42,
+      "global": 118,
+      "knownMassKg": 1161.3000000000006,
+      "knownMassObjects": 118
+    },
+    {
+      "manufacturer": "SPUT",
+      "us": 0,
+      "cn": 0,
+      "other": 100,
+      "global": 100,
+      "knownMassKg": 455.88,
+      "knownMassObjects": 100
+    },
+    {
+      "manufacturer": "SAST",
+      "us": 0,
+      "cn": 84,
+      "other": 0,
+      "global": 84,
+      "knownMassKg": 93753.5,
+      "knownMassObjects": 84
+    },
+    {
+      "manufacturer": "SWARMX",
+      "us": 68,
+      "cn": 0,
+      "other": 12,
+      "global": 80,
+      "knownMassKg": 22.71999999999999,
+      "knownMassObjects": 80
+    },
+    {
+      "manufacturer": "DFHZ",
+      "us": 0,
+      "cn": 68,
+      "other": 2,
+      "global": 70,
+      "knownMassKg": 37188,
+      "knownMassObjects": 70
+    },
+    {
+      "manufacturer": "GWCG",
+      "us": 0,
+      "cn": 68,
+      "other": 0,
+      "global": 68,
+      "knownMassKg": 8440,
+      "knownMassObjects": 68
+    },
+    {
+      "manufacturer": "GESIH",
+      "us": 0,
+      "cn": 56,
+      "other": 0,
+      "global": 56,
+      "knownMassKg": 14952,
+      "knownMassObjects": 56
+    },
+    {
+      "manufacturer": "ICEYE",
+      "us": 10,
+      "cn": 0,
+      "other": 44,
+      "global": 54,
+      "knownMassKg": 5180,
+      "knownMassObjects": 54
+    },
+    {
+      "manufacturer": "UTIAS",
+      "us": 34,
+      "cn": 0,
+      "other": 15,
+      "global": 49,
+      "knownMassKg": 1372,
+      "knownMassObjects": 49
     }
   ]
 }

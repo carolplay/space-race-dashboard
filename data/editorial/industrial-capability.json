@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-08-20",
+  "methodologyZh": "制造板块的连续数据只采用实际交付的载荷对象与已知质量；企业披露的峰值产能仅作为事件卡，不计入实际产出。计算与数据网络只列可核验的在轨节点、链路或地面节点，不推算全球总算力。",
+  "methodologyEn": "Continuous manufacturing series use only delivered payload objects and known mass. Disclosed peak capacity appears only as an event and is never counted as output. Compute and data networks include verifiable orbital nodes, links or ground nodes without estimating global FLOPS.",
+  "manufacturingEvents": [
+    {
+      "date": "2024-06",
+      "country": "US",
+      "headline": "5 / day",
+      "titleZh": "Amazon Leo 柯克兰卫星工厂",
+      "titleEn": "Amazon Leo Kirkland satellite factory",
+      "detailZh": "官方披露的峰值设计产能；实际交付仍以 GCAT 入轨对象统计。",
+      "detailEn": "Disclosed peak design capacity; observed GCAT deliveries remain the production measure.",
+      "source": "https://www.aboutamazon.com/news/innovation-at-amazon/inside-project-kuiper-satellite-facility-kirkland"
+    },
+    {
+      "date": "2025-04",
+      "country": "CN",
+      "headline": "100",
+      "titleZh": "蓝箭天鹊系列发动机累计下线",
+      "titleEn": "LandSpace Tianque engines completed",
+      "detailZh": "第 100 台液氧甲烷发动机下线；披露基地具备年产百台以上能力。",
+      "detailEn": "The 100th methalox engine was completed; the company disclosed annual capacity above 100 units.",
+      "source": "https://www.landspace.com/news-detail.html?itemid=62"
+    },
+    {
+      "date": "2026-04",
+      "country": "US",
+      "headline": "100+ / month",
+      "titleZh": "Amazon Leo 肯尼迪载荷处理中心",
+      "titleEn": "Amazon Leo Kennedy payload-processing hub",
+      "detailZh": "满负荷可处理每月超过 100 颗卫星并支持三条并行发射流程。",
+      "detailEn": "Disclosed full-rate processing above 100 satellites per month with three parallel launch campaigns.",
+      "source": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-florida-satellite-facility"
+    }
+  ],
+  "networkSignals": [
+    {
+      "country": "GLOBAL",
+      "headline": "12,876",
+      "titleZh": "活跃通信载荷",
+      "titleEn": "Active communications payloads",
+      "detailZh": "由 GCAT Active Catalog 的 COM 类对象动态生成；它表示节点数量，不表示带宽或算力。",
+      "detailEn": "Derived from GCAT Active Catalog COM objects. This is a node count, not bandwidth or compute capacity.",
+      "source": "https://planet4589.org/space/gcat/"
+    },
+    {
+      "country": "US",
+      "headline": "23,000+",
+      "titleZh": "Starlink 星间激光器",
+      "titleEn": "Starlink inter-satellite lasers",
+      "detailZh": "SpaceX 2026 年披露的星间激光器规模；作为网络链路信号单独展示。",
+      "detailEn": "SpaceX's 2026 disclosure for inter-satellite lasers, shown as a network-link signal.",
+      "source": "https://content.spacex.com/cms-assets/FINAL_Documents%20and%20Updates/SpaceX%20-%20EU%20Prospectus%20%28Approved%20by%20Bafin%29%20-%20June%205%2C%202026.pdf"
+    },
+    {
+      "country": "US",
+      "headline": "7",
+      "titleZh": "NASA TDRS 在役中继卫星",
+      "titleEn": "Active NASA TDRS relays",
+      "detailZh": "NASA 2025 年公开口径；在地球同步轨道提供近连续中继服务。",
+      "detailEn": "NASA's 2025 published fleet count, providing near-continuous relay from geosynchronous orbit.",
+      "source": "https://www.nasa.gov/missions/tdrs/tracking-and-data-relay-satellite-tdrs-generations-of-spacecraft/"
+    },
+    {
+      "country": "US",
+      "headline": "40+",
+      "titleZh": "NASA 近地空间网络地面天线",
+      "titleEn": "NASA Near Space Network antennas",
+      "detailZh": "政府与商业地面站合计的公开数量，用于展示天—地网络边界。",
+      "detailEn": "Published government and commercial ground-antenna count, defining the space-to-ground network boundary.",
+      "source": "https://www.nasa.gov/near-space-network/"
+    }
+  ]
+}

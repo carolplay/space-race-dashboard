@@ -24,16 +24,19 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, />中文</);
   assert.match(html, />EN</);
   assert.match(html, /0\.73042/);
-  assert.match(html, /当前资产与历史存量/);
-  assert.match(html, /当前产能与十五年斜率/);
+  assert.match(html, /资产、运营者与数据网络/);
+  assert.match(html, /实际交付、发射网络与常规运载/);
+  assert.match(html, /先看已经造出并送入轨道的东西/);
+  assert.match(html, /基地和发射台也是发射资产/);
+  assert.match(html, /谁在运营，以及轨道节点如何连成网络/);
   assert.match(html, /现存资产与对齐的中美路径/);
   assert.match(html, /常规运载之后，再看下一代火箭/);
   assert.match(html, /任务轨道图谱/);
   assert.match(html, /Starship \/ Super Heavy/);
-  assert.match(html, /2011 至今/);
+  assert.match(html, /2000 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
-  assert.match(html, /产品样例/);
+  assert.match(html, /ALPHA 1\.0/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
 });
 
@@ -60,11 +63,14 @@ test("ships product UI without starter dependencies", async () => {
   assert.match(page, /station-grid/);
   assert.match(page, /平均单位重量入轨成本/);
   assert.match(page, /Average cost to orbit/);
-  assert.match(page, /BOOSTER TURNAROUND/);
+  assert.doesNotMatch(page, /BOOSTER TURNAROUND/);
   assert.match(page, /kardashevSeries/);
   assert.match(page, /regionLabel\[lang\]/);
   assert.match(page, /metric-canvas/);
-  assert.match(page, /2011 至今/);
+  assert.match(page, /2000 至今/);
+  assert.match(page, /launchInfrastructure/);
+  assert.match(page, /industrialCapability/);
+  assert.match(page, /payloadFlow/);
   assert.doesNotMatch(page, /83\.0|63\.5|综合工业能力指数/);
   assert.doesNotMatch(page, /aria-label="选择国家"/);
   assert.match(layout, /lang="zh-CN"/);
@@ -92,12 +98,12 @@ test("ships auditable launch snapshots and internally consistent aggregates", as
 
 test("ships auditable orbit snapshots with consistent regional totals", async () => {
   const [snapshot, metrics, editorial] = await Promise.all([
-    readFile(new URL("../data/snapshots/orbit-assets/2026-08-19.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../data/snapshots/orbit-assets/2026-08-20.json", import.meta.url), "utf8").then(JSON.parse),
     readFile(new URL("../data/metrics/orbit-assets.json", import.meta.url), "utf8").then(JSON.parse),
     readFile(new URL("../data/editorial/frontier.json", import.meta.url), "utf8").then(JSON.parse),
   ]);
   assert.equal(snapshot.source.name, "GCAT");
-  assert.equal(metrics.current.date, "2026-08-19");
+  assert.equal(metrics.current.date, "2026-08-20");
   assert.ok(snapshot.activePayloads.global > 10_000);
   assert.ok(snapshot.catalogObjects.global > snapshot.activePayloads.global);
   assert.equal(snapshot.activePayloads.global, snapshot.activePayloads.us + snapshot.activePayloads.cn + snapshot.activePayloads.other);
@@ -107,6 +113,8 @@ test("ships auditable orbit snapshots with consistent regional totals", async ()
   for (const rows of [snapshot.byOrbit, snapshot.byCategory, snapshot.byObjectType]) {
     for (const row of rows) assert.equal(row.global, row.us + row.cn + row.other);
   }
+  assert.ok(snapshot.byOperator.length >= 10);
+  assert.ok(snapshot.byOperator.every((row) => row.global === row.us + row.cn + row.other));
   assert.equal(editorial.cislunar.assets.length, 3);
   assert.ok(editorial.cislunar.assets.every((asset) => asset.nameZh && asset.nameEn && asset.image && asset.source.startsWith("https://")));
   assert.ok(editorial.cislunar.timeline.length >= 13);
@@ -140,12 +148,14 @@ test("keeps development validation separate from payload launch capacity", async
   assert.ok(development.programs.flatMap((program) => program.milestones).every((milestone) => milestone.titleZh && milestone.titleEn && milestone.source.startsWith("https://")));
 });
 
-test("ships a continuous and internally consistent 2011-present history", async () => {
+test("ships a continuous and internally consistent 2000-present history", async () => {
   const history = await readFile(new URL("../data/metrics/historical-series.json", import.meta.url), "utf8").then(JSON.parse);
-  assert.equal(history.coverage.fromYear, 2011);
+  assert.equal(history.coverage.fromYear, 2000);
   assert.equal(history.coverage.toYear, 2026);
-  assert.equal(history.launchActivity.length, 16);
-  assert.equal(history.orbitInventory.length, 16);
+  assert.equal(history.launchActivity.length, 27);
+  assert.equal(history.orbitInventory.length, 27);
+  assert.equal(history.payloadFlow.length, 27);
+  assert.ok(history.recentManufacturers.length >= 10);
   assert.equal(history.coverage.currentYearIsPartial, true);
   assert.ok([history.source.satcat.sha256, history.source.launchlog.sha256].every((checksum) => /^[a-f0-9]{64}$/.test(checksum)));
   for (const point of history.launchActivity) {
@@ -159,4 +169,22 @@ test("ships a continuous and internally consistent 2011-present history", async 
     }
     assert.ok(Math.abs(point.knownPayloadMassKg.global - (point.knownPayloadMassKg.us + point.knownPayloadMassKg.cn + point.knownPayloadMassKg.other)) < 1e-6);
   }
+  for (const point of history.payloadFlow) {
+    for (const metric of [point.additions, point.retirements, point.knownDeliveredMassKg]) {
+      assert.ok(Math.abs(metric.global - (metric.us + metric.cn + metric.other)) < 1e-6);
+    }
+  }
+});
+
+test("tracks launch sites and pads as auditable launch assets", async () => {
+  const infrastructure = await readFile(new URL("../data/metrics/launch-infrastructure.json", import.meta.url), "utf8").then(JSON.parse);
+  const editorial = await readFile(new URL("../data/editorial/industrial-capability.json", import.meta.url), "utf8").then(JSON.parse);
+  assert.equal(infrastructure.source.name, "Launch Library 2");
+  assert.ok(infrastructure.summary.observedSites >= 20);
+  assert.ok(infrastructure.summary.observedPads >= 50);
+  assert.ok(infrastructure.pads.every((pad) => pad.id && pad.name && pad.site && pad.attempts > 0));
+  assert.ok(infrastructure.sites.some((site) => site.countryCode === "US"));
+  assert.ok(infrastructure.sites.some((site) => site.countryCode === "CN"));
+  assert.ok(editorial.manufacturingEvents.every((event) => event.source.startsWith("https://")));
+  assert.ok(editorial.networkSignals.every((event) => event.source.startsWith("https://")));
 });

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T07:13:26.873Z",
+  "generatedAt": "2026-08-20T07:56:25.666Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-08-18"
+    "to": "2026-08-20"
   },
   "source": {
     "name": "Launch Library 2",
@@ -45,10 +45,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 117,
+        "us": 118,
         "cn": 59,
         "other": 20,
-        "global": 196
+        "global": 197
       }
     ],
     "success": [
@@ -71,38 +71,52 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 116,
+        "us": 117,
         "cn": 55,
         "other": 18,
-        "global": 189
+        "global": 190
       }
     ],
     "rocketFamilies": [
       {
         "year": "2024",
         "region": "cn",
-        "family": "Long March 2D",
-        "attempts": 7,
-        "success": 7
+        "family": "Long March 2",
+        "attempts": 18,
+        "success": 17
       },
       {
         "year": "2024",
         "region": "cn",
-        "family": "Long March 3B/E",
-        "attempts": 7,
-        "success": 7
+        "family": "Long March 3",
+        "attempts": 8,
+        "success": 8
       },
       {
         "year": "2024",
         "region": "cn",
-        "family": "Long March 2C",
+        "family": "Long March 6",
+        "attempts": 8,
+        "success": 8
+      },
+      {
+        "year": "2024",
+        "region": "cn",
+        "family": "Long March 4",
         "attempts": 6,
         "success": 6
       },
       {
         "year": "2024",
         "region": "cn",
-        "family": "Long March 6A",
+        "family": "Ceres-1",
+        "attempts": 5,
+        "success": 5
+      },
+      {
+        "year": "2024",
+        "region": "cn",
+        "family": "Kuaizhou",
         "attempts": 5,
         "success": 5
       },
@@ -116,84 +130,21 @@
       {
         "year": "2024",
         "region": "cn",
-        "family": "Kuaizhou 1A",
+        "family": "Long March 7",
         "attempts": 4,
         "success": 4
       },
       {
         "year": "2024",
         "region": "cn",
-        "family": "Long March 4B",
-        "attempts": 4,
-        "success": 4
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Ceres-1S",
+        "family": "Long March 5",
         "attempts": 3,
         "success": 3
       },
       {
         "year": "2024",
         "region": "cn",
-        "family": "Ceres-1",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 2D/YZ-3",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 2F/G",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 4C",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 5",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 6",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 7",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 7A",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Smart Dragon 3",
+        "family": "Smart Dragon",
         "attempts": 2,
         "success": 2
       },
@@ -221,42 +172,7 @@
       {
         "year": "2024",
         "region": "cn",
-        "family": "Kuaizhou 11",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2024",
-        "region": "cn",
         "family": "Long March 12",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 2C/YZ-1S",
-        "attempts": 1,
-        "success": 0
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 3B/YZ-1",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 5B/YZ-2",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2024",
-        "region": "cn",
-        "family": "Long March 6C",
         "attempts": 1,
         "success": 1
       },
@@ -270,7 +186,7 @@
       {
         "year": "2024",
         "region": "cn",
-        "family": "Zhuque-2E",
+        "family": "Zhuque",
         "attempts": 1,
         "success": 1
       },
@@ -298,7 +214,7 @@
       {
         "year": "2024",
         "region": "other",
-        "family": "H-IIA",
+        "family": "H-II",
         "attempts": 2,
         "success": 2
       },
@@ -340,23 +256,16 @@
       {
         "year": "2024",
         "region": "other",
-        "family": "Angara A5/Blok DM-03",
+        "family": "Angara A5",
         "attempts": 1,
         "success": 1
       },
       {
         "year": "2024",
         "region": "other",
-        "family": "Ariane 62",
+        "family": "Ariane 6",
         "attempts": 1,
         "success": 1
-      },
-      {
-        "year": "2024",
-        "region": "other",
-        "family": "Chollima-1",
-        "attempts": 1,
-        "success": 0
       },
       {
         "year": "2024",
@@ -371,6 +280,13 @@
         "family": "SSLV",
         "attempts": 1,
         "success": 1
+      },
+      {
+        "year": "2024",
+        "region": "other",
+        "family": "Taepodong",
+        "attempts": 1,
+        "success": 0
       },
       {
         "year": "2024",
@@ -396,7 +312,7 @@
       {
         "year": "2024",
         "region": "us",
-        "family": "Falcon Heavy",
+        "family": "Falcon",
         "attempts": 2,
         "success": 2
       },
@@ -410,7 +326,7 @@
       {
         "year": "2024",
         "region": "us",
-        "family": "Delta IV Heavy",
+        "family": "Delta IV",
         "attempts": 1,
         "success": 1
       },
@@ -424,44 +340,51 @@
       {
         "year": "2025",
         "region": "cn",
-        "family": "Long March 3B/E",
+        "family": "Long March 3",
+        "attempts": 15,
+        "success": 15
+      },
+      {
+        "year": "2025",
+        "region": "cn",
+        "family": "Long March 2",
         "attempts": 13,
         "success": 13
       },
       {
         "year": "2025",
         "region": "cn",
-        "family": "Long March 6A",
-        "attempts": 10,
-        "success": 10
+        "family": "Long March 6",
+        "attempts": 11,
+        "success": 11
       },
       {
         "year": "2025",
         "region": "cn",
-        "family": "Long March 2D",
+        "family": "Long March 4",
         "attempts": 7,
         "success": 7
       },
       {
         "year": "2025",
         "region": "cn",
-        "family": "Long March 7A",
-        "attempts": 6,
-        "success": 6
+        "family": "Long March 7",
+        "attempts": 7,
+        "success": 7
       },
       {
         "year": "2025",
         "region": "cn",
-        "family": "Long March 8A",
-        "attempts": 6,
-        "success": 6
+        "family": "Long March 8",
+        "attempts": 7,
+        "success": 7
       },
       {
         "year": "2025",
         "region": "cn",
         "family": "Ceres-1",
-        "attempts": 5,
-        "success": 4
+        "attempts": 6,
+        "success": 5
       },
       {
         "year": "2025",
@@ -473,79 +396,37 @@
       {
         "year": "2025",
         "region": "cn",
-        "family": "Long March 4B",
+        "family": "Kuaizhou",
         "attempts": 4,
-        "success": 4
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Smart Dragon 3",
-        "attempts": 4,
-        "success": 4
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Kuaizhou 1A",
-        "attempts": 3,
-        "success": 2
+        "success": 3
       },
       {
         "year": "2025",
         "region": "cn",
         "family": "Long March 12",
-        "attempts": 3,
-        "success": 3
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 2F/G",
-        "attempts": 3,
-        "success": 3
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 4C",
-        "attempts": 3,
-        "success": 3
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 2C",
-        "attempts": 2,
-        "success": 2
+        "attempts": 4,
+        "success": 4
       },
       {
         "year": "2025",
         "region": "cn",
         "family": "Long March 5",
-        "attempts": 2,
+        "attempts": 4,
+        "success": 4
+      },
+      {
+        "year": "2025",
+        "region": "cn",
+        "family": "Smart Dragon",
+        "attempts": 4,
+        "success": 4
+      },
+      {
+        "year": "2025",
+        "region": "cn",
+        "family": "Zhuque",
+        "attempts": 3,
         "success": 2
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 5B/YZ-2",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Zhuque-2E",
-        "attempts": 2,
-        "success": 1
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Ceres-1S",
-        "attempts": 1,
-        "success": 1
       },
       {
         "year": "2025",
@@ -564,70 +445,7 @@
       {
         "year": "2025",
         "region": "cn",
-        "family": "Kuaizhou 11",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2025",
-        "region": "cn",
         "family": "Long March 11",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 12A",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 2C/YZ-1S",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 3C/E",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 3C/YZ-1",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 6",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 7",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Long March 8",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2025",
-        "region": "cn",
-        "family": "Zhuque-3",
         "attempts": 1,
         "success": 1
       },
@@ -641,7 +459,14 @@
       {
         "year": "2025",
         "region": "other",
-        "family": "Ariane 62",
+        "family": "Ariane 6",
+        "attempts": 4,
+        "success": 4
+      },
+      {
+        "year": "2025",
+        "region": "other",
+        "family": "GSLV",
         "attempts": 4,
         "success": 4
       },
@@ -669,49 +494,35 @@
       {
         "year": "2025",
         "region": "other",
-        "family": "GSLV",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2025",
-        "region": "other",
-        "family": "LVM-3",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2025",
-        "region": "other",
-        "family": "Angara A5/Briz-M",
+        "family": "Angara A5",
         "attempts": 1,
         "success": 1
       },
       {
         "year": "2025",
         "region": "other",
-        "family": "Eris-1",
+        "family": "Eris",
         "attempts": 1,
         "success": 0
       },
       {
         "year": "2025",
         "region": "other",
-        "family": "H-IIA",
+        "family": "H-II",
         "attempts": 1,
         "success": 1
       },
       {
         "year": "2025",
         "region": "other",
-        "family": "HANBIT-Nano",
+        "family": "HANBIT",
         "attempts": 1,
         "success": 0
       },
       {
         "year": "2025",
         "region": "other",
-        "family": "Nuri",
+        "family": "KSLV",
         "attempts": 1,
         "success": 1
       },
@@ -725,7 +536,7 @@
       {
         "year": "2025",
         "region": "other",
-        "family": "Shavit-2",
+        "family": "Shavit",
         "attempts": 1,
         "success": 1
       },
@@ -774,7 +585,7 @@
       {
         "year": "2025",
         "region": "us",
-        "family": "Minotaur IV",
+        "family": "Minotaur",
         "attempts": 1,
         "success": 1
       },
@@ -788,9 +599,30 @@
       {
         "year": "2026",
         "region": "cn",
-        "family": "Long March 6A",
+        "family": "Long March 2",
+        "attempts": 10,
+        "success": 10
+      },
+      {
+        "year": "2026",
+        "region": "cn",
+        "family": "Long March 6",
+        "attempts": 8,
+        "success": 8
+      },
+      {
+        "year": "2026",
+        "region": "cn",
+        "family": "Long March 8",
         "attempts": 7,
         "success": 7
+      },
+      {
+        "year": "2026",
+        "region": "cn",
+        "family": "Long March 7",
+        "attempts": 5,
+        "success": 4
       },
       {
         "year": "2026",
@@ -802,84 +634,49 @@
       {
         "year": "2026",
         "region": "cn",
-        "family": "Long March 2D",
-        "attempts": 4,
-        "success": 4
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 7A",
-        "attempts": 4,
-        "success": 3
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 8A",
-        "attempts": 4,
-        "success": 4
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Smart Dragon 3",
-        "attempts": 4,
-        "success": 4
-      },
-      {
-        "year": "2026",
-        "region": "cn",
         "family": "Long March 12",
+        "attempts": 4,
+        "success": 4
+      },
+      {
+        "year": "2026",
+        "region": "cn",
+        "family": "Smart Dragon",
+        "attempts": 4,
+        "success": 4
+      },
+      {
+        "year": "2026",
+        "region": "cn",
+        "family": "Long March 3",
+        "attempts": 3,
+        "success": 2
+      },
+      {
+        "year": "2026",
+        "region": "cn",
+        "family": "Zhuque",
         "attempts": 3,
         "success": 3
       },
       {
         "year": "2026",
         "region": "cn",
-        "family": "Long March 2C",
-        "attempts": 3,
-        "success": 3
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 3B/E",
-        "attempts": 3,
-        "success": 2
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 8",
-        "attempts": 3,
-        "success": 3
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Kuaizhou 11",
+        "family": "Kuaizhou",
         "attempts": 2,
         "success": 2
       },
       {
         "year": "2026",
         "region": "cn",
-        "family": "Long March 2F/G",
+        "family": "Long March 4",
         "attempts": 2,
         "success": 2
       },
       {
         "year": "2026",
         "region": "cn",
-        "family": "Zhuque-2E Block 2",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Ceres-1S",
+        "family": "Ceres-1",
         "attempts": 1,
         "success": 1
       },
@@ -907,35 +704,7 @@
       {
         "year": "2026",
         "region": "cn",
-        "family": "Long March 10B",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 12B",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 2C/YZ-1S",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 4B",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 4C",
+        "family": "Long March 10",
         "attempts": 1,
         "success": 1
       },
@@ -949,30 +718,9 @@
       {
         "year": "2026",
         "region": "cn",
-        "family": "Long March 6",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 7",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2026",
-        "region": "cn",
         "family": "Tianlong-3",
         "attempts": 1,
         "success": 0
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Zhuque-3",
-        "attempts": 1,
-        "success": 1
       },
       {
         "year": "2026",
@@ -984,9 +732,9 @@
       {
         "year": "2026",
         "region": "other",
-        "family": "Ariane 64",
-        "attempts": 2,
-        "success": 2
+        "family": "Ariane 6",
+        "attempts": 3,
+        "success": 3
       },
       {
         "year": "2026",
@@ -1005,13 +753,6 @@
       {
         "year": "2026",
         "region": "other",
-        "family": "Ariane 64 Block 2",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2026",
-        "region": "other",
         "family": "KAIROS",
         "attempts": 1,
         "success": 0
@@ -1019,14 +760,14 @@
       {
         "year": "2026",
         "region": "other",
-        "family": "Pegasus XL",
+        "family": "Pegasus",
         "attempts": 1,
         "success": 1
       },
       {
         "year": "2026",
         "region": "other",
-        "family": "Proton-M/Blok DM-03",
+        "family": "Proton / UR-500",
         "attempts": 1,
         "success": 1
       },
@@ -1047,7 +788,7 @@
       {
         "year": "2026",
         "region": "other",
-        "family": "Vikram-I",
+        "family": "Vikram",
         "attempts": 1,
         "success": 1
       },
@@ -1055,15 +796,15 @@
         "year": "2026",
         "region": "us",
         "family": "Falcon 9",
-        "attempts": 96,
-        "success": 96
+        "attempts": 97,
+        "success": 97
       },
       {
         "year": "2026",
         "region": "us",
         "family": "Electron",
-        "attempts": 10,
-        "success": 10
+        "attempts": 11,
+        "success": 11
       },
       {
         "year": "2026",
@@ -1075,7 +816,7 @@
       {
         "year": "2026",
         "region": "us",
-        "family": "Falcon Heavy",
+        "family": "Falcon",
         "attempts": 1,
         "success": 1
       },
@@ -1089,14 +830,7 @@
       {
         "year": "2026",
         "region": "us",
-        "family": "HASTE",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2026",
-        "region": "us",
-        "family": "Minotaur IV",
+        "family": "Minotaur",
         "attempts": 1,
         "success": 1
       },
@@ -1110,7 +844,7 @@
       {
         "year": "2026",
         "region": "us",
-        "family": "SLS Block 1",
+        "family": "Space Launch System",
         "attempts": 1,
         "success": 1
       },

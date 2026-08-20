@@ -140,6 +140,14 @@ for (const row of currentRows) {
   addCount(objectTypeMap, kind, region);
 }
 
+const operatorMap = new Map();
+for (const row of earthActive) {
+  const owner = (row.Owner || "Unknown").replaceAll("?", "").replaceAll("*", "").trim() || "Unknown";
+  const region = regionFor(row.OwnState);
+  addCount(operatorMap, owner, region);
+}
+const byOperator = mapToRows(operatorMap, []).slice(0, 20);
+
 const retrievedAt = new Date().toISOString();
 const snapshot = {
   schemaVersion: 1,
@@ -170,6 +178,7 @@ const snapshot = {
   byCategory: mapToRows(categoryMap, CATEGORY_ORDER),
   byOrbit: mapToRows(orbitMap, ORBIT_ORDER),
   byObjectType: mapToRows(objectTypeMap, ["有效载荷/失效载荷", "火箭体", "任务组件/其他", "碎片"]),
+  byOperator,
 };
 
 await mkdir(snapshotsDir, { recursive: true });

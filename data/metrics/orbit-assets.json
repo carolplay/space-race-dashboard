@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T07:13:41.076Z",
+  "generatedAt": "2026-08-20T07:57:05.938Z",
   "source": {
     "name": "GCAT",
     "publisher": "Jonathan C. McDowell",
@@ -42,12 +42,38 @@
         "totalObjects": 16624,
         "percent": 100
       }
+    },
+    {
+      "date": "2026-08-20",
+      "activePayloads": {
+        "us": 12801,
+        "cn": 1404,
+        "other": 2419,
+        "global": 16624
+      },
+      "catalogObjects": {
+        "us": 18532,
+        "cn": 6113,
+        "other": 10305,
+        "global": 34950
+      },
+      "knownActivePayloadMassKg": {
+        "us": 8028653.180000013,
+        "cn": 1279548,
+        "other": 1964696.1160000009,
+        "global": 11272897.295999974
+      },
+      "massCoverage": {
+        "knownObjects": 16618,
+        "totalObjects": 16624,
+        "percent": 100
+      }
     }
   ],
   "current": {
     "schemaVersion": 1,
-    "date": "2026-08-19",
-    "retrievedAt": "2026-08-19T07:13:41.076Z",
+    "date": "2026-08-20",
+    "retrievedAt": "2026-08-20T07:57:05.938Z",
     "source": {
       "name": "GCAT",
       "publisher": "Jonathan C. McDowell",
@@ -207,6 +233,148 @@
         "cn": 3981,
         "other": 4072,
         "global": 11692
+      }
+    ],
+    "byOperator": [
+      {
+        "name": "SPXS",
+        "us": 10965,
+        "cn": 0,
+        "other": 0,
+        "global": 10965
+      },
+      {
+        "name": "ONEWEBN",
+        "us": 0,
+        "cn": 0,
+        "other": 523,
+        "global": 523
+      },
+      {
+        "name": "KUIP",
+        "us": 392,
+        "cn": 0,
+        "other": 0,
+        "global": 392
+      },
+      {
+        "name": "NROC",
+        "us": 291,
+        "cn": 0,
+        "other": 0,
+        "global": 291
+      },
+      {
+        "name": "ZXW",
+        "us": 0,
+        "cn": 224,
+        "other": 0,
+        "global": 224
+      },
+      {
+        "name": "YUANX",
+        "us": 0,
+        "cn": 217,
+        "other": 0,
+        "global": 217
+      },
+      {
+        "name": "PLAN",
+        "us": 110,
+        "cn": 0,
+        "other": 0,
+        "global": 110
+      },
+      {
+        "name": "ONEWEB",
+        "us": 0,
+        "cn": 0,
+        "other": 109,
+        "global": 109
+      },
+      {
+        "name": "SDA",
+        "us": 90,
+        "cn": 0,
+        "other": 0,
+        "global": 90
+      },
+      {
+        "name": "ZLZB",
+        "us": 0,
+        "cn": 84,
+        "other": 0,
+        "global": 84
+      },
+      {
+        "name": "IRIDS",
+        "us": 80,
+        "cn": 0,
+        "other": 0,
+        "global": 80
+      },
+      {
+        "name": "CGSTL",
+        "us": 0,
+        "cn": 74,
+        "other": 0,
+        "global": 74
+      },
+      {
+        "name": "CNSA",
+        "us": 0,
+        "cn": 71,
+        "other": 0,
+        "global": 71
+      },
+      {
+        "name": "ZZB",
+        "us": 0,
+        "cn": 71,
+        "other": 0,
+        "global": 71
+      },
+      {
+        "name": "GEESP",
+        "us": 0,
+        "cn": 60,
+        "other": 0,
+        "global": 60
+      },
+      {
+        "name": "ISRO",
+        "us": 0,
+        "cn": 0,
+        "other": 55,
+        "global": 55
+      },
+      {
+        "name": "AFSMC",
+        "us": 53,
+        "cn": 0,
+        "other": 0,
+        "global": 53
+      },
+      {
+        "name": "SITRO",
+        "us": 0,
+        "cn": 0,
+        "other": 51,
+        "global": 51
+      },
+      {
+        "name": "CASC",
+        "us": 0,
+        "cn": 48,
+        "other": 0,
+        "global": 48
+      },
+      {
+        "name": "VVKOV",
+        "us": 0,
+        "cn": 0,
+        "other": 48,
+        "global": 48
       }
     ]
   }
