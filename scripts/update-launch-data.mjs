@@ -9,6 +9,7 @@ const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const snapshotPath = resolve(projectRoot, "data/snapshots/launch-library-2.json");
 const metricsPath = resolve(projectRoot, "data/metrics/launch-activity.json");
 const infrastructurePath = resolve(projectRoot, "data/metrics/launch-infrastructure.json");
+const manifestPath = resolve(projectRoot, "data/metrics/launch-manifest.json");
 
 function readArg(name) {
   const prefix = `--${name}=`;
@@ -24,7 +25,9 @@ function isoDate(value, name) {
 
 function defaultWindow() {
   const now = new Date();
-  const to = now.toISOString().slice(0, 10);
+  const future = new Date(now);
+  future.setUTCDate(future.getUTCDate() + 90);
+  const to = future.toISOString().slice(0, 10);
   const fromDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - 1, 1));
   return { from: fromDate.toISOString().slice(0, 10), to };
 }
@@ -36,11 +39,15 @@ function regionFor(countryCode) {
 }
 
 function countryFor(launch) {
-  const providerId = launch.launch_service_provider?.id;
-  const providerAtPad = launch.pad?.agencies?.find((agency) => agency.id === providerId);
-  const providerCountry = providerAtPad?.country?.[0]?.alpha_2_code;
+  const providerCountry = launch.launch_service_provider?.country?.[0]?.alpha_2_code;
   if (providerCountry) {
     return { countryCode: providerCountry, classificationBasis: "lsp_agency_country" };
+  }
+  const providerId = launch.launch_service_provider?.id;
+  const providerAtPad = launch.pad?.agencies?.find((agency) => agency.id === providerId);
+  const providerCountryAtPad = providerAtPad?.country?.[0]?.alpha_2_code;
+  if (providerCountryAtPad) {
+    return { countryCode: providerCountryAtPad, classificationBasis: "lsp_agency_country" };
   }
 
   const padCountry = launch.pad?.country?.alpha_2_code
@@ -52,10 +59,32 @@ function countryFor(launch) {
 function normalize(launch) {
   const { countryCode, classificationBasis } = countryFor(launch);
   const configuration = launch.rocket?.configuration;
+  const stages = (launch.rocket?.launcher_stage ?? []).map((stage) => ({
+    id: stage.id ?? null,
+    type: stage.type ?? null,
+    reused: stage.reused ?? null,
+    flightNumber: stage.launcher_flight_number ?? null,
+    serialNumber: stage.launcher?.serial_number ?? null,
+    vehicleStatus: stage.launcher?.status?.name ?? null,
+    previousFlightDate: stage.previous_flight_date ?? null,
+    turnaround: stage.turn_around_time ?? null,
+    landing: stage.landing ? {
+      attempt: stage.landing.attempt ?? null,
+      success: stage.landing.success ?? null,
+      description: stage.landing.description ?? null,
+      downrangeDistanceKm: stage.landing.downrange_distance ?? null,
+      location: stage.landing.landing_location?.name ?? null,
+      locationAbbrev: stage.landing.landing_location?.abbrev ?? null,
+      type: stage.landing.landing_location?.type?.name ?? null,
+    } : null,
+  }));
   return {
     id: launch.id,
     name: launch.name,
     net: launch.net,
+    netPrecision: launch.net_precision?.name ?? null,
+    windowStart: launch.window_start ?? null,
+    windowEnd: launch.window_end ?? null,
     statusId: launch.status?.id ?? null,
     status: launch.status?.name ?? null,
     launchDesignator: launch.launch_designator ?? null,
@@ -65,10 +94,17 @@ function normalize(launch) {
     region: regionFor(countryCode),
     classificationBasis,
     orbit: launch.mission?.orbit?.abbrev ?? null,
+    missionName: launch.mission?.name ?? null,
+    missionType: launch.mission?.type ?? null,
+    missionDescription: launch.mission?.description ?? null,
     rocketConfigurationId: configuration?.id ?? null,
     rocketConfiguration: configuration?.name ?? null,
     rocketFullName: configuration?.full_name ?? configuration?.name ?? null,
     rocketFamily: configuration?.families?.at(-1)?.name ?? configuration?.name ?? "未分类",
+    rocketLaunchCostUsd: configuration?.launch_cost ?? null,
+    leoCapacityKg: configuration?.leo_capacity ?? null,
+    gtoCapacityKg: configuration?.gto_capacity ?? null,
+    stages,
     padId: launch.pad?.id ?? null,
     padName: launch.pad?.name ?? null,
     padActive: launch.pad?.active ?? null,
@@ -78,6 +114,15 @@ function normalize(launch) {
     locationId: launch.pad?.location?.id ?? null,
     locationName: launch.pad?.location?.name ?? null,
     locationCountryCode: launch.pad?.location?.country?.alpha_2_code ?? launch.pad?.country?.alpha_2_code ?? null,
+    padTimezone: launch.pad?.location?.timezone_name ?? null,
+    padTurnaround: launch.pad_turnaround ?? null,
+    infoUrl: launch.info_urls?.[0]?.url ?? null,
+    webcastUrl: launch.vid_urls?.[0]?.url ?? null,
+    timeline: (launch.timeline ?? []).map((event) => ({
+      abbrev: event.type?.abbrev ?? null,
+      description: event.type?.description ?? null,
+      relativeTime: event.relative_time ?? null,
+    })),
     lastUpdated: launch.last_updated ?? null,
     sourceUrl: launch.url,
   };
@@ -258,7 +303,7 @@ function inferRocketFields(record) {
 async function fetchLaunches(from, to) {
   const url = new URL(API_ROOT);
   url.searchParams.set("format", "json");
-  url.searchParams.set("mode", "normal");
+  url.searchParams.set("mode", "detailed");
   url.searchParams.set("limit", "100");
   url.searchParams.set("ordering", "net");
   url.searchParams.set("include_suborbital", "false");
@@ -273,7 +318,7 @@ async function fetchLaunches(from, to) {
     const response = await fetch(next, {
       headers: {
         Accept: "application/json",
-        "User-Agent": "space-race-dashboard/0.5 (github.com/carolplay/space-race-dashboard)",
+        "User-Agent": "space-race-dashboard/1.1 (github.com/carolplay/space-race-dashboard)",
       },
     });
     if (!response.ok) {
@@ -285,6 +330,125 @@ async function fetchLaunches(from, to) {
     next = page.next;
   }
   return { records, requestCount };
+}
+
+function durationDays(value) {
+  if (!value) return null;
+  const match = value.match(/^P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?$/);
+  if (!match) return null;
+  const [, days = "0", hours = "0", minutes = "0", seconds = "0"] = match;
+  return Number((Number(days) + Number(hours) / 24 + Number(minutes) / 1440 + Number(seconds) / 86400).toFixed(2));
+}
+
+function manifestEntry(record) {
+  return {
+    id: record.id,
+    name: record.name,
+    net: record.net,
+    netPrecision: record.netPrecision,
+    windowStart: record.windowStart,
+    windowEnd: record.windowEnd,
+    status: record.status,
+    provider: record.provider,
+    countryCode: record.countryCode,
+    region: record.region,
+    rocket: record.rocketFullName,
+    family: record.rocketFamily,
+    missionType: record.missionType,
+    missionDescription: record.missionDescription,
+    orbit: record.orbit,
+    pad: record.padName,
+    location: record.locationName,
+    padTimezone: record.padTimezone,
+    padTurnaroundDays: durationDays(record.padTurnaround),
+    infoUrl: record.infoUrl,
+    webcastUrl: record.webcastUrl,
+    sourceUrl: record.sourceUrl,
+    stages: record.stages ?? [],
+  };
+}
+
+function aggregateManifest(records, generatedAt, observationCutoff) {
+  const today = observationCutoff;
+  const currentYear = today.slice(0, 4);
+  const upcoming = records
+    .filter((record) => record.net.slice(0, 10) >= today && !ATTEMPT_STATUS_IDS.has(record.statusId))
+    .sort((a, b) => a.net.localeCompare(b.net))
+    .slice(0, 16)
+    .map(manifestEntry);
+  const recent = records
+    .filter((record) => record.net.slice(0, 10) <= today && ATTEMPT_STATUS_IDS.has(record.statusId))
+    .sort((a, b) => b.net.localeCompare(a.net))
+    .slice(0, 12)
+    .map(manifestEntry);
+  const recoveryRecords = records.filter((record) => record.net.startsWith(currentYear)
+    && record.net.slice(0, 10) <= today
+    && ATTEMPT_STATUS_IDS.has(record.statusId)
+    && (record.stages ?? []).some((stage) => stage.landing?.attempt));
+  const recoveredStages = recoveryRecords.flatMap((record) => (record.stages ?? [])
+    .filter((stage) => stage.landing?.attempt)
+    .map((stage) => ({ record, stage })));
+  const vehicleMap = new Map();
+  for (const { record, stage } of records.filter((item) => item.net.slice(0, 10) <= today).flatMap((item) => (item.stages ?? [])
+    .filter((stage) => stage.serialNumber)
+    .map((stage) => ({ record: item, stage })))) {
+    const serial = stage.serialNumber;
+    const existing = vehicleMap.get(serial);
+    if (!existing || (stage.flightNumber ?? 0) > (existing.flightNumber ?? 0)
+      || record.net > existing.lastLaunch) {
+      vehicleMap.set(serial, {
+        serial,
+        family: record.rocketFamily,
+        provider: record.provider,
+        countryCode: record.countryCode,
+        status: stage.vehicleStatus,
+        flightNumber: stage.flightNumber,
+        lastLaunch: record.net,
+        previousFlightDate: stage.previousFlightDate,
+        turnaroundDays: durationDays(stage.turnaround),
+        landingLocation: stage.landing?.location ?? null,
+        landingType: stage.landing?.type ?? null,
+        landingSuccess: stage.landing?.success ?? null,
+        sourceUrl: record.sourceUrl,
+      });
+    }
+  }
+  return {
+    schemaVersion: 1,
+    generatedAt,
+    asOf: observationCutoff,
+    coverage: {
+      upcomingFrom: upcoming[0]?.net.slice(0, 10) ?? null,
+      upcomingTo: upcoming.at(-1)?.net.slice(0, 10) ?? null,
+      detailedRecordsFrom: records.find((record) => (record.stages ?? []).length)?.net.slice(0, 10) ?? null,
+    },
+    source: {
+      name: "Launch Library 2",
+      publisher: "The Space Devs",
+      url: "https://thespacedevs.com/llapi",
+      apiVersion: "2.3.0",
+      license: "Apache-2.0",
+    },
+    methodology: {
+      manifest: "Next scheduled orbital launches by NET; dates may move and retain LL2 precision.",
+      reuse: "Serialized launcher stages and landing records available in LL2 detailed-mode responses. Null landing outcome means pending or not yet adjudicated.",
+      scope: "Detailed stage data accumulates from Alpha 1.1 onward; earlier stored normal-mode records are not backfilled automatically.",
+    },
+    upcoming,
+    recent,
+    reuse: {
+      year: currentYear,
+      recoveryMissions: recoveryRecords.length,
+      landingAttempts: recoveredStages.length,
+      successfulLandings: recoveredStages.filter(({ stage }) => stage.landing.success === true).length,
+      failedLandings: recoveredStages.filter(({ stage }) => stage.landing.success === false).length,
+      pendingLandings: recoveredStages.filter(({ stage }) => stage.landing.success == null).length,
+      serializedVehicles: [...vehicleMap.values()]
+        .sort((a, b) => (b.flightNumber ?? 0) - (a.flightNumber ?? 0) || b.lastLaunch.localeCompare(a.lastLaunch))
+        .slice(0, 20),
+      recentRecoveries: recoveryRecords.sort((a, b) => b.net.localeCompare(a.net)).slice(0, 12).map(manifestEntry),
+    },
+  };
 }
 
 async function readExisting() {
@@ -370,6 +534,7 @@ const defaults = defaultWindow();
 const rebuildOnly = process.argv.includes("--rebuild-only");
 const from = isoDate(readArg("from") ?? defaults.from, "from");
 const to = isoDate(readArg("to") ?? defaults.to, "to");
+const observationCutoff = isoDate(readArg("as-of") ?? new Date().toISOString().slice(0, 10), "as-of");
 if (from > to) throw new Error("--from must be earlier than or equal to --to");
 
 const generatedAt = new Date().toISOString();
@@ -392,15 +557,16 @@ const snapshot = {
   records: merged,
 };
 const availableFrom = merged[0]?.net.slice(0, 10) ?? from;
-const availableTo = merged.at(-1)?.net.slice(0, 10) ?? to;
-const metrics = aggregate(merged, generatedAt, availableFrom, availableTo);
-const infrastructure = aggregateInfrastructure(merged, generatedAt, availableFrom, availableTo);
+const metrics = aggregate(merged, generatedAt, availableFrom, observationCutoff);
+const infrastructure = aggregateInfrastructure(merged, generatedAt, availableFrom, observationCutoff);
+const manifest = aggregateManifest(merged, generatedAt, observationCutoff);
 
 await mkdir(dirname(snapshotPath), { recursive: true });
 await mkdir(dirname(metricsPath), { recursive: true });
 await writeFile(snapshotPath, `${JSON.stringify(snapshot, null, 2)}\n`);
 await writeFile(metricsPath, `${JSON.stringify(metrics, null, 2)}\n`);
 await writeFile(infrastructurePath, `${JSON.stringify(infrastructure, null, 2)}\n`);
+await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
 
 console.log(rebuildOnly
   ? `Rebuilt aggregates from ${merged.length} stored launches without network requests.`
@@ -408,3 +574,4 @@ console.log(rebuildOnly
 console.log(`Updated ${snapshotPath}`);
 console.log(`Updated ${metricsPath}`);
 console.log(`Updated ${infrastructurePath}`);
+console.log(`Updated ${manifestPath}: ${manifest.upcoming.length} upcoming launches, ${manifest.reuse.serializedVehicles.length} reusable vehicles.`);

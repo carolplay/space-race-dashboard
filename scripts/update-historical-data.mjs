@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const SATCAT_URL = "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv";
 const LAUNCHLOG_URL = "https://planet4589.org/space/gcat/tsv/derived/launchlog.tsv";
+const RELEASE_URL = "https://planet4589.org/space/gcat/web/rel.html";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(projectRoot, "data/metrics/historical-series.json");
 
@@ -28,6 +29,22 @@ function parseTsv(text) {
 
 function checksum(text) {
   return createHash("sha256").update(text).digest("hex");
+}
+
+function catalogUpdatedAt(text) {
+  const value = text.match(/^# Updated\s+(.+)$/m)?.[1]?.trim();
+  if (!value) return { raw: null, iso: null };
+  const match = value.match(/^(\d{4})\s+([A-Z][a-z]{2})\s+(\d{1,2})\s+(\d{2})(\d{2}):(\d{2})$/);
+  if (!match) return { raw: value, iso: null };
+  const months = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+  const [, year, month, day, hour, minute, second] = match;
+  return { raw: value, iso: new Date(Date.UTC(Number(year), months[month], Number(day), Number(hour), Number(minute), Number(second))).toISOString() };
+}
+
+function latestRelease(text) {
+  const rows = [...text.matchAll(/<TR><TD>GCAT\s+([^<]+)<TD>([^<]+)/g)];
+  const latest = rows.at(-1);
+  return latest ? { version: latest[1].trim(), date: latest[2].trim() } : { version: null, date: null };
 }
 
 function yearFromVagueDate(value) {
@@ -64,9 +81,10 @@ const currentYear = new Date().getUTCFullYear();
 const toYear = Number(arg("to", String(currentYear)));
 if (!Number.isInteger(fromYear) || !Number.isInteger(toYear) || fromYear > toYear) throw new Error("Expected integer --from and --to years");
 
-const [satcatText, launchlogText] = await Promise.all([fetchText(SATCAT_URL), fetchText(LAUNCHLOG_URL)]);
+const [satcatText, launchlogText, releaseText] = await Promise.all([fetchText(SATCAT_URL), fetchText(LAUNCHLOG_URL), fetchText(RELEASE_URL)]);
 const satelliteRows = parseTsv(satcatText);
 const launchRows = parseTsv(launchlogText);
+const release = latestRelease(releaseText);
 const uniqueLaunches = [...new Map(launchRows.map((row) => [row.Launch_Tag, row])).values()];
 const years = Array.from({ length: toYear - fromYear + 1 }, (_, index) => fromYear + index);
 
@@ -177,11 +195,12 @@ const output = {
   source: {
     name: "GCAT",
     publisher: "Jonathan C. McDowell",
-    release: "1.8.5",
+    release: release.version,
+    releaseDate: release.date,
     license: "CC-BY-4.0",
     url: "https://planet4589.org/space/gcat/",
-    satcat: { url: SATCAT_URL, sha256: checksum(satcatText) },
-    launchlog: { url: LAUNCHLOG_URL, sha256: checksum(launchlogText) },
+    satcat: { url: SATCAT_URL, sha256: checksum(satcatText), updated: catalogUpdatedAt(satcatText) },
+    launchlog: { url: LAUNCHLOG_URL, sha256: checksum(launchlogText), updated: catalogUpdatedAt(launchlogText) },
   },
   methodology: {
     launchAttempts: "Unique Launch_Tag rows whose Launch_Code begins O or D; failure codes remain attempts.",

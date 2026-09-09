@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T07:56:25.666Z",
+  "generatedAt": "2026-09-09T05:19:27.592Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-08-20"
+    "to": "2026-09-08"
   },
   "source": {
     "name": "Launch Library 2",
@@ -19,9 +19,9 @@
   },
   "summary": {
     "observedSites": 27,
-    "observedPads": 60,
-    "orbitalAttempts": 781,
-    "activePads": 59
+    "observedPads": 61,
+    "orbitalAttempts": 796,
+    "activePads": 60
   },
   "sites": [
     {
@@ -29,8 +29,8 @@
       "name": "Cape Canaveral SFS, FL, USA",
       "countryCode": "US",
       "region": "us",
-      "attempts": 199,
-      "success": 198,
+      "attempts": 201,
+      "success": 200,
       "successRate": 99.5,
       "padCount": 4,
       "rocketFamilies": [
@@ -51,7 +51,7 @@
         },
         {
           "year": "2026",
-          "attempts": 50
+          "attempts": 52
         }
       ]
     },
@@ -60,8 +60,8 @@
       "name": "Vandenberg SFB, CA, USA",
       "countryCode": "US",
       "region": "us",
-      "attempts": 168,
-      "success": 166,
+      "attempts": 172,
+      "success": 170,
       "successRate": 98.8,
       "padCount": 3,
       "rocketFamilies": [
@@ -80,7 +80,7 @@
         },
         {
           "year": "2026",
-          "attempts": 55
+          "attempts": 59
         }
       ]
     },
@@ -89,10 +89,10 @@
       "name": "Jiuquan Satellite Launch Center, People's Republic of China",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 75,
-      "success": 68,
-      "successRate": 90.7,
-      "padCount": 9,
+      "attempts": 76,
+      "success": 69,
+      "successRate": 90.8,
+      "padCount": 10,
       "rocketFamilies": [
         "Ceres-1",
         "Ceres-2",
@@ -103,6 +103,7 @@
         "Long March 12",
         "Long March 2",
         "Long March 4",
+        "Pallas-1",
         "Tianlong-3",
         "Zhuque"
       ],
@@ -117,7 +118,7 @@
         },
         {
           "year": "2026",
-          "attempts": 20
+          "attempts": 21
         }
       ]
     },
@@ -126,8 +127,8 @@
       "name": "Kennedy Space Center, FL, USA",
       "countryCode": "US",
       "region": "us",
-      "attempts": 55,
-      "success": 55,
+      "attempts": 56,
+      "success": 56,
       "successRate": 100,
       "padCount": 2,
       "rocketFamilies": [
@@ -146,7 +147,7 @@
         },
         {
           "year": "2026",
-          "attempts": 2
+          "attempts": 3
         }
       ]
     },
@@ -216,8 +217,8 @@
       "name": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
       "countryCode": "NZ",
       "region": "other",
-      "attempts": 40,
-      "success": 40,
+      "attempts": 42,
+      "success": 42,
       "successRate": 100,
       "padCount": 2,
       "rocketFamilies": [
@@ -234,7 +235,7 @@
         },
         {
           "year": "2026",
-          "attempts": 10
+          "attempts": 12
         }
       ]
     },
@@ -243,8 +244,8 @@
       "name": "Taiyuan Satellite Launch Center, People's Republic of China",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 35,
-      "success": 35,
+      "attempts": 36,
+      "success": 36,
       "successRate": 100,
       "padCount": 3,
       "rocketFamilies": [
@@ -263,7 +264,7 @@
         },
         {
           "year": "2026",
-          "attempts": 10
+          "attempts": 11
         }
       ]
     },
@@ -272,8 +273,8 @@
       "name": "Plesetsk Cosmodrome, Russian Federation",
       "countryCode": "RU",
       "region": "other",
-      "attempts": 20,
-      "success": 20,
+      "attempts": 21,
+      "success": 21,
       "successRate": 100,
       "padCount": 3,
       "rocketFamilies": [
@@ -292,7 +293,7 @@
         },
         {
           "year": "2026",
-          "attempts": 6
+          "attempts": 7
         }
       ]
     },
@@ -359,8 +360,8 @@
       "name": "Guiana Space Centre, French Guiana",
       "countryCode": "GF",
       "region": "other",
-      "attempts": 14,
-      "success": 14,
+      "attempts": 15,
+      "success": 15,
       "successRate": 100,
       "padCount": 2,
       "rocketFamilies": [
@@ -378,7 +379,7 @@
         },
         {
           "year": "2026",
-          "attempts": 4
+          "attempts": 5
         }
       ]
     },
@@ -387,9 +388,9 @@
       "name": "Satish Dhawan Space Centre, India",
       "countryCode": "IN",
       "region": "other",
-      "attempts": 12,
-      "success": 10,
-      "successRate": 83.3,
+      "attempts": 13,
+      "success": 11,
+      "successRate": 84.6,
       "padCount": 2,
       "rocketFamilies": [
         "GSLV",
@@ -408,7 +409,7 @@
         },
         {
           "year": "2026",
-          "attempts": 2
+          "attempts": 3
         }
       ]
     },
@@ -515,6 +516,29 @@
       ]
     },
     {
+      "id": 161,
+      "name": "Andøya Spaceport",
+      "countryCode": "NO",
+      "region": "other",
+      "attempts": 2,
+      "success": 1,
+      "successRate": 50,
+      "padCount": 1,
+      "rocketFamilies": [
+        "Spectrum"
+      ],
+      "annual": [
+        {
+          "year": "2025",
+          "attempts": 1
+        },
+        {
+          "year": "2026",
+          "attempts": 1
+        }
+      ]
+    },
+    {
       "id": 2,
       "name": "Semnan Space Center, Islamic Republic of Iran",
       "countryCode": "IR",
@@ -582,25 +606,6 @@
       "padCount": 1,
       "rocketFamilies": [
         "HANBIT"
-      ],
-      "annual": [
-        {
-          "year": "2025",
-          "attempts": 1
-        }
-      ]
-    },
-    {
-      "id": 161,
-      "name": "Andøya Spaceport",
-      "countryCode": "NO",
-      "region": "other",
-      "attempts": 1,
-      "success": 0,
-      "successRate": 0,
-      "padCount": 1,
-      "rocketFamilies": [
-        "Spectrum"
       ],
       "annual": [
         {
@@ -716,11 +721,11 @@
       "active": true,
       "latitude": 28.56194122,
       "longitude": -80.57735736,
-      "attempts": 180,
-      "success": 180,
+      "attempts": 182,
+      "success": 182,
       "successRate": 100,
       "firstLaunch": "2024-01-03",
-      "lastLaunch": "2026-08-16",
+      "lastLaunch": "2026-08-25",
       "medianIntervalDays": 4.4,
       "fastestIntervalDays": 1.9,
       "rocketFamilies": [
@@ -737,7 +742,7 @@
         },
         {
           "year": "2026",
-          "attempts": 44
+          "attempts": 46
         }
       ]
     },
@@ -751,11 +756,11 @@
       "active": true,
       "latitude": 34.632,
       "longitude": -120.611,
-      "attempts": 163,
-      "success": 162,
+      "attempts": 167,
+      "success": 166,
       "successRate": 99.4,
       "firstLaunch": "2024-01-03",
-      "lastLaunch": "2026-08-19",
+      "lastLaunch": "2026-09-06",
       "medianIntervalDays": 4.6,
       "fastestIntervalDays": 2.3,
       "rocketFamilies": [
@@ -772,7 +777,7 @@
         },
         {
           "year": "2026",
-          "attempts": 53
+          "attempts": 57
         }
       ]
     },
@@ -786,12 +791,12 @@
       "active": true,
       "latitude": 28.60822681,
       "longitude": -80.60428186,
-      "attempts": 54,
-      "success": 54,
+      "attempts": 55,
+      "success": 55,
       "successRate": 100,
       "firstLaunch": "2024-01-18",
-      "lastLaunch": "2026-04-29",
-      "medianIntervalDays": 9.9,
+      "lastLaunch": "2026-08-30",
+      "medianIntervalDays": 10,
       "fastestIntervalDays": 5.3,
       "rocketFamilies": [
         "Falcon",
@@ -808,7 +813,7 @@
         },
         {
           "year": "2026",
-          "attempts": 1
+          "attempts": 2
         }
       ]
     },
@@ -858,11 +863,11 @@
       "active": true,
       "latitude": -39.262833,
       "longitude": 177.864469,
-      "attempts": 24,
-      "success": 24,
+      "attempts": 26,
+      "success": 26,
       "successRate": 100,
       "firstLaunch": "2024-01-31",
-      "lastLaunch": "2026-06-26",
+      "lastLaunch": "2026-09-02",
       "medianIntervalDays": 31.4,
       "fastestIntervalDays": 7.1,
       "rocketFamilies": [
@@ -879,7 +884,7 @@
         },
         {
           "year": "2026",
-          "attempts": 3
+          "attempts": 5
         }
       ]
     },
@@ -893,12 +898,12 @@
       "active": true,
       "latitude": 38.8583,
       "longitude": 111.5802,
-      "attempts": 23,
-      "success": 23,
+      "attempts": 24,
+      "success": 24,
       "successRate": 100,
       "firstLaunch": "2024-03-26",
-      "lastLaunch": "2026-07-30",
-      "medianIntervalDays": 33,
+      "lastLaunch": "2026-08-25",
+      "medianIntervalDays": 32.3,
       "fastestIntervalDays": 19.8,
       "rocketFamilies": [
         "Long March 6"
@@ -914,7 +919,7 @@
         },
         {
           "year": "2026",
-          "attempts": 7
+          "attempts": 8
         }
       ]
     },
@@ -1272,6 +1277,41 @@
       ]
     },
     {
+      "id": 67,
+      "name": "Ariane Launch Area 4",
+      "siteId": 13,
+      "site": "Guiana Space Centre, French Guiana",
+      "countryCode": "GF",
+      "region": "other",
+      "active": true,
+      "latitude": 5.256319,
+      "longitude": -52.786838,
+      "attempts": 9,
+      "success": 9,
+      "successRate": 100,
+      "firstLaunch": "2024-07-09",
+      "lastLaunch": "2026-08-27",
+      "medianIntervalDays": 74,
+      "fastestIntervalDays": 42.3,
+      "rocketFamilies": [
+        "Ariane 6"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 1
+        },
+        {
+          "year": "2025",
+          "attempts": 4
+        },
+        {
+          "year": "2026",
+          "attempts": 4
+        }
+      ]
+    },
+    {
       "id": 175,
       "name": "101",
       "siteId": 8,
@@ -1303,41 +1343,6 @@
         {
           "year": "2026",
           "attempts": 1
-        }
-      ]
-    },
-    {
-      "id": 67,
-      "name": "Ariane Launch Area 4",
-      "siteId": 13,
-      "site": "Guiana Space Centre, French Guiana",
-      "countryCode": "GF",
-      "region": "other",
-      "active": true,
-      "latitude": 5.256319,
-      "longitude": -52.786838,
-      "attempts": 8,
-      "success": 8,
-      "successRate": 100,
-      "firstLaunch": "2024-07-09",
-      "lastLaunch": "2026-06-17",
-      "medianIntervalDays": 76.7,
-      "fastestIntervalDays": 42.3,
-      "rocketFamilies": [
-        "Ariane 6"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 1
-        },
-        {
-          "year": "2025",
-          "attempts": 4
-        },
-        {
-          "year": "2026",
-          "attempts": 3
         }
       ]
     },
@@ -1666,6 +1671,41 @@
       ]
     },
     {
+      "id": 82,
+      "name": "Satish Dhawan Space Centre Second Launch Pad",
+      "siteId": 14,
+      "site": "Satish Dhawan Space Centre, India",
+      "countryCode": "IN",
+      "region": "other",
+      "active": true,
+      "latitude": 13.7199,
+      "longitude": 80.2304,
+      "attempts": 6,
+      "success": 6,
+      "successRate": 100,
+      "firstLaunch": "2024-02-17",
+      "lastLaunch": "2026-09-03",
+      "medianIntervalDays": 182.5,
+      "fastestIntervalDays": 51.6,
+      "rocketFamilies": [
+        "GSLV"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 1
+        },
+        {
+          "year": "2025",
+          "attempts": 4
+        },
+        {
+          "year": "2026",
+          "attempts": 1
+        }
+      ]
+    },
+    {
       "id": 83,
       "name": "Cosmodrome Site 1S",
       "siteId": 18,
@@ -1732,33 +1772,33 @@
       ]
     },
     {
-      "id": 82,
-      "name": "Satish Dhawan Space Centre Second Launch Pad",
-      "siteId": 14,
-      "site": "Satish Dhawan Space Centre, India",
-      "countryCode": "IN",
+      "id": 36,
+      "name": "43/3 (43L)",
+      "siteId": 6,
+      "site": "Plesetsk Cosmodrome, Russian Federation",
+      "countryCode": "RU",
       "region": "other",
       "active": true,
-      "latitude": 13.7199,
-      "longitude": 80.2304,
-      "attempts": 5,
-      "success": 5,
+      "latitude": 62.9273,
+      "longitude": 40.45,
+      "attempts": 4,
+      "success": 4,
       "successRate": 100,
-      "firstLaunch": "2024-02-17",
-      "lastLaunch": "2025-12-24",
-      "medianIntervalDays": 138.7,
-      "fastestIntervalDays": 51.6,
+      "firstLaunch": "2025-03-02",
+      "lastLaunch": "2026-08-24",
+      "medianIntervalDays": 194.2,
+      "fastestIntervalDays": 142.8,
       "rocketFamilies": [
-        "GSLV"
+        "Soyuz 2"
       ],
       "annual": [
         {
-          "year": "2024",
-          "attempts": 1
+          "year": "2025",
+          "attempts": 2
         },
         {
-          "year": "2025",
-          "attempts": 4
+          "year": "2026",
+          "attempts": 2
         }
       ]
     },
@@ -1790,37 +1830,6 @@
         {
           "year": "2025",
           "attempts": 1
-        },
-        {
-          "year": "2026",
-          "attempts": 1
-        }
-      ]
-    },
-    {
-      "id": 36,
-      "name": "43/3 (43L)",
-      "siteId": 6,
-      "site": "Plesetsk Cosmodrome, Russian Federation",
-      "countryCode": "RU",
-      "region": "other",
-      "active": true,
-      "latitude": 62.9273,
-      "longitude": 40.45,
-      "attempts": 3,
-      "success": 3,
-      "successRate": 100,
-      "firstLaunch": "2025-03-02",
-      "lastLaunch": "2026-04-03",
-      "medianIntervalDays": 198.2,
-      "fastestIntervalDays": 194.2,
-      "rocketFamilies": [
-        "Soyuz 2"
-      ],
-      "annual": [
-        {
-          "year": "2025",
-          "attempts": 2
         },
         {
           "year": "2026",
@@ -2126,6 +2135,37 @@
       "fastestIntervalDays": 160.3,
       "rocketFamilies": [
         "Long March 12"
+      ],
+      "annual": [
+        {
+          "year": "2025",
+          "attempts": 1
+        },
+        {
+          "year": "2026",
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Orbital Launch Pad",
+      "siteId": 161,
+      "site": "Andøya Spaceport",
+      "countryCode": "NO",
+      "region": "other",
+      "active": true,
+      "latitude": 69.1084,
+      "longitude": 15.5895,
+      "attempts": 2,
+      "success": 1,
+      "successRate": 50,
+      "firstLaunch": "2025-03-30",
+      "lastLaunch": "2026-09-05",
+      "medianIntervalDays": 524.4,
+      "fastestIntervalDays": 524.4,
+      "rocketFamilies": [
+        "Spectrum"
       ],
       "annual": [
         {
@@ -2467,28 +2507,28 @@
       ]
     },
     {
-      "id": 51,
-      "name": "Orbital Launch Pad",
-      "siteId": 161,
-      "site": "Andøya Spaceport",
-      "countryCode": "NO",
-      "region": "other",
+      "id": 246,
+      "name": "Pallas-1 Launch Pad",
+      "siteId": 17,
+      "site": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "countryCode": "CN",
+      "region": "cn",
       "active": true,
-      "latitude": 69.1084,
-      "longitude": 15.5895,
+      "latitude": 40.775962,
+      "longitude": 100.107214,
       "attempts": 1,
-      "success": 0,
-      "successRate": 0,
-      "firstLaunch": "2025-03-30",
-      "lastLaunch": "2025-03-30",
+      "success": 1,
+      "successRate": 100,
+      "firstLaunch": "2026-09-01",
+      "lastLaunch": "2026-09-01",
       "medianIntervalDays": null,
       "fastestIntervalDays": null,
       "rocketFamilies": [
-        "Spectrum"
+        "Pallas-1"
       ],
       "annual": [
         {
-          "year": "2025",
+          "year": "2026",
           "attempts": 1
         }
       ]

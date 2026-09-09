@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-09-08",
+  "origin": {
+    "name": "launch-recovery-viz",
+    "path": "~/Downloads/launch-recovery-viz",
+    "adopted": [
+      "mission-level drill-down",
+      "launch and recovery geometry",
+      "event timeline",
+      "exact versus approximate provenance"
+    ],
+    "notAdopted": [
+      "manually drawn world coastline",
+      "hard-coded cumulative launch-site counts",
+      "schematic curves presented as telemetry"
+    ]
+  },
+  "methodologyZh": "本模块把单次任务拆成发射点、回收点、回收方式和关键事件。坐标只有在来自官方或 GCAT 台址目录时标为“精确”；无人船、溅落与公开区域描述一律标为“约”。示意连线只表达空间关系，不复原真实弹道。",
+  "methodologyEn": "Each mission is decomposed into launch point, recovery point, recovery method and key events. Coordinates are marked exact only when sourced from official or GCAT pad records; drone-ship, splashdown and publicly described regions remain approximate. Connecting lines show spatial relationships, not reconstructed trajectories.",
+  "missions": [
+    {
+      "id": "crs8",
+      "name": "CRS-8",
+      "date": "2016-04-08",
+      "country": "US",
+      "vehicle": "Falcon 9",
+      "subtitleZh": "首次无人船动力着陆",
+      "subtitleEn": "First powered drone-ship landing",
+      "payloadZh": "Dragon · 国际空间站补给",
+      "payloadEn": "Dragon · ISS resupply",
+      "pad": { "name": "SLC-40", "lat": 28.5619, "lon": -80.5772, "precision": "exact" },
+      "recoveries": [
+        { "name": "OCISLY", "type": "asds", "lat": 28.9, "lon": -77.8, "precision": "approx", "success": true, "detailZh": "下程约 300 km；船位为近似值", "detailEn": "About 300 km downrange; vessel position is approximate" }
+      ],
+      "events": [
+        { "time": "T+0:00", "labelZh": "升空", "labelEn": "Liftoff", "precision": "exact" },
+        { "time": "T+2:34", "labelZh": "一级关机", "labelEn": "MECO", "precision": "exact" },
+        { "time": "T+8:35", "labelZh": "一级着陆 OCISLY", "labelEn": "Stage 1 landed on OCISLY", "precision": "exact" },
+        { "time": "T+10:31", "labelZh": "Dragon 分离", "labelEn": "Dragon separation", "precision": "exact" }
+      ],
+      "sources": [
+        { "publisher": "NASA", "url": "https://blogs.nasa.gov/spacex/2016/04/08/successful-first-stage-landing/" },
+        { "publisher": "GCAT", "url": "https://planet4589.org/space/gcat/" }
+      ]
+    },
+    {
+      "id": "falcon-heavy-demo",
+      "name": "Falcon Heavy Demo",
+      "date": "2018-02-06",
+      "country": "US",
+      "vehicle": "Falcon Heavy",
+      "subtitleZh": "双助推器返场，芯级回收失败",
+      "subtitleEn": "Dual RTLS; center-core recovery failed",
+      "payloadZh": "Tesla Roadster · 日心轨道",
+      "payloadEn": "Tesla Roadster · heliocentric orbit",
+      "pad": { "name": "LC-39A", "lat": 28.6084, "lon": -80.6043, "precision": "exact" },
+      "recoveries": [
+        { "name": "LZ-1 / LZ-2", "type": "rtls", "lat": 28.4858, "lon": -80.5444, "precision": "exact", "success": true, "detailZh": "两枚侧助推器同步着陆", "detailEn": "Both side boosters landed together" },
+        { "name": "Center core", "type": "failed", "lat": 28.2, "lon": -77.0, "precision": "approx", "success": false, "detailZh": "距回收船约 100 m 落海", "detailEn": "Impacted about 100 m from the drone ship" }
+      ],
+      "events": [
+        { "time": "T+0:00", "labelZh": "升空", "labelEn": "Liftoff", "precision": "exact" },
+        { "time": "T+2:29", "labelZh": "侧助推器关机", "labelEn": "Side-booster cutoff", "precision": "exact" },
+        { "time": "T+7:58", "labelZh": "双助推器返场着陆", "labelEn": "Dual RTLS landing", "precision": "exact" },
+        { "time": "约 T+8:19", "labelZh": "芯级回收失败", "labelEn": "Center-core recovery failed", "precision": "approx" }
+      ],
+      "sources": [
+        { "publisher": "SpaceX", "url": "https://www.spacex.com/mission" },
+        { "publisher": "GCAT", "url": "https://planet4589.org/space/gcat/" }
+      ]
+    },
+    {
+      "id": "demo2",
+      "name": "Demo-2",
+      "date": "2020-05-30",
+      "country": "US",
+      "vehicle": "Falcon 9 / Crew Dragon",
+      "subtitleZh": "一级回收与载人飞船返回分层展示",
+      "subtitleEn": "Booster and crew-capsule recovery shown separately",
+      "payloadZh": "Crew Dragon · 两名航天员",
+      "payloadEn": "Crew Dragon · two astronauts",
+      "pad": { "name": "LC-39A", "lat": 28.6084, "lon": -80.6043, "precision": "exact" },
+      "recoveries": [
+        { "name": "OCISLY", "type": "asds", "lat": 32.0, "lon": -75.4, "precision": "approx", "success": true, "detailZh": "一级海上动力着陆", "detailEn": "Powered first-stage landing at sea" },
+        { "name": "Crew Dragon splashdown", "type": "capsule", "lat": 29.4, "lon": -87.4, "precision": "approx", "success": true, "noArc": true, "detailZh": "64 天后在彭萨科拉近海溅落，不与发射弹道连线", "detailEn": "Splashdown off Pensacola 64 days later; not connected to the launch path" }
+      ],
+      "events": [
+        { "time": "T+0:00", "labelZh": "升空", "labelEn": "Liftoff", "precision": "exact" },
+        { "time": "T+9:22", "labelZh": "一级着陆 OCISLY", "labelEn": "Stage 1 landed on OCISLY", "precision": "approx" },
+        { "time": "T+12:00", "labelZh": "Crew Dragon 分离", "labelEn": "Crew Dragon separation", "precision": "exact" },
+        { "time": "+64 d", "labelZh": "Crew Dragon 溅落", "labelEn": "Crew Dragon splashdown", "precision": "exact" }
+      ],
+      "sources": [
+        { "publisher": "NASA", "url": "https://www.nasa.gov/nasas-spacex-demo-2-resources-archive/" },
+        { "publisher": "GCAT", "url": "https://planet4589.org/space/gcat/" }
+      ]
+    },
+    {
+      "id": "return-to-sender",
+      "name": "Return to Sender",
+      "date": "2020-11-20",
+      "country": "NZ",
+      "vehicle": "Electron",
+      "subtitleZh": "一级伞降溅落回收",
+      "subtitleEn": "Parachute-assisted stage splashdown",
+      "payloadZh": "30 颗小卫星 · SSO",
+      "payloadEn": "30 small satellites · SSO",
+      "pad": { "name": "LC-1A", "lat": -39.2609, "lon": 177.8646, "precision": "exact" },
+      "recoveries": [
+        { "name": "South Pacific recovery area", "type": "splashdown", "lat": -42.9, "lon": 178.6, "precision": "approx", "success": true, "detailZh": "伞降入水后由回收船打捞", "detailEn": "Recovered by vessel after parachute splashdown" }
+      ],
+      "events": [
+        { "time": "T+0:00", "labelZh": "升空", "labelEn": "Liftoff", "precision": "exact" },
+        { "time": "约 T+2:31", "labelZh": "一级关机", "labelEn": "MECO", "precision": "approx" },
+        { "time": "约 T+7:40", "labelZh": "减速伞展开", "labelEn": "Drogue deployed", "precision": "approx" },
+        { "time": "约 T+13:00", "labelZh": "一级溅落", "labelEn": "Stage splashdown", "precision": "approx" }
+      ],
+      "sources": [
+        { "publisher": "Rocket Lab", "url": "https://www.rocketlabusa.com/assets/Uploads/Return-to-Sender-Press-Kit-RL-Final2.pdf" },
+        { "publisher": "GCAT", "url": "https://planet4589.org/space/gcat/" }
+      ]
+    },
+    {
+      "id": "starship-13",
+      "name": "Starship Flight 13",
+      "date": "2026-07-24",
+      "country": "US",
+      "vehicle": "Starship V3 / Super Heavy",
+      "subtitleZh": "载荷部署、一级硬溅落、飞船完整软溅落",
+      "subtitleEn": "Payload deployment, booster hard splashdown, intact ship splashdown",
+      "payloadZh": "20 颗 Starlink V3 试验卫星",
+      "payloadEn": "20 experimental Starlink V3 satellites",
+      "pad": { "name": "Starbase Pad 2", "lat": 25.997, "lon": -97.156, "precision": "approx" },
+      "recoveries": [
+        { "name": "Gulf booster zone", "type": "failed", "lat": 24.8, "lon": -95.0, "precision": "approx", "success": false, "detailZh": "Super Heavy 着陆点火后硬溅落", "detailEn": "Super Heavy hard-splashed after landing-burn ignition" },
+        { "name": "Indian Ocean ship zone", "type": "splashdown", "lat": -25.0, "lon": 110.0, "precision": "approx", "success": true, "noArc": true, "detailZh": "飞船软溅落并保持完整", "detailEn": "Ship soft-splashed and remained intact" }
+      ],
+      "events": [
+        { "time": "T+0:00", "labelZh": "升空", "labelEn": "Liftoff", "precision": "exact" },
+        { "time": "Flight", "labelZh": "部署 20 颗试验载荷", "labelEn": "Deployed 20 test payloads", "precision": "exact" },
+        { "time": "Return", "labelZh": "一级硬溅落", "labelEn": "Booster hard splashdown", "precision": "exact" },
+        { "time": "Return", "labelZh": "飞船完整软溅落", "labelEn": "Intact ship soft splashdown", "precision": "exact" }
+      ],
+      "sources": [
+        { "publisher": "SpaceX", "url": "https://www.spacex.com/launches/starship-flight-13" }
+      ]
+    },
+    {
+      "id": "zhuque-3-y2",
+      "name": "Zhuque-3 Y2",
+      "date": "2026-08-19",
+      "country": "CN",
+      "vehicle": "朱雀三号 / Zhuque-3",
+      "subtitleZh": "中国首次入轨级一级陆地回收",
+      "subtitleEn": "China's first land recovery of an orbital-class first stage",
+      "payloadZh": "鸿鹄 03 · 预定轨道",
+      "payloadEn": "Honghu 03 · planned orbit",
+      "pad": { "name": "东风商业航天创新试验区", "lat": 40.96, "lon": 100.29, "precision": "approx" },
+      "recoveries": [
+        { "name": "民勤着陆场坪", "type": "rtls", "lat": 38.6, "lon": 103.1, "precision": "approx", "success": true, "detailZh": "一级依靠着陆支腿完成陆地软着陆", "detailEn": "First stage completed a landing-leg touchdown on land" }
+      ],
+      "events": [
+        { "time": "07:35", "labelZh": "发射升空", "labelEn": "Liftoff", "precision": "exact" },
+        { "time": "+137 s", "labelZh": "一二级分离", "labelEn": "Stage separation", "precision": "exact" },
+        { "time": "Flight", "labelZh": "鸿鹄 03 入轨", "labelEn": "Honghu 03 reached orbit", "precision": "exact" },
+        { "time": "约 07:41", "labelZh": "一级陆地软着陆", "labelEn": "First-stage land touchdown", "precision": "approx" }
+      ],
+      "sources": [
+        { "publisher": "LandSpace", "url": "https://www.landspace.com/news-detail.html?itemid=76" }
+      ]
+    }
+  ]
+}

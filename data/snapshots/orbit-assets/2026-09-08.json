@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-08",
+  "retrievedAt": "2026-09-09T05:16:59.494Z",
+  "source": {
+    "name": "GCAT",
+    "publisher": "Jonathan C. McDowell",
+    "release": "1.8.8",
+    "releaseDate": "2026 Sep  3",
+    "license": "CC-BY-4.0",
+    "url": "https://planet4589.org/space/gcat/",
+    "activeCatalog": {
+      "url": "https://planet4589.org/space/gcat/tsv/derived/active.tsv",
+      "sha256": "35317a7e7a0bcf255f8dd33e8e8636cb6214102b468fdbc1f8ff8122dca8e867",
+      "updated": {
+        "raw": "2026 Sep  9 0232:58",
+        "iso": "2026-09-09T02:32:58.000Z"
+      }
+    },
+    "currentCatalog": {
+      "url": "https://planet4589.org/space/gcat/tsv/derived/currentcat.tsv",
+      "sha256": "0c725761f61a761437f1dcf0d286afaa5c1daa319e48eabd5c26b2d187a2f667",
+      "updated": {
+        "raw": "2026 Sep  9 0228:03",
+        "iso": "2026-09-09T02:28:03.000Z"
+      }
+    }
+  },
+  "validation": {
+    "esaEnvironmentMassTonnes": 17000,
+    "esaAsOf": "2026-07-31",
+    "esaUrl": "https://sdup.esoc.esa.int/discosweb/statistics/"
+  },
+  "activePayloads": {
+    "us": 12944,
+    "cn": 1406,
+    "other": 2417,
+    "global": 16767
+  },
+  "catalogObjects": {
+    "us": 18708,
+    "cn": 6166,
+    "other": 10315,
+    "global": 35189
+  },
+  "knownActivePayloadMassKg": {
+    "us": 7241799.480000016,
+    "cn": 978258,
+    "other": 1327580.816000001,
+    "global": 9547638.296000002
+  },
+  "massCoverage": {
+    "knownObjects": 16767,
+    "totalObjects": 16767,
+    "percent": 100,
+    "field": "DryMass with legacy Mass / LaunchMass fallback",
+    "caveat": "Dry mass is preferred for current in-orbit inventory; LaunchMass is used only when no dry-mass field is present."
+  },
+  "byCategory": [
+    {
+      "name": "通信",
+      "us": 12011,
+      "cn": 587,
+      "other": 1334,
+      "global": 13932
+    },
+    {
+      "name": "地球观测",
+      "us": 509,
+      "cn": 413,
+      "other": 527,
+      "global": 1449
+    },
+    {
+      "name": "导航定位",
+      "us": 45,
+      "cn": 149,
+      "other": 87,
+      "global": 281
+    },
+    {
+      "name": "科学",
+      "us": 64,
+      "cn": 21,
+      "other": 87,
+      "global": 172
+    },
+    {
+      "name": "技术验证",
+      "us": 161,
+      "cn": 97,
+      "other": 314,
+      "global": 572
+    },
+    {
+      "name": "载人航天",
+      "us": 16,
+      "cn": 6,
+      "other": 12,
+      "global": 34
+    },
+    {
+      "name": "国防/未公开",
+      "us": 132,
+      "cn": 129,
+      "other": 53,
+      "global": 314
+    },
+    {
+      "name": "其他",
+      "us": 6,
+      "cn": 4,
+      "other": 3,
+      "global": 13
+    }
+  ],
+  "byOrbit": [
+    {
+      "name": "LEO",
+      "us": 12658,
+      "cn": 1244,
+      "other": 1982,
+      "global": 15884
+    },
+    {
+      "name": "MEO",
+      "us": 49,
+      "cn": 38,
+      "other": 106,
+      "global": 193
+    },
+    {
+      "name": "GEO",
+      "us": 197,
+      "cn": 112,
+      "other": 264,
+      "global": 573
+    },
+    {
+      "name": "HEO",
+      "us": 40,
+      "cn": 12,
+      "other": 65,
+      "global": 117
+    }
+  ],
+  "byObjectType": [
+    {
+      "name": "有效载荷/失效载荷",
+      "us": 13913,
+      "cn": 1585,
+      "other": 4333,
+      "global": 19831
+    },
+    {
+      "name": "火箭体",
+      "us": 561,
+      "cn": 272,
+      "other": 1296,
+      "global": 2129
+    },
+    {
+      "name": "任务组件/其他",
+      "us": 596,
+      "cn": 289,
+      "other": 615,
+      "global": 1500
+    },
+    {
+      "name": "碎片",
+      "us": 3638,
+      "cn": 4020,
+      "other": 4071,
+      "global": 11729
+    }
+  ],
+  "byOperator": [
+    {
+      "name": "SPXS",
+      "us": 11121,
+      "cn": 0,
+      "other": 0,
+      "global": 11121
+    },
+    {
+      "name": "ONEWEBN",
+      "us": 0,
+      "cn": 0,
+      "other": 523,
+      "global": 523
+    },
+    {
+      "name": "KUIP",
+      "us": 392,
+      "cn": 0,
+      "other": 0,
+      "global": 392
+    },
+    {
+      "name": "NROC",
+      "us": 291,
+      "cn": 0,
+      "other": 0,
+      "global": 291
+    },
+    {
+      "name": "ZXW",
+      "us": 0,
+      "cn": 224,
+      "other": 0,
+      "global": 224
+    },
+    {
+      "name": "YUANX",
+      "us": 0,
+      "cn": 217,
+      "other": 0,
+      "global": 217
+    },
+    {
+      "name": "PLAN",
+      "us": 110,
+      "cn": 0,
+      "other": 0,
+      "global": 110
+    },
+    {
+      "name": "ONEWEB",
+      "us": 0,
+      "cn": 0,
+      "other": 109,
+      "global": 109
+    },
+    {
+      "name": "SDA",
+      "us": 90,
+      "cn": 0,
+      "other": 0,
+      "global": 90
+    },
+    {
+      "name": "ZLZB",
+      "us": 0,
+      "cn": 84,
+      "other": 0,
+      "global": 84
+    },
+    {
+      "name": "IRIDS",
+      "us": 80,
+      "cn": 0,
+      "other": 0,
+      "global": 80
+    },
+    {
+      "name": "CGSTL",
+      "us": 0,
+      "cn": 72,
+      "other": 0,
+      "global": 72
+    },
+    {
+      "name": "CNSA",
+      "us": 0,
+      "cn": 71,
+      "other": 0,
+      "global": 71
+    },
+    {
+      "name": "ZZB",
+      "us": 0,
+      "cn": 71,
+      "other": 0,
+      "global": 71
+    },
+    {
+      "name": "GEESP",
+      "us": 0,
+      "cn": 60,
+      "other": 0,
+      "global": 60
+    },
+    {
+      "name": "ISRO",
+      "us": 0,
+      "cn": 0,
+      "other": 56,
+      "global": 56
+    },
+    {
+      "name": "SITRO",
+      "us": 0,
+      "cn": 0,
+      "other": 51,
+      "global": 51
+    },
+    {
+      "name": "AFSMC",
+      "us": 50,
+      "cn": 0,
+      "other": 0,
+      "global": 50
+    },
+    {
+      "name": "CASC",
+      "us": 0,
+      "cn": 48,
+      "other": 0,
+      "global": 48
+    },
+    {
+      "name": "VVKOV",
+      "us": 0,
+      "cn": 0,
+      "other": 48,
+      "global": 48
+    }
+  ]
+}

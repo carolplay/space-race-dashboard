@@ -16,13 +16,16 @@ npm run build
 
 ## Data updates
 
-The first observed metrics—orbital launch attempts and successful orbital missions—are derived from Git-tracked [Launch Library 2](https://thespacedevs.com/llapi) event snapshots. Most sources are intended to update monthly rather than in real time.
+Launch activity, the upcoming manifest and reusable-stage records are derived from Git-tracked [Launch Library 2](https://thespacedevs.com/llapi) snapshots. Orbital inventory and long-run history come from [GCAT](https://planet4589.org/space/gcat/). Most sources are updated weekly or after a major event rather than in real time.
 
 ```bash
-npm run data:update:launches -- --from=2026-07-01 --to=2026-08-31
+npm run data:update:launches -- --from=2026-01-01 --to=2026-12-07 --as-of=2026-09-08
+npm run data:update:history -- --from=2000 --to=2026
+npm run data:update:orbit -- --date=2026-09-08
+npm run data:audit
 ```
 
-See [`data/README.md`](data/README.md) for storage, classification, status rules, and audit notes. Other dashboard metrics remain clearly labeled product samples until their source adapters are implemented.
+See [`data/README.md`](data/README.md) for storage, classification, status rules, and audit notes. Next Spaceflight is used only as a product-structure reference; its data is not ingested.
 
 This starter does not use `wrangler.jsonc`.
 

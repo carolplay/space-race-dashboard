@@ -1,6 +1,6 @@
 {
-  "name": "site-creator-vinext-starter",
-  "version": "0.1.0",
+  "name": "space-race-dashboard",
+  "version": "1.1.0",
   "private": true,
   "engines": {
     "node": ">=22.13.0"
@@ -14,6 +14,7 @@
     "data:update:launches": "node scripts/update-launch-data.mjs",
     "data:update:orbit": "node scripts/update-orbit-assets.mjs",
     "data:update:history": "node scripts/update-historical-data.mjs",
+    "data:audit": "node scripts/build-source-health.mjs",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

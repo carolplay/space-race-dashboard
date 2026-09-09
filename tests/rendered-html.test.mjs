@@ -36,7 +36,11 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /2000 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
-  assert.match(html, /ALPHA 1\.0/);
+  assert.match(html, /ALPHA 1\.1/);
+  assert.match(html, /未来 8 次轨道任务/);
+  assert.match(html, /可复用一级台账/);
+  assert.match(html, /从年度总量下钻到单次任务/);
+  assert.match(html, /数据源健康度/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
 });
 
@@ -70,6 +74,9 @@ test("ships product UI without starter dependencies", async () => {
   assert.match(page, /2000 至今/);
   assert.match(page, /launchInfrastructure/);
   assert.match(page, /industrialCapability/);
+  assert.match(page, /launchManifest/);
+  assert.match(page, /launchRecovery/);
+  assert.match(page, /sourceHealth/);
   assert.match(page, /payloadFlow/);
   assert.doesNotMatch(page, /83\.0|63\.5|综合工业能力指数/);
   assert.doesNotMatch(page, /aria-label="选择国家"/);
@@ -98,12 +105,12 @@ test("ships auditable launch snapshots and internally consistent aggregates", as
 
 test("ships auditable orbit snapshots with consistent regional totals", async () => {
   const [snapshot, metrics, editorial] = await Promise.all([
-    readFile(new URL("../data/snapshots/orbit-assets/2026-08-20.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../data/snapshots/orbit-assets/2026-09-08.json", import.meta.url), "utf8").then(JSON.parse),
     readFile(new URL("../data/metrics/orbit-assets.json", import.meta.url), "utf8").then(JSON.parse),
     readFile(new URL("../data/editorial/frontier.json", import.meta.url), "utf8").then(JSON.parse),
   ]);
   assert.equal(snapshot.source.name, "GCAT");
-  assert.equal(metrics.current.date, "2026-08-20");
+  assert.equal(metrics.current.date, "2026-09-08");
   assert.ok(snapshot.activePayloads.global > 10_000);
   assert.ok(snapshot.catalogObjects.global > snapshot.activePayloads.global);
   assert.equal(snapshot.activePayloads.global, snapshot.activePayloads.us + snapshot.activePayloads.cn + snapshot.activePayloads.other);
@@ -138,10 +145,10 @@ test("ships auditable orbit snapshots with consistent regional totals", async ()
 
 test("keeps development validation separate from payload launch capacity", async () => {
   const development = await readFile(new URL("../data/editorial/launch-development.json", import.meta.url), "utf8").then(JSON.parse);
-  assert.equal(development.asOf, "2026-08-19");
+  assert.equal(development.asOf, "2026-09-08");
   assert.equal(development.capabilities.length, 6);
   assert.ok(development.methodologyZh.includes("不把试验次数直接加入正式载荷发射总量"));
-  assert.ok(development.programs.some((program) => program.id === "starship" && program.headline === "12"));
+  assert.ok(development.programs.some((program) => program.id === "starship" && program.headline === "13"));
   assert.ok(development.programs.some((program) => program.id === "zhuque-3" && program.capabilities.recovery === true));
   assert.ok(development.programs.some((program) => program.id === "zhuque-3" && program.milestones.some((milestone) => milestone.date === "2026-08" && milestone.tone === "done")));
   assert.ok(development.programs.every((program) => program.statusZh && program.statusEn && program.source.startsWith("https://")));
@@ -187,4 +194,26 @@ test("tracks launch sites and pads as auditable launch assets", async () => {
   assert.ok(infrastructure.sites.some((site) => site.countryCode === "CN"));
   assert.ok(editorial.manufacturingEvents.every((event) => event.source.startsWith("https://")));
   assert.ok(editorial.networkSignals.every((event) => event.source.startsWith("https://")));
+});
+
+test("ships an auditable mission manifest, recovery model and source-health report", async () => {
+  const [manifest, recovery, health] = await Promise.all([
+    readFile(new URL("../data/metrics/launch-manifest.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../data/editorial/launch-recovery.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../data/metrics/source-health.json", import.meta.url), "utf8").then(JSON.parse),
+  ]);
+  assert.equal(manifest.source.name, "Launch Library 2");
+  assert.equal(manifest.asOf, "2026-09-08");
+  assert.ok(manifest.upcoming.length >= 8);
+  assert.ok(manifest.upcoming.every((launch) => launch.id && launch.net && launch.sourceUrl));
+  assert.ok(manifest.reuse.recoveryMissions > 0);
+  assert.ok(manifest.reuse.serializedVehicles.length >= 10);
+  assert.ok(manifest.reuse.serializedVehicles.every((vehicle) => vehicle.serial && vehicle.sourceUrl));
+  assert.equal(recovery.origin.name, "launch-recovery-viz");
+  assert.ok(recovery.missions.length >= 6);
+  assert.ok(recovery.missions.every((mission) => mission.pad && mission.recoveries.length && mission.events.length && mission.sources.length));
+  assert.ok(recovery.missions.some((mission) => mission.id === "zhuque-3-y2"));
+  assert.equal(health.summary.reviewSources, 0);
+  assert.ok(health.sources.some((source) => source.id === "next-spaceflight-reference" && source.mode === "reference-only"));
+  assert.ok(health.sources.filter((source) => source.mode !== "reference-only").every((source) => source.updatedAt && source.status === "fresh"));
 });

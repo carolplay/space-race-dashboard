@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T07:56:25.666Z",
+  "generatedAt": "2026-09-09T05:19:27.592Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-08-20"
+    "to": "2026-09-08"
   },
   "source": {
     "name": "Launch Library 2",
@@ -45,10 +45,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 118,
-        "cn": 59,
-        "other": 20,
-        "global": 197
+        "us": 128,
+        "cn": 61,
+        "other": 23,
+        "global": 212
       }
     ],
     "success": [
@@ -71,10 +71,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 117,
-        "cn": 55,
-        "other": 18,
-        "global": 190
+        "us": 127,
+        "cn": 57,
+        "other": 21,
+        "global": 205
       }
     ],
     "rocketFamilies": [
@@ -607,8 +607,8 @@
         "year": "2026",
         "region": "cn",
         "family": "Long March 6",
-        "attempts": 8,
-        "success": 8
+        "attempts": 9,
+        "success": 9
       },
       {
         "year": "2026",
@@ -718,6 +718,13 @@
       {
         "year": "2026",
         "region": "cn",
+        "family": "Pallas-1",
+        "attempts": 1,
+        "success": 1
+      },
+      {
+        "year": "2026",
+        "region": "cn",
         "family": "Tianlong-3",
         "attempts": 1,
         "success": 0
@@ -726,15 +733,15 @@
         "year": "2026",
         "region": "other",
         "family": "Soyuz 2",
-        "attempts": 8,
-        "success": 8
+        "attempts": 9,
+        "success": 9
       },
       {
         "year": "2026",
         "region": "other",
         "family": "Ariane 6",
-        "attempts": 3,
-        "success": 3
+        "attempts": 4,
+        "success": 4
       },
       {
         "year": "2026",
@@ -753,16 +760,16 @@
       {
         "year": "2026",
         "region": "other",
-        "family": "KAIROS",
+        "family": "GSLV",
         "attempts": 1,
-        "success": 0
+        "success": 1
       },
       {
         "year": "2026",
         "region": "other",
-        "family": "Pegasus",
+        "family": "KAIROS",
         "attempts": 1,
-        "success": 1
+        "success": 0
       },
       {
         "year": "2026",
@@ -777,6 +784,13 @@
         "family": "PSLV",
         "attempts": 1,
         "success": 0
+      },
+      {
+        "year": "2026",
+        "region": "other",
+        "family": "Spectrum",
+        "attempts": 1,
+        "success": 1
       },
       {
         "year": "2026",
@@ -796,15 +810,15 @@
         "year": "2026",
         "region": "us",
         "family": "Falcon 9",
-        "attempts": 97,
-        "success": 97
+        "attempts": 103,
+        "success": 103
       },
       {
         "year": "2026",
         "region": "us",
         "family": "Electron",
-        "attempts": 11,
-        "success": 11
+        "attempts": 13,
+        "success": 13
       },
       {
         "year": "2026",
@@ -817,8 +831,8 @@
         "year": "2026",
         "region": "us",
         "family": "Falcon",
-        "attempts": 1,
-        "success": 1
+        "attempts": 2,
+        "success": 2
       },
       {
         "year": "2026",
@@ -840,6 +854,13 @@
         "family": "New Glenn",
         "attempts": 1,
         "success": 0
+      },
+      {
+        "year": "2026",
+        "region": "us",
+        "family": "Pegasus",
+        "attempts": 1,
+        "success": 1
       },
       {
         "year": "2026",

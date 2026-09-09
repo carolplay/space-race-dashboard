@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-08-20",
+  "asOf": "2026-09-08",
   "methodologyZh": "制造板块的连续数据只采用实际交付的载荷对象与已知质量；企业披露的峰值产能仅作为事件卡，不计入实际产出。计算与数据网络只列可核验的在轨节点、链路或地面节点，不推算全球总算力。",
   "methodologyEn": "Continuous manufacturing series use only delivered payload objects and known mass. Disclosed peak capacity appears only as an event and is never counted as output. Compute and data networks include verifiable orbital nodes, links or ground nodes without estimating global FLOPS.",
   "manufacturingEvents": [

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "asOf": "2026-08-19",
+  "asOf": "2026-09-08",
   "methodologyZh": "研发项目按工程能力节点追踪，不把试验次数直接加入正式载荷发射总量。一次飞行若完成入轨任务，仍可同时出现在轨道发射统计中。",
   "methodologyEn": "Development programs are tracked by engineering milestones, not added as a second launch total. A test flight that reaches orbit may still appear in the orbital launch series.",
   "capabilities": [
@@ -19,21 +19,22 @@
       "provider": "SpaceX",
       "phaseZh": "综合飞行试验",
       "phaseEn": "Integrated flight test",
-      "headline": "12",
+      "headline": "13",
       "headlineZh": "次综合飞行试验",
       "headlineEn": "integrated flight tests",
       "capabilities": { "ground": true, "vtvl": true, "integrated": true, "orbit": false, "recovery": true, "service": false },
-      "statusZh": "尚未开始常态载荷入轨；Flight 12 后处于事故调查与后续试验阶段。",
-      "statusEn": "Routine payload delivery has not begun; the program is in post-Flight 12 investigation and further testing.",
-      "nextZh": "首次轨道载荷交付；SpaceX 当前目标为 2026 年下半年。",
-      "nextEn": "First orbital payload delivery; SpaceX currently targets the second half of 2026.",
+      "statusZh": "Flight 13 已部署 20 颗 Starlink V3 试验载荷并完成飞船完整软溅落；一级返程硬溅落。尚未形成常态轨道载荷运输。",
+      "statusEn": "Flight 13 deployed 20 experimental Starlink V3 payloads and completed an intact ship splashdown; the booster hard-splashed. Routine orbital payload service has not begun.",
+      "nextZh": "首次真正轨道载荷交付，以及飞船返场塔架捕获。",
+      "nextEn": "First operational orbital payload delivery and a tower catch of the ship.",
       "source": "https://www.spacex.com/launches",
       "milestones": [
         { "date": "2021-05", "titleZh": "SN15 高空飞行并着陆", "titleEn": "SN15 high-altitude flight and landing", "tone": "done", "source": "https://www.spacex.com/launches/starship-sn15" },
         { "date": "2023-04", "titleZh": "首次全系统飞行试验", "titleEn": "First integrated flight test", "tone": "done", "source": "https://www.spacex.com/launches/mission/?missionId=starship-flight-1" },
         { "date": "2024-10", "titleZh": "首次塔架捕获 Super Heavy", "titleEn": "First tower catch of Super Heavy", "tone": "done", "source": "https://www.spacex.com/launches/mission/?missionId=starship-flight-5" },
         { "date": "2025-10", "titleZh": "Flight 11 完成主要试验目标", "titleEn": "Flight 11 met its major test objectives", "tone": "done", "source": "https://www.spacex.com/launches/starship-flight-11" },
-        { "date": "2026-05", "titleZh": "Flight 12 发射；一级返程异常", "titleEn": "Flight 12 launched; booster flyback anomaly", "tone": "review", "source": "https://www.faa.gov/newsroom/statements/general-statements" }
+        { "date": "2026-05", "titleZh": "Flight 12 发射；一级返程异常", "titleEn": "Flight 12 launched; booster flyback anomaly", "tone": "review", "source": "https://www.faa.gov/newsroom/statements/general-statements" },
+        { "date": "2026-07", "titleZh": "Flight 13 部署试验载荷并完成飞船完整软溅落", "titleEn": "Flight 13 deployed test payloads and completed an intact ship splashdown", "tone": "done", "source": "https://www.spacex.com/launches/starship-flight-13" }
       ]
     },
     {
