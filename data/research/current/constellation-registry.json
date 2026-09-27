@@ -1,0 +1,419 @@
+{
+  "schemaVersion": "1.0.0",
+  "collectedAt": "2026-09-26",
+  "status": "local-review",
+  "integrationReady": false,
+  "updateCadence": "weekly manual snapshot; event-driven regulatory amendments",
+  "coverage": "Initial priority sample, not exhaustive global inventory",
+  "dataset": "constellation-registry",
+  "inclusionRule": "Planned, notified or authorized scale >=1000; each basis labelled. Does not mean >=1000 currently in orbit.",
+  "sources": [
+    {
+      "id": "itu-res35",
+      "url": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "dataAsOf": "2026-09-15",
+      "retrievedAt": "2026-09-26",
+      "kind": "official-regulatory-status",
+      "rawUrl": "https://www.itu.int/net/ITU-R/space/res35/build/bundle.js",
+      "sha256": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614"
+    },
+    {
+      "id": "itu-rule",
+      "url": "https://www.itu.int/en/ITU-R/space/Documents/RES35(REV.%20WRC-23).pdf",
+      "kind": "official-rule",
+      "retrievedAt": "2026-09-26"
+    },
+    {
+      "id": "itu-timeframe",
+      "url": "https://www.itu.int/en/ITU-R/space/Documents/RES35(REV.%20WRC-23)-timeframe.pdf",
+      "kind": "official-guidance",
+      "retrievedAt": "2026-09-26"
+    },
+    {
+      "id": "steam-brand",
+      "url": "https://www.itu.int/dms_pub/itu-r/md/00/cr/cir/R00-CR-CIR-0499!!PDF-E.pdf",
+      "publishedAt": "2023-09-15",
+      "kind": "official-brand-mapping"
+    },
+    {
+      "id": "oneweb-brand",
+      "url": "https://fcc.report/IBFS/SAT-LOI-2016042800041/1134939.pdf",
+      "kind": "operator-filing-mirror",
+      "locator": "Appendix A.9, L5 UK filing"
+    },
+    {
+      "id": "amazon-brand",
+      "url": "https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-3-4-weeks/186639---kuiper-application-for-an-ngso-earth-station-network-licence/associated-documents/kuiper-response-to-request-for-additional-information.pdf?v=390491",
+      "publishedAt": "2024-12-13",
+      "kind": "operator-filing-hosted-by-regulator"
+    },
+    {
+      "id": "gw-a59-snl",
+      "url": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59",
+      "kind": "official-filing-index"
+    },
+    {
+      "id": "gw-2-snl",
+      "url": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2",
+      "kind": "official-filing-index"
+    },
+    {
+      "id": "sailspace-snl",
+      "url": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?sel_satname=SAILSPACE-1",
+      "kind": "official-filing-index"
+    },
+    {
+      "id": "qianfan-plan",
+      "url": "https://app.xinhuanet.com/news/article.html?articleId=20260610ba2b423c1e434c998aa80d9e30ad5f54",
+      "publishedAt": "2026-06-10",
+      "kind": "project-lead-interview-and-media-plan-summary",
+      "caveat": "Use project-specific plans only; unrelated Starlink assertions not adopted."
+    },
+    {
+      "id": "oneweb-procurement",
+      "url": "https://eutelsat-com.mynewsdesk.com/pressreleases/eutelsat-procures-a-further-oneweb-229-leo-satellites-from-airbus-3466448",
+      "publishedAt": "2026-09-10",
+      "kind": "operator-announcement"
+    },
+    {
+      "id": "starlink-fcc",
+      "url": "https://docs.fcc.gov/public/attachments/DA-26-36A1.pdf",
+      "publishedAt": "2026-01-09",
+      "kind": "national-license"
+    },
+    {
+      "id": "amazon-fcc",
+      "url": "https://docs.fcc.gov/public/attachments/DA-26-553A1.pdf",
+      "publishedAt": "2026-06-05",
+      "kind": "national-license"
+    },
+    {
+      "id": "mega-screen",
+      "url": "https://planet4589.org/space/con/conlist.html",
+      "kind": "independent-orbital-research",
+      "retrievedAt": "2026-09-26"
+    },
+    {
+      "id": "gcat-starlink",
+      "url": "https://planet4589.org/space/con/star/stats.html",
+      "dataAsOf": "2026-09-24",
+      "retrievedAt": "2026-09-26",
+      "kind": "independent-orbital-observation"
+    },
+    {
+      "id": "gcat-amazon-leo",
+      "url": "https://planet4589.org/space/con/kp/stats.html",
+      "dataAsOf": "2026-09-24",
+      "retrievedAt": "2026-09-26",
+      "kind": "independent-orbital-observation"
+    },
+    {
+      "id": "gcat-oneweb",
+      "url": "https://planet4589.org/space/con/ow/stats.html",
+      "dataAsOf": "2026-09-24",
+      "retrievedAt": "2026-09-26",
+      "kind": "independent-orbital-observation"
+    },
+    {
+      "id": "gcat-guowang",
+      "url": "https://planet4589.org/space/con/xw/stats.html",
+      "dataAsOf": "2026-09-24",
+      "retrievedAt": "2026-09-26",
+      "kind": "independent-orbital-observation"
+    },
+    {
+      "id": "gcat-qianfan",
+      "url": "https://planet4589.org/space/con/qf/stats.html",
+      "dataAsOf": "2026-09-24",
+      "retrievedAt": "2026-09-26",
+      "kind": "independent-orbital-observation"
+    }
+  ],
+  "orbitalDefinitions": {
+    "inOrbit": "Physical inventory, including ascent/drift/disposal",
+    "workingEstimate": "GCAT observational estimate, not operator-confirmed service",
+    "operationalOrbitEstimate": "GCAT O tag: orbit-shell status, not ITU compliance or service status"
+  },
+  "constellations": [
+    {
+      "id": "starlink",
+      "name": {
+        "zh": "星链",
+        "en": "Starlink"
+      },
+      "operator": "SpaceX",
+      "country": "USA",
+      "purpose": "Broadband and direct-to-device",
+      "eligibility": {
+        "basis": "nationally authorized generation",
+        "count": 15000,
+        "sourceId": "starlink-fcc"
+      },
+      "plans": [
+        {
+          "id": "starlink-gen2",
+          "kind": "authorized",
+          "count": 15000,
+          "scope": "Gen2 only; not whole-brand total",
+          "date": "2026-01-09",
+          "sourceId": "starlink-fcc"
+        }
+      ],
+      "service": {
+        "stage": "commercial",
+        "sourceUrl": "https://www.starlink.com/",
+        "subscriberCount": null,
+        "asOf": null,
+        "verification": "Service existence only; customer and country counts not collected"
+      },
+      "orbitSnapshot": {
+        "id": "starlink",
+        "scope": "GCAT Total Star; excludes bracketed dummy simulators",
+        "launched": 12962,
+        "inOrbit": 11135,
+        "workingEstimate": 11121,
+        "operationalOrbitEstimate": 9670,
+        "sourceId": "gcat-starlink",
+        "dataAsOf": "2026-09-24"
+      },
+      "filingCoverage": "partial; no claim to complete worldwide filing coverage"
+    },
+    {
+      "id": "amazon-leo",
+      "name": {
+        "zh": "Amazon Leo（原 Kuiper）",
+        "en": "Amazon Leo (formerly Kuiper)"
+      },
+      "operator": "Amazon",
+      "country": "USA",
+      "purpose": "Broadband",
+      "eligibility": {
+        "basis": "nationally authorized Gen1",
+        "count": 3232,
+        "sourceId": "amazon-fcc"
+      },
+      "plans": [
+        {
+          "id": "amazon-gen1",
+          "kind": "authorized",
+          "count": 3232,
+          "sourceId": "amazon-fcc"
+        },
+        {
+          "id": "amazon-gen2",
+          "kind": "authorized",
+          "count": 3212,
+          "sourceId": "amazon-fcc",
+          "locator": "footnote 8",
+          "date": "2026-02-10"
+        },
+        {
+          "id": "amazon-polar",
+          "kind": "authorized",
+          "count": 1292,
+          "sourceId": "amazon-fcc",
+          "locator": "footnote 8",
+          "date": "2026-02-10"
+        }
+      ],
+      "service": {
+        "stage": null,
+        "verification": "Do not infer commercial availability from orbit-shell count; latest operator service disclosure still to collect"
+      },
+      "orbitSnapshot": {
+        "id": "amazon-leo",
+        "scope": "Includes two retired prototypes in launched count",
+        "launched": 398,
+        "inOrbit": 392,
+        "workingEstimate": 392,
+        "operationalOrbitEstimate": 343,
+        "sourceId": "gcat-amazon-leo",
+        "dataAsOf": "2026-09-24"
+      },
+      "filingCoverage": "partial; no claim to complete worldwide filing coverage"
+    },
+    {
+      "id": "oneweb",
+      "name": {
+        "zh": "OneWeb",
+        "en": "Eutelsat OneWeb"
+      },
+      "operator": "Eutelsat",
+      "country": "GBR/FRA",
+      "purpose": "B2B broadband",
+      "eligibility": {
+        "basis": "ITU notified network, not current operating fleet",
+        "count": 2692,
+        "sourceId": "itu-res35"
+      },
+      "plans": [
+        {
+          "id": "oneweb-l5",
+          "kind": "itu-notified",
+          "count": 2692,
+          "sourceId": "itu-res35",
+          "scope": "Ku and Ka rows overlap; not 5384 unique satellites"
+        },
+        {
+          "id": "oneweb-replenishment",
+          "kind": "procurement",
+          "count": 669,
+          "sourceId": "oneweb-procurement",
+          "date": "2026-09-10",
+          "scope": "440 previously ordered plus 229; deliveries through 2034; not simultaneous fleet target"
+        }
+      ],
+      "service": {
+        "stage": "commercial",
+        "sourceId": "oneweb-procurement",
+        "asOf": "2026-09-10",
+        "subscriberCount": null
+      },
+      "orbitSnapshot": {
+        "id": "oneweb",
+        "scope": "OneWeb actual spacecraft row; excludes four dummy simulators",
+        "launched": 656,
+        "inOrbit": 654,
+        "workingEstimate": 651,
+        "operationalOrbitEstimate": 636,
+        "sourceId": "gcat-oneweb",
+        "dataAsOf": "2026-09-24"
+      },
+      "filingCoverage": "partial; no claim to complete worldwide filing coverage"
+    },
+    {
+      "id": "guowang",
+      "name": {
+        "zh": "国网",
+        "en": "Guowang / SatNet"
+      },
+      "operator": "China Satellite Network Group",
+      "country": "CHN",
+      "purpose": "Broadband",
+      "eligibility": {
+        "basis": "published constellation design, primary filing count pending",
+        "count": 12992,
+        "sourceId": "mega-screen",
+        "verification": "provisional"
+      },
+      "plans": [
+        {
+          "id": "guowang-design",
+          "kind": "reported-design",
+          "count": 12992,
+          "sourceId": "mega-screen",
+          "scope": "Common 6080 + 6912 design; not verified current effective ITU denominator"
+        }
+      ],
+      "service": {
+        "stage": null,
+        "verification": "Deployment does not establish commercial service"
+      },
+      "orbitSnapshot": {
+        "id": "guowang",
+        "scope": "HW Digui deployment row; excludes GCAT's broader test-satellite group",
+        "launched": 213,
+        "inOrbit": 213,
+        "workingEstimate": 213,
+        "operationalOrbitEstimate": 186,
+        "broaderGcatGroupInOrbit": 247,
+        "sourceId": "gcat-guowang",
+        "dataAsOf": "2026-09-24"
+      },
+      "filingCoverage": "partial; no claim to complete worldwide filing coverage"
+    },
+    {
+      "id": "qianfan",
+      "name": {
+        "zh": "千帆",
+        "en": "Qianfan / SpaceSail"
+      },
+      "operator": "Shanghai Spacecom Satellite Technology (SSST)",
+      "country": "CHN",
+      "purpose": "Broadband",
+      "eligibility": {
+        "basis": "published project plan",
+        "count": 15000,
+        "comparison": "greater-than",
+        "sourceId": "qianfan-plan"
+      },
+      "plans": [
+        {
+          "id": "qianfan-phase1",
+          "kind": "project-plan",
+          "count": 1296,
+          "targetYear": 2027,
+          "sourceId": "qianfan-plan"
+        },
+        {
+          "id": "qianfan-phase2",
+          "kind": "project-plan",
+          "additionalCountApprox": 10000,
+          "targetYear": 2030,
+          "sourceId": "qianfan-plan"
+        },
+        {
+          "id": "qianfan-terminal",
+          "kind": "project-plan",
+          "count": 15000,
+          "comparison": "greater-than",
+          "targetYear": null,
+          "sourceId": "qianfan-plan"
+        }
+      ],
+      "service": {
+        "stage": null,
+        "verification": "Commercial rollout claims need dated operator evidence"
+      },
+      "orbitSnapshot": {
+        "id": "qianfan",
+        "scope": "Qianfan Xingzuo row; excludes Qianfan DTC and EUHT JSW",
+        "launched": 256,
+        "inOrbit": 256,
+        "workingEstimate": 234,
+        "operationalOrbitEstimate": 178,
+        "broaderGcatGroupInOrbit": 258,
+        "sourceId": "gcat-qianfan",
+        "dataAsOf": "2026-09-24"
+      },
+      "filingCoverage": "partial; no claim to complete worldwide filing coverage"
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "e-space",
+      "name": "E-Space",
+      "reason": "Large paper filings/designs, current effective programme scale and filing mapping not yet verified",
+      "sourceUrls": [
+        "https://www.e-space.com/pages/innovation",
+        "https://planet4589.org/space/con/conlist.html"
+      ],
+      "integrationReady": false
+    },
+    {
+      "id": "yinhe",
+      "name": "银河 / GalaxySpace",
+      "reason": "Historic 1000-satellite plan requires current primary confirmation; distinguish manufacturer from constellation operator",
+      "sourceUrls": [
+        "https://planet4589.org/space/con/conlist.html"
+      ],
+      "integrationReady": false
+    },
+    {
+      "id": "pwsa",
+      "name": "PWSA",
+      "reason": "SDA describes potentially hundreds or thousands; no fixed verified >=1000 current target collected",
+      "sourceUrls": [
+        "https://www.sda.mil/home/about-us/faq/"
+      ],
+      "integrationReady": false
+    }
+  ],
+  "excludedExamples": [
+    {
+      "name": "Telesat Lightspeed",
+      "reason": "Current announced fleet 225, below threshold; ITU paper scope is separate",
+      "sourceUrl": "https://www.telesat.com/press/press-releases/telesat-secures-2-3-billion-arctic-military-satcom-contract-expanding-telesat-lightspeed-network-and-capacity-by-44/"
+    }
+  ]
+}

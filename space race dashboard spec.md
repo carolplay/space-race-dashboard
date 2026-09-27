@@ -981,3 +981,166 @@ Next Spaceflight 的价值主要是信息架构而非一个可直接使用的数
 * **失败与部分失败语义**：LL2 landing 允许 null / false，但不同机构对“回收成功”“完整回收”“可复飞”的口径不同。下一版应增加 `recovered / intact / reflown` 三层状态，不能只用一个成功布尔值。
 * **成本指标**：Next Spaceflight 会展示火箭标价与最大运力，但“标价 ÷ 最大 LEO 运力”不是平均单位重量入轨成本。该指标继续保留为空，直到建立任务级价格、实际载荷质量和恒定美元调整管线。
 * **任务搜索与收藏**：对网页看板价值低于数据准确性；只有任务数量和交互复杂度继续增长时再考虑。
+
+---
+
+## 23. 大星座进展追踪：研究与讨论稿
+
+> 研究日期：2026-09-26。范围：先收集主要星座计划、ITU 节点和在轨运营状况，再讨论页面设计。尚未批准实现或发布。
+> 数据留存：`data/research/constellations-2026-09-26.json`，不接入生产页面。保存 GCAT 统计口径与 ITU 官方名单原始相关记录。
+
+### 已确认的研究事实
+
+建议首批研究对象为 Starlink、Amazon Leo（原 Kuiper）、OneWeb、国网（GW）与千帆（Qianfan / SpaceSail）。Lightspeed 列入计划观察名单；首批产品范围仍待讨论。
+
+五个星座的 [GCAT 星座统计](https://planet4589.org/space/con/star/stats.html) 均更新于 2026-09-24，便于同源比较：
+
+| 星座 / 统计子组 | 累计发射 | 当前在轨 | GCAT 工作估计 | GCAT 工作轨道估计 |
+|---|---:|---:|---:|---:|
+| Starlink 总体，排除方括号模拟载荷 | 12,962 | 11,135 | 11,121 | 9,670 |
+| [Amazon Leo](https://planet4589.org/space/con/kp/stats.html)，累计含两颗已退役原型 | 398 | 392 | 392 | 343 |
+| [OneWeb](https://planet4589.org/space/con/ow/stats.html)，实际航天器行、排除四颗模拟载荷 | 656 | 654 | 651 | 636 |
+| [国网](https://planet4589.org/space/con/xw/stats.html) HW Digui 组网子组 | 213 | 213 | 213 | 186 |
+| [千帆](https://planet4589.org/space/con/qf/stats.html) Qianfan Xingzuo 子组 | 256 | 256 | 234 | 178 |
+
+GCAT 的 Working 是排除其判断失效对象后的估计，O 是轨道状态，均不等于官方确认已商用或监管合规。国网 GCAT 大组还含多种试验星，共 247 颗在轨；千帆大组另含 DTC / EUHT 试验星，共 258 颗。页面不能混用大组与常规组网子组。
+
+计划与服务状态：
+
+* **Starlink**：成熟商用网络；[FCC DA 26-36](https://docs.fcc.gov/public/attachments/DA-26-36A1.pdf) 2026-01-09 将 Gen2 授权增加至 15,000 颗。该数字是特定代际授权，不能与总体 11,135 在轨直接相除；更大的远期申报不能当作已批规模。
+* **Amazon Leo**：Gen1 当前授权 3,232 颗；[Amazon 官方](https://www.aboutamazon.com/news/amazon-leo/amazon-leo-direct-to-device-satellite-service-explained) 表示在轨超过 390 颗，计划本年在初始纬度带开始固定服务。宽带 Gen1、Gen2 与另行提议的 D2D 网络分别保存，不能合并。全面商用开始日期与运营星数仍需官方证据。
+* **OneWeb**：全球 B2B 商用网络，Gen1 为 654 颗尺度。[2026-09-10 官方公告](https://eutelsat-com.mynewsdesk.com/pressreleases/eutelsat-procures-a-further-oneweb-229-leo-satellites-from-airbus-3466448) 新增拟采购 229 颗，使 Airbus 新卫星采购总数达 669；这些用于补网与扩容至 2034，不能加到现存库存中当作未来同时在轨总量。
+* **国网**：GW-A59 / GW-2 常见合计计划 12,992 颗；[ITU GW-A59 SNL](https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59) 核实初始收件日为 2020-09-11。精确申报规模、GW-2 明细及正式部署节点仍需原始附件复核；当前处于组网阶段，未取得可核验的商用运营库存。
+* **千帆**：2026 年公开材料仍列一期 1,296 颗、2027 年完成，远期超过 15,000 颗；[央视采访 / 新华网转载](https://app.xinhuanet.com/news/article.html?articleId=20260610ba2b423c1e434c998aa80d9e30ad5f54) 的 2026 年方案与早期 2025 年 648 颗方案不同，必须保留计划版本。该稿部分总体 Starlink / 轨道资源描述与原始监管、目录口径不一致，只采用可归因的计划与采访信息。[上海官方规划](https://www.shanghai.gov.cn/202616bgtwj/20260826/73e145bbc2af43a39db6f07c1eb7ad9d.html) 仍表述为推动组网并部署商用；合作协议不能算正式商用已启动。
+* **Lightspeed 观察名单**：[2026-08-04 Telesat 官方](https://www.telesat.com/press/press-releases/telesat-secures-2-3-billion-arctic-military-satcom-contract-expanding-telesat-lightspeed-network-and-capacity-by-44/) 将初始部署方案由 156 颗扩大至 225 颗，预期全球服务为 2028 Q1。旧版 198 颗是不同阶段的方案，不继续当作唯一当前目标。
+
+### ITU 与国内许可：两套独立时钟
+
+[ITU Resolution 35](https://www.itu.int/en/ITU-R/space/Pages/res35main.aspx) 适用于指定业务与频段：在 7 年 BIU 监管期结束之后，通常再过 2 / 5 / 7 年达到 10% / 50% / 100%。不能从首次发射日开始计算；BIU 的 90 天运行证据、过渡规则、修改与豁免也需逐项核对。
+
+从 [ITU 官方 RES35 名单](https://www.itu.int/net/ITU-R/space/res35/index.html) 的公开页面 bundle 提取记录，名单自身更新时间 2026-09-15：
+
+| 关联星座 / ITU 网络 | M1 / M2 状态或日期 | M3 日期 | 注意事项 |
+|---|---|---|---|
+| Starlink / STEAM-1、STEAM-2 | M1 Met；M2 As Received | 2028-06-27 | 两条独立申报，不能用公司总星数判断达标 |
+| Starlink / STEAM-2B | M1 Met；M2 2029-01-01 | 2031-01-01 | 与其他 STEAM 期限不同 |
+| OneWeb / L5Ku、L5Ka | M1 Met；M2 As Received | 2028-01-01 / 2028-07-18 | 两个频段记录；申报数不能相加 |
+| Amazon / USASAT-NGSO-8A、8B、8C | M0 As Received；M1 2028-03-26 / 28；M2 2031-03-26 / 28 | 2033-03-26 / 28 | 记录数分别 1,154 / 1,294 / 782；保持原始行，8B 的 new_sat_name 上游疑似错误不能静默修正 |
+| 千帆关联候选 / SAILSPACE-1 | M0 As Received；M1 2032-04-07；M2 2035-04-07 | 2037-04-07 | 该申报为 1,296 颗；与品牌映射须进一步向运营商 / 主管部门核实，不能代表全部 15,000 颗计划 |
+| 国网 / GW-A59、GW-2 | 本次 RES35 名单未找到 | 待核验 | GW-1 / GW-S 是别的记录；不可借用其日期，也不把媒体推算的 2029 / 2032 / 2035 写成正式节点 |
+
+As Received 表示收到材料，不代表已认可达标。名单中 deployed=0 经页面 formatter 显示为空，可能是未处理 / 无已发表数量，绝不能展示成“零颗在轨”。监管申报中已部署数也不是实时库存。
+
+额外保存 FCC 独立节点：
+
+* Starlink Gen2：DA 26-36 第 12 页，50% 为 2028-12-01，100% 为 2031-12-01；V-band 子系统另有节点。
+* Amazon Gen1：[DA 26-553](https://docs.fcc.gov/public/attachments/DA-26-553A1.pdf)，2026-06-05 的决定有条件豁免未达 2026-07-30 50% 后的自动缩减，以及达到最终节点的前置条件；**不是简单批准延期到 2028 年**。2029-07-30 全部 3,232 颗的期限保留，频谱优先级和保证金条件仍适用。第 6—7 页已直接核验。
+
+### 待讨论的页面方案
+
+建议在“轨道资产”之后加入“星座部署与运营”，主区并列展示五个星座，每个星座一张卡与自己的时序图。最新在轨数、工作轨道估计、本期净增、服务阶段置于卡顶；累计发射、补网采购、远期申报放在明确标注的次级区域。
+
+每张图沿同一时间轴展示当前在轨、工作轨道估计与月度新增 / 退出；各卡保留自己的纵轴，避免 Starlink 数量让其他曲线不可读。原始历史库存需从逐星发射 / 再入事件回填；历史 O 状态需历史轨道 / 状态快照，不能用今日 O 标签反推过去。先保存周快照，再逐步建立月序列。
+
+监管期限采用一个共享横向日历，每个申报网络一条轨道，使用三种标签：ITU、国内许可、企业计划。明示 Met / As Received / 待核验 / 豁免，不从 GCAT 库存自动生成法律达标红绿灯。倒计时与所需月均部署量只有在网络映射、规模分母与计入资格完整后才计算。
+
+服务状态采用事件证据：试验、限量服务、区域商用、全球商用；用户数、国家覆盖和吞吐量按各自披露日期保存，不用合同数或单链路速度代替真实使用和网络容量。
+
+### 待用户讨论 / 研究补齐
+
+1. 五个主星座与 Lightspeed 观察栏的边界；是否下一轮再加 D2D、PWSA、遥感或导航星座。
+2. 建立品牌—代际—ITU filing—GCAT 对象的关联表，含试验星与 D2D 纳入标记。
+3. 优先完成国网正式节点与 SAILSPACE 品牌映射，再展示监管部署百分比。
+4. 页面位置和主图：建议并列卡片 + 小倍图 + 共享期限日历；保持原始数字，不产生指数评分。
+5. 本轮仅研究与记录，设计确认后才实现新页面版本并按既定规则公开发布。
+
+## 24. 星座申报数据本地核验包（2026-09-26）
+
+> 本节保留数据研究记录；展示与接入门槛以第 26 节用户确认的资产追踪口径为准，逐星申报归属不再是集成前提。
+
+用户确认先采集并生成三份本地数据，检验后再集成 dashboard。已落地 `data/research/current/constellation-registry.json`、`itu-milestones.json`、`filing-deployment-progress.json`，阅读入口为同目录 README。
+
+本批覆盖五个优先星座与十一项申报追踪单元，保留 E-Space / 银河 / PWSA 待核验观察名单。按计划 / 通知 / 授权规模区分 1000+，不声称是全球完整目录。
+
+新增官方证据：五份 RES35 M1 报告、514 个轨道平面，分别核验平面总数与部署数。保留通知 SNS、报告修订、频段分母、BIU 日期与逐星名称质量。GW-A59 查得后续 CR/C5448 MOD-3；GW-2 查得 2026-02-03 的 PART I-S，故不能沿用最初协调请求当作当前有效通知。
+
+关键口径修正：M1 / M2 数量向下取整；M3 100% 计数允许少一颗；部署到期与提交截止分开，过渡期按明确的 2 月 1 日处理。商业运营仍单独跟踪，不从在轨 / O 状态推导。
+
+检查结果：470 项检查无错误、6 个错误样本回归测试通过，但总体为 PASS_WITH_GAPS。OneWeb 清单 / 报告数值差异、频段分母不同与逐星名称重复均未静默修正；未处理零值展示 null，As Received 未当作达标。十一项当前合格部署数与百分比均空，待现行版本和逐星归属核验。
+
+阶段边界：本轮未修改 dashboard、未发布新版本。下轮优先补国网现行 Notification / BIU，千帆品牌—SAILSPACE 映射，OneWeb / STEAM 待处理 M2 材料，及 ITU 名称 / itu_sat_id 与 NORAD / COSPAR 的对应。可先展示带日期的原始库存和官方状态，不能启用合规百分比或跨申报求和。
+
+## 25. 现存公开星座追踪资料调研（2026-09-26）
+
+结论：公开资料分为物理部署统计、品牌计划目录、官方申报进度；本轮未找到同时全面贯通具体申报版本、频率组、逐星归属与商业运营的免费公开看板。以下判断是对已检索样本的评估，不声称不存在其他工具。仅调研，没有更换既有数据或接入第三方接口。
+
+| 来源 | 现有资料与适合用途 | 边界 |
+|---|---|---|
+| [GCAT / McDowell](https://planet4589.org/space/con/conlist.html) | 多星座、轨道层、发射与部署统计；继续作为物理库存主候选 | 轨道观察不等于 ITU 达标或商用 |
+| [ITU Space Explorer](https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer) | 具体网络、通知、历史与监管摘要；补现行版本身份 | 官方 FAQ 说明列表与摘要免费，详细技术数据需 TIES / SNS 订阅；不是全部数据公开 |
+| [ITU RES35](https://www.itu.int/en/ITU-R/space/Pages/res35main.aspx) | M0—M3 官方状态与已发布报告 | 处理滞后；As Received 不代表达标 |
+| [ITU As Received](https://www.itu.int/ITU-R/space/asreceived/Publication/AsReceived) | 收到材料的公开检索入口；CR/475 描述 XML / MDB / PDF / 附函 | 本轮验证入口可读，尚未逐份核验当前待处理材料的下载与完整性 |
+| [Constellation Census](https://huggingface.co/datasets/juliensimon/constellation-census) | 作者发布跨星座逐星 Parquet 与日快照，含 NORAD、轨道层和状态分类 | CelesTrak 派生源，不是独立观测；状态是规则分类；README 与实际文件日期须分开；尚未下载验证历史覆盖 |
+| [NewSpace Index](https://www.newspace.im/) | 大量星座的已发射 / 计划规模及变更日志，适合补候选目录 | 页示更新日 2026-07-31；不是当前在轨或具体 ITU 达标统计 |
+| [SpaceMapper 千帆](https://spacemapper.cn/en-us/show/constellation/qianfan) | 逐星名称、NORAD、国际编号、批次、轨道与更新时间 | 可用来比对对象身份，不证明对应 ITU filing |
+| [Kevin Ricche Tracker](https://www.kevinricche.com/constellations/) | 品牌卡片、计划规模、进度与累计时间线 | 页面明确时间线由发射记录近似；不同版计划分母与物理口径需核验，不能沿用其百分比 |
+| [Orbital Radar](https://orbitalradar.com/satellite-internet/qianfan-vs-starlink) | 中美星座增长、最近 90 天节奏、首发日对齐比较 | 页面中国采用在轨、Starlink 采用运营舰队；还出现正文数字差异，宜参考展示而非直接导入 |
+| [Starlink.sx](https://starlink.sx/) / [starlink-viz](https://github.com/juliensimon/starlink-viz) | 轨道层状态、填充、舰队健康和历史分析思路 | 独立估计 / 模拟；不是运营商遥测或申报结论 |
+
+特别发现：[ITU Argus](https://www.itu.int/space-argus/) 官方介绍明确对应 RES8 / RES35 的已申报部署，并链接 MIFR 与运营机构，功能接近本项目的申报归属需求；但访问限 ITU-R 会员，不属于可直接使用的免费公开数据库。
+
+下一步建议（未执行）：先用 Space Explorer / RES35 / As Received 补监管证据；GCAT 为物理数量主候选，CelesTrak 为对象与轨道交叉核验；试读 Constellation Census 日快照，检查是否能补真实历史；NewSpace Index 补大型星座候选。第三方展示可参考同日历与同项目年龄两种横轴，不照抄混合口径的“完成率”。任何公开页面的数据复用需先核对许可和使用政策。
+
+## 26. 用户确认：星座作为太空资产追踪的拓展（2026-09-26）
+
+### 定位与决定
+
+星座板块服务于整个 dashboard 的太空资产追踪，是对粗糙的 mass in orbit 的重要拓展：说明在轨资产由哪些星座构成、规模如何增长、部署有哪些计划与监管节点，而非建立精细的频谱合规审计系统。
+
+- ITU：仍按具体申报网络 / 组别展示，直接采用官方 milestone 日期、状态、来源及更新时间；官方未给出的节点留空，不自行认定是否合规。
+- 在轨卫星：按星座展示带日期与口径的数量估算和历史趋势；无需严格确认运行状态，也无需逐星匹配具体申报。以在轨数为主，不把 O / working 分类放在必要位置。
+- 两层信息关联到星座，但不强制共用一套卫星分子；不把估算在轨数除以申报数后称为 ITU 达标率。
+- 整体商业运营仍另行追踪，不与在轨或 ITU 状态混为一谈。
+- 逐星申报映射、完整技术通知、名称异常消歧保留为可选研究，不再阻塞基础板块接入。品牌归属不确定的申报仍需标候选，不能为了简化而强行关联。
+
+### 建议的最小呈现（待实施）
+
+轨道资产概览保留估算在轨质量 / 数量；下设星座资产组成区，每个主要星座展示最新估算在轨数、可靠历史区间内的增减趋势、计划规模及分阶段目标。ITU 官方申报节点作为附属时间线，与资产数量图分层呈现。前台不展开研究包中的逐星名单与技术审计表。
+
+在轨质量已有估算可与星座数量并列；本轮未授权新增推算星座质量。若后续按数量 × 单星质量估算，须区分代际、湿 / 干质量、缺失覆盖率和不确定性，不为了填满图表制造精度。
+
+### 验收与维护口径
+
+集成检查关注数量的合理性、来源、日期、范围和单位；无需证明每颗卫星正常工作。估算明确标识，未识别或目录滞后说明；累计发射与当前在轨不能混用。历史数据可粗粒度但须说明是库存估计或发射累计，不用今日运行状态倒推过去。
+
+按既定本地周更新 / 重要事件补更维护，无需全面部署自动采集。第 24 节 integrationReady=false 表示研究包尚未按本口径完成展示适配，不再代表必须完成逐星法律归属验证。当前仅更新 spec，未修改或发布 dashboard。
+## 27. 星座板块反馈：并入 02A 与申报历史（2026-09-26）
+
+### 已明确的用户要求
+
+- 星座内容并入已有 02A 运营与数据网络，不在轨道资产区重复新增。保留原 02A 的运营者、通信/导航与网络披露内容；不能因五个大型星座的筛选范围而丢掉原有对象。
+- 所有星座库存增长曲线合并为一个共同日历/数量尺度的图，后续再考虑互动单选。各星座目标以横线表达，并保留范围、来源和性质，不把不同层级的批准/通知/商业目标静默混合。
+- ITU 行显式显示商业名称、运营主体、正式申报网络及申报版本。品牌映射不明的行留在未归属申报组，不强行挂到国网或千帆。
+- 时间线覆盖过去十年的正式申报及已达成节点，并延伸至未来截止日期。
+
+### 建议的实现口径（尚未实施）
+
+- BIU 单独作为有官方日期的事件，不等同于首次发射、商业开通或全网完成；不能与 RES35 M0 状态无条件合并。并列申报/公布、BIU、实际部署达成、报告提交、未来期限等事件类型。
+- 已达标但没有公开日期的节点不能根据 deadline 伪造完成日；保留日期待核验标注，取得报告后再移入时间轴。
+- 目标横线区分商业目标、监管获批和申请/通知上限。建议共享对数数量轴来容纳数百至十万级差异，必须明确标注；这是建议，未获用户选择，不默认表示线性增长速度。
+- 超大型尚未部署申报作为申报层/目标层，不虚构零库存时序或商业归属。
+
+### 数据范围缺口
+
+现有五星座目标仅包括 Starlink Gen2 15,000、Amazon Gen1 3,232、OneWeb L5 通知 2,692、国网约 12,992、千帆终态超过 15,000；没有纳入十万级新组网申请。
+
+ITU SNL 可见 CTC-1 / CTC-2 于 2025-12-29 收件并于 2026-03-17 发布。此处仅确认网络及日期，尚未由正式技术通知核实其数量和运营主体；不能直接并入国网或千帆。
+
+Starlink 十万级 Gen3 检索结果指向 2026-06-30 的 FCC 申请，而非 2025 年。申请规模、批准状态及与现有 Starlink 品牌关系仍应依据正式文件单列核验，不将其加入已获批 15,000 或直接相加。
+
+官方参考：
+- https://www.itu.int/en/ITU-R/space/Pages/FAQspace.aspx
+- https://www.itu.int/en/ITU-R/space/Pages/res35main.aspx
+- https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?nmod=asc&norder=adm&npage=102&q_ref_numero=&q_reference=&q_sns_id=&res32=&sel_adm=&sel_date_from=&sel_date_to=&sel_esname=&sel_ific=&sel_orbit_from=&sel_orbit_to=&sel_org=&sel_rcpt_from=&sel_rcpt_to=&sel_satname=&sel_year=&sup=
+
+本轮记录讨论与核验缺口；尚未重构 UI 或宣称发布。

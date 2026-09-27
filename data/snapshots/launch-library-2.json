@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "source": "Launch Library 2",
-  "retrievedAt": "2026-09-09T05:19:27.592Z",
+  "retrievedAt": "2026-09-27T05:31:20.982Z",
   "lastQuery": {
-    "from": "2026-01-01",
-    "to": "2026-12-07",
-    "requestCount": 3
+    "from": "2026-08-01",
+    "to": "2026-12-25",
+    "requestCount": 1
   },
   "records": [
     {
@@ -38401,7 +38401,7 @@
       "windowEnd": "2026-08-01T06:00:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-175",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -38569,7 +38569,7 @@
           "relativeTime": "PT1H1M28S"
         }
       ],
-      "lastUpdated": "2026-08-01T04:16:47Z",
+      "lastUpdated": "2026-09-12T22:12:16Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/e7e55b53-6f69-4c22-9fc5-df00df653a3f/?format=json"
     },
     {
@@ -38581,7 +38581,7 @@
       "windowEnd": "2026-08-04T09:09:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-176",
       "providerId": 88,
       "provider": "China Aerospace Science and Technology Corporation",
       "countryCode": "CN",
@@ -38613,7 +38613,7 @@
       "infoUrl": null,
       "webcastUrl": "https://www.youtube.com/watch?v=U50JIfKPGCk",
       "timeline": [],
-      "lastUpdated": "2026-08-04T10:40:31Z",
+      "lastUpdated": "2026-09-12T22:23:35Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/12b9454b-d48b-4fd5-9c11-17c18f45dafe/?format=json"
     },
     {
@@ -38625,7 +38625,7 @@
       "windowEnd": "2026-08-04T18:00:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-177",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -38683,13 +38683,13 @@
           "relativeTime": "-PT38M"
         },
         {
-          "abbrev": "Prop Load",
-          "description": "Start of propelland loading",
+          "abbrev": "Stage 1 LOX Load",
+          "description": "Start of liquid oxygen loading in the first stage",
           "relativeTime": "-PT35M"
         },
         {
-          "abbrev": "Stage 1 LOX Load",
-          "description": "Start of liquid oxygen loading in the first stage",
+          "abbrev": "Prop Load",
+          "description": "Start of propelland loading",
           "relativeTime": "-PT35M"
         },
         {
@@ -38703,13 +38703,13 @@
           "relativeTime": "-PT7M"
         },
         {
-          "abbrev": "Startup",
-          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
           "relativeTime": "-PT1M"
         },
         {
-          "abbrev": "Tank Press",
-          "description": "Fuel tanks are pressurized to flight levels",
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
           "relativeTime": "-PT1M"
         },
         {
@@ -38793,7 +38793,7 @@
           "relativeTime": "PT1H1M16S"
         }
       ],
-      "lastUpdated": "2026-08-04T18:11:40Z",
+      "lastUpdated": "2026-09-12T22:37:53Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/0448d030-5175-4c1f-bd0b-4f3f87072921/?format=json"
     },
     {
@@ -38805,7 +38805,7 @@
       "windowEnd": "2026-08-05T02:48:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-178",
       "providerId": 272,
       "provider": "China Rocket Co. Ltd.",
       "countryCode": "CN",
@@ -38837,7 +38837,7 @@
       "infoUrl": null,
       "webcastUrl": "https://www.youtube.com/watch?v=QElbEmB1PUM",
       "timeline": [],
-      "lastUpdated": "2026-08-05T03:27:06Z",
+      "lastUpdated": "2026-09-12T22:52:43Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/d46cab82-dcf5-4d70-b698-d7bead7f638c/?format=json"
     },
     {
@@ -38849,7 +38849,7 @@
       "windowEnd": "2026-08-05T09:18:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-179",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -38927,13 +38927,13 @@
           "relativeTime": "-PT7M"
         },
         {
-          "abbrev": "Startup",
-          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
           "relativeTime": "-PT1M"
         },
         {
-          "abbrev": "Tank Press",
-          "description": "Fuel tanks are pressurized to flight levels",
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
           "relativeTime": "-PT1M"
         },
         {
@@ -39027,7 +39027,7 @@
           "relativeTime": "PT1H4M25S"
         }
       ],
-      "lastUpdated": "2026-08-20T20:47:44Z",
+      "lastUpdated": "2026-09-12T23:02:25Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/56a85c82-ea71-449b-828c-b583f6f4a18b/?format=json"
     },
     {
@@ -39039,7 +39039,7 @@
       "windowEnd": "2026-08-06T09:18:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-180",
       "providerId": 147,
       "provider": "Rocket Lab",
       "countryCode": "US",
@@ -39147,7 +39147,7 @@
           "relativeTime": "PT50M"
         }
       ],
-      "lastUpdated": "2026-08-06T15:01:26Z",
+      "lastUpdated": "2026-09-12T23:13:35Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/8b7e748c-6ed5-4681-a898-827b4a23b8d7/?format=json"
     },
     {
@@ -39159,7 +39159,7 @@
       "windowEnd": "2026-08-08T18:00:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-181",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -39217,13 +39217,13 @@
           "relativeTime": "-PT38M"
         },
         {
-          "abbrev": "Stage 1 LOX Load",
-          "description": "Start of liquid oxygen loading in the first stage",
+          "abbrev": "Prop Load",
+          "description": "Start of propelland loading",
           "relativeTime": "-PT35M"
         },
         {
-          "abbrev": "Prop Load",
-          "description": "Start of propelland loading",
+          "abbrev": "Stage 1 LOX Load",
+          "description": "Start of liquid oxygen loading in the first stage",
           "relativeTime": "-PT35M"
         },
         {
@@ -39327,7 +39327,7 @@
           "relativeTime": "PT1H1M16S"
         }
       ],
-      "lastUpdated": "2026-08-08T17:45:39Z",
+      "lastUpdated": "2026-09-12T23:27:43Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/e4316d4c-9eb8-4a18-9b0d-4307c3970ef6/?format=json"
     },
     {
@@ -39383,7 +39383,7 @@
       "windowEnd": "2026-08-10T20:23:31Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-182",
       "providerId": 98,
       "provider": "Mitsubishi Heavy Industries",
       "countryCode": "JP",
@@ -39466,7 +39466,7 @@
           "relativeTime": "PT29M10S"
         }
       ],
-      "lastUpdated": "2026-08-10T22:36:09Z",
+      "lastUpdated": "2026-09-12T23:43:00Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/b89ab080-66c3-4831-85a9-38d85da71d30/?format=json"
     },
     {
@@ -39478,7 +39478,7 @@
       "windowEnd": "2026-08-11T18:26:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-183",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -39646,7 +39646,7 @@
           "relativeTime": "PT1H4M3S"
         }
       ],
-      "lastUpdated": "2026-08-11T17:02:45Z",
+      "lastUpdated": "2026-09-12T23:52:09Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/36ab6924-bb36-416a-b71d-cda9e88004be/?format=json"
     },
     {
@@ -39658,7 +39658,7 @@
       "windowEnd": "2026-08-12T06:00:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-184",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -39826,7 +39826,7 @@
           "relativeTime": "PT1H1M28S"
         }
       ],
-      "lastUpdated": "2026-08-12T21:21:54Z",
+      "lastUpdated": "2026-09-13T00:04:46Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/6f94dbe4-1318-4ffb-a53d-351bbdcba733/?format=json"
     },
     {
@@ -39838,7 +39838,7 @@
       "windowEnd": "2026-08-16T01:27:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-185",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -40026,7 +40026,7 @@
           "relativeTime": "PT1H2M42S"
         }
       ],
-      "lastUpdated": "2026-08-16T03:00:52Z",
+      "lastUpdated": "2026-09-13T00:18:52Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/be8b4b0d-1989-48a5-a96d-e8e4d59ed8b3/?format=json"
     },
     {
@@ -40038,7 +40038,7 @@
       "windowEnd": "2026-08-16T01:52:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-186",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -40047,7 +40047,7 @@
       "orbit": "LEO",
       "missionName": "USSF-366",
       "missionType": "Government/Top Secret",
-      "missionDescription": "USSF-366 is a classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites for a US government entity based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+      "missionDescription": "USSF-366 is a classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
       "rocketConfigurationId": 164,
       "rocketConfiguration": "Falcon 9",
       "rocketFullName": "Falcon 9 Block 5",
@@ -40186,7 +40186,7 @@
           "relativeTime": "PT8M20S"
         }
       ],
-      "lastUpdated": "2026-08-16T17:15:30Z",
+      "lastUpdated": "2026-09-13T00:34:20Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/55b79515-ddbf-4198-8a59-29a12ed21330/?format=json"
     },
     {
@@ -40198,7 +40198,7 @@
       "windowEnd": "2026-08-16T04:32:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-187",
       "providerId": 88,
       "provider": "China Aerospace Science and Technology Corporation",
       "countryCode": "CN",
@@ -40230,7 +40230,7 @@
       "infoUrl": null,
       "webcastUrl": "https://www.youtube.com/watch?v=UifMQ8J8jMY",
       "timeline": [],
-      "lastUpdated": "2026-08-16T05:59:12Z",
+      "lastUpdated": "2026-09-13T00:43:25Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/b0e7d1cc-24dd-4da4-bb60-b15b6791d08e/?format=json"
     },
     {
@@ -40242,7 +40242,7 @@
       "windowEnd": "2026-08-17T03:17:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-188",
       "providerId": 88,
       "provider": "China Aerospace Science and Technology Corporation",
       "countryCode": "CN",
@@ -40274,7 +40274,7 @@
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2026-08-17T07:27:12Z",
+      "lastUpdated": "2026-09-13T00:55:11Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/cb6f4df1-c045-423b-904c-e63bf1ee5168/?format=json"
     },
     {
@@ -40286,7 +40286,7 @@
       "windowEnd": "2026-08-19T00:04:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-189",
       "providerId": 259,
       "provider": "LandSpace",
       "countryCode": "CN",
@@ -40338,7 +40338,7 @@
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2026-08-19T00:38:40Z",
+      "lastUpdated": "2026-09-13T01:08:33Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/ef02e2cf-e617-4b38-a526-951ac9204b0a/?format=json"
     },
     {
@@ -40350,7 +40350,7 @@
       "windowEnd": "2026-08-19T06:00:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-190",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -40518,7 +40518,7 @@
           "relativeTime": "PT1H1M27S"
         }
       ],
-      "lastUpdated": "2026-08-19T05:07:51Z",
+      "lastUpdated": "2026-09-13T01:17:27Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/f6958a77-37bb-4559-a108-40ba0ff9e34a/?format=json"
     },
     {
@@ -40530,7 +40530,7 @@
       "windowEnd": "2026-08-20T13:04:45Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-191",
       "providerId": 147,
       "provider": "Rocket Lab",
       "countryCode": "US",
@@ -40638,7 +40638,7 @@
           "relativeTime": "PT50M18S"
         }
       ],
-      "lastUpdated": "2026-08-20T20:49:58Z",
+      "lastUpdated": "2026-09-13T01:29:31Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/57280454-470e-4c5d-8de1-1bbd0ea41b49/?format=json"
     },
     {
@@ -40650,7 +40650,7 @@
       "windowEnd": "2026-08-21T18:57:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-192",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -40818,7 +40818,7 @@
           "relativeTime": "PT1H1M28S"
         }
       ],
-      "lastUpdated": "2026-08-21T16:22:00Z",
+      "lastUpdated": "2026-09-13T01:43:04Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/bbdc4d47-1de3-428e-9fe1-bbf45d9b1e04/?format=json"
     },
     {
@@ -40830,7 +40830,7 @@
       "windowEnd": "2026-08-22T11:25:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-193",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -40888,13 +40888,13 @@
           "relativeTime": "-PT38M"
         },
         {
-          "abbrev": "Prop Load",
-          "description": "Start of propelland loading",
+          "abbrev": "Stage 1 LOX Load",
+          "description": "Start of liquid oxygen loading in the first stage",
           "relativeTime": "-PT35M"
         },
         {
-          "abbrev": "Stage 1 LOX Load",
-          "description": "Start of liquid oxygen loading in the first stage",
+          "abbrev": "Prop Load",
+          "description": "Start of propelland loading",
           "relativeTime": "-PT35M"
         },
         {
@@ -40998,28 +40998,28 @@
           "relativeTime": "PT1H1M49S"
         }
       ],
-      "lastUpdated": "2026-08-22T08:31:34Z",
+      "lastUpdated": "2026-09-13T01:52:16Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/6208f972-18ec-490f-bbe5-6f5c6cfcd48c/?format=json"
     },
     {
       "id": "458e2e52-87b0-4707-96d8-6899f92e53ee",
-      "name": "Soyuz 2.1b/Fregat | Glonass-K1 No. 19",
+      "name": "Soyuz 2.1b/Fregat | Glonass-K1 No. 23 (Kosmos 2619)",
       "net": "2026-08-24T02:40:00Z",
       "netPrecision": "Minute",
       "windowStart": "2026-08-24T02:40:00Z",
       "windowEnd": "2026-08-24T02:40:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-194",
       "providerId": 193,
       "provider": "Russian Space Forces",
       "countryCode": "RU",
       "region": "other",
       "classificationBasis": "lsp_agency_country",
       "orbit": "MEO",
-      "missionName": "Glonass-K1 No. 19",
+      "missionName": "Glonass-K1 No. 23 (Kosmos 2619)",
       "missionType": "Navigation",
-      "missionDescription": "Note: Payload identity not confirmed.\r\n\r\nGlonass-K are the third generation of satellite design for GLONASS satellite navigation system. GLONASS is a Russian space-based navigation system comparable to the similar GPS and Galileo systems. This generation improves on accuracy, power consumption and design life. Each satellite is unpressurized and weighs 935 kg,  and has an operational lifetime of 10 years.",
+      "missionDescription": "Glonass-K are the third generation of satellite design for GLONASS satellite navigation system. GLONASS is a Russian space-based navigation system comparable to the similar GPS and Galileo systems. This generation improves on accuracy, power consumption and design life. Each satellite is unpressurized and weighs 935 kg,  and has an operational lifetime of 10 years.",
       "rocketConfigurationId": 42,
       "rocketConfiguration": "Soyuz 2.1b/Fregat",
       "rocketFullName": "Soyuz 2.1b Fregat",
@@ -41042,7 +41042,7 @@
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2026-08-24T11:32:15Z",
+      "lastUpdated": "2026-09-19T00:21:33Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/458e2e52-87b0-4707-96d8-6899f92e53ee/?format=json"
     },
     {
@@ -41054,7 +41054,7 @@
       "windowEnd": "2026-08-25T03:40:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-195",
       "providerId": 88,
       "provider": "China Aerospace Science and Technology Corporation",
       "countryCode": "CN",
@@ -41086,7 +41086,7 @@
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2026-08-25T03:59:04Z",
+      "lastUpdated": "2026-09-13T02:10:38Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/48c449c2-3c09-4d36-9c2a-d853b3a39289/?format=json"
     },
     {
@@ -41098,7 +41098,7 @@
       "windowEnd": "2026-08-25T09:49:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-196",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -41266,7 +41266,7 @@
           "relativeTime": "PT1H1M28S"
         }
       ],
-      "lastUpdated": "2026-08-25T11:18:03Z",
+      "lastUpdated": "2026-09-13T02:23:34Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/ad501ebd-a357-4305-90c1-c46c6feb2ecf/?format=json"
     },
     {
@@ -41278,7 +41278,7 @@
       "windowEnd": "2026-08-26T13:27:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-197",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -41446,7 +41446,7 @@
           "relativeTime": "PT1H1M59S"
         }
       ],
-      "lastUpdated": "2026-08-26T10:42:22Z",
+      "lastUpdated": "2026-09-13T02:36:36Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/95653d52-bb77-4860-a815-dd7141778d17/?format=json"
     },
     {
@@ -41458,7 +41458,7 @@
       "windowEnd": "2026-08-27T22:40:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-198",
       "providerId": 115,
       "provider": "Arianespace",
       "countryCode": "FR",
@@ -41536,7 +41536,7 @@
           "relativeTime": "PT36M27S"
         }
       ],
-      "lastUpdated": "2026-08-27T21:00:21Z",
+      "lastUpdated": "2026-09-13T02:46:25Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/a57aed97-b94f-42e1-905e-9421dbd96ac8/?format=json"
     },
     {
@@ -41548,7 +41548,7 @@
       "windowEnd": "2026-08-30T11:26:19Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-199",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -41567,25 +41567,6 @@
       "gtoCapacityKg": 26700,
       "stages": [
         {
-          "id": 917,
-          "type": "Strap-On Booster",
-          "reused": false,
-          "flightNumber": 1,
-          "serialNumber": "B1104",
-          "vehicleStatus": "active",
-          "previousFlightDate": null,
-          "turnaround": null,
-          "landing": {
-            "attempt": true,
-            "success": true,
-            "description": "The Falcon Heavy side booster B1104 has landed back at the launch site at Landing Zone 40 after its 1st flight.",
-            "downrangeDistanceKm": 5.8,
-            "location": "Landing Zone 40",
-            "locationAbbrev": "LZ-40",
-            "type": null
-          }
-        },
-        {
           "id": 918,
           "type": "Strap-On Booster",
           "reused": true,
@@ -41601,6 +41582,25 @@
             "downrangeDistanceKm": 14.6,
             "location": "Landing Zone 2",
             "locationAbbrev": "LZ-2",
+            "type": null
+          }
+        },
+        {
+          "id": 917,
+          "type": "Strap-On Booster",
+          "reused": false,
+          "flightNumber": 1,
+          "serialNumber": "B1104",
+          "vehicleStatus": "active",
+          "previousFlightDate": null,
+          "turnaround": null,
+          "landing": {
+            "attempt": true,
+            "success": true,
+            "description": "The Falcon Heavy side booster B1104 has landed back at the launch site at Landing Zone 40 after its 1st flight.",
+            "downrangeDistanceKm": 5.8,
+            "location": "Landing Zone 40",
+            "locationAbbrev": "LZ-40",
             "type": null
           }
         },
@@ -41784,7 +41784,7 @@
           "relativeTime": "PT31M31S"
         }
       ],
-      "lastUpdated": "2026-08-30T15:02:45Z",
+      "lastUpdated": "2026-09-13T03:03:39Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/521f3a1c-f977-4306-9b7f-495858719adf/?format=json"
     },
     {
@@ -41860,7 +41860,7 @@
       "windowEnd": "2026-09-02T11:46:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-200",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -42028,7 +42028,7 @@
           "relativeTime": "PT1H2M4S"
         }
       ],
-      "lastUpdated": "2026-09-02T09:52:10Z",
+      "lastUpdated": "2026-09-13T03:12:56Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/63181269-b125-4c36-951c-c9bd9bbc4b55/?format=json"
     },
     {
@@ -42040,7 +42040,7 @@
       "windowEnd": "2026-09-02T12:01:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-201",
       "providerId": 147,
       "provider": "Rocket Lab",
       "countryCode": "US",
@@ -42148,7 +42148,7 @@
           "relativeTime": "PT56M16S"
         }
       ],
-      "lastUpdated": "2026-09-02T15:34:11Z",
+      "lastUpdated": "2026-09-13T03:27:04Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/9f5a4cb6-63f9-47e1-9512-b468bae2a8e6/?format=json"
     },
     {
@@ -42160,7 +42160,7 @@
       "windowEnd": "2026-09-04T01:00:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-202",
       "providerId": 31,
       "provider": "Indian Space Research Organization",
       "countryCode": "IN",
@@ -42192,7 +42192,7 @@
       "infoUrl": "https://www.isro.gov.in/ISRO_EN/Mission_GSLVF17.html",
       "webcastUrl": "https://www.youtube.com/watch?v=Q9OdYc3KpEw",
       "timeline": [],
-      "lastUpdated": "2026-09-03T22:09:26Z",
+      "lastUpdated": "2026-09-13T03:41:04Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/17d0ec68-f466-4916-9dc5-16123eda6484/?format=json"
     },
     {
@@ -42204,7 +42204,7 @@
       "windowEnd": "2026-09-05T21:00:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-203",
       "providerId": 1046,
       "provider": "Isar Aerospace",
       "countryCode": "DE",
@@ -42236,7 +42236,7 @@
       "infoUrl": "https://isaraerospace.com/mission-2",
       "webcastUrl": "https://www.youtube.com/watch?v=Ss1DUqLjecc",
       "timeline": [],
-      "lastUpdated": "2026-09-05T22:56:40Z",
+      "lastUpdated": "2026-09-13T03:55:24Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/1b23eb18-e06e-4058-9b42-e95ca0980511/?format=json"
     },
     {
@@ -42248,7 +42248,7 @@
       "windowEnd": "2026-09-06T14:59:00Z",
       "statusId": 3,
       "status": "Launch Successful",
-      "launchDesignator": null,
+      "launchDesignator": "2026-204",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -42326,13 +42326,13 @@
           "relativeTime": "-PT7M"
         },
         {
-          "abbrev": "Startup",
-          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
           "relativeTime": "-PT1M"
         },
         {
-          "abbrev": "Tank Press",
-          "description": "Fuel tanks are pressurized to flight levels",
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
           "relativeTime": "-PT1M"
         },
         {
@@ -42416,35 +42416,35 @@
           "relativeTime": "PT1H2M1S"
         }
       ],
-      "lastUpdated": "2026-09-06T15:33:08Z",
+      "lastUpdated": "2026-09-13T04:08:30Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/153ef8ef-b12b-43f4-a4bf-05b225c0cd37/?format=json"
     },
     {
       "id": "95eb9265-bdbe-43ad-b08c-6be7eb4e58f4",
-      "name": "Long March 2D/YZ-3 | Unknown Payload",
+      "name": "Long March 4B | Yaogan 53-01 to 03/56-01 to 03",
       "net": "2026-09-10T09:00:00Z",
-      "netPrecision": "Hour",
+      "netPrecision": "Minute",
       "windowStart": "2026-09-10T08:52:00Z",
       "windowEnd": "2026-09-10T09:13:00Z",
-      "statusId": 1,
-      "status": "Go for Launch",
-      "launchDesignator": null,
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-205",
       "providerId": 88,
       "provider": "China Aerospace Science and Technology Corporation",
       "countryCode": "CN",
       "region": "cn",
       "classificationBasis": "lsp_agency_country",
-      "orbit": "N/A",
-      "missionName": "Unknown Payload",
-      "missionType": "Unknown",
-      "missionDescription": "Details TBD.",
-      "rocketConfigurationId": 176,
-      "rocketConfiguration": "Long March 2D/YZ-3",
-      "rocketFullName": "Long March 2D/YZ-3",
-      "rocketFamily": "Long March 2",
+      "orbit": "LEO",
+      "missionName": "Yaogan 53-01 to 03/56-01 to 03",
+      "missionType": "Government/Top Secret",
+      "missionDescription": "6 Chinese military “remote sensing” satellite of unknown purposes.",
+      "rocketConfigurationId": 10,
+      "rocketConfiguration": "Long March 4B",
+      "rocketFullName": "Long March 4B",
+      "rocketFamily": "Long March 4",
       "rocketLaunchCostUsd": null,
-      "leoCapacityKg": null,
-      "gtoCapacityKg": null,
+      "leoCapacityKg": 4200,
+      "gtoCapacityKg": 1500,
       "stages": [],
       "padId": 22,
       "padName": "Launch Area 94 (SLS-2 / 603)",
@@ -42460,19 +42460,19 @@
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2026-09-07T16:31:11Z",
+      "lastUpdated": "2026-09-13T04:23:21Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/95eb9265-bdbe-43ad-b08c-6be7eb4e58f4/?format=json"
     },
     {
       "id": "3e0456da-14b1-4ac3-b59e-35fefb1d1530",
       "name": "Falcon 9 Block 5 | USSF-153",
-      "net": "2026-09-10T15:37:00Z",
-      "netPrecision": "Minute",
+      "net": "2026-09-10T15:42:30Z",
+      "netPrecision": "Second",
       "windowStart": "2026-09-10T15:37:00Z",
       "windowEnd": "2026-09-10T18:37:00Z",
-      "statusId": 1,
-      "status": "Go for Launch",
-      "launchDesignator": null,
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-206",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -42481,7 +42481,7 @@
       "orbit": "LEO",
       "missionName": "USSF-153",
       "missionType": "Government/Top Secret",
-      "missionDescription": "USSF-153 is a classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites for a US government entity based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+      "missionDescription": "USSF-153 is a classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
       "rocketConfigurationId": 164,
       "rocketConfiguration": "Falcon 9",
       "rocketFullName": "Falcon 9 Block 5",
@@ -42498,11 +42498,11 @@
           "serialNumber": "B1081",
           "vehicleStatus": "active",
           "previousFlightDate": "2026-08-01T03:08:43Z",
-          "turnaround": "P40DT12H28M17S",
+          "turnaround": "P40DT12H33M47S",
           "landing": {
             "attempt": true,
-            "success": null,
-            "description": "The Falcon 9 first stage B1081 will land on ASDS OCISLY after its 27th flight.",
+            "success": true,
+            "description": "The Falcon 9 first stage B1081 has landed on ASDS OCISLY after its 27th flight.",
             "downrangeDistanceKm": 574,
             "location": "Of Course I Still Love You",
             "locationAbbrev": "OCISLY",
@@ -42520,9 +42520,9 @@
       "locationName": "Vandenberg SFB, CA, USA",
       "locationCountryCode": "US",
       "padTimezone": "America/Los_Angeles",
-      "padTurnaround": "P4DT1H10M6S",
+      "padTurnaround": "P4DT1H15M36S",
       "infoUrl": "https://www.spacex.com/launches/ussf153",
-      "webcastUrl": "https://x.com/i/broadcasts/1nxnRBWejLOxO",
+      "webcastUrl": "https://www.youtube.com/watch?v=mPxbkR0BFS0",
       "timeline": [
         {
           "abbrev": "GO for Prop Load",
@@ -42550,13 +42550,13 @@
           "relativeTime": "-PT7M"
         },
         {
-          "abbrev": "Tank Press",
-          "description": "Fuel tanks are pressurized to flight levels",
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
           "relativeTime": "-PT1M"
         },
         {
-          "abbrev": "Startup",
-          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
           "relativeTime": "-PT1M"
         },
         {
@@ -42620,63 +42620,63 @@
           "relativeTime": "PT8M26S"
         }
       ],
-      "lastUpdated": "2026-09-04T07:04:42Z",
+      "lastUpdated": "2026-09-13T04:39:48Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/3e0456da-14b1-4ac3-b59e-35fefb1d1530/?format=json"
     },
     {
-      "id": "63063b9d-ade9-4448-8717-6f910aa81188",
-      "name": "Long March 8A | Unknown Payload",
-      "net": "2026-09-11T16:00:00Z",
-      "netPrecision": "Hour",
-      "windowStart": "2026-09-11T16:00:00Z",
-      "windowEnd": "2026-09-11T20:00:00Z",
-      "statusId": 8,
-      "status": "To Be Confirmed",
-      "launchDesignator": null,
-      "providerId": 88,
-      "provider": "China Aerospace Science and Technology Corporation",
-      "countryCode": "CN",
-      "region": "cn",
+      "id": "b81156da-c0b8-46c8-aebd-8af8d2be83cd",
+      "name": "Electron | Happily Ever Faster (BlackSky Gen-3 5)",
+      "net": "2026-09-11T03:28:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-11T01:00:00Z",
+      "windowEnd": "2026-09-11T03:28:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-207",
+      "providerId": 147,
+      "provider": "Rocket Lab",
+      "countryCode": "US",
+      "region": "us",
       "classificationBasis": "lsp_agency_country",
-      "orbit": "N/A",
-      "missionName": "Unknown Payload",
-      "missionType": "Unknown",
-      "missionDescription": "Details TBD.",
-      "rocketConfigurationId": 518,
-      "rocketConfiguration": "Long March 8A",
-      "rocketFullName": "Long March 8A",
-      "rocketFamily": "Long March 8",
-      "rocketLaunchCostUsd": null,
-      "leoCapacityKg": 9800,
-      "gtoCapacityKg": 3500,
+      "orbit": "LEO",
+      "missionName": "Happily Ever Faster (BlackSky Gen-3 5)",
+      "missionType": "Earth Science",
+      "missionDescription": "Note: Payload and customer identities were not publicly announced.\r\n\r\n5th of the BlackSky Gen-3 high resolution Earth-imaging satellites.",
+      "rocketConfigurationId": 26,
+      "rocketConfiguration": "Electron",
+      "rocketFullName": "Electron",
+      "rocketFamily": "Electron",
+      "rocketLaunchCostUsd": 6000000,
+      "leoCapacityKg": 300,
+      "gtoCapacityKg": null,
       "stages": [],
-      "padId": 218,
-      "padName": "Commercial LC-1",
+      "padId": 65,
+      "padName": "Rocket Lab Launch Complex 1A",
       "padActive": true,
-      "padLatitude": 19.597275,
-      "padLongitude": 110.930753,
-      "padCountryCode": "CN",
-      "locationId": 8,
-      "locationName": "Wenchang Space Launch Site, People's Republic of China",
-      "locationCountryCode": "CN",
-      "padTimezone": "Asia/Shanghai",
-      "padTurnaround": "P38DT7H8M",
-      "infoUrl": null,
+      "padLatitude": -39.262833,
+      "padLongitude": 177.864469,
+      "padCountryCode": "NZ",
+      "locationId": 10,
+      "locationName": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+      "locationCountryCode": "NZ",
+      "padTimezone": "Pacific/Auckland",
+      "padTurnaround": "P35DT18H10M",
+      "infoUrl": "https://rocketlabcorp.com/missions/launches/happily-ever-faster/",
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2026-08-30T12:30:39Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/63063b9d-ade9-4448-8717-6f910aa81188/?format=json"
+      "lastUpdated": "2026-09-14T00:28:53Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/b81156da-c0b8-46c8-aebd-8af8d2be83cd/?format=json"
     },
     {
       "id": "ad358a4d-c541-409b-9366-9c2f2da4aeb9",
       "name": "Falcon 9 Block 5 | O3b mPower 11-13",
-      "net": "2026-09-13T18:50:00Z",
+      "net": "2026-09-13T18:49:00Z",
       "netPrecision": "Minute",
-      "windowStart": "2026-09-13T18:50:00Z",
-      "windowEnd": "2026-09-13T20:27:00Z",
-      "statusId": 8,
-      "status": "To Be Confirmed",
-      "launchDesignator": null,
+      "windowStart": "2026-09-13T18:49:00Z",
+      "windowEnd": "2026-09-13T20:16:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-208",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -42697,16 +42697,16 @@
         {
           "id": 641,
           "type": "Core",
-          "reused": null,
-          "flightNumber": null,
-          "serialNumber": "Unknown F9",
-          "vehicleStatus": "N/A",
-          "previousFlightDate": null,
-          "turnaround": null,
+          "reused": true,
+          "flightNumber": 29,
+          "serialNumber": "B1080",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-07-14T09:10:12Z",
+          "turnaround": "P61DT9H38M48S",
           "landing": {
             "attempt": true,
-            "success": null,
-            "description": "The Falcon 9 first stage will land on ASDS ASOG after its flight.",
+            "success": true,
+            "description": "The Falcon 9 first stage B1080 has landed on ASDS ASOG after its 29th flight.",
             "downrangeDistanceKm": 660,
             "location": "A Shortfall of Gravitas",
             "locationAbbrev": "ASOG",
@@ -42724,68 +42724,138 @@
       "locationName": "Cape Canaveral SFS, FL, USA",
       "locationCountryCode": "US",
       "padTimezone": "America/New_York",
-      "padTurnaround": "P19DT9H16M22S",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-09-04T19:21:47Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/ad358a4d-c541-409b-9366-9c2f2da4aeb9/?format=json"
-    },
-    {
-      "id": "7d1afb26-6f9c-429b-9ccf-29012fd1e519",
-      "name": "Starship | Flight 14",
-      "net": "2026-09-15T00:00:00Z",
-      "netPrecision": "Day",
-      "windowStart": "2026-09-15T00:00:00Z",
-      "windowEnd": "2026-09-15T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
-      "providerId": 121,
-      "provider": "SpaceX",
-      "countryCode": "US",
-      "region": "us",
-      "classificationBasis": "lsp_agency_country",
-      "orbit": "LEO",
-      "missionName": "Flight 14",
-      "missionType": "Test Flight",
-      "missionDescription": "14th test flight of the two-stage Starship launch vehicle. 3rd flight of Starship V3 and the first Starship flight to deploy satellites (a group of Starlink satellites) into stable Low Earth Orbit.",
-      "rocketConfigurationId": 522,
-      "rocketConfiguration": "Starship",
-      "rocketFullName": "Starship V3",
-      "rocketFamily": "Starship",
-      "rocketLaunchCostUsd": null,
-      "leoCapacityKg": 100000,
-      "gtoCapacityKg": null,
-      "stages": [
+      "padTurnaround": "P19DT9H15M22S",
+      "infoUrl": "https://www.spacex.com/launches/mpower-f",
+      "webcastUrl": "https://www.youtube.com/watch?v=zZHnf8QB5ok",
+      "timeline": [
         {
-          "id": 990,
-          "type": "Core",
-          "reused": false,
-          "flightNumber": 1,
-          "serialNumber": "Booster 21",
-          "vehicleStatus": "active",
-          "previousFlightDate": null,
-          "turnaround": null,
-          "landing": null
+          "abbrev": "GO for Prop Load",
+          "description": "Launch director verifies go for propellant load",
+          "relativeTime": "-PT38M"
+        },
+        {
+          "abbrev": "Prop Load",
+          "description": "Start of propelland loading",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Stage 1 LOX Load",
+          "description": "Start of liquid oxygen loading in the first stage",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Stage 2 LOX Load",
+          "description": "Start of liquid oxygen loading in the second stage",
+          "relativeTime": "-PT16M"
+        },
+        {
+          "abbrev": "Engine Chill",
+          "description": "Start of engine chilling",
+          "relativeTime": "-PT7M"
+        },
+        {
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "relativeTime": "-PT1M"
+        },
+        {
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
+          "relativeTime": "-PT1M"
+        },
+        {
+          "abbrev": "GO for Launch",
+          "description": "Launch director verifies go for launch",
+          "relativeTime": "-PT45S"
+        },
+        {
+          "abbrev": "Ignition",
+          "description": "Start of the engine ignition sequence",
+          "relativeTime": "-PT3S"
+        },
+        {
+          "abbrev": "Liftoff",
+          "description": "First upwards movement of the rocket",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Max-Q",
+          "description": "Maximum dynamic pressure",
+          "relativeTime": "PT1M12S"
+        },
+        {
+          "abbrev": "MECO",
+          "description": "Cut-off of the main engine",
+          "relativeTime": "PT2M27S"
+        },
+        {
+          "abbrev": "Stage 2 Separation",
+          "description": "Separation of the second stage from the first",
+          "relativeTime": "PT2M31S"
+        },
+        {
+          "abbrev": "SES-1",
+          "description": "First start of the second engine",
+          "relativeTime": "PT2M37S"
+        },
+        {
+          "abbrev": "Fairing Separation",
+          "description": "Separation of the payload fairing",
+          "relativeTime": "PT3M18S"
+        },
+        {
+          "abbrev": "Entry Burn Startup",
+          "description": "Start of the atmospheric entry burn",
+          "relativeTime": "PT6M20S"
+        },
+        {
+          "abbrev": "Entry Burn Shutdown",
+          "description": "End of the atmospheric entry burn",
+          "relativeTime": "PT6M44S"
+        },
+        {
+          "abbrev": "SECO-1",
+          "description": "First cut-off of the second engine",
+          "relativeTime": "PT8M2S"
+        },
+        {
+          "abbrev": "Stage 1 Landing Burn",
+          "description": "Start of the first stage landing burn",
+          "relativeTime": "PT8M23S"
+        },
+        {
+          "abbrev": "Stage 1 Landing",
+          "description": "Landing of the first stage",
+          "relativeTime": "PT8M46S"
+        },
+        {
+          "abbrev": "SES-2",
+          "description": "Second start of the second engine",
+          "relativeTime": "PT29M51S"
+        },
+        {
+          "abbrev": "SECO-2",
+          "description": "Second cut-off of the second engine",
+          "relativeTime": "PT30M38S"
+        },
+        {
+          "abbrev": "Payload Separation",
+          "description": "Final deployment of the payload from the rocket",
+          "relativeTime": "PT33M41S"
+        },
+        {
+          "abbrev": "Payload Separation",
+          "description": "Final deployment of the payload from the rocket",
+          "relativeTime": "PT40M41S"
+        },
+        {
+          "abbrev": "Payload Separation",
+          "description": "Final deployment of the payload from the rocket",
+          "relativeTime": "PT47M41S"
         }
       ],
-      "padId": 235,
-      "padName": "Orbital Launch Pad 2",
-      "padActive": true,
-      "padLatitude": 25.99677,
-      "padLongitude": -97.15799,
-      "padCountryCode": "US",
-      "locationId": 143,
-      "locationName": "SpaceX Starbase, TX, USA",
-      "locationCountryCode": "US",
-      "padTimezone": "America/Chicago",
-      "padTurnaround": "P52DT1H9M",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-09-08T16:07:38Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/7d1afb26-6f9c-429b-9ccf-29012fd1e519/?format=json"
+      "lastUpdated": "2026-09-14T00:37:56Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/ad358a4d-c541-409b-9366-9c2f2da4aeb9/?format=json"
     },
     {
       "id": "8effc13a-c658-4d2e-9f15-8dba4d7fe2dd",
@@ -42794,9 +42864,9 @@
       "netPrecision": "Second",
       "windowStart": "2026-09-15T01:21:07Z",
       "windowEnd": "2026-09-15T01:21:07Z",
-      "statusId": 1,
-      "status": "Go for Launch",
-      "launchDesignator": null,
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-209",
       "providerId": 159,
       "provider": "Avio S.p.A",
       "countryCode": "IT",
@@ -42825,22 +42895,206 @@
       "locationCountryCode": "GF",
       "padTimezone": "America/Cayenne",
       "padTurnaround": "P118DT21H28M57S",
+      "infoUrl": "https://www.avio.com/press-kit/launch-kit-vv-30",
+      "webcastUrl": "https://www.youtube.com/watch?v=Rb4CN2avz90",
+      "timeline": [
+        {
+          "abbrev": "Liftoff",
+          "description": "First upwards movement of the rocket",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Stage 2 Separation",
+          "description": "Separation of the second stage from the first",
+          "relativeTime": "PT2M27S"
+        },
+        {
+          "abbrev": "SES",
+          "description": "Start of the second engine",
+          "relativeTime": "PT2M28S"
+        },
+        {
+          "abbrev": "Stage 3 Separation",
+          "description": "Separation of the third stage from the second",
+          "relativeTime": "PT4M32S"
+        },
+        {
+          "abbrev": "Stage 3 Ignition",
+          "description": "Third stage engine ignites.",
+          "relativeTime": "PT4M39S"
+        },
+        {
+          "abbrev": "Fairing Separation",
+          "description": "Separation of the payload fairing",
+          "relativeTime": "PT4M44S"
+        },
+        {
+          "abbrev": "Kick Stage Separation",
+          "description": "Separation of the kick stage from the previous stage",
+          "relativeTime": "PT7M11S"
+        },
+        {
+          "abbrev": "Kick Stage Ignition",
+          "description": "Start of the kick stage engine",
+          "relativeTime": "PT8M23S"
+        },
+        {
+          "abbrev": "Kick Stage Cut-off",
+          "description": "Cut-off of the kick stage engine",
+          "relativeTime": "PT17M6S"
+        },
+        {
+          "abbrev": "Kick Stage Ignition",
+          "description": "Start of the kick stage engine",
+          "relativeTime": "PT55M29S"
+        },
+        {
+          "abbrev": "Kick Stage Cut-off",
+          "description": "Cut-off of the kick stage engine",
+          "relativeTime": "PT58M30S"
+        },
+        {
+          "abbrev": "Payload Separation",
+          "description": "Final deployment of the payload from the rocket",
+          "relativeTime": "PT1H50S"
+        },
+        {
+          "abbrev": "Kick Stage Ignition",
+          "description": "Start of the kick stage engine",
+          "relativeTime": "PT1H46M19S"
+        },
+        {
+          "abbrev": "Kick Stage Cut-off",
+          "description": "Cut-off of the kick stage engine",
+          "relativeTime": "PT1H46M49S"
+        },
+        {
+          "abbrev": "Kick Stage Ignition",
+          "description": "Start of the kick stage engine",
+          "relativeTime": "PT1H54M32S"
+        },
+        {
+          "abbrev": "Kick Stage Cut-off",
+          "description": "Cut-off of the kick stage engine",
+          "relativeTime": "PT1H54M58S"
+        },
+        {
+          "abbrev": "Payload Separation",
+          "description": "Final deployment of the payload from the rocket",
+          "relativeTime": "PT1H56M3S"
+        },
+        {
+          "abbrev": "Kick Stage Ignition",
+          "description": "Start of the kick stage engine",
+          "relativeTime": "PT2H23M32S"
+        },
+        {
+          "abbrev": "Kick Stage Cut-off",
+          "description": "Cut-off of the kick stage engine",
+          "relativeTime": "PT2H24M58S"
+        }
+      ],
+      "lastUpdated": "2026-09-15T11:48:24Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/8effc13a-c658-4d2e-9f15-8dba4d7fe2dd/?format=json"
+    },
+    {
+      "id": "de446468-057f-4c9d-a6a1-af99c93b541e",
+      "name": "Zhuque-2E Block 2 | SpaceSail Polar Group #15",
+      "net": "2026-09-15T06:26:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-15T06:18:00Z",
+      "windowEnd": "2026-09-15T06:40:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-210",
+      "providerId": 259,
+      "provider": "LandSpace",
+      "countryCode": "CN",
+      "region": "cn",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "PO",
+      "missionName": "SpaceSail Polar Group #15",
+      "missionType": "Communications",
+      "missionDescription": "10 Low Earth Orbit communication satellites with Ku, Q and V band payloads for the G60 constellation operated by Shanghai Spacesail Technologies with funding backed by the Shanghai local government.\r\n\r\nInitial constellation will consist of 1296 satellites by 2027 with long term plans to expand it to 12000 satellites.",
+      "rocketConfigurationId": 556,
+      "rocketConfiguration": "Zhuque-2E Block 2",
+      "rocketFullName": "Zhuque-2E Block 2",
+      "rocketFamily": "Zhuque",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 6000,
+      "gtoCapacityKg": null,
+      "stages": [],
+      "padId": 9,
+      "padName": "Launch Area 96A",
+      "padActive": true,
+      "padLatitude": 40.91491,
+      "padLongitude": 100.245488,
+      "padCountryCode": "CN",
+      "locationId": 17,
+      "locationName": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "locationCountryCode": "CN",
+      "padTimezone": "Asia/Shanghai",
+      "padTurnaround": "P97DT22H3M",
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2026-07-30T14:09:43Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/8effc13a-c658-4d2e-9f15-8dba4d7fe2dd/?format=json"
+      "lastUpdated": "2026-09-15T11:58:09Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/de446468-057f-4c9d-a6a1-af99c93b541e/?format=json"
+    },
+    {
+      "id": "767f7827-53d8-4621-803b-f456a1e6b512",
+      "name": "Gravity-1 | SpaceSail Polar Group #16",
+      "net": "2026-09-15T22:00:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-15T21:50:00Z",
+      "windowEnd": "2026-09-15T22:11:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-211",
+      "providerId": 1080,
+      "provider": "Orienspace Technology",
+      "countryCode": "CN",
+      "region": "cn",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "PO",
+      "missionName": "SpaceSail Polar Group #16",
+      "missionType": "Communications",
+      "missionDescription": "9 Low Earth Orbit communication satellites with Ku, Q and V band payloads for the G60 constellation operated by Shanghai Spacesail Technologies with funding backed by the Shanghai local government.\r\n\r\nInitial constellation will consist of 1296 satellites by 2027 with long term plans to expand it to 12000 satellites.",
+      "rocketConfigurationId": 503,
+      "rocketConfiguration": "Gravity-1",
+      "rocketFullName": "Gravity-1",
+      "rocketFamily": "Gravity-1",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 6500,
+      "gtoCapacityKg": null,
+      "stages": [],
+      "padId": 255,
+      "padName": "Yellow Sea (launch location 5)",
+      "padActive": true,
+      "padLatitude": 31.2,
+      "padLongitude": 123.7,
+      "padCountryCode": "CN",
+      "locationId": 185,
+      "locationName": "Haiyang Oriental Spaceport",
+      "locationCountryCode": "CN",
+      "padTimezone": "Asia/Shanghai",
+      "padTurnaround": "P55DT19H6M",
+      "infoUrl": null,
+      "webcastUrl": null,
+      "timeline": [],
+      "lastUpdated": "2026-09-16T17:59:14Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/767f7827-53d8-4621-803b-f456a1e6b512/?format=json"
     },
     {
       "id": "d793ba47-faf5-4bab-a386-39a9ccc49c90",
       "name": "Soyuz 2.1b | Progress MS-35 (96P)",
-      "net": "2026-09-16T00:00:00Z",
-      "netPrecision": "Day",
-      "windowStart": "2026-09-16T00:00:00Z",
-      "windowEnd": "2026-09-16T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
+      "net": "2026-09-16T13:33:54Z",
+      "netPrecision": "Second",
+      "windowStart": "2026-09-16T13:33:54Z",
+      "windowEnd": "2026-09-16T13:33:54Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-212",
       "providerId": 63,
       "provider": "Russian Federal Space Agency (ROSCOSMOS)",
       "countryCode": "RU",
@@ -42868,32 +43122,63 @@
       "locationName": "Baikonur Cosmodrome, Republic of Kazakhstan",
       "locationCountryCode": "KZ",
       "padTimezone": "Asia/Qyzylorda",
-      "padTurnaround": "P63DT9H12M17S",
+      "padTurnaround": "P63DT22H46M11S",
       "infoUrl": null,
       "webcastUrl": "https://www.youtube.com/watch?v=cCpf0BOjlLE",
-      "timeline": [],
-      "lastUpdated": "2026-09-08T16:15:04Z",
+      "timeline": [
+        {
+          "abbrev": "Liftoff",
+          "description": "First upwards movement of the rocket",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Boosters Separation",
+          "description": "Separation of the side boosters",
+          "relativeTime": "PT1M57S"
+        },
+        {
+          "abbrev": "Stage 2 Separation",
+          "description": "Separation of the second stage from the first",
+          "relativeTime": "PT4M45S"
+        },
+        {
+          "abbrev": "Fairing Separation",
+          "description": "Separation of the payload fairing",
+          "relativeTime": "PT4M54S"
+        },
+        {
+          "abbrev": "Stage 3 Cutoff",
+          "description": "Third stage engine shuts down.",
+          "relativeTime": "PT9M11S"
+        },
+        {
+          "abbrev": "Payload Separation",
+          "description": "Final deployment of the payload from the rocket",
+          "relativeTime": "PT9M14S"
+        }
+      ],
+      "lastUpdated": "2026-09-16T18:11:26Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/d793ba47-faf5-4bab-a386-39a9ccc49c90/?format=json"
     },
     {
       "id": "898f7df0-b6ce-4a5c-80b4-67e81842124e",
-      "name": "Long March 12 | Unknown Payload",
-      "net": "2026-09-17T00:00:00Z",
-      "netPrecision": "Hour",
-      "windowStart": "2026-09-17T00:00:00Z",
-      "windowEnd": "2026-09-17T04:00:00Z",
-      "statusId": 8,
-      "status": "To Be Confirmed",
-      "launchDesignator": null,
+      "name": "Long March 12 | SatNet LEO Group 25",
+      "net": "2026-09-17T00:32:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-17T00:25:00Z",
+      "windowEnd": "2026-09-17T00:54:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-213",
       "providerId": 88,
       "provider": "China Aerospace Science and Technology Corporation",
       "countryCode": "CN",
       "region": "cn",
       "classificationBasis": "lsp_agency_country",
-      "orbit": "N/A",
-      "missionName": "Unknown Payload",
-      "missionType": "Unknown",
-      "missionDescription": "Details TBD.",
+      "orbit": "LEO",
+      "missionName": "SatNet LEO Group 25",
+      "missionType": "Communications",
+      "missionDescription": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
       "rocketConfigurationId": 517,
       "rocketConfiguration": "Long March 12",
       "rocketFullName": "Long March 12",
@@ -42912,23 +43197,435 @@
       "locationName": "Wenchang Space Launch Site, People's Republic of China",
       "locationCountryCode": "CN",
       "padTimezone": "Asia/Shanghai",
-      "padTurnaround": "P31DT19H50M",
+      "padTurnaround": "P31DT20H22M",
+      "infoUrl": null,
+      "webcastUrl": "https://www.youtube.com/watch?v=M7fx59LjfJ8",
+      "timeline": [],
+      "lastUpdated": "2026-09-18T00:17:31Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/898f7df0-b6ce-4a5c-80b4-67e81842124e/?format=json"
+    },
+    {
+      "id": "17c71937-dd80-406f-bb47-0c9ee9a24276",
+      "name": "Falcon 9 Block 5 | USSF-259",
+      "net": "2026-09-17T01:07:56Z",
+      "netPrecision": "Second",
+      "windowStart": "2026-09-17T01:00:00Z",
+      "windowEnd": "2026-09-17T05:00:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-214",
+      "providerId": 121,
+      "provider": "SpaceX",
+      "countryCode": "US",
+      "region": "us",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "PO",
+      "missionName": "USSF-259",
+      "missionType": "Government/Top Secret",
+      "missionDescription": "USSF-259 is a classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of ascent rocket stage drop zones being fits with previous SDA Transport Layer launches.",
+      "rocketConfigurationId": 164,
+      "rocketConfiguration": "Falcon 9",
+      "rocketFullName": "Falcon 9 Block 5",
+      "rocketFamily": "Falcon 9",
+      "rocketLaunchCostUsd": 52000000,
+      "leoCapacityKg": 22800,
+      "gtoCapacityKg": 8300,
+      "stages": [
+        {
+          "id": 991,
+          "type": "Core",
+          "reused": true,
+          "flightNumber": 13,
+          "serialNumber": "B1097",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-08-19T04:01:07Z",
+          "turnaround": "P28DT21H6M49S",
+          "landing": {
+            "attempt": true,
+            "success": true,
+            "description": "The Falcon 9 first stage B1097 has landed on ASDS OCISLY after its 13th flight.",
+            "downrangeDistanceKm": 574,
+            "location": "Of Course I Still Love You",
+            "locationAbbrev": "OCISLY",
+            "type": null
+          }
+        }
+      ],
+      "padId": 16,
+      "padName": "Space Launch Complex 4E",
+      "padActive": true,
+      "padLatitude": 34.632,
+      "padLongitude": -120.611,
+      "padCountryCode": "US",
+      "locationId": 11,
+      "locationName": "Vandenberg SFB, CA, USA",
+      "locationCountryCode": "US",
+      "padTimezone": "America/Los_Angeles",
+      "padTurnaround": "P6DT9H25M26S",
+      "infoUrl": "https://www.spacex.com/launches/ussf259",
+      "webcastUrl": "https://www.youtube.com/watch?v=7SMBsQ5MQCk",
+      "timeline": [
+        {
+          "abbrev": "GO for Prop Load",
+          "description": "Launch director verifies go for propellant load",
+          "relativeTime": "-PT38M"
+        },
+        {
+          "abbrev": "Prop Load",
+          "description": "Start of propelland loading",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Stage 1 LOX Load",
+          "description": "Start of liquid oxygen loading in the first stage",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Stage 2 LOX Load",
+          "description": "Start of liquid oxygen loading in the second stage",
+          "relativeTime": "-PT16M"
+        },
+        {
+          "abbrev": "Engine Chill",
+          "description": "Start of engine chilling",
+          "relativeTime": "-PT7M"
+        },
+        {
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "relativeTime": "-PT1M"
+        },
+        {
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
+          "relativeTime": "-PT1M"
+        },
+        {
+          "abbrev": "GO for Launch",
+          "description": "Launch director verifies go for launch",
+          "relativeTime": "-PT45S"
+        },
+        {
+          "abbrev": "Ignition",
+          "description": "Start of the engine ignition sequence",
+          "relativeTime": "-PT3S"
+        },
+        {
+          "abbrev": "Liftoff",
+          "description": "First upwards movement of the rocket",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Max-Q",
+          "description": "Maximum dynamic pressure",
+          "relativeTime": "PT1M7S"
+        },
+        {
+          "abbrev": "MECO",
+          "description": "Cut-off of the main engine",
+          "relativeTime": "PT2M26S"
+        },
+        {
+          "abbrev": "Stage 2 Separation",
+          "description": "Separation of the second stage from the first",
+          "relativeTime": "PT2M30S"
+        },
+        {
+          "abbrev": "SES-1",
+          "description": "First start of the second engine",
+          "relativeTime": "PT2M36S"
+        },
+        {
+          "abbrev": "Fairing Separation",
+          "description": "Separation of the payload fairing",
+          "relativeTime": "PT2M57S"
+        },
+        {
+          "abbrev": "Entry Burn Startup",
+          "description": "Start of the atmospheric entry burn",
+          "relativeTime": "PT6M3S"
+        },
+        {
+          "abbrev": "Entry Burn Shutdown",
+          "description": "End of the atmospheric entry burn",
+          "relativeTime": "PT6M24S"
+        },
+        {
+          "abbrev": "Stage 1 Landing Burn",
+          "description": "Start of the first stage landing burn",
+          "relativeTime": "PT7M58S"
+        },
+        {
+          "abbrev": "Stage 1 Landing",
+          "description": "Landing of the first stage",
+          "relativeTime": "PT8M20S"
+        }
+      ],
+      "lastUpdated": "2026-09-18T00:33:50Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/17c71937-dd80-406f-bb47-0c9ee9a24276/?format=json"
+    },
+    {
+      "id": "71aa4d56-0ce9-4c7d-a808-cc22f2ac5a84",
+      "name": "Kuaizhou 11 | SpaceTY-51 & 52",
+      "net": "2026-09-17T02:40:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-17T02:31:00Z",
+      "windowEnd": "2026-09-17T03:12:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-215",
+      "providerId": 194,
+      "provider": "ExPace",
+      "countryCode": "CN",
+      "region": "cn",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "LEO",
+      "missionName": "SpaceTY-51 & 52",
+      "missionType": "Earth Science",
+      "missionDescription": "2 Earth observation radar satellites built by the Chinese satellite manufacturer SpaceTY.",
+      "rocketConfigurationId": 194,
+      "rocketConfiguration": "Kuaizhou 11",
+      "rocketFullName": "Kuaizhou 11",
+      "rocketFamily": "Kuaizhou",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 1000,
+      "gtoCapacityKg": null,
+      "stages": [],
+      "padId": 21,
+      "padName": "Launch Area 95A",
+      "padActive": true,
+      "padLatitude": 40.969117,
+      "padLongitude": 100.343333,
+      "padCountryCode": "CN",
+      "locationId": 17,
+      "locationName": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "locationCountryCode": "CN",
+      "padTimezone": "Asia/Shanghai",
+      "padTurnaround": "P91DT22H42M",
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2026-09-08T16:18:35Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/898f7df0-b6ce-4a5c-80b4-67e81842124e/?format=json"
+      "lastUpdated": "2026-09-18T00:39:49Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/71aa4d56-0ce9-4c7d-a808-cc22f2ac5a84/?format=json"
+    },
+    {
+      "id": "ab3c1e6c-03fe-48a7-b6ce-30c79569bdfb",
+      "name": "Soyuz 2.1b/Fregat | Glonass-K1 No. 20 (?)",
+      "net": "2026-09-17T16:50:00Z",
+      "netPrecision": "Hour",
+      "windowStart": "2026-09-17T16:50:00Z",
+      "windowEnd": "2026-09-17T16:50:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-216",
+      "providerId": 193,
+      "provider": "Russian Space Forces",
+      "countryCode": "RU",
+      "region": "other",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "MEO",
+      "missionName": "Glonass-K1 No. 20 (?)",
+      "missionType": "Navigation",
+      "missionDescription": "Note: Satellite serial number and Cosmos designation not confirmed.\r\n\r\nGlonass-K are the third generation of satellite design for GLONASS satellite navigation system. GLONASS is a Russian space-based navigation system comparable to the similar GPS and Galileo systems. This generation improves on accuracy, power consumption and design life. Each satellite is unpressurized and weighs 935 kg,  and has an operational lifetime of 10 years.",
+      "rocketConfigurationId": 134,
+      "rocketConfiguration": "Soyuz 2.1b/Fregat-M",
+      "rocketFullName": "Soyuz 2.1b Fregat-M",
+      "rocketFamily": "Soyuz 2",
+      "rocketLaunchCostUsd": 48500000,
+      "leoCapacityKg": 8200,
+      "gtoCapacityKg": 3250,
+      "stages": [],
+      "padId": 36,
+      "padName": "43/3 (43L)",
+      "padActive": true,
+      "padLatitude": 62.9273,
+      "padLongitude": 40.45,
+      "padCountryCode": "RU",
+      "locationId": 6,
+      "locationName": "Plesetsk Cosmodrome, Russian Federation",
+      "locationCountryCode": "RU",
+      "padTimezone": "Europe/Moscow",
+      "padTurnaround": "P24DT14H10M",
+      "infoUrl": null,
+      "webcastUrl": null,
+      "timeline": [],
+      "lastUpdated": "2026-09-18T13:37:26Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/ab3c1e6c-03fe-48a7-b6ce-30c79569bdfb/?format=json"
+    },
+    {
+      "id": "f4c720ce-0cfd-43e6-b8dd-00273073bc01",
+      "name": "Electron | Owl By The Dozen (StriX Launch 12)",
+      "net": "2026-09-19T03:22:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-19T03:22:00Z",
+      "windowEnd": "2026-09-19T03:22:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-217",
+      "providerId": 147,
+      "provider": "Rocket Lab",
+      "countryCode": "US",
+      "region": "us",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "LEO",
+      "missionName": "Owl By The Dozen (StriX Launch 12)",
+      "missionType": "Earth Science",
+      "missionDescription": "Synthetic aperture radar satellite for Japanese Earth imaging company Synspective.",
+      "rocketConfigurationId": 26,
+      "rocketConfiguration": "Electron",
+      "rocketFullName": "Electron",
+      "rocketFamily": "Electron",
+      "rocketLaunchCostUsd": 6000000,
+      "leoCapacityKg": 300,
+      "gtoCapacityKg": null,
+      "stages": [],
+      "padId": 185,
+      "padName": "Rocket Lab Launch Complex 1B",
+      "padActive": true,
+      "padLatitude": -39.262833,
+      "padLongitude": 177.864469,
+      "padCountryCode": "NZ",
+      "locationId": 10,
+      "locationName": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+      "locationCountryCode": "NZ",
+      "padTimezone": "Pacific/Auckland",
+      "padTurnaround": "P16DT15H21M",
+      "infoUrl": "https://rocketlabcorp.com/missions/launches/owl-by-the-dozen/",
+      "webcastUrl": "https://www.youtube.com/watch?v=AnN8Pj8WvSo",
+      "timeline": [
+        {
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "relativeTime": "-PT2M"
+        },
+        {
+          "abbrev": "Ignition",
+          "description": "Start of the engine ignition sequence",
+          "relativeTime": "-PT2S"
+        },
+        {
+          "abbrev": "Liftoff",
+          "description": "First upwards movement of the rocket",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Supersonic",
+          "description": "Vehicle is supersonic",
+          "relativeTime": "PT52S"
+        },
+        {
+          "abbrev": "Max-Q",
+          "description": "Maximum dynamic pressure",
+          "relativeTime": "PT1M7S"
+        },
+        {
+          "abbrev": "MECO",
+          "description": "Cut-off of the main engine",
+          "relativeTime": "PT2M37S"
+        },
+        {
+          "abbrev": "Stage 2 Separation",
+          "description": "Separation of the second stage from the first",
+          "relativeTime": "PT2M40S"
+        },
+        {
+          "abbrev": "SES",
+          "description": "Start of the second engine",
+          "relativeTime": "PT2M44S"
+        },
+        {
+          "abbrev": "Fairing Separation",
+          "description": "Separation of the payload fairing",
+          "relativeTime": "PT3M21S"
+        },
+        {
+          "abbrev": "Battery Hotswap",
+          "description": "Electron Second stages switches to a new set of batteries and jettisons the depleted ones.",
+          "relativeTime": "PT6M37S"
+        },
+        {
+          "abbrev": "SECO",
+          "description": "Cut-off of the second engine",
+          "relativeTime": "PT9M14S"
+        },
+        {
+          "abbrev": "Kick Stage Separation",
+          "description": "Separation of the kick stage from the previous stage",
+          "relativeTime": "PT9M18S"
+        },
+        {
+          "abbrev": "Kick Stage Ignition",
+          "description": "Start of the kick stage engine",
+          "relativeTime": "PT49M20S"
+        },
+        {
+          "abbrev": "Kick Stage Cut-off",
+          "description": "Cut-off of the kick stage engine",
+          "relativeTime": "PT52M26S"
+        },
+        {
+          "abbrev": "Payload Separation",
+          "description": "Final deployment of the payload from the rocket",
+          "relativeTime": "PT53M16S"
+        }
+      ],
+      "lastUpdated": "2026-09-20T23:35:11Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/f4c720ce-0cfd-43e6-b8dd-00273073bc01/?format=json"
+    },
+    {
+      "id": "a527b585-f01f-4ecc-9230-711dcef72ef1",
+      "name": "Long March 2D | PIESAT-2 13-16",
+      "net": "2026-09-19T10:50:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-19T10:43:00Z",
+      "windowEnd": "2026-09-19T11:06:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-218",
+      "providerId": 88,
+      "provider": "China Aerospace Science and Technology Corporation",
+      "countryCode": "CN",
+      "region": "cn",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "SSO",
+      "missionName": "PIESAT-2 13-16",
+      "missionType": "Earth Science",
+      "missionDescription": "4 X-band synthetic-aperture radar Earth observation satellites for the Chinese Earth observation satellite company PIESAT.",
+      "rocketConfigurationId": 17,
+      "rocketConfiguration": "Long March 2D",
+      "rocketFullName": "Long March 2D",
+      "rocketFamily": "Long March 2",
+      "rocketLaunchCostUsd": 30000000,
+      "leoCapacityKg": 3500,
+      "gtoCapacityKg": 0,
+      "stages": [],
+      "padId": 25,
+      "padName": "Launch Complex 9",
+      "padActive": true,
+      "padLatitude": 38.863128,
+      "padLongitude": 111.589567,
+      "padCountryCode": "CN",
+      "locationId": 19,
+      "locationName": "Taiyuan Satellite Launch Center, People's Republic of China",
+      "locationCountryCode": "CN",
+      "padTimezone": "Asia/Shanghai",
+      "padTurnaround": "P33DT7H48M",
+      "infoUrl": null,
+      "webcastUrl": null,
+      "timeline": [],
+      "lastUpdated": "2026-09-20T23:46:44Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/a527b585-f01f-4ecc-9230-711dcef72ef1/?format=json"
     },
     {
       "id": "d1471f9d-e9d0-4146-8e97-90863e48bfc8",
       "name": "Falcon 9 Block 5 | Starlink Group 15-27",
       "net": "2026-09-20T01:47:00Z",
-      "netPrecision": "Minute",
+      "netPrecision": "Second",
       "windowStart": "2026-09-20T01:47:00Z",
       "windowEnd": "2026-09-20T05:47:00Z",
-      "statusId": 1,
-      "status": "Go for Launch",
-      "launchDesignator": null,
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-219",
       "providerId": 121,
       "provider": "SpaceX",
       "countryCode": "US",
@@ -42957,8 +43654,8 @@
           "turnaround": "P42DT9H11M58S",
           "landing": {
             "attempt": true,
-            "success": null,
-            "description": "The Falcon 9 first stage B1093 will land on ASDS OCISLY after its 17th flight.",
+            "success": true,
+            "description": "The Falcon 9 first stage B1093 has landed on ASDS OCISLY after its 17th flight.",
             "downrangeDistanceKm": 574,
             "location": "Of Course I Still Love You",
             "locationAbbrev": "OCISLY",
@@ -42976,9 +43673,9 @@
       "locationName": "Vandenberg SFB, CA, USA",
       "locationCountryCode": "US",
       "padTimezone": "America/Los_Angeles",
-      "padTurnaround": "P9DT10H10M",
+      "padTurnaround": "P3DT39M4S",
       "infoUrl": "https://www.spacex.com/launches/sl-15-27",
-      "webcastUrl": "https://x.com/i/broadcasts/1nxnRBXEladxO",
+      "webcastUrl": "https://www.youtube.com/watch?v=gOcigcsXtHk",
       "timeline": [
         {
           "abbrev": "GO for Prop Load",
@@ -43006,13 +43703,13 @@
           "relativeTime": "-PT7M"
         },
         {
-          "abbrev": "Tank Press",
-          "description": "Fuel tanks are pressurized to flight levels",
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
           "relativeTime": "-PT1M"
         },
         {
-          "abbrev": "Startup",
-          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
           "relativeTime": "-PT1M"
         },
         {
@@ -43096,62 +43793,1086 @@
           "relativeTime": "PT1H1M55S"
         }
       ],
-      "lastUpdated": "2026-09-08T13:59:37Z",
+      "lastUpdated": "2026-09-20T23:59:42Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/d1471f9d-e9d0-4146-8e97-90863e48bfc8/?format=json"
     },
     {
-      "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
-      "name": "Vulcan VC6L | Amazon Leo (LV-01)",
-      "net": "2026-09-30T00:00:00Z",
-      "netPrecision": "Month",
-      "windowStart": "2026-09-30T00:00:00Z",
-      "windowEnd": "2026-09-30T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
+      "id": "5af31461-bce5-4cfb-a0ee-b527cf285d90",
+      "name": "Kinetica 1 | 9 satellites",
+      "net": "2026-09-20T04:03:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-20T03:54:00Z",
+      "windowEnd": "2026-09-20T04:15:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-220",
+      "providerId": 1040,
+      "provider": "CAS Space",
+      "countryCode": "CN",
+      "region": "cn",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "SSO",
+      "missionName": "9 satellites",
+      "missionType": "Earth Science",
+      "missionDescription": "Share-ride of 9 commercial Earth observation and technology demonstration satellites to SSO, details TBD.",
+      "rocketConfigurationId": 483,
+      "rocketConfiguration": "Kinetica 1",
+      "rocketFullName": "Kinetica 1",
+      "rocketFamily": "Kinetica 1",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 2000,
+      "gtoCapacityKg": null,
+      "stages": [],
+      "padId": 151,
+      "padName": "Launch Area 130",
+      "padActive": true,
+      "padLatitude": 40.8182,
+      "padLongitude": 100.22514,
+      "padCountryCode": "CN",
+      "locationId": 17,
+      "locationName": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "locationCountryCode": "CN",
+      "padTimezone": "Asia/Shanghai",
+      "padTurnaround": "P58DT4H30M",
+      "infoUrl": null,
+      "webcastUrl": null,
+      "timeline": [],
+      "lastUpdated": "2026-09-21T00:10:16Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/5af31461-bce5-4cfb-a0ee-b527cf285d90/?format=json"
+    },
+    {
+      "id": "63063b9d-ade9-4448-8717-6f910aa81188",
+      "name": "Long March 8A | SatNet LEO Group 26",
+      "net": "2026-09-23T13:32:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-23T13:24:00Z",
+      "windowEnd": "2026-09-23T13:49:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-221",
+      "providerId": 88,
+      "provider": "China Aerospace Science and Technology Corporation",
+      "countryCode": "CN",
+      "region": "cn",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "LEO",
+      "missionName": "SatNet LEO Group 26",
+      "missionType": "Communications",
+      "missionDescription": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
+      "rocketConfigurationId": 518,
+      "rocketConfiguration": "Long March 8A",
+      "rocketFullName": "Long March 8A",
+      "rocketFamily": "Long March 8",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 9800,
+      "gtoCapacityKg": 3500,
+      "stages": [],
+      "padId": 218,
+      "padName": "Commercial LC-1",
+      "padActive": true,
+      "padLatitude": 19.597275,
+      "padLongitude": 110.930753,
+      "padCountryCode": "CN",
+      "locationId": 8,
+      "locationName": "Wenchang Space Launch Site, People's Republic of China",
+      "locationCountryCode": "CN",
+      "padTimezone": "Asia/Shanghai",
+      "padTurnaround": "P50DT4H40M",
+      "infoUrl": null,
+      "webcastUrl": "https://www.youtube.com/watch?v=vRrITqt9Ttg",
+      "timeline": [],
+      "lastUpdated": "2026-09-24T22:30:09Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/63063b9d-ade9-4448-8717-6f910aa81188/?format=json"
+    },
+    {
+      "id": "aed67837-b567-43e0-8071-c3ccc24aa496",
+      "name": "Long March 6A | Yaogan 40 Group 04",
+      "net": "2026-09-24T08:46:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-24T08:38:00Z",
+      "windowEnd": "2026-09-24T09:04:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": "2026-222",
+      "providerId": 88,
+      "provider": "China Aerospace Science and Technology Corporation",
+      "countryCode": "CN",
+      "region": "cn",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "PO",
+      "missionName": "Yaogan 40 Group 04",
+      "missionType": "Government/Top Secret",
+      "missionDescription": "3 Chinese reconnaissance satellites of unknown purposes, officially reported as for \"Electromagnetic environment probing\".",
+      "rocketConfigurationId": 478,
+      "rocketConfiguration": "Long March 6A",
+      "rocketFullName": "Long March 6A",
+      "rocketFamily": "Long March 6",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": null,
+      "gtoCapacityKg": null,
+      "stages": [],
+      "padId": 200,
+      "padName": "Launch Complex 9A",
+      "padActive": true,
+      "padLatitude": 38.8583,
+      "padLongitude": 111.5802,
+      "padCountryCode": "CN",
+      "locationId": 19,
+      "locationName": "Taiyuan Satellite Launch Center, People's Republic of China",
+      "locationCountryCode": "CN",
+      "padTimezone": "Asia/Shanghai",
+      "padTurnaround": "P30DT5H25M",
+      "infoUrl": null,
+      "webcastUrl": null,
+      "timeline": [],
+      "lastUpdated": "2026-09-24T22:43:36Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/aed67837-b567-43e0-8071-c3ccc24aa496/?format=json"
+    },
+    {
+      "id": "9e24bef7-c44b-4fdc-ba52-68545ce9457e",
+      "name": "Electron | Owlright, Owlright, Owlright (StriX Launch 13)",
+      "net": "2026-09-26T00:39:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-26T00:39:00Z",
+      "windowEnd": "2026-09-26T00:39:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
       "launchDesignator": null,
-      "providerId": 124,
-      "provider": "United Launch Alliance",
+      "providerId": 147,
+      "provider": "Rocket Lab",
       "countryCode": "US",
       "region": "us",
       "classificationBasis": "lsp_agency_country",
       "orbit": "LEO",
-      "missionName": "Amazon Leo (LV-01)",
-      "missionType": "Communications",
-      "missionDescription": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n45 satellites will be carried on each Vulcan launch.",
-      "rocketConfigurationId": 479,
-      "rocketConfiguration": "Vulcan VC6L",
-      "rocketFullName": "Vulcan VC6L",
-      "rocketFamily": "Vulcan",
-      "rocketLaunchCostUsd": null,
-      "leoCapacityKg": 27200,
-      "gtoCapacityKg": 15300,
+      "missionName": "Owlright, Owlright, Owlright (StriX Launch 13)",
+      "missionType": "Earth Science",
+      "missionDescription": "Synthetic aperture radar satellite for Japanese Earth imaging company Synspective.",
+      "rocketConfigurationId": 26,
+      "rocketConfiguration": "Electron",
+      "rocketFullName": "Electron",
+      "rocketFamily": "Electron",
+      "rocketLaunchCostUsd": 6000000,
+      "leoCapacityKg": 300,
+      "gtoCapacityKg": null,
       "stages": [],
-      "padId": 29,
-      "padName": "Space Launch Complex 41",
+      "padId": 185,
+      "padName": "Rocket Lab Launch Complex 1B",
       "padActive": true,
-      "padLatitude": 28.58341025,
-      "padLongitude": -80.58303644,
+      "padLatitude": -39.262833,
+      "padLongitude": 177.864469,
+      "padCountryCode": "NZ",
+      "locationId": 10,
+      "locationName": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+      "locationCountryCode": "NZ",
+      "padTimezone": "Pacific/Auckland",
+      "padTurnaround": "P6DT21H17M",
+      "infoUrl": "https://rocketlabcorp.com/missions/launches/owlright-owlright-owlright/",
+      "webcastUrl": "https://www.youtube.com/watch?v=hkLw0Kf_iSA",
+      "timeline": [],
+      "lastUpdated": "2026-09-26T04:31:28Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/9e24bef7-c44b-4fdc-ba52-68545ce9457e/?format=json"
+    },
+    {
+      "id": "7330d83b-c478-426c-8859-f9e3a335876d",
+      "name": "Falcon 9 Block 5 | USSF-385",
+      "net": "2026-09-26T14:00:54Z",
+      "netPrecision": "Second",
+      "windowStart": "2026-09-26T11:56:00Z",
+      "windowEnd": "2026-09-26T14:56:00Z",
+      "statusId": 3,
+      "status": "Launch Successful",
+      "launchDesignator": null,
+      "providerId": 121,
+      "provider": "SpaceX",
+      "countryCode": "US",
+      "region": "us",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "LEO",
+      "missionName": "USSF-385",
+      "missionType": "Government/Top Secret",
+      "missionDescription": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+      "rocketConfigurationId": 164,
+      "rocketConfiguration": "Falcon 9",
+      "rocketFullName": "Falcon 9 Block 5",
+      "rocketFamily": "Falcon 9",
+      "rocketLaunchCostUsd": 52000000,
+      "leoCapacityKg": 22800,
+      "gtoCapacityKg": 8300,
+      "stages": [
+        {
+          "id": 992,
+          "type": "Core",
+          "reused": true,
+          "flightNumber": 10,
+          "serialNumber": "B1100",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-08-22T07:25:16Z",
+          "turnaround": "P35DT6H35M38S",
+          "landing": {
+            "attempt": true,
+            "success": true,
+            "description": "The Falcon 9 first stage B1100 has landed on ASDS OCISLY after its 10th flight.",
+            "downrangeDistanceKm": 574,
+            "location": "Of Course I Still Love You",
+            "locationAbbrev": "OCISLY",
+            "type": null
+          }
+        }
+      ],
+      "padId": 16,
+      "padName": "Space Launch Complex 4E",
+      "padActive": true,
+      "padLatitude": 34.632,
+      "padLongitude": -120.611,
+      "padCountryCode": "US",
+      "locationId": 11,
+      "locationName": "Vandenberg SFB, CA, USA",
+      "locationCountryCode": "US",
+      "padTimezone": "America/Los_Angeles",
+      "padTurnaround": "P6DT12H13M54S",
+      "infoUrl": "https://www.spacex.com/launches/ussf385",
+      "webcastUrl": "https://www.youtube.com/watch?v=PeV6cdJBrYI",
+      "timeline": [
+        {
+          "abbrev": "GO for Prop Load",
+          "description": "Launch director verifies go for propellant load",
+          "relativeTime": "-PT38M"
+        },
+        {
+          "abbrev": "Stage 1 LOX Load",
+          "description": "Start of liquid oxygen loading in the first stage",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Prop Load",
+          "description": "Start of propelland loading",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Stage 2 LOX Load",
+          "description": "Start of liquid oxygen loading in the second stage",
+          "relativeTime": "-PT16M"
+        },
+        {
+          "abbrev": "Engine Chill",
+          "description": "Start of engine chilling",
+          "relativeTime": "-PT7M"
+        },
+        {
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "relativeTime": "-PT1M"
+        },
+        {
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
+          "relativeTime": "-PT1M"
+        },
+        {
+          "abbrev": "GO for Launch",
+          "description": "Launch director verifies go for launch",
+          "relativeTime": "-PT45S"
+        },
+        {
+          "abbrev": "Ignition",
+          "description": "Start of the engine ignition sequence",
+          "relativeTime": "-PT3S"
+        },
+        {
+          "abbrev": "Liftoff",
+          "description": "First upwards movement of the rocket",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Max-Q",
+          "description": "Maximum dynamic pressure",
+          "relativeTime": "PT1M12S"
+        },
+        {
+          "abbrev": "MECO",
+          "description": "Cut-off of the main engine",
+          "relativeTime": "PT2M26S"
+        },
+        {
+          "abbrev": "Stage 2 Separation",
+          "description": "Separation of the second stage from the first",
+          "relativeTime": "PT2M30S"
+        },
+        {
+          "abbrev": "SES-1",
+          "description": "First start of the second engine",
+          "relativeTime": "PT2M36S"
+        },
+        {
+          "abbrev": "Fairing Separation",
+          "description": "Separation of the payload fairing",
+          "relativeTime": "PT2M56S"
+        },
+        {
+          "abbrev": "Entry Burn Startup",
+          "description": "Start of the atmospheric entry burn",
+          "relativeTime": "PT6M4S"
+        },
+        {
+          "abbrev": "Entry Burn Shutdown",
+          "description": "End of the atmospheric entry burn",
+          "relativeTime": "PT6M26S"
+        },
+        {
+          "abbrev": "Stage 1 Landing Burn",
+          "description": "Start of the first stage landing burn",
+          "relativeTime": "PT8M1S"
+        },
+        {
+          "abbrev": "Stage 1 Landing",
+          "description": "Landing of the first stage",
+          "relativeTime": "PT8M23S"
+        }
+      ],
+      "lastUpdated": "2026-09-26T17:39:37Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/7330d83b-c478-426c-8859-f9e3a335876d/?format=json"
+    },
+    {
+      "id": "7d1afb26-6f9c-429b-9ccf-29012fd1e519",
+      "name": "Starship | Starlink Group 31-1 (Starship Flight 14)",
+      "net": "2026-09-28T12:15:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-09-28T12:15:00Z",
+      "windowEnd": "2026-09-28T13:30:00Z",
+      "statusId": 1,
+      "status": "Go for Launch",
+      "launchDesignator": null,
+      "providerId": 121,
+      "provider": "SpaceX",
+      "countryCode": "US",
+      "region": "us",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "LEO",
+      "missionName": "Starlink Group 31-1 (Starship Flight 14)",
+      "missionType": "Communications",
+      "missionDescription": "14th test flight of the two-stage Starship launch vehicle. 3rd flight of Starship V3 and the first Starship flight to deploy satellites (a group of Starlink satellites known as Starlink Group 31-1) into stable Low Earth Orbit.\r\n\r\nThe ship is expected to fly at an altitude approximately 275 km above Earth and complete approximately 6 orbits around the planet for nearly 10 hours, with splashdown targeted in the Pacific Ocean west of Chile.\r\n\r\nThe booster’s primary test objective on Flight 14 will be executing a successful launch, ascent, stage separation, boostback burn, and landing burn at an offshore landing point in the Gulf.\r\n\r\nStarship will deliver 26 Starlink V3 satellites to orbit for the first time, which aim to greatly expand the network's capacity and user speeds. Each Starlink V3 satellite will add 1 Tbps of capacity to the constellation.",
+      "rocketConfigurationId": 522,
+      "rocketConfiguration": "Starship",
+      "rocketFullName": "Starship V3",
+      "rocketFamily": "Starship",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 100000,
+      "gtoCapacityKg": null,
+      "stages": [
+        {
+          "id": 990,
+          "type": "Core",
+          "reused": false,
+          "flightNumber": 1,
+          "serialNumber": "Booster 21",
+          "vehicleStatus": "active",
+          "previousFlightDate": null,
+          "turnaround": null,
+          "landing": {
+            "attempt": true,
+            "success": null,
+            "description": "The Super Heavy Booster 21 will attempt to perform a soft splashdown in the Gulf of Mexico.",
+            "downrangeDistanceKm": null,
+            "location": "Gulf of Mexico",
+            "locationAbbrev": "GOM",
+            "type": null
+          }
+        }
+      ],
+      "padId": 235,
+      "padName": "Orbital Launch Pad 2",
+      "padActive": true,
+      "padLatitude": 25.99677,
+      "padLongitude": -97.15799,
+      "padCountryCode": "US",
+      "locationId": 143,
+      "locationName": "SpaceX Starbase, TX, USA",
+      "locationCountryCode": "US",
+      "padTimezone": "America/Chicago",
+      "padTurnaround": "P65DT13H24M",
+      "infoUrl": "https://www.spacex.com/launches/starship-flight-14",
+      "webcastUrl": "https://www.youtube.com/watch?v=SqSGeLDIG-0",
+      "timeline": [
+        {
+          "abbrev": "GO for Prop Load",
+          "description": "Launch director verifies go for propellant load",
+          "relativeTime": "-PT50M"
+        },
+        {
+          "abbrev": "Stage 1 LOX Load",
+          "description": "Start of liquid oxygen loading in the first stage",
+          "relativeTime": "-PT36M33S"
+        },
+        {
+          "abbrev": "Stage 1 LNG Load",
+          "description": "Start of liquid methane loading in the first stage",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Stage 2 LOX Load",
+          "description": "Start of liquid oxygen loading in the second stage",
+          "relativeTime": "-PT34M13S"
+        },
+        {
+          "abbrev": "Stage 2 LNG Load",
+          "description": "Start of liquid methane loading in the second stage",
+          "relativeTime": "-PT34M11S"
+        },
+        {
+          "abbrev": "Engine Chill",
+          "description": "Start of engine chilling",
+          "relativeTime": "-PT21M40S"
+        },
+        {
+          "abbrev": "Stage 1 Propellant Load Complete",
+          "description": "End of propellant loading in the first stage",
+          "relativeTime": "-PT2M50S"
+        },
+        {
+          "abbrev": "Stage 2 Propellant Load Complete",
+          "description": "End of propellant loading in the second stage",
+          "relativeTime": "-PT2M10S"
+        },
+        {
+          "abbrev": "GO for Launch",
+          "description": "Launch director verifies go for launch",
+          "relativeTime": "-PT30S"
+        },
+        {
+          "abbrev": "Flame Deflector Activation",
+          "description": "Activation of the flame deflector ahead of engine ignition",
+          "relativeTime": "-PT17S"
+        },
+        {
+          "abbrev": "Ignition",
+          "description": "Start of the engine ignition sequence",
+          "relativeTime": "-PT3S"
+        },
+        {
+          "abbrev": "Excitement Guaranteed",
+          "description": "Excitement guaranteed",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Liftoff",
+          "description": "First upwards movement of the rocket",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Max-Q",
+          "description": "Maximum dynamic pressure",
+          "relativeTime": "PT58S"
+        },
+        {
+          "abbrev": "MECO",
+          "description": "Cut-off of the main engine",
+          "relativeTime": "PT2M20S"
+        },
+        {
+          "abbrev": "Stage 2 Separation",
+          "description": "Separation of the second stage from the first",
+          "relativeTime": "PT2M22S"
+        },
+        {
+          "abbrev": "Booster Boostback Burn Startup",
+          "description": "Start of the booster boostback burn",
+          "relativeTime": "PT2M27S"
+        },
+        {
+          "abbrev": "Booster Boostback Burn Shutdown",
+          "description": "End of the booster boostback burn",
+          "relativeTime": "PT3M7S"
+        },
+        {
+          "abbrev": "Stage 1 Landing Burn",
+          "description": "Start of the first stage landing burn",
+          "relativeTime": "PT6M35S"
+        },
+        {
+          "abbrev": "Stage 1 Landing",
+          "description": "Landing of the first stage",
+          "relativeTime": "PT7M1S"
+        },
+        {
+          "abbrev": "SECO-1",
+          "description": "First cut-off of the second engine",
+          "relativeTime": "PT8M11S"
+        },
+        {
+          "abbrev": "Orbital Insertion Burn Start",
+          "description": "The spacecraft ignites it's engines to insert itself into orbit",
+          "relativeTime": "PT25M28S"
+        },
+        {
+          "abbrev": "Orbital Insertion Burn End",
+          "description": "The spacecraft cuts its engines after inserting itself into orbit",
+          "relativeTime": "PT25M47S"
+        },
+        {
+          "abbrev": "Payload Deployment Sequence Start",
+          "description": "Start of the payload deployment sequence",
+          "relativeTime": "PT34M18S"
+        },
+        {
+          "abbrev": "Payload Deployment Sequence End",
+          "description": "End of the payload deployment sequence.",
+          "relativeTime": "PT1H4M50S"
+        },
+        {
+          "abbrev": "Deorbit Burn Start",
+          "description": "[already in the db] --> no need to provide a description, only the abbrev",
+          "relativeTime": "PT8H52M18S"
+        },
+        {
+          "abbrev": "Deorbit Burn End",
+          "description": "[already in the db] --> no need to provide a description, only the abbrev",
+          "relativeTime": "PT8H52M29S"
+        },
+        {
+          "abbrev": "Atmospheric Entry",
+          "description": "Start of the atmospheric re-entry",
+          "relativeTime": "PT9H28M52S"
+        },
+        {
+          "abbrev": "Starship Transonic",
+          "description": "Starship passing through the transonic regime",
+          "relativeTime": "PT9H47M30S"
+        },
+        {
+          "abbrev": "Starship Subsonic",
+          "description": "Starship reaches a subsonic velocity",
+          "relativeTime": "PT9H48M7S"
+        },
+        {
+          "abbrev": "Starship Landing Burn",
+          "description": "Start of the Starship orbital stage landing burn",
+          "relativeTime": "PT9H50M11S"
+        },
+        {
+          "abbrev": "Landing Flip",
+          "description": "Flip maneuver to set the orientation for landing",
+          "relativeTime": "PT9H50M13S"
+        },
+        {
+          "abbrev": "Starship Landing",
+          "description": "Landing of the Starship orbital stage",
+          "relativeTime": "PT9H50M21S"
+        },
+        {
+          "abbrev": "Starship Landing",
+          "description": "Landing of the Starship orbital stage",
+          "relativeTime": "PT9H50M22S"
+        },
+        {
+          "abbrev": "Starship Landing",
+          "description": "Landing of the Starship orbital stage",
+          "relativeTime": "PT9H50M30S"
+        }
+      ],
+      "lastUpdated": "2026-09-26T21:07:41Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/7d1afb26-6f9c-429b-9ccf-29012fd1e519/?format=json"
+    },
+    {
+      "id": "18441371-8b2e-457c-afb5-1ec1b11ab630",
+      "name": "Falcon 9 Block 5 | Crew-13",
+      "net": "2026-10-01T15:10:06Z",
+      "netPrecision": "Second",
+      "windowStart": "2026-10-01T15:10:06Z",
+      "windowEnd": "2026-10-01T15:10:06Z",
+      "statusId": 1,
+      "status": "Go for Launch",
+      "launchDesignator": null,
+      "providerId": 121,
+      "provider": "SpaceX",
+      "countryCode": "US",
+      "region": "us",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "LEO",
+      "missionName": "Crew-13",
+      "missionType": "Human Exploration",
+      "missionDescription": "SpaceX Crew-13 is the thirteenth crewed operational flight of a Crew Dragon spacecraft to the International Space Station as part of NASA's Commercial Crew Program.",
+      "rocketConfigurationId": 164,
+      "rocketConfiguration": "Falcon 9",
+      "rocketFullName": "Falcon 9 Block 5",
+      "rocketFamily": "Falcon 9",
+      "rocketLaunchCostUsd": 52000000,
+      "leoCapacityKg": 22800,
+      "gtoCapacityKg": 8300,
+      "stages": [
+        {
+          "id": 924,
+          "type": "Core",
+          "reused": true,
+          "flightNumber": 3,
+          "serialNumber": "B1101",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-02-13T10:15:56Z",
+          "turnaround": "P230DT4H54M10S",
+          "landing": {
+            "attempt": true,
+            "success": null,
+            "description": "The Falcon 9 first stage B1101 will land back at the launch site at Landing Zone 40 after its 3rd flight.",
+            "downrangeDistanceKm": 0.3,
+            "location": "Landing Zone 40",
+            "locationAbbrev": "LZ-40",
+            "type": null
+          }
+        }
+      ],
+      "padId": 80,
+      "padName": "Space Launch Complex 40",
+      "padActive": true,
+      "padLatitude": 28.56194122,
+      "padLongitude": -80.57735736,
       "padCountryCode": "US",
       "locationId": 12,
       "locationName": "Cape Canaveral SFS, FL, USA",
       "locationCountryCode": "US",
       "padTimezone": "America/New_York",
-      "padTurnaround": "P89DT19H29M45S",
-      "infoUrl": null,
-      "webcastUrl": null,
+      "padTurnaround": "P17DT20H21M6S",
+      "infoUrl": "https://www.spacex.com/launches/crew13",
+      "webcastUrl": "https://x.com/i/broadcasts/1qxvvepEVdRxB",
+      "timeline": [
+        {
+          "abbrev": "GO for Prop Load",
+          "description": "Launch director verifies go for propellant load",
+          "relativeTime": "-PT45M"
+        },
+        {
+          "abbrev": "Crew Access Arm Retract",
+          "description": "Retraction of the crew access arm from the rocket",
+          "relativeTime": "-PT42M"
+        },
+        {
+          "abbrev": "Dragon LES Arm",
+          "description": "Dragon's launch escape system is armed",
+          "relativeTime": "-PT39M"
+        },
+        {
+          "abbrev": "Prop Load",
+          "description": "Start of propelland loading",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Stage 1 LOX Load",
+          "description": "Start of liquid oxygen loading in the first stage",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Stage 2 LOX Load",
+          "description": "Start of liquid oxygen loading in the second stage",
+          "relativeTime": "-PT16M"
+        },
+        {
+          "abbrev": "Engine Chill",
+          "description": "Start of engine chilling",
+          "relativeTime": "-PT7M"
+        },
+        {
+          "abbrev": "Dragon Internal Power",
+          "description": "Dragon transitions to internal power",
+          "relativeTime": "-PT5M"
+        },
+        {
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "relativeTime": "-PT1M"
+        },
+        {
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
+          "relativeTime": "-PT1M"
+        },
+        {
+          "abbrev": "GO for Launch",
+          "description": "Launch director verifies go for launch",
+          "relativeTime": "-PT45S"
+        },
+        {
+          "abbrev": "Ignition",
+          "description": "Start of the engine ignition sequence",
+          "relativeTime": "-PT3S"
+        },
+        {
+          "abbrev": "Liftoff",
+          "description": "First upwards movement of the rocket",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Max-Q",
+          "description": "Maximum dynamic pressure",
+          "relativeTime": "PT1M12S"
+        },
+        {
+          "abbrev": "MECO",
+          "description": "Cut-off of the main engine",
+          "relativeTime": "PT2M24S"
+        },
+        {
+          "abbrev": "Stage 2 Separation",
+          "description": "Separation of the second stage from the first",
+          "relativeTime": "PT2M27S"
+        },
+        {
+          "abbrev": "Stage 1 Flip",
+          "description": "Flip maneuver of the first stage",
+          "relativeTime": "PT2M31S"
+        },
+        {
+          "abbrev": "SES-1",
+          "description": "First start of the second engine",
+          "relativeTime": "PT2M35S"
+        },
+        {
+          "abbrev": "Booster Boostback Burn Startup",
+          "description": "Start of the booster boostback burn",
+          "relativeTime": "PT2M41S"
+        },
+        {
+          "abbrev": "Booster Boostback Burn Shutdown",
+          "description": "End of the booster boostback burn",
+          "relativeTime": "PT3M27S"
+        },
+        {
+          "abbrev": "Entry Burn Startup",
+          "description": "Start of the atmospheric entry burn",
+          "relativeTime": "PT6M20S"
+        },
+        {
+          "abbrev": "Entry Burn Shutdown",
+          "description": "End of the atmospheric entry burn",
+          "relativeTime": "PT6M32S"
+        },
+        {
+          "abbrev": "Stage 1 Landing Burn",
+          "description": "Start of the first stage landing burn",
+          "relativeTime": "PT7M24S"
+        },
+        {
+          "abbrev": "Stage 1 Landing",
+          "description": "Landing of the first stage",
+          "relativeTime": "PT7M41S"
+        },
+        {
+          "abbrev": "SECO-1",
+          "description": "First cut-off of the second engine",
+          "relativeTime": "PT8M47S"
+        },
+        {
+          "abbrev": "Dragon Separation",
+          "description": "Dragon separates from the second stage",
+          "relativeTime": "PT9M39S"
+        },
+        {
+          "abbrev": "Dragon Nosecode Open",
+          "description": "Start of the opening sequence of Dragon's nosecone",
+          "relativeTime": "PT10M25S"
+        }
+      ],
+      "lastUpdated": "2026-09-22T22:15:06Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/18441371-8b2e-457c-afb5-1ec1b11ab630/?format=json"
+    },
+    {
+      "id": "67213393-7983-4c06-8b44-b8c785a5ed79",
+      "name": "Falcon 9 Block 5 | Transporter 18 (Dedicated SSO Rideshare)",
+      "net": "2026-10-01T18:18:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-10-01T18:18:00Z",
+      "windowEnd": "2026-10-01T19:16:00Z",
+      "statusId": 1,
+      "status": "Go for Launch",
+      "launchDesignator": null,
+      "providerId": 121,
+      "provider": "SpaceX",
+      "countryCode": "US",
+      "region": "us",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "SSO",
+      "missionName": "Transporter 18 (Dedicated SSO Rideshare)",
+      "missionType": "Dedicated Rideshare",
+      "missionDescription": "Dedicated rideshare flight to a sun-synchronous orbit with dozens of small microsatellites and nanosatellites for commercial and government customers.",
+      "rocketConfigurationId": 164,
+      "rocketConfiguration": "Falcon 9",
+      "rocketFullName": "Falcon 9 Block 5",
+      "rocketFamily": "Falcon 9",
+      "rocketLaunchCostUsd": 52000000,
+      "leoCapacityKg": 22800,
+      "gtoCapacityKg": 8300,
+      "stages": [
+        {
+          "id": 753,
+          "type": "Core",
+          "reused": true,
+          "flightNumber": 25,
+          "serialNumber": "B1082",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-08-26T09:35:11Z",
+          "turnaround": "P36DT8H42M49S",
+          "landing": {
+            "attempt": true,
+            "success": null,
+            "description": "The Falcon 9 first stage B1082 will land on Landing Zone 4 after its 25th flight.",
+            "downrangeDistanceKm": 0.4,
+            "location": "Landing Zone 4",
+            "locationAbbrev": "LZ-4",
+            "type": null
+          }
+        }
+      ],
+      "padId": 16,
+      "padName": "Space Launch Complex 4E",
+      "padActive": true,
+      "padLatitude": 34.632,
+      "padLongitude": -120.611,
+      "padCountryCode": "US",
+      "locationId": 11,
+      "locationName": "Vandenberg SFB, CA, USA",
+      "locationCountryCode": "US",
+      "padTimezone": "America/Los_Angeles",
+      "padTurnaround": "P5DT4H17M6S",
+      "infoUrl": "https://www.spacex.com/launches/transporter18",
+      "webcastUrl": "https://x.com/i/broadcasts/1RJjpbyQpOBKw",
       "timeline": [],
-      "lastUpdated": "2026-06-16T22:59:55Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/ef9850ad-1096-425b-9d27-f7bbd186e61a/?format=json"
+      "lastUpdated": "2026-09-25T00:48:45Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/67213393-7983-4c06-8b44-b8c785a5ed79/?format=json"
+    },
+    {
+      "id": "4651fd8a-43de-4166-bf8f-c168b3bd1d2c",
+      "name": "Falcon Heavy | NROL-97",
+      "net": "2026-10-02T03:53:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-10-02T03:53:00Z",
+      "windowEnd": "2026-10-02T04:42:00Z",
+      "statusId": 1,
+      "status": "Go for Launch",
+      "launchDesignator": null,
+      "providerId": 121,
+      "provider": "SpaceX",
+      "countryCode": "US",
+      "region": "us",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "N/A",
+      "missionName": "NROL-97",
+      "missionType": "Government/Top Secret",
+      "missionDescription": "Classified payload for the US National Reconnaissance Office.",
+      "rocketConfigurationId": 161,
+      "rocketConfiguration": "Falcon Heavy",
+      "rocketFullName": "Falcon Heavy",
+      "rocketFamily": "Falcon",
+      "rocketLaunchCostUsd": 90000000,
+      "leoCapacityKg": 63800,
+      "gtoCapacityKg": 26700,
+      "stages": [
+        {
+          "id": 988,
+          "type": "Strap-On Booster",
+          "reused": true,
+          "flightNumber": 2,
+          "serialNumber": "B1104",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-08-30T11:26:04Z",
+          "turnaround": "P32DT16H26M56S",
+          "landing": {
+            "attempt": true,
+            "success": null,
+            "description": "The Falcon Heavy side booster B1104 will land back at the launch site at Landing Zone 1 after its 2nd flight.",
+            "downrangeDistanceKm": 14.9,
+            "location": "Landing Zone 1",
+            "locationAbbrev": "LZ-1",
+            "type": null
+          }
+        },
+        {
+          "id": 989,
+          "type": "Strap-On Booster",
+          "reused": true,
+          "flightNumber": 4,
+          "serialNumber": "B1072",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-08-30T11:26:04Z",
+          "turnaround": "P32DT16H26M56S",
+          "landing": {
+            "attempt": true,
+            "success": null,
+            "description": "The Falcon Heavy side booster B1072 will land back at the launch site at Landing Zone 2 after its 4th flight.",
+            "downrangeDistanceKm": 14.6,
+            "location": "Landing Zone 2",
+            "locationAbbrev": "LZ-2",
+            "type": null
+          }
+        },
+        {
+          "id": 987,
+          "type": "Core",
+          "reused": false,
+          "flightNumber": 1,
+          "serialNumber": "B1106",
+          "vehicleStatus": "active",
+          "previousFlightDate": null,
+          "turnaround": null,
+          "landing": {
+            "attempt": false,
+            "success": null,
+            "description": "The Falcon Heavy center core B1106 will be expended.",
+            "downrangeDistanceKm": null,
+            "location": "Atlantic Ocean",
+            "locationAbbrev": "ATL",
+            "type": null
+          }
+        }
+      ],
+      "padId": 87,
+      "padName": "Launch Complex 39A",
+      "padActive": true,
+      "padLatitude": 28.60822681,
+      "padLongitude": -80.60428186,
+      "padCountryCode": "US",
+      "locationId": 27,
+      "locationName": "Kennedy Space Center, FL, USA",
+      "locationCountryCode": "US",
+      "padTimezone": "America/New_York",
+      "padTurnaround": "P32DT16H26M56S",
+      "infoUrl": "https://www.spacex.com/launches/nrol97",
+      "webcastUrl": "https://x.com/i/broadcasts/1oJMvNkPPXlxQ",
+      "timeline": [
+        {
+          "abbrev": "GO for Prop Load",
+          "description": "Launch director verifies go for propellant load",
+          "relativeTime": "-PT53M"
+        },
+        {
+          "abbrev": "Stage 1 Propellant Load",
+          "description": "Start of propellant loading in the first stage",
+          "relativeTime": "-PT50M"
+        },
+        {
+          "abbrev": "Stage 1 LOX Load",
+          "description": "Start of liquid oxygen loading in the first stage",
+          "relativeTime": "-PT45M"
+        },
+        {
+          "abbrev": "Stage 2 Propellant Load",
+          "description": "Start of propellant loading in the second stage",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Stage 2 LOX Load",
+          "description": "Start of liquid oxygen loading in the second stage",
+          "relativeTime": "-PT18M30S"
+        },
+        {
+          "abbrev": "Engine Chill",
+          "description": "Start of engine chilling",
+          "relativeTime": "-PT7M"
+        },
+        {
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "relativeTime": "-PT59S"
+        },
+        {
+          "abbrev": "GO for Launch",
+          "description": "Launch director verifies go for launch",
+          "relativeTime": "-PT45S"
+        },
+        {
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
+          "relativeTime": "-PT20S"
+        },
+        {
+          "abbrev": "Ignition",
+          "description": "Start of the engine ignition sequence",
+          "relativeTime": "-PT6S"
+        },
+        {
+          "abbrev": "Liftoff",
+          "description": "First upwards movement of the rocket",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Max-Q",
+          "description": "Maximum dynamic pressure",
+          "relativeTime": "PT1M9S"
+        },
+        {
+          "abbrev": "SBECO",
+          "description": "Cut-off of the side boosters",
+          "relativeTime": "PT2M24S"
+        },
+        {
+          "abbrev": "Boosters Separation",
+          "description": "Separation of the side boosters",
+          "relativeTime": "PT2M27S"
+        },
+        {
+          "abbrev": "Boosters Flip",
+          "description": "Flip maneuver of the side boosters",
+          "relativeTime": "PT2M31S"
+        },
+        {
+          "abbrev": "Boosters Boostback Burn Startup",
+          "description": "Start of the boosters boostback burn",
+          "relativeTime": "PT2M42S"
+        },
+        {
+          "abbrev": "Boosters Boostback Burn Shutdown",
+          "description": "End of the boosters boostback burn",
+          "relativeTime": "PT3M47S"
+        },
+        {
+          "abbrev": "MECO",
+          "description": "Cut-off of the main engine",
+          "relativeTime": "PT3M51S"
+        },
+        {
+          "abbrev": "Stage 2 Separation",
+          "description": "Separation of the second stage from the first",
+          "relativeTime": "PT3M54S"
+        },
+        {
+          "abbrev": "SES-1",
+          "description": "First start of the second engine",
+          "relativeTime": "PT4M"
+        },
+        {
+          "abbrev": "Fairing Separation",
+          "description": "Separation of the payload fairing",
+          "relativeTime": "PT4M17S"
+        },
+        {
+          "abbrev": "Boosters Entry Burn Startup",
+          "description": "Start of the boosters atmospheric entry burn",
+          "relativeTime": "PT6M29S"
+        },
+        {
+          "abbrev": "Boosters Entry Burn Shutdown",
+          "description": "End of the boosters atmospheric entry burn",
+          "relativeTime": "PT6M37S"
+        },
+        {
+          "abbrev": "Boosters Landing Burn",
+          "description": "Start of the boosters landing burn",
+          "relativeTime": "PT7M30S"
+        },
+        {
+          "abbrev": "Boosters Landing",
+          "description": "Landing of the boosters",
+          "relativeTime": "PT7M47S"
+        }
+      ],
+      "lastUpdated": "2026-09-24T18:26:34Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/4651fd8a-43de-4166-bf8f-c168b3bd1d2c/?format=json"
     },
     {
       "id": "da43dc2c-00af-4cc1-8ef1-90a60b2eb9e5",
       "name": "Falcon 9 Block 5 | SDA Tranche 1 Transport Layer A",
-      "net": "2026-09-30T00:00:00Z",
-      "netPrecision": "Month",
-      "windowStart": "2026-09-30T00:00:00Z",
-      "windowEnd": "2026-09-30T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
+      "net": "2026-10-05T08:06:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-10-05T08:06:00Z",
+      "windowEnd": "2026-10-05T09:11:00Z",
+      "statusId": 8,
+      "status": "To Be Confirmed",
       "launchDesignator": null,
       "providerId": 121,
       "provider": "SpaceX",
@@ -43179,7 +44900,15 @@
           "vehicleStatus": "N/A",
           "previousFlightDate": null,
           "turnaround": null,
-          "landing": null
+          "landing": {
+            "attempt": true,
+            "success": null,
+            "description": "The Falcon 9 first stage will land on Landing Zone 4 after its flight.",
+            "downrangeDistanceKm": 0.4,
+            "location": "Landing Zone 4",
+            "locationAbbrev": "LZ-4",
+            "type": null
+          }
         }
       ],
       "padId": 16,
@@ -43192,360 +44921,12 @@
       "locationName": "Vandenberg SFB, CA, USA",
       "locationCountryCode": "US",
       "padTimezone": "America/Los_Angeles",
-      "padTurnaround": "P9DT22H13M",
+      "padTurnaround": "P3DT13H48M",
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2026-08-27T16:00:05Z",
+      "lastUpdated": "2026-09-25T21:06:03Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/da43dc2c-00af-4cc1-8ef1-90a60b2eb9e5/?format=json"
-    },
-    {
-      "id": "dc570565-4dcf-4ab9-8174-bf88efef477f",
-      "name": "Long March 12A | Flight 2",
-      "net": "2026-09-30T00:00:00Z",
-      "netPrecision": "Month",
-      "windowStart": "2026-09-30T00:00:00Z",
-      "windowEnd": "2026-09-30T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
-      "providerId": 88,
-      "provider": "China Aerospace Science and Technology Corporation",
-      "countryCode": "CN",
-      "region": "cn",
-      "classificationBasis": "lsp_agency_country",
-      "orbit": "LEO",
-      "missionName": "Flight 2",
-      "missionType": "Test Flight",
-      "missionDescription": "Second test launch of CASC/SAST’s Long March 12A rocket. Payload identities are TBD.",
-      "rocketConfigurationId": 538,
-      "rocketConfiguration": "Long March 12A",
-      "rocketFullName": "Long March 12A",
-      "rocketFamily": "Long March 12",
-      "rocketLaunchCostUsd": null,
-      "leoCapacityKg": 12000,
-      "gtoCapacityKg": null,
-      "stages": [
-        {
-          "id": 970,
-          "type": "Core",
-          "reused": null,
-          "flightNumber": null,
-          "serialNumber": "Unknown12A",
-          "vehicleStatus": "N/A",
-          "previousFlightDate": null,
-          "turnaround": null,
-          "landing": {
-            "attempt": true,
-            "success": null,
-            "description": "The Long March 12A first stage booster will attempt to land on its downrange landing pad.",
-            "downrangeDistanceKm": 252,
-            "location": "Long March 12A Landing Site",
-            "locationAbbrev": "CZ-12A LZ",
-            "type": null
-          }
-        }
-      ],
-      "padId": 247,
-      "padName": "Long March 12 series Pad",
-      "padActive": true,
-      "padLatitude": 40.891596,
-      "padLongitude": 100.217289,
-      "padCountryCode": "CN",
-      "locationId": 17,
-      "locationName": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "locationCountryCode": "CN",
-      "padTimezone": "Asia/Shanghai",
-      "padTurnaround": "P120DT15H20M",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-08-27T07:57:47Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/dc570565-4dcf-4ab9-8174-bf88efef477f/?format=json"
-    },
-    {
-      "id": "b81156da-c0b8-46c8-aebd-8af8d2be83cd",
-      "name": "Electron | BlackSky Gen-3 5",
-      "net": "2026-09-30T00:00:00Z",
-      "netPrecision": "Quarter 3",
-      "windowStart": "2026-09-30T00:00:00Z",
-      "windowEnd": "2026-09-30T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
-      "providerId": 147,
-      "provider": "Rocket Lab",
-      "countryCode": "US",
-      "region": "us",
-      "classificationBasis": "lsp_agency_country",
-      "orbit": "LEO",
-      "missionName": "BlackSky Gen-3 5",
-      "missionType": "Earth Science",
-      "missionDescription": "BlackSky Gen-3 Earth-imaging satellites",
-      "rocketConfigurationId": 26,
-      "rocketConfiguration": "Electron",
-      "rocketFullName": "Electron",
-      "rocketFamily": "Electron",
-      "rocketLaunchCostUsd": 6000000,
-      "leoCapacityKg": 300,
-      "gtoCapacityKg": null,
-      "stages": [],
-      "padId": 210,
-      "padName": "Unknown Pad",
-      "padActive": true,
-      "padLatitude": -39.260881,
-      "padLongitude": 177.865826,
-      "padCountryCode": "NZ",
-      "locationId": 10,
-      "locationName": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "locationCountryCode": "NZ",
-      "padTimezone": "Pacific/Auckland",
-      "padTurnaround": "P0D",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-08-06T15:07:20Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/b81156da-c0b8-46c8-aebd-8af8d2be83cd/?format=json"
-    },
-    {
-      "id": "548df42c-ae26-4cc9-921a-f0042941911a",
-      "name": "Electron | BlackSky Gen-3 6",
-      "net": "2026-09-30T00:00:00Z",
-      "netPrecision": "Quarter 3",
-      "windowStart": "2026-09-30T00:00:00Z",
-      "windowEnd": "2026-09-30T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
-      "providerId": 147,
-      "provider": "Rocket Lab",
-      "countryCode": "US",
-      "region": "us",
-      "classificationBasis": "lsp_agency_country",
-      "orbit": "LEO",
-      "missionName": "BlackSky Gen-3 6",
-      "missionType": "Earth Science",
-      "missionDescription": "BlackSky Gen-3 Earth-imaging satellites",
-      "rocketConfigurationId": 26,
-      "rocketConfiguration": "Electron",
-      "rocketFullName": "Electron",
-      "rocketFamily": "Electron",
-      "rocketLaunchCostUsd": 6000000,
-      "leoCapacityKg": 300,
-      "gtoCapacityKg": null,
-      "stages": [],
-      "padId": 210,
-      "padName": "Unknown Pad",
-      "padActive": true,
-      "padLatitude": -39.260881,
-      "padLongitude": 177.865826,
-      "padCountryCode": "NZ",
-      "locationId": 10,
-      "locationName": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "locationCountryCode": "NZ",
-      "padTimezone": "Pacific/Auckland",
-      "padTurnaround": "P0D",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-08-06T15:07:55Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/548df42c-ae26-4cc9-921a-f0042941911a/?format=json"
-    },
-    {
-      "id": "599ba2df-7483-4b2f-a083-2b5ddc06e069",
-      "name": "Electron | LOXSAT 1",
-      "net": "2026-09-30T00:00:00Z",
-      "netPrecision": "Month",
-      "windowStart": "2026-09-30T00:00:00Z",
-      "windowEnd": "2026-09-30T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
-      "providerId": 147,
-      "provider": "Rocket Lab",
-      "countryCode": "US",
-      "region": "us",
-      "classificationBasis": "lsp_agency_country",
-      "orbit": "LEO",
-      "missionName": "LOXSAT 1",
-      "missionType": "Technology",
-      "missionDescription": "LOXSAT 1 is a demonstration satellite of a complete cryogenic oxygen fluid management system in orbit, developed by Eta Space and sponsored by NASA's Tipping Point program.\r\n\r\nThe system will be integrated on a Rocket Lab Photon-LEO satellite bus and collect critical cryogenic fluid management data in orbit for 9 months, demonstrating capabilities of in-space cryogenic storage and transferal. Eta Space plans to use technology developed for this mission to develop a truly commercial depot intended to serve multiple customers in the future.",
-      "rocketConfigurationId": 26,
-      "rocketConfiguration": "Electron",
-      "rocketFullName": "Electron",
-      "rocketFamily": "Electron",
-      "rocketLaunchCostUsd": 6000000,
-      "leoCapacityKg": 300,
-      "gtoCapacityKg": null,
-      "stages": [],
-      "padId": 210,
-      "padName": "Unknown Pad",
-      "padActive": true,
-      "padLatitude": -39.260881,
-      "padLongitude": 177.865826,
-      "padCountryCode": "NZ",
-      "locationId": 10,
-      "locationName": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "locationCountryCode": "NZ",
-      "padTimezone": "Pacific/Auckland",
-      "padTurnaround": "P0D",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-08-24T01:41:31Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/599ba2df-7483-4b2f-a083-2b5ddc06e069/?format=json"
-    },
-    {
-      "id": "7766f3bb-674c-4c71-b986-963bd633fcfe",
-      "name": "Electron | 6x HawkEye 360",
-      "net": "2026-09-30T00:00:00Z",
-      "netPrecision": "Quarter 3",
-      "windowStart": "2026-09-30T00:00:00Z",
-      "windowEnd": "2026-09-30T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
-      "providerId": 147,
-      "provider": "Rocket Lab",
-      "countryCode": "US",
-      "region": "us",
-      "classificationBasis": "lsp_agency_country",
-      "orbit": "LEO",
-      "missionName": "6x HawkEye 360",
-      "missionType": "Earth Science",
-      "missionDescription": "HawkEye 360 is a a space-based civil global intelligence satellite network using radio frequency (RF) technology to help monitor transportation across air, land and sea and assist with emergencies, and to provide civil SIGINT (Signal Intelligence) mission.\r\n\r\nThe constellation of small satellites (named Hawk ) will collect information on specific radio signals worldwide to provide high-precision radio frequency mapping and analytics from Low Earth orbit (LEO).",
-      "rocketConfigurationId": 26,
-      "rocketConfiguration": "Electron",
-      "rocketFullName": "Electron",
-      "rocketFamily": "Electron",
-      "rocketLaunchCostUsd": 6000000,
-      "leoCapacityKg": 300,
-      "gtoCapacityKg": null,
-      "stages": [],
-      "padId": 210,
-      "padName": "Unknown Pad",
-      "padActive": true,
-      "padLatitude": -39.260881,
-      "padLongitude": 177.865826,
-      "padCountryCode": "NZ",
-      "locationId": 10,
-      "locationName": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "locationCountryCode": "NZ",
-      "padTimezone": "Pacific/Auckland",
-      "padTurnaround": "P0D",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-08-06T15:20:35Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/7766f3bb-674c-4c71-b986-963bd633fcfe/?format=json"
-    },
-    {
-      "id": "18441371-8b2e-457c-afb5-1ec1b11ab630",
-      "name": "Falcon 9 Block 5 | Crew-13",
-      "net": "2026-09-30T00:00:00Z",
-      "netPrecision": "Month",
-      "windowStart": "2026-09-30T00:00:00Z",
-      "windowEnd": "2026-09-30T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
-      "providerId": 121,
-      "provider": "SpaceX",
-      "countryCode": "US",
-      "region": "us",
-      "classificationBasis": "lsp_agency_country",
-      "orbit": "LEO",
-      "missionName": "Crew-13",
-      "missionType": "Human Exploration",
-      "missionDescription": "SpaceX Crew-13 is the thirteenth crewed operational flight of a Crew Dragon spacecraft to the International Space Station as part of NASA's Commercial Crew Program.",
-      "rocketConfigurationId": 164,
-      "rocketConfiguration": "Falcon 9",
-      "rocketFullName": "Falcon 9 Block 5",
-      "rocketFamily": "Falcon 9",
-      "rocketLaunchCostUsd": 52000000,
-      "leoCapacityKg": 22800,
-      "gtoCapacityKg": 8300,
-      "stages": [
-        {
-          "id": 924,
-          "type": "Core",
-          "reused": true,
-          "flightNumber": 3,
-          "serialNumber": "B1101",
-          "vehicleStatus": "active",
-          "previousFlightDate": "2026-02-13T10:15:56Z",
-          "turnaround": "P228DT13H44M4S",
-          "landing": {
-            "attempt": true,
-            "success": null,
-            "description": "The Falcon 9 first stage B1101 will land back at the launch site after its 3rd flight.",
-            "downrangeDistanceKm": 0.3,
-            "location": "Landing Zone 40",
-            "locationAbbrev": "LZ-40",
-            "type": null
-          }
-        }
-      ],
-      "padId": 80,
-      "padName": "Space Launch Complex 40",
-      "padActive": true,
-      "padLatitude": 28.56194122,
-      "padLongitude": -80.57735736,
-      "padCountryCode": "US",
-      "locationId": 12,
-      "locationName": "Cape Canaveral SFS, FL, USA",
-      "locationCountryCode": "US",
-      "padTimezone": "America/New_York",
-      "padTurnaround": "P16DT5H10M",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-08-30T01:29:52Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/18441371-8b2e-457c-afb5-1ec1b11ab630/?format=json"
-    },
-    {
-      "id": "7bdc412b-c965-4517-a131-f57a01189803",
-      "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
-      "net": "2026-10-07T00:00:00Z",
-      "netPrecision": "Day",
-      "windowStart": "2026-10-07T00:00:00Z",
-      "windowEnd": "2026-10-07T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
-      "providerId": 115,
-      "provider": "Arianespace",
-      "countryCode": "FR",
-      "region": "other",
-      "classificationBasis": "lsp_agency_country",
-      "orbit": "LEO",
-      "missionName": "Amazon Leo (LE-04)",
-      "missionType": "Communications",
-      "missionDescription": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n35-40 satellites will be carried on each Ariane 6 launch.",
-      "rocketConfigurationId": 512,
-      "rocketConfiguration": "Ariane 64",
-      "rocketFullName": "Ariane 64 Block 2",
-      "rocketFamily": "Ariane 6",
-      "rocketLaunchCostUsd": null,
-      "leoCapacityKg": 21900,
-      "gtoCapacityKg": 11700,
-      "stages": [],
-      "padId": 67,
-      "padName": "Ariane Launch Area 4",
-      "padActive": true,
-      "padLatitude": 5.256319,
-      "padLongitude": -52.786838,
-      "padCountryCode": "GF",
-      "locationId": 13,
-      "locationName": "Guiana Space Centre, French Guiana",
-      "locationCountryCode": "GF",
-      "padTimezone": "America/Cayenne",
-      "padTurnaround": "P40DT3H49M",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-07-03T12:23:14Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/7bdc412b-c965-4517-a131-f57a01189803/?format=json"
     },
     {
       "id": "e0741415-6c63-4236-9736-24a6c04485bc",
@@ -43590,6 +44971,230 @@
       "timeline": [],
       "lastUpdated": "2026-08-27T02:42:27Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/e0741415-6c63-4236-9736-24a6c04485bc/?format=json"
+    },
+    {
+      "id": "97c6f5e1-299e-4652-b72d-9618ac047076",
+      "name": "Falcon 9 Block 5 | Starlink Group 15-25",
+      "net": "2026-10-10T16:00:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-10-10T16:00:00Z",
+      "windowEnd": "2026-10-10T20:00:00Z",
+      "statusId": 1,
+      "status": "Go for Launch",
+      "launchDesignator": null,
+      "providerId": 121,
+      "provider": "SpaceX",
+      "countryCode": "US",
+      "region": "us",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "LEO",
+      "missionName": "Starlink Group 15-25",
+      "missionType": "Communications",
+      "missionDescription": "A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system.",
+      "rocketConfigurationId": 164,
+      "rocketConfiguration": "Falcon 9",
+      "rocketFullName": "Falcon 9 Block 5",
+      "rocketFamily": "Falcon 9",
+      "rocketLaunchCostUsd": 52000000,
+      "leoCapacityKg": 22800,
+      "gtoCapacityKg": 8300,
+      "stages": [
+        {
+          "id": 998,
+          "type": "Core",
+          "reused": true,
+          "flightNumber": 20,
+          "serialNumber": "B1088",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-09-06T14:26:54Z",
+          "turnaround": "P34DT1H33M6S",
+          "landing": {
+            "attempt": true,
+            "success": null,
+            "description": "The Falcon 9 first stage B1088 will land on ASDS OCISLY after its 20th flight.",
+            "downrangeDistanceKm": 574,
+            "location": "Of Course I Still Love You",
+            "locationAbbrev": "OCISLY",
+            "type": null
+          }
+        }
+      ],
+      "padId": 16,
+      "padName": "Space Launch Complex 4E",
+      "padActive": true,
+      "padLatitude": 34.632,
+      "padLongitude": -120.611,
+      "padCountryCode": "US",
+      "locationId": 11,
+      "locationName": "Vandenberg SFB, CA, USA",
+      "locationCountryCode": "US",
+      "padTimezone": "America/Los_Angeles",
+      "padTurnaround": "P5DT7H54M",
+      "infoUrl": "https://www.spacex.com/launches/sl-15-25",
+      "webcastUrl": "https://x.com/i/broadcasts/1yKAPwdemygxb",
+      "timeline": [
+        {
+          "abbrev": "GO for Prop Load",
+          "description": "Launch director verifies go for propellant load",
+          "relativeTime": "-PT38M"
+        },
+        {
+          "abbrev": "Stage 1 LOX Load",
+          "description": "Start of liquid oxygen loading in the first stage",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Prop Load",
+          "description": "Start of propelland loading",
+          "relativeTime": "-PT35M"
+        },
+        {
+          "abbrev": "Stage 2 LOX Load",
+          "description": "Start of liquid oxygen loading in the second stage",
+          "relativeTime": "-PT16M"
+        },
+        {
+          "abbrev": "Engine Chill",
+          "description": "Start of engine chilling",
+          "relativeTime": "-PT7M"
+        },
+        {
+          "abbrev": "Tank Press",
+          "description": "Fuel tanks are pressurized to flight levels",
+          "relativeTime": "-PT1M"
+        },
+        {
+          "abbrev": "Startup",
+          "description": "The onboard computer takes control over the countdown and runs last checks",
+          "relativeTime": "-PT1M"
+        },
+        {
+          "abbrev": "GO for Launch",
+          "description": "Launch director verifies go for launch",
+          "relativeTime": "-PT45S"
+        },
+        {
+          "abbrev": "Ignition",
+          "description": "Start of the engine ignition sequence",
+          "relativeTime": "-PT3S"
+        },
+        {
+          "abbrev": "Liftoff",
+          "description": "First upwards movement of the rocket",
+          "relativeTime": "P0D"
+        },
+        {
+          "abbrev": "Max-Q",
+          "description": "Maximum dynamic pressure",
+          "relativeTime": "PT1M8S"
+        },
+        {
+          "abbrev": "MECO",
+          "description": "Cut-off of the main engine",
+          "relativeTime": "PT2M26S"
+        },
+        {
+          "abbrev": "Stage 2 Separation",
+          "description": "Separation of the second stage from the first",
+          "relativeTime": "PT2M29S"
+        },
+        {
+          "abbrev": "SES-1",
+          "description": "First start of the second engine",
+          "relativeTime": "PT2M36S"
+        },
+        {
+          "abbrev": "Fairing Separation",
+          "description": "Separation of the payload fairing",
+          "relativeTime": "PT2M58S"
+        },
+        {
+          "abbrev": "Entry Burn Startup",
+          "description": "Start of the atmospheric entry burn",
+          "relativeTime": "PT6M1S"
+        },
+        {
+          "abbrev": "Entry Burn Shutdown",
+          "description": "End of the atmospheric entry burn",
+          "relativeTime": "PT6M24S"
+        },
+        {
+          "abbrev": "Stage 1 Landing Burn",
+          "description": "Start of the first stage landing burn",
+          "relativeTime": "PT8M"
+        },
+        {
+          "abbrev": "Stage 1 Landing",
+          "description": "Landing of the first stage",
+          "relativeTime": "PT8M23S"
+        },
+        {
+          "abbrev": "SECO-1",
+          "description": "First cut-off of the second engine",
+          "relativeTime": "PT8M39S"
+        },
+        {
+          "abbrev": "SES-2",
+          "description": "Second start of the second engine",
+          "relativeTime": "PT53M5S"
+        },
+        {
+          "abbrev": "SECO-2",
+          "description": "Second cut-off of the second engine",
+          "relativeTime": "PT53M6S"
+        },
+        {
+          "abbrev": "Starlink Deployment",
+          "description": "Deployment of the Starlink stack from the rocket",
+          "relativeTime": "PT1H1M57S"
+        }
+      ],
+      "lastUpdated": "2026-09-22T01:25:08Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/97c6f5e1-299e-4652-b72d-9618ac047076/?format=json"
+    },
+    {
+      "id": "20d5676e-111b-40e3-8923-b218c3665ca2",
+      "name": "GSLV Mk II | IRNSS-1L (NVS-03)",
+      "net": "2026-10-15T00:00:00Z",
+      "netPrecision": "Day",
+      "windowStart": "2026-10-15T00:00:00Z",
+      "windowEnd": "2026-10-15T00:00:00Z",
+      "statusId": 2,
+      "status": "To Be Determined",
+      "launchDesignator": null,
+      "providerId": 31,
+      "provider": "Indian Space Research Organization",
+      "countryCode": "IN",
+      "region": "other",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "GTO",
+      "missionName": "IRNSS-1L (NVS-03)",
+      "missionType": "Navigation",
+      "missionDescription": "This is a replacement satellite for the Indian Regional Navigation Satellite System. The constellation will provide India with an alternative to GPS and will be used for military and civilian use. Located at a geosynchronous orbit, the system will be operated by the Indian government.",
+      "rocketConfigurationId": 168,
+      "rocketConfiguration": "GSLV Mk II",
+      "rocketFullName": "GSLV Mk. II",
+      "rocketFamily": "GSLV",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 0,
+      "gtoCapacityKg": 2500,
+      "stages": [],
+      "padId": 82,
+      "padName": "Satish Dhawan Space Centre Second Launch Pad",
+      "padActive": true,
+      "padLatitude": 13.7199,
+      "padLongitude": 80.2304,
+      "padCountryCode": "IN",
+      "locationId": 14,
+      "locationName": "Satish Dhawan Space Centre, India",
+      "locationCountryCode": "IN",
+      "padTimezone": "Asia/Kolkata",
+      "padTurnaround": "P41DT2H35M",
+      "infoUrl": null,
+      "webcastUrl": null,
+      "timeline": [],
+      "lastUpdated": "2026-09-22T21:32:09Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/20d5676e-111b-40e3-8923-b218c3665ca2/?format=json"
     },
     {
       "id": "69ebbcd2-b257-4070-9ef9-21e7d1f8a883",
@@ -43692,6 +45297,94 @@
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/?format=json"
     },
     {
+      "id": "e59ff9a4-f72f-4841-8546-3c94346ecdba",
+      "name": "SSLV | AayulSAT-1A & others",
+      "net": "2026-10-31T00:00:00Z",
+      "netPrecision": "Month",
+      "windowStart": "2026-10-31T00:00:00Z",
+      "windowEnd": "2026-10-31T00:00:00Z",
+      "statusId": 2,
+      "status": "To Be Determined",
+      "launchDesignator": null,
+      "providerId": 31,
+      "provider": "Indian Space Research Organization",
+      "countryCode": "IN",
+      "region": "other",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "LEO",
+      "missionName": "AayulSAT-1A & others",
+      "missionType": "Technology",
+      "missionDescription": "Ride-share launch of multiple satellites, including the in-orbit refueling demonstration satellite AayulSAT-1A from OrbitAID Aerospace. Other payload's identities TBD.",
+      "rocketConfigurationId": 150,
+      "rocketConfiguration": "SSLV",
+      "rocketFullName": "SSLV",
+      "rocketFamily": "SSLV",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 500,
+      "gtoCapacityKg": null,
+      "stages": [],
+      "padId": 50,
+      "padName": "Satish Dhawan Space Centre First Launch Pad",
+      "padActive": true,
+      "padLatitude": 13.733,
+      "padLongitude": 80.235,
+      "padCountryCode": "IN",
+      "locationId": 14,
+      "locationName": "Satish Dhawan Space Centre, India",
+      "locationCountryCode": "IN",
+      "padTimezone": "Asia/Kolkata",
+      "padTurnaround": "P104DT17H24M30S",
+      "infoUrl": null,
+      "webcastUrl": null,
+      "timeline": [],
+      "lastUpdated": "2026-09-26T14:16:32Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/e59ff9a4-f72f-4841-8546-3c94346ecdba/?format=json"
+    },
+    {
+      "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
+      "name": "Vulcan VC6L | Amazon Leo (LV-01)",
+      "net": "2026-10-31T00:00:00Z",
+      "netPrecision": "Month",
+      "windowStart": "2026-10-31T00:00:00Z",
+      "windowEnd": "2026-10-31T00:00:00Z",
+      "statusId": 2,
+      "status": "To Be Determined",
+      "launchDesignator": null,
+      "providerId": 124,
+      "provider": "United Launch Alliance",
+      "countryCode": "US",
+      "region": "us",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "LEO",
+      "missionName": "Amazon Leo (LV-01)",
+      "missionType": "Communications",
+      "missionDescription": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n45 satellites will be carried on each Vulcan launch.",
+      "rocketConfigurationId": 479,
+      "rocketConfiguration": "Vulcan VC6L",
+      "rocketFullName": "Vulcan VC6L",
+      "rocketFamily": "Vulcan",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 27200,
+      "gtoCapacityKg": 15300,
+      "stages": [],
+      "padId": 29,
+      "padName": "Space Launch Complex 41",
+      "padActive": true,
+      "padLatitude": 28.58341025,
+      "padLongitude": -80.58303644,
+      "padCountryCode": "US",
+      "locationId": 12,
+      "locationName": "Cape Canaveral SFS, FL, USA",
+      "locationCountryCode": "US",
+      "padTimezone": "America/New_York",
+      "padTurnaround": "P120DT19H29M45S",
+      "infoUrl": null,
+      "webcastUrl": null,
+      "timeline": [],
+      "lastUpdated": "2026-09-20T02:52:14Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/ef9850ad-1096-425b-9d27-f7bbd186e61a/?format=json"
+    },
+    {
       "id": "bf2c3027-a314-403e-a416-2bfd5d165ad1",
       "name": "Falcon 9 Block 5 | Dragon CRS-2 SpX-35",
       "net": "2026-10-31T00:00:00Z",
@@ -43748,56 +45441,12 @@
       "locationName": "Cape Canaveral SFS, FL, USA",
       "locationCountryCode": "US",
       "padTimezone": "America/New_York",
-      "padTurnaround": "P31D",
+      "padTurnaround": "P29DT8H49M54S",
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
       "lastUpdated": "2026-09-04T19:26:10Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/bf2c3027-a314-403e-a416-2bfd5d165ad1/?format=json"
-    },
-    {
-      "id": "f4c720ce-0cfd-43e6-b8dd-00273073bc01",
-      "name": "Electron | StriX Launch 12",
-      "net": "2026-10-31T00:00:00Z",
-      "netPrecision": "Month",
-      "windowStart": "2026-10-31T00:00:00Z",
-      "windowEnd": "2026-10-31T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
-      "providerId": 147,
-      "provider": "Rocket Lab",
-      "countryCode": "US",
-      "region": "us",
-      "classificationBasis": "lsp_agency_country",
-      "orbit": "SSO",
-      "missionName": "StriX Launch 12",
-      "missionType": "Earth Science",
-      "missionDescription": "Synthetic aperture radar satellite for Japanese Earth imaging company Synspective.",
-      "rocketConfigurationId": 26,
-      "rocketConfiguration": "Electron",
-      "rocketFullName": "Electron",
-      "rocketFamily": "Electron",
-      "rocketLaunchCostUsd": 6000000,
-      "leoCapacityKg": 300,
-      "gtoCapacityKg": null,
-      "stages": [],
-      "padId": 210,
-      "padName": "Unknown Pad",
-      "padActive": true,
-      "padLatitude": -39.260881,
-      "padLongitude": 177.865826,
-      "padCountryCode": "NZ",
-      "locationId": 10,
-      "locationName": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "locationCountryCode": "NZ",
-      "padTimezone": "Pacific/Auckland",
-      "padTurnaround": "P31D",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-03-27T00:32:58Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/f4c720ce-0cfd-43e6-b8dd-00273073bc01/?format=json"
     },
     {
       "id": "3b430f81-0ff1-4d85-8a1a-cef0de326198",
@@ -43856,7 +45505,7 @@
       "locationName": "Cape Canaveral SFS, FL, USA",
       "locationCountryCode": "US",
       "padTimezone": "America/New_York",
-      "padTurnaround": "P31D",
+      "padTurnaround": "P29DT8H49M54S",
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
@@ -43864,86 +45513,8 @@
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/3b430f81-0ff1-4d85-8a1a-cef0de326198/?format=json"
     },
     {
-      "id": "4651fd8a-43de-4166-bf8f-c168b3bd1d2c",
-      "name": "Falcon Heavy | NROL-97",
-      "net": "2026-10-31T00:00:00Z",
-      "netPrecision": "Quarter 4",
-      "windowStart": "2026-10-31T00:00:00Z",
-      "windowEnd": "2026-10-31T00:00:00Z",
-      "statusId": 2,
-      "status": "To Be Determined",
-      "launchDesignator": null,
-      "providerId": 121,
-      "provider": "SpaceX",
-      "countryCode": "US",
-      "region": "us",
-      "classificationBasis": "lsp_agency_country",
-      "orbit": "N/A",
-      "missionName": "NROL-97",
-      "missionType": "Government/Top Secret",
-      "missionDescription": "Classified payload for the US National Reconnaissance Office",
-      "rocketConfigurationId": 161,
-      "rocketConfiguration": "Falcon Heavy",
-      "rocketFullName": "Falcon Heavy",
-      "rocketFamily": "Falcon",
-      "rocketLaunchCostUsd": 90000000,
-      "leoCapacityKg": 63800,
-      "gtoCapacityKg": 26700,
-      "stages": [
-        {
-          "id": 987,
-          "type": "Core",
-          "reused": null,
-          "flightNumber": null,
-          "serialNumber": "Unknown FH",
-          "vehicleStatus": "N/A",
-          "previousFlightDate": null,
-          "turnaround": null,
-          "landing": null
-        },
-        {
-          "id": 988,
-          "type": "Strap-On Booster",
-          "reused": true,
-          "flightNumber": 2,
-          "serialNumber": "B1104",
-          "vehicleStatus": "active",
-          "previousFlightDate": "2026-08-30T11:26:04Z",
-          "turnaround": "P61DT12H33M56S",
-          "landing": null
-        },
-        {
-          "id": 989,
-          "type": "Strap-On Booster",
-          "reused": true,
-          "flightNumber": 4,
-          "serialNumber": "B1072",
-          "vehicleStatus": "active",
-          "previousFlightDate": "2026-08-30T11:26:04Z",
-          "turnaround": "P61DT12H33M56S",
-          "landing": null
-        }
-      ],
-      "padId": 87,
-      "padName": "Launch Complex 39A",
-      "padActive": true,
-      "padLatitude": 28.60822681,
-      "padLongitude": -80.60428186,
-      "padCountryCode": "US",
-      "locationId": 27,
-      "locationName": "Kennedy Space Center, FL, USA",
-      "locationCountryCode": "US",
-      "padTimezone": "America/New_York",
-      "padTurnaround": "P61DT12H33M56S",
-      "infoUrl": null,
-      "webcastUrl": null,
-      "timeline": [],
-      "lastUpdated": "2026-09-08T16:00:29Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/4651fd8a-43de-4166-bf8f-c168b3bd1d2c/?format=json"
-    },
-    {
-      "id": "67213393-7983-4c06-8b44-b8c785a5ed79",
-      "name": "Falcon 9 Block 5 | Transporter 18 (Dedicated SSO Rideshare)",
+      "id": "dc570565-4dcf-4ab9-8174-bf88efef477f",
+      "name": "Long March 12A | Flight 2",
       "net": "2026-10-31T00:00:00Z",
       "netPrecision": "Month",
       "windowStart": "2026-10-31T00:00:00Z",
@@ -43951,95 +45522,103 @@
       "statusId": 2,
       "status": "To Be Determined",
       "launchDesignator": null,
-      "providerId": 121,
-      "provider": "SpaceX",
-      "countryCode": "US",
-      "region": "us",
+      "providerId": 88,
+      "provider": "China Aerospace Science and Technology Corporation",
+      "countryCode": "CN",
+      "region": "cn",
       "classificationBasis": "lsp_agency_country",
-      "orbit": "SSO",
-      "missionName": "Transporter 18 (Dedicated SSO Rideshare)",
-      "missionType": "Dedicated Rideshare",
-      "missionDescription": "Dedicated rideshare flight to a sun-synchronous orbit with dozens of small microsatellites and nanosatellites for commercial and government customers.",
-      "rocketConfigurationId": 164,
-      "rocketConfiguration": "Falcon 9",
-      "rocketFullName": "Falcon 9 Block 5",
-      "rocketFamily": "Falcon 9",
-      "rocketLaunchCostUsd": 52000000,
-      "leoCapacityKg": 22800,
-      "gtoCapacityKg": 8300,
+      "orbit": "LEO",
+      "missionName": "Flight 2",
+      "missionType": "Test Flight",
+      "missionDescription": "Second test launch of CASC/SAST’s Long March 12A rocket. Payload identities are TBD.",
+      "rocketConfigurationId": 538,
+      "rocketConfiguration": "Long March 12A",
+      "rocketFullName": "Long March 12A",
+      "rocketFamily": "Long March 12",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 12000,
+      "gtoCapacityKg": null,
       "stages": [
         {
-          "id": 753,
+          "id": 970,
           "type": "Core",
           "reused": null,
           "flightNumber": null,
-          "serialNumber": "Unknown F9",
+          "serialNumber": "Unknown12A",
           "vehicleStatus": "N/A",
           "previousFlightDate": null,
           "turnaround": null,
-          "landing": null
+          "landing": {
+            "attempt": true,
+            "success": null,
+            "description": "The Long March 12A first stage booster will attempt to land on its downrange landing pad.",
+            "downrangeDistanceKm": 252,
+            "location": "Long March 12A Landing Site",
+            "locationAbbrev": "CZ-12A LZ",
+            "type": null
+          }
         }
       ],
-      "padId": 16,
-      "padName": "Space Launch Complex 4E",
+      "padId": 247,
+      "padName": "Long March 12 series Pad",
       "padActive": true,
-      "padLatitude": 34.632,
-      "padLongitude": -120.611,
-      "padCountryCode": "US",
-      "locationId": 11,
-      "locationName": "Vandenberg SFB, CA, USA",
-      "locationCountryCode": "US",
-      "padTimezone": "America/Los_Angeles",
-      "padTurnaround": "P31D",
+      "padLatitude": 40.891596,
+      "padLongitude": 100.217289,
+      "padCountryCode": "CN",
+      "locationId": 17,
+      "locationName": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "locationCountryCode": "CN",
+      "padTimezone": "Asia/Shanghai",
+      "padTurnaround": "P151DT15H20M",
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2025-06-03T23:40:03Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/67213393-7983-4c06-8b44-b8c785a5ed79/?format=json"
+      "lastUpdated": "2026-09-20T02:52:25Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/dc570565-4dcf-4ab9-8174-bf88efef477f/?format=json"
     },
     {
-      "id": "bff2fc91-eddd-4dfc-af26-ac0674cfab4d",
-      "name": "Soyuz 2.1a/Fregat-M | MKA Kinosputnik, KOEN and others",
-      "net": "2026-11-19T00:00:00Z",
-      "netPrecision": "Day",
-      "windowStart": "2026-11-19T00:00:00Z",
-      "windowEnd": "2026-11-19T00:00:00Z",
+      "id": "7bdc412b-c965-4517-a131-f57a01189803",
+      "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
+      "net": "2026-10-31T00:00:00Z",
+      "netPrecision": "Month",
+      "windowStart": "2026-10-31T00:00:00Z",
+      "windowEnd": "2026-10-31T00:00:00Z",
       "statusId": 2,
       "status": "To Be Determined",
       "launchDesignator": null,
-      "providerId": 63,
-      "provider": "Russian Federal Space Agency (ROSCOSMOS)",
-      "countryCode": "RU",
+      "providerId": 115,
+      "provider": "Arianespace",
+      "countryCode": "FR",
       "region": "other",
       "classificationBasis": "lsp_agency_country",
-      "orbit": "SSO",
-      "missionName": "MKA Kinosputnik, KOEN and others",
-      "missionType": "Technology",
-      "missionDescription": "Share-ride of multiple satellites, including dual-use optical Earth observation satellites and drone-guiding satellites:\r\n\r\n* MKA Kinosputnik\r\n* KOEN, KA MT-LAB\r\n* NPO Kaisant 6U cubesat with a Germes modem\r\n* NPO Kaisant 16U cubesat with Gonets modems",
-      "rocketConfigurationId": 45,
-      "rocketConfiguration": "Soyuz 2.1a/Fregat-M",
-      "rocketFullName": "Soyuz 2.1a Fregat-M",
-      "rocketFamily": "Soyuz 2",
-      "rocketLaunchCostUsd": 80000000,
-      "leoCapacityKg": 7020,
-      "gtoCapacityKg": null,
+      "orbit": "LEO",
+      "missionName": "Amazon Leo (LE-04)",
+      "missionType": "Communications",
+      "missionDescription": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n35-40 satellites will be carried on each Ariane 6 launch.",
+      "rocketConfigurationId": 512,
+      "rocketConfiguration": "Ariane 64",
+      "rocketFullName": "Ariane 64 Block 2",
+      "rocketFamily": "Ariane 6",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": 21900,
+      "gtoCapacityKg": 11700,
       "stages": [],
-      "padId": 83,
-      "padName": "Cosmodrome Site 1S",
+      "padId": 67,
+      "padName": "Ariane Launch Area 4",
       "padActive": true,
-      "padLatitude": 51.884395,
-      "padLongitude": 128.333932,
-      "padCountryCode": "RU",
-      "locationId": 18,
-      "locationName": "Vostochny Cosmodrome, Siberia, Russian Federation",
-      "locationCountryCode": "RU",
-      "padTimezone": "Asia/Yakutsk",
-      "padTurnaround": "P325DT10H41M55S",
+      "padLatitude": 5.256319,
+      "padLongitude": -52.786838,
+      "padCountryCode": "GF",
+      "locationId": 13,
+      "locationName": "Guiana Space Centre, French Guiana",
+      "locationCountryCode": "GF",
+      "padTimezone": "America/Cayenne",
+      "padTurnaround": "P64DT3H49M",
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
-      "lastUpdated": "2026-08-17T12:39:04Z",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/bff2fc91-eddd-4dfc-af26-ac0674cfab4d/?format=json"
+      "lastUpdated": "2026-09-25T12:37:45Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/7bdc412b-c965-4517-a131-f57a01189803/?format=json"
     },
     {
       "id": "8dd5de11-831b-445f-86f0-bffefe0550d9",
@@ -44078,12 +45657,56 @@
       "locationName": "Baikonur Cosmodrome, Republic of Kazakhstan",
       "locationCountryCode": "KZ",
       "padTimezone": "Asia/Qyzylorda",
-      "padTurnaround": "P69DT5H3M",
+      "padTurnaround": "P68DT15H29M6S",
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
       "lastUpdated": "2026-06-08T21:46:36Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/8dd5de11-831b-445f-86f0-bffefe0550d9/?format=json"
+    },
+    {
+      "id": "dfac5ab7-7017-454f-b6cf-eeed277a97b5",
+      "name": "LVM-3 | Gaganyaan-1",
+      "net": "2026-11-30T00:00:00Z",
+      "netPrecision": "Month",
+      "windowStart": "2026-11-30T00:00:00Z",
+      "windowEnd": "2026-11-30T00:00:00Z",
+      "statusId": 2,
+      "status": "To Be Determined",
+      "launchDesignator": null,
+      "providerId": 31,
+      "provider": "Indian Space Research Organization",
+      "countryCode": "IN",
+      "region": "other",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "LEO",
+      "missionName": "Gaganyaan-1",
+      "missionType": "Test Flight",
+      "missionDescription": "First uncrewed orbital test flight of the Gaganyaan capsule.",
+      "rocketConfigurationId": 172,
+      "rocketConfiguration": "LVM-3 (GSLV Mk III)",
+      "rocketFullName": "Launch Vehicle Mark-3 (GSLV Mk III)",
+      "rocketFamily": "GSLV",
+      "rocketLaunchCostUsd": 46000000,
+      "leoCapacityKg": 10000,
+      "gtoCapacityKg": 5000,
+      "stages": [],
+      "padId": 82,
+      "padName": "Satish Dhawan Space Centre Second Launch Pad",
+      "padActive": true,
+      "padLatitude": 13.7199,
+      "padLongitude": 80.2304,
+      "padCountryCode": "IN",
+      "locationId": 14,
+      "locationName": "Satish Dhawan Space Centre, India",
+      "locationCountryCode": "IN",
+      "padTimezone": "Asia/Kolkata",
+      "padTurnaround": "P46D",
+      "infoUrl": null,
+      "webcastUrl": null,
+      "timeline": [],
+      "lastUpdated": "2026-09-26T12:24:36Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/dfac5ab7-7017-454f-b6cf-eeed277a97b5/?format=json"
     },
     {
       "id": "d3bd7fb2-fac6-49fc-ae52-cee07d2fde67",
@@ -44180,12 +45803,56 @@
       "locationName": "Kennedy Space Center, FL, USA",
       "locationCountryCode": "US",
       "padTimezone": "America/New_York",
-      "padTurnaround": "P30D",
+      "padTurnaround": "P58DT20H7M",
       "infoUrl": null,
       "webcastUrl": null,
       "timeline": [],
       "lastUpdated": "2026-06-02T15:03:17Z",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/d3bd7fb2-fac6-49fc-ae52-cee07d2fde67/?format=json"
+    },
+    {
+      "id": "b5a9bccb-30d7-4af6-8ad1-fabb563be53c",
+      "name": "PSLV-XL | TDS-01",
+      "net": "2026-11-30T00:00:00Z",
+      "netPrecision": "Month",
+      "windowStart": "2026-11-30T00:00:00Z",
+      "windowEnd": "2026-11-30T00:00:00Z",
+      "statusId": 2,
+      "status": "To Be Determined",
+      "launchDesignator": null,
+      "providerId": 31,
+      "provider": "Indian Space Research Organization",
+      "countryCode": "IN",
+      "region": "other",
+      "classificationBasis": "lsp_agency_country",
+      "orbit": "GTO",
+      "missionName": "TDS-01",
+      "missionType": "Technology",
+      "missionDescription": "TDS-01 (Technology Demonstration Satellite-01) is an Indian geostationary orbit technology demonstration satellite carrying payloads for the Indian Space Research Organisation (ISRO)’s Institute of Plasma Research, Gandhinagar and the CSIR-CEERI, Pilani. \r\n\r\nPayloads to be tested included an internally developed 300 mN electric powered thrusters, atomic clocks, travelling wave tube amplifiers (TWTA) & a quantum communication suite (QuTDS).",
+      "rocketConfigurationId": 38,
+      "rocketConfiguration": "PSLV-XL",
+      "rocketFullName": "PSLV XL",
+      "rocketFamily": "PSLV",
+      "rocketLaunchCostUsd": null,
+      "leoCapacityKg": null,
+      "gtoCapacityKg": null,
+      "stages": [],
+      "padId": 50,
+      "padName": "Satish Dhawan Space Centre First Launch Pad",
+      "padActive": true,
+      "padLatitude": 13.733,
+      "padLongitude": 80.235,
+      "padCountryCode": "IN",
+      "locationId": 14,
+      "locationName": "Satish Dhawan Space Centre, India",
+      "locationCountryCode": "IN",
+      "padTimezone": "Asia/Kolkata",
+      "padTurnaround": "P30D",
+      "infoUrl": null,
+      "webcastUrl": null,
+      "timeline": [],
+      "lastUpdated": "2026-09-26T12:26:06Z",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/b5a9bccb-30d7-4af6-8ad1-fabb563be53c/?format=json"
     },
     {
       "id": "7c891a0b-7194-4425-8cfd-2e8c75af2924",
@@ -44268,7 +45935,7 @@
       "locationName": "Guiana Space Centre, French Guiana",
       "locationCountryCode": "GF",
       "padTimezone": "America/Cayenne",
-      "padTurnaround": "P54D",
+      "padTurnaround": "P30D",
       "infoUrl": "http://www.arianespace.com/press-release/arianespace-and-eumetsat-announce-signature-of-a-launch-contract-for-the-first-metop-sg-satellites/",
       "webcastUrl": null,
       "timeline": [],

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-09T05:15:52.169Z",
+  "generatedAt": "2026-09-27T05:31:24.053Z",
   "coverage": {
     "fromYear": 2000,
     "toYear": 2026,
@@ -15,18 +15,18 @@
     "url": "https://planet4589.org/space/gcat/",
     "satcat": {
       "url": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
-      "sha256": "9d3b467ca3080a5ca8afb5b0b62c9f964b4c2cc2c24db498719bba2591b17a0c",
+      "sha256": "2045192a9985aa64da0edc21c4d3d8f74ae00622c06b31b311b44d22f222ea51",
       "updated": {
-        "raw": "2026 Sep  9 0144:04",
-        "iso": "2026-09-09T01:44:04.000Z"
+        "raw": "2026 Sep 24 2117:02",
+        "iso": "2026-09-24T21:17:02.000Z"
       }
     },
     "launchlog": {
       "url": "https://planet4589.org/space/gcat/tsv/derived/launchlog.tsv",
-      "sha256": "4fd6bf1794d8beb0320762104ec50251405d1b23af51ebde09bc341966dfb69a",
+      "sha256": "c72c282f11e54fb348ef2d1589d42a4b1a1e3900e1f6cead4b47e331ddc1190c",
       "updated": {
-        "raw": "2026 Sep  9 0142:14",
-        "iso": "2026-09-09T01:42:14.000Z"
+        "raw": "2026 Sep 24 2115:06",
+        "iso": "2026-09-24T21:15:06.000Z"
       }
     }
   },
@@ -459,16 +459,16 @@
       "year": "2026",
       "label": "2026 YTD",
       "attempts": {
-        "us": 118,
-        "cn": 61,
-        "other": 35,
-        "global": 214
+        "us": 122,
+        "cn": 70,
+        "other": 40,
+        "global": 232
       },
       "success": {
-        "us": 117,
-        "cn": 57,
-        "other": 33,
-        "global": 207
+        "us": 121,
+        "cn": 66,
+        "other": 38,
+        "global": 225
       }
     }
   ],
@@ -991,8 +991,8 @@
       "catalogObjects": {
         "us": 10498,
         "cn": 5375,
-        "other": 10463,
-        "global": 26336
+        "other": 10464,
+        "global": 26337
       },
       "knownPayloadMassKg": {
         "us": 2559969.2549999924,
@@ -1006,93 +1006,93 @@
       "year": "2023",
       "label": "2023 EOY",
       "payloadObjects": {
-        "us": 7210,
+        "us": 7211,
         "cn": 935,
         "other": 3789,
-        "global": 11934
+        "global": 11935
       },
       "catalogObjects": {
-        "us": 12079,
+        "us": 12080,
         "cn": 5278,
-        "other": 10171,
-        "global": 27528
+        "other": 10172,
+        "global": 27530
       },
       "knownPayloadMassKg": {
-        "us": 3591519.94300001,
+        "us": 3591779.94300001,
         "cn": 857348.9199999999,
         "other": 3218875.0960000018,
-        "global": 7667743.95900001
+        "global": 7668003.95900001
       },
-      "knownPayloadMassObjects": 11931
+      "knownPayloadMassObjects": 11932
     },
     {
       "year": "2024",
       "label": "2024 EOY",
       "payloadObjects": {
-        "us": 8757,
+        "us": 8758,
         "cn": 1068,
         "other": 3819,
-        "global": 13644
+        "global": 13645
       },
       "catalogObjects": {
-        "us": 13454,
+        "us": 13455,
         "cn": 5815,
-        "other": 9818,
-        "global": 29087
+        "other": 9819,
+        "global": 29089
       },
       "knownPayloadMassKg": {
-        "us": 5115815.45500002,
+        "us": 5116075.45500002,
         "cn": 958732.62,
         "other": 3288010.580000001,
-        "global": 9362558.654999977
+        "global": 9362818.654999977
       },
-      "knownPayloadMassObjects": 13641
+      "knownPayloadMassObjects": 13642
     },
     {
       "year": "2025",
       "label": "2025 EOY",
       "payloadObjects": {
-        "us": 11643,
+        "us": 11644,
         "cn": 1326,
         "other": 3993,
-        "global": 16962
+        "global": 16963
       },
       "catalogObjects": {
-        "us": 16173,
+        "us": 16174,
         "cn": 5867,
-        "other": 9750,
-        "global": 31790
+        "other": 9751,
+        "global": 31792
       },
       "knownPayloadMassKg": {
-        "us": 7071735.19500002,
+        "us": 7071995.19500002,
         "cn": 1201057.3,
         "other": 3332476.6490000007,
-        "global": 11605269.14399995
+        "global": 11605529.14399995
       },
-      "knownPayloadMassObjects": 16958
+      "knownPayloadMassObjects": 16959
     },
     {
       "year": "2026",
       "label": "2026 NOW",
       "payloadObjects": {
-        "us": 13286,
-        "cn": 1526,
-        "other": 4122,
-        "global": 18934
+        "us": 13249,
+        "cn": 1522,
+        "other": 4118,
+        "global": 18889
       },
       "catalogObjects": {
-        "us": 17751,
-        "cn": 5990,
-        "other": 9819,
-        "global": 33560
+        "us": 17711,
+        "cn": 5978,
+        "other": 9815,
+        "global": 33504
       },
       "knownPayloadMassKg": {
-        "us": 8098975.785000016,
-        "cn": 1326110,
-        "other": 3351123.152000002,
-        "global": 12776208.936999941
+        "us": 8089246.385000015,
+        "cn": 1325929,
+        "other": 3348928.652000002,
+        "global": 12764104.036999943
       },
-      "knownPayloadMassObjects": 18930
+      "knownPayloadMassObjects": 18885
     }
   ],
   "payloadFlow": [
@@ -1773,16 +1773,16 @@
         "global": 2900
       },
       "retirements": {
-        "us": 447,
+        "us": 446,
         "cn": 48,
         "other": 189,
-        "global": 684
+        "global": 683
       },
       "netChange": {
-        "us": 1787,
+        "us": 1788,
         "cn": 162,
         "other": 267,
-        "global": 2216
+        "global": 2217
       },
       "knownDeliveredMassKg": {
         "us": 1140026.115999998,
@@ -1860,22 +1860,22 @@
         "global": 2595
       },
       "retirements": {
-        "us": 446,
-        "cn": 62,
-        "other": 115,
-        "global": 623
+        "us": 484,
+        "cn": 66,
+        "other": 119,
+        "global": 669
       },
       "netChange": {
-        "us": 1643,
-        "cn": 200,
-        "other": 129,
-        "global": 1972
+        "us": 1605,
+        "cn": 196,
+        "other": 125,
+        "global": 1926
       },
       "knownDeliveredMassKg": {
-        "us": 1211789.2999999998,
+        "us": 1211781.2999999998,
         "cn": 148225,
         "other": 44935.40000000001,
-        "global": 1404949.6999999997
+        "global": 1404941.6999999997
       },
       "knownDeliveredMassObjects": 2595
     }

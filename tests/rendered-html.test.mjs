@@ -36,7 +36,9 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /2000 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
-  assert.match(html, /ALPHA 1\.1/);
+  assert.match(html, /ALPHA 1\.3/);
+  assert.match(html, /在轨规模，正在如何增长/);
+  assert.match(html, /ITU：商业星座与具体申报历史/);
   assert.match(html, /未来 8 次轨道任务/);
   assert.match(html, /可复用一级台账/);
   assert.match(html, /从年度总量下钻到单次任务/);
@@ -105,12 +107,13 @@ test("ships auditable launch snapshots and internally consistent aggregates", as
 
 test("ships auditable orbit snapshots with consistent regional totals", async () => {
   const [snapshot, metrics, editorial] = await Promise.all([
-    readFile(new URL("../data/snapshots/orbit-assets/2026-09-08.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../data/snapshots/orbit-assets/2026-09-26.json", import.meta.url), "utf8").then(JSON.parse),
     readFile(new URL("../data/metrics/orbit-assets.json", import.meta.url), "utf8").then(JSON.parse),
     readFile(new URL("../data/editorial/frontier.json", import.meta.url), "utf8").then(JSON.parse),
   ]);
   assert.equal(snapshot.source.name, "GCAT");
-  assert.equal(metrics.current.date, "2026-09-08");
+  assert.equal(metrics.current.date, metrics.snapshots.at(-1).date);
+  assert.ok(metrics.current.date >= "2026-09-26");
   assert.ok(snapshot.activePayloads.global > 10_000);
   assert.ok(snapshot.catalogObjects.global > snapshot.activePayloads.global);
   assert.equal(snapshot.activePayloads.global, snapshot.activePayloads.us + snapshot.activePayloads.cn + snapshot.activePayloads.other);
@@ -203,7 +206,7 @@ test("ships an auditable mission manifest, recovery model and source-health repo
     readFile(new URL("../data/metrics/source-health.json", import.meta.url), "utf8").then(JSON.parse),
   ]);
   assert.equal(manifest.source.name, "Launch Library 2");
-  assert.equal(manifest.asOf, "2026-09-08");
+  assert.ok(manifest.asOf >= "2026-09-26");
   assert.ok(manifest.upcoming.length >= 8);
   assert.ok(manifest.upcoming.every((launch) => launch.id && launch.net && launch.sourceUrl));
   assert.ok(manifest.reuse.recoveryMissions > 0);

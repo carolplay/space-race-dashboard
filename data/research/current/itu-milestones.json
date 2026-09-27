@@ -1,0 +1,1435 @@
+{
+  "schemaVersion": "1.0.0",
+  "collectedAt": "2026-09-26",
+  "status": "local-review",
+  "integrationReady": false,
+  "updateCadence": "weekly manual snapshot; event-driven regulatory amendments",
+  "coverage": "Initial priority sample, not exhaustive global inventory",
+  "dataset": "itu-milestones",
+  "sourceIds": [
+    "itu-res35",
+    "itu-rule",
+    "itu-timeframe"
+  ],
+  "sources": [
+    {
+      "id": "itu-res35",
+      "url": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "dataAsOf": "2026-09-15",
+      "retrievedAt": "2026-09-26",
+      "kind": "official-regulatory-status",
+      "rawUrl": "https://www.itu.int/net/ITU-R/space/res35/build/bundle.js",
+      "sha256": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614"
+    },
+    {
+      "id": "itu-rule",
+      "url": "https://www.itu.int/en/ITU-R/space/Documents/RES35(REV.%20WRC-23).pdf",
+      "kind": "official-rule",
+      "retrievedAt": "2026-09-26"
+    },
+    {
+      "id": "itu-timeframe",
+      "url": "https://www.itu.int/en/ITU-R/space/Documents/RES35(REV.%20WRC-23)-timeframe.pdf",
+      "kind": "official-guidance",
+      "retrievedAt": "2026-09-26"
+    },
+    {
+      "id": "steam-brand",
+      "url": "https://www.itu.int/dms_pub/itu-r/md/00/cr/cir/R00-CR-CIR-0499!!PDF-E.pdf",
+      "publishedAt": "2023-09-15",
+      "kind": "official-brand-mapping"
+    },
+    {
+      "id": "oneweb-brand",
+      "url": "https://fcc.report/IBFS/SAT-LOI-2016042800041/1134939.pdf",
+      "kind": "operator-filing-mirror",
+      "locator": "Appendix A.9, L5 UK filing"
+    },
+    {
+      "id": "amazon-brand",
+      "url": "https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-3-4-weeks/186639---kuiper-application-for-an-ngso-earth-station-network-licence/associated-documents/kuiper-response-to-request-for-additional-information.pdf?v=390491",
+      "publishedAt": "2024-12-13",
+      "kind": "operator-filing-hosted-by-regulator"
+    },
+    {
+      "id": "gw-a59-snl",
+      "url": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59",
+      "kind": "official-filing-index"
+    },
+    {
+      "id": "gw-2-snl",
+      "url": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2",
+      "kind": "official-filing-index"
+    },
+    {
+      "id": "sailspace-snl",
+      "url": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?sel_satname=SAILSPACE-1",
+      "kind": "official-filing-index"
+    },
+    {
+      "id": "qianfan-plan",
+      "url": "https://app.xinhuanet.com/news/article.html?articleId=20260610ba2b423c1e434c998aa80d9e30ad5f54",
+      "publishedAt": "2026-06-10",
+      "kind": "project-lead-interview-and-media-plan-summary",
+      "caveat": "Use project-specific plans only; unrelated Starlink assertions not adopted."
+    },
+    {
+      "id": "oneweb-procurement",
+      "url": "https://eutelsat-com.mynewsdesk.com/pressreleases/eutelsat-procures-a-further-oneweb-229-leo-satellites-from-airbus-3466448",
+      "publishedAt": "2026-09-10",
+      "kind": "operator-announcement"
+    },
+    {
+      "id": "starlink-fcc",
+      "url": "https://docs.fcc.gov/public/attachments/DA-26-36A1.pdf",
+      "publishedAt": "2026-01-09",
+      "kind": "national-license"
+    },
+    {
+      "id": "amazon-fcc",
+      "url": "https://docs.fcc.gov/public/attachments/DA-26-553A1.pdf",
+      "publishedAt": "2026-06-05",
+      "kind": "national-license"
+    },
+    {
+      "id": "mega-screen",
+      "url": "https://planet4589.org/space/con/conlist.html",
+      "kind": "independent-orbital-research",
+      "retrievedAt": "2026-09-26"
+    },
+    {
+      "id": "gcat-starlink",
+      "url": "https://planet4589.org/space/con/star/stats.html",
+      "dataAsOf": "2026-09-24",
+      "retrievedAt": "2026-09-26",
+      "kind": "independent-orbital-observation"
+    },
+    {
+      "id": "gcat-amazon-leo",
+      "url": "https://planet4589.org/space/con/kp/stats.html",
+      "dataAsOf": "2026-09-24",
+      "retrievedAt": "2026-09-26",
+      "kind": "independent-orbital-observation"
+    },
+    {
+      "id": "gcat-oneweb",
+      "url": "https://planet4589.org/space/con/ow/stats.html",
+      "dataAsOf": "2026-09-24",
+      "retrievedAt": "2026-09-26",
+      "kind": "independent-orbital-observation"
+    },
+    {
+      "id": "gcat-guowang",
+      "url": "https://planet4589.org/space/con/xw/stats.html",
+      "dataAsOf": "2026-09-24",
+      "retrievedAt": "2026-09-26",
+      "kind": "independent-orbital-observation"
+    },
+    {
+      "id": "gcat-qianfan",
+      "url": "https://planet4589.org/space/con/qf/stats.html",
+      "dataAsOf": "2026-09-24",
+      "retrievedAt": "2026-09-26",
+      "kind": "independent-orbital-observation"
+    }
+  ],
+  "rule": {
+    "name": "Resolution 35 (REV.WRC-23)",
+    "scope": "Only frequency assignments and service/region combinations in resolves 1 table; not all satellites",
+    "anchor": "End of No.11.44 seven-year regulatory period, or 2021-01-01 transitional anchor; not first launch",
+    "biu": {
+      "requiresFrequencyUse": true,
+      "usualContinuousPeriodDays": 90,
+      "source": "RR11.44C referenced by rule; separate BIU confirmation required"
+    },
+    "m0": {
+      "submissionFormula": "Later of regulatory-limit +30 days and BIU start +120 days; rule refers to end of BIU period +30",
+      "quantityThreshold": null
+    },
+    "m1": {
+      "yearsAfterAnchor": 2,
+      "fraction": 0.1,
+      "rounding": "floor",
+      "source": "resolves 11a"
+    },
+    "m2": {
+      "yearsAfterAnchor": 5,
+      "fraction": 0.5,
+      "rounding": "floor",
+      "source": "resolves 11b"
+    },
+    "m3": {
+      "yearsAfterAnchor": 7,
+      "fraction": 1,
+      "toleranceSatellites": 1,
+      "source": "resolves 4, 11c",
+      "note": "Full filed count or count minus one, counting satellites per notified plane"
+    },
+    "reportSubmissionOffsetDays": 30,
+    "modificationSubmissionOffsetDaysIfBelowThreshold": 90,
+    "exceptions": "Resolve 12/RRB decisions and frequency-group differences must be checked; no automatic legal finding from arithmetic",
+    "postMilestone": {
+      "firstReportYearsAfterAnchor": 11,
+      "subsequentIntervalYears": 4,
+      "annualEventReporting": "After completion, reduced fleet/restoration events under resolves 22",
+      "provisionalFrom": "2025-01-01"
+    },
+    "spaceStationIdentityWarning": "ITU says pre-2025 records migrated to itu_sat_id by orbital-plane order where precise identity unavailable; future Resolution8 information can correct mappings."
+  },
+  "filings": [
+    {
+      "id": "g-l5ku",
+      "networkName": "L5",
+      "displayName": "L5Ku",
+      "administration": "G",
+      "constellationId": "oneweb",
+      "candidateConstellationId": null,
+      "brandMapping": {
+        "status": "verified",
+        "sourceId": "oneweb-brand",
+        "note": null
+      },
+      "sourceId": "itu-res35",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "RES35 table snapshot; not immutable original filing",
+        "snapshotId": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614",
+        "notificationIdsInLatestProcessedReport": [
+          "119500285"
+        ],
+        "latestReportId": "l5ku-m1",
+        "currentEffectiveNotificationDocument": null
+      },
+      "notifiedCountInStatusTable": 2692,
+      "bandScope": [
+        {
+          "minMHz": 10700,
+          "maxMHz": 10950,
+          "notifiedCountInReport": 2332
+        },
+        {
+          "minMHz": 10950,
+          "maxMHz": 11200,
+          "notifiedCountInReport": 2692
+        },
+        {
+          "minMHz": 11200,
+          "maxMHz": 11450,
+          "notifiedCountInReport": 2332
+        },
+        {
+          "minMHz": 11450,
+          "maxMHz": 11700,
+          "notifiedCountInReport": 2692
+        },
+        {
+          "minMHz": 11700,
+          "maxMHz": 12700,
+          "notifiedCountInReport": 2332
+        },
+        {
+          "minMHz": 14000,
+          "maxMHz": 14500,
+          "notifiedCountInReport": 2692
+        }
+      ],
+      "anchor": {
+        "date": "2021-01-01",
+        "type": "seven-year-limit-or-2021-transitional-anchor",
+        "sourceField": "M"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": "Met",
+          "rawValue": "Met",
+          "deploymentExpiry": null,
+          "expiryBasis": "not-applicable",
+          "informationSubmissionDeadline": null,
+          "submissionDeadlineBasis": "M0 depends on regulatory limit and BIU completion; not inferred",
+          "fraction": null,
+          "currentComplianceConclusion": "Met"
+        },
+        {
+          "stage": "M1",
+          "officialStatus": "Met",
+          "rawValue": "Met",
+          "deploymentExpiry": "2023-01-01",
+          "expiryBasis": "derived-rule-from-official-anchor",
+          "informationSubmissionDeadline": "2023-02-01",
+          "submissionDeadlineBasis": "transitional case, resolves 8 explicit 1 February deadline",
+          "fraction": 0.1,
+          "currentComplianceConclusion": "Met"
+        },
+        {
+          "stage": "M2",
+          "officialStatus": "As Received",
+          "rawValue": "As Received",
+          "deploymentExpiry": "2026-01-01",
+          "expiryBasis": "derived-rule-from-official-anchor",
+          "informationSubmissionDeadline": "2026-02-01",
+          "submissionDeadlineBasis": "transitional case, resolves 8 explicit 1 February deadline",
+          "fraction": 0.5,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "rawValue": "01.01.2028",
+          "deploymentExpiry": "2028-01-01",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2028-02-01",
+          "submissionDeadlineBasis": "transitional case, resolves 8 explicit 1 February deadline",
+          "fraction": 1,
+          "currentComplianceConclusion": null
+        }
+      ],
+      "biuEvents": [
+        {
+          "notificationId": "119500285",
+          "biuDate": "2019-04-30",
+          "sourceId": "l5ku-m1",
+          "evidence": "BIU date published in report frequency-group table; not first launch; not full 90-day evidence"
+        }
+      ],
+      "raw": {
+        "sat_name": "L5",
+        "adm": "G",
+        "ntwk_org": "",
+        "M": "01.01.2021",
+        "M0": "Met",
+        "M1": "Met",
+        "M2": "As Received",
+        "M3": "01.01.2028",
+        "POST": "",
+        "nbr_notif": 2692,
+        "nbr_deploy": 279,
+        "wic_no_M0": 2957,
+        "ssn_no_M0": 8,
+        "ssn_rev_M0": "",
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": 2999,
+        "ssn_no_M1": 8,
+        "ssn_rev_M1": "M",
+        "ssn_rev_no_M1": 1,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": "",
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": "",
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "L5Ku"
+      }
+    },
+    {
+      "id": "g-l5ka",
+      "networkName": "L5",
+      "displayName": "L5Ka",
+      "administration": "G",
+      "constellationId": "oneweb",
+      "candidateConstellationId": null,
+      "brandMapping": {
+        "status": "verified",
+        "sourceId": "oneweb-brand",
+        "note": null
+      },
+      "sourceId": "itu-res35",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "RES35 table snapshot; not immutable original filing",
+        "snapshotId": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614",
+        "notificationIdsInLatestProcessedReport": [
+          "321500140"
+        ],
+        "latestReportId": "l5ka-m1",
+        "currentEffectiveNotificationDocument": null
+      },
+      "notifiedCountInStatusTable": 2692,
+      "bandScope": [
+        {
+          "minMHz": 17800,
+          "maxMHz": 18600,
+          "notifiedCountInReport": 720
+        },
+        {
+          "minMHz": 18800,
+          "maxMHz": 20200,
+          "notifiedCountInReport": 720
+        },
+        {
+          "minMHz": 27510,
+          "maxMHz": 27550,
+          "notifiedCountInReport": 720
+        },
+        {
+          "minMHz": 27600,
+          "maxMHz": 30000,
+          "notifiedCountInReport": 720
+        }
+      ],
+      "anchor": {
+        "date": "2021-07-18",
+        "type": "seven-year-limit-or-2021-transitional-anchor",
+        "sourceField": "M"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": "Met",
+          "rawValue": "Met",
+          "deploymentExpiry": null,
+          "expiryBasis": "not-applicable",
+          "informationSubmissionDeadline": null,
+          "submissionDeadlineBasis": "M0 depends on regulatory limit and BIU completion; not inferred",
+          "fraction": null,
+          "currentComplianceConclusion": "Met"
+        },
+        {
+          "stage": "M1",
+          "officialStatus": "Met",
+          "rawValue": "Met",
+          "deploymentExpiry": "2023-07-18",
+          "expiryBasis": "derived-rule-from-official-anchor",
+          "informationSubmissionDeadline": "2023-08-17",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.1,
+          "currentComplianceConclusion": "Met"
+        },
+        {
+          "stage": "M2",
+          "officialStatus": "As Received",
+          "rawValue": "As Received",
+          "deploymentExpiry": "2026-07-18",
+          "expiryBasis": "derived-rule-from-official-anchor",
+          "informationSubmissionDeadline": "2026-08-17",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.5,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "rawValue": "18.07.2028",
+          "deploymentExpiry": "2028-07-18",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2028-08-17",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 1,
+          "currentComplianceConclusion": null
+        }
+      ],
+      "biuEvents": [
+        {
+          "notificationId": "321500140",
+          "biuDate": "2021-07-01",
+          "sourceId": "l5ka-m1",
+          "evidence": "BIU date published in report frequency-group table; not first launch; not full 90-day evidence"
+        }
+      ],
+      "raw": {
+        "sat_name": "L5",
+        "adm": "G",
+        "ntwk_org": "",
+        "M": "18.07.2021",
+        "M0": "Met",
+        "M1": "Met",
+        "M2": "As Received",
+        "M3": "18.07.2028",
+        "POST": "",
+        "nbr_notif": 2692,
+        "nbr_deploy": 279,
+        "wic_no_M0": 3005,
+        "ssn_no_M0": 8,
+        "ssn_rev_M0": "M",
+        "ssn_rev_no_M0": 2,
+        "wic_no_M1": 3008,
+        "ssn_no_M1": 8,
+        "ssn_rev_M1": "M",
+        "ssn_rev_no_M1": 3,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": "",
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": "",
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "L5Ka"
+      }
+    },
+    {
+      "id": "chn-sailspace-1",
+      "networkName": "SAILSPACE-1",
+      "displayName": "SAILSPACE-1",
+      "administration": "CHN",
+      "constellationId": null,
+      "candidateConstellationId": "qianfan",
+      "brandMapping": {
+        "status": "candidate",
+        "sourceId": "sailspace-snl",
+        "note": "Network exists; direct primary brand association not yet confirmed"
+      },
+      "sourceId": "itu-res35",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "RES35 table snapshot; not immutable original filing",
+        "snapshotId": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614",
+        "notificationIdsInLatestProcessedReport": [],
+        "latestReportId": null,
+        "currentEffectiveNotificationDocument": null
+      },
+      "notifiedCountInStatusTable": 1296,
+      "bandScope": null,
+      "anchor": {
+        "date": "2030-04-07",
+        "type": "seven-year-limit-or-2021-transitional-anchor",
+        "sourceField": "M"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": "As Received",
+          "rawValue": "As Received",
+          "deploymentExpiry": null,
+          "expiryBasis": "not-applicable",
+          "informationSubmissionDeadline": null,
+          "submissionDeadlineBasis": "M0 depends on regulatory limit and BIU completion; not inferred",
+          "fraction": null,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M1",
+          "officialStatus": null,
+          "rawValue": "07.04.2032",
+          "deploymentExpiry": "2032-04-07",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2032-05-07",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.1,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M2",
+          "officialStatus": null,
+          "rawValue": "07.04.2035",
+          "deploymentExpiry": "2035-04-07",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2035-05-07",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.5,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "rawValue": "07.04.2037",
+          "deploymentExpiry": "2037-04-07",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2037-05-07",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 1,
+          "currentComplianceConclusion": null
+        }
+      ],
+      "biuEvents": [],
+      "raw": {
+        "sat_name": "SAILSPACE-1",
+        "adm": "CHN",
+        "ntwk_org": "",
+        "M": "07.04.2030",
+        "M0": "As Received",
+        "M1": "07.04.2032",
+        "M2": "07.04.2035",
+        "M3": "07.04.2037",
+        "POST": "",
+        "nbr_notif": 1296,
+        "nbr_deploy": 0,
+        "wic_no_M0": null,
+        "ssn_no_M0": null,
+        "ssn_rev_M0": "",
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": null,
+        "ssn_no_M1": null,
+        "ssn_rev_M1": "",
+        "ssn_rev_no_M1": null,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": "",
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": "",
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "SAILSPACE-1"
+      }
+    },
+    {
+      "id": "nor-steam-1",
+      "networkName": "STEAM-1",
+      "displayName": "STEAM-1",
+      "administration": "NOR",
+      "constellationId": "starlink",
+      "candidateConstellationId": null,
+      "brandMapping": {
+        "status": "verified",
+        "sourceId": "steam-brand",
+        "note": null
+      },
+      "sourceId": "itu-res35",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "RES35 table snapshot; not immutable original filing",
+        "snapshotId": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614",
+        "notificationIdsInLatestProcessedReport": [
+          "121500130"
+        ],
+        "latestReportId": "steam1-m1",
+        "currentEffectiveNotificationDocument": null
+      },
+      "notifiedCountInStatusTable": 4408,
+      "bandScope": [
+        {
+          "minMHz": 10700,
+          "maxMHz": 12750,
+          "notifiedCountInReport": 4408
+        },
+        {
+          "minMHz": 14000,
+          "maxMHz": 14500,
+          "notifiedCountInReport": 4408
+        }
+      ],
+      "anchor": {
+        "date": "2021-06-27",
+        "type": "seven-year-limit-or-2021-transitional-anchor",
+        "sourceField": "M"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": "Met",
+          "rawValue": "Met",
+          "deploymentExpiry": null,
+          "expiryBasis": "not-applicable",
+          "informationSubmissionDeadline": null,
+          "submissionDeadlineBasis": "M0 depends on regulatory limit and BIU completion; not inferred",
+          "fraction": null,
+          "currentComplianceConclusion": "Met"
+        },
+        {
+          "stage": "M1",
+          "officialStatus": "Met",
+          "rawValue": "Met",
+          "deploymentExpiry": "2023-06-27",
+          "expiryBasis": "derived-rule-from-official-anchor",
+          "informationSubmissionDeadline": "2023-07-27",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.1,
+          "currentComplianceConclusion": "Met"
+        },
+        {
+          "stage": "M2",
+          "officialStatus": "As Received",
+          "rawValue": "As Received",
+          "deploymentExpiry": "2026-06-27",
+          "expiryBasis": "derived-rule-from-official-anchor",
+          "informationSubmissionDeadline": "2026-07-27",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.5,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "rawValue": "27.06.2028",
+          "deploymentExpiry": "2028-06-27",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2028-07-27",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 1,
+          "currentComplianceConclusion": null
+        }
+      ],
+      "biuEvents": [
+        {
+          "notificationId": "121500130",
+          "biuDate": "2019-12-27",
+          "sourceId": "steam1-m1",
+          "evidence": "BIU date published in report frequency-group table; not first launch; not full 90-day evidence"
+        }
+      ],
+      "raw": {
+        "sat_name": "STEAM-1",
+        "adm": "NOR",
+        "ntwk_org": "",
+        "M": "27.06.2021",
+        "M0": "Met",
+        "M1": "Met",
+        "M2": "As Received",
+        "M3": "27.06.2028",
+        "POST": "",
+        "nbr_notif": 4408,
+        "nbr_deploy": 442,
+        "wic_no_M0": 3005,
+        "ssn_no_M0": 16,
+        "ssn_rev_M0": "",
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": 3008,
+        "ssn_no_M1": 16,
+        "ssn_rev_M1": "M",
+        "ssn_rev_no_M1": 1,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": "",
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": "",
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "STEAM-1"
+      }
+    },
+    {
+      "id": "nor-steam-2",
+      "networkName": "STEAM-2",
+      "displayName": "STEAM-2",
+      "administration": "NOR",
+      "constellationId": "starlink",
+      "candidateConstellationId": null,
+      "brandMapping": {
+        "status": "verified",
+        "sourceId": "steam-brand",
+        "note": null
+      },
+      "sourceId": "itu-res35",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "RES35 table snapshot; not immutable original filing",
+        "snapshotId": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614",
+        "notificationIdsInLatestProcessedReport": [
+          "121500129"
+        ],
+        "latestReportId": "steam2-m1",
+        "currentEffectiveNotificationDocument": null
+      },
+      "notifiedCountInStatusTable": 1312,
+      "bandScope": [
+        {
+          "minMHz": 17700,
+          "maxMHz": 18600,
+          "notifiedCountInReport": 1312
+        },
+        {
+          "minMHz": 18800,
+          "maxMHz": 19700,
+          "notifiedCountInReport": 1312
+        },
+        {
+          "minMHz": 27500,
+          "maxMHz": 30000,
+          "notifiedCountInReport": 1312
+        }
+      ],
+      "anchor": {
+        "date": "2021-06-27",
+        "type": "seven-year-limit-or-2021-transitional-anchor",
+        "sourceField": "M"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": "Met",
+          "rawValue": "Met",
+          "deploymentExpiry": null,
+          "expiryBasis": "not-applicable",
+          "informationSubmissionDeadline": null,
+          "submissionDeadlineBasis": "M0 depends on regulatory limit and BIU completion; not inferred",
+          "fraction": null,
+          "currentComplianceConclusion": "Met"
+        },
+        {
+          "stage": "M1",
+          "officialStatus": "Met",
+          "rawValue": "Met",
+          "deploymentExpiry": "2023-06-27",
+          "expiryBasis": "derived-rule-from-official-anchor",
+          "informationSubmissionDeadline": "2023-07-27",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.1,
+          "currentComplianceConclusion": "Met"
+        },
+        {
+          "stage": "M2",
+          "officialStatus": "As Received",
+          "rawValue": "As Received",
+          "deploymentExpiry": "2026-06-27",
+          "expiryBasis": "derived-rule-from-official-anchor",
+          "informationSubmissionDeadline": "2026-07-27",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.5,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "rawValue": "27.06.2028",
+          "deploymentExpiry": "2028-06-27",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2028-07-27",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 1,
+          "currentComplianceConclusion": null
+        }
+      ],
+      "biuEvents": [
+        {
+          "notificationId": "121500129",
+          "biuDate": "2021-05-30",
+          "sourceId": "steam2-m1",
+          "evidence": "BIU date published in report frequency-group table; not first launch; not full 90-day evidence"
+        }
+      ],
+      "raw": {
+        "sat_name": "STEAM-2",
+        "adm": "NOR",
+        "ntwk_org": "",
+        "M": "27.06.2021",
+        "M0": "Met",
+        "M1": "Met",
+        "M2": "As Received",
+        "M3": "27.06.2028",
+        "POST": "",
+        "nbr_notif": 1312,
+        "nbr_deploy": 133,
+        "wic_no_M0": 3005,
+        "ssn_no_M0": 17,
+        "ssn_rev_M0": "",
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": 3009,
+        "ssn_no_M1": 17,
+        "ssn_rev_M1": "M",
+        "ssn_rev_no_M1": 1,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": "",
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": "",
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "STEAM-2"
+      }
+    },
+    {
+      "id": "nor-steam-2b",
+      "networkName": "STEAM-2B",
+      "displayName": "STEAM-2B",
+      "administration": "NOR",
+      "constellationId": "starlink",
+      "candidateConstellationId": null,
+      "brandMapping": {
+        "status": "verified",
+        "sourceId": "steam-brand",
+        "note": null
+      },
+      "sourceId": "itu-res35",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "RES35 table snapshot; not immutable original filing",
+        "snapshotId": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614",
+        "notificationIdsInLatestProcessedReport": [
+          "125500189"
+        ],
+        "latestReportId": "steam2b-m1",
+        "currentEffectiveNotificationDocument": null
+      },
+      "notifiedCountInStatusTable": 1584,
+      "bandScope": [
+        {
+          "minMHz": 17300,
+          "maxMHz": 18600,
+          "notifiedCountInReport": 1584
+        },
+        {
+          "minMHz": 18800,
+          "maxMHz": 19300,
+          "notifiedCountInReport": 1584
+        },
+        {
+          "minMHz": 27500,
+          "maxMHz": 30000,
+          "notifiedCountInReport": 1584
+        }
+      ],
+      "anchor": {
+        "date": "2024-01-01",
+        "type": "seven-year-limit-or-2021-transitional-anchor",
+        "sourceField": "M"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": "Met",
+          "rawValue": "Met",
+          "deploymentExpiry": null,
+          "expiryBasis": "not-applicable",
+          "informationSubmissionDeadline": null,
+          "submissionDeadlineBasis": "M0 depends on regulatory limit and BIU completion; not inferred",
+          "fraction": null,
+          "currentComplianceConclusion": "Met"
+        },
+        {
+          "stage": "M1",
+          "officialStatus": "Met",
+          "rawValue": "Met",
+          "deploymentExpiry": "2026-01-01",
+          "expiryBasis": "derived-rule-from-official-anchor",
+          "informationSubmissionDeadline": "2026-01-31",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.1,
+          "currentComplianceConclusion": "Met"
+        },
+        {
+          "stage": "M2",
+          "officialStatus": null,
+          "rawValue": "01.01.2029",
+          "deploymentExpiry": "2029-01-01",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2029-01-31",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.5,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "rawValue": "01.01.2031",
+          "deploymentExpiry": "2031-01-01",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2031-01-31",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 1,
+          "currentComplianceConclusion": null
+        }
+      ],
+      "biuEvents": [
+        {
+          "notificationId": "125500189",
+          "biuDate": "2019-12-25",
+          "sourceId": "steam2b-m1",
+          "evidence": "BIU date published in report frequency-group table; not first launch; not full 90-day evidence"
+        }
+      ],
+      "raw": {
+        "sat_name": "STEAM-2B",
+        "adm": "NOR",
+        "ntwk_org": "",
+        "M": "01.01.2024",
+        "M0": "Met",
+        "M1": "Met",
+        "M2": "01.01.2029",
+        "M3": "01.01.2031",
+        "POST": "",
+        "nbr_notif": 1584,
+        "nbr_deploy": 159,
+        "wic_no_M0": 3036,
+        "ssn_no_M0": 22,
+        "ssn_rev_M0": "",
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": 3074,
+        "ssn_no_M1": 22,
+        "ssn_rev_M1": "M",
+        "ssn_rev_no_M1": 1,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": "",
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": "",
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "STEAM-2B"
+      }
+    },
+    {
+      "id": "usa-usasat-ngso-8a",
+      "networkName": "USASAT-NGSO-8A",
+      "displayName": "USASAT-NGSO-8A",
+      "administration": "USA",
+      "constellationId": "amazon-leo",
+      "candidateConstellationId": null,
+      "brandMapping": {
+        "status": "verified",
+        "sourceId": "amazon-brand",
+        "note": null
+      },
+      "sourceId": "itu-res35",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "RES35 table snapshot; not immutable original filing",
+        "snapshotId": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614",
+        "notificationIdsInLatestProcessedReport": [],
+        "latestReportId": null,
+        "currentEffectiveNotificationDocument": null
+      },
+      "notifiedCountInStatusTable": 1154,
+      "bandScope": null,
+      "anchor": {
+        "date": "2026-03-26",
+        "type": "seven-year-limit-or-2021-transitional-anchor",
+        "sourceField": "M"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": "As Received",
+          "rawValue": "As Received",
+          "deploymentExpiry": null,
+          "expiryBasis": "not-applicable",
+          "informationSubmissionDeadline": null,
+          "submissionDeadlineBasis": "M0 depends on regulatory limit and BIU completion; not inferred",
+          "fraction": null,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M1",
+          "officialStatus": null,
+          "rawValue": "26.03.2028",
+          "deploymentExpiry": "2028-03-26",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2028-04-25",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.1,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M2",
+          "officialStatus": null,
+          "rawValue": "26.03.2031",
+          "deploymentExpiry": "2031-03-26",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2031-04-25",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.5,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "rawValue": "26.03.2033",
+          "deploymentExpiry": "2033-03-26",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2033-04-25",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 1,
+          "currentComplianceConclusion": null
+        }
+      ],
+      "biuEvents": [],
+      "raw": {
+        "sat_name": "USASAT-NGSO-8A",
+        "adm": "USA",
+        "ntwk_org": "",
+        "M": "26.03.2026",
+        "M0": "As Received",
+        "M1": "26.03.2028",
+        "M2": "26.03.2031",
+        "M3": "26.03.2033",
+        "POST": "",
+        "nbr_notif": 1154,
+        "nbr_deploy": 0,
+        "wic_no_M0": null,
+        "ssn_no_M0": null,
+        "ssn_rev_M0": "",
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": null,
+        "ssn_no_M1": null,
+        "ssn_rev_M1": "",
+        "ssn_rev_no_M1": null,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": "",
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": "",
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "USASAT-NGSO-8A"
+      }
+    },
+    {
+      "id": "usa-usasat-ngso-8b",
+      "networkName": "USASAT-NGSO-8B",
+      "displayName": "USASAT-NGSO-8B",
+      "administration": "USA",
+      "constellationId": "amazon-leo",
+      "candidateConstellationId": null,
+      "brandMapping": {
+        "status": "verified",
+        "sourceId": "amazon-brand",
+        "note": null
+      },
+      "sourceId": "itu-res35",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "RES35 table snapshot; not immutable original filing",
+        "snapshotId": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614",
+        "notificationIdsInLatestProcessedReport": [],
+        "latestReportId": null,
+        "currentEffectiveNotificationDocument": null
+      },
+      "notifiedCountInStatusTable": 1294,
+      "bandScope": null,
+      "anchor": {
+        "date": "2026-03-28",
+        "type": "seven-year-limit-or-2021-transitional-anchor",
+        "sourceField": "M"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": "As Received",
+          "rawValue": "As Received",
+          "deploymentExpiry": null,
+          "expiryBasis": "not-applicable",
+          "informationSubmissionDeadline": null,
+          "submissionDeadlineBasis": "M0 depends on regulatory limit and BIU completion; not inferred",
+          "fraction": null,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M1",
+          "officialStatus": null,
+          "rawValue": "28.03.2028",
+          "deploymentExpiry": "2028-03-28",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2028-04-27",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.1,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M2",
+          "officialStatus": null,
+          "rawValue": "28.03.2031",
+          "deploymentExpiry": "2031-03-28",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2031-04-27",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.5,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "rawValue": "28.03.2033",
+          "deploymentExpiry": "2033-03-28",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2033-04-27",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 1,
+          "currentComplianceConclusion": null
+        }
+      ],
+      "biuEvents": [],
+      "raw": {
+        "sat_name": "USASAT-NGSO-8B",
+        "adm": "USA",
+        "ntwk_org": "",
+        "M": "28.03.2026",
+        "M0": "As Received",
+        "M1": "28.03.2028",
+        "M2": "28.03.2031",
+        "M3": "28.03.2033",
+        "POST": "",
+        "nbr_notif": 1294,
+        "nbr_deploy": 0,
+        "wic_no_M0": null,
+        "ssn_no_M0": null,
+        "ssn_rev_M0": "",
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": null,
+        "ssn_no_M1": null,
+        "ssn_rev_M1": "",
+        "ssn_rev_no_M1": null,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": "",
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": "",
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "USASAT-NGSO-8A"
+      }
+    },
+    {
+      "id": "usa-usasat-ngso-8c",
+      "networkName": "USASAT-NGSO-8C",
+      "displayName": "USASAT-NGSO-8C",
+      "administration": "USA",
+      "constellationId": "amazon-leo",
+      "candidateConstellationId": null,
+      "brandMapping": {
+        "status": "verified",
+        "sourceId": "amazon-brand",
+        "note": null
+      },
+      "sourceId": "itu-res35",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "RES35 table snapshot; not immutable original filing",
+        "snapshotId": "fe9540bac61c6aa5d4423645644ec7a7dc62d4240f3ad994b2fe7cbe5b010614",
+        "notificationIdsInLatestProcessedReport": [],
+        "latestReportId": null,
+        "currentEffectiveNotificationDocument": null
+      },
+      "notifiedCountInStatusTable": 782,
+      "bandScope": null,
+      "anchor": {
+        "date": "2026-03-26",
+        "type": "seven-year-limit-or-2021-transitional-anchor",
+        "sourceField": "M"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": "As Received",
+          "rawValue": "As Received",
+          "deploymentExpiry": null,
+          "expiryBasis": "not-applicable",
+          "informationSubmissionDeadline": null,
+          "submissionDeadlineBasis": "M0 depends on regulatory limit and BIU completion; not inferred",
+          "fraction": null,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M1",
+          "officialStatus": null,
+          "rawValue": "26.03.2028",
+          "deploymentExpiry": "2028-03-26",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2028-04-25",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.1,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M2",
+          "officialStatus": null,
+          "rawValue": "26.03.2031",
+          "deploymentExpiry": "2031-03-26",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2031-04-25",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 0.5,
+          "currentComplianceConclusion": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "rawValue": "26.03.2033",
+          "deploymentExpiry": "2033-03-26",
+          "expiryBasis": "official-status-table",
+          "informationSubmissionDeadline": "2033-04-25",
+          "submissionDeadlineBasis": "resolves 7 +30 days; transition resolves 8 uses 1 February",
+          "fraction": 1,
+          "currentComplianceConclusion": null
+        }
+      ],
+      "biuEvents": [],
+      "raw": {
+        "sat_name": "USASAT-NGSO-8C",
+        "adm": "USA",
+        "ntwk_org": "",
+        "M": "26.03.2026",
+        "M0": "As Received",
+        "M1": "26.03.2028",
+        "M2": "26.03.2031",
+        "M3": "26.03.2033",
+        "POST": "",
+        "nbr_notif": 782,
+        "nbr_deploy": 0,
+        "wic_no_M0": null,
+        "ssn_no_M0": null,
+        "ssn_rev_M0": "",
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": null,
+        "ssn_no_M1": null,
+        "ssn_rev_M1": "",
+        "ssn_rev_no_M1": null,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": "",
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": "",
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "USASAT-NGSO-8A"
+      }
+    },
+    {
+      "id": "chn-gw-a59",
+      "networkName": "GW-A59",
+      "displayName": "GW-A59",
+      "administration": "CHN",
+      "constellationId": "guowang",
+      "candidateConstellationId": null,
+      "brandMapping": {
+        "status": "provisional",
+        "sourceId": "mega-screen",
+        "note": "GW network identity verified by SNL; operator association/design denominator still requires original filing"
+      },
+      "sourceId": "gw-a59-snl",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "SNL index only",
+        "currentEffectiveNotificationDocument": null
+      },
+      "initialReceiptDate": "2020-09-11",
+      "initialReference": "CR/C5448",
+      "latestIndexedRecord": {
+        "reference": "CR/C5448 MOD-3",
+        "receivedAt": "2024-07-17",
+        "publishedAt": "2025-09-16",
+        "ific": 3055,
+        "sns": "120520170"
+      },
+      "additionalIndexedRecords": [
+        {
+          "reference": "API/A12666 MOD-3",
+          "receivedAt": "2025-04-21",
+          "publishedAt": "2025-08-05",
+          "sns": "120545227"
+        },
+        {
+          "reference": "CR/D5336",
+          "publishedAt": "2026-03-03",
+          "ific": 3066
+        }
+      ],
+      "notifiedCountInStatusTable": null,
+      "bandScope": null,
+      "anchor": {
+        "date": null,
+        "type": "unverified; no borrowing dates from GW-1/GW-S"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": null,
+          "deploymentExpiry": null,
+          "informationSubmissionDeadline": null
+        },
+        {
+          "stage": "M1",
+          "officialStatus": null,
+          "deploymentExpiry": null,
+          "informationSubmissionDeadline": null
+        },
+        {
+          "stage": "M2",
+          "officialStatus": null,
+          "deploymentExpiry": null,
+          "informationSubmissionDeadline": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "deploymentExpiry": null,
+          "informationSubmissionDeadline": null
+        }
+      ],
+      "biuEvents": [],
+      "raw": null,
+      "missingReason": "Network absent from selected RES35 list; index alone does not establish current BIU/milestone deadlines"
+    },
+    {
+      "id": "chn-gw-2",
+      "networkName": "GW-2",
+      "displayName": "GW-2",
+      "administration": "CHN",
+      "constellationId": "guowang",
+      "candidateConstellationId": null,
+      "brandMapping": {
+        "status": "provisional",
+        "sourceId": "mega-screen",
+        "note": "GW network identity verified by SNL; operator association/design denominator still requires original filing"
+      },
+      "sourceId": "gw-2-snl",
+      "statusAsOf": "2026-09-15",
+      "version": {
+        "kind": "SNL index only",
+        "currentEffectiveNotificationDocument": null
+      },
+      "initialReceiptDate": "2020-09-11",
+      "initialReference": "CR/C5486",
+      "latestIndexedRecord": {
+        "reference": "PART I-S",
+        "receivedAt": "2025-11-07",
+        "publishedAt": "2026-02-03",
+        "ific": 3064,
+        "sns": "125500219"
+      },
+      "additionalIndexedRecords": [],
+      "notifiedCountInStatusTable": null,
+      "bandScope": null,
+      "anchor": {
+        "date": null,
+        "type": "unverified; no borrowing dates from GW-1/GW-S"
+      },
+      "milestones": [
+        {
+          "stage": "M0",
+          "officialStatus": null,
+          "deploymentExpiry": null,
+          "informationSubmissionDeadline": null
+        },
+        {
+          "stage": "M1",
+          "officialStatus": null,
+          "deploymentExpiry": null,
+          "informationSubmissionDeadline": null
+        },
+        {
+          "stage": "M2",
+          "officialStatus": null,
+          "deploymentExpiry": null,
+          "informationSubmissionDeadline": null
+        },
+        {
+          "stage": "M3",
+          "officialStatus": null,
+          "deploymentExpiry": null,
+          "informationSubmissionDeadline": null
+        }
+      ],
+      "biuEvents": [],
+      "raw": null,
+      "missingReason": "Network absent from selected RES35 list; index alone does not establish current BIU/milestone deadlines"
+    }
+  ],
+  "nationalLicenseContext": [
+    {
+      "constellation": "Starlink Gen2",
+      "source": "https://docs.fcc.gov/public/attachments/DA-26-36A1.pdf",
+      "document": "DA 26-36",
+      "authorizedSatellites": 15000,
+      "halfDeploymentDeadline": "2028-12-01",
+      "fullDeploymentDeadline": "2031-12-01",
+      "note": "Gen2-specific; V-band provisions have separate milestones; do not compare all-Starlink inventory to this grant."
+    },
+    {
+      "constellation": "Amazon Leo Gen1",
+      "source": "https://docs.fcc.gov/public/attachments/DA-26-553A1.pdf",
+      "document": "DA 26-553",
+      "authorizedSatellites": 3232,
+      "originalHalfDeploymentDeadline": "2026-07-30",
+      "fullDeploymentDeadline": "2029-07-30",
+      "note": "Conditional waiver of automatic cap and prerequisite, not a simple extension to July 2028; temporary spectrum-priority and bond consequences remain."
+    }
+  ]
+}

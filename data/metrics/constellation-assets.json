@@ -1,0 +1,3515 @@
+{
+  "version": "1.1",
+  "collectedAt": "2026-09-26",
+  "inventoryAsOf": "2026-09-24",
+  "ituAsOf": "2026-09-15",
+  "source": {
+    "name": "GCAT",
+    "url": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
+    "sha256": "2045192a9985aa64da0edc21c4d3d8f74ae00622c06b31b311b44d22f222ea51",
+    "updatedRaw": "2026 Sep 24 2117:02"
+  },
+  "historyMethodZh": "月末在轨估算由主目录的入轨载荷及再入日期重建；最后一点来自星座统计快照。主目录可能滞后，末段虚线表示来源切换。不是运行或合规数量。",
+  "historyMethodEn": "Month-end estimates reconstructed from main-catalog orbital payloads and reentry dates. Final point uses constellation statistics; main catalog may lag, so the source transition is dashed. Not operational or compliance counts.",
+  "constellations": [
+    {
+      "id": "starlink",
+      "nameZh": "星链",
+      "nameEn": "Starlink",
+      "region": "us",
+      "operator": "SpaceX",
+      "planZh": "Gen2 获批 15,000 颗；非全星链总目标",
+      "planEn": "15,000 authorized for Gen2; not the full Starlink target",
+      "planValue": "15,000",
+      "planLabelZh": "Gen2 授权规模",
+      "planLabelEn": "Gen2 authorization",
+      "sourceId": "starlink-fcc",
+      "inOrbit": 11135,
+      "asOf": "2026-09-24",
+      "sourceUrl": "https://planet4589.org/space/con/star/stats.html",
+      "planSourceUrl": "https://docs.fcc.gov/public/attachments/DA-26-36A1.pdf",
+      "history": [
+        {
+          "date": "2018-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-02-28",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-03-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-04-30",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-05-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-06-30",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-07-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-08-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-09-30",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-10-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-11-30",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-12-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-01-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-02-28",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-03-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-04-30",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-05-31",
+          "inOrbit": 62,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-06-30",
+          "inOrbit": 62,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-07-31",
+          "inOrbit": 62,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-08-31",
+          "inOrbit": 62,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-09-30",
+          "inOrbit": 62,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-10-31",
+          "inOrbit": 62,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-11-30",
+          "inOrbit": 122,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-12-31",
+          "inOrbit": 122,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-01-31",
+          "inOrbit": 242,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-02-29",
+          "inOrbit": 300,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-03-31",
+          "inOrbit": 360,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-04-30",
+          "inOrbit": 419,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-05-31",
+          "inOrbit": 417,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-06-30",
+          "inOrbit": 535,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-07-31",
+          "inOrbit": 534,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-08-31",
+          "inOrbit": 640,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-09-30",
+          "inOrbit": 672,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-10-31",
+          "inOrbit": 839,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-11-30",
+          "inOrbit": 895,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-12-31",
+          "inOrbit": 892,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-01-31",
+          "inOrbit": 961,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-02-28",
+          "inOrbit": 1081,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-03-31",
+          "inOrbit": 1317,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-04-30",
+          "inOrbit": 1433,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-05-31",
+          "inOrbit": 1663,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-06-30",
+          "inOrbit": 1660,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-07-31",
+          "inOrbit": 1651,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-08-31",
+          "inOrbit": 1639,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-09-30",
+          "inOrbit": 1678,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-10-31",
+          "inOrbit": 1666,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-11-30",
+          "inOrbit": 1709,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-12-31",
+          "inOrbit": 1791,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-01-31",
+          "inOrbit": 1868,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-02-28",
+          "inOrbit": 1969,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-03-31",
+          "inOrbit": 2110,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-04-30",
+          "inOrbit": 2194,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-05-31",
+          "inOrbit": 2404,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-06-30",
+          "inOrbit": 2452,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-07-31",
+          "inOrbit": 2697,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-08-31",
+          "inOrbit": 2939,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-09-30",
+          "inOrbit": 3126,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-10-31",
+          "inOrbit": 3274,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-11-30",
+          "inOrbit": 3267,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-12-31",
+          "inOrbit": 3373,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-01-31",
+          "inOrbit": 3528,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-02-28",
+          "inOrbit": 3702,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-03-31",
+          "inOrbit": 3912,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-04-30",
+          "inOrbit": 3968,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-05-31",
+          "inOrbit": 4198,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-06-30",
+          "inOrbit": 4365,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-07-31",
+          "inOrbit": 4540,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-08-31",
+          "inOrbit": 4661,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-09-30",
+          "inOrbit": 4844,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-10-31",
+          "inOrbit": 5011,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-11-30",
+          "inOrbit": 5141,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-12-31",
+          "inOrbit": 5268,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-01-31",
+          "inOrbit": 5417,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-02-29",
+          "inOrbit": 5527,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-03-31",
+          "inOrbit": 5699,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-04-30",
+          "inOrbit": 5895,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-05-31",
+          "inOrbit": 6077,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-06-30",
+          "inOrbit": 6219,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-07-31",
+          "inOrbit": 6272,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-08-31",
+          "inOrbit": 6377,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-09-30",
+          "inOrbit": 6422,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-10-31",
+          "inOrbit": 6556,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-11-30",
+          "inOrbit": 6804,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-12-31",
+          "inOrbit": 6898,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-01-31",
+          "inOrbit": 6972,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-02-28",
+          "inOrbit": 7076,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-03-31",
+          "inOrbit": 7146,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-04-30",
+          "inOrbit": 7295,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-05-31",
+          "inOrbit": 7643,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-06-30",
+          "inOrbit": 7912,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-07-31",
+          "inOrbit": 8085,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-08-31",
+          "inOrbit": 8288,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-09-30",
+          "inOrbit": 8535,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-10-31",
+          "inOrbit": 8828,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-11-30",
+          "inOrbit": 9085,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-12-31",
+          "inOrbit": 9388,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-01-31",
+          "inOrbit": 9608,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-02-28",
+          "inOrbit": 9847,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-03-31",
+          "inOrbit": 10152,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-04-30",
+          "inOrbit": 10332,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-05-31",
+          "inOrbit": 10504,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-06-30",
+          "inOrbit": 10719,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-07-31",
+          "inOrbit": 10771,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-08-31",
+          "inOrbit": 10728,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-09-24",
+          "inOrbit": 11135,
+          "kind": "constellation-snapshot"
+        }
+      ],
+      "catalogPayloadRows": 12446,
+      "scopeZh": "含升轨、漂移与非运行卫星，不含模拟载荷",
+      "scopeEn": "Includes raising, drifting and inactive spacecraft; excludes simulators"
+    },
+    {
+      "id": "amazon-leo",
+      "nameZh": "Amazon Leo",
+      "nameEn": "Amazon Leo",
+      "region": "us",
+      "operator": "Amazon · Kuiper",
+      "planZh": "Gen1 3,232 颗；Gen2 与极轨计划分开记录",
+      "planEn": "3,232 for Gen1; Gen2 and Polar tracked separately",
+      "planValue": "3,232",
+      "planLabelZh": "Gen1 授权规模",
+      "planLabelEn": "Gen1 authorization",
+      "sourceId": "amazon-fcc",
+      "inOrbit": 392,
+      "asOf": "2026-09-24",
+      "sourceUrl": "https://planet4589.org/space/con/kp/stats.html",
+      "planSourceUrl": "https://docs.fcc.gov/public/attachments/DA-26-553A1.pdf",
+      "history": [
+        {
+          "date": "2018-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-02-29",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-10-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-11-30",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-12-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-01-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-02-29",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-03-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-04-30",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-05-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-06-30",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-07-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-08-31",
+          "inOrbit": 2,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-09-30",
+          "inOrbit": 1,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-10-31",
+          "inOrbit": 1,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-11-30",
+          "inOrbit": 1,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-12-31",
+          "inOrbit": 1,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-01-31",
+          "inOrbit": 1,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-02-28",
+          "inOrbit": 1,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-03-31",
+          "inOrbit": 1,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-04-30",
+          "inOrbit": 27,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-05-31",
+          "inOrbit": 27,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-06-30",
+          "inOrbit": 54,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-07-31",
+          "inOrbit": 78,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-08-31",
+          "inOrbit": 102,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-09-30",
+          "inOrbit": 129,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-10-31",
+          "inOrbit": 153,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-11-30",
+          "inOrbit": 153,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-12-31",
+          "inOrbit": 180,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-01-31",
+          "inOrbit": 180,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-02-28",
+          "inOrbit": 211,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-03-31",
+          "inOrbit": 210,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-04-30",
+          "inOrbit": 300,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-05-31",
+          "inOrbit": 329,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-06-30",
+          "inOrbit": 365,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-07-31",
+          "inOrbit": 392,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-08-31",
+          "inOrbit": 392,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-09-24",
+          "inOrbit": 392,
+          "kind": "constellation-snapshot"
+        }
+      ],
+      "catalogPayloadRows": 398,
+      "scopeZh": "含升轨、漂移与非运行卫星，不含模拟载荷",
+      "scopeEn": "Includes raising, drifting and inactive spacecraft; excludes simulators"
+    },
+    {
+      "id": "oneweb",
+      "nameZh": "OneWeb",
+      "nameEn": "OneWeb",
+      "region": "other",
+      "operator": "Eutelsat · UK / FR",
+      "planZh": "L5 通知规模 2,692 颗；不等于当前运营规模",
+      "planEn": "2,692 notified under L5; not the operating fleet target",
+      "planValue": "2,692",
+      "planLabelZh": "L5 通知规模",
+      "planLabelEn": "L5 notified scale",
+      "sourceId": "itu-res35",
+      "inOrbit": 654,
+      "asOf": "2026-09-24",
+      "sourceUrl": "https://planet4589.org/space/con/ow/stats.html",
+      "planSourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "history": [
+        {
+          "date": "2018-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-02-28",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-03-31",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-04-30",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-05-31",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-06-30",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-07-31",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-08-31",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-09-30",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-10-31",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-11-30",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-12-31",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-01-31",
+          "inOrbit": 6,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-02-29",
+          "inOrbit": 40,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-03-31",
+          "inOrbit": 74,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-04-30",
+          "inOrbit": 74,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-05-31",
+          "inOrbit": 74,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-06-30",
+          "inOrbit": 74,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-07-31",
+          "inOrbit": 74,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-08-31",
+          "inOrbit": 74,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-09-30",
+          "inOrbit": 74,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-10-31",
+          "inOrbit": 74,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-11-30",
+          "inOrbit": 74,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-12-31",
+          "inOrbit": 110,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-01-31",
+          "inOrbit": 110,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-02-28",
+          "inOrbit": 110,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-03-31",
+          "inOrbit": 146,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-04-30",
+          "inOrbit": 182,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-05-31",
+          "inOrbit": 218,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-06-30",
+          "inOrbit": 218,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-07-31",
+          "inOrbit": 254,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-08-31",
+          "inOrbit": 288,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-09-30",
+          "inOrbit": 322,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-10-31",
+          "inOrbit": 358,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-11-30",
+          "inOrbit": 358,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-12-31",
+          "inOrbit": 394,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-01-31",
+          "inOrbit": 394,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-02-28",
+          "inOrbit": 428,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-03-31",
+          "inOrbit": 427,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-04-30",
+          "inOrbit": 427,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-05-31",
+          "inOrbit": 427,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-06-30",
+          "inOrbit": 427,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-07-31",
+          "inOrbit": 426,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-08-31",
+          "inOrbit": 426,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-09-30",
+          "inOrbit": 426,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-10-31",
+          "inOrbit": 462,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-11-30",
+          "inOrbit": 462,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-12-31",
+          "inOrbit": 502,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-01-31",
+          "inOrbit": 542,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-02-28",
+          "inOrbit": 542,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-03-31",
+          "inOrbit": 618,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-04-30",
+          "inOrbit": 618,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-05-31",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-06-30",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-07-31",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-08-31",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-09-30",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-10-31",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-11-30",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-12-31",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-01-31",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-02-29",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-03-31",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-04-30",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-05-31",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-06-30",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-07-31",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-08-31",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-09-30",
+          "inOrbit": 634,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-10-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-11-30",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-12-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-01-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-02-28",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-03-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-04-30",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-05-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-06-30",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-07-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-08-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-09-30",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-10-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-11-30",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-12-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-01-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-02-28",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-03-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-04-30",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-05-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-06-30",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-07-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-08-31",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-09-24",
+          "inOrbit": 654,
+          "kind": "constellation-snapshot"
+        }
+      ],
+      "catalogPayloadRows": 656,
+      "scopeZh": "含升轨、漂移与非运行卫星，不含模拟载荷",
+      "scopeEn": "Includes raising, drifting and inactive spacecraft; excludes simulators"
+    },
+    {
+      "id": "guowang",
+      "nameZh": "国网",
+      "nameEn": "Guowang",
+      "region": "cn",
+      "operator": "China SatNet",
+      "planZh": "公开设计约 12,992 颗；现行申报规模待核验",
+      "planEn": "Published design ~12,992; current filing scale unverified",
+      "planValue": "~12,992",
+      "planLabelZh": "公开设计规模",
+      "planLabelEn": "Published design",
+      "sourceId": "mega-screen",
+      "inOrbit": 213,
+      "asOf": "2026-09-24",
+      "sourceUrl": "https://planet4589.org/space/con/xw/stats.html",
+      "planSourceUrl": "https://planet4589.org/space/con/conlist.html",
+      "history": [
+        {
+          "date": "2018-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-02-29",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-02-29",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-12-31",
+          "inOrbit": 10,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-01-31",
+          "inOrbit": 10,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-02-28",
+          "inOrbit": 19,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-03-31",
+          "inOrbit": 19,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-04-30",
+          "inOrbit": 29,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-05-31",
+          "inOrbit": 29,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-06-30",
+          "inOrbit": 34,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-07-31",
+          "inOrbit": 48,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-08-31",
+          "inOrbit": 81,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-09-30",
+          "inOrbit": 86,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-10-31",
+          "inOrbit": 95,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-11-30",
+          "inOrbit": 104,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-12-31",
+          "inOrbit": 136,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-01-31",
+          "inOrbit": 154,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-02-28",
+          "inOrbit": 154,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-03-31",
+          "inOrbit": 163,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-04-30",
+          "inOrbit": 168,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-05-31",
+          "inOrbit": 168,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-06-30",
+          "inOrbit": 177,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-07-31",
+          "inOrbit": 177,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-08-31",
+          "inOrbit": 177,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-09-24",
+          "inOrbit": 213,
+          "kind": "constellation-snapshot"
+        }
+      ],
+      "catalogPayloadRows": 177,
+      "scopeZh": "正式低轨部署子组，不含早期试验星",
+      "scopeEn": "Main low-orbit deployment subgroup; excludes early tests"
+    },
+    {
+      "id": "qianfan",
+      "nameZh": "千帆",
+      "nameEn": "Qianfan",
+      "region": "cn",
+      "operator": "SpaceSail · SSST",
+      "planZh": "一期 1,296 颗 / 2027；终态超过 15,000 颗",
+      "planEn": "Phase 1: 1,296 by 2027; terminal plan >15,000",
+      "planValue": ">15,000",
+      "planLabelZh": "远期计划规模",
+      "planLabelEn": "Long-term plan",
+      "sourceId": "qianfan-plan",
+      "inOrbit": 256,
+      "asOf": "2026-09-24",
+      "sourceUrl": "https://planet4589.org/space/con/qf/stats.html",
+      "planSourceUrl": "https://app.xinhuanet.com/news/article.html?articleId=20260610ba2b423c1e434c998aa80d9e30ad5f54",
+      "history": [
+        {
+          "date": "2018-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2018-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2019-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-02-29",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2020-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2021-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2022-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-02-28",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-08-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-09-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-10-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-11-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2023-12-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-01-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-02-29",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-03-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-04-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-05-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-06-30",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-07-31",
+          "inOrbit": 0,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-08-31",
+          "inOrbit": 18,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-09-30",
+          "inOrbit": 18,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-10-31",
+          "inOrbit": 36,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-11-30",
+          "inOrbit": 36,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2024-12-31",
+          "inOrbit": 54,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-01-31",
+          "inOrbit": 72,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-02-28",
+          "inOrbit": 72,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-03-31",
+          "inOrbit": 90,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-04-30",
+          "inOrbit": 90,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-05-31",
+          "inOrbit": 90,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-06-30",
+          "inOrbit": 90,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-07-31",
+          "inOrbit": 90,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-08-31",
+          "inOrbit": 90,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-09-30",
+          "inOrbit": 90,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-10-31",
+          "inOrbit": 108,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-11-30",
+          "inOrbit": 108,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2025-12-31",
+          "inOrbit": 108,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-01-31",
+          "inOrbit": 108,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-02-28",
+          "inOrbit": 108,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-03-31",
+          "inOrbit": 108,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-04-30",
+          "inOrbit": 126,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-05-31",
+          "inOrbit": 162,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-06-30",
+          "inOrbit": 200,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-07-31",
+          "inOrbit": 238,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-08-31",
+          "inOrbit": 238,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-09-24",
+          "inOrbit": 256,
+          "kind": "constellation-snapshot"
+        }
+      ],
+      "catalogPayloadRows": 238,
+      "scopeZh": "千帆星座子组，不含 DTC / EUHT 试验星",
+      "scopeEn": "Main Qianfan subgroup; excludes DTC / EUHT tests"
+    }
+  ],
+  "filings": [
+    {
+      "id": "g-l5ku",
+      "constellationId": "oneweb",
+      "network": "L5Ku",
+      "administration": "G",
+      "candidate": false,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": "Met"
+        },
+        {
+          "stage": "M1",
+          "date": null,
+          "status": "Met"
+        },
+        {
+          "stage": "M2",
+          "date": null,
+          "status": "As Received"
+        },
+        {
+          "stage": "M3",
+          "date": "2028-01-01",
+          "status": null
+        }
+      ],
+      "noteZh": null,
+      "noteEn": null,
+      "events": [
+        {
+          "date": "2019-04-30",
+          "kind": "biu",
+          "labelZh": "BIU 频率启用",
+          "labelEn": "BIU",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/2999/RES35/RES350008M1.pdf"
+        },
+        {
+          "date": "2023-01-30",
+          "kind": "report",
+          "labelZh": "M1 报告收件",
+          "labelEn": "M1 report received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/2999/RES35/RES350008M1.pdf"
+        },
+        {
+          "date": "2023-06-27",
+          "kind": "publication",
+          "labelZh": "M1 报告公布",
+          "labelEn": "M1 report published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/2999/RES35/RES350008M1.pdf"
+        },
+        {
+          "date": "2028-01-01",
+          "kind": "deadline",
+          "labelZh": "M3 截止",
+          "labelEn": "M3 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        }
+      ],
+      "notificationIds": [
+        "119500285"
+      ]
+    },
+    {
+      "id": "g-l5ka",
+      "constellationId": "oneweb",
+      "network": "L5Ka",
+      "administration": "G",
+      "candidate": false,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": "Met"
+        },
+        {
+          "stage": "M1",
+          "date": null,
+          "status": "Met"
+        },
+        {
+          "stage": "M2",
+          "date": null,
+          "status": "As Received"
+        },
+        {
+          "stage": "M3",
+          "date": "2028-07-18",
+          "status": null
+        }
+      ],
+      "noteZh": null,
+      "noteEn": null,
+      "events": [
+        {
+          "date": "2021-07-01",
+          "kind": "biu",
+          "labelZh": "BIU 频率启用",
+          "labelEn": "BIU",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350008M3.pdf"
+        },
+        {
+          "date": "2023-07-17",
+          "kind": "report",
+          "labelZh": "M1 报告收件",
+          "labelEn": "M1 report received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350008M3.pdf"
+        },
+        {
+          "date": "2023-10-31",
+          "kind": "publication",
+          "labelZh": "M1 报告公布",
+          "labelEn": "M1 report published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350008M3.pdf"
+        },
+        {
+          "date": "2028-07-18",
+          "kind": "deadline",
+          "labelZh": "M3 截止",
+          "labelEn": "M3 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        }
+      ],
+      "notificationIds": [
+        "321500140"
+      ]
+    },
+    {
+      "id": "chn-sailspace-1",
+      "constellationId": "qianfan",
+      "network": "SAILSPACE-1",
+      "administration": "CHN",
+      "candidate": true,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": "As Received"
+        },
+        {
+          "stage": "M1",
+          "date": "2032-04-07",
+          "status": null
+        },
+        {
+          "stage": "M2",
+          "date": "2035-04-07",
+          "status": null
+        },
+        {
+          "stage": "M3",
+          "date": "2037-04-07",
+          "status": null
+        }
+      ],
+      "noteZh": "千帆关联候选，尚待直接确认",
+      "noteEn": "Candidate Qianfan association, not confirmed",
+      "events": [
+        {
+          "date": "2032-04-07",
+          "kind": "deadline",
+          "labelZh": "M1 截止",
+          "labelEn": "M1 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        },
+        {
+          "date": "2035-04-07",
+          "kind": "deadline",
+          "labelZh": "M2 截止",
+          "labelEn": "M2 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        },
+        {
+          "date": "2037-04-07",
+          "kind": "deadline",
+          "labelZh": "M3 截止",
+          "labelEn": "M3 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        }
+      ],
+      "notificationIds": []
+    },
+    {
+      "id": "nor-steam-1",
+      "constellationId": "starlink",
+      "network": "STEAM-1",
+      "administration": "NOR",
+      "candidate": false,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": "Met"
+        },
+        {
+          "stage": "M1",
+          "date": null,
+          "status": "Met"
+        },
+        {
+          "stage": "M2",
+          "date": null,
+          "status": "As Received"
+        },
+        {
+          "stage": "M3",
+          "date": "2028-06-27",
+          "status": null
+        }
+      ],
+      "noteZh": null,
+      "noteEn": null,
+      "events": [
+        {
+          "date": "2019-12-27",
+          "kind": "biu",
+          "labelZh": "BIU 频率启用",
+          "labelEn": "BIU",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350016M1.pdf"
+        },
+        {
+          "date": "2023-07-26",
+          "kind": "report",
+          "labelZh": "M1 报告收件",
+          "labelEn": "M1 report received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350016M1.pdf"
+        },
+        {
+          "date": "2023-10-31",
+          "kind": "publication",
+          "labelZh": "M1 报告公布",
+          "labelEn": "M1 report published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350016M1.pdf"
+        },
+        {
+          "date": "2028-06-27",
+          "kind": "deadline",
+          "labelZh": "M3 截止",
+          "labelEn": "M3 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        }
+      ],
+      "notificationIds": [
+        "121500130"
+      ]
+    },
+    {
+      "id": "nor-steam-2",
+      "constellationId": "starlink",
+      "network": "STEAM-2",
+      "administration": "NOR",
+      "candidate": false,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": "Met"
+        },
+        {
+          "stage": "M1",
+          "date": null,
+          "status": "Met"
+        },
+        {
+          "stage": "M2",
+          "date": null,
+          "status": "As Received"
+        },
+        {
+          "stage": "M3",
+          "date": "2028-06-27",
+          "status": null
+        }
+      ],
+      "noteZh": null,
+      "noteEn": null,
+      "events": [
+        {
+          "date": "2021-05-30",
+          "kind": "biu",
+          "labelZh": "BIU 频率启用",
+          "labelEn": "BIU",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3009/RES35/RES350017M1.pdf"
+        },
+        {
+          "date": "2023-07-26",
+          "kind": "report",
+          "labelZh": "M1 报告收件",
+          "labelEn": "M1 report received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3009/RES35/RES350017M1.pdf"
+        },
+        {
+          "date": "2023-11-14",
+          "kind": "publication",
+          "labelZh": "M1 报告公布",
+          "labelEn": "M1 report published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3009/RES35/RES350017M1.pdf"
+        },
+        {
+          "date": "2028-06-27",
+          "kind": "deadline",
+          "labelZh": "M3 截止",
+          "labelEn": "M3 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        }
+      ],
+      "notificationIds": [
+        "121500129"
+      ]
+    },
+    {
+      "id": "nor-steam-2b",
+      "constellationId": "starlink",
+      "network": "STEAM-2B",
+      "administration": "NOR",
+      "candidate": false,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": "Met"
+        },
+        {
+          "stage": "M1",
+          "date": null,
+          "status": "Met"
+        },
+        {
+          "stage": "M2",
+          "date": "2029-01-01",
+          "status": null
+        },
+        {
+          "stage": "M3",
+          "date": "2031-01-01",
+          "status": null
+        }
+      ],
+      "noteZh": null,
+      "noteEn": null,
+      "events": [
+        {
+          "date": "2019-12-25",
+          "kind": "biu",
+          "labelZh": "BIU 频率启用",
+          "labelEn": "BIU",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3074/RES35/RES350022M1.pdf"
+        },
+        {
+          "date": "2025-12-22",
+          "kind": "report",
+          "labelZh": "M1 报告收件",
+          "labelEn": "M1 report received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3074/RES35/RES350022M1.pdf"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "publication",
+          "labelZh": "M1 报告公布",
+          "labelEn": "M1 report published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3074/RES35/RES350022M1.pdf"
+        },
+        {
+          "date": "2029-01-01",
+          "kind": "deadline",
+          "labelZh": "M2 截止",
+          "labelEn": "M2 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        },
+        {
+          "date": "2031-01-01",
+          "kind": "deadline",
+          "labelZh": "M3 截止",
+          "labelEn": "M3 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        }
+      ],
+      "notificationIds": [
+        "125500189"
+      ]
+    },
+    {
+      "id": "usa-usasat-ngso-8a",
+      "constellationId": "amazon-leo",
+      "network": "USASAT-NGSO-8A",
+      "administration": "USA",
+      "candidate": false,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": "As Received"
+        },
+        {
+          "stage": "M1",
+          "date": "2028-03-26",
+          "status": null
+        },
+        {
+          "stage": "M2",
+          "date": "2031-03-26",
+          "status": null
+        },
+        {
+          "stage": "M3",
+          "date": "2033-03-26",
+          "status": null
+        }
+      ],
+      "noteZh": null,
+      "noteEn": null,
+      "events": [
+        {
+          "date": "2028-03-26",
+          "kind": "deadline",
+          "labelZh": "M1 截止",
+          "labelEn": "M1 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        },
+        {
+          "date": "2031-03-26",
+          "kind": "deadline",
+          "labelZh": "M2 截止",
+          "labelEn": "M2 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        },
+        {
+          "date": "2033-03-26",
+          "kind": "deadline",
+          "labelZh": "M3 截止",
+          "labelEn": "M3 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        }
+      ],
+      "notificationIds": []
+    },
+    {
+      "id": "usa-usasat-ngso-8b",
+      "constellationId": "amazon-leo",
+      "network": "USASAT-NGSO-8B",
+      "administration": "USA",
+      "candidate": false,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": "As Received"
+        },
+        {
+          "stage": "M1",
+          "date": "2028-03-28",
+          "status": null
+        },
+        {
+          "stage": "M2",
+          "date": "2031-03-28",
+          "status": null
+        },
+        {
+          "stage": "M3",
+          "date": "2033-03-28",
+          "status": null
+        }
+      ],
+      "noteZh": null,
+      "noteEn": null,
+      "events": [
+        {
+          "date": "2028-03-28",
+          "kind": "deadline",
+          "labelZh": "M1 截止",
+          "labelEn": "M1 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        },
+        {
+          "date": "2031-03-28",
+          "kind": "deadline",
+          "labelZh": "M2 截止",
+          "labelEn": "M2 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        },
+        {
+          "date": "2033-03-28",
+          "kind": "deadline",
+          "labelZh": "M3 截止",
+          "labelEn": "M3 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        }
+      ],
+      "notificationIds": []
+    },
+    {
+      "id": "usa-usasat-ngso-8c",
+      "constellationId": "amazon-leo",
+      "network": "USASAT-NGSO-8C",
+      "administration": "USA",
+      "candidate": false,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": "As Received"
+        },
+        {
+          "stage": "M1",
+          "date": "2028-03-26",
+          "status": null
+        },
+        {
+          "stage": "M2",
+          "date": "2031-03-26",
+          "status": null
+        },
+        {
+          "stage": "M3",
+          "date": "2033-03-26",
+          "status": null
+        }
+      ],
+      "noteZh": null,
+      "noteEn": null,
+      "events": [
+        {
+          "date": "2028-03-26",
+          "kind": "deadline",
+          "labelZh": "M1 截止",
+          "labelEn": "M1 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        },
+        {
+          "date": "2031-03-26",
+          "kind": "deadline",
+          "labelZh": "M2 截止",
+          "labelEn": "M2 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        },
+        {
+          "date": "2033-03-26",
+          "kind": "deadline",
+          "labelZh": "M3 截止",
+          "labelEn": "M3 deadline",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+        }
+      ],
+      "notificationIds": []
+    },
+    {
+      "id": "chn-gw-a59",
+      "constellationId": "guowang",
+      "network": "GW-A59",
+      "administration": "CHN",
+      "candidate": true,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": null
+        },
+        {
+          "stage": "M1",
+          "date": null,
+          "status": null
+        },
+        {
+          "stage": "M2",
+          "date": null,
+          "status": null
+        },
+        {
+          "stage": "M3",
+          "date": null,
+          "status": null
+        }
+      ],
+      "noteZh": "未取得官方 RES35 节点",
+      "noteEn": "Official RES35 dates unavailable",
+      "events": [
+        {
+          "date": "2020-09-11",
+          "kind": "filing",
+          "labelZh": "申报收件",
+          "labelEn": "Filing received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
+        },
+        {
+          "date": "2024-07-17",
+          "kind": "filing",
+          "labelZh": "CR/C5448 MOD-3 收件",
+          "labelEn": "CR/C5448 MOD-3 received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
+        },
+        {
+          "date": "2025-04-21",
+          "kind": "filing",
+          "labelZh": "API/A12666 MOD-3 收件",
+          "labelEn": "API/A12666 MOD-3 received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
+        },
+        {
+          "date": "2025-08-05",
+          "kind": "publication",
+          "labelZh": "API/A12666 MOD-3 公布",
+          "labelEn": "API/A12666 MOD-3 published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
+        },
+        {
+          "date": "2025-09-16",
+          "kind": "publication",
+          "labelZh": "CR/C5448 MOD-3 公布",
+          "labelEn": "CR/C5448 MOD-3 published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
+        },
+        {
+          "date": "2026-03-03",
+          "kind": "publication",
+          "labelZh": "CR/D5336 公布",
+          "labelEn": "CR/D5336 published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
+        }
+      ],
+      "notificationIds": []
+    },
+    {
+      "id": "chn-gw-2",
+      "constellationId": "guowang",
+      "network": "GW-2",
+      "administration": "CHN",
+      "candidate": true,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2",
+      "asOf": "2026-09-15",
+      "milestones": [
+        {
+          "stage": "M0",
+          "date": null,
+          "status": null
+        },
+        {
+          "stage": "M1",
+          "date": null,
+          "status": null
+        },
+        {
+          "stage": "M2",
+          "date": null,
+          "status": null
+        },
+        {
+          "stage": "M3",
+          "date": null,
+          "status": null
+        }
+      ],
+      "noteZh": "未取得官方 RES35 节点",
+      "noteEn": "Official RES35 dates unavailable",
+      "events": [
+        {
+          "date": "2020-09-11",
+          "kind": "filing",
+          "labelZh": "申报收件",
+          "labelEn": "Filing received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2"
+        },
+        {
+          "date": "2025-11-07",
+          "kind": "filing",
+          "labelZh": "PART I-S 收件",
+          "labelEn": "PART I-S received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2"
+        },
+        {
+          "date": "2026-02-03",
+          "kind": "publication",
+          "labelZh": "PART I-S 公布",
+          "labelEn": "PART I-S published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2"
+        }
+      ],
+      "notificationIds": []
+    },
+    {
+      "id": "ctc-1",
+      "constellationId": null,
+      "network": "CTC-1",
+      "administration": "CHN",
+      "candidate": true,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-1",
+      "asOf": "2026-09-26",
+      "milestones": [],
+      "notificationIds": [
+        "125545446"
+      ],
+      "noteZh": "商业主体及十万级数量待技术通知核验；不归入国网/千帆",
+      "noteEn": "Operator and six-figure scale await technical-notice verification; not allocated to Guowang/Qianfan",
+      "events": [
+        {
+          "date": "2025-12-29",
+          "kind": "filing",
+          "labelZh": "API/A 收件",
+          "labelEn": "API/A received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-1"
+        },
+        {
+          "date": "2026-03-17",
+          "kind": "publication",
+          "labelZh": "API/A 公布",
+          "labelEn": "API/A published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-1"
+        }
+      ]
+    },
+    {
+      "id": "ctc-2",
+      "constellationId": null,
+      "network": "CTC-2",
+      "administration": "CHN",
+      "candidate": true,
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-2",
+      "asOf": "2026-09-26",
+      "milestones": [],
+      "notificationIds": [
+        "125545445"
+      ],
+      "noteZh": "商业主体及十万级数量待技术通知核验；不归入国网/千帆",
+      "noteEn": "Operator and six-figure scale await technical-notice verification; not allocated to Guowang/Qianfan",
+      "events": [
+        {
+          "date": "2025-12-29",
+          "kind": "filing",
+          "labelZh": "API/A 收件",
+          "labelEn": "API/A received",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-2"
+        },
+        {
+          "date": "2026-03-17",
+          "kind": "publication",
+          "labelZh": "API/A 公布",
+          "labelEn": "API/A published",
+          "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-2"
+        }
+      ]
+    }
+  ]
+}

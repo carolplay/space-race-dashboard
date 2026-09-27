@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-09T05:19:27.592Z",
+  "generatedAt": "2026-09-27T05:31:20.982Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-09-08"
+    "to": "2026-09-26"
   },
   "source": {
     "name": "Launch Library 2",
@@ -45,10 +45,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 128,
-        "cn": 61,
-        "other": 23,
-        "global": 212
+        "us": 136,
+        "cn": 70,
+        "other": 26,
+        "global": 232
       }
     ],
     "success": [
@@ -71,10 +71,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 127,
-        "cn": 57,
-        "other": 21,
-        "global": 205
+        "us": 135,
+        "cn": 66,
+        "other": 24,
+        "global": 225
       }
     ],
     "rocketFamilies": [
@@ -600,42 +600,42 @@
         "year": "2026",
         "region": "cn",
         "family": "Long March 2",
+        "attempts": 11,
+        "success": 11
+      },
+      {
+        "year": "2026",
+        "region": "cn",
+        "family": "Long March 6",
         "attempts": 10,
         "success": 10
       },
       {
         "year": "2026",
         "region": "cn",
-        "family": "Long March 6",
-        "attempts": 9,
-        "success": 9
+        "family": "Long March 8",
+        "attempts": 8,
+        "success": 8
       },
       {
         "year": "2026",
         "region": "cn",
-        "family": "Long March 8",
-        "attempts": 7,
-        "success": 7
+        "family": "Kinetica 1",
+        "attempts": 5,
+        "success": 5
+      },
+      {
+        "year": "2026",
+        "region": "cn",
+        "family": "Long March 12",
+        "attempts": 5,
+        "success": 5
       },
       {
         "year": "2026",
         "region": "cn",
         "family": "Long March 7",
         "attempts": 5,
-        "success": 4
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Kinetica 1",
-        "attempts": 4,
-        "success": 4
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 12",
-        "attempts": 4,
         "success": 4
       },
       {
@@ -648,6 +648,20 @@
       {
         "year": "2026",
         "region": "cn",
+        "family": "Zhuque",
+        "attempts": 4,
+        "success": 4
+      },
+      {
+        "year": "2026",
+        "region": "cn",
+        "family": "Kuaizhou",
+        "attempts": 3,
+        "success": 3
+      },
+      {
+        "year": "2026",
+        "region": "cn",
         "family": "Long March 3",
         "attempts": 3,
         "success": 2
@@ -655,21 +669,14 @@
       {
         "year": "2026",
         "region": "cn",
-        "family": "Zhuque",
+        "family": "Long March 4",
         "attempts": 3,
         "success": 3
       },
       {
         "year": "2026",
         "region": "cn",
-        "family": "Kuaizhou",
-        "attempts": 2,
-        "success": 2
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 4",
+        "family": "Gravity-1",
         "attempts": 2,
         "success": 2
       },
@@ -686,13 +693,6 @@
         "family": "Ceres-2",
         "attempts": 1,
         "success": 0
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Gravity-1",
-        "attempts": 1,
-        "success": 1
       },
       {
         "year": "2026",
@@ -733,8 +733,8 @@
         "year": "2026",
         "region": "other",
         "family": "Soyuz 2",
-        "attempts": 9,
-        "success": 9
+        "attempts": 11,
+        "success": 11
       },
       {
         "year": "2026",
@@ -747,6 +747,13 @@
         "year": "2026",
         "region": "other",
         "family": "H3",
+        "attempts": 2,
+        "success": 2
+      },
+      {
+        "year": "2026",
+        "region": "other",
+        "family": "Vega",
         "attempts": 2,
         "success": 2
       },
@@ -795,13 +802,6 @@
       {
         "year": "2026",
         "region": "other",
-        "family": "Vega",
-        "attempts": 1,
-        "success": 1
-      },
-      {
-        "year": "2026",
-        "region": "other",
         "family": "Vikram",
         "attempts": 1,
         "success": 1
@@ -810,15 +810,15 @@
         "year": "2026",
         "region": "us",
         "family": "Falcon 9",
-        "attempts": 103,
-        "success": 103
+        "attempts": 108,
+        "success": 108
       },
       {
         "year": "2026",
         "region": "us",
         "family": "Electron",
-        "attempts": 13,
-        "success": 13
+        "attempts": 16,
+        "success": 16
       },
       {
         "year": "2026",

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-09T05:19:27.592Z",
+  "generatedAt": "2026-09-27T05:31:20.982Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-09-08"
+    "to": "2026-09-26"
   },
   "source": {
     "name": "Launch Library 2",
@@ -20,7 +20,7 @@
   "summary": {
     "observedSites": 27,
     "observedPads": 61,
-    "orbitalAttempts": 796,
+    "orbitalAttempts": 816,
     "activePads": 60
   },
   "sites": [
@@ -29,8 +29,8 @@
       "name": "Cape Canaveral SFS, FL, USA",
       "countryCode": "US",
       "region": "us",
-      "attempts": 201,
-      "success": 200,
+      "attempts": 202,
+      "success": 201,
       "successRate": 99.5,
       "padCount": 4,
       "rocketFamilies": [
@@ -51,7 +51,7 @@
         },
         {
           "year": "2026",
-          "attempts": 52
+          "attempts": 53
         }
       ]
     },
@@ -60,9 +60,9 @@
       "name": "Vandenberg SFB, CA, USA",
       "countryCode": "US",
       "region": "us",
-      "attempts": 172,
-      "success": 170,
-      "successRate": 98.8,
+      "attempts": 176,
+      "success": 174,
+      "successRate": 98.9,
       "padCount": 3,
       "rocketFamilies": [
         "Falcon 9",
@@ -80,7 +80,7 @@
         },
         {
           "year": "2026",
-          "attempts": 59
+          "attempts": 63
         }
       ]
     },
@@ -89,9 +89,9 @@
       "name": "Jiuquan Satellite Launch Center, People's Republic of China",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 76,
-      "success": 69,
-      "successRate": 90.8,
+      "attempts": 80,
+      "success": 73,
+      "successRate": 91.3,
       "padCount": 10,
       "rocketFamilies": [
         "Ceres-1",
@@ -118,7 +118,7 @@
         },
         {
           "year": "2026",
-          "attempts": 21
+          "attempts": 25
         }
       ]
     },
@@ -156,9 +156,9 @@
       "name": "Wenchang Space Launch Site, People's Republic of China",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 47,
-      "success": 46,
-      "successRate": 97.9,
+      "attempts": 49,
+      "success": 48,
+      "successRate": 98,
       "padCount": 4,
       "rocketFamilies": [
         "Long March 10",
@@ -178,7 +178,34 @@
         },
         {
           "year": "2026",
+          "attempts": 19
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+      "countryCode": "NZ",
+      "region": "other",
+      "attempts": 45,
+      "success": 45,
+      "successRate": 100,
+      "padCount": 2,
+      "rocketFamilies": [
+        "Electron"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 13
+        },
+        {
+          "year": "2025",
           "attempts": 17
+        },
+        {
+          "year": "2026",
+          "attempts": 15
         }
       ]
     },
@@ -213,39 +240,12 @@
       ]
     },
     {
-      "id": 10,
-      "name": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "countryCode": "NZ",
-      "region": "other",
-      "attempts": 42,
-      "success": 42,
-      "successRate": 100,
-      "padCount": 2,
-      "rocketFamilies": [
-        "Electron"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 13
-        },
-        {
-          "year": "2025",
-          "attempts": 17
-        },
-        {
-          "year": "2026",
-          "attempts": 12
-        }
-      ]
-    },
-    {
       "id": 19,
       "name": "Taiyuan Satellite Launch Center, People's Republic of China",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 36,
-      "success": 36,
+      "attempts": 38,
+      "success": 38,
       "successRate": 100,
       "padCount": 3,
       "rocketFamilies": [
@@ -264,7 +264,7 @@
         },
         {
           "year": "2026",
-          "attempts": 11
+          "attempts": 13
         }
       ]
     },
@@ -273,8 +273,8 @@
       "name": "Plesetsk Cosmodrome, Russian Federation",
       "countryCode": "RU",
       "region": "other",
-      "attempts": 21,
-      "success": 21,
+      "attempts": 22,
+      "success": 22,
       "successRate": 100,
       "padCount": 3,
       "rocketFamilies": [
@@ -293,7 +293,7 @@
         },
         {
           "year": "2026",
-          "attempts": 7
+          "attempts": 8
         }
       ]
     },
@@ -302,8 +302,8 @@
       "name": "Haiyang Oriental Spaceport",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 19,
-      "success": 19,
+      "attempts": 20,
+      "success": 20,
       "successRate": 100,
       "padCount": 5,
       "rocketFamilies": [
@@ -323,7 +323,7 @@
         },
         {
           "year": "2026",
-          "attempts": 6
+          "attempts": 7
         }
       ]
     },
@@ -332,8 +332,8 @@
       "name": "Baikonur Cosmodrome, Republic of Kazakhstan",
       "countryCode": "KZ",
       "region": "other",
-      "attempts": 18,
-      "success": 18,
+      "attempts": 19,
+      "success": 19,
       "successRate": 100,
       "padCount": 2,
       "rocketFamilies": [
@@ -351,7 +351,7 @@
         },
         {
           "year": "2026",
-          "attempts": 4
+          "attempts": 5
         }
       ]
     },
@@ -360,8 +360,8 @@
       "name": "Guiana Space Centre, French Guiana",
       "countryCode": "GF",
       "region": "other",
-      "attempts": 15,
-      "success": 15,
+      "attempts": 16,
+      "success": 16,
       "successRate": 100,
       "padCount": 2,
       "rocketFamilies": [
@@ -379,7 +379,7 @@
         },
         {
           "year": "2026",
-          "attempts": 5
+          "attempts": 6
         }
       ]
     },
@@ -721,11 +721,11 @@
       "active": true,
       "latitude": 28.56194122,
       "longitude": -80.57735736,
-      "attempts": 182,
-      "success": 182,
+      "attempts": 183,
+      "success": 183,
       "successRate": 100,
       "firstLaunch": "2024-01-03",
-      "lastLaunch": "2026-08-25",
+      "lastLaunch": "2026-09-13",
       "medianIntervalDays": 4.4,
       "fastestIntervalDays": 1.9,
       "rocketFamilies": [
@@ -742,7 +742,7 @@
         },
         {
           "year": "2026",
-          "attempts": 46
+          "attempts": 47
         }
       ]
     },
@@ -756,11 +756,11 @@
       "active": true,
       "latitude": 34.632,
       "longitude": -120.611,
-      "attempts": 167,
-      "success": 166,
+      "attempts": 171,
+      "success": 170,
       "successRate": 99.4,
       "firstLaunch": "2024-01-03",
-      "lastLaunch": "2026-09-06",
+      "lastLaunch": "2026-09-26",
       "medianIntervalDays": 4.6,
       "fastestIntervalDays": 2.3,
       "rocketFamilies": [
@@ -777,7 +777,7 @@
         },
         {
           "year": "2026",
-          "attempts": 57
+          "attempts": 61
         }
       ]
     },
@@ -818,6 +818,41 @@
       ]
     },
     {
+      "id": 185,
+      "name": "Rocket Lab Launch Complex 1B",
+      "siteId": 10,
+      "site": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+      "countryCode": "NZ",
+      "region": "other",
+      "active": true,
+      "latitude": -39.262833,
+      "longitude": 177.864469,
+      "attempts": 28,
+      "success": 28,
+      "successRate": 100,
+      "firstLaunch": "2024-01-31",
+      "lastLaunch": "2026-09-26",
+      "medianIntervalDays": 26.4,
+      "fastestIntervalDays": 6.9,
+      "rocketFamilies": [
+        "Electron"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 12
+        },
+        {
+          "year": "2025",
+          "attempts": 9
+        },
+        {
+          "year": "2026",
+          "attempts": 7
+        }
+      ]
+    },
+    {
       "id": 22,
       "name": "Launch Area 94 (SLS-2 / 603)",
       "siteId": 17,
@@ -827,11 +862,11 @@
       "active": true,
       "latitude": 40.960482,
       "longitude": 100.298059,
-      "attempts": 26,
-      "success": 26,
+      "attempts": 27,
+      "success": 27,
       "successRate": 100,
       "firstLaunch": "2024-03-21",
-      "lastLaunch": "2026-07-01",
+      "lastLaunch": "2026-09-10",
       "medianIntervalDays": 21,
       "fastestIntervalDays": 10.8,
       "rocketFamilies": [
@@ -849,42 +884,7 @@
         },
         {
           "year": "2026",
-          "attempts": 5
-        }
-      ]
-    },
-    {
-      "id": 185,
-      "name": "Rocket Lab Launch Complex 1B",
-      "siteId": 10,
-      "site": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "countryCode": "NZ",
-      "region": "other",
-      "active": true,
-      "latitude": -39.262833,
-      "longitude": 177.864469,
-      "attempts": 26,
-      "success": 26,
-      "successRate": 100,
-      "firstLaunch": "2024-01-31",
-      "lastLaunch": "2026-09-02",
-      "medianIntervalDays": 31.4,
-      "fastestIntervalDays": 7.1,
-      "rocketFamilies": [
-        "Electron"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 12
-        },
-        {
-          "year": "2025",
-          "attempts": 9
-        },
-        {
-          "year": "2026",
-          "attempts": 5
+          "attempts": 6
         }
       ]
     },
@@ -898,12 +898,12 @@
       "active": true,
       "latitude": 38.8583,
       "longitude": 111.5802,
-      "attempts": 24,
-      "success": 24,
+      "attempts": 25,
+      "success": 25,
       "successRate": 100,
       "firstLaunch": "2024-03-26",
-      "lastLaunch": "2026-08-25",
-      "medianIntervalDays": 32.3,
+      "lastLaunch": "2026-09-24",
+      "medianIntervalDays": 31.3,
       "fastestIntervalDays": 19.8,
       "rocketFamilies": [
         "Long March 6"
@@ -919,7 +919,7 @@
         },
         {
           "year": "2026",
-          "attempts": 8
+          "attempts": 9
         }
       ]
     },
@@ -957,6 +957,44 @@
         {
           "year": "2026",
           "attempts": 3
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Launch Area 95A",
+      "siteId": 17,
+      "site": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "countryCode": "CN",
+      "region": "cn",
+      "active": true,
+      "latitude": 40.969117,
+      "longitude": 100.343333,
+      "attempts": 19,
+      "success": 15,
+      "successRate": 78.9,
+      "firstLaunch": "2024-01-05",
+      "lastLaunch": "2026-09-17",
+      "medianIntervalDays": 36.7,
+      "fastestIntervalDays": 4.1,
+      "rocketFamilies": [
+        "Ceres-1",
+        "Ceres-2",
+        "Hyperbola-1",
+        "Kuaizhou"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 6
+        },
+        {
+          "year": "2025",
+          "attempts": 9
+        },
+        {
+          "year": "2026",
+          "attempts": 4
         }
       ]
     },
@@ -1032,44 +1070,6 @@
       ]
     },
     {
-      "id": 21,
-      "name": "Launch Area 95A",
-      "siteId": 17,
-      "site": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "countryCode": "CN",
-      "region": "cn",
-      "active": true,
-      "latitude": 40.969117,
-      "longitude": 100.343333,
-      "attempts": 18,
-      "success": 14,
-      "successRate": 77.8,
-      "firstLaunch": "2024-01-05",
-      "lastLaunch": "2026-06-17",
-      "medianIntervalDays": 35.1,
-      "fastestIntervalDays": 4.1,
-      "rocketFamilies": [
-        "Ceres-1",
-        "Ceres-2",
-        "Hyperbola-1",
-        "Kuaizhou"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 6
-        },
-        {
-          "year": "2025",
-          "attempts": 9
-        },
-        {
-          "year": "2026",
-          "attempts": 3
-        }
-      ]
-    },
-    {
       "id": 20,
       "name": "31/6",
       "siteId": 15,
@@ -1079,12 +1079,12 @@
       "active": true,
       "latitude": 45.996034,
       "longitude": 63.564003,
-      "attempts": 17,
-      "success": 17,
+      "attempts": 18,
+      "success": 18,
       "successRate": 100,
       "firstLaunch": "2024-02-15",
-      "lastLaunch": "2026-07-14",
-      "medianIntervalDays": 54,
+      "lastLaunch": "2026-09-16",
+      "medianIntervalDays": 60,
       "fastestIntervalDays": 7.9,
       "rocketFamilies": [
         "Soyuz 2"
@@ -1100,7 +1100,7 @@
         },
         {
           "year": "2026",
-          "attempts": 3
+          "attempts": 4
         }
       ]
     },
@@ -1114,12 +1114,12 @@
       "active": true,
       "latitude": -39.262833,
       "longitude": 177.864469,
-      "attempts": 16,
-      "success": 16,
+      "attempts": 17,
+      "success": 17,
       "successRate": 100,
       "firstLaunch": "2024-09-20",
-      "lastLaunch": "2026-08-06",
-      "medianIntervalDays": 37.2,
+      "lastLaunch": "2026-09-11",
+      "medianIntervalDays": 37,
       "fastestIntervalDays": 7.6,
       "rocketFamilies": [
         "Electron"
@@ -1135,7 +1135,7 @@
         },
         {
           "year": "2026",
-          "attempts": 7
+          "attempts": 8
         }
       ]
     },
@@ -1185,12 +1185,12 @@
       "active": true,
       "latitude": 19.597275,
       "longitude": 110.930753,
-      "attempts": 13,
-      "success": 13,
+      "attempts": 14,
+      "success": 14,
       "successRate": 100,
       "firstLaunch": "2025-03-11",
-      "lastLaunch": "2026-08-04",
-      "medianIntervalDays": 30,
+      "lastLaunch": "2026-09-23",
+      "medianIntervalDays": 30.3,
       "fastestIntervalDays": 18.7,
       "rocketFamilies": [
         "Long March 8"
@@ -1202,7 +1202,7 @@
         },
         {
           "year": "2026",
-          "attempts": 7
+          "attempts": 8
         }
       ]
     },
@@ -1216,12 +1216,12 @@
       "active": true,
       "latitude": 40.8182,
       "longitude": 100.22514,
-      "attempts": 13,
-      "success": 12,
-      "successRate": 92.3,
+      "attempts": 14,
+      "success": 13,
+      "successRate": 92.9,
       "firstLaunch": "2024-01-23",
-      "lastLaunch": "2026-07-23",
-      "medianIntervalDays": 46.5,
+      "lastLaunch": "2026-09-20",
+      "medianIntervalDays": 47.2,
       "fastestIntervalDays": 21,
       "rocketFamilies": [
         "Kinetica 1"
@@ -1237,7 +1237,7 @@
         },
         {
           "year": "2026",
-          "attempts": 4
+          "attempts": 5
         }
       ]
     },
@@ -1312,6 +1312,78 @@
       ]
     },
     {
+      "id": 219,
+      "name": "Commercial LC-2",
+      "siteId": 8,
+      "site": "Wenchang Space Launch Site, People's Republic of China",
+      "countryCode": "CN",
+      "region": "cn",
+      "active": true,
+      "latitude": 19.59755,
+      "longitude": 110.936481,
+      "attempts": 9,
+      "success": 9,
+      "successRate": 100,
+      "firstLaunch": "2024-11-30",
+      "lastLaunch": "2026-09-17",
+      "medianIntervalDays": 37.7,
+      "fastestIntervalDays": 23.1,
+      "rocketFamilies": [
+        "Long March 10",
+        "Long March 12"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 1
+        },
+        {
+          "year": "2025",
+          "attempts": 3
+        },
+        {
+          "year": "2026",
+          "attempts": 5
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Launch Complex 9",
+      "siteId": 19,
+      "site": "Taiyuan Satellite Launch Center, People's Republic of China",
+      "countryCode": "CN",
+      "region": "cn",
+      "active": true,
+      "latitude": 38.863128,
+      "longitude": 111.589567,
+      "attempts": 9,
+      "success": 9,
+      "successRate": 100,
+      "firstLaunch": "2024-05-20",
+      "lastLaunch": "2026-09-19",
+      "medianIntervalDays": 61.5,
+      "fastestIntervalDays": 32.8,
+      "rocketFamilies": [
+        "Long March 2",
+        "Long March 4"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 5
+        },
+        {
+          "year": "2025",
+          "attempts": 1
+        },
+        {
+          "year": "2026",
+          "attempts": 3
+        }
+      ]
+    },
+    {
       "id": 175,
       "name": "101",
       "siteId": 8,
@@ -1343,42 +1415,6 @@
         {
           "year": "2026",
           "attempts": 1
-        }
-      ]
-    },
-    {
-      "id": 219,
-      "name": "Commercial LC-2",
-      "siteId": 8,
-      "site": "Wenchang Space Launch Site, People's Republic of China",
-      "countryCode": "CN",
-      "region": "cn",
-      "active": true,
-      "latitude": 19.59755,
-      "longitude": 110.936481,
-      "attempts": 8,
-      "success": 8,
-      "successRate": 100,
-      "firstLaunch": "2024-11-30",
-      "lastLaunch": "2026-08-16",
-      "medianIntervalDays": 38.4,
-      "fastestIntervalDays": 23.1,
-      "rocketFamilies": [
-        "Long March 10",
-        "Long March 12"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 1
-        },
-        {
-          "year": "2025",
-          "attempts": 3
-        },
-        {
-          "year": "2026",
-          "attempts": 4
         }
       ]
     },
@@ -1421,42 +1457,6 @@
       ]
     },
     {
-      "id": 25,
-      "name": "Launch Complex 9",
-      "siteId": 19,
-      "site": "Taiyuan Satellite Launch Center, People's Republic of China",
-      "countryCode": "CN",
-      "region": "cn",
-      "active": true,
-      "latitude": 38.863128,
-      "longitude": 111.589567,
-      "attempts": 8,
-      "success": 8,
-      "successRate": 100,
-      "firstLaunch": "2024-05-20",
-      "lastLaunch": "2026-08-17",
-      "medianIntervalDays": 63,
-      "fastestIntervalDays": 32.8,
-      "rocketFamilies": [
-        "Long March 2",
-        "Long March 4"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 5
-        },
-        {
-          "year": "2025",
-          "attempts": 1
-        },
-        {
-          "year": "2026",
-          "attempts": 2
-        }
-      ]
-    },
-    {
       "id": 209,
       "name": "Yoshinobu Launch Complex LP-2",
       "siteId": 26,
@@ -1480,6 +1480,41 @@
         {
           "year": "2024",
           "attempts": 3
+        },
+        {
+          "year": "2025",
+          "attempts": 3
+        },
+        {
+          "year": "2026",
+          "attempts": 2
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Ariane Launch Area 1 (ELV)",
+      "siteId": 13,
+      "site": "Guiana Space Centre, French Guiana",
+      "countryCode": "GF",
+      "region": "other",
+      "active": true,
+      "latitude": 5.236,
+      "longitude": -52.775,
+      "attempts": 7,
+      "success": 7,
+      "successRate": 100,
+      "firstLaunch": "2024-09-05",
+      "lastLaunch": "2026-09-15",
+      "medianIntervalDays": 123.8,
+      "fastestIntervalDays": 87.7,
+      "rocketFamilies": [
+        "Vega"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 2
         },
         {
           "year": "2025",
@@ -1636,37 +1671,37 @@
       ]
     },
     {
-      "id": 34,
-      "name": "Ariane Launch Area 1 (ELV)",
-      "siteId": 13,
-      "site": "Guiana Space Centre, French Guiana",
-      "countryCode": "GF",
-      "region": "other",
+      "id": 9,
+      "name": "Launch Area 96A",
+      "siteId": 17,
+      "site": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "countryCode": "CN",
+      "region": "cn",
       "active": true,
-      "latitude": 5.236,
-      "longitude": -52.775,
+      "latitude": 40.91491,
+      "longitude": 100.245488,
       "attempts": 6,
-      "success": 6,
-      "successRate": 100,
-      "firstLaunch": "2024-09-05",
-      "lastLaunch": "2026-05-19",
-      "medianIntervalDays": 128.6,
-      "fastestIntervalDays": 87.7,
+      "success": 5,
+      "successRate": 83.3,
+      "firstLaunch": "2024-11-27",
+      "lastLaunch": "2026-09-15",
+      "medianIntervalDays": 97.9,
+      "fastestIntervalDays": 26.2,
       "rocketFamilies": [
-        "Vega"
+        "Zhuque"
       ],
       "annual": [
         {
           "year": "2024",
-          "attempts": 2
+          "attempts": 1
         },
         {
           "year": "2025",
-          "attempts": 3
+          "attempts": 2
         },
         {
           "year": "2026",
-          "attempts": 1
+          "attempts": 3
         }
       ]
     },
@@ -1706,6 +1741,37 @@
       ]
     },
     {
+      "id": 36,
+      "name": "43/3 (43L)",
+      "siteId": 6,
+      "site": "Plesetsk Cosmodrome, Russian Federation",
+      "countryCode": "RU",
+      "region": "other",
+      "active": true,
+      "latitude": 62.9273,
+      "longitude": 40.45,
+      "attempts": 5,
+      "success": 5,
+      "successRate": 100,
+      "firstLaunch": "2025-03-02",
+      "lastLaunch": "2026-09-17",
+      "medianIntervalDays": 168.5,
+      "fastestIntervalDays": 24.6,
+      "rocketFamilies": [
+        "Soyuz 2"
+      ],
+      "annual": [
+        {
+          "year": "2025",
+          "attempts": 2
+        },
+        {
+          "year": "2026",
+          "attempts": 3
+        }
+      ]
+    },
+    {
       "id": 83,
       "name": "Cosmodrome Site 1S",
       "siteId": 18,
@@ -1732,72 +1798,6 @@
         },
         {
           "year": "2025",
-          "attempts": 2
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "Launch Area 96A",
-      "siteId": 17,
-      "site": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "countryCode": "CN",
-      "region": "cn",
-      "active": true,
-      "latitude": 40.91491,
-      "longitude": 100.245488,
-      "attempts": 5,
-      "success": 4,
-      "successRate": 80,
-      "firstLaunch": "2024-11-27",
-      "lastLaunch": "2026-06-09",
-      "medianIntervalDays": 130.5,
-      "fastestIntervalDays": 26.2,
-      "rocketFamilies": [
-        "Zhuque"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 1
-        },
-        {
-          "year": "2025",
-          "attempts": 2
-        },
-        {
-          "year": "2026",
-          "attempts": 2
-        }
-      ]
-    },
-    {
-      "id": 36,
-      "name": "43/3 (43L)",
-      "siteId": 6,
-      "site": "Plesetsk Cosmodrome, Russian Federation",
-      "countryCode": "RU",
-      "region": "other",
-      "active": true,
-      "latitude": 62.9273,
-      "longitude": 40.45,
-      "attempts": 4,
-      "success": 4,
-      "successRate": 100,
-      "firstLaunch": "2025-03-02",
-      "lastLaunch": "2026-08-24",
-      "medianIntervalDays": 194.2,
-      "fastestIntervalDays": 142.8,
-      "rocketFamilies": [
-        "Soyuz 2"
-      ],
-      "annual": [
-        {
-          "year": "2025",
-          "attempts": 2
-        },
-        {
-          "year": "2026",
           "attempts": 2
         }
       ]
@@ -2237,6 +2237,33 @@
       ]
     },
     {
+      "id": 255,
+      "name": "Yellow Sea (launch location 5)",
+      "siteId": 185,
+      "site": "Haiyang Oriental Spaceport",
+      "countryCode": "CN",
+      "region": "cn",
+      "active": true,
+      "latitude": 31.2,
+      "longitude": 123.7,
+      "attempts": 2,
+      "success": 2,
+      "successRate": 100,
+      "firstLaunch": "2026-07-22",
+      "lastLaunch": "2026-09-15",
+      "medianIntervalDays": 55.8,
+      "fastestIntervalDays": 55.8,
+      "rocketFamilies": [
+        "Gravity-1"
+      ],
+      "annual": [
+        {
+          "year": "2026",
+          "attempts": 2
+        }
+      ]
+    },
+    {
       "id": 7,
       "name": "81/24 (81P)",
       "siteId": 15,
@@ -2633,33 +2660,6 @@
       "fastestIntervalDays": null,
       "rocketFamilies": [
         "Tianlong-3"
-      ],
-      "annual": [
-        {
-          "year": "2026",
-          "attempts": 1
-        }
-      ]
-    },
-    {
-      "id": 255,
-      "name": "Yellow Sea (launch location 5)",
-      "siteId": 185,
-      "site": "Haiyang Oriental Spaceport",
-      "countryCode": "CN",
-      "region": "cn",
-      "active": true,
-      "latitude": 31.2,
-      "longitude": 123.7,
-      "attempts": 1,
-      "success": 1,
-      "successRate": 100,
-      "firstLaunch": "2026-07-22",
-      "lastLaunch": "2026-07-22",
-      "medianIntervalDays": null,
-      "fastestIntervalDays": null,
-      "rocketFamilies": [
-        "Gravity-1"
       ],
       "annual": [
         {
