@@ -10,7 +10,9 @@ test('standard constellation model separates inventory, targets and unverified c
   assert.equal(m.kpis.verifiedAuthorizationSample.value,18232);
   assert.equal(m.kpis.ituReserveTotal.value,null);
   assert.equal(m.kpis.launchDeficit.value,null);
-  assert.ok(m.candidates.every(c=>c.verifiedCount===null&&c.inventoryCount===null));
+  assert.ok(m.candidates.every(c=>c.inventoryCount===null));
+  assert.equal(m.candidates.find(c=>c.entityId==='ctc-1').verifiedCount,96714);
+  assert.equal(m.candidates.find(c=>c.entityId==='spacex-gen3').verifiedCount,100000);
   assert.equal(m.scenarios.forecastValues.length,0);
   assert.equal(m.rules.res35.deploymentAnchor,'end_of_seven_year_regulatory_period_not_actual_BIU');
   assert.ok(m.regulatoryEvents.some(e=>e.count===1616));

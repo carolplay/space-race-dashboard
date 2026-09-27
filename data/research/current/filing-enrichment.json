@@ -1,0 +1,129 @@
+{
+  "asOf": "2026-09-27",
+  "officialDataAsOf": "2026-09-15",
+  "method": "Manual review of ITU SpaceExplorer public dashboards, official SNL publication indexes and published RES35 reports. No dates inferred backwards from BIU. Unknown fields remain null.",
+  "overrides": {
+    "nor-steam-1": {
+      "initialReceiptDate": "2014-06-27", "initialPublicationDate": "2014-09-30",
+      "initialSourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=STEAM-1",
+      "initialReference": "API/A/9509 · 114540387 · IFIC 2779"
+    },
+    "nor-steam-2": {
+      "initialReceiptDate": "2014-06-27", "initialPublicationDate": "2014-09-30",
+      "initialSourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?sel_ific=2779",
+      "initialReference": "API/A/9510 · 114540388 · IFIC 2779"
+    },
+    "nor-steam-2b": {
+      "initialReceiptDate": "2017-01-01", "initialPublicationDate": "2017-07-25",
+      "initialSourceUrl": "https://www.itu.int/net4/itu-r/spacewisc/pub/IFIC/2850/APIc27.pdf",
+      "initialReference": "API/C/27 · 117520027 · IFIC 2850"
+    },
+    "g-l5ku": {
+      "initialReceiptDate": "2012-11-27", "initialPublicationDate": "2013-02-19",
+      "initialSourceUrl": "https://www.itu.int/en/ITU-R/seminars/wrs/2020/Plenary%20Sessions%20%20Presentations/02.%20Space%20Services%20-%201%20to%203%20Dec%202020/Space%20online%20services.pdf",
+      "initialReference": "L5 parent network · API/A/8111 · IFIC 2738"
+    },
+    "chn-sailspace-1": {
+      "noticeReceiptDate":"2025-03-12",
+      "initialReceiptDate": "2023-04-07", "initialPublicationDate": "2023-10-03", "mifrRecordedDate": "2026-04-28",
+      "initialSourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=SAILSPACE-1",
+      "initialReference": "CR/C/5991 · 123520044; PART II-S · 125500033 · IFIC 3070"
+      ,"sourceUrl":"https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125500033",
+      "notifiedCount":1296,"noticeIds":["125500033"],"perigeeKm":1160,"apogeeKm":1160,
+      "frequencySummary":"Tx 12700–12750 MHz","biuConfirmed":false,"inMifr":true,"regulatoryLimitDate":"2030-04-07",
+      "noteZh":"此行对应 125500033 通知摘要。MIFR 为网络关联通知的汇总状态；存在 PART II-S 及其他指配的 PART III-S，不能视为全部频段无条件获准。",
+      "noteEn":"This row covers notification 125500033. MIFR is a related-notice aggregate; PART II-S and PART III-S for other assignments do not imply unconditional approval of all bands."
+    },
+    "chn-gw-a59": {
+      "noticeReceiptDate":"2024-07-17",
+      "initialPublicationDate":"2021-01-12",
+      "sourceUrl":"https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-A59/120520170",
+      "notifiedCount":6080,"noticeIds":["120520170"],"perigeeKm":508,"apogeeKm":600,
+      "frequencySummary":"Tx 1164–42500 MHz; Rx 1610–51400 MHz","biuConfirmed":false,"inMifr":false,"regulatoryLimitDate":"2027-09-11",
+      "noteZh":"协调通知 120520170 的公开摘要；当前修改收件为 2024-07-17，不替代原频率组时钟。最早监管期限为网络汇总，2025 API 新频段不能直接套用。",
+      "noteEn":"Public summary of coordination notice 120520170; modification received 2024-07-17 is not the original frequency-group clock. Earliest limit is network-wide; do not apply it blindly to 2025 API additions."
+    },
+    "chn-gw-2": {
+      "noticeReceiptDate":"2020-09-11",
+      "sourceUrl":"https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-2/120520172",
+      "initialReceiptDate":"2020-09-11","initialPublicationDate":"2021-01-12","initialReference":"CR · 120520172",
+      "notifiedCount":1728,"noticeIds":["120520172"],"perigeeKm":1145,"apogeeKm":1145,
+      "frequencySummary":"Tx 1164–42500 MHz; Rx 1610–51400 MHz","biuConfirmed":false,"inMifr":false,"regulatoryLimitDate":"2027-09-11",
+      "noteZh":"公开协调版本摘要为 1,728 颗，不代表国网整体 12,992 颗目标。通知 125500219 正在审查；网络未确认 BIU 不代表物理星座未发射。",
+      "noteEn":"Public coordination-version summary is 1,728, not Guowang’s overall 12,992 target. Notification 125500219 is under examination; unconfirmed BIU does not mean the physical fleet has not launched."
+    },
+    "usa-usasat-ngso-8a": {
+      "noticeReceiptDate":"2024-02-15",
+      "initialPublicationDate":"2019-04-30","initialReference":"USASAT-NGSO-8A · earliest network publication",
+      "sourceUrl":"https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8A/119520089",
+      "notifiedCount":1154,"countRange":[1154,1156],"noticeIds":["119520089"],"perigeeKm":590,"apogeeKm":630,
+      "frequencySummary":"Tx 17700–20200 MHz (2 bands); Rx 27500–30000 MHz",
+      "biuConfirmed":false,"inMifr":false,
+      "noteZh":"RES35 状态表为 1,154 颗；当前协调版本公开摘要为 1,154–1,156 颗，保留两种口径，不擅自合并。通知 126500007 正在审查。轨道与频率为摘要范围，不表示区间连续占用。",
+      "noteEn":"RES35 status table: 1,154; current coordination summary: 1,154–1,156. Both scopes retained, not merged. Notification 126500007 is under examination. Orbit/frequency envelopes do not imply continuous occupancy."
+    },
+    "usa-usasat-ngso-8b": {
+      "noticeReceiptDate":"2024-02-22","initialPublicationDate":"2019-05-28",
+      "sourceUrl":"https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8B/119520098",
+      "notifiedCount":1294,"countRange":[1294,1296],"noticeIds":["119520098"],"perigeeKm":610,"apogeeKm":630,
+      "frequencySummary":"Tx 17700–20200 MHz (2 bands); Rx 27500–30000 MHz","biuConfirmed":false,"inMifr":false,
+      "noteZh":"RES35 状态表为 1,294 颗；协调版本摘要为 1,294–1,296 颗。通知 126500008 正在审查。频率为范围摘要，不表示区间连续占用。",
+      "noteEn":"RES35 status table: 1,294; coordination summary: 1,294–1,296. Notification 126500008 under examination. Frequency envelopes are not continuously occupied intervals."
+    },
+    "g-l5ka": {
+      "initialReceiptDate":"2012-11-27","initialPublicationDate":"2013-02-19",
+      "initialSourceUrl":"https://www.itu.int/en/ITU-R/seminars/wrs/2020/Plenary%20Sessions%20%20Presentations/02.%20Space%20Services%20-%201%20to%203%20Dec%202020/Space%20online%20services.pdf",
+      "initialReference":"L5 parent network · API/A/8111 · IFIC 2738",
+      "noteZh":"2,692 是状态表网络通知数量；报告部分频段的通知分母为 720，不能把整个网络总量直接当作所有 Ka 频段的履约分母。父网络最早申报日不替代各频率组计时。",
+      "noteEn":"2,692 is the status-table network count; some reported bands have a 720 notified denominator. Do not apply the network total to all Ka-band compliance ratios. Parent receipt does not replace frequency-group clocks."
+    },
+    "usa-usasat-ngso-8c": {
+      "noticeReceiptDate":"2024-02-26","initialPublicationDate":"2019-04-30",
+      "sourceUrl":"https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8C/119520091",
+      "notifiedCount":782,"countRange":[782,784],"noticeIds":["119520091"],"perigeeKm":590,"apogeeKm":630,
+      "frequencySummary":"Tx 17700–20200 MHz (2 bands); Rx 27500–30000 MHz","biuConfirmed":false,"inMifr":false,
+      "noteZh":"RES35 状态表为 782 颗；协调版本摘要为 782–784 颗。通知 126500009 正在审查。频率为范围摘要，不表示区间连续占用。",
+      "noteEn":"RES35 status table: 782; coordination summary: 782–784. Notification 126500009 under examination. Frequency envelopes are not continuously occupied intervals."
+    },
+    "ctc-1": {
+      "regulatoryLimitDate": "2032-12-29",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-1/125520195",
+      "notifiedCount": 96714, "noticeIds": ["125520195", "125545446"], "noticeReceiptDate":"2025-12-29",
+      "perigeeKm": 300, "apogeeKm": 39700,
+      "frequencySummary": "Tx 117.975–10400 MHz; Rx 117.975–15630 MHz",
+      "biuConfirmed": false, "inMifr": false,
+      "noteZh": "ITU 公开摘要确认 96,714 颗；关联 API 与协调通知不相加。组织字段空白，不能归入国网或千帆。轨道跨度含非低轨部分。",
+      "noteEn": "ITU public summary confirms 96,714; linked API/coordination notices are not additive. Organization field is blank; not assigned to Guowang/Qianfan. Orbital range includes non-LEO regimes."
+    },
+    "ctc-2": {
+      "regulatoryLimitDate": "2032-12-29",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-2/125545445",
+      "notifiedCount": 96714, "noticeIds": ["125545445"], "noticeReceiptDate":"2025-12-29",
+      "perigeeKm": 300, "apogeeKm": 39700,
+      "frequencySummary": "Tx 8025–27000 MHz; Rx 7190–7250 MHz; ISL 2025–134000 MHz",
+      "biuConfirmed": false, "inMifr": false,
+      "noteZh": "ITU 公开摘要确认 96,714 颗；不是获批建设总量。组织字段空白，不能归入国网或千帆；关联空间站数不代表已部署卫星数。",
+      "noteEn": "ITU public summary confirms 96,714, not an authorized build-out. Organization field is blank; not assigned to Guowang/Qianfan. Associated space-station records are not deployed-satellite counts."
+    }
+  },
+  "additionalFilings": [
+    {"id":"chn-sailspace-1-api2025","constellationId":"qianfan","network":"SAILSPACE-1 · API 2025","administration":"CHN","candidate":true,
+     "sourceUrl":"https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125545457",
+     "initialReceiptDate":"2025-12-30","initialPublicationDate":"2026-03-03","initialReference":"API/A/14274 · 125545457",
+     "noticeReceiptDate":"2025-12-30",
+     "notifiedCount":1296,"noticeIds":["125545457"],"perigeeKm":1160,"apogeeKm":1160,
+     "frequencySummary":"Tx 2200–7750 MHz (2 bands); Rx 2025–8400 MHz (2 bands)",
+     "noteZh":"2025 API 版本与 2023 协调/2025 通知频段不同，数量不叠加。2030-04-07 是网络关联通知最早期限，未确认为此 API 的独立启用期限。商业归属仍为候选映射。",
+     "noteEn":"2025 API bands differ from the earlier coordination/notification: counts are not additive. The network-wide 2030-04-07 limit is not verified for this API. Commercial mapping remains provisional."}
+  ],
+  "largeApplications": [
+    {
+      "id": "spacex-gen3-fcc", "authority": "FCC", "nameZh": "SpaceX Gen3 · 十万颗申请", "nameEn": "SpaceX Gen3 · 100,000 application",
+      "fileNumber": "SAT-LOA-20260630-00264", "receivedAt": "2026-07-07", "count": 100000,
+      "sourceUrl": "https://docs.fcc.gov/public/attachments/DOC-425160A1.pdf",
+      "altitudeSummary": "323–327.5 / 473–477.5 km", "inclinationSummary": "26–96.9°", "bands": "Ku / Ka / V / E / W / D",
+      "statusZh": "FCC 收件并列入申请公告，非批准；非 2025 年底 ITU 申报。",
+      "statusEn": "FCC application listed in a public notice, not a grant; not a late-2025 ITU filing."
+    }
+  ]
+}

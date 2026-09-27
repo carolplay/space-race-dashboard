@@ -4,6 +4,7 @@ const d=read('data/metrics/constellation-assets.json'), itu=read('data/research/
 d.filings=d.filings.filter(f=>!['ctc-1','ctc-2'].includes(f.id));
 for(const f of d.filings){
   const raw=itu.filings.find(r=>r.id===f.id), report=reports.groups.find(g=>g.filingId===f.id)?.latestProcessedReport;
+  if(!raw)continue;
   const events=[];
   const add=(date,kind,labelZh,labelEn,url=f.sourceUrl)=>{if(date)events.push({date,kind,labelZh,labelEn,sourceUrl:url});};
   add(raw.initialReceiptDate,'filing','申报收件','Filing received');
@@ -34,3 +35,5 @@ const snl='https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satn
 for(const name of ['CTC-1','CTC-2'])d.filings.push({id:name.toLowerCase(),constellationId:null,network:name,administration:'CHN',candidate:true,sourceUrl:snl+name,asOf:'2026-09-26',milestones:[],procedure:{initialReceiptDate:'2025-12-29',initialPublicationDate:'2026-03-17',mifrRecordedDate:null,regulatoryLimitDate:null,anchorType:null,sourceUrl:snl+name},notificationIds:[name==='CTC-1'?'125545446':'125545445'],noteZh:'商业主体及十万级数量待技术通知核验；不归入国网/千帆',noteEn:'Operator and six-figure scale await technical-notice verification; not allocated to Guowang/Qianfan',events:[{date:'2025-12-29',kind:'filing',labelZh:'API/A 收件',labelEn:'API/A received',sourceUrl:snl+name},{date:'2026-03-17',kind:'publication',labelZh:'API/A 公布',labelEn:'API/A published',sourceUrl:snl+name}]});
 d.version='1.1';
 writeFileSync(new URL('../data/metrics/constellation-assets.json',import.meta.url),JSON.stringify(d,null,2)+'\n');
+await import('./enrich-constellation-filings.mjs');
+await import('./build-constellation-model.mjs');

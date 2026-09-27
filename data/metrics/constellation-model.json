@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "asOf": "2026-09-26",
+  "asOf": "2026-09-27",
   "entities": [
     {
       "entityId": "starlink",
@@ -143,9 +143,9 @@
       "claimedCount": 100000,
       "claimedYear": 2026,
       "authority": "FCC",
-      "sourceUrl": "https://fcc.report/IBFS/SAT-LOA-20260630-00264/",
-      "verification": "original_application_and_brand_mapping_pending",
-      "verifiedCount": null,
+      "sourceUrl": "https://docs.fcc.gov/public/attachments/DOC-425160A1.pdf",
+      "verification": "FCC_application_count_verified_not_granted",
+      "verifiedCount": 100000,
       "inventoryCount": null
     },
     {
@@ -175,9 +175,9 @@
       "claimedCount": 96714,
       "claimedYear": 2025,
       "authority": "ITU",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-1",
-      "verification": "index_dates_verified_count_and_operator_pending",
-      "verifiedCount": null,
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-1/125520195",
+      "verification": "public_notice_count_verified_operator_and_overlap_pending",
+      "verifiedCount": 96714,
       "inventoryCount": null
     },
     {
@@ -191,9 +191,9 @@
       "claimedCount": 96714,
       "claimedYear": 2025,
       "authority": "ITU",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-2",
-      "verification": "index_dates_verified_count_and_operator_pending",
-      "verifiedCount": null,
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-2/125545445",
+      "verification": "public_notice_count_verified_operator_and_overlap_pending",
+      "verifiedCount": 96714,
       "inventoryCount": null
     }
   ],
@@ -1222,7 +1222,7 @@
       "entityId": "starlink",
       "date": "2026-07-31",
       "metric": "physical_in_orbit_count",
-      "value": 10771,
+      "value": 10875,
       "unit": "satellite",
       "evidenceType": "estimate",
       "method": "catalog-reconstruction",
@@ -1232,7 +1232,7 @@
       "entityId": "starlink",
       "date": "2026-08-31",
       "metric": "physical_in_orbit_count",
-      "value": 10728,
+      "value": 11093,
       "unit": "satellite",
       "evidenceType": "estimate",
       "method": "catalog-reconstruction",
@@ -4382,7 +4382,7 @@
       "entityId": "guowang",
       "date": "2026-08-31",
       "metric": "physical_in_orbit_count",
-      "value": 177,
+      "value": 195,
       "unit": "satellite",
       "evidenceType": "estimate",
       "method": "catalog-reconstruction",
@@ -5455,6 +5455,34 @@
       "entityId": "oneweb",
       "filingId": "g-l5ku",
       "network": "L5Ku",
+      "date": "2012-11-27",
+      "datePrecision": "day",
+      "eventType": "filing",
+      "labelZh": "网络最早申报收件",
+      "labelEn": "Earliest network filing",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/en/ITU-R/seminars/wrs/2020/Plenary%20Sessions%20%20Presentations/02.%20Space%20Services%20-%201%20to%203%20Dec%202020/Space%20online%20services.pdf"
+    },
+    {
+      "eventId": "g-l5ku-1",
+      "entityId": "oneweb",
+      "filingId": "g-l5ku",
+      "network": "L5Ku",
+      "date": "2013-02-19",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/en/ITU-R/seminars/wrs/2020/Plenary%20Sessions%20%20Presentations/02.%20Space%20Services%20-%201%20to%203%20Dec%202020/Space%20online%20services.pdf"
+    },
+    {
+      "eventId": "g-l5ku-2",
+      "entityId": "oneweb",
+      "filingId": "g-l5ku",
+      "network": "L5Ku",
       "date": "2019-04-30",
       "datePrecision": "day",
       "eventType": "biu",
@@ -5465,7 +5493,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/2999/RES35/RES350008M1.pdf"
     },
     {
-      "eventId": "g-l5ku-1",
+      "eventId": "g-l5ku-3",
       "entityId": "oneweb",
       "filingId": "g-l5ku",
       "network": "L5Ku",
@@ -5479,7 +5507,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "g-l5ku-2",
+      "eventId": "g-l5ku-4",
       "entityId": "oneweb",
       "filingId": "g-l5ku",
       "network": "L5Ku",
@@ -5493,7 +5521,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/2999/RES35/RES350008M1.pdf"
     },
     {
-      "eventId": "g-l5ku-3",
+      "eventId": "g-l5ku-5",
       "entityId": "oneweb",
       "filingId": "g-l5ku",
       "network": "L5Ku",
@@ -5507,7 +5535,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/2999/RES35/RES350008M1.pdf"
     },
     {
-      "eventId": "g-l5ku-4",
+      "eventId": "g-l5ku-6",
       "entityId": "oneweb",
       "filingId": "g-l5ku",
       "network": "L5Ku",
@@ -5525,6 +5553,34 @@
       "entityId": "oneweb",
       "filingId": "g-l5ka",
       "network": "L5Ka",
+      "date": "2012-11-27",
+      "datePrecision": "day",
+      "eventType": "filing",
+      "labelZh": "网络最早申报收件",
+      "labelEn": "Earliest network filing",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/en/ITU-R/seminars/wrs/2020/Plenary%20Sessions%20%20Presentations/02.%20Space%20Services%20-%201%20to%203%20Dec%202020/Space%20online%20services.pdf"
+    },
+    {
+      "eventId": "g-l5ka-1",
+      "entityId": "oneweb",
+      "filingId": "g-l5ka",
+      "network": "L5Ka",
+      "date": "2013-02-19",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/en/ITU-R/seminars/wrs/2020/Plenary%20Sessions%20%20Presentations/02.%20Space%20Services%20-%201%20to%203%20Dec%202020/Space%20online%20services.pdf"
+    },
+    {
+      "eventId": "g-l5ka-2",
+      "entityId": "oneweb",
+      "filingId": "g-l5ka",
+      "network": "L5Ka",
       "date": "2021-07-01",
       "datePrecision": "day",
       "eventType": "biu",
@@ -5535,7 +5591,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350008M3.pdf"
     },
     {
-      "eventId": "g-l5ka-1",
+      "eventId": "g-l5ka-3",
       "entityId": "oneweb",
       "filingId": "g-l5ka",
       "network": "L5Ka",
@@ -5549,7 +5605,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "g-l5ka-2",
+      "eventId": "g-l5ka-4",
       "entityId": "oneweb",
       "filingId": "g-l5ka",
       "network": "L5Ka",
@@ -5563,7 +5619,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350008M3.pdf"
     },
     {
-      "eventId": "g-l5ka-3",
+      "eventId": "g-l5ka-5",
       "entityId": "oneweb",
       "filingId": "g-l5ka",
       "network": "L5Ka",
@@ -5577,7 +5633,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350008M3.pdf"
     },
     {
-      "eventId": "g-l5ka-4",
+      "eventId": "g-l5ka-6",
       "entityId": "oneweb",
       "filingId": "g-l5ka",
       "network": "L5Ka",
@@ -5595,17 +5651,59 @@
       "entityId": "qianfan",
       "filingId": "chn-sailspace-1",
       "network": "SAILSPACE-1",
-      "date": "2030-04-07",
+      "date": "2023-04-07",
       "datePrecision": "day",
-      "eventType": "anchor",
-      "labelZh": "七年监管期终点",
-      "labelEn": "Seven-year regulatory limit",
+      "eventType": "filing",
+      "labelZh": "网络最早申报收件",
+      "labelEn": "Earliest network filing",
       "authority": "ITU",
       "dateBasis": "published_record",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=SAILSPACE-1"
     },
     {
       "eventId": "chn-sailspace-1-1",
+      "entityId": "qianfan",
+      "filingId": "chn-sailspace-1",
+      "network": "SAILSPACE-1",
+      "date": "2023-10-03",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=SAILSPACE-1"
+    },
+    {
+      "eventId": "chn-sailspace-1-2",
+      "entityId": "qianfan",
+      "filingId": "chn-sailspace-1",
+      "network": "SAILSPACE-1",
+      "date": "2026-04-28",
+      "datePrecision": "day",
+      "eventType": "recording",
+      "labelZh": "PART II-S 登记公布",
+      "labelEn": "PART II-S recording publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=SAILSPACE-1"
+    },
+    {
+      "eventId": "chn-sailspace-1-3",
+      "entityId": "qianfan",
+      "filingId": "chn-sailspace-1",
+      "network": "SAILSPACE-1",
+      "date": "2030-04-07",
+      "datePrecision": "day",
+      "eventType": "anchor",
+      "labelZh": "官方最早启用期限",
+      "labelEn": "Official earliest BIU limit",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125500033"
+    },
+    {
+      "eventId": "chn-sailspace-1-4",
       "entityId": "qianfan",
       "filingId": "chn-sailspace-1",
       "network": "SAILSPACE-1",
@@ -5619,7 +5717,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "chn-sailspace-1-2",
+      "eventId": "chn-sailspace-1-5",
       "entityId": "qianfan",
       "filingId": "chn-sailspace-1",
       "network": "SAILSPACE-1",
@@ -5633,7 +5731,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "chn-sailspace-1-3",
+      "eventId": "chn-sailspace-1-6",
       "entityId": "qianfan",
       "filingId": "chn-sailspace-1",
       "network": "SAILSPACE-1",
@@ -5651,6 +5749,34 @@
       "entityId": "starlink",
       "filingId": "nor-steam-1",
       "network": "STEAM-1",
+      "date": "2014-06-27",
+      "datePrecision": "day",
+      "eventType": "filing",
+      "labelZh": "网络最早申报收件",
+      "labelEn": "Earliest network filing",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=STEAM-1"
+    },
+    {
+      "eventId": "nor-steam-1-1",
+      "entityId": "starlink",
+      "filingId": "nor-steam-1",
+      "network": "STEAM-1",
+      "date": "2014-09-30",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=STEAM-1"
+    },
+    {
+      "eventId": "nor-steam-1-2",
+      "entityId": "starlink",
+      "filingId": "nor-steam-1",
+      "network": "STEAM-1",
       "date": "2019-12-27",
       "datePrecision": "day",
       "eventType": "biu",
@@ -5661,7 +5787,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350016M1.pdf"
     },
     {
-      "eventId": "nor-steam-1-1",
+      "eventId": "nor-steam-1-3",
       "entityId": "starlink",
       "filingId": "nor-steam-1",
       "network": "STEAM-1",
@@ -5675,7 +5801,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "nor-steam-1-2",
+      "eventId": "nor-steam-1-4",
       "entityId": "starlink",
       "filingId": "nor-steam-1",
       "network": "STEAM-1",
@@ -5689,7 +5815,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350016M1.pdf"
     },
     {
-      "eventId": "nor-steam-1-3",
+      "eventId": "nor-steam-1-5",
       "entityId": "starlink",
       "filingId": "nor-steam-1",
       "network": "STEAM-1",
@@ -5703,7 +5829,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350016M1.pdf"
     },
     {
-      "eventId": "nor-steam-1-4",
+      "eventId": "nor-steam-1-6",
       "entityId": "starlink",
       "filingId": "nor-steam-1",
       "network": "STEAM-1",
@@ -5721,6 +5847,34 @@
       "entityId": "starlink",
       "filingId": "nor-steam-2",
       "network": "STEAM-2",
+      "date": "2014-06-27",
+      "datePrecision": "day",
+      "eventType": "filing",
+      "labelZh": "网络最早申报收件",
+      "labelEn": "Earliest network filing",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?sel_ific=2779"
+    },
+    {
+      "eventId": "nor-steam-2-1",
+      "entityId": "starlink",
+      "filingId": "nor-steam-2",
+      "network": "STEAM-2",
+      "date": "2014-09-30",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?sel_ific=2779"
+    },
+    {
+      "eventId": "nor-steam-2-2",
+      "entityId": "starlink",
+      "filingId": "nor-steam-2",
+      "network": "STEAM-2",
       "date": "2021-05-30",
       "datePrecision": "day",
       "eventType": "biu",
@@ -5731,7 +5885,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3009/RES35/RES350017M1.pdf"
     },
     {
-      "eventId": "nor-steam-2-1",
+      "eventId": "nor-steam-2-3",
       "entityId": "starlink",
       "filingId": "nor-steam-2",
       "network": "STEAM-2",
@@ -5745,7 +5899,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "nor-steam-2-2",
+      "eventId": "nor-steam-2-4",
       "entityId": "starlink",
       "filingId": "nor-steam-2",
       "network": "STEAM-2",
@@ -5759,7 +5913,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3009/RES35/RES350017M1.pdf"
     },
     {
-      "eventId": "nor-steam-2-3",
+      "eventId": "nor-steam-2-5",
       "entityId": "starlink",
       "filingId": "nor-steam-2",
       "network": "STEAM-2",
@@ -5773,7 +5927,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3009/RES35/RES350017M1.pdf"
     },
     {
-      "eventId": "nor-steam-2-4",
+      "eventId": "nor-steam-2-6",
       "entityId": "starlink",
       "filingId": "nor-steam-2",
       "network": "STEAM-2",
@@ -5791,6 +5945,34 @@
       "entityId": "starlink",
       "filingId": "nor-steam-2b",
       "network": "STEAM-2B",
+      "date": "2017-01-01",
+      "datePrecision": "day",
+      "eventType": "filing",
+      "labelZh": "网络最早申报收件",
+      "labelEn": "Earliest network filing",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/net4/itu-r/spacewisc/pub/IFIC/2850/APIc27.pdf"
+    },
+    {
+      "eventId": "nor-steam-2b-1",
+      "entityId": "starlink",
+      "filingId": "nor-steam-2b",
+      "network": "STEAM-2B",
+      "date": "2017-07-25",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/net4/itu-r/spacewisc/pub/IFIC/2850/APIc27.pdf"
+    },
+    {
+      "eventId": "nor-steam-2b-2",
+      "entityId": "starlink",
+      "filingId": "nor-steam-2b",
+      "network": "STEAM-2B",
       "date": "2019-12-25",
       "datePrecision": "day",
       "eventType": "biu",
@@ -5801,7 +5983,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3074/RES35/RES350022M1.pdf"
     },
     {
-      "eventId": "nor-steam-2b-1",
+      "eventId": "nor-steam-2b-3",
       "entityId": "starlink",
       "filingId": "nor-steam-2b",
       "network": "STEAM-2B",
@@ -5815,7 +5997,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "nor-steam-2b-2",
+      "eventId": "nor-steam-2b-4",
       "entityId": "starlink",
       "filingId": "nor-steam-2b",
       "network": "STEAM-2B",
@@ -5829,7 +6011,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3074/RES35/RES350022M1.pdf"
     },
     {
-      "eventId": "nor-steam-2b-3",
+      "eventId": "nor-steam-2b-5",
       "entityId": "starlink",
       "filingId": "nor-steam-2b",
       "network": "STEAM-2B",
@@ -5843,7 +6025,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3074/RES35/RES350022M1.pdf"
     },
     {
-      "eventId": "nor-steam-2b-4",
+      "eventId": "nor-steam-2b-6",
       "entityId": "starlink",
       "filingId": "nor-steam-2b",
       "network": "STEAM-2B",
@@ -5857,7 +6039,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "nor-steam-2b-5",
+      "eventId": "nor-steam-2b-7",
       "entityId": "starlink",
       "filingId": "nor-steam-2b",
       "network": "STEAM-2B",
@@ -5889,6 +6071,20 @@
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8a",
       "network": "USASAT-NGSO-8A",
+      "date": "2019-04-30",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8A/119520089"
+    },
+    {
+      "eventId": "usa-usasat-ngso-8a-2",
+      "entityId": "amazon-leo",
+      "filingId": "usa-usasat-ngso-8a",
+      "network": "USASAT-NGSO-8A",
       "date": "2020-03-17",
       "datePrecision": "day",
       "eventType": "publication",
@@ -5899,7 +6095,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?ie=y&sel_ific=2916"
     },
     {
-      "eventId": "usa-usasat-ngso-8a-2",
+      "eventId": "usa-usasat-ngso-8a-3",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8a",
       "network": "USASAT-NGSO-8A",
@@ -5913,7 +6109,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "usa-usasat-ngso-8a-3",
+      "eventId": "usa-usasat-ngso-8a-4",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8a",
       "network": "USASAT-NGSO-8A",
@@ -5927,7 +6123,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "usa-usasat-ngso-8a-4",
+      "eventId": "usa-usasat-ngso-8a-5",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8a",
       "network": "USASAT-NGSO-8A",
@@ -5941,7 +6137,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "usa-usasat-ngso-8a-5",
+      "eventId": "usa-usasat-ngso-8a-6",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8a",
       "network": "USASAT-NGSO-8A",
@@ -5973,6 +6169,20 @@
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8b",
       "network": "USASAT-NGSO-8B",
+      "date": "2019-05-28",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8B/119520098"
+    },
+    {
+      "eventId": "usa-usasat-ngso-8b-2",
+      "entityId": "amazon-leo",
+      "filingId": "usa-usasat-ngso-8b",
+      "network": "USASAT-NGSO-8B",
       "date": "2020-03-17",
       "datePrecision": "day",
       "eventType": "publication",
@@ -5983,7 +6193,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?ie=y&sel_ific=2916"
     },
     {
-      "eventId": "usa-usasat-ngso-8b-2",
+      "eventId": "usa-usasat-ngso-8b-3",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8b",
       "network": "USASAT-NGSO-8B",
@@ -5997,7 +6207,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "usa-usasat-ngso-8b-3",
+      "eventId": "usa-usasat-ngso-8b-4",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8b",
       "network": "USASAT-NGSO-8B",
@@ -6011,7 +6221,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "usa-usasat-ngso-8b-4",
+      "eventId": "usa-usasat-ngso-8b-5",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8b",
       "network": "USASAT-NGSO-8B",
@@ -6025,7 +6235,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "usa-usasat-ngso-8b-5",
+      "eventId": "usa-usasat-ngso-8b-6",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8b",
       "network": "USASAT-NGSO-8B",
@@ -6057,6 +6267,20 @@
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8c",
       "network": "USASAT-NGSO-8C",
+      "date": "2019-04-30",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8C/119520091"
+    },
+    {
+      "eventId": "usa-usasat-ngso-8c-2",
+      "entityId": "amazon-leo",
+      "filingId": "usa-usasat-ngso-8c",
+      "network": "USASAT-NGSO-8C",
       "date": "2020-03-17",
       "datePrecision": "day",
       "eventType": "publication",
@@ -6067,7 +6291,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?ie=y&sel_ific=2916"
     },
     {
-      "eventId": "usa-usasat-ngso-8c-2",
+      "eventId": "usa-usasat-ngso-8c-3",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8c",
       "network": "USASAT-NGSO-8C",
@@ -6081,7 +6305,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "usa-usasat-ngso-8c-3",
+      "eventId": "usa-usasat-ngso-8c-4",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8c",
       "network": "USASAT-NGSO-8C",
@@ -6095,7 +6319,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "usa-usasat-ngso-8c-4",
+      "eventId": "usa-usasat-ngso-8c-5",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8c",
       "network": "USASAT-NGSO-8C",
@@ -6109,7 +6333,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
     },
     {
-      "eventId": "usa-usasat-ngso-8c-5",
+      "eventId": "usa-usasat-ngso-8c-6",
       "entityId": "amazon-leo",
       "filingId": "usa-usasat-ngso-8c",
       "network": "USASAT-NGSO-8C",
@@ -6141,6 +6365,20 @@
       "entityId": "guowang",
       "filingId": "chn-gw-a59",
       "network": "GW-A59",
+      "date": "2021-01-12",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-A59/120520170"
+    },
+    {
+      "eventId": "chn-gw-a59-2",
+      "entityId": "guowang",
+      "filingId": "chn-gw-a59",
+      "network": "GW-A59",
       "date": "2024-07-17",
       "datePrecision": "day",
       "eventType": "filing",
@@ -6151,7 +6389,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
     },
     {
-      "eventId": "chn-gw-a59-2",
+      "eventId": "chn-gw-a59-3",
       "entityId": "guowang",
       "filingId": "chn-gw-a59",
       "network": "GW-A59",
@@ -6165,7 +6403,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
     },
     {
-      "eventId": "chn-gw-a59-3",
+      "eventId": "chn-gw-a59-4",
       "entityId": "guowang",
       "filingId": "chn-gw-a59",
       "network": "GW-A59",
@@ -6179,7 +6417,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
     },
     {
-      "eventId": "chn-gw-a59-4",
+      "eventId": "chn-gw-a59-5",
       "entityId": "guowang",
       "filingId": "chn-gw-a59",
       "network": "GW-A59",
@@ -6193,7 +6431,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
     },
     {
-      "eventId": "chn-gw-a59-5",
+      "eventId": "chn-gw-a59-6",
       "entityId": "guowang",
       "filingId": "chn-gw-a59",
       "network": "GW-A59",
@@ -6205,6 +6443,20 @@
       "authority": "ITU",
       "dateBasis": "published_record",
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
+    },
+    {
+      "eventId": "chn-gw-a59-7",
+      "entityId": "guowang",
+      "filingId": "chn-gw-a59",
+      "network": "GW-A59",
+      "date": "2027-09-11",
+      "datePrecision": "day",
+      "eventType": "anchor",
+      "labelZh": "官方最早启用期限",
+      "labelEn": "Official earliest BIU limit",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-A59/120520170"
     },
     {
       "eventId": "chn-gw-2-0",
@@ -6225,6 +6477,34 @@
       "entityId": "guowang",
       "filingId": "chn-gw-2",
       "network": "GW-2",
+      "date": "2020-09-11",
+      "datePrecision": "day",
+      "eventType": "filing",
+      "labelZh": "网络最早申报收件",
+      "labelEn": "Earliest network filing",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2"
+    },
+    {
+      "eventId": "chn-gw-2-2",
+      "entityId": "guowang",
+      "filingId": "chn-gw-2",
+      "network": "GW-2",
+      "date": "2021-01-12",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2"
+    },
+    {
+      "eventId": "chn-gw-2-3",
+      "entityId": "guowang",
+      "filingId": "chn-gw-2",
+      "network": "GW-2",
       "date": "2025-11-07",
       "datePrecision": "day",
       "eventType": "filing",
@@ -6235,7 +6515,7 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2"
     },
     {
-      "eventId": "chn-gw-2-2",
+      "eventId": "chn-gw-2-4",
       "entityId": "guowang",
       "filingId": "chn-gw-2",
       "network": "GW-2",
@@ -6247,6 +6527,20 @@
       "authority": "ITU",
       "dateBasis": "published_record",
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2"
+    },
+    {
+      "eventId": "chn-gw-2-5",
+      "entityId": "guowang",
+      "filingId": "chn-gw-2",
+      "network": "GW-2",
+      "date": "2027-09-11",
+      "datePrecision": "day",
+      "eventType": "anchor",
+      "labelZh": "官方最早启用期限",
+      "labelEn": "Official earliest BIU limit",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-2/120520172"
     },
     {
       "eventId": "ctc-1-0",
@@ -6277,6 +6571,20 @@
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-1"
     },
     {
+      "eventId": "ctc-1-2",
+      "entityId": null,
+      "filingId": "ctc-1",
+      "network": "CTC-1",
+      "date": "2032-12-29",
+      "datePrecision": "day",
+      "eventType": "anchor",
+      "labelZh": "官方最早启用期限",
+      "labelEn": "Official earliest BIU limit",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-1/125520195"
+    },
+    {
       "eventId": "ctc-2-0",
       "entityId": null,
       "filingId": "ctc-2",
@@ -6303,6 +6611,48 @@
       "authority": "ITU",
       "dateBasis": "published_record",
       "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-2"
+    },
+    {
+      "eventId": "ctc-2-2",
+      "entityId": null,
+      "filingId": "ctc-2",
+      "network": "CTC-2",
+      "date": "2032-12-29",
+      "datePrecision": "day",
+      "eventType": "anchor",
+      "labelZh": "官方最早启用期限",
+      "labelEn": "Official earliest BIU limit",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-2/125545445"
+    },
+    {
+      "eventId": "chn-sailspace-1-api2025-0",
+      "entityId": "qianfan",
+      "filingId": "chn-sailspace-1-api2025",
+      "network": "SAILSPACE-1 · API 2025",
+      "date": "2025-12-30",
+      "datePrecision": "day",
+      "eventType": "filing",
+      "labelZh": "网络最早申报收件",
+      "labelEn": "Earliest network filing",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125545457"
+    },
+    {
+      "eventId": "chn-sailspace-1-api2025-1",
+      "entityId": "qianfan",
+      "filingId": "chn-sailspace-1-api2025",
+      "network": "SAILSPACE-1 · API 2025",
+      "date": "2026-03-03",
+      "datePrecision": "day",
+      "eventType": "publication",
+      "labelZh": "网络初始公布",
+      "labelEn": "Initial network publication",
+      "authority": "ITU",
+      "dateBasis": "published_record",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125545457"
     }
   ],
   "kpis": {
@@ -6463,120 +6813,520 @@
   "filingProcedures": [
     {
       "filingId": "g-l5ku",
-      "initialReceiptDate": null,
-      "initialPublicationDate": null,
+      "initialReceiptDate": "2012-11-27",
+      "initialPublicationDate": "2013-02-19",
       "mifrRecordedDate": null,
       "regulatoryLimitDate": "2021-01-01",
       "anchorType": "transitional",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "initialReference": "L5 parent network · API/A/8111 · IFIC 2738",
+      "initialSourceUrl": "https://www.itu.int/en/ITU-R/seminars/wrs/2020/Plenary%20Sessions%20%20Presentations/02.%20Space%20Services%20-%201%20to%203%20Dec%202020/Space%20online%20services.pdf"
     },
     {
       "filingId": "g-l5ka",
-      "initialReceiptDate": null,
-      "initialPublicationDate": null,
+      "initialReceiptDate": "2012-11-27",
+      "initialPublicationDate": "2013-02-19",
       "mifrRecordedDate": null,
       "regulatoryLimitDate": "2021-07-18",
       "anchorType": "seven-year-limit",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "initialReference": "L5 parent network · API/A/8111 · IFIC 2738",
+      "initialSourceUrl": "https://www.itu.int/en/ITU-R/seminars/wrs/2020/Plenary%20Sessions%20%20Presentations/02.%20Space%20Services%20-%201%20to%203%20Dec%202020/Space%20online%20services.pdf"
     },
     {
       "filingId": "chn-sailspace-1",
-      "initialReceiptDate": null,
-      "initialPublicationDate": null,
-      "mifrRecordedDate": null,
+      "initialReceiptDate": "2023-04-07",
+      "initialPublicationDate": "2023-10-03",
+      "mifrRecordedDate": "2026-04-28",
       "regulatoryLimitDate": "2030-04-07",
       "anchorType": "seven-year-limit",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125500033",
+      "initialReference": "CR/C/5991 · 123520044; PART II-S · 125500033 · IFIC 3070",
+      "initialSourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=SAILSPACE-1"
     },
     {
       "filingId": "nor-steam-1",
-      "initialReceiptDate": null,
-      "initialPublicationDate": null,
+      "initialReceiptDate": "2014-06-27",
+      "initialPublicationDate": "2014-09-30",
       "mifrRecordedDate": null,
       "regulatoryLimitDate": "2021-06-27",
       "anchorType": "seven-year-limit",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "initialReference": "API/A/9509 · 114540387 · IFIC 2779",
+      "initialSourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=STEAM-1"
     },
     {
       "filingId": "nor-steam-2",
-      "initialReceiptDate": null,
-      "initialPublicationDate": null,
+      "initialReceiptDate": "2014-06-27",
+      "initialPublicationDate": "2014-09-30",
       "mifrRecordedDate": null,
       "regulatoryLimitDate": "2021-06-27",
       "anchorType": "seven-year-limit",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "initialReference": "API/A/9510 · 114540388 · IFIC 2779",
+      "initialSourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?sel_ific=2779"
     },
     {
       "filingId": "nor-steam-2b",
-      "initialReceiptDate": null,
-      "initialPublicationDate": null,
+      "initialReceiptDate": "2017-01-01",
+      "initialPublicationDate": "2017-07-25",
       "mifrRecordedDate": null,
       "regulatoryLimitDate": "2024-01-01",
       "anchorType": "seven-year-limit",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html"
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
+      "initialReference": "API/C/27 · 117520027 · IFIC 2850",
+      "initialSourceUrl": "https://www.itu.int/net4/itu-r/spacewisc/pub/IFIC/2850/APIc27.pdf"
     },
     {
       "filingId": "usa-usasat-ngso-8a",
       "initialReceiptDate": "2019-03-26",
-      "initialPublicationDate": null,
+      "initialPublicationDate": "2019-04-30",
       "mifrRecordedDate": null,
       "regulatoryLimitDate": "2026-03-26",
       "anchorType": "seven-year-limit",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?ie=y&sel_ific=2916"
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8A/119520089",
+      "initialReference": "USASAT-NGSO-8A · earliest network publication",
+      "initialSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8A/119520089"
     },
     {
       "filingId": "usa-usasat-ngso-8b",
       "initialReceiptDate": "2019-03-28",
-      "initialPublicationDate": null,
+      "initialPublicationDate": "2019-05-28",
       "mifrRecordedDate": null,
       "regulatoryLimitDate": "2026-03-28",
       "anchorType": "seven-year-limit",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?ie=y&sel_ific=2916"
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8B/119520098",
+      "initialReference": null,
+      "initialSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8B/119520098"
     },
     {
       "filingId": "usa-usasat-ngso-8c",
       "initialReceiptDate": "2019-03-26",
-      "initialPublicationDate": null,
+      "initialPublicationDate": "2019-04-30",
       "mifrRecordedDate": null,
       "regulatoryLimitDate": "2026-03-26",
       "anchorType": "seven-year-limit",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?ie=y&sel_ific=2916"
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8C/119520091",
+      "initialReference": null,
+      "initialSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8C/119520091"
     },
     {
       "filingId": "chn-gw-a59",
       "initialReceiptDate": "2020-09-11",
-      "initialPublicationDate": null,
+      "initialPublicationDate": "2021-01-12",
       "mifrRecordedDate": null,
-      "regulatoryLimitDate": null,
+      "regulatoryLimitDate": "2027-09-11",
       "anchorType": "seven-year-limit",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvanceall.asp?norder=d_rcv&sel_satname=GW-A59"
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-A59/120520170",
+      "initialReference": null,
+      "initialSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-A59/120520170"
     },
     {
       "filingId": "chn-gw-2",
       "initialReceiptDate": "2020-09-11",
-      "initialPublicationDate": null,
+      "initialPublicationDate": "2021-01-12",
       "mifrRecordedDate": null,
-      "regulatoryLimitDate": null,
+      "regulatoryLimitDate": "2027-09-11",
       "anchorType": "seven-year-limit",
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=GW-2"
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-2/120520172",
+      "initialReference": "CR · 120520172",
+      "initialSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-2/120520172"
     },
     {
       "filingId": "ctc-1",
       "initialReceiptDate": "2025-12-29",
       "initialPublicationDate": "2026-03-17",
       "mifrRecordedDate": null,
-      "regulatoryLimitDate": null,
-      "anchorType": null,
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-1"
+      "regulatoryLimitDate": "2032-12-29",
+      "anchorType": "seven-year-limit",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-1/125520195",
+      "initialReference": null,
+      "initialSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-1/125520195"
     },
     {
       "filingId": "ctc-2",
       "initialReceiptDate": "2025-12-29",
       "initialPublicationDate": "2026-03-17",
       "mifrRecordedDate": null,
+      "regulatoryLimitDate": "2032-12-29",
+      "anchorType": "seven-year-limit",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-2/125545445",
+      "initialReference": null,
+      "initialSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-2/125545445"
+    },
+    {
+      "filingId": "chn-sailspace-1-api2025",
+      "initialReceiptDate": "2025-12-30",
+      "initialPublicationDate": "2026-03-03",
+      "mifrRecordedDate": null,
       "regulatoryLimitDate": null,
       "anchorType": null,
-      "sourceUrl": "https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname=CTC-2"
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125545457",
+      "initialReference": "API/A/14274 · 125545457",
+      "initialSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125545457"
+    }
+  ],
+  "filingBasics": [
+    {
+      "filingId": "g-l5ku",
+      "notifiedCount": 2692,
+      "countRange": null,
+      "countScope": "RES35 effective/report notification",
+      "countSourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/2999/RES35/RES350008M1.pdf",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/2999/RES35/RES350008M1.pdf",
+      "asOf": "2023-06-27",
+      "noticeIds": [
+        "119500285"
+      ],
+      "noticeReceiptDate": null,
+      "frequencySummary": "10700–10950 MHz; 10950–11200 MHz; 11200–11450 MHz; 11450–11700 MHz; 11700–12700 MHz; 14000–14500 MHz",
+      "planeCount": 67,
+      "perigeeKm": 800,
+      "apogeeKm": 1200,
+      "inclinationRange": [
+        87.9,
+        88.9
+      ],
+      "biuConfirmed": null,
+      "inMifr": null,
+      "reportCount": 269,
+      "reportDate": "2023-06-27",
+      "noteZh": "数量对应该通知/报告版本，不是品牌总规划；频段和轨道参数为已取得文件范围，不能跨行相加。",
+      "noteEn": "Count belongs to this notice/report version, not the brand plan. Bands/orbits cover acquired documents; do not sum rows."
+    },
+    {
+      "filingId": "g-l5ka",
+      "notifiedCount": 2692,
+      "countRange": null,
+      "countScope": "RES35 effective/report notification",
+      "countSourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350008M3.pdf",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350008M3.pdf",
+      "asOf": "2023-10-31",
+      "noticeIds": [
+        "321500140"
+      ],
+      "noticeReceiptDate": null,
+      "frequencySummary": "17800–18600 MHz; 18800–20200 MHz; 27510–27550 MHz; 27600–30000 MHz",
+      "planeCount": 67,
+      "perigeeKm": 800,
+      "apogeeKm": 1200,
+      "inclinationRange": [
+        87.9,
+        88.9
+      ],
+      "biuConfirmed": null,
+      "inMifr": null,
+      "reportCount": 279,
+      "reportDate": "2023-10-31",
+      "noteZh": "2,692 是状态表网络通知数量；报告部分频段的通知分母为 720，不能把整个网络总量直接当作所有 Ka 频段的履约分母。父网络最早申报日不替代各频率组计时。",
+      "noteEn": "2,692 is the status-table network count; some reported bands have a 720 notified denominator. Do not apply the network total to all Ka-band compliance ratios. Parent receipt does not replace frequency-group clocks."
+    },
+    {
+      "filingId": "chn-sailspace-1",
+      "notifiedCount": 1296,
+      "countRange": null,
+      "countScope": "public-notice-summary",
+      "countSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125500033",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125500033",
+      "asOf": "2026-09-15",
+      "noticeIds": [
+        "125500033"
+      ],
+      "noticeReceiptDate": "2025-03-12",
+      "frequencySummary": "Tx 12700–12750 MHz",
+      "planeCount": null,
+      "perigeeKm": 1160,
+      "apogeeKm": 1160,
+      "inclinationRange": null,
+      "biuConfirmed": false,
+      "inMifr": true,
+      "reportCount": null,
+      "reportDate": null,
+      "noteZh": "此行对应 125500033 通知摘要。MIFR 为网络关联通知的汇总状态；存在 PART II-S 及其他指配的 PART III-S，不能视为全部频段无条件获准。",
+      "noteEn": "This row covers notification 125500033. MIFR is a related-notice aggregate; PART II-S and PART III-S for other assignments do not imply unconditional approval of all bands."
+    },
+    {
+      "filingId": "nor-steam-1",
+      "notifiedCount": 4408,
+      "countRange": null,
+      "countScope": "RES35 effective/report notification",
+      "countSourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350016M1.pdf",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3008/RES35/RES350016M1.pdf",
+      "asOf": "2023-10-31",
+      "noticeIds": [
+        "121500130"
+      ],
+      "noticeReceiptDate": null,
+      "frequencySummary": "10700–12750 MHz; 14000–14500 MHz",
+      "planeCount": 190,
+      "perigeeKm": 540,
+      "apogeeKm": 570,
+      "inclinationRange": [
+        53,
+        97.6
+      ],
+      "biuConfirmed": null,
+      "inMifr": null,
+      "reportCount": 442,
+      "reportDate": "2023-10-31",
+      "noteZh": "数量对应该通知/报告版本，不是品牌总规划；频段和轨道参数为已取得文件范围，不能跨行相加。",
+      "noteEn": "Count belongs to this notice/report version, not the brand plan. Bands/orbits cover acquired documents; do not sum rows."
+    },
+    {
+      "filingId": "nor-steam-2",
+      "notifiedCount": 1312,
+      "countRange": null,
+      "countScope": "RES35 effective/report notification",
+      "countSourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3009/RES35/RES350017M1.pdf",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3009/RES35/RES350017M1.pdf",
+      "asOf": "2023-11-14",
+      "noticeIds": [
+        "121500129"
+      ],
+      "noticeReceiptDate": null,
+      "frequencySummary": "17700–18600 MHz; 18800–19700 MHz; 27500–30000 MHz",
+      "planeCount": 118,
+      "perigeeKm": 540,
+      "apogeeKm": 570,
+      "inclinationRange": [
+        53.2,
+        97.6
+      ],
+      "biuConfirmed": null,
+      "inMifr": null,
+      "reportCount": 133,
+      "reportDate": "2023-11-14",
+      "noteZh": "数量对应该通知/报告版本，不是品牌总规划；频段和轨道参数为已取得文件范围，不能跨行相加。",
+      "noteEn": "Count belongs to this notice/report version, not the brand plan. Bands/orbits cover acquired documents; do not sum rows."
+    },
+    {
+      "filingId": "nor-steam-2b",
+      "notifiedCount": 1584,
+      "countRange": null,
+      "countScope": "RES35 effective/report notification",
+      "countSourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3074/RES35/RES350022M1.pdf",
+      "sourceUrl": "https://www.itu.int/net/ITU-R/space/documents/RES35/3074/RES35/RES350022M1.pdf",
+      "asOf": "2026-06-23",
+      "noticeIds": [
+        "125500189"
+      ],
+      "noticeReceiptDate": null,
+      "frequencySummary": "17300–18600 MHz; 18800–19300 MHz; 27500–30000 MHz",
+      "planeCount": 72,
+      "perigeeKm": 550,
+      "apogeeKm": 550,
+      "inclinationRange": [
+        53,
+        53
+      ],
+      "biuConfirmed": null,
+      "inMifr": null,
+      "reportCount": 159,
+      "reportDate": "2026-06-23",
+      "noteZh": "数量对应该通知/报告版本，不是品牌总规划；频段和轨道参数为已取得文件范围，不能跨行相加。",
+      "noteEn": "Count belongs to this notice/report version, not the brand plan. Bands/orbits cover acquired documents; do not sum rows."
+    },
+    {
+      "filingId": "usa-usasat-ngso-8a",
+      "notifiedCount": 1154,
+      "countRange": [
+        1154,
+        1156
+      ],
+      "countScope": "public-notice-summary",
+      "countSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8A/119520089",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8A/119520089",
+      "asOf": "2026-09-15",
+      "noticeIds": [
+        "119520089"
+      ],
+      "noticeReceiptDate": "2024-02-15",
+      "frequencySummary": "Tx 17700–20200 MHz (2 bands); Rx 27500–30000 MHz",
+      "planeCount": null,
+      "perigeeKm": 590,
+      "apogeeKm": 630,
+      "inclinationRange": null,
+      "biuConfirmed": false,
+      "inMifr": false,
+      "reportCount": null,
+      "reportDate": null,
+      "noteZh": "RES35 状态表为 1,154 颗；当前协调版本公开摘要为 1,154–1,156 颗，保留两种口径，不擅自合并。通知 126500007 正在审查。轨道与频率为摘要范围，不表示区间连续占用。",
+      "noteEn": "RES35 status table: 1,154; current coordination summary: 1,154–1,156. Both scopes retained, not merged. Notification 126500007 is under examination. Orbit/frequency envelopes do not imply continuous occupancy."
+    },
+    {
+      "filingId": "usa-usasat-ngso-8b",
+      "notifiedCount": 1294,
+      "countRange": [
+        1294,
+        1296
+      ],
+      "countScope": "public-notice-summary",
+      "countSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8B/119520098",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8B/119520098",
+      "asOf": "2026-09-15",
+      "noticeIds": [
+        "119520098"
+      ],
+      "noticeReceiptDate": "2024-02-22",
+      "frequencySummary": "Tx 17700–20200 MHz (2 bands); Rx 27500–30000 MHz",
+      "planeCount": null,
+      "perigeeKm": 610,
+      "apogeeKm": 630,
+      "inclinationRange": null,
+      "biuConfirmed": false,
+      "inMifr": false,
+      "reportCount": null,
+      "reportDate": null,
+      "noteZh": "RES35 状态表为 1,294 颗；协调版本摘要为 1,294–1,296 颗。通知 126500008 正在审查。频率为范围摘要，不表示区间连续占用。",
+      "noteEn": "RES35 status table: 1,294; coordination summary: 1,294–1,296. Notification 126500008 under examination. Frequency envelopes are not continuously occupied intervals."
+    },
+    {
+      "filingId": "usa-usasat-ngso-8c",
+      "notifiedCount": 782,
+      "countRange": [
+        782,
+        784
+      ],
+      "countScope": "public-notice-summary",
+      "countSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8C/119520091",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/USASAT-NGSO-8C/119520091",
+      "asOf": "2026-09-15",
+      "noticeIds": [
+        "119520091"
+      ],
+      "noticeReceiptDate": "2024-02-26",
+      "frequencySummary": "Tx 17700–20200 MHz (2 bands); Rx 27500–30000 MHz",
+      "planeCount": null,
+      "perigeeKm": 590,
+      "apogeeKm": 630,
+      "inclinationRange": null,
+      "biuConfirmed": false,
+      "inMifr": false,
+      "reportCount": null,
+      "reportDate": null,
+      "noteZh": "RES35 状态表为 782 颗；协调版本摘要为 782–784 颗。通知 126500009 正在审查。频率为范围摘要，不表示区间连续占用。",
+      "noteEn": "RES35 status table: 782; coordination summary: 782–784. Notification 126500009 under examination. Frequency envelopes are not continuously occupied intervals."
+    },
+    {
+      "filingId": "chn-gw-a59",
+      "notifiedCount": 6080,
+      "countRange": null,
+      "countScope": "public-notice-summary",
+      "countSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-A59/120520170",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-A59/120520170",
+      "asOf": "2026-09-15",
+      "noticeIds": [
+        "120520170"
+      ],
+      "noticeReceiptDate": "2024-07-17",
+      "frequencySummary": "Tx 1164–42500 MHz; Rx 1610–51400 MHz",
+      "planeCount": null,
+      "perigeeKm": 508,
+      "apogeeKm": 600,
+      "inclinationRange": null,
+      "biuConfirmed": false,
+      "inMifr": false,
+      "reportCount": null,
+      "reportDate": null,
+      "noteZh": "协调通知 120520170 的公开摘要；当前修改收件为 2024-07-17，不替代原频率组时钟。最早监管期限为网络汇总，2025 API 新频段不能直接套用。",
+      "noteEn": "Public summary of coordination notice 120520170; modification received 2024-07-17 is not the original frequency-group clock. Earliest limit is network-wide; do not apply it blindly to 2025 API additions."
+    },
+    {
+      "filingId": "chn-gw-2",
+      "notifiedCount": 1728,
+      "countRange": null,
+      "countScope": "public-notice-summary",
+      "countSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-2/120520172",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/GW-2/120520172",
+      "asOf": "2026-09-15",
+      "noticeIds": [
+        "120520172"
+      ],
+      "noticeReceiptDate": "2020-09-11",
+      "frequencySummary": "Tx 1164–42500 MHz; Rx 1610–51400 MHz",
+      "planeCount": null,
+      "perigeeKm": 1145,
+      "apogeeKm": 1145,
+      "inclinationRange": null,
+      "biuConfirmed": false,
+      "inMifr": false,
+      "reportCount": null,
+      "reportDate": null,
+      "noteZh": "公开协调版本摘要为 1,728 颗，不代表国网整体 12,992 颗目标。通知 125500219 正在审查；网络未确认 BIU 不代表物理星座未发射。",
+      "noteEn": "Public coordination-version summary is 1,728, not Guowang’s overall 12,992 target. Notification 125500219 is under examination; unconfirmed BIU does not mean the physical fleet has not launched."
+    },
+    {
+      "filingId": "ctc-1",
+      "notifiedCount": 96714,
+      "countRange": null,
+      "countScope": "public-notice-summary",
+      "countSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-1/125520195",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-1/125520195",
+      "asOf": "2026-09-15",
+      "noticeIds": [
+        "125520195",
+        "125545446"
+      ],
+      "noticeReceiptDate": "2025-12-29",
+      "frequencySummary": "Tx 117.975–10400 MHz; Rx 117.975–15630 MHz",
+      "planeCount": null,
+      "perigeeKm": 300,
+      "apogeeKm": 39700,
+      "inclinationRange": null,
+      "biuConfirmed": false,
+      "inMifr": false,
+      "reportCount": null,
+      "reportDate": null,
+      "noteZh": "ITU 公开摘要确认 96,714 颗；关联 API 与协调通知不相加。组织字段空白，不能归入国网或千帆。轨道跨度含非低轨部分。",
+      "noteEn": "ITU public summary confirms 96,714; linked API/coordination notices are not additive. Organization field is blank; not assigned to Guowang/Qianfan. Orbital range includes non-LEO regimes."
+    },
+    {
+      "filingId": "ctc-2",
+      "notifiedCount": 96714,
+      "countRange": null,
+      "countScope": "public-notice-summary",
+      "countSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-2/125545445",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-2/125545445",
+      "asOf": "2026-09-15",
+      "noticeIds": [
+        "125545445"
+      ],
+      "noticeReceiptDate": "2025-12-29",
+      "frequencySummary": "Tx 8025–27000 MHz; Rx 7190–7250 MHz; ISL 2025–134000 MHz",
+      "planeCount": null,
+      "perigeeKm": 300,
+      "apogeeKm": 39700,
+      "inclinationRange": null,
+      "biuConfirmed": false,
+      "inMifr": false,
+      "reportCount": null,
+      "reportDate": null,
+      "noteZh": "ITU 公开摘要确认 96,714 颗；不是获批建设总量。组织字段空白，不能归入国网或千帆；关联空间站数不代表已部署卫星数。",
+      "noteEn": "ITU public summary confirms 96,714, not an authorized build-out. Organization field is blank; not assigned to Guowang/Qianfan. Associated space-station records are not deployed-satellite counts."
+    },
+    {
+      "filingId": "chn-sailspace-1-api2025",
+      "notifiedCount": 1296,
+      "countRange": null,
+      "countScope": "public-notice-summary",
+      "countSourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125545457",
+      "sourceUrl": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/SAILSPACE-1/125545457",
+      "asOf": "2026-09-15",
+      "noticeIds": [
+        "125545457"
+      ],
+      "noticeReceiptDate": "2025-12-30",
+      "frequencySummary": "Tx 2200–7750 MHz (2 bands); Rx 2025–8400 MHz (2 bands)",
+      "planeCount": null,
+      "perigeeKm": 1160,
+      "apogeeKm": 1160,
+      "inclinationRange": null,
+      "biuConfirmed": null,
+      "inMifr": null,
+      "reportCount": null,
+      "reportDate": null,
+      "noteZh": "2025 API 版本与 2023 协调/2025 通知频段不同，数量不叠加。2030-04-07 是网络关联通知最早期限，未确认为此 API 的独立启用期限。商业归属仍为候选映射。",
+      "noteEn": "2025 API bands differ from the earlier coordination/notification: counts are not additive. The network-wide 2030-04-07 limit is not verified for this API. Commercial mapping remains provisional."
     }
   ],
   "stagedTargets": {

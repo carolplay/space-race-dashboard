@@ -8,6 +8,11 @@ const candidates=[
   {entityId:'honghu-3',entityType:'commercial_fleet_candidate',parentId:null,nameZh:'鸿鹄三号',nameEn:'Honghu-3',operator:null,countryGroup:'cn',claimedCount:10000,claimedYear:null,authority:'ITU',sourceUrl:null,verification:'operator_and_technical_notice_pending',verifiedCount:null,inventoryCount:null},
   ...['CTC-1','CTC-2'].map(n=>({entityId:n.toLowerCase(),entityType:'filing_network',parentId:null,nameZh:n,nameEn:n,operator:null,countryGroup:'cn',claimedCount:96714,claimedYear:2025,authority:'ITU',sourceUrl:'https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?sel_satname='+n,verification:'index_dates_verified_count_and_operator_pending',verifiedCount:null,inventoryCount:null})),
 ];
+for(const c of candidates){
+ const f=assets.filings.find(f=>f.id===c.entityId);
+ if(f?.basic?.notifiedCount){c.verifiedCount=f.basic.notifiedCount;c.verification='public_notice_count_verified_operator_and_overlap_pending';c.sourceUrl=f.basic.sourceUrl;}
+ if(c.entityId==='spacex-gen3'){const a=assets.largeApplications.find(a=>a.id==='spacex-gen3-fcc');if(a){c.verifiedCount=a.count;c.sourceUrl=a.sourceUrl;c.verification='FCC_application_count_verified_not_granted';}}
+}
 const observations=assets.constellations.flatMap(c=>c.history.map(p=>({entityId:c.id,date:p.date,metric:'physical_in_orbit_count',value:p.inOrbit,unit:'satellite',evidenceType:'estimate',method:p.kind,sourceUrl:p.kind==='constellation-snapshot'?c.sourceUrl:assets.source.url})));
 const milestones=assets.filings.flatMap(f=>f.events.map((e,i)=>({eventId:f.id+'-'+i,entityId:f.constellationId,filingId:f.id,network:f.network,date:e.date,datePrecision:'day',eventType:e.kind,labelZh:e.labelZh,labelEn:e.labelEn,authority:'ITU',dateBasis:'published_record',sourceUrl:e.sourceUrl})));
 const model={schemaVersion:'1.0.0',asOf:'2026-09-26',entities,targets,candidates,observations,milestones,
@@ -18,6 +23,8 @@ const model={schemaVersion:'1.0.0',asOf:'2026-09-26',entities,targets,candidates
   missingFields:['orbit_shell_geometry_and_plane_counts','frequency_assignment_details','generation_mass_and_bandwidth','operator_mapping_for_CTC','Honghu-3_primary_notice']};
 model.generations=targets.filter(t=>['Gen1','Gen2'].includes(t.scope)).map(t=>({generationId:t.entityId+'-'+t.scope.toLowerCase(),fleetId:t.entityId,scope:t.scope,authorizedCount:t.count,observedGenerationCount:null,orbitShells:[],frequencyBands:[],massKg:null,bandwidthGbps:null,sourceUrl:t.sourceUrl}));
 model.filingProcedures=assets.filings.map(f=>({filingId:f.id,...f.procedure}));
+model.filingBasics=assets.filings.map(f=>({filingId:f.id,...f.basic}));
+model.asOf=assets.reviewedAt;
 model.stagedTargets=read('data/editorial/constellation-stages.json');
 model.regulatoryEvents=[
  {entityId:'amazon-leo',scope:'Gen1',authority:'FCC',date:'2026-06-05',eventType:'conditional_waiver',labelZh:'Gen1 中期节点有限条件豁免',labelEn:'Limited conditional waiver of Gen1 interim milestone',count:null,sourceUrl:'https://docs.fcc.gov/public/attachments/DA-26-553A1.pdf'},
