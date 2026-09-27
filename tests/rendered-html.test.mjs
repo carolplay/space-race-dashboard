@@ -25,7 +25,7 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, />EN</);
   assert.match(html, /0\.73042/);
   assert.match(html, /资产、运营者与数据网络/);
-  assert.match(html, /实际交付、发射网络与常规运载/);
+  assert.match(html, /常规运载、火箭构型与研发飞行/);
   assert.match(html, /先看已经造出并送入轨道的东西/);
   assert.match(html, /基地和发射台也是发射资产/);
   assert.match(html, /谁在运营，以及轨道节点如何连成网络/);
@@ -36,7 +36,13 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /2000 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
-  assert.match(html, /ALPHA 1\.3/);
+  assert.match(html, /ALPHA 1\.4\.0/);
+  const chapters=['launch-information','launch-bases','orbital-assets','crewed-cislunar','kardashev','sources'];
+  chapters.forEach((id,i)=>{assert.equal((html.match(new RegExp('id="'+id+'"','g'))??[]).length,1);if(i)assert.ok(html.indexOf('id="'+id+'"')>html.indexOf('id="'+chapters[i-1]+'"'));});
+  assert.match(html, /展示范式与再开发参照/);
+  assert.match(html, /最近已执行任务/);
+  assert.match(html, /海上发射位置/);
+  assert.ok(html.indexOf('id="method"')>html.indexOf('id="sources"'));
   assert.match(html, /在轨规模，正在如何增长/);
   assert.match(html, /ITU：申报程序、BIU 与 RES35 时间线/);
   assert.match(html, /FCC：美国国家授权与履约节点/);
