@@ -14,4 +14,7 @@ test('standard constellation model separates inventory, targets and unverified c
   assert.equal(m.scenarios.forecastValues.length,0);
   assert.equal(m.rules.res35.deploymentAnchor,'end_of_seven_year_regulatory_period_not_actual_BIU');
   assert.ok(m.regulatoryEvents.some(e=>e.count===1616));
+  const stages=m.stagedTargets.series.find(s=>s.entityId==='qianfan').stages;
+  assert.deepEqual(stages.map(s=>s.count),[324,1296,11296]);
+  assert.ok(stages.every((s,i)=>!i||s.date>stages[i-1].date));
 });

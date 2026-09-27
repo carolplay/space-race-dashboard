@@ -48,3 +48,12 @@ Sources:
 - https://www.itu.int/en/ITU-R/space/Pages/FAQspace.aspx
 
 Unverified submitted reference values (203,000 combined China, 96,714 per CTC network, 100,000 Gen3, 10,000 Honghu-3) are candidates/claims only, not approved totals. CTC-1/2 filing dates remain separately evidenced in the existing inventory dataset.
+# Alpha 1.3.2 — 程序日期与阶段目标（2026-09-27）
+
+ITU 程序日期新增 `initialReceiptDate`、`initialPublicationDate`、`mifrRecordedDate`、`regulatoryLimitDate` 和 `anchorType`。收件、公布、MIFR 登记不能共用“通过日”；监管计时按频率组适用日期及过渡规则核验。尚未取得登记日期的记录保持 null，不能从公布或 BIU 倒推。
+
+Amazon A/B/C 收件日期由 [ITU IFIC 2916 CR/D 索引](https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?ie=y&sel_ific=2916) 核验：A/C 2019-03-26，B 2019-03-28，相关 CR/D 公布 2020-03-17；该公布日期不冒充初始 CR/C 公布或 MIFR 登记通过日期。
+
+`data/editorial/constellation-stages.json` 储存带出处的阶段数量和日期，FCC 与商业计划分别标明。仅年份的日期用年末绘图但显示年份；千帆 2030 约数 11,296 来自 1,296 + 新增约 10,000，非官方精确总量。未核实阶段日期的规模只保留资料卡，不画贯穿历史的水平线。Amazon 原中期节点已有条件豁免，不画为刚性目标。FCC 目标不可拿全品牌库存计算完成率。
+
+页面并列线性与 log10(n+1) 图，使用完全相同的库存数据、颜色与时间范围。目标阶梯在下一个截止日期对应水平保留，空心点为截止，非预测或随时必须达到的法律最低库存。FCC 与 ITU 各自独立展示。

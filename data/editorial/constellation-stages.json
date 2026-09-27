@@ -1,0 +1,13 @@
+{
+  "asOf": "2026-09-27",
+  "series": [
+    {"entityId":"starlink","authority":"FCC","scopeZh":"仅 Gen2，非全星链库存","scopeEn":"Gen2 only, not all-Starlink inventory","announcedAt":"2026-01-09","sourceUrl":"https://docs.fcc.gov/public/attachments/DA-26-36A1.pdf","stages":[{"date":"2028-12-01","count":7500,"labelZh":"50% 部署","labelEn":"50% deployment"},{"date":"2031-12-01","count":15000,"labelZh":"完整部署","labelEn":"Full deployment"}]},
+    {"entityId":"amazon-leo","authority":"FCC","scopeZh":"仅 Gen1；原中期节点获条件豁免，不画为刚性目标","scopeEn":"Gen1 only; waived original interim milestone is not a hard target","announcedAt":"2026-06-05","sourceUrl":"https://docs.fcc.gov/public/attachments/DA-26-553A1.pdf","stages":[{"date":"2029-07-30","count":3232,"labelZh":"完整部署","labelEn":"Full deployment"}]},
+    {"entityId":"qianfan","authority":"commercial_plan","scopeZh":"项目阶段计划；2030 总量约数由 1,296 + 新增约 10,000 推算","scopeEn":"Project plan; approximate 2030 total derived from 1,296 + ~10,000 additions","announcedAt":"2026-06-10","sourceUrl":"https://app.xinhuanet.com/news/article.html?articleId=20260610ba2b423c1e434c998aa80d9e30ad5f54","stages":[{"date":"2026-06-30","count":324,"labelZh":"7月前组网目标","labelEn":"Pre-July deployment target"},{"date":"2027-12-31","datePrecision":"year","count":1296,"labelZh":"一期目标（2027 年）","labelEn":"Phase 1 target (2027)"},{"date":"2030-12-31","datePrecision":"year","count":11296,"approximate":true,"labelZh":"二期累计约数（2030 年）","labelEn":"Approximate cumulative phase 2 (2030)"}]}
+  ],
+  "undated": [
+    {"entityId":"qianfan","count":15000,"comparator":"greater_than","reasonZh":"三期终态未给明确年份","reasonEn":"Terminal phase has no verified target year"},
+    {"entityId":"guowang","count":12992,"reasonZh":"未取得可核验的阶段部署日期","reasonEn":"Verified staged deployment dates unavailable"},
+    {"entityId":"oneweb","count":2692,"reasonZh":"L5 通知量不是同口径的商业运营阶段目标","reasonEn":"L5 notified count is not a like-for-like commercial fleet target"}
+  ]
+}

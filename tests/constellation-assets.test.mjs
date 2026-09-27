@@ -17,4 +17,7 @@ test('ITU filings preserve unknown dates and do not infer compliance',()=>{
   assert.ok(data.filings.some(f=>f.events.some(e=>e.kind==='biu'&&e.date<'2026-01-01')));
   for(const f of data.filings){assert.ok(f.sourceUrl.startsWith('https://'));for(const m of f.milestones)assert.ok(m.date===null||/^\d{4}-\d{2}-\d{2}$/.test(m.date));}
   assert.ok(data.filings.some(f=>f.milestones.every(m=>m.date===null)));
+  assert.equal(data.filings.find(f=>f.id==='usa-usasat-ngso-8a').procedure.initialReceiptDate,'2019-03-26');
+  assert.ok(data.filings.every(f=>f.procedure.mifrRecordedDate===null));
+  assert.ok(data.filings.some(f=>f.events.some(e=>e.kind==='anchor')));
 });

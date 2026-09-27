@@ -1,0 +1,6 @@
+import model from '@/data/metrics/constellation-model.json';
+import goals from '@/data/editorial/constellation-stages.json';
+export default function ConstellationFCC({lang}:{lang:'zh'|'en'}){
+ const tr=(a:string,b:string)=>lang==='zh'?a:b;
+ return <section className="tier-regulatory constellation-fcc" aria-labelledby="fcc-title"><h4 id="fcc-title">{tr('FCC：美国国家授权与履约节点','FCC: US authorizations and deployment milestones')}</h4><p>{tr('独立于下方 ITU 申报程序；不同代际分别计算，条件豁免不改写为 ITU 延期。','Separate from the ITU process below. Each generation has its own requirements; conditional waivers are not ITU extensions.')}</p>{goals.series.filter(g=>g.authority==='FCC').map(g=><div key={g.entityId}><h5>{g.entityId==='starlink'?'Starlink · Gen2':'Amazon Leo · Gen1'}</h5>{g.entityId==='amazon-leo'?model.regulatoryEvents.map(e=><a href={e.sourceUrl} target="_blank" rel="noreferrer" key={e.date}><time>{e.date}</time><span>{lang==='zh'?e.labelZh:e.labelEn} ↗</span></a>):<><a href={g.sourceUrl} target="_blank" rel="noreferrer"><time>{g.announcedAt}</time><span>{tr('追加授权后 Gen2 合计 15,000 颗','Gen2 authorization increased to 15,000')} ↗</span></a>{g.stages.map(s=><a key={s.date} href={g.sourceUrl} target="_blank" rel="noreferrer"><time>{s.date}</time><span>{lang==='zh'?s.labelZh:s.labelEn} · {s.count.toLocaleString()} ↗</span></a>)}</>}</div>)}</section>;
+}
