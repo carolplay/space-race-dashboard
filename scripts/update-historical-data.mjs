@@ -4,6 +4,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const SATCAT_URL = "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv";
+const EXTENDED_URL = "https://planet4589.org/space/gcat/tsv/cat/satcat100k.tsv";
 const LAUNCHLOG_URL = "https://planet4589.org/space/gcat/tsv/derived/launchlog.tsv";
 const RELEASE_URL = "https://planet4589.org/space/gcat/web/rel.html";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -81,8 +82,9 @@ const currentYear = new Date().getUTCFullYear();
 const toYear = Number(arg("to", String(currentYear)));
 if (!Number.isInteger(fromYear) || !Number.isInteger(toYear) || fromYear > toYear) throw new Error("Expected integer --from and --to years");
 
-const [satcatText, launchlogText, releaseText] = await Promise.all([fetchText(SATCAT_URL), fetchText(LAUNCHLOG_URL), fetchText(RELEASE_URL)]);
-const satelliteRows = parseTsv(satcatText);
+const [satcatText, extendedText, launchlogText, releaseText] = await Promise.all([fetchText(SATCAT_URL), fetchText(EXTENDED_URL), fetchText(LAUNCHLOG_URL), fetchText(RELEASE_URL)]);
+// Standard and extended catalogs are disjoint by number; deduplicate by JCAT anyway.
+const satelliteRows = [...new Map([...parseTsv(satcatText), ...parseTsv(extendedText)].map(row => [row.JCAT, row])).values()];
 const launchRows = parseTsv(launchlogText);
 const release = latestRelease(releaseText);
 const uniqueLaunches = [...new Map(launchRows.map((row) => [row.Launch_Tag, row])).values()];
@@ -188,10 +190,40 @@ const recentManufacturers = [...manufacturerMap.values()]
   .slice(0, 16);
 
 const generatedAt = new Date().toISOString();
+const launchCutoff = catalogUpdatedAt(launchlogText).iso?.slice(0, 10);
+const payloadCutoff = catalogUpdatedAt(satcatText).iso?.slice(0, 10);
+if (!launchCutoff || !payloadCutoff) throw new Error('Missing upstream cutoff: cannot construct a same-period comparison');
+const months = { Jan:'01', Feb:'02', Mar:'03', Apr:'04', May:'05', Jun:'06', Jul:'07', Aug:'08', Sep:'09', Oct:'10', Nov:'11', Dec:'12' };
+function preciseDate(value) {
+  const match = value?.match(/^(\d{4})\s+([A-Z][a-z]{2})\s+(\d{1,2})(?:\s|$)/);
+  return match && months[match[2]] ? `${match[1]}-${months[match[2]]}-${match[3].padStart(2,'0')}` : null;
+}
+const comparisonYear = Number(payloadCutoff.slice(0,4));
+const samePeriod = [comparisonYear - 1, comparisonYear].map(year => {
+  const attempts=emptyRegions(), success=emptyRegions(), additions=emptyRegions(), knownDeliveredMassKg=emptyRegions();
+  let excludedImprecisePayloadDates=0;
+  for (const row of uniqueLaunches) {
+    const date=preciseDate(row.Launch_Date);
+    if (!date || !date.startsWith(String(year)) || date.slice(5)>launchCutoff.slice(5) || !/^[OD]/.test(row.Launch_Code)) continue;
+    add(attempts,regionFor(row.LVState));
+    if (!row.Launch_Code.includes('F')) add(success,regionFor(row.LVState));
+  }
+  for (const row of satelliteRows) {
+    if (row.Primary!=='Earth' || !row.Type?.startsWith('P')) continue;
+    const value=row.SDate && row.SDate!=='-' ? row.SDate : row.LDate;
+    if(yearFromVagueDate(value)!==year)continue;
+    const date=preciseDate(value);
+    if(!date){excludedImprecisePayloadDates++;continue;}
+    if(date.slice(5)>payloadCutoff.slice(5))continue;
+    const region=regionFor(row.State);add(additions,region);
+    const mass=Number.parseFloat(row.Mass);if(Number.isFinite(mass)&&mass>0)add(knownDeliveredMassKg,region,mass);
+  }
+  return {year:String(year),launchCutoff:`${year}-${launchCutoff.slice(5)}`,payloadCutoff:`${year}-${payloadCutoff.slice(5)}`,attempts,success,additions,knownDeliveredMassKg,excludedImprecisePayloadDates};
+});
 const output = {
-  schemaVersion: 2,
+  schemaVersion: 3,
   generatedAt,
-  coverage: { fromYear, toYear, currentYearIsPartial: toYear === currentYear },
+  coverage: { fromYear, toYear, currentYearIsPartial: toYear === currentYear, launchCutoff, payloadCutoff },
   source: {
     name: "GCAT",
     publisher: "Jonathan C. McDowell",
@@ -200,6 +232,7 @@ const output = {
     license: "CC-BY-4.0",
     url: "https://planet4589.org/space/gcat/",
     satcat: { url: SATCAT_URL, sha256: checksum(satcatText), updated: catalogUpdatedAt(satcatText) },
+    satcat100k: { url: EXTENDED_URL, sha256: checksum(extendedText), updated: catalogUpdatedAt(extendedText), rows: parseTsv(extendedText).length },
     launchlog: { url: LAUNCHLOG_URL, sha256: checksum(launchlogText), updated: catalogUpdatedAt(launchlogText) },
   },
   methodology: {
@@ -207,10 +240,13 @@ const output = {
     launchSuccess: "Attempt rows whose Launch_Code does not contain F.",
     orbitInventory: "Earth-primary objects present at calendar year end from separation and descent years. Current year is as-of source update.",
     payloadDefinition: "GCAT object Type beginning P; includes active and inactive payload objects, unlike the current Active Catalog KPI.",
+    catalogCoverage: "Standard SATCAT plus SATCAT100K, deduplicated by JCAT. Auxiliary and temporary catalogs are not included; this remains a catalog-based lower bound.",
+    samePeriod: "Previous/current year through the same upstream month/day; imprecise payload dates excluded and counted explicitly. GCAT LVState groups launches, unlike LL2 provider nationality.",
     payloadFlow: "Earth-primary payload starts, descents, and known mass by GCAT separation/descent year. Mass totals include only objects with a positive published mass.",
     recentManufacturers: `Payload objects first present during ${Math.max(fromYear, toYear - 4)}-${toYear}, grouped by GCAT Manufacturer code; this measures observed delivery, not factory capacity.`,
   },
   launchActivity,
+  samePeriod,
   orbitInventory,
   payloadFlow,
   recentManufacturers,

@@ -40,6 +40,8 @@ The production API's free tier is rate-limited. Prefer one monthly run with a bo
 - Launch attempts are unique orbital/deep-space `Launch_Tag` values; failed attempts remain in the attempt count, while launch codes marked failed are excluded from the success count.
 - Historical orbital inventory is reconstructed at each calendar year end from catalog start and descent dates. It includes active and inactive payload objects, so it is deliberately not presented as the same measure as the current Active Catalog KPI.
 - Known payload mass is summed only where GCAT supplies a mass. Missing mass is never imputed as zero.
+- Historical object coverage is Standard SATCAT plus SATCAT100K, deduplicated by JCAT. The latter stores six-digit catalog numbers and is essential for 2026. Auxiliary/temporary catalogs are not included, so this is a catalog-based lower bound.
+- `samePeriod` compares the current and preceding years through the same upstream month/day. Dates too imprecise for that cutoff are excluded and counted; it is not annualized. Launches retain GCAT LVState grouping, distinct from LL2 provider nationality.
 - Both upstream file hashes and the full classification methodology are stored beside the generated series.
 
 Refresh the complete annual history ad hoc:

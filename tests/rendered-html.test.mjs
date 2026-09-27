@@ -32,11 +32,11 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /现存资产与对齐的中美路径/);
   assert.match(html, /常规运载之后，再看下一代火箭/);
   assert.match(html, /任务轨道图谱/);
-  assert.match(html, /Starship \/ Super Heavy/);
+  assert.match(html, /星舰 \/ 超重助推器/);
   assert.match(html, /2000 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
-  assert.match(html, /ALPHA 1\.4\.1/);
+  assert.match(html, /ALPHA 1\.4\.2/);
   const chapters=['launch-information','launch-bases','orbital-assets','crewed-cislunar','kardashev','sources'];
   chapters.forEach((id,i)=>{assert.equal((html.match(new RegExp('id="'+id+'"','g'))??[]).length,1);if(i)assert.ok(html.indexOf('id="'+id+'"')>html.indexOf('id="'+chapters[i-1]+'"'));});
   assert.match(html, /展示范式与再开发参照/);

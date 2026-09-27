@@ -7,10 +7,22 @@
     "name": "GCAT",
     "url": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
     "sha256": "2045192a9985aa64da0edc21c4d3d8f74ae00622c06b31b311b44d22f222ea51",
-    "updatedRaw": "2026 Sep 24 2117:02"
+    "updatedRaw": "2026 Sep 24 2117:02",
+    "catalogs": [
+      {
+        "url": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
+        "sha256": "2045192a9985aa64da0edc21c4d3d8f74ae00622c06b31b311b44d22f222ea51",
+        "updatedRaw": "2026 Sep 24 2117:02"
+      },
+      {
+        "url": "https://planet4589.org/space/gcat/tsv/cat/satcat100k.tsv",
+        "sha256": "e80eb8332aef409e48c467942c0aff58fce1c041d6769407d39bb15a90ad3314",
+        "updatedRaw": "2026 Sep 24 2117:08"
+      }
+    ]
   },
-  "historyMethodZh": "月末在轨估算由主目录的入轨载荷及再入日期重建；最后一点来自星座统计快照。主目录可能滞后，末段虚线表示来源切换。不是运行或合规数量。",
-  "historyMethodEn": "Month-end estimates reconstructed from main-catalog orbital payloads and reentry dates. Final point uses constellation statistics; main catalog may lag, so the source transition is dashed. Not operational or compliance counts.",
+  "historyMethodZh": "月末在轨估算由 GCAT 主目录和六位编号扩展目录的载荷及再入日期重建；不含辅助或临时目录。最后一点来自独立星座统计快照，末段虚线表示来源切换；不是运行或合规数量。",
+  "historyMethodEn": "Month-end estimates use payload and reentry dates from GCAT standard and six-digit extended catalogs, excluding auxiliary and temporary catalogs. The final point is an independent constellation snapshot; a dashed segment marks the source change. Not operational or compliance counts.",
   "constellations": [
     {
       "id": "starlink",
@@ -541,12 +553,12 @@
         },
         {
           "date": "2026-07-31",
-          "inOrbit": 10771,
+          "inOrbit": 10875,
           "kind": "catalog-reconstruction"
         },
         {
           "date": "2026-08-31",
-          "inOrbit": 10728,
+          "inOrbit": 11093,
           "kind": "catalog-reconstruction"
         },
         {
@@ -555,7 +567,7 @@
           "kind": "constellation-snapshot"
         }
       ],
-      "catalogPayloadRows": 12446,
+      "catalogPayloadRows": 12892,
       "scopeZh": "含升轨、漂移与非运行卫星，不含模拟载荷",
       "scopeEn": "Includes raising, drifting and inactive spacecraft; excludes simulators"
     },
@@ -2187,7 +2199,7 @@
         },
         {
           "date": "2026-08-31",
-          "inOrbit": 177,
+          "inOrbit": 195,
           "kind": "catalog-reconstruction"
         },
         {
@@ -2196,7 +2208,7 @@
           "kind": "constellation-snapshot"
         }
       ],
-      "catalogPayloadRows": 177,
+      "catalogPayloadRows": 213,
       "scopeZh": "正式低轨部署子组，不含早期试验星",
       "scopeEn": "Main low-orbit deployment subgroup; excludes early tests"
     },
@@ -2743,7 +2755,7 @@
           "kind": "constellation-snapshot"
         }
       ],
-      "catalogPayloadRows": 238,
+      "catalogPayloadRows": 256,
       "scopeZh": "千帆星座子组，不含 DTC / EUHT 试验星",
       "scopeEn": "Main Qianfan subgroup; excludes DTC / EUHT tests"
     }

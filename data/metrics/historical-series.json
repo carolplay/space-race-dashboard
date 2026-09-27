@@ -1,10 +1,12 @@
 {
-  "schemaVersion": 2,
-  "generatedAt": "2026-09-27T05:31:24.053Z",
+  "schemaVersion": 3,
+  "generatedAt": "2026-09-27T08:04:49.468Z",
   "coverage": {
     "fromYear": 2000,
     "toYear": 2026,
-    "currentYearIsPartial": true
+    "currentYearIsPartial": true,
+    "launchCutoff": "2026-09-24",
+    "payloadCutoff": "2026-09-24"
   },
   "source": {
     "name": "GCAT",
@@ -21,6 +23,15 @@
         "iso": "2026-09-24T21:17:02.000Z"
       }
     },
+    "satcat100k": {
+      "url": "https://planet4589.org/space/gcat/tsv/cat/satcat100k.tsv",
+      "sha256": "e80eb8332aef409e48c467942c0aff58fce1c041d6769407d39bb15a90ad3314",
+      "updated": {
+        "raw": "2026 Sep 24 2117:08",
+        "iso": "2026-09-24T21:17:08.000Z"
+      },
+      "rows": 829
+    },
     "launchlog": {
       "url": "https://planet4589.org/space/gcat/tsv/derived/launchlog.tsv",
       "sha256": "c72c282f11e54fb348ef2d1589d42a4b1a1e3900e1f6cead4b47e331ddc1190c",
@@ -35,6 +46,8 @@
     "launchSuccess": "Attempt rows whose Launch_Code does not contain F.",
     "orbitInventory": "Earth-primary objects present at calendar year end from separation and descent years. Current year is as-of source update.",
     "payloadDefinition": "GCAT object Type beginning P; includes active and inactive payload objects, unlike the current Active Catalog KPI.",
+    "catalogCoverage": "Standard SATCAT plus SATCAT100K, deduplicated by JCAT. Auxiliary and temporary catalogs are not included; this remains a catalog-based lower bound.",
+    "samePeriod": "Previous/current year through the same upstream month/day; imprecise payload dates excluded and counted explicitly. GCAT LVState groups launches, unlike LL2 provider nationality.",
     "payloadFlow": "Earth-primary payload starts, descents, and known mass by GCAT separation/descent year. Mass totals include only objects with a positive published mass.",
     "recentManufacturers": "Payload objects first present during 2022-2026, grouped by GCAT Manufacturer code; this measures observed delivery, not factory capacity."
   },
@@ -470,6 +483,68 @@
         "other": 38,
         "global": 225
       }
+    }
+  ],
+  "samePeriod": [
+    {
+      "year": "2025",
+      "launchCutoff": "2025-09-24",
+      "payloadCutoff": "2025-09-24",
+      "attempts": {
+        "us": 131,
+        "cn": 56,
+        "other": 38,
+        "global": 225
+      },
+      "success": {
+        "us": 128,
+        "cn": 55,
+        "other": 34,
+        "global": 217
+      },
+      "additions": {
+        "us": 2481,
+        "cn": 256,
+        "other": 243,
+        "global": 2980
+      },
+      "knownDeliveredMassKg": {
+        "us": 1602790.0999999996,
+        "cn": 162804,
+        "other": 96473.125,
+        "global": 1862067.2249999996
+      },
+      "excludedImprecisePayloadDates": 32
+    },
+    {
+      "year": "2026",
+      "launchCutoff": "2026-09-24",
+      "payloadCutoff": "2026-09-24",
+      "attempts": {
+        "us": 122,
+        "cn": 70,
+        "other": 40,
+        "global": 232
+      },
+      "success": {
+        "us": 121,
+        "cn": 66,
+        "other": 38,
+        "global": 225
+      },
+      "additions": {
+        "us": 2631,
+        "cn": 368,
+        "other": 288,
+        "global": 3287
+      },
+      "knownDeliveredMassKg": {
+        "us": 1552458.5,
+        "cn": 207447,
+        "other": 79468.40000000001,
+        "global": 1839373.9
+      },
+      "excludedImprecisePayloadDates": 12
     }
   ],
   "orbitInventory": [
@@ -1054,45 +1129,45 @@
       "payloadObjects": {
         "us": 11644,
         "cn": 1326,
-        "other": 3993,
-        "global": 16963
+        "other": 3995,
+        "global": 16965
       },
       "catalogObjects": {
         "us": 16174,
         "cn": 5867,
-        "other": 9751,
-        "global": 31792
+        "other": 9753,
+        "global": 31794
       },
       "knownPayloadMassKg": {
         "us": 7071995.19500002,
         "cn": 1201057.3,
-        "other": 3332476.6490000007,
-        "global": 11605529.14399995
+        "other": 3332588.6490000007,
+        "global": 11605641.14399995
       },
-      "knownPayloadMassObjects": 16959
+      "knownPayloadMassObjects": 16961
     },
     {
       "year": "2026",
       "label": "2026 NOW",
       "payloadObjects": {
-        "us": 13249,
-        "cn": 1522,
-        "other": 4118,
-        "global": 18889
+        "us": 13800,
+        "cn": 1628,
+        "other": 4164,
+        "global": 19592
       },
       "catalogObjects": {
-        "us": 17711,
-        "cn": 5978,
-        "other": 9815,
-        "global": 33504
+        "us": 18262,
+        "cn": 6170,
+        "other": 9892,
+        "global": 34324
       },
       "knownPayloadMassKg": {
-        "us": 8089246.385000015,
-        "cn": 1325929,
-        "other": 3348928.652000002,
-        "global": 12764104.036999943
+        "us": 8421092.385000015,
+        "cn": 1385151,
+        "other": 3375761.652000002,
+        "global": 13182005.036999943
       },
-      "knownPayloadMassObjects": 18885
+      "knownPayloadMassObjects": 19588
     }
   ],
   "payloadFlow": [
@@ -1827,8 +1902,8 @@
       "additions": {
         "us": 3713,
         "cn": 372,
-        "other": 420,
-        "global": 4505
+        "other": 422,
+        "global": 4507
       },
       "retirements": {
         "us": 827,
@@ -1839,56 +1914,56 @@
       "netChange": {
         "us": 2886,
         "cn": 258,
-        "other": 174,
-        "global": 3318
+        "other": 176,
+        "global": 3320
       },
       "knownDeliveredMassKg": {
         "us": 2266873.7799999984,
         "cn": 288333,
-        "other": 139641.00800000003,
-        "global": 2694847.7880000067
+        "other": 139753.00800000003,
+        "global": 2694959.7880000067
       },
-      "knownDeliveredMassObjects": 4504
+      "knownDeliveredMassObjects": 4506
     },
     {
       "year": "2026",
       "label": "2026 YTD",
       "additions": {
-        "us": 2089,
-        "cn": 262,
-        "other": 244,
-        "global": 2595
+        "us": 2641,
+        "cn": 368,
+        "other": 290,
+        "global": 3299
       },
       "retirements": {
-        "us": 484,
+        "us": 485,
         "cn": 66,
-        "other": 119,
-        "global": 669
+        "other": 121,
+        "global": 672
       },
       "netChange": {
-        "us": 1605,
-        "cn": 196,
-        "other": 125,
-        "global": 1926
+        "us": 2156,
+        "cn": 302,
+        "other": 169,
+        "global": 2627
       },
       "knownDeliveredMassKg": {
-        "us": 1211781.2999999998,
-        "cn": 148225,
-        "other": 44935.40000000001,
-        "global": 1404941.6999999997
+        "us": 1552801.2999999998,
+        "cn": 207447,
+        "other": 79487.40000000001,
+        "global": 1839735.6999999997
       },
-      "knownDeliveredMassObjects": 2595
+      "knownDeliveredMassObjects": 3299
     }
   ],
   "recentManufacturers": [
     {
       "manufacturer": "SPXS",
-      "us": 10747,
+      "us": 11256,
       "cn": 0,
       "other": 0,
-      "global": 10747,
-      "knownMassKg": 6160721,
-      "knownMassObjects": 10747
+      "global": 11256,
+      "knownMassKg": 6453396,
+      "knownMassObjects": 11256
     },
     {
       "manufacturer": "KUIP",
@@ -1911,11 +1986,11 @@
     {
       "manufacturer": "SECM",
       "us": 0,
-      "cn": 240,
+      "cn": 259,
       "other": 1,
-      "global": 241,
-      "knownMassKg": 99874,
-      "knownMassObjects": 241
+      "global": 260,
+      "knownMassKg": 104947,
+      "knownMassObjects": 260
     },
     {
       "manufacturer": "PLAN",
@@ -1929,20 +2004,20 @@
     {
       "manufacturer": "CAST",
       "us": 0,
-      "cn": 188,
-      "other": 3,
-      "global": 191,
-      "knownMassKg": 395643,
-      "knownMassObjects": 191
+      "cn": 227,
+      "other": 4,
+      "global": 231,
+      "knownMassKg": 437143,
+      "knownMassObjects": 231
     },
     {
       "manufacturer": "CGSTL",
       "us": 0,
-      "cn": 175,
+      "cn": 178,
       "other": 0,
-      "global": 175,
-      "knownMassKg": 10693.5,
-      "knownMassObjects": 175
+      "global": 178,
+      "knownMassKg": 11293.5,
+      "knownMassObjects": 178
     },
     {
       "manufacturer": "SPIREG",
@@ -1965,11 +2040,11 @@
     {
       "manufacturer": "SAST",
       "us": 0,
-      "cn": 84,
+      "cn": 85,
       "other": 0,
-      "global": 84,
-      "knownMassKg": 93753.5,
-      "knownMassObjects": 84
+      "global": 85,
+      "knownMassKg": 94753.5,
+      "knownMassObjects": 85
     },
     {
       "manufacturer": "SWARMX",
@@ -1983,11 +2058,11 @@
     {
       "manufacturer": "DFHZ",
       "us": 0,
-      "cn": 68,
+      "cn": 71,
       "other": 2,
-      "global": 70,
-      "knownMassKg": 37188,
-      "knownMassObjects": 70
+      "global": 73,
+      "knownMassKg": 38688,
+      "knownMassObjects": 73
     },
     {
       "manufacturer": "GWCG",
@@ -2008,6 +2083,15 @@
       "knownMassObjects": 56
     },
     {
+      "manufacturer": "YORKSS",
+      "us": 54,
+      "cn": 0,
+      "other": 0,
+      "global": 54,
+      "knownMassKg": 15690,
+      "knownMassObjects": 54
+    },
+    {
       "manufacturer": "ICEYE",
       "us": 10,
       "cn": 0,
@@ -2015,15 +2099,6 @@
       "global": 54,
       "knownMassKg": 5180,
       "knownMassObjects": 54
-    },
-    {
-      "manufacturer": "UTIAS",
-      "us": 34,
-      "cn": 0,
-      "other": 15,
-      "global": 49,
-      "knownMassKg": 1372,
-      "knownMassObjects": 49
     }
   ]
 }

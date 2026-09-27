@@ -56,8 +56,8 @@ const sources = [
     status: statusFor(history.source.satcat.updated?.iso ?? history.generatedAt),
     coverageZh: `${history.coverage.fromYear}—${history.coverage.toYear}；${history.orbitInventory.at(-1).payloadObjects.global.toLocaleString()} 个年内在轨载荷对象`,
     coverageEn: `${history.coverage.fromYear}—${history.coverage.toYear}; ${history.orbitInventory.at(-1).payloadObjects.global.toLocaleString()} payload objects in current-year inventory`,
-    noteZh: "历史库存包含活跃与失效载荷，不与 Active Catalog KPI 混用。",
-    noteEn: "Historical inventory includes active and inactive payloads and is not conflated with the Active Catalog KPI.",
+    noteZh: "历史为 SATCAT＋SATCAT100K（不含辅助/临时目录）；含活跃与失效载荷。年内累计与全年分开，同期比较排除日期不完整的对象。",
+    noteEn: "SATCAT + SATCAT100K, excluding auxiliary/temporary catalogs; active and inactive payloads. Partial/full years are separate, and matched periods exclude imprecise dates.",
     url: history.source.url,
   },
   {

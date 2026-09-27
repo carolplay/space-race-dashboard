@@ -1,13 +1,25 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
 // Pure builder: emit JSON to stdout, review before saving it as a dashboard snapshot.
 // node scripts/build-constellation-assets.mjs /path/to/satcat.tsv
-const catalog = readFileSync(process.argv[2], 'utf8');
+const updateHistory = process.argv.includes('--update-history');
+const paths = process.argv.slice(2).filter(a=>!a.startsWith('--'));
+const catalogUrls = ['https://planet4589.org/space/gcat/tsv/cat/satcat.tsv', 'https://planet4589.org/space/gcat/tsv/cat/satcat100k.tsv'];
+if (paths.length && paths.length !== 2) throw new Error('Supply both satcat.tsv and satcat100k.tsv, or no paths to fetch both.');
+const catalogs = await Promise.all(catalogUrls.map(async (url,i)=>{
+  if (paths.length) return readFileSync(paths[i], 'utf8');
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`GCAT fetch failed: ${response.status}`);
+  return response.text();
+}));
+const catalog = catalogs[0];
 const registry = JSON.parse(readFileSync(new URL('../data/research/current/constellation-registry.json', import.meta.url)));
 const itu = JSON.parse(readFileSync(new URL('../data/research/current/itu-milestones.json', import.meta.url)));
-const lines = catalog.split(/\r?\n/), header = lines[0].slice(1).split('\t');
-const rows = lines.filter(l => l && !l.startsWith('#')).map(l => Object.fromEntries(l.split('\t').map((v, i) => [header[i], v.trim()])));
+const rows = [...new Map(catalogs.flatMap(text=>{
+  const lines=text.split(/\r?\n/), header=lines[0].slice(1).split('\t');
+  return lines.filter(l=>l&&!l.startsWith('#')).map(l=>Object.fromEntries(l.split('\t').map((v,i)=>[header[i],v.trim()])));
+}).map(r=>[r.JCAT,r])).values()];
 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function date(value) {
   const m = value?.match(/^(\d{4})\s+(\w{3})(?:\s+(\d{1,2}))?/);
@@ -46,4 +58,21 @@ const constellations = registry.constellations.map(c => {
   return {id:c.id,...definition,inOrbit:c.orbitSnapshot.inOrbit,asOf:c.orbitSnapshot.dataAsOf,sourceUrl:registry.sources.find(s=>s.id===c.orbitSnapshot.sourceId).url,planSourceUrl:registry.sources.find(s=>s.id===definition.sourceId).url,history,catalogPayloadRows:selected.length,scopeZh:c.id==='guowang'?'正式低轨部署子组，不含早期试验星':c.id==='qianfan'?'千帆星座子组，不含 DTC / EUHT 试验星':'含升轨、漂移与非运行卫星，不含模拟载荷',scopeEn:c.id==='guowang'?'Main low-orbit deployment subgroup; excludes early tests':c.id==='qianfan'?'Main Qianfan subgroup; excludes DTC / EUHT tests':'Includes raising, drifting and inactive spacecraft; excludes simulators'};
 });
 const filings=itu.filings.map(f=>({id:f.id,constellationId:f.constellationId??f.candidateConstellationId,network:f.displayName,administration:f.administration,candidate:f.brandMapping.status!=='verified',sourceUrl:itu.sources.find(s=>s.id===f.sourceId).url,asOf:f.statusAsOf,milestones:f.milestones.map(m=>({stage:m.stage,date:/^\d{2}\.\d{2}\.\d{4}$/.test(m.rawValue??'')?m.rawValue.split('.').reverse().join('-'):null,status:m.officialStatus??null})),noteZh:f.id.startsWith('chn-gw')?'未取得官方 RES35 节点':f.id==='chn-sailspace-1'?'千帆关联候选，尚待直接确认':null,noteEn:f.id.startsWith('chn-gw')?'Official RES35 dates unavailable':f.id==='chn-sailspace-1'?'Candidate Qianfan association, not confirmed':null}));
+if (updateHistory) {
+  const target=new URL('../data/metrics/constellation-assets.json',import.meta.url);
+  const existing=JSON.parse(readFileSync(target,'utf8'));
+  for (const item of existing.constellations) {
+    const fresh=constellations.find(c=>c.id===item.id);
+    if (!fresh) continue;
+    // Keep the separately sourced latest snapshot and all regulatory/plan records.
+    item.history=[...fresh.history.filter(p=>p.kind==='catalog-reconstruction'),...item.history.filter(p=>p.kind==='constellation-snapshot')];
+    item.catalogPayloadRows=fresh.catalogPayloadRows;
+  }
+  existing.source.catalogs=catalogs.map((text,i)=>({url:catalogUrls[i],sha256:createHash('sha256').update(text).digest('hex'),updatedRaw:text.match(/^# Updated (.+)$/m)?.[1]}));
+  existing.historyMethodZh='月末在轨估算由 GCAT 主目录和六位编号扩展目录的载荷及再入日期重建；不含辅助或临时目录。最后一点来自独立星座统计快照，末段虚线表示来源切换；不是运行或合规数量。';
+  existing.historyMethodEn='Month-end estimates use payload and reentry dates from GCAT standard and six-digit extended catalogs, excluding auxiliary and temporary catalogs. The final point is an independent constellation snapshot; a dashed segment marks the source change. Not operational or compliance counts.';
+  writeFileSync(target,JSON.stringify(existing,null,2)+'\n');
+  console.log('Updated constellation history using both GCAT catalogs; preserved plans, filings and latest snapshots.');
+  process.exit(0);
+}
 console.log(JSON.stringify({version:'1.0',collectedAt:registry.collectedAt,inventoryAsOf:'2026-09-24',ituAsOf:'2026-09-15',source:{name:'GCAT',url:'https://planet4589.org/space/gcat/tsv/cat/satcat.tsv',sha256:createHash('sha256').update(catalog).digest('hex'),updatedRaw:catalog.match(/^# Updated (.+)$/m)?.[1]},historyMethodZh:'月末在轨估算由主目录的入轨载荷及再入日期重建；最后一点来自星座统计快照。主目录可能滞后，末段虚线表示来源切换。不是运行或合规数量。',historyMethodEn:'Month-end estimates reconstructed from main-catalog orbital payloads and reentry dates. Final point uses constellation statistics; main catalog may lag, so the source transition is dashed. Not operational or compliance counts.',constellations,filings},null,2));
