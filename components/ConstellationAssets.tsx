@@ -1,4 +1,5 @@
 import data from "@/data/metrics/constellation-assets.json";
+import ConstellationTiers from "./ConstellationTiers";
 type Lang = "zh" | "en";
 const colors = ["#d9ff43", "#6a9eff", "#e7b663", "#ff6c53", "#ba93ed"];
 const epoch=(d:string)=>Date.parse(d+"T00:00:00Z");
@@ -10,6 +11,7 @@ export default function ConstellationAssets({lang}:{lang:Lang}){
   const tx=(d:string)=>(epoch(d)-epoch('2016-01-01'))/(epoch('2038-01-01')-epoch('2016-01-01'))*100;
   return <section id="constellation-assets" className="constellation-assets" aria-labelledby="constellation-title">
     <div className="constellation-heading"><div><span className="constellation-eyebrow">{tr('02A / 星座资产与申报','02A / FLEETS & FILINGS')}</span><h3 id="constellation-title">{tr('在轨规模，正在如何增长','How orbital fleets are growing')}</h3></div><p>{tr('在轨数量估算 · 共用对数纵轴','Estimated orbital counts · shared logarithmic axis')}<br/>{data.inventoryAsOf}</p></div>
+    <ConstellationTiers lang={lang}/>
     <div className="fleet-chart-panel"><div className="fleet-legend">{data.constellations.map((c,i)=><div key={c.id}><i style={{background:colors[i]}}/><b>{zh?c.nameZh:c.nameEn}</b><strong>{c.inOrbit.toLocaleString()}</strong><span>{tr('目标参照','Target reference')} {c.planValue}</span></div>)}</div>
       <div className="fleet-chart-scroll"><svg viewBox="0 0 900 345" role="img" aria-label={tr('五个星座共同数量增长图，实线库存、虚线目标，对数轴','Shared five-fleet growth chart; solid inventory, dashed targets; logarithmic axis')}>
         {[0,10,100,1000,10000,20000].map(n=><g key={n}><line x1="65" x2="855" y1={y(n)} y2={y(n)} stroke="#454954"/><text x="55" y={y(n)+5} textAnchor="end" fill="#c0c3ca" fontSize="14">{n.toLocaleString()}</text></g>)}

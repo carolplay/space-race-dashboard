@@ -1144,3 +1144,14 @@ Starlink 十万级 Gen3 检索结果指向 2026-06-30 的 FCC 申请，而非 20
 - https://www.itu.int/net/ITU-R/space/snl/bresult/radvance.asp?nmod=asc&norder=adm&npage=102&q_ref_numero=&q_reference=&q_sns_id=&res32=&sel_adm=&sel_date_from=&sel_date_to=&sel_esname=&sel_ific=&sel_orbit_from=&sel_orbit_to=&sel_org=&sel_rcpt_from=&sel_rcpt_to=&sel_satname=&sel_year=&sup=
 
 本轮记录讨论与核验缺口；尚未重构 UI 或宣称发布。
+## 28. 外部讨论结论对照与采纳（2026-09-26，Alpha 1.3.1）
+
+已采纳：实体/代际/申报分层主表、带来源和口径的数值事实表、国内许可与 ITU 分离事件表；前台增加实物库存、授权部分样本、申请不汇总三层概览。数据接口位于 `data/metrics/constellation-model.json`，字段约定见 `data/constellation-data-contract.md`。
+
+轨道层分布、规模树图、库存面积图、资源需求仪表作为可视化模块纳入接口与后续路线。历史资产可先用；未来库存、退役潮、频轨削减与物料需求必须分别使用观测流量、官方事件或有假设的情景模型，不绘成一条已知事实时序。
+
+纠正：Amazon 3,232 / 1,616 及中期有限条件豁免；RES35 以七年监管期终点为锚，非实际 BIU；M0 不等于 BIU；统一 2032/2034/2037/2039 的日历不适用于所有申报。SpaceX Gen3 FCC 申请不混作 ITU 通知。申报也不代表频轨永久排他产权或确定性排产。
+
+暂缓作为事实展示：30.3 万总储备、5.5–6.5 万确定性履约排产、>2.5 运力缺口、30%–40% 补发份额、所有卫星五年统一寿命，以及未验证的高度/频段/质量/带宽。原输入数字保留为待核验候选，不改写成批准或观测值。
+
+本轮增加主数据生成器与回归校验；不引入 ECharts/D3 依赖，也不为了填图推算缺失资源需求。
