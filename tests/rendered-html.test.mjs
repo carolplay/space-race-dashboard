@@ -36,7 +36,7 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /2000 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
-  assert.match(html, /ALPHA 1\.4\.0/);
+  assert.match(html, /ALPHA 1\.4\.1/);
   const chapters=['launch-information','launch-bases','orbital-assets','crewed-cislunar','kardashev','sources'];
   chapters.forEach((id,i)=>{assert.equal((html.match(new RegExp('id="'+id+'"','g'))??[]).length,1);if(i)assert.ok(html.indexOf('id="'+id+'"')>html.indexOf('id="'+chapters[i-1]+'"'));});
   assert.match(html, /展示范式与再开发参照/);
@@ -54,6 +54,15 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /从年度总量下钻到单次任务/);
   assert.match(html, /数据源健康度/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
+  const svgTitles=[...html.matchAll(/<svg\b[\s\S]*?<\/svg>/g)].flatMap(([svg])=>[...svg.matchAll(/<title>([\s\S]*?)<\/title>/g)].map(m=>m[1]));
+  assert.equal(svgTitles.length,22);
+  assert.ok(svgTitles.every(s=>s.length>0&&!s.includes('<!--')),'SVG titles must render as one text node');
+  assert.ok(svgTitles.some(s=>s.includes('2028-12-01')&&s.includes('7,500')));
+  const fleetCharts=[...html.matchAll(/<svg\b[^>]*aria-label="在轨数量[^>]*>[\s\S]*?<\/svg>/g)];
+  assert.equal(fleetCharts.length,2);
+  for(const [svg] of fleetCharts)for(const [,points] of svg.matchAll(/points="([^"]+)"/g)){
+    assert.ok(points.split(/[ ,]/).every(n=>/^\d+(\.\d{1,3})?$/.test(n)),'Fleet SVG points must use deterministic millipixel precision');
+  }
 });
 
 test("ships product UI without starter dependencies", async () => {
