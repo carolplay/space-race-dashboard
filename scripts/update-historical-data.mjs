@@ -255,3 +255,4 @@ const output = {
 await mkdir(dirname(outputPath), { recursive: true });
 await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`);
 console.log(`Stored GCAT historical series ${fromYear}-${toYear}: ${uniqueLaunches.length} unique launch tags, ${satelliteRows.length} object rows.`);
+await import('./build-demand-forecast.mjs');

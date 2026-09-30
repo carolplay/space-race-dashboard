@@ -37,3 +37,4 @@ d.version='1.1';
 writeFileSync(new URL('../data/metrics/constellation-assets.json',import.meta.url),JSON.stringify(d,null,2)+'\n');
 await import('./enrich-constellation-filings.mjs');
 await import('./build-constellation-model.mjs');
+await import('./build-demand-forecast.mjs');

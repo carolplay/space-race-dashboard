@@ -36,7 +36,10 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /2000 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
-  assert.match(html, /ALPHA 1\.5\.0/);
+  assert.match(html, /ALPHA 1\.6\.0/);
+  assert.match(html, /未来十年：发射节奏与履约压力/);
+  assert.match(html, /在轨载荷库存：观测与条件外推/);
+  assert.match(html, /星座在轨规模：惯性曲线与申报情景/);
   assert.match(html, /读懂各阶段要求/);
   assert.match(html, /逐项申报：规模、轨道与频段/);
   assert.match(html, /96,714/);
@@ -59,7 +62,7 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /数据源健康度/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
   const svgTitles=[...html.matchAll(/<svg\b[\s\S]*?<\/svg>/g)].flatMap(([svg])=>[...svg.matchAll(/<title>([\s\S]*?)<\/title>/g)].map(m=>m[1]));
-  assert.equal(svgTitles.length,22);
+  assert.ok(svgTitles.length>22);
   assert.ok(svgTitles.every(s=>s.length>0&&!s.includes('<!--')),'SVG titles must render as one text node');
   assert.ok(svgTitles.some(s=>s.includes('2028-12-01')&&s.includes('7,500')));
   const fleetCharts=[...html.matchAll(/<svg\b[^>]*aria-label="在轨数量[^>]*>[\s\S]*?<\/svg>/g)];

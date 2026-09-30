@@ -1,0 +1,773 @@
+{
+  "schemaVersion": "1.0.0",
+  "asOf": "2026-09-24",
+  "years": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2034,
+    2035,
+    2036
+  ],
+  "source": {
+    "launch": "https://planet4589.org/space/gcat/",
+    "inventory": "https://planet4589.org/space/gcat/",
+    "fleets": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
+    "itu": "https://www.itu.int/itu-r/space/apps/public/spaceexplorer/networks-explorer/space-stations/dashboard/non-plans/CTC-1/125520195",
+    "fcc": "https://docs.fcc.gov/public/attachments/DA-26-553A1.pdf",
+    "commercial": "https://app.xinhuanet.com/news/article.html?articleId=20260610ba2b423c1e434c998aa80d9e30ad5f54"
+  },
+  "method": {
+    "launch": "2026 nowcast uses same-period 2025/2026 ratio applied to full-year 2025; 2027 onward adds the 2023–2025 mean annual increment, damped 15% each year",
+    "inventory": "2026 stock is a partial-year snapshot; future net additions use weighted 2024–2025 full-year change and annualized 2026 YTD change, damped 12% annually",
+    "fleets": "recent positive net pace is annualized from the latest snapshot and a previous snapshot at least 365 days earlier, then damped 12% yearly; no compliance or commercial-stage targets imposed",
+    "milestone": "conditional straight-line on-time build-out to selected goals; current brand physical inventory optimistically credited, though it may not qualify for a particular notice/generation; not a verified regulatory minimum",
+    "ctc": "one CTC network only; hypothetical RES35 full-notification retention after 2032 network BIU limit, 10/50/100% at +2/+5/+7 years; applicability and credit unverified; never add to physical inventory or convert to launches"
+  },
+  "assumptions": {
+    "perLaunchSatellites": 40,
+    "scope": "Amazon Gen1 FCC target, Qianfan commercial plan, GW-A59 conditional RES35 case; one brand/notice per series; current brand inventory optimistically credited in full",
+    "excluded": "CTC-1/2, Starlink Gen2, replacements, non-LEO transfers; satellite sizes and effective regulatory assignments not established"
+  },
+  "launchHistorical": [
+    {
+      "year": 2020,
+      "global": 114,
+      "us": 37,
+      "cn": 39,
+      "other": 38
+    },
+    {
+      "year": 2021,
+      "global": 146,
+      "us": 45,
+      "cn": 56,
+      "other": 45
+    },
+    {
+      "year": 2022,
+      "global": 186,
+      "us": 78,
+      "cn": 64,
+      "other": 44
+    },
+    {
+      "year": 2023,
+      "global": 221,
+      "us": 107,
+      "cn": 67,
+      "other": 47
+    },
+    {
+      "year": 2024,
+      "global": 262,
+      "us": 144,
+      "cn": 68,
+      "other": 50
+    },
+    {
+      "year": 2025,
+      "global": 329,
+      "us": 181,
+      "cn": 92,
+      "other": 56
+    }
+  ],
+  "launch": [
+    {
+      "year": 2026,
+      "global": 345,
+      "us": 170,
+      "cn": 115,
+      "other": 60,
+      "kind": "same-period-nowcast"
+    },
+    {
+      "year": 2027,
+      "global": 400,
+      "us": 205,
+      "cn": 130,
+      "other": 65,
+      "kind": "damped-linear-trend"
+    },
+    {
+      "year": 2028,
+      "global": 440,
+      "us": 235,
+      "cn": 140,
+      "other": 65,
+      "kind": "damped-linear-trend"
+    },
+    {
+      "year": 2029,
+      "global": 480,
+      "us": 265,
+      "cn": 145,
+      "other": 70,
+      "kind": "damped-linear-trend"
+    },
+    {
+      "year": 2030,
+      "global": 515,
+      "us": 285,
+      "cn": 155,
+      "other": 75,
+      "kind": "damped-linear-trend"
+    },
+    {
+      "year": 2031,
+      "global": 540,
+      "us": 305,
+      "cn": 160,
+      "other": 75,
+      "kind": "damped-linear-trend"
+    },
+    {
+      "year": 2032,
+      "global": 565,
+      "us": 320,
+      "cn": 165,
+      "other": 80,
+      "kind": "damped-linear-trend"
+    },
+    {
+      "year": 2033,
+      "global": 585,
+      "us": 335,
+      "cn": 170,
+      "other": 80,
+      "kind": "damped-linear-trend"
+    },
+    {
+      "year": 2034,
+      "global": 605,
+      "us": 350,
+      "cn": 175,
+      "other": 80,
+      "kind": "damped-linear-trend"
+    },
+    {
+      "year": 2035,
+      "global": 620,
+      "us": 360,
+      "cn": 180,
+      "other": 80,
+      "kind": "damped-linear-trend"
+    },
+    {
+      "year": 2036,
+      "global": 630,
+      "us": 365,
+      "cn": 180,
+      "other": 85,
+      "kind": "damped-linear-trend"
+    }
+  ],
+  "inventoryHistorical": [
+    {
+      "year": 2016,
+      "count": 3803,
+      "partial": false
+    },
+    {
+      "year": 2017,
+      "count": 4189,
+      "partial": false
+    },
+    {
+      "year": 2018,
+      "count": 4515,
+      "partial": false
+    },
+    {
+      "year": 2019,
+      "count": 4883,
+      "partial": false
+    },
+    {
+      "year": 2020,
+      "count": 6035,
+      "partial": false
+    },
+    {
+      "year": 2021,
+      "count": 7663,
+      "partial": false
+    },
+    {
+      "year": 2022,
+      "count": 9718,
+      "partial": false
+    },
+    {
+      "year": 2023,
+      "count": 11935,
+      "partial": false
+    },
+    {
+      "year": 2024,
+      "count": 13645,
+      "partial": false
+    },
+    {
+      "year": 2025,
+      "count": 16965,
+      "partial": false
+    },
+    {
+      "year": 2026,
+      "count": 19592,
+      "partial": true
+    }
+  ],
+  "orbitalInventory": [
+    {
+      "year": 2026,
+      "count": 19592
+    },
+    {
+      "year": 2027,
+      "count": 23050
+    },
+    {
+      "year": 2028,
+      "count": 26150
+    },
+    {
+      "year": 2029,
+      "count": 28850
+    },
+    {
+      "year": 2030,
+      "count": 31200
+    },
+    {
+      "year": 2031,
+      "count": 33300
+    },
+    {
+      "year": 2032,
+      "count": 35150
+    },
+    {
+      "year": 2033,
+      "count": 36750
+    },
+    {
+      "year": 2034,
+      "count": 38200
+    },
+    {
+      "year": 2035,
+      "count": 39450
+    },
+    {
+      "year": 2036,
+      "count": 40550
+    }
+  ],
+  "fleets": [
+    {
+      "entityId": "starlink",
+      "nameZh": "星链",
+      "nameEn": "Starlink",
+      "observed": 11135,
+      "pacePerYear": 2671,
+      "priorDate": "2025-08-31",
+      "points": [
+        {
+          "year": 2026,
+          "count": 11135
+        },
+        {
+          "year": 2027,
+          "count": 13810
+        },
+        {
+          "year": 2028,
+          "count": 16160
+        },
+        {
+          "year": 2029,
+          "count": 18230
+        },
+        {
+          "year": 2030,
+          "count": 20050
+        },
+        {
+          "year": 2031,
+          "count": 21650
+        },
+        {
+          "year": 2032,
+          "count": 23060
+        },
+        {
+          "year": 2033,
+          "count": 24300
+        },
+        {
+          "year": 2034,
+          "count": 25390
+        },
+        {
+          "year": 2035,
+          "count": 26350
+        },
+        {
+          "year": 2036,
+          "count": 27200
+        }
+      ]
+    },
+    {
+      "entityId": "amazon-leo",
+      "nameZh": "Amazon Leo",
+      "nameEn": "Amazon Leo",
+      "observed": 392,
+      "pacePerYear": 272,
+      "priorDate": "2025-08-31",
+      "points": [
+        {
+          "year": 2026,
+          "count": 392
+        },
+        {
+          "year": 2027,
+          "count": 660
+        },
+        {
+          "year": 2028,
+          "count": 900
+        },
+        {
+          "year": 2029,
+          "count": 1110
+        },
+        {
+          "year": 2030,
+          "count": 1300
+        },
+        {
+          "year": 2031,
+          "count": 1460
+        },
+        {
+          "year": 2032,
+          "count": 1610
+        },
+        {
+          "year": 2033,
+          "count": 1730
+        },
+        {
+          "year": 2034,
+          "count": 1840
+        },
+        {
+          "year": 2035,
+          "count": 1940
+        },
+        {
+          "year": 2036,
+          "count": 2030
+        }
+      ]
+    },
+    {
+      "entityId": "oneweb",
+      "nameZh": "OneWeb",
+      "nameEn": "OneWeb",
+      "observed": 654,
+      "pacePerYear": 0,
+      "priorDate": "2025-08-31",
+      "points": [
+        {
+          "year": 2026,
+          "count": 654
+        },
+        {
+          "year": 2027,
+          "count": 650
+        },
+        {
+          "year": 2028,
+          "count": 650
+        },
+        {
+          "year": 2029,
+          "count": 650
+        },
+        {
+          "year": 2030,
+          "count": 650
+        },
+        {
+          "year": 2031,
+          "count": 650
+        },
+        {
+          "year": 2032,
+          "count": 650
+        },
+        {
+          "year": 2033,
+          "count": 650
+        },
+        {
+          "year": 2034,
+          "count": 650
+        },
+        {
+          "year": 2035,
+          "count": 650
+        },
+        {
+          "year": 2036,
+          "count": 650
+        }
+      ]
+    },
+    {
+      "entityId": "guowang",
+      "nameZh": "国网",
+      "nameEn": "Guowang",
+      "observed": 213,
+      "pacePerYear": 124,
+      "priorDate": "2025-08-31",
+      "points": [
+        {
+          "year": 2026,
+          "count": 213
+        },
+        {
+          "year": 2027,
+          "count": 340
+        },
+        {
+          "year": 2028,
+          "count": 450
+        },
+        {
+          "year": 2029,
+          "count": 540
+        },
+        {
+          "year": 2030,
+          "count": 630
+        },
+        {
+          "year": 2031,
+          "count": 700
+        },
+        {
+          "year": 2032,
+          "count": 770
+        },
+        {
+          "year": 2033,
+          "count": 820
+        },
+        {
+          "year": 2034,
+          "count": 870
+        },
+        {
+          "year": 2035,
+          "count": 920
+        },
+        {
+          "year": 2036,
+          "count": 960
+        }
+      ]
+    },
+    {
+      "entityId": "qianfan",
+      "nameZh": "千帆",
+      "nameEn": "Qianfan",
+      "observed": 256,
+      "pacePerYear": 156,
+      "priorDate": "2025-08-31",
+      "points": [
+        {
+          "year": 2026,
+          "count": 256
+        },
+        {
+          "year": 2027,
+          "count": 410
+        },
+        {
+          "year": 2028,
+          "count": 550
+        },
+        {
+          "year": 2029,
+          "count": 670
+        },
+        {
+          "year": 2030,
+          "count": 780
+        },
+        {
+          "year": 2031,
+          "count": 870
+        },
+        {
+          "year": 2032,
+          "count": 950
+        },
+        {
+          "year": 2033,
+          "count": 1020
+        },
+        {
+          "year": 2034,
+          "count": 1090
+        },
+        {
+          "year": 2035,
+          "count": 1140
+        },
+        {
+          "year": 2036,
+          "count": 1190
+        }
+      ]
+    }
+  ],
+  "milestoneDemand": [
+    {
+      "year": 2026,
+      "byFleet": {
+        "amazon-leo": 0,
+        "qianfan": 0,
+        "guowang": 0
+      },
+      "satellites": 0,
+      "launchEquivalents": 0,
+      "launchEquivalentsLow": 0,
+      "launchEquivalentsHigh": 0
+    },
+    {
+      "year": 2027,
+      "byFleet": {
+        "amazon-leo": 947,
+        "qianfan": 1040,
+        "guowang": 132
+      },
+      "satellites": 2119,
+      "launchEquivalents": 53,
+      "launchEquivalentsLow": 26,
+      "launchEquivalentsHigh": 106
+    },
+    {
+      "year": 2028,
+      "byFleet": {
+        "amazon-leo": 947,
+        "qianfan": 3333,
+        "guowang": 132
+      },
+      "satellites": 4412,
+      "launchEquivalents": 110,
+      "launchEquivalentsLow": 55,
+      "launchEquivalentsHigh": 221
+    },
+    {
+      "year": 2029,
+      "byFleet": {
+        "amazon-leo": 947,
+        "qianfan": 3333,
+        "guowang": 132
+      },
+      "satellites": 4412,
+      "launchEquivalents": 110,
+      "launchEquivalentsLow": 55,
+      "launchEquivalentsHigh": 221
+    },
+    {
+      "year": 2030,
+      "byFleet": {
+        "amazon-leo": 0,
+        "qianfan": 3333,
+        "guowang": 811
+      },
+      "satellites": 4144,
+      "launchEquivalents": 104,
+      "launchEquivalentsLow": 52,
+      "launchEquivalentsHigh": 207
+    },
+    {
+      "year": 2031,
+      "byFleet": {
+        "amazon-leo": 0,
+        "qianfan": 0,
+        "guowang": 811
+      },
+      "satellites": 811,
+      "launchEquivalents": 20,
+      "launchEquivalentsLow": 10,
+      "launchEquivalentsHigh": 41
+    },
+    {
+      "year": 2032,
+      "byFleet": {
+        "amazon-leo": 0,
+        "qianfan": 0,
+        "guowang": 811
+      },
+      "satellites": 811,
+      "launchEquivalents": 20,
+      "launchEquivalentsLow": 10,
+      "launchEquivalentsHigh": 41
+    },
+    {
+      "year": 2033,
+      "byFleet": {
+        "amazon-leo": 0,
+        "qianfan": 0,
+        "guowang": 1520
+      },
+      "satellites": 1520,
+      "launchEquivalents": 38,
+      "launchEquivalentsLow": 19,
+      "launchEquivalentsHigh": 76
+    },
+    {
+      "year": 2034,
+      "byFleet": {
+        "amazon-leo": 0,
+        "qianfan": 0,
+        "guowang": 1520
+      },
+      "satellites": 1520,
+      "launchEquivalents": 38,
+      "launchEquivalentsLow": 19,
+      "launchEquivalentsHigh": 76
+    },
+    {
+      "year": 2035,
+      "byFleet": {
+        "amazon-leo": 0,
+        "qianfan": 0,
+        "guowang": 0
+      },
+      "satellites": 0,
+      "launchEquivalents": 0,
+      "launchEquivalentsLow": 0,
+      "launchEquivalentsHigh": 0
+    },
+    {
+      "year": 2036,
+      "byFleet": {
+        "amazon-leo": 0,
+        "qianfan": 0,
+        "guowang": 0
+      },
+      "satellites": 0,
+      "launchEquivalents": 0,
+      "launchEquivalentsLow": 0,
+      "launchEquivalentsHigh": 0
+    }
+  ],
+  "ctcConditional": [
+    {
+      "year": 2026,
+      "threshold": null
+    },
+    {
+      "year": 2027,
+      "threshold": null
+    },
+    {
+      "year": 2028,
+      "threshold": null
+    },
+    {
+      "year": 2029,
+      "threshold": null
+    },
+    {
+      "year": 2030,
+      "threshold": null
+    },
+    {
+      "year": 2031,
+      "threshold": null
+    },
+    {
+      "year": 2032,
+      "threshold": 0
+    },
+    {
+      "year": 2033,
+      "threshold": 4836
+    },
+    {
+      "year": 2034,
+      "threshold": 9672
+    },
+    {
+      "year": 2035,
+      "threshold": 22567
+    },
+    {
+      "year": 2036,
+      "threshold": 35462
+    }
+  ],
+  "targets": [
+    {
+      "id": "amazon-leo",
+      "current": 392,
+      "stages": [
+        {
+          "year": 2029,
+          "count": 3232
+        }
+      ],
+      "authority": "FCC"
+    },
+    {
+      "id": "qianfan",
+      "current": 256,
+      "stages": [
+        {
+          "year": 2027,
+          "count": 1296
+        },
+        {
+          "year": 2030,
+          "count": 11296
+        }
+      ],
+      "authority": "commercial_plan"
+    },
+    {
+      "id": "guowang",
+      "current": 213,
+      "stages": [
+        {
+          "year": 2029,
+          "count": 608
+        },
+        {
+          "year": 2032,
+          "count": 3040
+        },
+        {
+          "year": 2034,
+          "count": 6080
+        }
+      ],
+      "authority": "conditional_ITU_RES35"
+    }
+  ]
+}

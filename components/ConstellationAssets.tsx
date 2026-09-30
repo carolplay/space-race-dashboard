@@ -2,6 +2,7 @@ import { sourceLabel } from "@/lib/dashboard-language";
 import data from "@/data/metrics/constellation-assets.json";
 import ConstellationTiers from "./ConstellationTiers";
 import ConstellationGrowth from "./ConstellationGrowth";
+import { FleetDemandForecast } from "./DemandForecast";
 import ConstellationFCC from "./ConstellationFCC";
 import ITUProcedureDates from "./ITUProcedureDates";
 import ITUStages from "./ITUStages";
@@ -16,6 +17,7 @@ export default function ConstellationAssets({lang}:{lang:Lang}){
     <div className="constellation-heading"><div><span className="constellation-eyebrow">{tr('03C / 星座资产与申报','03C / FLEETS & FILINGS')}</span><h3 id="constellation-title">{tr('在轨规模，正在如何增长','How orbital fleets are growing')}</h3></div><p>{tr('在轨数量估算 · 线性 / 对数双视图','Estimated orbital counts · linear / log views')}<br/>{data.inventoryAsOf}</p></div>
     <ConstellationTiers lang={lang}/>
     <ConstellationGrowth lang={lang}/>
+    <FleetDemandForecast lang={lang}/>
     <div className="fleet-scope-grid">{data.constellations.map((c,i)=><article key={c.id} style={{borderTopColor:colors[i]}}><h4>{zh?c.nameZh:c.nameEn}</h4><p>{sourceLabel(c.operator,lang)}</p><strong>{c.planValue}</strong><p>{zh?c.planZh:c.planEn}</p><a href={c.planSourceUrl} target="_blank" rel="noreferrer">{tr('目标来源','Target source')} ↗</a><a href={c.sourceUrl} target="_blank" rel="noreferrer">GCAT · {c.asOf} ↗</a></article>)}</div>
     <p className="constellation-method">{zh?data.historyMethodZh:data.historyMethodEn} {tr('目标性质分别为授权、通知或商业计划，不能相加，也不作为 ITU 完成率分母。其他运营者和通信/导航网络在下方保留。','Targets represent authorization, notification or commercial plans: not additive, not ITU completion denominators. Other operators and communications/navigation networks remain below.')}</p>
     <ConstellationFCC lang={lang}/>
