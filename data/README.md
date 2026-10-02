@@ -30,7 +30,7 @@ npm run data:update:launches -- --rebuild-only
 
 When one task exposes the launch service provider's country and another task for the same provider does not, the updater reuses that provider country and records `lsp_country_inferred_from_peer`. It falls back to the pad country only when no provider-country evidence exists anywhere in the stored snapshot.
 
-The production API's free tier is rate-limited. Prefer one monthly run with a bounded date window rather than repeated exploratory requests.
+The production API's free tier is rate-limited. The daily automation uses one bounded refresh with a one-month overlap; avoid repeated exploratory requests.
 
 ## Historical series
 
@@ -62,6 +62,7 @@ Run the monthly snapshot:
 
 ```bash
 npm run data:update:orbit -- --date=2026-09-08
+```
 
 ## Launch and recovery
 
@@ -72,11 +73,15 @@ Current mission/recovery flow is joined from LL2 detailed records. The curated v
 ## Source health
 
 Run `npm run data:audit` after refreshing structured and editorial files. It writes `data/metrics/source-health.json`, exposing upstream update time, retrieval time, coverage, grade, cadence and known limitations for every production source. Next Spaceflight appears there as `reference-only` because its public launches API is still not available.
-```
-
 ## Editorial frontier data
 
 `data/editorial/frontier.json` stores manually reviewed cislunar and space-station facts that are better represented as status and events than as sparse time series. Visible editorial fields are stored in Chinese and English. Every asset, milestone, and station record includes an official or program source URL.
+
+## Daily refresh dependency order
+
+Refresh launch, orbital and historical sources first. Run `npm run data:update:constellations` to fetch all five GCAT constellation summaries and save a dated inventory observation. This uses the main deployment subgroup for Guowang/Qianfan and excludes OneWeb dummy payloads. It does not alter ITU/FCC reviews or imply operational/compliance counts.
+
+Then run `node scripts/build-constellation-assets.mjs --update-history`, `node scripts/check-itu-status.mjs`, `node scripts/build-constellation-model.mjs`, `npm run data:update:forecast`, and `npm run data:audit`, in that order. The ITU check parses official static rows without executing downloaded code; it saves changed evidence and updates only directly published statuses/deadlines, preserving manual filing basics and BIU records. Its retrieval date is not an upstream update or achievement date. Forecast annualization follows actual upstream cutoff dates. Manual FCC and editorial records retain their prior dates until newly verified.
 
 The cislunar module uses a proportional 2007–2030 calendar axis, with US events above and Chinese events below. Apollo-era rows are intentionally omitted from this modern program comparison. The orbit atlas adds official references for LRO's polar orbit, Queqiao-2's ELFO, DRO-A/B's distant retrograde orbit, and CAPSTONE's NRHO. Official LRO, Queqiao-2, Chang'e-4/Yutu-2, ISS, and Tiangong images are stored locally in `public/`, with credits and source URLs preserved in the JSON.
 

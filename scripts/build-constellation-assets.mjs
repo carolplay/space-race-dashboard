@@ -34,13 +34,15 @@ const classifiers = {
   guowang: r => /^WHDW /.test(r.Name),
   qianfan: r => /^Qianfan Xingzuo /.test(r.Name),
 };
-const first = Date.UTC(2018,0,1), lastMonth = Date.UTC(2026,8,1);
+const existingAssets = updateHistory ? JSON.parse(readFileSync(new URL('../data/metrics/constellation-assets.json',import.meta.url),'utf8')) : null;
+const latestDate = existingAssets?.inventoryAsOf ?? registry.constellations.map(c=>c.orbitSnapshot.dataAsOf).sort()[0];
+const first = Date.UTC(2018,0,1), lastMonth = Date.parse(latestDate+'T00:00:00Z');
 const periods = [];
 for (let t=first; t<=lastMonth;) {
   const d=new Date(t), y=d.getUTCFullYear(), m=d.getUTCMonth();
   const end=Date.UTC(y,m+1,1)-1;
   // Latest point is the independently collected constellation-statistics snapshot.
-  if (end < Date.UTC(2026,8,24)) periods.push({date:new Date(end).toISOString().slice(0,10), end});
+  if (end < lastMonth) periods.push({date:new Date(end).toISOString().slice(0,10), end});
   t=Date.UTC(y,m+1,1);
 }
 const definitions = {
@@ -65,7 +67,7 @@ if (updateHistory) {
     const fresh=constellations.find(c=>c.id===item.id);
     if (!fresh) continue;
     // Keep the separately sourced latest snapshot and all regulatory/plan records.
-    item.history=[...fresh.history.filter(p=>p.kind==='catalog-reconstruction'),...item.history.filter(p=>p.kind==='constellation-snapshot')];
+    item.history=[...new Map([...fresh.history.filter(p=>p.kind==='catalog-reconstruction'),...item.history.filter(p=>p.kind==='constellation-snapshot')].map(p=>[p.date,p])).values()].sort((a,b)=>a.date.localeCompare(b.date));
     item.catalogPayloadRows=fresh.catalogPayloadRows;
   }
   existing.source.catalogs=catalogs.map((text,i)=>({url:catalogUrls[i],sha256:createHash('sha256').update(text).digest('hex'),updatedRaw:text.match(/^# Updated (.+)$/m)?.[1]}));

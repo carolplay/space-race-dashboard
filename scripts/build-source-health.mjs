@@ -17,6 +17,9 @@ const [orbit, history, launches, infrastructure, manifest, frontier, development
 ]);
 
 const generatedAt = new Date().toISOString();
+const launchSnapshot = await readJson('data/snapshots/launch-library-2.json');
+const launchUpdatedAt = launchSnapshot.records.map(r=>r.lastUpdated).filter(Boolean).sort().at(-1) ?? null;
+const fleets = await readJson('data/metrics/constellation-assets.json');
 const today = generatedAt.slice(0, 10);
 const daysSince = (value) => value ? Math.max(0, Math.floor((Date.parse(today) - Date.parse(value)) / 86_400_000)) : null;
 const statusFor = (value, threshold = 45) => {
@@ -27,6 +30,20 @@ const editorialAsOf = [frontier.asOf, development.asOf, industrial.asOf, recover
 
 const sources = [
   {
+    id: 'gcat-constellations', grade: 'B', mode: 'structured',
+    name: 'GCAT Constellation Statistics',
+    roleZh: '五个主要星座的独立在轨库存观察',
+    roleEn: 'Independent in-orbit inventory for five major constellations',
+    updatedAt: fleets.constellations.map(c=>c.inventoryObservation?.updatedAt).filter(Boolean).sort()[0] ?? fleets.inventoryAsOf,
+    retrievedAt: fleets.inventoryRetrievedAt ?? null,
+    cadence: 'daily', status: statusFor(fleets.inventoryAsOf),
+    coverageZh: `${fleets.constellations.reduce((s,c)=>s+c.inOrbit,0).toLocaleString('en-US')} 颗；五个已识别部署子组`,
+    coverageEn: `${fleets.constellations.reduce((s,c)=>s+c.inOrbit,0).toLocaleString('en-US')} satellites; five identified deployment subgroups`,
+    noteZh: '物理在轨估算，不等于正常运营数量或特定 ITU 申报的达标数量。',
+    noteEn: 'Physical in-orbit estimates, not operational counts or qualifying inventory under an ITU notice.',
+    url: 'https://planet4589.org/space/con/',
+  },
+  {
     id: "gcat-active",
     grade: "B",
     mode: "structured",
@@ -35,7 +52,7 @@ const sources = [
     roleEn: "Current orbital assets, type, orbit and operator",
     updatedAt: orbit.source.activeCatalog.updated?.iso ?? orbit.current.retrievedAt,
     retrievedAt: orbit.current.retrievedAt,
-    cadence: "weekly",
+    cadence: "daily",
     status: statusFor(orbit.source.activeCatalog.updated?.iso ?? orbit.current.retrievedAt),
     coverageZh: `${orbit.current.activePayloads.global.toLocaleString()} 个活跃载荷；质量字段覆盖 ${orbit.current.massCoverage.percent}%`,
     coverageEn: `${orbit.current.activePayloads.global.toLocaleString()} active payloads; ${orbit.current.massCoverage.percent}% mass-field coverage`,
@@ -52,7 +69,7 @@ const sources = [
     roleEn: "Launch, inventory and delivery history since 2000",
     updatedAt: history.source.satcat.updated?.iso ?? history.generatedAt,
     retrievedAt: history.generatedAt,
-    cadence: "weekly",
+    cadence: "daily",
     status: statusFor(history.source.satcat.updated?.iso ?? history.generatedAt),
     coverageZh: `${history.coverage.fromYear}—${history.coverage.toYear}；${history.orbitInventory.at(-1).payloadObjects.global.toLocaleString()} 个年内在轨载荷对象`,
     coverageEn: `${history.coverage.fromYear}—${history.coverage.toYear}; ${history.orbitInventory.at(-1).payloadObjects.global.toLocaleString()} payload objects in current-year inventory`,
@@ -67,10 +84,10 @@ const sources = [
     name: "Launch Library 2",
     roleZh: "近期轨道任务、发射台、未来清单与一级复用记录",
     roleEn: "Recent orbital missions, pads, manifest and reusable-stage records",
-    updatedAt: launches.generatedAt,
+    updatedAt: launchUpdatedAt,
     retrievedAt: launches.generatedAt,
-    cadence: "weekly",
-    status: statusFor(launches.generatedAt),
+    cadence: "daily",
+    status: statusFor(launchUpdatedAt),
     coverageZh: `${launches.coverage.from}—${launches.coverage.to}；${infrastructure.summary.orbitalAttempts} 次已观测尝试；${manifest.upcoming.length} 个未来任务`,
     coverageEn: `${launches.coverage.from}—${launches.coverage.to}; ${infrastructure.summary.orbitalAttempts} observed attempts; ${manifest.upcoming.length} upcoming missions`,
     noteZh: "未来日期保留 LL2 精度；详细模式的一级序列号与回收字段从 2026 年开始完整积累。",
@@ -85,7 +102,7 @@ const sources = [
     roleZh: "地月、空间站、制造披露与研发飞行状态",
     roleEn: "Cislunar, stations, manufacturing disclosures and development status",
     updatedAt: editorialAsOf,
-    retrievedAt: generatedAt,
+    retrievedAt: null,
     cadence: "weekly + event",
     status: statusFor(editorialAsOf, 30),
     coverageZh: `${frontier.cislunar.assets.length} 个地月资产、${frontier.stations.length} 个空间站、${development.programs.length} 个研发项目`,
@@ -102,7 +119,7 @@ const sources = [
     roleZh: "产品结构参考：任务清单、台址清单、复用载具卡片",
     roleEn: "Product reference: manifests, pad manifests and reusable-vehicle cards",
     updatedAt: recovery.asOf,
-    retrievedAt: generatedAt,
+    retrievedAt: null,
     cadence: "review-only",
     status: "reference",
     coverageZh: "不摄取数据；公开 API 仍处于征集反馈阶段",

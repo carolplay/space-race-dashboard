@@ -44,6 +44,7 @@ const names: Record<string, string> = {
   '5 / day':'5 / 日', '100+ / month':'100+ / 月',
   'M0':'M0 · 初始部署报告','M1':'M1 · 10% 部署','M2':'M2 · 50% 部署','M3':'M3 · 100% 部署',
   'GCAT Active / Current Catalog':'GCAT 活跃 / 当前对象目录',
+  'GCAT Constellation Statistics':'GCAT 星座库存统计',
   'GCAT SATCAT / LaunchLog':'GCAT 对象目录 / 发射日志',
   'NASA / CNSA / CMSE / provider releases':'NASA / 国家航天局 / 载人航天工程 / 运营商公报',
 };

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T05:31:20.982Z",
+  "generatedAt": "2026-10-02T12:03:36.495Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-09-26"
+    "to": "2026-10-02"
   },
   "source": {
     "name": "Launch Library 2",
@@ -45,10 +45,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 136,
+        "us": 140,
         "cn": 70,
         "other": 26,
-        "global": 232
+        "global": 236
       }
     ],
     "success": [
@@ -71,10 +71,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 135,
+        "us": 139,
         "cn": 66,
         "other": 24,
-        "global": 225
+        "global": 229
       }
     ],
     "rocketFamilies": [
@@ -810,8 +810,8 @@
         "year": "2026",
         "region": "us",
         "family": "Falcon 9",
-        "attempts": 108,
-        "success": 108
+        "attempts": 110,
+        "success": 110
       },
       {
         "year": "2026",
@@ -831,8 +831,8 @@
         "year": "2026",
         "region": "us",
         "family": "Falcon",
-        "attempts": 2,
-        "success": 2
+        "attempts": 3,
+        "success": 3
       },
       {
         "year": "2026",
@@ -866,6 +866,13 @@
         "year": "2026",
         "region": "us",
         "family": "Space Launch System",
+        "attempts": 1,
+        "success": 1
+      },
+      {
+        "year": "2026",
+        "region": "us",
+        "family": "Starship",
         "attempts": 1,
         "success": 1
       },

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T05:31:20.982Z",
+  "generatedAt": "2026-10-02T12:03:36.495Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-09-26"
+    "to": "2026-10-02"
   },
   "source": {
     "name": "Launch Library 2",
@@ -18,10 +18,10 @@
     "cadence": "Median and fastest interval use NET timestamps between observed attempts on the same pad."
   },
   "summary": {
-    "observedSites": 27,
-    "observedPads": 61,
-    "orbitalAttempts": 816,
-    "activePads": 60
+    "observedSites": 28,
+    "observedPads": 62,
+    "orbitalAttempts": 820,
+    "activePads": 61
   },
   "sites": [
     {
@@ -29,8 +29,8 @@
       "name": "Cape Canaveral SFS, FL, USA",
       "countryCode": "US",
       "region": "us",
-      "attempts": 202,
-      "success": 201,
+      "attempts": 203,
+      "success": 202,
       "successRate": 99.5,
       "padCount": 4,
       "rocketFamilies": [
@@ -51,7 +51,7 @@
         },
         {
           "year": "2026",
-          "attempts": 53
+          "attempts": 54
         }
       ]
     },
@@ -60,8 +60,8 @@
       "name": "Vandenberg SFB, CA, USA",
       "countryCode": "US",
       "region": "us",
-      "attempts": 176,
-      "success": 174,
+      "attempts": 177,
+      "success": 175,
       "successRate": 98.9,
       "padCount": 3,
       "rocketFamilies": [
@@ -80,7 +80,7 @@
         },
         {
           "year": "2026",
-          "attempts": 63
+          "attempts": 64
         }
       ]
     },
@@ -127,8 +127,8 @@
       "name": "Kennedy Space Center, FL, USA",
       "countryCode": "US",
       "region": "us",
-      "attempts": 56,
-      "success": 56,
+      "attempts": 57,
+      "success": 57,
       "successRate": 100,
       "padCount": 2,
       "rocketFamilies": [
@@ -147,7 +147,7 @@
         },
         {
           "year": "2026",
-          "attempts": 3
+          "attempts": 4
         }
       ]
     },
@@ -708,6 +708,25 @@
           "attempts": 1
         }
       ]
+    },
+    {
+      "id": 143,
+      "name": "SpaceX Starbase, TX, USA",
+      "countryCode": "US",
+      "region": "us",
+      "attempts": 1,
+      "success": 1,
+      "successRate": 100,
+      "padCount": 1,
+      "rocketFamilies": [
+        "Starship"
+      ],
+      "annual": [
+        {
+          "year": "2026",
+          "attempts": 1
+        }
+      ]
     }
   ],
   "pads": [
@@ -721,11 +740,11 @@
       "active": true,
       "latitude": 28.56194122,
       "longitude": -80.57735736,
-      "attempts": 183,
-      "success": 183,
+      "attempts": 184,
+      "success": 184,
       "successRate": 100,
       "firstLaunch": "2024-01-03",
-      "lastLaunch": "2026-09-13",
+      "lastLaunch": "2026-10-01",
       "medianIntervalDays": 4.4,
       "fastestIntervalDays": 1.9,
       "rocketFamilies": [
@@ -742,7 +761,7 @@
         },
         {
           "year": "2026",
-          "attempts": 47
+          "attempts": 48
         }
       ]
     },
@@ -756,11 +775,11 @@
       "active": true,
       "latitude": 34.632,
       "longitude": -120.611,
-      "attempts": 171,
-      "success": 170,
+      "attempts": 172,
+      "success": 171,
       "successRate": 99.4,
       "firstLaunch": "2024-01-03",
-      "lastLaunch": "2026-09-26",
+      "lastLaunch": "2026-10-01",
       "medianIntervalDays": 4.6,
       "fastestIntervalDays": 2.3,
       "rocketFamilies": [
@@ -777,7 +796,7 @@
         },
         {
           "year": "2026",
-          "attempts": 61
+          "attempts": 62
         }
       ]
     },
@@ -791,12 +810,12 @@
       "active": true,
       "latitude": 28.60822681,
       "longitude": -80.60428186,
-      "attempts": 55,
-      "success": 55,
+      "attempts": 56,
+      "success": 56,
       "successRate": 100,
       "firstLaunch": "2024-01-18",
-      "lastLaunch": "2026-08-30",
-      "medianIntervalDays": 10,
+      "lastLaunch": "2026-10-02",
+      "medianIntervalDays": 10.1,
       "fastestIntervalDays": 5.3,
       "rocketFamilies": [
         "Falcon",
@@ -813,7 +832,7 @@
         },
         {
           "year": "2026",
-          "attempts": 2
+          "attempts": 3
         }
       ]
     },
@@ -2529,6 +2548,33 @@
       "annual": [
         {
           "year": "2024",
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "id": 235,
+      "name": "Orbital Launch Pad 2",
+      "siteId": 143,
+      "site": "SpaceX Starbase, TX, USA",
+      "countryCode": "US",
+      "region": "us",
+      "active": true,
+      "latitude": 25.99677,
+      "longitude": -97.15799,
+      "attempts": 1,
+      "success": 1,
+      "successRate": 100,
+      "firstLaunch": "2026-09-28",
+      "lastLaunch": "2026-09-28",
+      "medianIntervalDays": null,
+      "fastestIntervalDays": null,
+      "rocketFamilies": [
+        "Starship"
+      ],
+      "annual": [
+        {
+          "year": "2026",
           "attempts": 1
         }
       ]

@@ -1,0 +1,515 @@
+{
+  "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/build/bundle.js",
+  "retrievedAt": "2026-10-02T12:13:52.998Z",
+  "upstreamUpdatedAt": null,
+  "sha256": "1d1a0171095954b65d45cab486ee1bd9f60d9f844b546d39e9be8a0893ca2e27",
+  "observations": [
+    {
+      "filingId": "g-l5ku",
+      "raw": {
+        "sat_name": "L5",
+        "adm": "G",
+        "ntwk_org": "",
+        "M": "01.01.2021",
+        "M0": "Met",
+        "M1": "Met",
+        "M2": "As Received",
+        "M3": "01.01.2028",
+        "POST": "",
+        "nbr_notif": 2692,
+        "nbr_deploy": 279,
+        "wic_no_M0": 2957,
+        "ssn_no_M0": 8,
+        "ssn_rev_M0": null,
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": 2999,
+        "ssn_no_M1": 8,
+        "ssn_rev_M1": "M",
+        "ssn_rev_no_M1": 1,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": null,
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": null,
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "L5",
+        "type": ""
+      },
+      "differences": [
+        {
+          "field": "new_sat_name",
+          "previous": "L5Ku",
+          "current": "L5"
+        }
+      ]
+    },
+    {
+      "filingId": "g-l5ka",
+      "raw": {
+        "sat_name": "L5",
+        "adm": "G",
+        "ntwk_org": "",
+        "M": "18.07.2021",
+        "M0": "Met",
+        "M1": "Met",
+        "M2": "As Received",
+        "M3": "18.07.2028",
+        "POST": "",
+        "nbr_notif": 2692,
+        "nbr_deploy": 279,
+        "wic_no_M0": 3005,
+        "ssn_no_M0": 8,
+        "ssn_rev_M0": "M",
+        "ssn_rev_no_M0": 2,
+        "wic_no_M1": 3008,
+        "ssn_no_M1": 8,
+        "ssn_rev_M1": "M",
+        "ssn_rev_no_M1": 3,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": null,
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": null,
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "L5",
+        "type": ""
+      },
+      "differences": [
+        {
+          "field": "new_sat_name",
+          "previous": "L5Ka",
+          "current": "L5"
+        }
+      ]
+    },
+    {
+      "filingId": "chn-sailspace-1",
+      "raw": {
+        "sat_name": "SAILSPACE-1",
+        "adm": "CHN",
+        "ntwk_org": "",
+        "M": "07.04.2030",
+        "M0": "As Received",
+        "M1": "07.04.2032",
+        "M2": "07.04.2035",
+        "M3": "07.04.2037",
+        "POST": "",
+        "nbr_notif": 1296,
+        "nbr_deploy": 0,
+        "wic_no_M0": null,
+        "ssn_no_M0": null,
+        "ssn_rev_M0": null,
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": null,
+        "ssn_no_M1": null,
+        "ssn_rev_M1": null,
+        "ssn_rev_no_M1": null,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": null,
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": null,
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "SAILSPACE-1",
+        "type": ""
+      },
+      "differences": []
+    },
+    {
+      "filingId": "nor-steam-1",
+      "raw": {
+        "sat_name": "STEAM-1",
+        "adm": "NOR",
+        "ntwk_org": "",
+        "M": "27.06.2021",
+        "M0": "Met",
+        "M1": "Met",
+        "M2": "As Received",
+        "M3": "27.06.2028",
+        "POST": "",
+        "nbr_notif": 4408,
+        "nbr_deploy": 442,
+        "wic_no_M0": 3005,
+        "ssn_no_M0": 16,
+        "ssn_rev_M0": null,
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": 3008,
+        "ssn_no_M1": 16,
+        "ssn_rev_M1": "M",
+        "ssn_rev_no_M1": 1,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": null,
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": null,
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "STEAM-1",
+        "type": ""
+      },
+      "differences": []
+    },
+    {
+      "filingId": "nor-steam-2",
+      "raw": {
+        "sat_name": "STEAM-2",
+        "adm": "NOR",
+        "ntwk_org": "",
+        "M": "27.06.2021",
+        "M0": "Met",
+        "M1": "Met",
+        "M2": "As Received",
+        "M3": "27.06.2028",
+        "POST": "",
+        "nbr_notif": 1312,
+        "nbr_deploy": 133,
+        "wic_no_M0": 3005,
+        "ssn_no_M0": 17,
+        "ssn_rev_M0": null,
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": 3009,
+        "ssn_no_M1": 17,
+        "ssn_rev_M1": "M",
+        "ssn_rev_no_M1": 1,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": null,
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": null,
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "STEAM-2",
+        "type": ""
+      },
+      "differences": []
+    },
+    {
+      "filingId": "nor-steam-2b",
+      "raw": {
+        "sat_name": "STEAM-2B",
+        "adm": "NOR",
+        "ntwk_org": "",
+        "M": "01.01.2024",
+        "M0": "Met",
+        "M1": "Met",
+        "M2": "01.01.2029",
+        "M3": "01.01.2031",
+        "POST": "",
+        "nbr_notif": 1584,
+        "nbr_deploy": 159,
+        "wic_no_M0": 3036,
+        "ssn_no_M0": 22,
+        "ssn_rev_M0": null,
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": 3074,
+        "ssn_no_M1": 22,
+        "ssn_rev_M1": "M",
+        "ssn_rev_no_M1": 1,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": null,
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": null,
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "STEAM-2B",
+        "type": ""
+      },
+      "differences": []
+    },
+    {
+      "filingId": "usa-usasat-ngso-8a",
+      "raw": {
+        "sat_name": "USASAT-NGSO-8A",
+        "adm": "USA",
+        "ntwk_org": "",
+        "M": "26.03.2026",
+        "M0": "Met",
+        "M1": "26.03.2028",
+        "M2": "26.03.2031",
+        "M3": "26.03.2033",
+        "POST": "",
+        "nbr_notif": 1154,
+        "nbr_deploy": 1,
+        "wic_no_M0": 3081,
+        "ssn_no_M0": 31,
+        "ssn_rev_M0": null,
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": null,
+        "ssn_no_M1": null,
+        "ssn_rev_M1": null,
+        "ssn_rev_no_M1": null,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": null,
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": null,
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "USASAT-NGSO-8A",
+        "type": ""
+      },
+      "differences": [
+        {
+          "field": "M0",
+          "previous": "As Received",
+          "current": "Met"
+        },
+        {
+          "field": "nbr_deploy",
+          "previous": 0,
+          "current": 1
+        },
+        {
+          "field": "wic_no_M0",
+          "previous": null,
+          "current": 3081
+        },
+        {
+          "field": "ssn_no_M0",
+          "previous": null,
+          "current": 31
+        }
+      ]
+    },
+    {
+      "filingId": "usa-usasat-ngso-8b",
+      "raw": {
+        "sat_name": "USASAT-NGSO-8B",
+        "adm": "USA",
+        "ntwk_org": "",
+        "M": "28.03.2026",
+        "M0": "Met",
+        "M1": "28.03.2028",
+        "M2": "28.03.2031",
+        "M3": "28.03.2033",
+        "POST": "",
+        "nbr_notif": 1294,
+        "nbr_deploy": 1,
+        "wic_no_M0": 3081,
+        "ssn_no_M0": 32,
+        "ssn_rev_M0": null,
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": null,
+        "ssn_no_M1": null,
+        "ssn_rev_M1": null,
+        "ssn_rev_no_M1": null,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": null,
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": null,
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "USASAT-NGSO-8B",
+        "type": ""
+      },
+      "differences": [
+        {
+          "field": "M0",
+          "previous": "As Received",
+          "current": "Met"
+        },
+        {
+          "field": "nbr_deploy",
+          "previous": 0,
+          "current": 1
+        },
+        {
+          "field": "wic_no_M0",
+          "previous": null,
+          "current": 3081
+        },
+        {
+          "field": "ssn_no_M0",
+          "previous": null,
+          "current": 32
+        },
+        {
+          "field": "new_sat_name",
+          "previous": "USASAT-NGSO-8A",
+          "current": "USASAT-NGSO-8B"
+        }
+      ]
+    },
+    {
+      "filingId": "usa-usasat-ngso-8c",
+      "raw": {
+        "sat_name": "USASAT-NGSO-8C",
+        "adm": "USA",
+        "ntwk_org": "",
+        "M": "26.03.2026",
+        "M0": "Met",
+        "M1": "26.03.2028",
+        "M2": "26.03.2031",
+        "M3": "26.03.2033",
+        "POST": "",
+        "nbr_notif": 782,
+        "nbr_deploy": 1,
+        "wic_no_M0": 3081,
+        "ssn_no_M0": 33,
+        "ssn_rev_M0": null,
+        "ssn_rev_no_M0": null,
+        "wic_no_M1": null,
+        "ssn_no_M1": null,
+        "ssn_rev_M1": null,
+        "ssn_rev_no_M1": null,
+        "wic_no_M2": null,
+        "ssn_no_M2": null,
+        "ssn_rev_M2": null,
+        "ssn_rev_no_M2": null,
+        "wic_no_M3": null,
+        "ssn_no_M3": null,
+        "ssn_rev_M3": null,
+        "ssn_rev_no_M3": null,
+        "new_sat_name": "USASAT-NGSO-8C",
+        "type": ""
+      },
+      "differences": [
+        {
+          "field": "M0",
+          "previous": "As Received",
+          "current": "Met"
+        },
+        {
+          "field": "nbr_deploy",
+          "previous": 0,
+          "current": 1
+        },
+        {
+          "field": "wic_no_M0",
+          "previous": null,
+          "current": 3081
+        },
+        {
+          "field": "ssn_no_M0",
+          "previous": null,
+          "current": 33
+        },
+        {
+          "field": "new_sat_name",
+          "previous": "USASAT-NGSO-8A",
+          "current": "USASAT-NGSO-8C"
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "filingId": "g-l5ku",
+      "differences": [
+        {
+          "field": "new_sat_name",
+          "previous": "L5Ku",
+          "current": "L5"
+        }
+      ]
+    },
+    {
+      "filingId": "g-l5ka",
+      "differences": [
+        {
+          "field": "new_sat_name",
+          "previous": "L5Ka",
+          "current": "L5"
+        }
+      ]
+    },
+    {
+      "filingId": "usa-usasat-ngso-8a",
+      "differences": [
+        {
+          "field": "M0",
+          "previous": "As Received",
+          "current": "Met"
+        },
+        {
+          "field": "nbr_deploy",
+          "previous": 0,
+          "current": 1
+        },
+        {
+          "field": "wic_no_M0",
+          "previous": null,
+          "current": 3081
+        },
+        {
+          "field": "ssn_no_M0",
+          "previous": null,
+          "current": 31
+        }
+      ]
+    },
+    {
+      "filingId": "usa-usasat-ngso-8b",
+      "differences": [
+        {
+          "field": "M0",
+          "previous": "As Received",
+          "current": "Met"
+        },
+        {
+          "field": "nbr_deploy",
+          "previous": 0,
+          "current": 1
+        },
+        {
+          "field": "wic_no_M0",
+          "previous": null,
+          "current": 3081
+        },
+        {
+          "field": "ssn_no_M0",
+          "previous": null,
+          "current": 32
+        },
+        {
+          "field": "new_sat_name",
+          "previous": "USASAT-NGSO-8A",
+          "current": "USASAT-NGSO-8B"
+        }
+      ]
+    },
+    {
+      "filingId": "usa-usasat-ngso-8c",
+      "differences": [
+        {
+          "field": "M0",
+          "previous": "As Received",
+          "current": "Met"
+        },
+        {
+          "field": "nbr_deploy",
+          "previous": 0,
+          "current": 1
+        },
+        {
+          "field": "wic_no_M0",
+          "previous": null,
+          "current": 3081
+        },
+        {
+          "field": "ssn_no_M0",
+          "previous": null,
+          "current": 33
+        },
+        {
+          "field": "new_sat_name",
+          "previous": "USASAT-NGSO-8A",
+          "current": "USASAT-NGSO-8C"
+        }
+      ]
+    }
+  ]
+}

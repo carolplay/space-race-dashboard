@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "collectedAt": "2026-09-26",
-  "inventoryAsOf": "2026-09-24",
+  "inventoryAsOf": "2026-10-02",
   "ituAsOf": "2026-09-15",
   "source": {
     "name": "GCAT",
@@ -11,13 +11,13 @@
     "catalogs": [
       {
         "url": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
-        "sha256": "2045192a9985aa64da0edc21c4d3d8f74ae00622c06b31b311b44d22f222ea51",
-        "updatedRaw": "2026 Sep 24 2117:02"
+        "sha256": "e63b3e8acbab9caa0121ec5135c6b0a9a2f49bbb7f925e3887dcd6f17cc9c555",
+        "updatedRaw": "2026 Oct  1 2207:48"
       },
       {
         "url": "https://planet4589.org/space/gcat/tsv/cat/satcat100k.tsv",
-        "sha256": "e80eb8332aef409e48c467942c0aff58fce1c041d6769407d39bb15a90ad3314",
-        "updatedRaw": "2026 Sep 24 2117:08"
+        "sha256": "55f217fc0ad8c096eb9d11c69b65307304599582bd86e05fc96283fe57a47870",
+        "updatedRaw": "2026 Oct  1 2207:53"
       }
     ]
   },
@@ -36,8 +36,8 @@
       "planLabelZh": "Gen2 授权规模",
       "planLabelEn": "Gen2 authorization",
       "sourceId": "starlink-fcc",
-      "inOrbit": 11135,
-      "asOf": "2026-09-24",
+      "inOrbit": 11156,
+      "asOf": "2026-10-02",
       "sourceUrl": "https://planet4589.org/space/con/star/stats.html",
       "planSourceUrl": "https://docs.fcc.gov/public/attachments/DA-26-36A1.pdf",
       "history": [
@@ -565,11 +565,36 @@
           "date": "2026-09-24",
           "inOrbit": 11135,
           "kind": "constellation-snapshot"
+        },
+        {
+          "date": "2026-09-30",
+          "inOrbit": 11156,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-10-02",
+          "inOrbit": 11156,
+          "kind": "constellation-snapshot"
         }
       ],
-      "catalogPayloadRows": 12892,
+      "catalogPayloadRows": 12918,
       "scopeZh": "含升轨、漂移与非运行卫星，不含模拟载荷",
-      "scopeEn": "Includes raising, drifting and inactive spacecraft; excludes simulators"
+      "scopeEn": "Includes raising, drifting and inactive spacecraft; excludes simulators",
+      "inventoryObservation": {
+        "id": "starlink",
+        "url": "https://planet4589.org/space/con/star/stats.html",
+        "rowLabel": "Total",
+        "updatedRaw": "Data last updated: 2026 Oct  2 0957:26",
+        "updatedAt": "2026-10-02T09:57:26.000Z",
+        "dataAsOf": "2026-10-02",
+        "sha256": "5ef45b32ec4cf21047f1524dca310c0e79dc0980901dbef7ed99b151db93f746",
+        "launched": 12988,
+        "failedToOrbit": 20,
+        "totalDown": 1832,
+        "inOrbit": 11156,
+        "workingEstimate": 11142,
+        "operationalOrbitEstimate": 9727
+      }
     },
     {
       "id": "amazon-leo",
@@ -584,7 +609,7 @@
       "planLabelEn": "Gen1 authorization",
       "sourceId": "amazon-fcc",
       "inOrbit": 392,
-      "asOf": "2026-09-24",
+      "asOf": "2026-10-02",
       "sourceUrl": "https://planet4589.org/space/con/kp/stats.html",
       "planSourceUrl": "https://docs.fcc.gov/public/attachments/DA-26-553A1.pdf",
       "history": [
@@ -1112,11 +1137,36 @@
           "date": "2026-09-24",
           "inOrbit": 392,
           "kind": "constellation-snapshot"
+        },
+        {
+          "date": "2026-09-30",
+          "inOrbit": 392,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-10-02",
+          "inOrbit": 392,
+          "kind": "constellation-snapshot"
         }
       ],
       "catalogPayloadRows": 398,
       "scopeZh": "含升轨、漂移与非运行卫星，不含模拟载荷",
-      "scopeEn": "Includes raising, drifting and inactive spacecraft; excludes simulators"
+      "scopeEn": "Includes raising, drifting and inactive spacecraft; excludes simulators",
+      "inventoryObservation": {
+        "id": "amazon-leo",
+        "url": "https://planet4589.org/space/con/kp/stats.html",
+        "rowLabel": "Kuiper satellites",
+        "updatedRaw": "Data last updated: 2026 Oct  2 0958:30",
+        "updatedAt": "2026-10-02T09:58:30.000Z",
+        "dataAsOf": "2026-10-02",
+        "sha256": "a7a855039a67614265bd980bd79e36e5b435768370d6ebfd089db9997f41d2b0",
+        "launched": 398,
+        "failedToOrbit": 0,
+        "totalDown": 6,
+        "inOrbit": 392,
+        "workingEstimate": 392,
+        "operationalOrbitEstimate": 355
+      }
     },
     {
       "id": "oneweb",
@@ -1131,7 +1181,7 @@
       "planLabelEn": "L5 notified scale",
       "sourceId": "itu-res35",
       "inOrbit": 654,
-      "asOf": "2026-09-24",
+      "asOf": "2026-10-02",
       "sourceUrl": "https://planet4589.org/space/con/ow/stats.html",
       "planSourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
       "history": [
@@ -1659,11 +1709,36 @@
           "date": "2026-09-24",
           "inOrbit": 654,
           "kind": "constellation-snapshot"
+        },
+        {
+          "date": "2026-09-30",
+          "inOrbit": 654,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-10-02",
+          "inOrbit": 654,
+          "kind": "constellation-snapshot"
         }
       ],
       "catalogPayloadRows": 656,
       "scopeZh": "含升轨、漂移与非运行卫星，不含模拟载荷",
-      "scopeEn": "Includes raising, drifting and inactive spacecraft; excludes simulators"
+      "scopeEn": "Includes raising, drifting and inactive spacecraft; excludes simulators",
+      "inventoryObservation": {
+        "id": "oneweb",
+        "url": "https://planet4589.org/space/con/ow/stats.html",
+        "rowLabel": "OneWeb",
+        "updatedRaw": "Data last updated: 2026 Oct  2 1002:41",
+        "updatedAt": "2026-10-02T10:02:41.000Z",
+        "dataAsOf": "2026-10-02",
+        "sha256": "d987f6ef4e3910aa5af432e9c3dc160f73adebb5d0bc699d1aab203b7ca302bc",
+        "launched": 656,
+        "failedToOrbit": 0,
+        "totalDown": 2,
+        "inOrbit": 654,
+        "workingEstimate": 651,
+        "operationalOrbitEstimate": 636
+      }
     },
     {
       "id": "guowang",
@@ -1678,7 +1753,7 @@
       "planLabelEn": "Published design",
       "sourceId": "mega-screen",
       "inOrbit": 213,
-      "asOf": "2026-09-24",
+      "asOf": "2026-10-02",
       "sourceUrl": "https://planet4589.org/space/con/xw/stats.html",
       "planSourceUrl": "https://planet4589.org/space/con/conlist.html",
       "history": [
@@ -2206,11 +2281,36 @@
           "date": "2026-09-24",
           "inOrbit": 213,
           "kind": "constellation-snapshot"
+        },
+        {
+          "date": "2026-09-30",
+          "inOrbit": 213,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-10-02",
+          "inOrbit": 213,
+          "kind": "constellation-snapshot"
         }
       ],
       "catalogPayloadRows": 213,
       "scopeZh": "正式低轨部署子组，不含早期试验星",
-      "scopeEn": "Main low-orbit deployment subgroup; excludes early tests"
+      "scopeEn": "Main low-orbit deployment subgroup; excludes early tests",
+      "inventoryObservation": {
+        "id": "guowang",
+        "url": "https://planet4589.org/space/con/xw/stats.html",
+        "rowLabel": "HW Digui",
+        "updatedRaw": "Data last updated: 2026 Oct  2 1004:06",
+        "updatedAt": "2026-10-02T10:04:06.000Z",
+        "dataAsOf": "2026-10-02",
+        "sha256": "f91a849d398e2907275850046780d003047404d3666169471f7f79822c1af62d",
+        "launched": 213,
+        "failedToOrbit": 0,
+        "totalDown": 0,
+        "inOrbit": 213,
+        "workingEstimate": 213,
+        "operationalOrbitEstimate": 186
+      }
     },
     {
       "id": "qianfan",
@@ -2225,7 +2325,7 @@
       "planLabelEn": "Long-term plan",
       "sourceId": "qianfan-plan",
       "inOrbit": 256,
-      "asOf": "2026-09-24",
+      "asOf": "2026-10-02",
       "sourceUrl": "https://planet4589.org/space/con/qf/stats.html",
       "planSourceUrl": "https://app.xinhuanet.com/news/article.html?articleId=20260610ba2b423c1e434c998aa80d9e30ad5f54",
       "history": [
@@ -2753,11 +2853,36 @@
           "date": "2026-09-24",
           "inOrbit": 256,
           "kind": "constellation-snapshot"
+        },
+        {
+          "date": "2026-09-30",
+          "inOrbit": 256,
+          "kind": "catalog-reconstruction"
+        },
+        {
+          "date": "2026-10-02",
+          "inOrbit": 256,
+          "kind": "constellation-snapshot"
         }
       ],
       "catalogPayloadRows": 256,
       "scopeZh": "千帆星座子组，不含 DTC / EUHT 试验星",
-      "scopeEn": "Main Qianfan subgroup; excludes DTC / EUHT tests"
+      "scopeEn": "Main Qianfan subgroup; excludes DTC / EUHT tests",
+      "inventoryObservation": {
+        "id": "qianfan",
+        "url": "https://planet4589.org/space/con/qf/stats.html",
+        "rowLabel": "Qianfan Xingzuo",
+        "updatedRaw": "Data last updated: 2026 Oct  2 1005:05",
+        "updatedAt": "2026-10-02T10:05:05.000Z",
+        "dataAsOf": "2026-10-02",
+        "sha256": "dc96568d95f5383b8b0025451946c575d6932c9ca1db5c46f9720e3d4cbf9f40",
+        "launched": 256,
+        "failedToOrbit": 0,
+        "totalDown": 0,
+        "inOrbit": 256,
+        "workingEstimate": 234,
+        "operationalOrbitEstimate": 178
+      }
     }
   ],
   "filings": [
@@ -2882,6 +3007,43 @@
         "reportDate": "2023-06-27",
         "noteZh": "数量对应该通知/报告版本，不是品牌总规划；频段和轨道参数为已取得文件范围，不能跨行相加。",
         "noteEn": "Count belongs to this notice/report version, not the brand plan. Bands/orbits cover acquired documents; do not sum rows."
+      },
+      "statusObservation": {
+        "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/build/bundle.js",
+        "retrievedAt": "2026-10-02T12:13:52.998Z",
+        "upstreamUpdatedAt": null,
+        "sha256": "1d1a0171095954b65d45cab486ee1bd9f60d9f844b546d39e9be8a0893ca2e27",
+        "raw": {
+          "sat_name": "L5",
+          "adm": "G",
+          "ntwk_org": "",
+          "M": "01.01.2021",
+          "M0": "Met",
+          "M1": "Met",
+          "M2": "As Received",
+          "M3": "01.01.2028",
+          "POST": "",
+          "nbr_notif": 2692,
+          "nbr_deploy": 279,
+          "wic_no_M0": 2957,
+          "ssn_no_M0": 8,
+          "ssn_rev_M0": null,
+          "ssn_rev_no_M0": null,
+          "wic_no_M1": 2999,
+          "ssn_no_M1": 8,
+          "ssn_rev_M1": "M",
+          "ssn_rev_no_M1": 1,
+          "wic_no_M2": null,
+          "ssn_no_M2": null,
+          "ssn_rev_M2": null,
+          "ssn_rev_no_M2": null,
+          "wic_no_M3": null,
+          "ssn_no_M3": null,
+          "ssn_rev_M3": null,
+          "ssn_rev_no_M3": null,
+          "new_sat_name": "L5",
+          "type": ""
+        }
       }
     },
     {
@@ -3005,6 +3167,43 @@
         "reportDate": "2023-10-31",
         "noteZh": "2,692 是状态表网络通知数量；报告部分频段的通知分母为 720，不能把整个网络总量直接当作所有 Ka 频段的履约分母。父网络最早申报日不替代各频率组计时。",
         "noteEn": "2,692 is the status-table network count; some reported bands have a 720 notified denominator. Do not apply the network total to all Ka-band compliance ratios. Parent receipt does not replace frequency-group clocks."
+      },
+      "statusObservation": {
+        "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/build/bundle.js",
+        "retrievedAt": "2026-10-02T12:13:52.998Z",
+        "upstreamUpdatedAt": null,
+        "sha256": "1d1a0171095954b65d45cab486ee1bd9f60d9f844b546d39e9be8a0893ca2e27",
+        "raw": {
+          "sat_name": "L5",
+          "adm": "G",
+          "ntwk_org": "",
+          "M": "18.07.2021",
+          "M0": "Met",
+          "M1": "Met",
+          "M2": "As Received",
+          "M3": "18.07.2028",
+          "POST": "",
+          "nbr_notif": 2692,
+          "nbr_deploy": 279,
+          "wic_no_M0": 3005,
+          "ssn_no_M0": 8,
+          "ssn_rev_M0": "M",
+          "ssn_rev_no_M0": 2,
+          "wic_no_M1": 3008,
+          "ssn_no_M1": 8,
+          "ssn_rev_M1": "M",
+          "ssn_rev_no_M1": 3,
+          "wic_no_M2": null,
+          "ssn_no_M2": null,
+          "ssn_rev_M2": null,
+          "ssn_rev_no_M2": null,
+          "wic_no_M3": null,
+          "ssn_no_M3": null,
+          "ssn_rev_M3": null,
+          "ssn_rev_no_M3": null,
+          "new_sat_name": "L5",
+          "type": ""
+        }
       }
     },
     {
@@ -3515,7 +3714,7 @@
         {
           "stage": "M0",
           "date": null,
-          "status": "As Received"
+          "status": "Met"
         },
         {
           "stage": "M1",
@@ -3624,6 +3823,43 @@
         "reportDate": null,
         "noteZh": "RES35 状态表为 1,154 颗；当前协调版本公开摘要为 1,154–1,156 颗，保留两种口径，不擅自合并。通知 126500007 正在审查。轨道与频率为摘要范围，不表示区间连续占用。",
         "noteEn": "RES35 status table: 1,154; current coordination summary: 1,154–1,156. Both scopes retained, not merged. Notification 126500007 is under examination. Orbit/frequency envelopes do not imply continuous occupancy."
+      },
+      "statusObservation": {
+        "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/build/bundle.js",
+        "retrievedAt": "2026-10-02T12:13:52.998Z",
+        "upstreamUpdatedAt": null,
+        "sha256": "1d1a0171095954b65d45cab486ee1bd9f60d9f844b546d39e9be8a0893ca2e27",
+        "raw": {
+          "sat_name": "USASAT-NGSO-8A",
+          "adm": "USA",
+          "ntwk_org": "",
+          "M": "26.03.2026",
+          "M0": "Met",
+          "M1": "26.03.2028",
+          "M2": "26.03.2031",
+          "M3": "26.03.2033",
+          "POST": "",
+          "nbr_notif": 1154,
+          "nbr_deploy": 1,
+          "wic_no_M0": 3081,
+          "ssn_no_M0": 31,
+          "ssn_rev_M0": null,
+          "ssn_rev_no_M0": null,
+          "wic_no_M1": null,
+          "ssn_no_M1": null,
+          "ssn_rev_M1": null,
+          "ssn_rev_no_M1": null,
+          "wic_no_M2": null,
+          "ssn_no_M2": null,
+          "ssn_rev_M2": null,
+          "ssn_rev_no_M2": null,
+          "wic_no_M3": null,
+          "ssn_no_M3": null,
+          "ssn_rev_M3": null,
+          "ssn_rev_no_M3": null,
+          "new_sat_name": "USASAT-NGSO-8A",
+          "type": ""
+        }
       }
     },
     {
@@ -3638,7 +3874,7 @@
         {
           "stage": "M0",
           "date": null,
-          "status": "As Received"
+          "status": "Met"
         },
         {
           "stage": "M1",
@@ -3747,6 +3983,43 @@
         "reportDate": null,
         "noteZh": "RES35 状态表为 1,294 颗；协调版本摘要为 1,294–1,296 颗。通知 126500008 正在审查。频率为范围摘要，不表示区间连续占用。",
         "noteEn": "RES35 status table: 1,294; coordination summary: 1,294–1,296. Notification 126500008 under examination. Frequency envelopes are not continuously occupied intervals."
+      },
+      "statusObservation": {
+        "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/build/bundle.js",
+        "retrievedAt": "2026-10-02T12:13:52.998Z",
+        "upstreamUpdatedAt": null,
+        "sha256": "1d1a0171095954b65d45cab486ee1bd9f60d9f844b546d39e9be8a0893ca2e27",
+        "raw": {
+          "sat_name": "USASAT-NGSO-8B",
+          "adm": "USA",
+          "ntwk_org": "",
+          "M": "28.03.2026",
+          "M0": "Met",
+          "M1": "28.03.2028",
+          "M2": "28.03.2031",
+          "M3": "28.03.2033",
+          "POST": "",
+          "nbr_notif": 1294,
+          "nbr_deploy": 1,
+          "wic_no_M0": 3081,
+          "ssn_no_M0": 32,
+          "ssn_rev_M0": null,
+          "ssn_rev_no_M0": null,
+          "wic_no_M1": null,
+          "ssn_no_M1": null,
+          "ssn_rev_M1": null,
+          "ssn_rev_no_M1": null,
+          "wic_no_M2": null,
+          "ssn_no_M2": null,
+          "ssn_rev_M2": null,
+          "ssn_rev_no_M2": null,
+          "wic_no_M3": null,
+          "ssn_no_M3": null,
+          "ssn_rev_M3": null,
+          "ssn_rev_no_M3": null,
+          "new_sat_name": "USASAT-NGSO-8B",
+          "type": ""
+        }
       }
     },
     {
@@ -3761,7 +4034,7 @@
         {
           "stage": "M0",
           "date": null,
-          "status": "As Received"
+          "status": "Met"
         },
         {
           "stage": "M1",
@@ -3870,6 +4143,43 @@
         "reportDate": null,
         "noteZh": "RES35 状态表为 782 颗；协调版本摘要为 782–784 颗。通知 126500009 正在审查。频率为范围摘要，不表示区间连续占用。",
         "noteEn": "RES35 status table: 782; coordination summary: 782–784. Notification 126500009 under examination. Frequency envelopes are not continuously occupied intervals."
+      },
+      "statusObservation": {
+        "sourceUrl": "https://www.itu.int/net/ITU-R/space/res35/build/bundle.js",
+        "retrievedAt": "2026-10-02T12:13:52.998Z",
+        "upstreamUpdatedAt": null,
+        "sha256": "1d1a0171095954b65d45cab486ee1bd9f60d9f844b546d39e9be8a0893ca2e27",
+        "raw": {
+          "sat_name": "USASAT-NGSO-8C",
+          "adm": "USA",
+          "ntwk_org": "",
+          "M": "26.03.2026",
+          "M0": "Met",
+          "M1": "26.03.2028",
+          "M2": "26.03.2031",
+          "M3": "26.03.2033",
+          "POST": "",
+          "nbr_notif": 782,
+          "nbr_deploy": 1,
+          "wic_no_M0": 3081,
+          "ssn_no_M0": 33,
+          "ssn_rev_M0": null,
+          "ssn_rev_no_M0": null,
+          "wic_no_M1": null,
+          "ssn_no_M1": null,
+          "ssn_rev_M1": null,
+          "ssn_rev_no_M1": null,
+          "wic_no_M2": null,
+          "ssn_no_M2": null,
+          "ssn_rev_M2": null,
+          "ssn_rev_no_M2": null,
+          "wic_no_M3": null,
+          "ssn_no_M3": null,
+          "ssn_rev_M3": null,
+          "ssn_rev_no_M3": null,
+          "new_sat_name": "USASAT-NGSO-8C",
+          "type": ""
+        }
       }
     },
     {
@@ -4338,5 +4648,6 @@
       "statusEn": "FCC application listed in a public notice, not a grant; not a late-2025 ITU filing."
     }
   ],
-  "reviewedAt": "2026-09-27"
+  "reviewedAt": "2026-09-27",
+  "inventoryRetrievedAt": "2026-10-02T12:08:54.831Z"
 }
