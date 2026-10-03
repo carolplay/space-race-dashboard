@@ -97,8 +97,8 @@
     },
     {
       "year": 2028,
-      "global": 435,
-      "us": 235,
+      "global": 440,
+      "us": 240,
       "cn": 130,
       "other": 70,
       "kind": "damped-linear-trend"
@@ -113,8 +113,8 @@
     },
     {
       "year": 2030,
-      "global": 510,
-      "us": 285,
+      "global": 515,
+      "us": 290,
       "cn": 150,
       "other": 75,
       "kind": "damped-linear-trend"
@@ -137,8 +137,8 @@
     },
     {
       "year": 2033,
-      "global": 580,
-      "us": 335,
+      "global": 585,
+      "us": 340,
       "cn": 165,
       "other": 80,
       "kind": "damped-linear-trend"
@@ -161,8 +161,8 @@
     },
     {
       "year": 2036,
-      "global": 625,
-      "us": 365,
+      "global": 630,
+      "us": 370,
       "cn": 175,
       "other": 85,
       "kind": "damped-linear-trend"
@@ -221,54 +221,54 @@
     },
     {
       "year": 2026,
-      "count": 19709,
+      "count": 19692,
       "partial": true
     }
   ],
   "orbitalInventory": [
     {
       "year": 2026,
-      "count": 19709
+      "count": 19692
     },
     {
       "year": 2027,
-      "count": 23250
+      "count": 23200
     },
     {
       "year": 2028,
-      "count": 26350
+      "count": 26250
     },
     {
       "year": 2029,
-      "count": 29050
+      "count": 29000
     },
     {
       "year": 2030,
-      "count": 31450
+      "count": 31350
     },
     {
       "year": 2031,
-      "count": 33550
+      "count": 33450
     },
     {
       "year": 2032,
-      "count": 35450
+      "count": 35300
     },
     {
       "year": 2033,
-      "count": 37050
+      "count": 36950
     },
     {
       "year": 2034,
-      "count": 38500
+      "count": 38350
     },
     {
       "year": 2035,
-      "count": 39750
+      "count": 39650
     },
     {
       "year": 2036,
-      "count": 40900
+      "count": 40750
     }
   ],
   "fleets": [
@@ -771,8 +771,8 @@
     }
   ],
   "sourceCutoffs": {
-    "launch": "2026-10-01",
-    "inventory": "2026-10-01",
+    "launch": "2026-10-02",
+    "inventory": "2026-10-02",
     "fleets": "2026-10-02"
   }
 }

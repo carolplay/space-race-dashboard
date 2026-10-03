@@ -1252,7 +1252,7 @@
       "entityId": "starlink",
       "date": "2026-09-30",
       "metric": "physical_in_orbit_count",
-      "value": 11156,
+      "value": 11153,
       "unit": "satellite",
       "evidenceType": "estimate",
       "method": "catalog-reconstruction",
@@ -6763,9 +6763,9 @@
       "scope": "five tracked fleets, world; not all fleets and not active-only"
     },
     "globalActiveCatalog": {
-      "value": 16999,
+      "value": 16986,
       "unit": "payload_object",
-      "asOf": "2026-10-01T22:54:27.000Z",
+      "asOf": "2026-10-02T22:40:36.000Z",
       "scope": "global active payloads of every mission category; not constellation-only"
     },
     "verifiedAuthorizationSample": {
