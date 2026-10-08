@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T04:17:14.197Z",
+  "generatedAt": "2026-10-08T12:03:44.037Z",
   "summary": {
     "productionSources": 5,
     "freshSources": 5,
@@ -66,7 +66,7 @@
       "name": "Launch Library 2",
       "roleZh": "近期轨道任务、发射台、未来清单与一级复用记录",
       "roleEn": "Recent orbital missions, pads, manifest and reusable-stage records",
-      "updatedAt": "2026-10-08T00:12:34Z",
+      "updatedAt": "2026-10-08T05:04:24Z",
       "retrievedAt": "2026-10-08T04:16:08.205Z",
       "cadence": "daily",
       "status": "fresh",

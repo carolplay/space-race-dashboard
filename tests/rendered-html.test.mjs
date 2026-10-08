@@ -36,7 +36,7 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /2000 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
-  assert.match(html, /ALPHA 1\.6\.3/);
+  assert.match(html, /ALPHA 1\.6\.4/);
   assert.match(html, /未来十年：发射节奏与履约压力/);
   assert.match(html, /在轨载荷库存：观测与条件外推/);
   assert.match(html, /星座在轨规模：惯性曲线与申报情景/);
