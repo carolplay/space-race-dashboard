@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T12:03:10.468Z",
+  "generatedAt": "2026-10-08T04:16:08.205Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-03"
+    "to": "2026-10-08"
   },
   "source": {
     "name": "Launch Library 2",
@@ -20,7 +20,7 @@
   "summary": {
     "observedSites": 28,
     "observedPads": 62,
-    "orbitalAttempts": 820,
+    "orbitalAttempts": 821,
     "activePads": 61
   },
   "sites": [
@@ -539,6 +539,29 @@
       ]
     },
     {
+      "id": 9,
+      "name": "Naro Space Center, South Korea",
+      "countryCode": "KR",
+      "region": "other",
+      "attempts": 2,
+      "success": 2,
+      "successRate": 100,
+      "padCount": 1,
+      "rocketFamilies": [
+        "KSLV"
+      ],
+      "annual": [
+        {
+          "year": "2025",
+          "attempts": 1
+        },
+        {
+          "year": "2026",
+          "attempts": 1
+        }
+      ]
+    },
+    {
       "id": 2,
       "name": "Semnan Space Center, Islamic Republic of Iran",
       "countryCode": "IR",
@@ -644,25 +667,6 @@
       "padCount": 1,
       "rocketFamilies": [
         "Eris"
-      ],
-      "annual": [
-        {
-          "year": "2025",
-          "attempts": 1
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "Naro Space Center, South Korea",
-      "countryCode": "KR",
-      "region": "other",
-      "attempts": 1,
-      "success": 1,
-      "successRate": 100,
-      "padCount": 1,
-      "rocketFamilies": [
-        "KSLV"
       ],
       "annual": [
         {
@@ -2136,6 +2140,37 @@
       ]
     },
     {
+      "id": 192,
+      "name": "LC-2",
+      "siteId": 9,
+      "site": "Naro Space Center, South Korea",
+      "countryCode": "KR",
+      "region": "other",
+      "active": true,
+      "latitude": 34.431867,
+      "longitude": 127.535069,
+      "attempts": 2,
+      "success": 2,
+      "successRate": 100,
+      "firstLaunch": "2025-11-26",
+      "lastLaunch": "2026-10-07",
+      "medianIntervalDays": 314.5,
+      "fastestIntervalDays": 314.5,
+      "rocketFamilies": [
+        "KSLV"
+      ],
+      "annual": [
+        {
+          "year": "2025",
+          "attempts": 1
+        },
+        {
+          "year": "2026",
+          "attempts": 1
+        }
+      ]
+    },
+    {
       "id": 247,
       "name": "Long March 12 series Pad",
       "siteId": 17,
@@ -2494,33 +2529,6 @@
       "annual": [
         {
           "year": "2026",
-          "attempts": 1
-        }
-      ]
-    },
-    {
-      "id": 192,
-      "name": "LC-2",
-      "siteId": 9,
-      "site": "Naro Space Center, South Korea",
-      "countryCode": "KR",
-      "region": "other",
-      "active": true,
-      "latitude": 34.431867,
-      "longitude": 127.535069,
-      "attempts": 1,
-      "success": 1,
-      "successRate": 100,
-      "firstLaunch": "2025-11-26",
-      "lastLaunch": "2025-11-26",
-      "medianIntervalDays": null,
-      "fastestIntervalDays": null,
-      "rocketFamilies": [
-        "KSLV"
-      ],
-      "annual": [
-        {
-          "year": "2025",
           "attempts": 1
         }
       ]
