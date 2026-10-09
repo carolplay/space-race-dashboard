@@ -10,8 +10,8 @@
       "nameEn": "Starlink",
       "operator": "SpaceX",
       "countryGroup": "us",
-      "asOf": "2026-10-02",
-      "inventoryCount": 11156,
+      "asOf": "2026-10-09",
+      "inventoryCount": 11137,
       "inventoryDefinition": "estimated_physical_in_orbit_not_operational",
       "sourceUrl": "https://planet4589.org/space/con/star/stats.html"
     },
@@ -23,7 +23,7 @@
       "nameEn": "Amazon Leo",
       "operator": "Amazon · Kuiper",
       "countryGroup": "us",
-      "asOf": "2026-10-02",
+      "asOf": "2026-10-09",
       "inventoryCount": 392,
       "inventoryDefinition": "estimated_physical_in_orbit_not_operational",
       "sourceUrl": "https://planet4589.org/space/con/kp/stats.html"
@@ -36,7 +36,7 @@
       "nameEn": "OneWeb",
       "operator": "Eutelsat · UK / FR",
       "countryGroup": "other",
-      "asOf": "2026-10-02",
+      "asOf": "2026-10-09",
       "inventoryCount": 654,
       "inventoryDefinition": "estimated_physical_in_orbit_not_operational",
       "sourceUrl": "https://planet4589.org/space/con/ow/stats.html"
@@ -49,7 +49,7 @@
       "nameEn": "Guowang",
       "operator": "China SatNet",
       "countryGroup": "cn",
-      "asOf": "2026-10-02",
+      "asOf": "2026-10-09",
       "inventoryCount": 213,
       "inventoryDefinition": "estimated_physical_in_orbit_not_operational",
       "sourceUrl": "https://planet4589.org/space/con/xw/stats.html"
@@ -62,7 +62,7 @@
       "nameEn": "Qianfan",
       "operator": "SpaceSail · SSST",
       "countryGroup": "cn",
-      "asOf": "2026-10-02",
+      "asOf": "2026-10-09",
       "inventoryCount": 256,
       "inventoryDefinition": "estimated_physical_in_orbit_not_operational",
       "sourceUrl": "https://planet4589.org/space/con/qf/stats.html"
@@ -1269,6 +1269,16 @@
       "sourceUrl": "https://planet4589.org/space/con/star/stats.html"
     },
     {
+      "entityId": "starlink",
+      "date": "2026-10-09",
+      "metric": "physical_in_orbit_count",
+      "value": 11137,
+      "unit": "satellite",
+      "evidenceType": "estimate",
+      "method": "constellation-snapshot",
+      "sourceUrl": "https://planet4589.org/space/con/star/stats.html"
+    },
+    {
       "entityId": "amazon-leo",
       "date": "2018-01-31",
       "metric": "physical_in_orbit_count",
@@ -2331,6 +2341,16 @@
     {
       "entityId": "amazon-leo",
       "date": "2026-10-02",
+      "metric": "physical_in_orbit_count",
+      "value": 392,
+      "unit": "satellite",
+      "evidenceType": "estimate",
+      "method": "constellation-snapshot",
+      "sourceUrl": "https://planet4589.org/space/con/kp/stats.html"
+    },
+    {
+      "entityId": "amazon-leo",
+      "date": "2026-10-09",
       "metric": "physical_in_orbit_count",
       "value": 392,
       "unit": "satellite",
@@ -3409,6 +3429,16 @@
       "sourceUrl": "https://planet4589.org/space/con/ow/stats.html"
     },
     {
+      "entityId": "oneweb",
+      "date": "2026-10-09",
+      "metric": "physical_in_orbit_count",
+      "value": 654,
+      "unit": "satellite",
+      "evidenceType": "estimate",
+      "method": "constellation-snapshot",
+      "sourceUrl": "https://planet4589.org/space/con/ow/stats.html"
+    },
+    {
       "entityId": "guowang",
       "date": "2018-01-31",
       "metric": "physical_in_orbit_count",
@@ -4479,6 +4509,16 @@
       "sourceUrl": "https://planet4589.org/space/con/xw/stats.html"
     },
     {
+      "entityId": "guowang",
+      "date": "2026-10-09",
+      "metric": "physical_in_orbit_count",
+      "value": 213,
+      "unit": "satellite",
+      "evidenceType": "estimate",
+      "method": "constellation-snapshot",
+      "sourceUrl": "https://planet4589.org/space/con/xw/stats.html"
+    },
+    {
       "entityId": "qianfan",
       "date": "2018-01-31",
       "metric": "physical_in_orbit_count",
@@ -5541,6 +5581,16 @@
     {
       "entityId": "qianfan",
       "date": "2026-10-02",
+      "metric": "physical_in_orbit_count",
+      "value": 256,
+      "unit": "satellite",
+      "evidenceType": "estimate",
+      "method": "constellation-snapshot",
+      "sourceUrl": "https://planet4589.org/space/con/qf/stats.html"
+    },
+    {
+      "entityId": "qianfan",
+      "date": "2026-10-09",
       "metric": "physical_in_orbit_count",
       "value": 256,
       "unit": "satellite",
@@ -6757,15 +6807,15 @@
   ],
   "kpis": {
     "trackedInventory": {
-      "value": 12671,
+      "value": 12652,
       "unit": "satellite",
-      "asOf": "2026-10-02",
+      "asOf": "2026-10-09",
       "scope": "five tracked fleets, world; not all fleets and not active-only"
     },
     "globalActiveCatalog": {
-      "value": 16986,
+      "value": 16980,
       "unit": "payload_object",
-      "asOf": "2026-10-02T22:40:36.000Z",
+      "asOf": "2026-10-09T00:51:55.000Z",
       "scope": "global active payloads of every mission category; not constellation-only"
     },
     "verifiedAuthorizationSample": {

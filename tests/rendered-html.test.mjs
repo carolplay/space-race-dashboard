@@ -36,7 +36,7 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /2000 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
-  assert.match(html, /ALPHA 1\.6\.4/);
+  assert.match(html, /ALPHA 1\.6\.5/);
   assert.match(html, /未来十年：发射节奏与履约压力/);
   assert.match(html, /在轨载荷库存：观测与条件外推/);
   assert.match(html, /星座在轨规模：惯性曲线与申报情景/);
@@ -242,7 +242,13 @@ test("ships an auditable mission manifest, recovery model and source-health repo
   assert.ok(recovery.missions.length >= 6);
   assert.ok(recovery.missions.every((mission) => mission.pad && mission.recoveries.length && mission.events.length && mission.sources.length));
   assert.ok(recovery.missions.some((mission) => mission.id === "zhuque-3-y2"));
-  assert.equal(health.summary.reviewSources, 0);
+  assert.equal(health.summary.reviewSources, health.sources.filter((source) => source.status === "review").length);
+  assert.equal(health.summary.freshSources, health.sources.filter((source) => source.status === "fresh").length);
   assert.ok(health.sources.some((source) => source.id === "next-spaceflight-reference" && source.mode === "reference-only"));
-  assert.ok(health.sources.filter((source) => source.mode !== "reference-only").every((source) => source.updatedAt && source.status === "fresh"));
+  for (const source of health.sources.filter((source) => source.mode !== "reference-only")) {
+    assert.ok(source.updatedAt);
+    const ageDays = Math.max(0, Math.floor((Date.parse(health.generatedAt.slice(0, 10)) - Date.parse(source.updatedAt)) / 86_400_000));
+    const threshold = source.mode === "editorial" ? 30 : 45;
+    assert.equal(source.status, ageDays <= threshold ? "fresh" : "review");
+  }
 });
