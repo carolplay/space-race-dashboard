@@ -11,13 +11,13 @@
     "catalogs": [
       {
         "url": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
-        "sha256": "b79d13f99b3c166c1befae60b4da757580431a1152190b53adad90acca3ba277",
-        "updatedRaw": "2026 Oct  8 2357:56"
+        "sha256": "7c242e30102eab324a1ce05dfafd3c80a4f6b6630149070911650a0e3100b929",
+        "updatedRaw": "2026 Oct  9 1800:46"
       },
       {
         "url": "https://planet4589.org/space/gcat/tsv/cat/satcat100k.tsv",
-        "sha256": "938aebdd2674f51022c0720720ed7f7b0700f32d8131d7eafae02c34b81e9281",
-        "updatedRaw": "2026 Oct  8 2358:02"
+        "sha256": "a25f3b79eea099d1e7ee0dc1f2a00107643e45b52716e223a230cc2f261c7245",
+        "updatedRaw": "2026 Oct  9 1800:52"
       }
     ]
   },
@@ -4674,5 +4674,5 @@
     }
   ],
   "reviewedAt": "2026-09-27",
-  "inventoryRetrievedAt": "2026-10-09T12:04:29.199Z"
+  "inventoryRetrievedAt": "2026-10-10T12:03:21.033Z"
 }

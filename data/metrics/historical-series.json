@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-10-09T12:04:32.969Z",
+  "generatedAt": "2026-10-10T12:03:29.961Z",
   "coverage": {
     "fromYear": 2000,
     "toYear": 2026,
     "currentYearIsPartial": true,
-    "launchCutoff": "2026-10-08",
-    "payloadCutoff": "2026-10-08"
+    "launchCutoff": "2026-10-09",
+    "payloadCutoff": "2026-10-09"
   },
   "source": {
     "name": "GCAT",
@@ -17,27 +17,27 @@
     "url": "https://planet4589.org/space/gcat/",
     "satcat": {
       "url": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
-      "sha256": "b79d13f99b3c166c1befae60b4da757580431a1152190b53adad90acca3ba277",
+      "sha256": "7c242e30102eab324a1ce05dfafd3c80a4f6b6630149070911650a0e3100b929",
       "updated": {
-        "raw": "2026 Oct  8 2357:56",
-        "iso": "2026-10-08T23:57:56.000Z"
+        "raw": "2026 Oct  9 1800:46",
+        "iso": "2026-10-09T18:00:46.000Z"
       }
     },
     "satcat100k": {
       "url": "https://planet4589.org/space/gcat/tsv/cat/satcat100k.tsv",
-      "sha256": "938aebdd2674f51022c0720720ed7f7b0700f32d8131d7eafae02c34b81e9281",
+      "sha256": "a25f3b79eea099d1e7ee0dc1f2a00107643e45b52716e223a230cc2f261c7245",
       "updated": {
-        "raw": "2026 Oct  8 2358:02",
-        "iso": "2026-10-08T23:58:02.000Z"
+        "raw": "2026 Oct  9 1800:52",
+        "iso": "2026-10-09T18:00:52.000Z"
       },
       "rows": 970
     },
     "launchlog": {
       "url": "https://planet4589.org/space/gcat/tsv/derived/launchlog.tsv",
-      "sha256": "4863c40a4a91256caacd590faafe38c1de4a99070edba466fc6c6ca65c5627e2",
+      "sha256": "71ad4365994c84e5c0ad3f4c298c8b0502d9d67efc8618a59cf4a52174c95023",
       "updated": {
-        "raw": "2026 Oct  8 2356:05",
-        "iso": "2026-10-08T23:56:05.000Z"
+        "raw": "2026 Oct  9 1758:56",
+        "iso": "2026-10-09T17:58:56.000Z"
       }
     }
   },
@@ -488,8 +488,8 @@
   "samePeriod": [
     {
       "year": "2025",
-      "launchCutoff": "2025-10-08",
-      "payloadCutoff": "2025-10-08",
+      "launchCutoff": "2025-10-09",
+      "payloadCutoff": "2025-10-09",
       "attempts": {
         "us": 138,
         "cn": 59,
@@ -518,8 +518,8 @@
     },
     {
       "year": "2026",
-      "launchCutoff": "2026-10-08",
-      "payloadCutoff": "2026-10-08",
+      "launchCutoff": "2026-10-09",
+      "payloadCutoff": "2026-10-09",
       "attempts": {
         "us": 127,
         "cn": 70,
@@ -1150,24 +1150,24 @@
       "year": "2026",
       "label": "2026 NOW",
       "payloadObjects": {
-        "us": 13843,
+        "us": 13840,
         "cn": 1625,
         "other": 4217,
-        "global": 19685
+        "global": 19682
       },
       "catalogObjects": {
-        "us": 18303,
+        "us": 18300,
         "cn": 6157,
         "other": 9938,
-        "global": 34398
+        "global": 34395
       },
       "knownPayloadMassKg": {
-        "us": 8486692.085000012,
+        "us": 8485875.085000012,
         "cn": 1385025,
         "other": 3379301.8120000027,
-        "global": 13251018.89699994
+        "global": 13250201.89699994
       },
-      "knownPayloadMassObjects": 19681
+      "knownPayloadMassObjects": 19678
     }
   ],
   "payloadFlow": [
@@ -1935,16 +1935,16 @@
         "global": 3437
       },
       "retirements": {
-        "us": 518,
+        "us": 521,
         "cn": 69,
         "other": 129,
-        "global": 716
+        "global": 719
       },
       "netChange": {
-        "us": 2200,
+        "us": 2197,
         "cn": 299,
         "other": 222,
-        "global": 2721
+        "global": 2718
       },
       "knownDeliveredMassKg": {
         "us": 1758590.6999999997,

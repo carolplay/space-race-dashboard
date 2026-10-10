@@ -36,7 +36,8 @@ test("server-renders the Cislunar-I dashboard", async () => {
   assert.match(html, /2000 至今/);
   assert.match(html, /近地轨道的人类前哨/);
   assert.match(html, /真实事件/);
-  assert.match(html, /ALPHA 1\.7\.0/);
+  const { version } = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'));
+  assert.ok(html.includes(`ALPHA ${version}`));
   assert.match(html, /id="orbital-functional-stack"/);
   assert.match(html, /从资产清单，到服务关系/);
   assert.match(html, /EDRS-A/);

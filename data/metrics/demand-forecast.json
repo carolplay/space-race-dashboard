@@ -221,18 +221,18 @@
     },
     {
       "year": 2026,
-      "count": 19685,
+      "count": 19682,
       "partial": true
     }
   ],
   "orbitalInventory": [
     {
       "year": 2026,
-      "count": 19685
+      "count": 19682
     },
     {
       "year": 2027,
-      "count": 23150
+      "count": 23100
     },
     {
       "year": 2028,
@@ -240,35 +240,35 @@
     },
     {
       "year": 2029,
-      "count": 28850
+      "count": 28800
     },
     {
       "year": 2030,
-      "count": 31200
+      "count": 31150
     },
     {
       "year": 2031,
-      "count": 33250
+      "count": 33200
     },
     {
       "year": 2032,
-      "count": 35100
+      "count": 35050
     },
     {
       "year": 2033,
-      "count": 36700
+      "count": 36650
     },
     {
       "year": 2034,
-      "count": 38100
+      "count": 38050
     },
     {
       "year": 2035,
-      "count": 39350
+      "count": 39250
     },
     {
       "year": 2036,
-      "count": 40400
+      "count": 40350
     }
   ],
   "fleets": [
@@ -771,8 +771,8 @@
     }
   ],
   "sourceCutoffs": {
-    "launch": "2026-10-08",
-    "inventory": "2026-10-08",
+    "launch": "2026-10-09",
+    "inventory": "2026-10-09",
     "fleets": "2026-10-09"
   }
 }

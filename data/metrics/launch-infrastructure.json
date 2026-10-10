@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T12:04:19.661Z",
+  "generatedAt": "2026-10-10T12:03:20.614Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-09"
+    "to": "2026-10-10"
   },
   "source": {
     "name": "Launch Library 2",
@@ -20,7 +20,7 @@
   "summary": {
     "observedSites": 28,
     "observedPads": 62,
-    "orbitalAttempts": 821,
+    "orbitalAttempts": 822,
     "activePads": 61
   },
   "sites": [
@@ -156,8 +156,8 @@
       "name": "Wenchang Space Launch Site, People's Republic of China",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 49,
-      "success": 48,
+      "attempts": 50,
+      "success": 49,
       "successRate": 98,
       "padCount": 4,
       "rocketFamilies": [
@@ -178,7 +178,7 @@
         },
         {
           "year": "2026",
-          "attempts": 19
+          "attempts": 20
         }
       ]
     },
@@ -1300,6 +1300,42 @@
       ]
     },
     {
+      "id": 219,
+      "name": "Commercial LC-2",
+      "siteId": 8,
+      "site": "Wenchang Space Launch Site, People's Republic of China",
+      "countryCode": "CN",
+      "region": "cn",
+      "active": true,
+      "latitude": 19.59755,
+      "longitude": 110.936481,
+      "attempts": 10,
+      "success": 10,
+      "successRate": 100,
+      "firstLaunch": "2024-11-30",
+      "lastLaunch": "2026-10-09",
+      "medianIntervalDays": 37,
+      "fastestIntervalDays": 22.8,
+      "rocketFamilies": [
+        "Long March 10",
+        "Long March 12"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 1
+        },
+        {
+          "year": "2025",
+          "attempts": 3
+        },
+        {
+          "year": "2026",
+          "attempts": 6
+        }
+      ]
+    },
+    {
       "id": 67,
       "name": "Ariane Launch Area 4",
       "siteId": 13,
@@ -1331,42 +1367,6 @@
         {
           "year": "2026",
           "attempts": 4
-        }
-      ]
-    },
-    {
-      "id": 219,
-      "name": "Commercial LC-2",
-      "siteId": 8,
-      "site": "Wenchang Space Launch Site, People's Republic of China",
-      "countryCode": "CN",
-      "region": "cn",
-      "active": true,
-      "latitude": 19.59755,
-      "longitude": 110.936481,
-      "attempts": 9,
-      "success": 9,
-      "successRate": 100,
-      "firstLaunch": "2024-11-30",
-      "lastLaunch": "2026-09-17",
-      "medianIntervalDays": 37.7,
-      "fastestIntervalDays": 23.1,
-      "rocketFamilies": [
-        "Long March 10",
-        "Long March 12"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 1
-        },
-        {
-          "year": "2025",
-          "attempts": 3
-        },
-        {
-          "year": "2026",
-          "attempts": 5
         }
       ]
     },
