@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordedAt": "2026-10-09",
+  "status": "design-spec-not-observed-data",
+  "nameZh": "轨道基础设施功能栈",
+  "nameEn": "Orbital infrastructure functional stack",
+  "scope": "LEO-focused-with-MEO-GEO-cislunar-and-ground-support",
+  "attribution": "Project synthesis of user proposal; not a shared NFX/Amadeus/Space Capital standard",
+  "layers": [
+    {"id":"L0","nameZh":"定位、授时与参考服务","nameEn":"Positioning, timing and reference services","roles":["pnt","reference-service"],"candidateCatalogCategories":["NAV"],"metrics":["node_count","position_accuracy_m","timing_accuracy_ns","service_coverage"],"orbitRestriction":null},
+    {"id":"L1","nameZh":"通信、中继与互联","nameEn":"Communications, relay and interconnect","roles":["communications","relay","optical-interconnect"],"candidateCatalogCategories":["COM"],"metrics":["in_orbit_node_count","confirmed_oisl_node_count","confirmed_link_count","measured_link_gbps"],"orbitRestriction":null},
+    {"id":"L2","nameZh":"能源与计算","nameEn":"Energy and compute","roles":["power","compute"],"candidateCatalogCategories":[],"metrics":["compute_node_count","verified_workload_count","available_power_kw","average_power_kw","measured_compute_performance"],"orbitRestriction":null},
+    {"id":"L3","nameZh":"感知与观测","nameEn":"Sensing and observation","roles":["earth-observation","space-domain-awareness","astronomy"],"candidateCatalogCategories":["IMG","IMG-R","EOSCI","MET","AST"],"metrics":["observation_asset_count","known_mass_kg","resolution_m","revisit_hours","product_latency_seconds"],"orbitRestriction":null},
+    {"id":"L4","nameZh":"机动物流与在轨服务","nameEn":"Maneuvering logistics and on-orbit services","roles":["transport","refuelling","assembly","repair","debris-removal"],"candidateCatalogCategories":[],"metrics":["service_vehicle_count","completed_service_events","verified_transferred_mass_kg"],"orbitRestriction":null}
+  ],
+  "crossLayerCapabilities": ["manufacturing","return-logistics","traffic-management","safety"],
+  "classification": {"primaryLayer":"single-or-null","secondaryLayers":"zero-or-more","catalogCategoryMapping":"candidate-only-requires-role-evidence","layerIdsAre":"functional-tags-not-altitude-or-maturity","groundAssetsInOrbitalMass":false},
+  "aggregation": {"physicalTotals":"deduplicate-by-stable-assetId","exclusiveLayerTotals":"primaryLayer-with-unclassified-bucket","multiLayerTotals":"non-additive","unknownNumericValue":null,"filingsAndCommercialTargetsInPhysicalTotals":false,"bandwidthAndCompute":"do-not-sum-incompatible-conditions-or-shared-resources"},
+  "assetFields": ["assetId","parentEntityId","entityKind","countryGroup","operator","realm","orbitRegime","primaryLayer","secondaryLayers","capabilities","status","statusAsOf","sourcePublishedAt","retrievedAt","evidenceLevel"],
+  "entityKinds": ["spacecraft","hosted-payload","station","ground-facility","reference-service"],
+  "statusValues": ["planned","ground_test","launched","in_orbit_demo","operational","inactive","retired","unknown"],
+  "observationFields": ["assetId","metric","value","unit","measurementBasis","precision","testConditions","aggregationScope","sourceUrl","asOf"],
+  "relationshipTypes": ["provides_service_to","communicates_with","supplies_power_to","computes_for","services"],
+  "relationshipEvidenceRequired": true,
+  "defaultCapacitiesOrPerformance": null,
+  "references": [
+    {"id":"nfx-stack","kind":"analytical-framework","publishedAt":"2026-02","url":"https://www.nfx.com/post/stack-above-the-cloud","retrievedAt":"2026-10-09"},
+    {"id":"amadeus-stack","kind":"analytical-framework","publishedAt":"2025-07-23","url":"https://www.amadeuscapital.com/space-tech-stack-2025-mapping-value-from-ground-to-orbit-and-back/","retrievedAt":"2026-10-09"},
+    {"id":"spacecapital-methodology","kind":"analytical-framework","publishedAt":null,"url":"https://www.spacecapital.com/space-iq/methodology","retrievedAt":"2026-10-09"},
+    {"id":"gps-space","kind":"physical-scope-evidence","publishedAt":null,"url":"https://www.gps.gov/space-segment","retrievedAt":"2026-10-09"},
+    {"id":"nasa-thermal","kind":"engineering-reference","publishedAt":null,"url":"https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/","retrievedAt":"2026-10-09"}
+  ],
+  "observedAssets": [],
+  "counts": null
+}
