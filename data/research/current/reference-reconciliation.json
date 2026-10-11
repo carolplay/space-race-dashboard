@@ -3,13 +3,14 @@
   "mode": "reference-only",
   "productionDataModified": false,
   "inputDates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-10"
   ],
   "summary": {
     "observations": 6,
     "agreements": 2,
-    "coverageReviews": 4,
-    "dateMismatches": 0
+    "coverageReviews": 3,
+    "dateMismatches": 1
   },
   "projects": [
     {
@@ -32,15 +33,15 @@
       "metric": "tracked-payloads",
       "value": 11103,
       "unit": "satellites",
-      "asOf": "2026-10-09",
+      "asOf": "2026-10-10",
       "asOfBasis": "Latest actual rows in the HF dataset viewer, UTC snapshot date; not a README statistic",
-      "retrievedOn": "2026-10-10",
-      "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=7975&length=100",
-      "evidence": "Latest four shell rows sum to 11103; 10022 inferred operational, 1042 raising, 39 deorbiting. Viewer reports 7995 total rows. No row for shell 0 at latest date; do not infer its population or assume complete physical inventory.",
-      "repositoryRevisionAtRetrieval": "cbe3f9033a868b4cc6104bbcb50c4fbe3d39d708",
-      "repositoryModifiedAt": "2026-10-09T14:52:39.000Z",
+      "retrievedOn": "2026-10-11",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=7979&length=20",
+      "evidence": "Latest October 10 actual four shell rows sum to 11103; 10022 inferred operational, 1038 raising, 43 deorbiting. Viewer reports 7999 total rows. No row for shell 0 at latest date; do not infer its population or assume complete physical inventory. GCAT inventory is October 9: dates differ and no numeric discrepancy is computed.",
+      "repositoryRevisionAtRetrieval": "f17771c5859313c5bc727336a15c61a9dd3c97fa",
+      "repositoryModifiedAt": "2026-10-10T14:08:38.000Z",
       "filePath": "data/daily_snapshots.parquet",
-      "fileSha256AtRetrieval": "8688e3ccc04149a23f1871ff3b8614609c8e263979fd32a3c518a7505ff660be",
+      "fileSha256AtRetrieval": "8838a2e24388fdbb79aefb246e0b2dd88ec751bc68ecad6c7a1e8ea9b2cde66f",
       "versionCaveat": "Viewer response is not a revision-pinned parquet download; repository revision and file hash describe repository metadata checked separately at retrieval.",
       "shellIdsObserved": [
         1,
@@ -49,16 +50,16 @@
         4
       ],
       "epochQuality": "dataset-viewer-snapshot-date",
-      "status": "coverage-difference-review",
+      "status": "date-mismatch",
       "localValue": 11137,
       "localAsOf": "2026-10-09",
       "localSource": "https://planet4589.org/space/con/star/stats.html",
       "localScope": "physical-in-orbit-estimate",
       "peerScope": "catalogue-tracked-payloads",
-      "deltaPeerMinusLocal": -34,
+      "deltaPeerMinusLocal": null,
       "exactEpochAligned": false,
       "interpretation": "Secondary coverage comparison only; page date may differ from catalogue epoch. Agreement is not proof, difference is not a verified inventory error.",
-      "action": "Check primary source, newest launch batches and naming coverage; do not overwrite automatically."
+      "action": "Retain provenance and date; no automatic inventory correction."
     },
     {
       "projectId": "orbital-radar",

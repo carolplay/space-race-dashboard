@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T08:01:56.337Z",
+  "generatedAt": "2026-10-11T12:07:06.252Z",
   "summary": {
     "productionSources": 6,
     "freshSources": 5,
@@ -83,12 +83,12 @@
       "name": "Launch Library 2",
       "roleZh": "近期轨道任务、发射台、未来清单与一级复用记录",
       "roleEn": "Recent orbital missions, pads, manifest and reusable-stage records",
-      "updatedAt": "2026-10-10T07:57:57Z",
-      "retrievedAt": "2026-10-10T12:03:20.614Z",
+      "updatedAt": "2026-10-10T15:34:53Z",
+      "retrievedAt": "2026-10-11T12:02:43.387Z",
       "cadence": "daily",
       "status": "fresh",
-      "coverageZh": "2024-01-01—2026-10-10；822 次已观测尝试；16 个未来任务",
-      "coverageEn": "2024-01-01—2026-10-10; 822 observed attempts; 16 upcoming missions",
+      "coverageZh": "2024-01-01—2026-10-11；823 次已观测尝试；16 个未来任务",
+      "coverageEn": "2024-01-01—2026-10-11; 823 observed attempts; 16 upcoming missions",
       "noteZh": "未来日期保留 LL2 精度；详细模式的一级序列号与回收字段从 2026 年开始完整积累。",
       "noteEn": "Future dates retain LL2 precision; detailed stage serial and landing fields accumulate comprehensively from 2026.",
       "url": "https://thespacedevs.com/llapi"

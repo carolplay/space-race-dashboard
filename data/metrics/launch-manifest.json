@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T12:03:20.614Z",
-  "asOf": "2026-10-10",
+  "generatedAt": "2026-10-11T12:02:43.387Z",
+  "asOf": "2026-10-11",
   "coverage": {
-    "upcomingFrom": "2026-10-10",
-    "upcomingTo": "2026-11-30",
+    "upcomingFrom": "2026-10-12",
+    "upcomingTo": "2026-12-31",
     "detailedRecordsFrom": "2026-01-03"
   },
   "source": {
@@ -20,51 +20,6 @@
     "scope": "Detailed stage data accumulates from Alpha 1.1 onward; earlier stored normal-mode records are not backfilled automatically."
   },
   "upcoming": [
-    {
-      "id": "da43dc2c-00af-4cc1-8ef1-90a60b2eb9e5",
-      "name": "Falcon 9 Block 5 | SDA Tranche 1 Transport Layer A",
-      "net": "2026-10-10T07:39:44Z",
-      "netPrecision": "Second",
-      "windowStart": "2026-10-10T07:39:44Z",
-      "windowEnd": "2026-10-10T07:39:44Z",
-      "status": "Launch in Flight",
-      "provider": "SpaceX",
-      "countryCode": "US",
-      "region": "us",
-      "rocket": "Falcon 9 Block 5",
-      "family": "Falcon 9",
-      "missionType": "Government/Top Secret",
-      "missionDescription": "Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites.\r\n\r\nThe constellation will be interconnected with Optical Inter-Satellite Links (OISLs) which have significantly increased performance over existing radio frequency crosslinks. It is expected to operate over Ka band, have stereo coverage and be dynamically networked for simpler hand-offs, greater bandwidth and fault tolerance.\r\n\r\nThis launch carries 21 satellites manufactured by Northrop Grumman.",
-      "orbit": "PO",
-      "pad": "Space Launch Complex 4E",
-      "location": "Vandenberg SFB, CA, USA",
-      "padTimezone": "America/Los_Angeles",
-      "padTurnaroundDays": 8.55,
-      "infoUrl": "https://www.spacex.com/launches/sda-t1tl-a",
-      "webcastUrl": "https://www.youtube.com/watch?v=g2zSmp6e2Vs",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/da43dc2c-00af-4cc1-8ef1-90a60b2eb9e5/?format=json",
-      "stages": [
-        {
-          "id": 559,
-          "type": "Core",
-          "reused": true,
-          "flightNumber": 6,
-          "serialNumber": "B1103",
-          "vehicleStatus": "active",
-          "previousFlightDate": "2026-08-12T04:46:47Z",
-          "turnaround": "P59DT2H52M57S",
-          "landing": {
-            "attempt": true,
-            "success": true,
-            "description": "The Falcon 9 first stage B1103 has landed on Landing Zone 4 after its 6th flight.",
-            "downrangeDistanceKm": 0.4,
-            "location": "Landing Zone 4",
-            "locationAbbrev": "LZ-4",
-            "type": null
-          }
-        }
-      ]
-    },
     {
       "id": "97c6f5e1-299e-4652-b72d-9618ac047076",
       "name": "Falcon 9 Block 5 | Starlink Group 15-25",
@@ -551,9 +506,79 @@
       "webcastUrl": null,
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/22e117bf-041c-49d5-9d09-7b180036e143/?format=json",
       "stages": []
+    },
+    {
+      "id": "0f867f0c-5422-4d44-93b8-d7faaae7019b",
+      "name": "Starship | Flight 15",
+      "net": "2026-12-31T00:00:00Z",
+      "netPrecision": "Quarter 4",
+      "windowStart": "2026-12-31T00:00:00Z",
+      "windowEnd": "2026-12-31T00:00:00Z",
+      "status": "To Be Determined",
+      "provider": "SpaceX",
+      "countryCode": "US",
+      "region": "us",
+      "rocket": "Starship V3",
+      "family": "Starship",
+      "missionType": "Test Flight",
+      "missionDescription": "15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3.",
+      "orbit": "LEO",
+      "pad": "Orbital Launch Pad 2",
+      "location": "SpaceX Starbase, TX, USA",
+      "padTimezone": "America/Chicago",
+      "padTurnaroundDays": 93.47,
+      "infoUrl": null,
+      "webcastUrl": null,
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/0f867f0c-5422-4d44-93b8-d7faaae7019b/?format=json",
+      "stages": []
     }
   ],
   "recent": [
+    {
+      "id": "da43dc2c-00af-4cc1-8ef1-90a60b2eb9e5",
+      "name": "Falcon 9 Block 5 | SDA Tranche 1 Transport Layer A",
+      "net": "2026-10-10T07:39:44Z",
+      "netPrecision": "Second",
+      "windowStart": "2026-10-10T07:39:44Z",
+      "windowEnd": "2026-10-10T07:39:44Z",
+      "status": "Launch Successful",
+      "provider": "SpaceX",
+      "countryCode": "US",
+      "region": "us",
+      "rocket": "Falcon 9 Block 5",
+      "family": "Falcon 9",
+      "missionType": "Government/Top Secret",
+      "missionDescription": "Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites.\r\n\r\nThe constellation will be interconnected with Optical Inter-Satellite Links (OISLs) which have significantly increased performance over existing radio frequency crosslinks. It is expected to operate over Ka band, have stereo coverage and be dynamically networked for simpler hand-offs, greater bandwidth and fault tolerance.\r\n\r\nThis launch carries 21 satellites manufactured by Northrop Grumman.",
+      "orbit": "PO",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "padTimezone": "America/Los_Angeles",
+      "padTurnaroundDays": 8.55,
+      "infoUrl": "https://www.spacex.com/launches/sda-t1tl-a",
+      "webcastUrl": "https://www.youtube.com/watch?v=lrCq8bWuExs",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/da43dc2c-00af-4cc1-8ef1-90a60b2eb9e5/?format=json",
+      "stages": [
+        {
+          "id": 559,
+          "type": "Core",
+          "reused": true,
+          "flightNumber": 6,
+          "serialNumber": "B1103",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-08-12T04:46:47Z",
+          "turnaround": "P59DT2H52M57S",
+          "landing": {
+            "attempt": true,
+            "success": true,
+            "description": "The Falcon 9 first stage B1103 has landed on Landing Zone 4 after its 6th flight.",
+            "downrangeDistanceKm": 0.4,
+            "location": "Landing Zone 4",
+            "locationAbbrev": "LZ-4",
+            "type": null
+          }
+        }
+      ]
+    },
     {
       "id": "a1bb0984-19d4-4b47-9bba-706d225573e2",
       "name": "Long March 12 | SatNet LEO Group 27",
@@ -629,25 +654,6 @@
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/4651fd8a-43de-4166-bf8f-c168b3bd1d2c/?format=json",
       "stages": [
         {
-          "id": 989,
-          "type": "Strap-On Booster",
-          "reused": true,
-          "flightNumber": 4,
-          "serialNumber": "B1072",
-          "vehicleStatus": "active",
-          "previousFlightDate": "2026-08-30T11:26:04Z",
-          "turnaround": "P32DT16H27M56S",
-          "landing": {
-            "attempt": true,
-            "success": true,
-            "description": "The Falcon Heavy side booster B1072 has landed back at the launch site at Landing Zone 2 after its 4th flight.",
-            "downrangeDistanceKm": 14.6,
-            "location": "Landing Zone 2",
-            "locationAbbrev": "LZ-2",
-            "type": null
-          }
-        },
-        {
           "id": 988,
           "type": "Strap-On Booster",
           "reused": true,
@@ -682,6 +688,25 @@
             "downrangeDistanceKm": null,
             "location": "Atlantic Ocean",
             "locationAbbrev": "ATL",
+            "type": null
+          }
+        },
+        {
+          "id": 989,
+          "type": "Strap-On Booster",
+          "reused": true,
+          "flightNumber": 4,
+          "serialNumber": "B1072",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-08-30T11:26:04Z",
+          "turnaround": "P32DT16H27M56S",
+          "landing": {
+            "attempt": true,
+            "success": true,
+            "description": "The Falcon Heavy side booster B1072 has landed back at the launch site at Landing Zone 2 after its 4th flight.",
+            "downrangeDistanceKm": 14.6,
+            "location": "Landing Zone 2",
+            "locationAbbrev": "LZ-2",
             "type": null
           }
         }
@@ -966,58 +991,13 @@
       "webcastUrl": null,
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/5af31461-bce5-4cfb-a0ee-b527cf285d90/?format=json",
       "stages": []
-    },
-    {
-      "id": "d1471f9d-e9d0-4146-8e97-90863e48bfc8",
-      "name": "Falcon 9 Block 5 | Starlink Group 15-27",
-      "net": "2026-09-20T01:47:00Z",
-      "netPrecision": "Second",
-      "windowStart": "2026-09-20T01:47:00Z",
-      "windowEnd": "2026-09-20T05:47:00Z",
-      "status": "Launch Successful",
-      "provider": "SpaceX",
-      "countryCode": "US",
-      "region": "us",
-      "rocket": "Falcon 9 Block 5",
-      "family": "Falcon 9",
-      "missionType": "Communications",
-      "missionDescription": "A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system.",
-      "orbit": "LEO",
-      "pad": "Space Launch Complex 4E",
-      "location": "Vandenberg SFB, CA, USA",
-      "padTimezone": "America/Los_Angeles",
-      "padTurnaroundDays": 3.03,
-      "infoUrl": "https://www.spacex.com/launches/sl-15-27",
-      "webcastUrl": "https://www.youtube.com/watch?v=gOcigcsXtHk",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/d1471f9d-e9d0-4146-8e97-90863e48bfc8/?format=json",
-      "stages": [
-        {
-          "id": 986,
-          "type": "Core",
-          "reused": true,
-          "flightNumber": 17,
-          "serialNumber": "B1093",
-          "vehicleStatus": "active",
-          "previousFlightDate": "2026-08-08T16:35:02Z",
-          "turnaround": "P42DT9H11M58S",
-          "landing": {
-            "attempt": true,
-            "success": true,
-            "description": "The Falcon 9 first stage B1093 has landed on ASDS OCISLY after its 17th flight.",
-            "downrangeDistanceKm": 574,
-            "location": "Of Course I Still Love You",
-            "locationAbbrev": "OCISLY",
-            "type": null
-          }
-        }
-      ]
     }
   ],
   "reuse": {
     "year": "2026",
-    "recoveryMissions": 116,
-    "landingAttempts": 119,
-    "successfulLandings": 119,
+    "recoveryMissions": 117,
+    "landingAttempts": 120,
+    "successfulLandings": 120,
     "failedLandings": 0,
     "pendingLandings": 0,
     "serializedVehicles": [
@@ -1324,6 +1304,51 @@
     ],
     "recentRecoveries": [
       {
+        "id": "da43dc2c-00af-4cc1-8ef1-90a60b2eb9e5",
+        "name": "Falcon 9 Block 5 | SDA Tranche 1 Transport Layer A",
+        "net": "2026-10-10T07:39:44Z",
+        "netPrecision": "Second",
+        "windowStart": "2026-10-10T07:39:44Z",
+        "windowEnd": "2026-10-10T07:39:44Z",
+        "status": "Launch Successful",
+        "provider": "SpaceX",
+        "countryCode": "US",
+        "region": "us",
+        "rocket": "Falcon 9 Block 5",
+        "family": "Falcon 9",
+        "missionType": "Government/Top Secret",
+        "missionDescription": "Tranche 1 Transport Layer A is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites.\r\n\r\nThe constellation will be interconnected with Optical Inter-Satellite Links (OISLs) which have significantly increased performance over existing radio frequency crosslinks. It is expected to operate over Ka band, have stereo coverage and be dynamically networked for simpler hand-offs, greater bandwidth and fault tolerance.\r\n\r\nThis launch carries 21 satellites manufactured by Northrop Grumman.",
+        "orbit": "PO",
+        "pad": "Space Launch Complex 4E",
+        "location": "Vandenberg SFB, CA, USA",
+        "padTimezone": "America/Los_Angeles",
+        "padTurnaroundDays": 8.55,
+        "infoUrl": "https://www.spacex.com/launches/sda-t1tl-a",
+        "webcastUrl": "https://www.youtube.com/watch?v=lrCq8bWuExs",
+        "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/da43dc2c-00af-4cc1-8ef1-90a60b2eb9e5/?format=json",
+        "stages": [
+          {
+            "id": 559,
+            "type": "Core",
+            "reused": true,
+            "flightNumber": 6,
+            "serialNumber": "B1103",
+            "vehicleStatus": "active",
+            "previousFlightDate": "2026-08-12T04:46:47Z",
+            "turnaround": "P59DT2H52M57S",
+            "landing": {
+              "attempt": true,
+              "success": true,
+              "description": "The Falcon 9 first stage B1103 has landed on Landing Zone 4 after its 6th flight.",
+              "downrangeDistanceKm": 0.4,
+              "location": "Landing Zone 4",
+              "locationAbbrev": "LZ-4",
+              "type": null
+            }
+          }
+        ]
+      },
+      {
         "id": "4651fd8a-43de-4166-bf8f-c168b3bd1d2c",
         "name": "Falcon Heavy | NROL-97",
         "net": "2026-10-02T03:54:00Z",
@@ -1347,25 +1372,6 @@
         "webcastUrl": "https://www.youtube.com/watch?v=5ypJLI6uwNs",
         "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/4651fd8a-43de-4166-bf8f-c168b3bd1d2c/?format=json",
         "stages": [
-          {
-            "id": 989,
-            "type": "Strap-On Booster",
-            "reused": true,
-            "flightNumber": 4,
-            "serialNumber": "B1072",
-            "vehicleStatus": "active",
-            "previousFlightDate": "2026-08-30T11:26:04Z",
-            "turnaround": "P32DT16H27M56S",
-            "landing": {
-              "attempt": true,
-              "success": true,
-              "description": "The Falcon Heavy side booster B1072 has landed back at the launch site at Landing Zone 2 after its 4th flight.",
-              "downrangeDistanceKm": 14.6,
-              "location": "Landing Zone 2",
-              "locationAbbrev": "LZ-2",
-              "type": null
-            }
-          },
           {
             "id": 988,
             "type": "Strap-On Booster",
@@ -1401,6 +1407,25 @@
               "downrangeDistanceKm": null,
               "location": "Atlantic Ocean",
               "locationAbbrev": "ATL",
+              "type": null
+            }
+          },
+          {
+            "id": 989,
+            "type": "Strap-On Booster",
+            "reused": true,
+            "flightNumber": 4,
+            "serialNumber": "B1072",
+            "vehicleStatus": "active",
+            "previousFlightDate": "2026-08-30T11:26:04Z",
+            "turnaround": "P32DT16H27M56S",
+            "landing": {
+              "attempt": true,
+              "success": true,
+              "description": "The Falcon Heavy side booster B1072 has landed back at the launch site at Landing Zone 2 after its 4th flight.",
+              "downrangeDistanceKm": 14.6,
+              "location": "Landing Zone 2",
+              "locationAbbrev": "LZ-2",
               "type": null
             }
           }
@@ -1851,89 +1876,6 @@
               "downrangeDistanceKm": 574,
               "location": "Of Course I Still Love You",
               "locationAbbrev": "OCISLY",
-              "type": null
-            }
-          }
-        ]
-      },
-      {
-        "id": "521f3a1c-f977-4306-9b7f-495858719adf",
-        "name": "Falcon Heavy | Nancy Grace Roman Space Telescope",
-        "net": "2026-08-30T11:26:04Z",
-        "netPrecision": "Second",
-        "windowStart": "2026-08-30T11:25:49Z",
-        "windowEnd": "2026-08-30T11:26:19Z",
-        "status": "Launch Successful",
-        "provider": "SpaceX",
-        "countryCode": "US",
-        "region": "us",
-        "rocket": "Falcon Heavy",
-        "family": "Falcon",
-        "missionType": "Astrophysics",
-        "missionDescription": "The Nancy Grace Roman Space Telescope is a NASA infrared space telescope with a 2.4 m (7.9 ft) wide field of view primary mirror and two scientific instruments. The Wide-Field Instrument (WFI) is a 300.8-megapixel multi-band visible and near-infrared camera, providing a sharpness of images comparable to that achieved by the Hubble Space Telescope over a 0.28 square degree field of view, 100 times larger than imaging cameras on the Hubble. The Coronagraphic Instrument (CGI) is a high-contrast, small field of view camera and spectrometer covering visible and near-infrared wavelengths using novel starlight-suppression technology. Roman objectives include a search for extra-solar planets using gravitational microlensing, and probing the expansion history of the Universe and the growth of cosmic structure, with the goal of measuring the effects of dark energy, the consistency of general relativity, and the curvature of spacetime.",
-        "orbit": "L2",
-        "pad": "Launch Complex 39A",
-        "location": "Kennedy Space Center, FL, USA",
-        "padTimezone": "America/New_York",
-        "padTurnaroundDays": 122.88,
-        "infoUrl": "https://www.spacex.com/launches/roman",
-        "webcastUrl": "https://www.youtube.com/watch?v=9wq3VHsL_bE",
-        "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/521f3a1c-f977-4306-9b7f-495858719adf/?format=json",
-        "stages": [
-          {
-            "id": 918,
-            "type": "Strap-On Booster",
-            "reused": true,
-            "flightNumber": 3,
-            "serialNumber": "B1072",
-            "vehicleStatus": "active",
-            "previousFlightDate": "2026-04-29T14:13:00Z",
-            "turnaround": "P122DT21H13M4S",
-            "landing": {
-              "attempt": true,
-              "success": true,
-              "description": "The Falcon Heavy side booster B1072 has landed back at the launch site at Landing Zone 2 after its 3rd flight.",
-              "downrangeDistanceKm": 14.6,
-              "location": "Landing Zone 2",
-              "locationAbbrev": "LZ-2",
-              "type": null
-            }
-          },
-          {
-            "id": 917,
-            "type": "Strap-On Booster",
-            "reused": false,
-            "flightNumber": 1,
-            "serialNumber": "B1104",
-            "vehicleStatus": "active",
-            "previousFlightDate": null,
-            "turnaround": null,
-            "landing": {
-              "attempt": true,
-              "success": true,
-              "description": "The Falcon Heavy side booster B1104 has landed back at the launch site at Landing Zone 40 after its 1st flight.",
-              "downrangeDistanceKm": 5.8,
-              "location": "Landing Zone 40",
-              "locationAbbrev": "LZ-40",
-              "type": null
-            }
-          },
-          {
-            "id": 916,
-            "type": "Core",
-            "reused": false,
-            "flightNumber": 1,
-            "serialNumber": "B1105",
-            "vehicleStatus": "expended",
-            "previousFlightDate": null,
-            "turnaround": null,
-            "landing": {
-              "attempt": false,
-              "success": null,
-              "description": "The Falcon Heavy center core B1105 will be expended.",
-              "downrangeDistanceKm": null,
-              "location": "Atlantic Ocean",
-              "locationAbbrev": "ATL",
               "type": null
             }
           }
