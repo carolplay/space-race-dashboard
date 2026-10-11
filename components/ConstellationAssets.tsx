@@ -16,7 +16,7 @@ export default function ConstellationAssets({lang}:{lang:Lang}){
   const tx=(d:string)=>(epoch(d)-epoch('2012-01-01'))/(epoch('2040-01-01')-epoch('2012-01-01'))*100;
   return <section id="constellation-assets" className="constellation-assets" aria-labelledby="constellation-title">
     <div className="constellation-heading"><div><span className="constellation-eyebrow">{tr('03C / 星座资产与申报','03C / FLEETS & FILINGS')}</span><h3 id="constellation-title">{tr('在轨规模，正在如何增长','How orbital fleets are growing')}</h3></div><p>{tr('在轨数量估算 · 线性 / 对数双视图','Estimated orbital counts · linear / log views')}<br/>{data.inventoryAsOf}</p></div>
-    <nav className="fleet-view-nav" aria-label={tr('星座视图导航','Constellation view navigation')}><a href="#constellation-explorer">{tr('轨道结构','Orbital structure')}</a><a href="#fleet-growth">{tr('增长与阶段目标','Growth & staged targets')}</a><a href="#itu-filings">{tr('ITU 申报','ITU filings')}</a><a href="#orbital-functional-stack">{tr('功能关系','Functional relationships')}</a><a href="#priority-references">{tr('学习与对照','References & reconciliation')}</a></nav>
+    <nav className="fleet-view-nav" aria-label={tr('星座视图导航','Constellation view navigation')}><a className="atlas-entry" href="/constellations">{tr("星座空间实验室 ↗","Constellation Atlas ↗")}</a><a href="#constellation-explorer">{tr('轨道结构','Orbital structure')}</a><a href="#fleet-growth">{tr('增长与阶段目标','Growth & staged targets')}</a><a href="#itu-filings">{tr('ITU 申报','ITU filings')}</a><a href="#orbital-functional-stack">{tr('功能关系','Functional relationships')}</a><a href="#priority-references">{tr('学习与对照','References & reconciliation')}</a></nav>
     <ConstellationTiers lang={lang}/>
     <ConstellationExplorer lang={lang}/>
     <ConstellationGrowth lang={lang}/>

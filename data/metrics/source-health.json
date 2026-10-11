@@ -1,13 +1,30 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T12:03:54.989Z",
+  "generatedAt": "2026-10-11T08:01:56.337Z",
   "summary": {
-    "productionSources": 5,
-    "freshSources": 4,
+    "productionSources": 6,
+    "freshSources": 5,
     "reviewSources": 1,
     "referenceOnly": 1
   },
   "sources": [
+    {
+      "id": "celestrak-gp",
+      "grade": "B",
+      "mode": "structured",
+      "name": "CelesTrak GP / OMM",
+      "roleZh": "五个星座的空间推算输入；非实时遥测",
+      "roleEn": "Spatial-propagation inputs for five constellations; not telemetry",
+      "updatedAt": null,
+      "retrievedAt": "2026-10-11T07:52:07.499Z",
+      "cadence": "daily",
+      "status": "fresh",
+      "coverageZh": "12,624 个 GP 对象；按星座加载",
+      "coverageEn": "12,624 GP objects; loaded by constellation",
+      "noteZh": "上游未给单一更新时刻；每个对象保存要素历元，获取时间不作为更新时刻。超过七天要素不绘制，GP 数量不等于物理库存或运营数。",
+      "noteEn": "No single upstream update timestamp: per-object epochs are preserved and retrieval is not relabeled as an update. Elements over seven days old are not drawn; GP counts are not physical or operational inventory.",
+      "url": "https://celestrak.org/NORAD/elements/"
+    },
     {
       "id": "gcat-constellations",
       "grade": "B",

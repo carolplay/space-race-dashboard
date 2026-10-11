@@ -254,6 +254,14 @@ test("ships an auditable mission manifest, recovery model and source-health repo
   assert.equal(health.summary.freshSources, health.sources.filter((source) => source.status === "fresh").length);
   assert.ok(health.sources.some((source) => source.id === "next-spaceflight-reference" && source.mode === "reference-only"));
   for (const source of health.sources.filter((source) => source.mode !== "reference-only")) {
+    if(source.id==="celestrak-gp"){
+      assert.equal(source.updatedAt,null,'retrieval cannot masquerade as an upstream update');
+      const space=JSON.parse(await readFile(new URL('../data/metrics/constellation-space.json',import.meta.url),'utf8'));
+      assert.equal(source.retrievedAt,space.retrievedAt);
+      const stale=space.groups.some(g=>Math.floor((Date.parse(health.generatedAt.slice(0,10))-Date.parse(g.epochNewest))/86400000)>2);
+      assert.equal(source.status,stale?'review':'fresh');
+      continue;
+    }
     assert.ok(source.updatedAt);
     const ageDays = Math.max(0, Math.floor((Date.parse(health.generatedAt.slice(0, 10)) - Date.parse(source.updatedAt)) / 86_400_000));
     const threshold = source.mode === "editorial" ? 30 : 45;

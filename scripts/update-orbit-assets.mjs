@@ -3,6 +3,7 @@ import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildConstellationOrbits } from "./build-constellation-orbits.mjs";
+import { updateConstellationSpace } from "./update-constellation-space.mjs";
 
 const ACTIVE_URL = "https://planet4589.org/space/gcat/tsv/derived/active.tsv";
 const CURRENT_URL = "https://planet4589.org/space/gcat/tsv/derived/currentcat.tsv";
@@ -237,3 +238,4 @@ const constellationOrbits = buildConstellationOrbits(currentText, constellationA
 await writeFile(resolve(projectRoot, 'data/metrics/constellation-orbits.json'), JSON.stringify(constellationOrbits, null, 2) + '\n');
 console.log(`Stored GCAT orbit snapshot ${date}: ${activeByRegion.global} active payloads, ${catalogByRegion.global} catalog objects.`);
 console.log(`Known active-payload mass: ${(knownMassByRegionKg.global / 1_000).toFixed(1)} t (${snapshot.massCoverage.percent}% object coverage).`);
+await updateConstellationSpace();

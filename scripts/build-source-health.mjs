@@ -20,6 +20,7 @@ const generatedAt = new Date().toISOString();
 const launchSnapshot = await readJson('data/snapshots/launch-library-2.json');
 const launchUpdatedAt = launchSnapshot.records.map(r=>r.lastUpdated).filter(Boolean).sort().at(-1) ?? null;
 const fleets = await readJson('data/metrics/constellation-assets.json');
+const space = await readJson('data/metrics/constellation-space.json');
 const today = generatedAt.slice(0, 10);
 const daysSince = (value) => value ? Math.max(0, Math.floor((Date.parse(today) - Date.parse(value)) / 86_400_000)) : null;
 const statusFor = (value, threshold = 45) => {
@@ -29,6 +30,19 @@ const statusFor = (value, threshold = 45) => {
 const editorialAsOf = [frontier.asOf, development.asOf, industrial.asOf, recovery.asOf].sort()[0];
 
 const sources = [
+  {
+    id: 'celestrak-gp', grade: 'B', mode: 'structured',
+    name: 'CelesTrak GP / OMM',
+    roleZh: '五个星座的空间推算输入；非实时遥测',
+    roleEn: 'Spatial-propagation inputs for five constellations; not telemetry',
+    updatedAt: null, retrievedAt: space.retrievedAt, cadence: 'daily',
+    status: space.groups.some(g=>daysSince(g.epochNewest)>2)?'review':'fresh',
+    coverageZh: `${space.groups.reduce((n,g)=>n+g.records,0).toLocaleString('en-US')} 个 GP 对象；按星座加载`,
+    coverageEn: `${space.groups.reduce((n,g)=>n+g.records,0).toLocaleString('en-US')} GP objects; loaded by constellation`,
+    noteZh: '上游未给单一更新时刻；每个对象保存要素历元，获取时间不作为更新时刻。超过七天要素不绘制，GP 数量不等于物理库存或运营数。',
+    noteEn: 'No single upstream update timestamp: per-object epochs are preserved and retrieval is not relabeled as an update. Elements over seven days old are not drawn; GP counts are not physical or operational inventory.',
+    url: 'https://celestrak.org/NORAD/elements/',
+  },
   {
     id: 'gcat-constellations', grade: 'B', mode: 'structured',
     name: 'GCAT Constellation Statistics',
