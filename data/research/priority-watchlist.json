@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "establishedOn": "2026-10-10",
+  "purpose": "Reference learning and secondary reconciliation; never an authoritative replacement for primary inventory.",
+  "projects": [
+    {
+      "id": "starlink-mission-control",
+      "priority": 1,
+      "name": "Starlink Mission Control",
+      "url": "https://huggingface.co/spaces/juliensimon/starlink-mission-control",
+      "dataUrl": "https://huggingface.co/datasets/juliensimon/starlink-fleet-data",
+      "cadence": "daily",
+      "accessMode": "public-dataset-or-attributed-query",
+      "licenseUrl": "https://celestrak.org/usage-policy.php",
+      "learn": [
+        "Constellation-level shells and lifecycle views",
+        "Fleet history linked to spatial context",
+        "Explicit separation of observations, inferred state and simulation"
+      ],
+      "entities": [
+        "starlink"
+      ],
+      "caveats": [
+        "GP catalogue coverage is not a complete physical inventory",
+        "Operational altitude is an inferred state, not confirmed commercial service",
+        "Simulated ISL routing and demo dish telemetry are not measured network performance"
+      ]
+    },
+    {
+      "id": "orbital-radar",
+      "priority": 1,
+      "name": "Orbital Radar",
+      "url": "https://orbitalradar.com/",
+      "dataUrl": "https://orbitalradar.com/satellite-internet/guowang-qianfan",
+      "cadence": "daily",
+      "accessMode": "recorded-reference-only-until-permission",
+      "licenseUrl": "https://orbitalradar.com/legal",
+      "learn": [
+        "Multiple constellations including Chinese networks",
+        "Constellation summaries linked to selected spatial views",
+        "Deployment rhythm and explanatory context"
+      ],
+      "entities": [
+        "starlink",
+        "oneweb",
+        "amazon-leo",
+        "guowang",
+        "qianfan"
+      ],
+      "caveats": [
+        "No scraper, bulk harvest or private API without written permission",
+        "Public page retrieval only within permitted attributed user-query use; otherwise mark permission-required",
+        "Tracked payloads and page update dates do not establish complete inventory or exact observation epochs",
+        "Plans, active service and tracked payloads must not be conflated"
+      ]
+    }
+  ]
+}

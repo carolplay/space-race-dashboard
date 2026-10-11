@@ -35,6 +35,7 @@ const names: Record<string, string> = {
   'Yellow Sea (launch location 5)':'黄海发射位置 5',
   'Atlantic Ocean':'大西洋', 'active':'在用', 'expended':'已消耗', 'retired':'已退役',
   'Launch Successful':'发射成功','Launch Failure':'发射失败','Partial Failure':'部分失败','In Flight':'飞行中',
+  'Launch in Flight':'发射飞行中', 'Go for Launch':'准备发射', 'Launch Hold':'发射暂缓', 'Launch Aborted':'发射中止',
   'Minute':'分钟','Second':'秒','Hour':'小时','Day':'日期','Month':'月份','Quarter':'季度','Year':'年份',
   'TBD':'待定','NET':'不早于','N/A':'未公布',
   'Satish Dhawan Space Centre First Launch Pad':'萨蒂什·达万航天中心第一发射台',

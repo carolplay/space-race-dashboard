@@ -2,6 +2,7 @@ import { sourceLabel } from "@/lib/dashboard-language";
 import data from "@/data/metrics/constellation-assets.json";
 import ConstellationTiers from "./ConstellationTiers";
 import ConstellationGrowth from "./ConstellationGrowth";
+import ConstellationExplorer from "./ConstellationExplorer";
 import { FleetDemandForecast } from "./DemandForecast";
 import ConstellationFCC from "./ConstellationFCC";
 import ITUProcedureDates from "./ITUProcedureDates";
@@ -15,13 +16,15 @@ export default function ConstellationAssets({lang}:{lang:Lang}){
   const tx=(d:string)=>(epoch(d)-epoch('2012-01-01'))/(epoch('2040-01-01')-epoch('2012-01-01'))*100;
   return <section id="constellation-assets" className="constellation-assets" aria-labelledby="constellation-title">
     <div className="constellation-heading"><div><span className="constellation-eyebrow">{tr('03C / 星座资产与申报','03C / FLEETS & FILINGS')}</span><h3 id="constellation-title">{tr('在轨规模，正在如何增长','How orbital fleets are growing')}</h3></div><p>{tr('在轨数量估算 · 线性 / 对数双视图','Estimated orbital counts · linear / log views')}<br/>{data.inventoryAsOf}</p></div>
+    <nav className="fleet-view-nav" aria-label={tr('星座视图导航','Constellation view navigation')}><a href="#constellation-explorer">{tr('轨道结构','Orbital structure')}</a><a href="#fleet-growth">{tr('增长与阶段目标','Growth & staged targets')}</a><a href="#itu-filings">{tr('ITU 申报','ITU filings')}</a><a href="#orbital-functional-stack">{tr('功能关系','Functional relationships')}</a><a href="#priority-references">{tr('学习与对照','References & reconciliation')}</a></nav>
     <ConstellationTiers lang={lang}/>
+    <ConstellationExplorer lang={lang}/>
     <ConstellationGrowth lang={lang}/>
     <FleetDemandForecast lang={lang}/>
     <div className="fleet-scope-grid">{data.constellations.map((c,i)=><article key={c.id} style={{borderTopColor:colors[i]}}><h4>{zh?c.nameZh:c.nameEn}</h4><p>{sourceLabel(c.operator,lang)}</p><strong>{c.planValue}</strong><p>{zh?c.planZh:c.planEn}</p><a href={c.planSourceUrl} target="_blank" rel="noreferrer">{tr('目标来源','Target source')} ↗</a><a href={c.sourceUrl} target="_blank" rel="noreferrer">GCAT · {c.asOf} ↗</a></article>)}</div>
     <p className="constellation-method">{zh?data.historyMethodZh:data.historyMethodEn} {tr('目标性质分别为授权、通知或商业计划，不能相加，也不作为 ITU 完成率分母。其他运营者和通信/导航网络在下方保留。','Targets represent authorization, notification or commercial plans: not additive, not ITU completion denominators. Other operators and communications/navigation networks remain below.')}</p>
     <ConstellationFCC lang={lang}/>
-    <div className="itu-heading"><h4>{tr('ITU：申报程序、BIU 与 RES35 时间线','ITU: filing procedure, BIU and RES35 timeline')}</h4><p>2012–2040 · {data.ituAsOf}</p></div>
+    <div id="itu-filings" className="itu-heading"><h4>{tr('ITU：申报程序、BIU 与 RES35 时间线','ITU: filing procedure, BIU and RES35 timeline')}</h4><p>2012–2040 · {data.ituAsOf}</p></div>
     <p className="itu-explainer">{tr('有效收件 → API / CR 公布 → 通知审查 / MIFR 登记，不能合并为一个“申请通过日”。七年期限通常从具体频率组的有效收件日起算；RES35 的 2 / 5 / 7 年阶段以监管期终点（或过渡锚点）起算，而非公布或 BIU 日。BIU 是独立的频率启用事件；报告收件不等于实际达成。','Effective receipt → API / CR publication → notification examination / MIFR recording are not a single approval date. The seven-year limit normally follows effective receipt per frequency group. RES35 stages follow the regulatory limit or transitional anchor, not publication or BIU. BIU is a separate frequency-use event; report receipt is not achievement.')}</p>
     <ITUStages lang={lang}/>
     <FilingBasics lang={lang}/>

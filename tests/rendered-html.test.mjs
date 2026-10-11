@@ -39,6 +39,10 @@ test("server-renders the Cislunar-I dashboard", async () => {
   const { version } = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'));
   assert.ok(html.includes(`ALPHA ${version}`));
   assert.match(html, /id="orbital-functional-stack"/);
+  assert.match(html, /id="constellation-explorer"/);
+  assert.match(html, /星座的结构，不只是卫星的位置/);
+  assert.match(html, /id="priority-references"/);
+  assert.match(html, /轨道字段日期范围/);
   assert.match(html, /从资产清单，到服务关系/);
   assert.match(html, /EDRS-A/);
   assert.match(html, /未来十年：发射节奏与履约压力/);

@@ -11,6 +11,7 @@ test('localizes source labels, legacy bilingual fields and period qualifiers',()
   assert.equal(sourceLabel('Long March 6A | Yaogan 40 Group 04','zh'),'长征6A | 遥感40号 04组');
   assert.equal(sourceLabel('Space Launch Complex 4E','zh'),'航天发射台 4E');
   assert.equal(sourceLabel('China SatNet','zh'),'中国星网');
+  assert.equal(sourceLabel('Launch in Flight','zh'),'发射飞行中');
   assert.equal(sourceLabel('朱雀三号 / Zhuque-3','en'),'Zhuque-3');
   assert.equal(sourceLabel('朱雀三号 / Zhuque-3','zh'),'朱雀三号');
   assert.equal(sourceLabel('约 T+8:19','en'),'Approx. T+8:19');

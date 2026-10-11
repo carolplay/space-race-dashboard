@@ -1,6 +1,6 @@
 {
   "name": "space-race-dashboard",
-  "version": "1.7.1",
+  "version": "1.8.0",
   "private": true,
   "engines": {
     "node": ">=22.13.0"
@@ -17,6 +17,8 @@
     "data:update:constellations": "node scripts/update-constellation-inventory.mjs",
     "data:update:forecast": "node scripts/build-demand-forecast.mjs",
     "data:audit": "node scripts/build-source-health.mjs",
+    "data:update:constellation-orbits": "node scripts/build-constellation-orbits.mjs",
+    "data:reconcile:references": "node scripts/reconcile-reference-projects.mjs",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

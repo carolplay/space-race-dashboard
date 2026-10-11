@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildConstellationOrbits } from "./build-constellation-orbits.mjs";
 
 const ACTIVE_URL = "https://planet4589.org/space/gcat/tsv/derived/active.tsv";
 const CURRENT_URL = "https://planet4589.org/space/gcat/tsv/derived/currentcat.tsv";
@@ -231,5 +232,8 @@ const metrics = {
 };
 await writeFile(metricsPath, `${JSON.stringify(metrics, null, 2)}\n`);
 
+const constellationAssets = JSON.parse(await readFile(resolve(projectRoot, 'data/metrics/constellation-assets.json'), 'utf8'));
+const constellationOrbits = buildConstellationOrbits(currentText, constellationAssets, snapshot.retrievedAt);
+await writeFile(resolve(projectRoot, 'data/metrics/constellation-orbits.json'), JSON.stringify(constellationOrbits, null, 2) + '\n');
 console.log(`Stored GCAT orbit snapshot ${date}: ${activeByRegion.global} active payloads, ${catalogByRegion.global} catalog objects.`);
 console.log(`Known active-payload mass: ${(knownMassByRegionKg.global / 1_000).toFixed(1)} t (${snapshot.massCoverage.percent}% object coverage).`);
