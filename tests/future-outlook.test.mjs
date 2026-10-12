@@ -34,6 +34,9 @@ test("future route server-renders deterministic content with explicit uncertaint
  const {default:worker}=await import("../dist/server/index.js");
  const fetchPage=async()=>{const r=await worker.fetch(new Request("http://localhost/future",{headers:{accept:"text/html"}}),{ASSETS:{fetch:async()=>new Response("Not found",{status:404})}},{waitUntil(){},passThroughOnException(){}});assert.equal(r.status,200);return r.text();};
  const a=await fetchPage(),b=await fetchPage();
+ for(const svg of a.matchAll(/<svg class="future-chart"[\s\S]*?<\/svg>/g)){
+  for(const p of svg[0].matchAll(/points="([^"]+)"/g))assert.doesNotMatch(p[1],/\.\d{4}/,"SVG points must use canonical precision across server/browser engines");
+ }
  // RSC transport identifiers may differ; the rendered scenario values do not.
  for(const h of [a,b]){assert.match(h,/未来展望/);assert.match(h,/K 0.80/);assert.match(h,/非置信区间/);assert.match(h,/future-launch/);assert.match(h,/future-bases/);assert.match(h,/future-assets/);assert.match(h,/future-human/);assert.match(h,/future-kardashev/);assert.doesNotMatch(h,/NaN|Infinity/);}
 });
