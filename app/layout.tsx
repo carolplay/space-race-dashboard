@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 import "./constellation-explorer.css";
 import "./space-atlas.css";
+import "./future-outlook.css";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
