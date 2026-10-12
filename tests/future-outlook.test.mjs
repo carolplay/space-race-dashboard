@@ -29,6 +29,10 @@ test("scenario curves remain explicit, finite, separated and independent of obse
 test("downloaded assumptions exactly match model; observed data is never relabeled",async()=>{
  const publicModel=JSON.parse(await readFile(new URL("../public/data/future-outlook.json",import.meta.url)));
  assert.deepEqual(publicModel,model);assert.ok(model.sources.every(s=>s.url.startsWith("https://")));
+ const lock=JSON.parse(await readFile(new URL("../package-lock.json",import.meta.url)));
+ const pkg=JSON.parse(await readFile(new URL("../package.json",import.meta.url)));
+ assert.equal(lock.version,pkg.version);assert.equal(lock.packages[""].version,pkg.version);
+ for(const id of ["core","runtime"]){const p=lock.packages["node_modules/@emnapi/"+id];assert.equal(p.version,"1.10.0");assert.ok(p.resolved.endsWith(id+"-1.10.0.tgz"));}
 });
 test("future route server-renders deterministic content with explicit uncertainty and mirror chapters",async()=>{
  const {default:worker}=await import("../dist/server/index.js");
