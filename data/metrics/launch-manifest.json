@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T12:02:43.387Z",
-  "asOf": "2026-10-11",
+  "generatedAt": "2026-10-12T12:05:27.783Z",
+  "asOf": "2026-10-12",
   "coverage": {
-    "upcomingFrom": "2026-10-12",
+    "upcomingFrom": "2026-10-13",
     "upcomingTo": "2026-12-31",
     "detailedRecordsFrom": "2026-01-03"
   },
@@ -23,8 +23,8 @@
     {
       "id": "97c6f5e1-299e-4652-b72d-9618ac047076",
       "name": "Falcon 9 Block 5 | Starlink Group 15-25",
-      "net": "2026-10-12T23:00:00Z",
-      "netPrecision": "Minute",
+      "net": "2026-10-13T00:11:47Z",
+      "netPrecision": "Second",
       "windowStart": "2026-10-12T23:00:00Z",
       "windowEnd": "2026-10-13T03:00:00Z",
       "status": "Go for Launch",
@@ -39,9 +39,9 @@
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
       "padTimezone": "America/Los_Angeles",
-      "padTurnaroundDays": 2.64,
+      "padTurnaroundDays": 2.69,
       "infoUrl": "https://www.spacex.com/launches/sl-15-25",
-      "webcastUrl": "https://x.com/i/broadcasts/1yKAPwdemygxb",
+      "webcastUrl": "https://www.youtube.com/watch?v=tnX-_tmsNgU",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/97c6f5e1-299e-4652-b72d-9618ac047076/?format=json",
       "stages": [
         {
@@ -52,7 +52,7 @@
           "serialNumber": "B1088",
           "vehicleStatus": "active",
           "previousFlightDate": "2026-09-06T14:26:54Z",
-          "turnaround": "P36DT8H33M6S",
+          "turnaround": "P36DT9H44M53S",
           "landing": {
             "attempt": true,
             "success": null,
@@ -129,7 +129,7 @@
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
       "padTimezone": "America/Los_Angeles",
-      "padTurnaroundDays": 3.03,
+      "padTurnaroundDays": 2.98,
       "infoUrl": "https://www.spacex.com/launches/ussf481",
       "webcastUrl": "https://x.com/i/broadcasts/1aJbdEzYpPaKX",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/df88cfbf-f504-4e11-8370-e33dd6280b5b/?format=json",
@@ -508,28 +508,28 @@
       "stages": []
     },
     {
-      "id": "0f867f0c-5422-4d44-93b8-d7faaae7019b",
-      "name": "Starship | Flight 15",
+      "id": "f494692f-471c-4a75-b78e-667842fea27f",
+      "name": "Vulcan | USSF-25",
       "net": "2026-12-31T00:00:00Z",
-      "netPrecision": "Quarter 4",
+      "netPrecision": "Year",
       "windowStart": "2026-12-31T00:00:00Z",
       "windowEnd": "2026-12-31T00:00:00Z",
       "status": "To Be Determined",
-      "provider": "SpaceX",
+      "provider": "United Launch Alliance",
       "countryCode": "US",
       "region": "us",
-      "rocket": "Starship V3",
-      "family": "Starship",
-      "missionType": "Test Flight",
-      "missionDescription": "15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3.",
+      "rocket": "Vulcan",
+      "family": "Vulcan",
+      "missionType": "Government/Top Secret",
+      "missionDescription": "Payload is the Defense Advanced Research Projects Agency’s (DARPA) Demonstration Rocket for Agile Cislunar Operations (DRACO) nuclear thermal spacecraft.",
       "orbit": "LEO",
-      "pad": "Orbital Launch Pad 2",
-      "location": "SpaceX Starbase, TX, USA",
-      "padTimezone": "America/Chicago",
-      "padTurnaroundDays": 93.47,
+      "pad": "Space Launch Complex 41",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "padTimezone": "America/New_York",
+      "padTurnaroundDays": 63,
       "infoUrl": null,
       "webcastUrl": null,
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/0f867f0c-5422-4d44-93b8-d7faaae7019b/?format=json",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/f494692f-471c-4a75-b78e-667842fea27f/?format=json",
       "stages": []
     }
   ],
@@ -654,25 +654,6 @@
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/4651fd8a-43de-4166-bf8f-c168b3bd1d2c/?format=json",
       "stages": [
         {
-          "id": 988,
-          "type": "Strap-On Booster",
-          "reused": true,
-          "flightNumber": 2,
-          "serialNumber": "B1104",
-          "vehicleStatus": "active",
-          "previousFlightDate": "2026-08-30T11:26:04Z",
-          "turnaround": "P32DT16H27M56S",
-          "landing": {
-            "attempt": true,
-            "success": true,
-            "description": "The Falcon Heavy side booster B1104 has landed back at the launch site at Landing Zone 1 after its 2nd flight.",
-            "downrangeDistanceKm": 14.9,
-            "location": "Landing Zone 1",
-            "locationAbbrev": "LZ-1",
-            "type": null
-          }
-        },
-        {
           "id": 987,
           "type": "Core",
           "reused": false,
@@ -688,6 +669,25 @@
             "downrangeDistanceKm": null,
             "location": "Atlantic Ocean",
             "locationAbbrev": "ATL",
+            "type": null
+          }
+        },
+        {
+          "id": 988,
+          "type": "Strap-On Booster",
+          "reused": true,
+          "flightNumber": 2,
+          "serialNumber": "B1104",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-08-30T11:26:04Z",
+          "turnaround": "P32DT16H27M56S",
+          "landing": {
+            "attempt": true,
+            "success": true,
+            "description": "The Falcon Heavy side booster B1104 has landed back at the launch site at Landing Zone 1 after its 2nd flight.",
+            "downrangeDistanceKm": 14.9,
+            "location": "Landing Zone 1",
+            "locationAbbrev": "LZ-1",
             "type": null
           }
         },
@@ -1373,25 +1373,6 @@
         "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/4651fd8a-43de-4166-bf8f-c168b3bd1d2c/?format=json",
         "stages": [
           {
-            "id": 988,
-            "type": "Strap-On Booster",
-            "reused": true,
-            "flightNumber": 2,
-            "serialNumber": "B1104",
-            "vehicleStatus": "active",
-            "previousFlightDate": "2026-08-30T11:26:04Z",
-            "turnaround": "P32DT16H27M56S",
-            "landing": {
-              "attempt": true,
-              "success": true,
-              "description": "The Falcon Heavy side booster B1104 has landed back at the launch site at Landing Zone 1 after its 2nd flight.",
-              "downrangeDistanceKm": 14.9,
-              "location": "Landing Zone 1",
-              "locationAbbrev": "LZ-1",
-              "type": null
-            }
-          },
-          {
             "id": 987,
             "type": "Core",
             "reused": false,
@@ -1407,6 +1388,25 @@
               "downrangeDistanceKm": null,
               "location": "Atlantic Ocean",
               "locationAbbrev": "ATL",
+              "type": null
+            }
+          },
+          {
+            "id": 988,
+            "type": "Strap-On Booster",
+            "reused": true,
+            "flightNumber": 2,
+            "serialNumber": "B1104",
+            "vehicleStatus": "active",
+            "previousFlightDate": "2026-08-30T11:26:04Z",
+            "turnaround": "P32DT16H27M56S",
+            "landing": {
+              "attempt": true,
+              "success": true,
+              "description": "The Falcon Heavy side booster B1104 has landed back at the launch site at Landing Zone 1 after its 2nd flight.",
+              "downrangeDistanceKm": 14.9,
+              "location": "Landing Zone 1",
+              "locationAbbrev": "LZ-1",
               "type": null
             }
           },

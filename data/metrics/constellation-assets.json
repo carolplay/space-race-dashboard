@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "collectedAt": "2026-09-26",
-  "inventoryAsOf": "2026-10-09",
+  "inventoryAsOf": "2026-10-11",
   "ituAsOf": "2026-09-15",
   "source": {
     "name": "GCAT",
@@ -11,13 +11,13 @@
     "catalogs": [
       {
         "url": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
-        "sha256": "7c242e30102eab324a1ce05dfafd3c80a4f6b6630149070911650a0e3100b929",
-        "updatedRaw": "2026 Oct  9 1800:46"
+        "sha256": "e191df4bd59098a5d8d8e2858e42c2dd38218177a1b6f8b9b064be48f0514e6a",
+        "updatedRaw": "2026 Oct 11 1225:05"
       },
       {
         "url": "https://planet4589.org/space/gcat/tsv/cat/satcat100k.tsv",
-        "sha256": "a25f3b79eea099d1e7ee0dc1f2a00107643e45b52716e223a230cc2f261c7245",
-        "updatedRaw": "2026 Oct  9 1800:52"
+        "sha256": "4e151131a4ee6831c940cdeb6773738a1d3b402780b79b72c00e980bfda78dbb",
+        "updatedRaw": "2026 Oct 11 1225:10"
       }
     ]
   },
@@ -36,8 +36,8 @@
       "planLabelZh": "Gen2 授权规模",
       "planLabelEn": "Gen2 authorization",
       "sourceId": "starlink-fcc",
-      "inOrbit": 11137,
-      "asOf": "2026-10-09",
+      "inOrbit": 11131,
+      "asOf": "2026-10-11",
       "sourceUrl": "https://planet4589.org/space/con/star/stats.html",
       "planSourceUrl": "https://docs.fcc.gov/public/attachments/DA-26-36A1.pdf",
       "history": [
@@ -580,6 +580,11 @@
           "date": "2026-10-09",
           "inOrbit": 11137,
           "kind": "constellation-snapshot"
+        },
+        {
+          "date": "2026-10-11",
+          "inOrbit": 11131,
+          "kind": "constellation-snapshot"
         }
       ],
       "catalogPayloadRows": 12918,
@@ -589,15 +594,15 @@
         "id": "starlink",
         "url": "https://planet4589.org/space/con/star/stats.html",
         "rowLabel": "Total",
-        "updatedRaw": "Data last updated: 2026 Oct  9 0026:02",
-        "updatedAt": "2026-10-09T00:26:02.000Z",
-        "dataAsOf": "2026-10-09",
-        "sha256": "60b357232a283f0e2c5bedd4e38600ebff1c6d1c99a4ea8f5e9a1ad1cd940233",
+        "updatedRaw": "Data last updated: 2026 Oct 11 1242:28",
+        "updatedAt": "2026-10-11T12:42:28.000Z",
+        "dataAsOf": "2026-10-11",
+        "sha256": "fcb0b992c20bdef387de9a49abe0e6f0ce9d94675b1778917f4f5fba3b95bc80",
         "launched": 12988,
         "failedToOrbit": 20,
-        "totalDown": 1851,
-        "inOrbit": 11137,
-        "workingEstimate": 11123,
+        "totalDown": 1857,
+        "inOrbit": 11131,
+        "workingEstimate": 11117,
         "operationalOrbitEstimate": 9726
       }
     },
@@ -614,7 +619,7 @@
       "planLabelEn": "Gen1 authorization",
       "sourceId": "amazon-fcc",
       "inOrbit": 392,
-      "asOf": "2026-10-09",
+      "asOf": "2026-10-11",
       "sourceUrl": "https://planet4589.org/space/con/kp/stats.html",
       "planSourceUrl": "https://docs.fcc.gov/public/attachments/DA-26-553A1.pdf",
       "history": [
@@ -1157,6 +1162,11 @@
           "date": "2026-10-09",
           "inOrbit": 392,
           "kind": "constellation-snapshot"
+        },
+        {
+          "date": "2026-10-11",
+          "inOrbit": 392,
+          "kind": "constellation-snapshot"
         }
       ],
       "catalogPayloadRows": 398,
@@ -1166,10 +1176,10 @@
         "id": "amazon-leo",
         "url": "https://planet4589.org/space/con/kp/stats.html",
         "rowLabel": "Kuiper satellites",
-        "updatedRaw": "Data last updated: 2026 Oct  9 0027:02",
-        "updatedAt": "2026-10-09T00:27:02.000Z",
-        "dataAsOf": "2026-10-09",
-        "sha256": "65c56d723fc12cc060a7d4d25f7a790b4e6faee1d0fb06b3880887a0a568767c",
+        "updatedRaw": "Data last updated: 2026 Oct 11 1243:27",
+        "updatedAt": "2026-10-11T12:43:27.000Z",
+        "dataAsOf": "2026-10-11",
+        "sha256": "4eb087e5ffa83103bdda5b809e4a62c12638592b7371c4331bc391d434551d76",
         "launched": 398,
         "failedToOrbit": 0,
         "totalDown": 6,
@@ -1191,7 +1201,7 @@
       "planLabelEn": "L5 notified scale",
       "sourceId": "itu-res35",
       "inOrbit": 654,
-      "asOf": "2026-10-09",
+      "asOf": "2026-10-11",
       "sourceUrl": "https://planet4589.org/space/con/ow/stats.html",
       "planSourceUrl": "https://www.itu.int/net/ITU-R/space/res35/index.html",
       "history": [
@@ -1734,6 +1744,11 @@
           "date": "2026-10-09",
           "inOrbit": 654,
           "kind": "constellation-snapshot"
+        },
+        {
+          "date": "2026-10-11",
+          "inOrbit": 654,
+          "kind": "constellation-snapshot"
         }
       ],
       "catalogPayloadRows": 656,
@@ -1743,10 +1758,10 @@
         "id": "oneweb",
         "url": "https://planet4589.org/space/con/ow/stats.html",
         "rowLabel": "OneWeb",
-        "updatedRaw": "Data last updated: 2026 Oct  9 0031:03",
-        "updatedAt": "2026-10-09T00:31:03.000Z",
-        "dataAsOf": "2026-10-09",
-        "sha256": "50722862ffa6828cbba4bfe9f418c19eedb3f7ab533b0d22cf58fc3cd9df43ca",
+        "updatedRaw": "Data last updated: 2026 Oct 11 1247:19",
+        "updatedAt": "2026-10-11T12:47:19.000Z",
+        "dataAsOf": "2026-10-11",
+        "sha256": "8ad8d0616bbc38fca29fc1cd4ad327b0cd8cbfc3c8d8821bf0e449372055b6be",
         "launched": 656,
         "failedToOrbit": 0,
         "totalDown": 2,
@@ -1767,8 +1782,8 @@
       "planLabelZh": "公开设计规模",
       "planLabelEn": "Published design",
       "sourceId": "mega-screen",
-      "inOrbit": 213,
-      "asOf": "2026-10-09",
+      "inOrbit": 222,
+      "asOf": "2026-10-11",
       "sourceUrl": "https://planet4589.org/space/con/xw/stats.html",
       "planSourceUrl": "https://planet4589.org/space/con/conlist.html",
       "history": [
@@ -2311,24 +2326,29 @@
           "date": "2026-10-09",
           "inOrbit": 213,
           "kind": "constellation-snapshot"
+        },
+        {
+          "date": "2026-10-11",
+          "inOrbit": 222,
+          "kind": "constellation-snapshot"
         }
       ],
-      "catalogPayloadRows": 213,
+      "catalogPayloadRows": 222,
       "scopeZh": "正式低轨部署子组，不含早期试验星",
       "scopeEn": "Main low-orbit deployment subgroup; excludes early tests",
       "inventoryObservation": {
         "id": "guowang",
         "url": "https://planet4589.org/space/con/xw/stats.html",
         "rowLabel": "HW Digui",
-        "updatedRaw": "Data last updated: 2026 Oct  9 0032:25",
-        "updatedAt": "2026-10-09T00:32:25.000Z",
-        "dataAsOf": "2026-10-09",
-        "sha256": "f4d4b0622b8a597f565c906f78b1c2f150f8445e1f47742cf4b8131ea09c0f97",
-        "launched": 213,
+        "updatedRaw": "Data last updated: 2026 Oct 11 1248:41",
+        "updatedAt": "2026-10-11T12:48:41.000Z",
+        "dataAsOf": "2026-10-11",
+        "sha256": "80966dab6594e10ac691ba11800600b5933a444a92a7b99cbfef99cff79ad8a1",
+        "launched": 222,
         "failedToOrbit": 0,
         "totalDown": 0,
-        "inOrbit": 213,
-        "workingEstimate": 213,
+        "inOrbit": 222,
+        "workingEstimate": 222,
         "operationalOrbitEstimate": 186
       }
     },
@@ -2345,7 +2365,7 @@
       "planLabelEn": "Long-term plan",
       "sourceId": "qianfan-plan",
       "inOrbit": 256,
-      "asOf": "2026-10-09",
+      "asOf": "2026-10-11",
       "sourceUrl": "https://planet4589.org/space/con/qf/stats.html",
       "planSourceUrl": "https://app.xinhuanet.com/news/article.html?articleId=20260610ba2b423c1e434c998aa80d9e30ad5f54",
       "history": [
@@ -2888,6 +2908,11 @@
           "date": "2026-10-09",
           "inOrbit": 256,
           "kind": "constellation-snapshot"
+        },
+        {
+          "date": "2026-10-11",
+          "inOrbit": 256,
+          "kind": "constellation-snapshot"
         }
       ],
       "catalogPayloadRows": 256,
@@ -2897,10 +2922,10 @@
         "id": "qianfan",
         "url": "https://planet4589.org/space/con/qf/stats.html",
         "rowLabel": "Qianfan Xingzuo",
-        "updatedRaw": "Data last updated: 2026 Oct  9 0033:32",
-        "updatedAt": "2026-10-09T00:33:32.000Z",
-        "dataAsOf": "2026-10-09",
-        "sha256": "f5c5075941f365d5d5807117e5b6ab6e9578777e23221581771ff625ef3073af",
+        "updatedRaw": "Data last updated: 2026 Oct 11 1249:41",
+        "updatedAt": "2026-10-11T12:49:41.000Z",
+        "dataAsOf": "2026-10-11",
+        "sha256": "1148bc848fc4a50409bd00e419f8c4fe1f376c3249474783d90252ce26a85347",
         "launched": 256,
         "failedToOrbit": 0,
         "totalDown": 0,
@@ -4674,5 +4699,5 @@
     }
   ],
   "reviewedAt": "2026-09-27",
-  "inventoryRetrievedAt": "2026-10-10T12:03:21.033Z"
+  "inventoryRetrievedAt": "2026-10-12T12:05:27.038Z"
 }
