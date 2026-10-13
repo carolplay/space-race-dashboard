@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-10-12T12:05:34.171Z",
+  "generatedAt": "2026-10-13T11:57:40.627Z",
   "coverage": {
     "fromYear": 2000,
     "toYear": 2026,
     "currentYearIsPartial": true,
-    "launchCutoff": "2026-10-11",
-    "payloadCutoff": "2026-10-11"
+    "launchCutoff": "2026-10-13",
+    "payloadCutoff": "2026-10-13"
   },
   "source": {
     "name": "GCAT",
@@ -17,27 +17,27 @@
     "url": "https://planet4589.org/space/gcat/",
     "satcat": {
       "url": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
-      "sha256": "e191df4bd59098a5d8d8e2858e42c2dd38218177a1b6f8b9b064be48f0514e6a",
+      "sha256": "b45b1f59c77f9ebed1a50755086b52548d34c62cc04ac5d1acefe6ef0189d8a0",
       "updated": {
-        "raw": "2026 Oct 11 1225:05",
-        "iso": "2026-10-11T12:25:05.000Z"
+        "raw": "2026 Oct 13 0904:24",
+        "iso": "2026-10-13T09:04:24.000Z"
       }
     },
     "satcat100k": {
       "url": "https://planet4589.org/space/gcat/tsv/cat/satcat100k.tsv",
-      "sha256": "4e151131a4ee6831c940cdeb6773738a1d3b402780b79b72c00e980bfda78dbb",
+      "sha256": "9f00d9d87d27113ab8af376b475338e9b9b77847dc46f478ef1ea3347d842b0d",
       "updated": {
-        "raw": "2026 Oct 11 1225:10",
-        "iso": "2026-10-11T12:25:10.000Z"
+        "raw": "2026 Oct 13 0904:30",
+        "iso": "2026-10-13T09:04:30.000Z"
       },
-      "rows": 1001
+      "rows": 1028
     },
     "launchlog": {
       "url": "https://planet4589.org/space/gcat/tsv/derived/launchlog.tsv",
-      "sha256": "02be420338dfeed419624a97ec6561f5061140f82903a1bf4a4bb57db7d8218b",
+      "sha256": "abd2b2cff2ae50d7af19b7e49362be1513bf53602bb1aae334b77013fb19c51a",
       "updated": {
-        "raw": "2026 Oct 11 1223:15",
-        "iso": "2026-10-11T12:23:15.000Z"
+        "raw": "2026 Oct 13 0902:32",
+        "iso": "2026-10-13T09:02:32.000Z"
       }
     }
   },
@@ -472,77 +472,77 @@
       "year": "2026",
       "label": "2026 YTD",
       "attempts": {
-        "us": 128,
+        "us": 129,
         "cn": 71,
         "other": 42,
-        "global": 241
+        "global": 242
       },
       "success": {
-        "us": 127,
+        "us": 128,
         "cn": 67,
         "other": 40,
-        "global": 234
+        "global": 235
       }
     }
   ],
   "samePeriod": [
     {
       "year": "2025",
-      "launchCutoff": "2025-10-11",
-      "payloadCutoff": "2025-10-11",
+      "launchCutoff": "2025-10-13",
+      "payloadCutoff": "2025-10-13",
       "attempts": {
-        "us": 138,
-        "cn": 60,
+        "us": 139,
+        "cn": 61,
         "other": 38,
-        "global": 236
+        "global": 238
       },
       "success": {
-        "us": 135,
-        "cn": 59,
+        "us": 136,
+        "cn": 60,
         "other": 34,
-        "global": 228
+        "global": 230
       },
       "additions": {
         "us": 2672,
-        "cn": 267,
+        "cn": 268,
         "other": 246,
-        "global": 3185
+        "global": 3186
       },
       "knownDeliveredMassKg": {
         "us": 1710320.0999999996,
-        "cn": 170584,
+        "cn": 171584,
         "other": 96476.925,
-        "global": 1977381.0249999997
+        "global": 1978381.0249999997
       },
       "excludedImprecisePayloadDates": 32
     },
     {
       "year": "2026",
-      "launchCutoff": "2026-10-11",
-      "payloadCutoff": "2026-10-11",
+      "launchCutoff": "2026-10-13",
+      "payloadCutoff": "2026-10-13",
       "attempts": {
-        "us": 128,
+        "us": 129,
         "cn": 71,
         "other": 42,
-        "global": 241
+        "global": 242
       },
       "success": {
-        "us": 127,
+        "us": 128,
         "cn": 67,
         "other": 40,
-        "global": 234
+        "global": 235
       },
       "additions": {
-        "us": 2730,
+        "us": 2757,
         "cn": 377,
         "other": 348,
-        "global": 3455
+        "global": 3482
       },
       "knownDeliveredMassKg": {
-        "us": 1767187.9,
+        "us": 1782712.9,
         "cn": 214647,
-        "other": 82994.56000000004,
-        "global": 2064829.4599999993
+        "other": 82969.93500000004,
+        "global": 2080329.8349999993
       },
       "excludedImprecisePayloadDates": 12
     }
@@ -1150,24 +1150,24 @@
       "year": "2026",
       "label": "2026 NOW",
       "payloadObjects": {
-        "us": 13859,
+        "us": 13884,
         "cn": 1634,
-        "other": 4216,
-        "global": 19709
+        "other": 4215,
+        "global": 19733
       },
       "catalogObjects": {
-        "us": 18319,
+        "us": 18342,
         "cn": 6167,
-        "other": 9936,
-        "global": 34422
+        "other": 9935,
+        "global": 34444
       },
       "knownPayloadMassKg": {
-        "us": 8493680.085000012,
+        "us": 8508645.085000012,
         "cn": 1392225,
-        "other": 3379181.8120000027,
-        "global": 13265086.89699994
+        "other": 3378937.1870000027,
+        "global": 13279807.27199994
       },
-      "knownPayloadMassObjects": 19705
+      "knownPayloadMassObjects": 19729
     }
   ],
   "payloadFlow": [
@@ -1929,41 +1929,41 @@
       "year": "2026",
       "label": "2026 YTD",
       "additions": {
-        "us": 2740,
+        "us": 2767,
         "cn": 377,
         "other": 350,
-        "global": 3467
+        "global": 3494
       },
       "retirements": {
-        "us": 524,
+        "us": 526,
         "cn": 69,
-        "other": 129,
-        "global": 722
+        "other": 130,
+        "global": 725
       },
       "netChange": {
-        "us": 2216,
+        "us": 2241,
         "cn": 308,
-        "other": 221,
-        "global": 2745
+        "other": 220,
+        "global": 2769
       },
       "knownDeliveredMassKg": {
-        "us": 1767530.6999999997,
+        "us": 1783055.6999999997,
         "cn": 214647,
-        "other": 83013.56000000004,
-        "global": 2065191.259999999
+        "other": 82988.93500000004,
+        "global": 2080691.634999999
       },
-      "knownDeliveredMassObjects": 3467
+      "knownDeliveredMassObjects": 3494
     }
   ],
   "recentManufacturers": [
     {
       "manufacturer": "SPXS",
-      "us": 11305,
+      "us": 11332,
       "cn": 0,
       "other": 0,
-      "global": 11305,
-      "knownMassKg": 6518621,
-      "knownMassObjects": 11305
+      "global": 11332,
+      "knownMassKg": 6534146,
+      "knownMassObjects": 11332
     },
     {
       "manufacturer": "KUIP",

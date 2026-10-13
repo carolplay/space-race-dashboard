@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T12:05:32.276Z",
+  "generatedAt": "2026-10-13T11:57:36.402Z",
   "source": {
     "name": "GCAT",
     "publisher": "Jonathan C. McDowell",
@@ -10,18 +10,18 @@
     "url": "https://planet4589.org/space/gcat/",
     "activeCatalog": {
       "url": "https://planet4589.org/space/gcat/tsv/derived/active.tsv",
-      "sha256": "86aa1c550793cc98b3b1318ad1255ed94c3582b30810107243dc71343520ba5d",
+      "sha256": "23e9e9bac611888f7e77adc2979a72f43e416bab65cb0a5fd6056fb8606449db",
       "updated": {
-        "raw": "2026 Oct 11 1313:02",
-        "iso": "2026-10-11T13:13:02.000Z"
+        "raw": "2026 Oct 13 0955:11",
+        "iso": "2026-10-13T09:55:11.000Z"
       }
     },
     "currentCatalog": {
       "url": "https://planet4589.org/space/gcat/tsv/derived/currentcat.tsv",
-      "sha256": "5d3c43d0ffebbd823b52d52cb25be156edf39a52a0445e2cc73bca367183f2b8",
+      "sha256": "98d8a382488a515639cd3922133a328bb1efa765b61e70afd656373ae6a87339",
       "updated": {
-        "raw": "2026 Oct 11 1307:58",
-        "iso": "2026-10-11T13:07:58.000Z"
+        "raw": "2026 Oct 13 0949:34",
+        "iso": "2026-10-13T09:49:34.000Z"
       }
     }
   },
@@ -273,12 +273,40 @@
         "field": "DryMass with legacy Mass / LaunchMass fallback",
         "caveat": "Dry mass is preferred for current in-orbit inventory; LaunchMass is used only when no dry-mass field is present."
       }
+    },
+    {
+      "date": "2026-10-13",
+      "activePayloads": {
+        "us": 13089,
+        "cn": 1469,
+        "other": 2496,
+        "global": 17054
+      },
+      "catalogObjects": {
+        "us": 18741,
+        "cn": 6231,
+        "other": 10375,
+        "global": 35347
+      },
+      "knownActivePayloadMassKg": {
+        "us": 7345114.48000002,
+        "cn": 1010654,
+        "other": 1342109.1010000005,
+        "global": 9697877.580999989
+      },
+      "massCoverage": {
+        "knownObjects": 17054,
+        "totalObjects": 17054,
+        "percent": 100,
+        "field": "DryMass with legacy Mass / LaunchMass fallback",
+        "caveat": "Dry mass is preferred for current in-orbit inventory; LaunchMass is used only when no dry-mass field is present."
+      }
     }
   ],
   "current": {
     "schemaVersion": 1,
-    "date": "2026-10-12",
-    "retrievedAt": "2026-10-12T12:05:32.276Z",
+    "date": "2026-10-13",
+    "retrievedAt": "2026-10-13T11:57:36.402Z",
     "source": {
       "name": "GCAT",
       "publisher": "Jonathan C. McDowell",
@@ -288,18 +316,18 @@
       "url": "https://planet4589.org/space/gcat/",
       "activeCatalog": {
         "url": "https://planet4589.org/space/gcat/tsv/derived/active.tsv",
-        "sha256": "86aa1c550793cc98b3b1318ad1255ed94c3582b30810107243dc71343520ba5d",
+        "sha256": "23e9e9bac611888f7e77adc2979a72f43e416bab65cb0a5fd6056fb8606449db",
         "updated": {
-          "raw": "2026 Oct 11 1313:02",
-          "iso": "2026-10-11T13:13:02.000Z"
+          "raw": "2026 Oct 13 0955:11",
+          "iso": "2026-10-13T09:55:11.000Z"
         }
       },
       "currentCatalog": {
         "url": "https://planet4589.org/space/gcat/tsv/derived/currentcat.tsv",
-        "sha256": "5d3c43d0ffebbd823b52d52cb25be156edf39a52a0445e2cc73bca367183f2b8",
+        "sha256": "98d8a382488a515639cd3922133a328bb1efa765b61e70afd656373ae6a87339",
         "updated": {
-          "raw": "2026 Oct 11 1307:58",
-          "iso": "2026-10-11T13:07:58.000Z"
+          "raw": "2026 Oct 13 0949:34",
+          "iso": "2026-10-13T09:49:34.000Z"
         }
       }
     },
@@ -309,26 +337,26 @@
       "esaUrl": "https://sdup.esoc.esa.int/discosweb/statistics/"
     },
     "activePayloads": {
-      "us": 13065,
+      "us": 13089,
       "cn": 1469,
-      "other": 2498,
-      "global": 17032
+      "other": 2496,
+      "global": 17054
     },
     "catalogObjects": {
-      "us": 18745,
+      "us": 18741,
       "cn": 6231,
-      "other": 10376,
-      "global": 35352
+      "other": 10375,
+      "global": 35347
     },
     "knownActivePayloadMassKg": {
-      "us": 7333816.48000002,
+      "us": 7345114.48000002,
       "cn": 1010654,
-      "other": 1342469.1010000005,
-      "global": 9686939.580999989
+      "other": 1342109.1010000005,
+      "global": 9697877.580999989
     },
     "massCoverage": {
-      "knownObjects": 17032,
-      "totalObjects": 17032,
+      "knownObjects": 17054,
+      "totalObjects": 17054,
       "percent": 100,
       "field": "DryMass with legacy Mass / LaunchMass fallback",
       "caveat": "Dry mass is preferred for current in-orbit inventory; LaunchMass is used only when no dry-mass field is present."
@@ -336,10 +364,10 @@
     "byCategory": [
       {
         "name": "通信",
-        "us": 12078,
+        "us": 12103,
         "cn": 633,
         "other": 1355,
-        "global": 14066
+        "global": 14091
       },
       {
         "name": "地球观测",
@@ -366,15 +394,15 @@
         "name": "技术验证",
         "us": 169,
         "cn": 97,
-        "other": 335,
-        "global": 601
+        "other": 333,
+        "global": 599
       },
       {
         "name": "载人航天",
-        "us": 16,
+        "us": 15,
         "cn": 6,
         "other": 13,
-        "global": 35
+        "global": 34
       },
       {
         "name": "国防/未公开",
@@ -394,10 +422,10 @@
     "byOrbit": [
       {
         "name": "LEO",
-        "us": 12778,
+        "us": 12802,
         "cn": 1307,
-        "other": 2059,
-        "global": 16144
+        "other": 2057,
+        "global": 16166
       },
       {
         "name": "MEO",
@@ -424,17 +452,17 @@
     "byObjectType": [
       {
         "name": "有效载荷/失效载荷",
-        "us": 13924,
+        "us": 13922,
         "cn": 1639,
-        "other": 4392,
-        "global": 19955
+        "other": 4391,
+        "global": 19952
       },
       {
         "name": "火箭体",
-        "us": 561,
+        "us": 559,
         "cn": 275,
         "other": 1300,
-        "global": 2136
+        "global": 2134
       },
       {
         "name": "任务组件/其他",
@@ -454,10 +482,10 @@
     "byOperator": [
       {
         "name": "SPXS",
-        "us": 11116,
+        "us": 11141,
         "cn": 0,
         "other": 0,
-        "global": 11116
+        "global": 11141
       },
       {
         "name": "ONEWEBN",
@@ -568,8 +596,8 @@
         "name": "ISRO",
         "us": 0,
         "cn": 0,
-        "other": 56,
-        "global": 56
+        "other": 54,
+        "global": 54
       },
       {
         "name": "SITRO",
