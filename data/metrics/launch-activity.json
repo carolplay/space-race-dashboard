@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T12:02:25.556Z",
+  "generatedAt": "2026-10-15T11:56:35.301Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-14"
+    "to": "2026-10-15"
   },
   "source": {
     "name": "Launch Library 2",
@@ -46,9 +46,9 @@
         "year": "2026",
         "label": "2026 YTD",
         "us": 143,
-        "cn": 71,
+        "cn": 72,
         "other": 27,
-        "global": 241
+        "global": 242
       }
     ],
     "success": [
@@ -72,9 +72,9 @@
         "year": "2026",
         "label": "2026 YTD",
         "us": 142,
-        "cn": 67,
+        "cn": 68,
         "other": 25,
-        "global": 234
+        "global": 235
       }
     ],
     "rocketFamilies": [
@@ -641,14 +641,14 @@
       {
         "year": "2026",
         "region": "cn",
-        "family": "Smart Dragon",
-        "attempts": 4,
-        "success": 4
+        "family": "Zhuque",
+        "attempts": 5,
+        "success": 5
       },
       {
         "year": "2026",
         "region": "cn",
-        "family": "Zhuque",
+        "family": "Smart Dragon",
         "attempts": 4,
         "success": 4
       },

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T12:02:25.556Z",
+  "generatedAt": "2026-10-15T11:56:35.301Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-14"
+    "to": "2026-10-15"
   },
   "source": {
     "name": "Launch Library 2",
@@ -20,7 +20,7 @@
   "summary": {
     "observedSites": 28,
     "observedPads": 62,
-    "orbitalAttempts": 825,
+    "orbitalAttempts": 826,
     "activePads": 61
   },
   "sites": [
@@ -89,9 +89,9 @@
       "name": "Jiuquan Satellite Launch Center, People's Republic of China",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 80,
-      "success": 73,
-      "successRate": 91.3,
+      "attempts": 81,
+      "success": 74,
+      "successRate": 91.4,
       "padCount": 10,
       "rocketFamilies": [
         "Ceres-1",
@@ -118,7 +118,7 @@
         },
         {
           "year": "2026",
-          "attempts": 25
+          "attempts": 26
         }
       ]
     },
@@ -1585,6 +1585,41 @@
       ]
     },
     {
+      "id": 9,
+      "name": "Launch Area 96A",
+      "siteId": 17,
+      "site": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "countryCode": "CN",
+      "region": "cn",
+      "active": true,
+      "latitude": 40.91491,
+      "longitude": 100.245488,
+      "attempts": 7,
+      "success": 6,
+      "successRate": 85.7,
+      "firstLaunch": "2024-11-27",
+      "lastLaunch": "2026-10-14",
+      "medianIntervalDays": 93.9,
+      "fastestIntervalDays": 26.2,
+      "rocketFamilies": [
+        "Zhuque"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 1
+        },
+        {
+          "year": "2025",
+          "attempts": 2
+        },
+        {
+          "year": "2026",
+          "attempts": 4
+        }
+      ]
+    },
+    {
       "id": 221,
       "name": "Rizhao offshore launch location",
       "siteId": 185,
@@ -1690,41 +1725,6 @@
         {
           "year": "2026",
           "attempts": 1
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "Launch Area 96A",
-      "siteId": 17,
-      "site": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "countryCode": "CN",
-      "region": "cn",
-      "active": true,
-      "latitude": 40.91491,
-      "longitude": 100.245488,
-      "attempts": 6,
-      "success": 5,
-      "successRate": 83.3,
-      "firstLaunch": "2024-11-27",
-      "lastLaunch": "2026-09-15",
-      "medianIntervalDays": 97.9,
-      "fastestIntervalDays": 26.2,
-      "rocketFamilies": [
-        "Zhuque"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 1
-        },
-        {
-          "year": "2025",
-          "attempts": 2
-        },
-        {
-          "year": "2026",
-          "attempts": 3
         }
       ]
     },

@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "retrievedAt": "2026-10-14T12:02:30.613Z",
+  "retrievedAt": "2026-10-15T11:56:40.496Z",
   "method": "CelesTrak OMM-compatible JSON → satellite.js SGP4 → TEME / earth-fixed display. Not live telemetry.",
   "groups": [
     {
       "id": "starlink",
       "group": "starlink",
       "url": "https://celestrak.org/NORAD/elements/gp.php?GROUP=starlink&FORMAT=JSON",
-      "records": 11100,
+      "records": 11098,
       "rejected": 0,
       "epochOldest": "2026-09-21T05:49:13.801440Z",
-      "epochNewest": "2026-10-14T06:05:39.728256Z",
-      "sha256": "afaf6661513eef63b559916e8cf91afa20de9e0201692ba0d38cba8f9e5aa3bf",
-      "retrievedAt": "2026-10-14T12:02:30.613Z",
+      "epochNewest": "2026-10-15T08:06:12.184992Z",
+      "sha256": "811128dd708ea6bfab3880da5220f76bb5579f6ecd52446b6774be671ce86f49",
+      "retrievedAt": "2026-10-15T11:56:40.496Z",
       "file": "/data/orbits/starlink.json"
     },
     {
@@ -21,10 +21,10 @@
       "url": "https://celestrak.org/NORAD/elements/gp.php?GROUP=oneweb&FORMAT=JSON",
       "records": 651,
       "rejected": 0,
-      "epochOldest": "2026-10-13T08:56:43.808928Z",
-      "epochNewest": "2026-10-13T23:58:53.358816Z",
-      "sha256": "13dac9972f2aafb09d2cd1288d2d03e5f62196b6e71f4d36097a43b7854c79bb",
-      "retrievedAt": "2026-10-14T12:02:30.613Z",
+      "epochOldest": "2026-10-14T01:24:35.701056Z",
+      "epochNewest": "2026-10-14T16:00:01.999584Z",
+      "sha256": "f0a2585622a377fb9eeca434f56fed0dd6a36b5865837725e663e9d12189540c",
+      "retrievedAt": "2026-10-15T11:56:40.496Z",
       "file": "/data/orbits/oneweb.json"
     },
     {
@@ -34,9 +34,9 @@
       "records": 391,
       "rejected": 0,
       "epochOldest": "2026-10-13T00:05:37.256352Z",
-      "epochNewest": "2026-10-13T23:54:13.479840Z",
-      "sha256": "b34752cdad0b8080c3b69ca2ccb4cab401b7499485308b3031ee9d7a40752102",
-      "retrievedAt": "2026-10-14T12:02:30.613Z",
+      "epochNewest": "2026-10-14T15:48:34.894080Z",
+      "sha256": "e9d8caf7f3da24ebaf8a253ba2806cad15d0a4b28342642aeb67b81e94db5d50",
+      "retrievedAt": "2026-10-15T11:56:40.496Z",
       "file": "/data/orbits/amazon-leo.json"
     },
     {
@@ -46,9 +46,9 @@
       "records": 224,
       "rejected": 0,
       "epochOldest": "2026-10-05T14:20:52.974240Z",
-      "epochNewest": "2026-10-13T23:51:33.073056Z",
-      "sha256": "4674865039d0b3c0206a247401018d860e3a4e7b479084e176ca9a55d74634b2",
-      "retrievedAt": "2026-10-14T12:02:30.613Z",
+      "epochNewest": "2026-10-14T15:43:35.544000Z",
+      "sha256": "4dca6beca1556972dea31bb5521d24ca5b33a20819c832c618e4958663d21a32",
+      "retrievedAt": "2026-10-15T11:56:40.496Z",
       "file": "/data/orbits/guowang.json"
     },
     {
@@ -57,10 +57,10 @@
       "url": "https://celestrak.org/NORAD/elements/gp.php?GROUP=qianfan&FORMAT=JSON",
       "records": 256,
       "rejected": 0,
-      "epochOldest": "2026-10-08T12:41:58.051968Z",
-      "epochNewest": "2026-10-13T23:54:57.104928Z",
-      "sha256": "1d4be0fbad979c8094cb15736fbeb96ac26b75efaed98c6833fa43a51191d1a5",
-      "retrievedAt": "2026-10-14T12:02:30.613Z",
+      "epochOldest": "2026-10-13T14:30:41.040288Z",
+      "epochNewest": "2026-10-14T15:55:29.919936Z",
+      "sha256": "eb0a13c5d79258b36a12aa3ba07a8aa210724f9b0382c8e362473fcfa25bacad",
+      "retrievedAt": "2026-10-15T11:56:40.496Z",
       "file": "/data/orbits/qianfan.json"
     }
   ]
