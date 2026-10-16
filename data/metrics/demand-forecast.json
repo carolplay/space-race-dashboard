@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "asOf": "2026-10-13",
+  "asOf": "2026-10-15",
   "years": [
     2026,
     2027,
@@ -221,14 +221,14 @@
     },
     {
       "year": 2026,
-      "count": 19739,
+      "count": 19743,
       "partial": true
     }
   ],
   "orbitalInventory": [
     {
       "year": 2026,
-      "count": 19739
+      "count": 19743
     },
     {
       "year": 2027,
@@ -240,7 +240,7 @@
     },
     {
       "year": 2029,
-      "count": 28850
+      "count": 28900
     },
     {
       "year": 2030,
@@ -248,7 +248,7 @@
     },
     {
       "year": 2031,
-      "count": 33250
+      "count": 33300
     },
     {
       "year": 2032,
@@ -264,11 +264,11 @@
     },
     {
       "year": 2035,
-      "count": 39300
+      "count": 39350
     },
     {
       "year": 2036,
-      "count": 40400
+      "count": 40450
     }
   ],
   "fleets": [
@@ -276,53 +276,53 @@
       "entityId": "starlink",
       "nameZh": "星链",
       "nameEn": "Starlink",
-      "observed": 11156,
-      "pacePerYear": 2531,
+      "observed": 11154,
+      "pacePerYear": 2516,
       "priorDate": "2025-09-30",
       "points": [
         {
           "year": 2026,
-          "count": 11156
+          "count": 11154
         },
         {
           "year": 2027,
-          "count": 13690
+          "count": 13670
         },
         {
           "year": 2028,
-          "count": 15910
+          "count": 15880
         },
         {
           "year": 2029,
-          "count": 17870
+          "count": 17830
         },
         {
           "year": 2030,
-          "count": 19600
+          "count": 19550
         },
         {
           "year": 2031,
-          "count": 21120
+          "count": 21050
         },
         {
           "year": 2032,
-          "count": 22450
+          "count": 22380
         },
         {
           "year": 2033,
-          "count": 23630
+          "count": 23550
         },
         {
           "year": 2034,
-          "count": 24660
+          "count": 24580
         },
         {
           "year": 2035,
-          "count": 25570
+          "count": 25480
         },
         {
           "year": 2036,
-          "count": 26370
+          "count": 26280
         }
       ]
     },
@@ -331,7 +331,7 @@
       "nameZh": "Amazon Leo",
       "nameEn": "Amazon Leo",
       "observed": 392,
-      "pacePerYear": 254,
+      "pacePerYear": 253,
       "priorDate": "2025-09-30",
       "points": [
         {
@@ -340,7 +340,7 @@
         },
         {
           "year": 2027,
-          "count": 650
+          "count": 640
         },
         {
           "year": 2028,
@@ -348,11 +348,11 @@
         },
         {
           "year": 2029,
-          "count": 1070
+          "count": 1060
         },
         {
           "year": 2030,
-          "count": 1240
+          "count": 1230
         },
         {
           "year": 2031,
@@ -360,7 +360,7 @@
         },
         {
           "year": 2032,
-          "count": 1530
+          "count": 1520
         },
         {
           "year": 2033,
@@ -368,15 +368,15 @@
         },
         {
           "year": 2034,
-          "count": 1750
+          "count": 1740
         },
         {
           "year": 2035,
-          "count": 1840
+          "count": 1830
         },
         {
           "year": 2036,
-          "count": 1920
+          "count": 1910
         }
       ]
     },
@@ -493,7 +493,7 @@
       "nameZh": "千帆",
       "nameEn": "Qianfan",
       "observed": 256,
-      "pacePerYear": 160,
+      "pacePerYear": 159,
       "priorDate": "2025-09-30",
       "points": [
         {
@@ -518,7 +518,7 @@
         },
         {
           "year": 2031,
-          "count": 890
+          "count": 880
         },
         {
           "year": 2032,
@@ -526,7 +526,7 @@
         },
         {
           "year": 2033,
-          "count": 1050
+          "count": 1040
         },
         {
           "year": 2034,
@@ -534,11 +534,11 @@
         },
         {
           "year": 2035,
-          "count": 1170
+          "count": 1160
         },
         {
           "year": 2036,
-          "count": 1220
+          "count": 1210
         }
       ]
     }
@@ -773,6 +773,6 @@
   "sourceCutoffs": {
     "launch": "2026-10-15",
     "inventory": "2026-10-15",
-    "fleets": "2026-10-13"
+    "fleets": "2026-10-15"
   }
 }

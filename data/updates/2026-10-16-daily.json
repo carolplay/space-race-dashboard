@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-16",
+  "version": "1.10.7",
+  "workspaceRecovery": {
+    "temporaryCheckoutWasPruned": true,
+    "reopenedOfficialSource": true,
+    "originalUserWorkUntouched": true
+  },
+  "changes": {
+    "activePayloads": {
+      "before": 17062,
+      "after": 17061
+    },
+    "knownActiveMassTonnes": 9703.3,
+    "currentCatalogueObjects": 35437,
+    "launchHistory": "GCAT history genuinely revised, through 2026-10-15; YTD 244 attempts / 237 successes, not full-year totals",
+    "ll2": {
+      "recordCount": 943,
+      "fetchedRecords": 153,
+      "requests": 2,
+      "event": "Falcon 9 / USSF-481: Launch Successful, 2026-10-16T00:01:05Z",
+      "attempts2026Ytd": {
+        "us": 144,
+        "cn": 72,
+        "other": 27,
+        "global": 243
+      },
+      "success2026Ytd": {
+        "us": 143,
+        "cn": 68,
+        "other": 25,
+        "global": 236
+      },
+      "note": "Source scopes/sub-day cutoffs differ from GCAT; no forced reconciliation. Manifest, stage reuse and bases rebuilt."
+    },
+    "constellations": [
+      {
+        "id": "starlink",
+        "count": 11154,
+        "asOf": "2026-10-15"
+      },
+      {
+        "id": "amazon-leo",
+        "count": 392,
+        "asOf": "2026-10-15"
+      },
+      {
+        "id": "oneweb",
+        "count": 654,
+        "asOf": "2026-10-15"
+      },
+      {
+        "id": "guowang",
+        "count": 222,
+        "asOf": "2026-10-15"
+      },
+      {
+        "id": "qianfan",
+        "count": 256,
+        "asOf": "2026-10-15"
+      }
+    ],
+    "gp": {
+      "retrievedAt": "2026-10-16T12:04:24.589Z",
+      "counts": {
+        "starlink": 11125,
+        "oneweb": 651,
+        "amazon-leo": 391,
+        "guowang": 224,
+        "qianfan": 256
+      },
+      "rejected": 0,
+      "note": "Five successful atomic fetches; actual element epochs preserved and seven-day propagation exclusion retained."
+    }
+  },
+  "sourceDates": [
+    {
+      "id": "celestrak-gp",
+      "updatedAt": null,
+      "status": "fresh"
+    },
+    {
+      "id": "gcat-constellations",
+      "updatedAt": "2026-10-15T19:00:26.000Z",
+      "status": "fresh"
+    },
+    {
+      "id": "gcat-active",
+      "updatedAt": "2026-10-16T00:48:02.000Z",
+      "status": "fresh"
+    },
+    {
+      "id": "gcat-history",
+      "updatedAt": "2026-10-15T23:55:30.000Z",
+      "status": "fresh"
+    },
+    {
+      "id": "ll2-launches",
+      "updatedAt": "2026-10-16T12:02:28Z",
+      "status": "fresh"
+    },
+    {
+      "id": "official-editorial",
+      "updatedAt": "2026-09-08",
+      "status": "review"
+    },
+    {
+      "id": "next-spaceflight-reference",
+      "updatedAt": "2026-09-08",
+      "status": "reference"
+    }
+  ],
+  "hf": {
+    "meta": {
+      "sha": "06f962cfd7ad1031b3d083769b0a758603c74126",
+      "lastModified": "2026-10-15T13:00:27.000Z",
+      "file": {
+        "lfs": {
+          "sha256": "9f80834f2ce600ca70ce0a0c6b55ab0d63d7d346cc6aa68ce3c0753f26de29b8"
+        }
+      }
+    },
+    "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=7999&length=20",
+    "total": 8019,
+    "date": "2026-10-15",
+    "tracked": 11098,
+    "operational": 10015,
+    "raising": 1044,
+    "deorbiting": 39,
+    "note": "Actual dataset viewer rows; repository metadata verified separately, not revision-pinned. No latest shell-0 row; do not infer zero population or complete physical coverage."
+  },
+  "referenceReconciliation": {
+    "sameDayCoverageReviews": 1,
+    "differentDateComparisons": 5,
+    "note": "HF and GCAT October 15 differ by 56 objects; coverage review only, never source replacement or ITU determination. Orbital Radar saved records only; no new extraction and permission still pending."
+  },
+  "rebuildOrder": [
+    "constellation history",
+    "constellation model",
+    "2026–2036 forecast",
+    "reference reconciliation",
+    "source health"
+  ],
+  "validation": {
+    "checks": 470,
+    "errors": 0,
+    "result": "PASS_WITH_GAPS",
+    "existingEvidenceGapsRetained": true
+  },
+  "tests": {
+    "status": "passed",
+    "productionBuildPassed": true,
+    "passed": 35,
+    "failed": 0
+  },
+  "unchanged": {
+    "manualFutureOutlookAssumptions": true,
+    "ituFccEvidence": true,
+    "crewedCislunarEditorial": true,
+    "unknownBiuCompliance": true
+  },
+  "publication": {
+    "required": "Public release after build/tests; preserve audience",
+    "previousUserChangesExcluded": true
+  }
+}

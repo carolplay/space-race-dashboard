@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-10-15T11:56:41.616Z",
+  "generatedAt": "2026-10-16T12:04:26.817Z",
   "coverage": {
     "fromYear": 2000,
     "toYear": 2026,
@@ -17,27 +17,27 @@
     "url": "https://planet4589.org/space/gcat/",
     "satcat": {
       "url": "https://planet4589.org/space/gcat/tsv/cat/satcat.tsv",
-      "sha256": "ae41d1436a096cdf0c4ccf6248fd0a3caf85e3887a599c18f6cd2ad2c4a21a3d",
+      "sha256": "75002b6f29a692daadff24e0725962e20f7d531c0419bae3ec35959d81b74b71",
       "updated": {
-        "raw": "2026 Oct 15 1032:48",
-        "iso": "2026-10-15T10:32:48.000Z"
+        "raw": "2026 Oct 15 2355:30",
+        "iso": "2026-10-15T23:55:30.000Z"
       }
     },
     "satcat100k": {
       "url": "https://planet4589.org/space/gcat/tsv/cat/satcat100k.tsv",
-      "sha256": "d15d52c725efaf5ab89c2b9c30972ebc829b5ca12f934a5db9e52a1595f67968",
+      "sha256": "fbba2b348b28c3fe10ed973b54fcdf3db3bf82a0d138ff54e7753f4dbcf6cd10",
       "updated": {
-        "raw": "2026 Oct 15 1032:54",
-        "iso": "2026-10-15T10:32:54.000Z"
+        "raw": "2026 Oct 15 2355:35",
+        "iso": "2026-10-15T23:55:35.000Z"
       },
-      "rows": 1071
+      "rows": 1075
     },
     "launchlog": {
       "url": "https://planet4589.org/space/gcat/tsv/derived/launchlog.tsv",
-      "sha256": "57ed6525170fae6b0cb3b87438047a17a0ac9bb1e2292c0d78e5aaf5540d0ff3",
+      "sha256": "cdf8e5a7755f336dd4bee1a9c817b992d71fff10f5ec9e1b285a8768a96a9d43",
       "updated": {
-        "raw": "2026 Oct 15 1030:49",
-        "iso": "2026-10-15T10:30:49.000Z"
+        "raw": "2026 Oct 15 2353:35",
+        "iso": "2026-10-15T23:53:35.000Z"
       }
     }
   },
@@ -533,16 +533,16 @@
         "global": 237
       },
       "additions": {
-        "us": 2758,
+        "us": 2763,
         "cn": 387,
         "other": 348,
-        "global": 3493
+        "global": 3498
       },
       "knownDeliveredMassKg": {
-        "us": 1792712.9,
+        "us": 1792741.3999999997,
         "cn": 215617,
         "other": 82962.77800000003,
-        "global": 2091292.6779999994
+        "global": 2091321.1779999991
       },
       "excludedImprecisePayloadDates": 12
     }
@@ -1150,24 +1150,24 @@
       "year": "2026",
       "label": "2026 NOW",
       "payloadObjects": {
-        "us": 13882,
+        "us": 13886,
         "cn": 1643,
         "other": 4214,
-        "global": 19739
+        "global": 19743
       },
       "catalogObjects": {
-        "us": 18358,
+        "us": 18362,
         "cn": 6186,
         "other": 9932,
-        "global": 34476
+        "global": 34480
       },
       "knownPayloadMassKg": {
-        "us": 8517649.385000013,
+        "us": 8507677.88500001,
         "cn": 1392665,
         "other": 3378927.0300000026,
-        "global": 13289241.41499994
+        "global": 13279269.914999936
       },
-      "knownPayloadMassObjects": 19735
+      "knownPayloadMassObjects": 19739
     }
   ],
   "payloadFlow": [
@@ -1929,30 +1929,30 @@
       "year": "2026",
       "label": "2026 YTD",
       "additions": {
-        "us": 2768,
+        "us": 2773,
         "cn": 387,
         "other": 350,
-        "global": 3505
+        "global": 3510
       },
       "retirements": {
-        "us": 529,
+        "us": 530,
         "cn": 70,
         "other": 131,
-        "global": 730
+        "global": 731
       },
       "netChange": {
-        "us": 2239,
+        "us": 2243,
         "cn": 317,
         "other": 219,
-        "global": 2775
+        "global": 2779
       },
       "knownDeliveredMassKg": {
-        "us": 1793055.6999999997,
+        "us": 1793084.1999999995,
         "cn": 215617,
         "other": 82981.77800000003,
-        "global": 2091654.4779999992
+        "global": 2091682.977999999
       },
-      "knownDeliveredMassObjects": 3505
+      "knownDeliveredMassObjects": 3510
     }
   ],
   "recentManufacturers": [
@@ -1993,6 +1993,15 @@
       "knownMassObjects": 260
     },
     {
+      "manufacturer": "PLAN",
+      "us": 241,
+      "cn": 0,
+      "other": 1,
+      "global": 242,
+      "knownMassKg": 3365.2999999999956,
+      "knownMassObjects": 242
+    },
+    {
       "manufacturer": "CAST",
       "us": 0,
       "cn": 234,
@@ -2000,15 +2009,6 @@
       "global": 238,
       "knownMassKg": 443343,
       "knownMassObjects": 238
-    },
-    {
-      "manufacturer": "PLAN",
-      "us": 236,
-      "cn": 0,
-      "other": 1,
-      "global": 237,
-      "knownMassKg": 3336.7999999999965,
-      "knownMassObjects": 237
     },
     {
       "manufacturer": "CGSTL",
