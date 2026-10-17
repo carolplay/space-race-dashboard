@@ -10,6 +10,13 @@
       "asOf": "2026-10-15",
       "asOfBasis": "Latest actual rows in the HF dataset viewer, UTC snapshot date; not a README statistic",
       "retrievedOn": "2026-10-16",
+      "latestRetrievalAttempt": {
+        "attemptedOn": "2026-10-17",
+        "status": "failed-retained-previous-observation",
+        "httpStatus": 500,
+        "endpoint": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=0&length=1",
+        "note": "Latest rows could not be verified. October 15 evidence and October 16 successful retrieval remain unchanged; this attempt does not refresh observation freshness."
+      },
       "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=7999&length=20",
       "evidence": "Latest October 15 actual four shell rows sum to 11098; 10015 inferred operational, 1044 raising, 39 deorbiting. State subtotals agree. Viewer reports 8019 total rows. No shell-0 row at latest date; do not infer complete physical coverage. GCAT constellation inventory is also October 15; same-day differences are coverage review only, not a production correction or ITU conclusion.",
       "repositoryRevisionAtRetrieval": "06f962cfd7ad1031b3d083769b0a758603c74126",

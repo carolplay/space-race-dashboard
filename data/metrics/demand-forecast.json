@@ -81,9 +81,9 @@
   "launch": [
     {
       "year": 2026,
-      "global": 335,
+      "global": 330,
       "us": 165,
-      "cn": 110,
+      "cn": 105,
       "other": 60,
       "kind": "same-period-nowcast"
     },
@@ -113,9 +113,9 @@
     },
     {
       "year": 2030,
-      "global": 510,
+      "global": 505,
       "us": 285,
-      "cn": 150,
+      "cn": 145,
       "other": 75,
       "kind": "damped-linear-trend"
     },
@@ -145,17 +145,17 @@
     },
     {
       "year": 2034,
-      "global": 595,
+      "global": 590,
       "us": 345,
-      "cn": 170,
+      "cn": 165,
       "other": 80,
       "kind": "damped-linear-trend"
     },
     {
       "year": 2035,
-      "global": 615,
+      "global": 610,
       "us": 355,
-      "cn": 175,
+      "cn": 170,
       "other": 85,
       "kind": "damped-linear-trend"
     },
@@ -221,14 +221,14 @@
     },
     {
       "year": 2026,
-      "count": 19743,
+      "count": 19754,
       "partial": true
     }
   ],
   "orbitalInventory": [
     {
       "year": 2026,
-      "count": 19743
+      "count": 19754
     },
     {
       "year": 2027,
@@ -244,7 +244,7 @@
     },
     {
       "year": 2030,
-      "count": 31200
+      "count": 31250
     },
     {
       "year": 2031,
@@ -771,8 +771,8 @@
     }
   ],
   "sourceCutoffs": {
-    "launch": "2026-10-15",
-    "inventory": "2026-10-15",
+    "launch": "2026-10-16",
+    "inventory": "2026-10-16",
     "fleets": "2026-10-15"
   }
 }
