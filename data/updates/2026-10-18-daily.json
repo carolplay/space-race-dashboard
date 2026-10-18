@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "version": "1.10.9",
+  "changes": {
+    "activePayloads": {
+      "before": 17075,
+      "after": 17074
+    },
+    "knownActiveMassTonnes": 9712.0,
+    "currentCatalogueObjects": 35421,
+    "launchHistory": {
+      "coverage": {
+        "fromYear": 2000,
+        "toYear": 2026,
+        "currentYearIsPartial": true,
+        "launchCutoff": "2026-10-17",
+        "payloadCutoff": "2026-10-17"
+      },
+      "attempts2026Ytd": {
+        "us": 131,
+        "cn": 72,
+        "other": 42,
+        "global": 245
+      },
+      "success2026Ytd": {
+        "us": 130,
+        "cn": 68,
+        "other": 40,
+        "global": 238
+      }
+    },
+    "ll2": {
+      "fetchedRecords": 154,
+      "requests": 2,
+      "query": {
+        "from": "2026-09-01",
+        "to": "2027-01-16",
+        "requestCount": 2
+      },
+      "cachedRecords": 944,
+      "upcoming": 16,
+      "reusableVehicles": 20,
+      "latestSourceUpdate": "2026-10-18T02:03:50Z",
+      "attempts2026Ytd": {
+        "year": "2026",
+        "label": "2026 YTD",
+        "us": 144,
+        "cn": 72,
+        "other": 27,
+        "global": 243
+      },
+      "success2026Ytd": {
+        "year": "2026",
+        "label": "2026 YTD",
+        "us": 143,
+        "cn": 68,
+        "other": 25,
+        "global": 236
+      },
+      "note": "Annual totals unchanged; records and schedules revised. GCAT and LL2 retain distinct scopes and actual source cutoffs."
+    },
+    "physicalConstellations": {
+      "asOf": "2026-10-15",
+      "counts": {
+        "starlink": 11154,
+        "amazon-leo": 392,
+        "oneweb": 654,
+        "guowang": 222,
+        "qianfan": 256
+      },
+      "changed": false,
+      "note": "October 18 retrieval is not a new October 15 source observation."
+    },
+    "gp": {
+      "retrievedAt": "2026-10-18T12:01:43.725Z",
+      "counts": {
+        "starlink": 11124,
+        "oneweb": 651,
+        "amazon-leo": 391,
+        "guowang": 226,
+        "qianfan": 256
+      },
+      "rejected": 0,
+      "note": "Per-object epochs retained. Renderer excludes elements older than seven days; trackable counts are not physical inventory."
+    }
+  },
+  "sourceDates": {
+    "gcatActive": "2026-10-17T19:20:54.000Z",
+    "gcatCurrentCatalogue": "2026-10-17T19:15:34.000Z",
+    "gcatSatcat": "2026-10-17T18:32:50.000Z",
+    "gcatExtended": "2026-10-17T18:32:55.000Z",
+    "gcatLaunchlog": "2026-10-17T18:30:58.000Z",
+    "gcatConstellationEarliest": "2026-10-15T19:00:26.000Z",
+    "ll2Latest": "2026-10-18T02:03:50Z",
+    "officialEditorial": "2026-09-08"
+  },
+  "hf": {
+    "status": "verified-actual-rows",
+    "asOf": "2026-10-17",
+    "retrievedOn": "2026-10-18",
+    "trackedPayloads": 11124,
+    "inferredOperational": 10017,
+    "raising": 1056,
+    "deorbiting": 51,
+    "repositoryRevision": "f9d4d3cbe74dce066c33dc02fafcdaaf4dc75422",
+    "filePath": "data/daily_snapshots.parquet",
+    "fileSha256": "e519c7084b444617d187f096a0913e7a7d793592bf3e869f936752fc3e4c725c",
+    "evidencePath": "data/research/current/hf-starlink-2026-10-18.json",
+    "note": "Viewer response is not a revision-pinned parquet download; repository revision and file hash describe repository metadata checked separately at retrieval."
+  },
+  "referenceReconciliation": {
+    "summary": {
+      "observations": 6,
+      "agreements": 0,
+      "coverageReviews": 0,
+      "dateMismatches": 6
+    },
+    "note": "All six comparison dates differ; no deltas computed. Orbital Radar saved attributed records only, zero requests, permission pending."
+  },
+  "reusableLearning": {
+    "principles": [
+      "Constellation selection should keep subgroup coverage visible.",
+      "Shell and lifecycle counts must expose inferred state and reconcile subtotals.",
+      "Deployment pace requires dated observations rather than retrieval timestamps.",
+      "Observed catalogue coverage and simulated views must remain distinguishable."
+    ],
+    "protectedInterfaceCopied": false
+  },
+  "rebuildOrder": [
+    "source refresh",
+    "constellation history and official status check",
+    "constellation model and orbit bins",
+    "2026–2036 forecast",
+    "reference reconciliation",
+    "source health"
+  ],
+  "validation": {
+    "result": "PASS_WITH_GAPS",
+    "checks": 470,
+    "errors": [],
+    "warnings": [
+      "chn-sailspace-1: candidate brand association",
+      "usa-usasat-ngso-8b: preserved upstream alias anomaly",
+      "usa-usasat-ngso-8c: preserved upstream alias anomaly",
+      "chn-gw-a59: no verified RES35 dates or denominator",
+      "chn-gw-2: no verified RES35 dates or denominator",
+      "g-l5ku: current qualifying inventory not verified",
+      "g-l5ku: Status-table deployment count differs from this report; preserve both and do not reconcile without source",
+      "g-l5ka: current qualifying inventory not verified",
+      "g-l5ka: incomplete/duplicate station identity extraction",
+      "chn-sailspace-1: current qualifying inventory not verified",
+      "nor-steam-1: current qualifying inventory not verified",
+      "nor-steam-2: current qualifying inventory not verified",
+      "nor-steam-2b: current qualifying inventory not verified",
+      "nor-steam-2b: incomplete/duplicate station identity extraction",
+      "usa-usasat-ngso-8a: current qualifying inventory not verified",
+      "usa-usasat-ngso-8b: current qualifying inventory not verified",
+      "usa-usasat-ngso-8c: current qualifying inventory not verified",
+      "chn-gw-a59: current qualifying inventory not verified",
+      "chn-gw-2: current qualifying inventory not verified"
+    ],
+    "integrationReady": false
+  },
+  "tests": {
+    "productionBuildPassed": true,
+    "passed": 35,
+    "failed": 0,
+    "coverage": "Regional totals, unknowns, partial-year scope, bilingual displays, rendered routes, deterministic output and unchanged future assumptions."
+  },
+  "unchanged": {
+    "manualFutureOutlookAssumptions": true,
+    "ituFccEvidence": true,
+    "crewedCislunarEditorial": true,
+    "unknownBiuCompliance": true
+  },
+  "publication": {
+    "required": true,
+    "audience": "public",
+    "previousUserChangesExcluded": true,
+    "status": "Build and validation passed; exact release provenance recorded separately after deployment."
+  }
+}

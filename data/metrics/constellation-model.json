@@ -6963,9 +6963,9 @@
       "scope": "five tracked fleets, world; not all fleets and not active-only"
     },
     "globalActiveCatalog": {
-      "value": 17075,
+      "value": 17074,
       "unit": "payload_object",
-      "asOf": "2026-10-17T00:27:50.000Z",
+      "asOf": "2026-10-17T19:20:54.000Z",
       "scope": "global active payloads of every mission category; not constellation-only"
     },
     "verifiedAuthorizationSample": {

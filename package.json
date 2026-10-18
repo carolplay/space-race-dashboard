@@ -1,6 +1,6 @@
 {
   "name": "space-race-dashboard",
-  "version": "1.10.8",
+  "version": "1.10.9",
   "private": true,
   "engines": {
     "node": ">=22.13.0"

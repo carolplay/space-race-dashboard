@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "retrievedOn": "2026-10-18",
+  "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8007&length=20",
+  "repositoryRevision": "f9d4d3cbe74dce066c33dc02fafcdaaf4dc75422",
+  "repositoryModifiedAt": "2026-10-17T11:55:14.000Z",
+  "filePath": "data/daily_snapshots.parquet",
+  "fileSha256": "e519c7084b444617d187f096a0913e7a7d793592bf3e869f936752fc3e4c725c",
+  "versionCaveat": "Viewer response is not a revision-pinned parquet download; repository revision and file hash describe repository metadata checked separately at retrieval.",
+  "numRowsTotal": 8027,
+  "rows": [
+    {
+      "row_idx": 8023,
+      "row": {
+        "date": "2026-10-17T00:00:00",
+        "shell_id": 2,
+        "total_count": 5092,
+        "operational_count": 4535,
+        "raising_count": 517,
+        "deorbiting_count": 40,
+        "reentered_count": null,
+        "isl_operational_count": 4023,
+        "avg_altitude": null,
+        "min_altitude": null,
+        "max_altitude": null,
+        "new_launches": 0,
+        "anomalous_count": null,
+        "shell_name": "Shell 3 (53° / 550km)"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 8024,
+      "row": {
+        "date": "2026-10-17T00:00:00",
+        "shell_id": 3,
+        "total_count": 897,
+        "operational_count": 758,
+        "raising_count": 138,
+        "deorbiting_count": 1,
+        "reentered_count": null,
+        "isl_operational_count": 724,
+        "avg_altitude": null,
+        "min_altitude": null,
+        "max_altitude": null,
+        "new_launches": 0,
+        "anomalous_count": null,
+        "shell_name": "Shell 4 (70° / 570km)"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 8025,
+      "row": {
+        "date": "2026-10-17T00:00:00",
+        "shell_id": 1,
+        "total_count": 3613,
+        "operational_count": 3246,
+        "raising_count": 358,
+        "deorbiting_count": 9,
+        "reentered_count": null,
+        "isl_operational_count": 3202,
+        "avg_altitude": null,
+        "min_altitude": null,
+        "max_altitude": null,
+        "new_launches": 0,
+        "anomalous_count": null,
+        "shell_name": "Shell 2 (43° / 340km)"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 8026,
+      "row": {
+        "date": "2026-10-17T00:00:00",
+        "shell_id": 4,
+        "total_count": 1522,
+        "operational_count": 1478,
+        "raising_count": 43,
+        "deorbiting_count": 1,
+        "reentered_count": null,
+        "isl_operational_count": 1477,
+        "avg_altitude": null,
+        "min_altitude": null,
+        "max_altitude": null,
+        "new_launches": 0,
+        "anomalous_count": null,
+        "shell_name": "Shell 5 (97.6° / 560km)"
+      },
+      "truncated_cells": []
+    }
+  ],
+  "sums": {
+    "total_count": 11124,
+    "operational_count": 10017,
+    "raising_count": 1056,
+    "deorbiting_count": 51
+  }
+}
