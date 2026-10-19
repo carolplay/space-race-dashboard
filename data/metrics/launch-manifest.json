@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T12:01:37.644Z",
-  "asOf": "2026-10-18",
+  "generatedAt": "2026-10-19T12:01:42.878Z",
+  "asOf": "2026-10-19",
   "coverage": {
     "upcomingFrom": "2026-10-19",
     "upcomingTo": "2026-11-23",
@@ -20,51 +20,6 @@
     "scope": "Detailed stage data accumulates from Alpha 1.1 onward; earlier stored normal-mode records are not backfilled automatically."
   },
   "upcoming": [
-    {
-      "id": "3b430f81-0ff1-4d85-8a1a-cef0de326198",
-      "name": "Falcon 9 Block 5 | Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
-      "net": "2026-10-19T10:30:00Z",
-      "netPrecision": "Minute",
-      "windowStart": "2026-10-19T10:30:00Z",
-      "windowEnd": "2026-10-19T11:30:00Z",
-      "status": "Go for Launch",
-      "provider": "SpaceX",
-      "countryCode": "US",
-      "region": "us",
-      "rocket": "Falcon 9 Block 5",
-      "family": "Falcon 9",
-      "missionType": "Dedicated Rideshare",
-      "missionDescription": "Dedicated rideshare flight to a mid-inclination orbit with dozens of small microsatellites and nanosatellites for commercial and government customers.\r\n\r\nThis launch also carries the second demonstration mission for SpaceX’s Project Starfall, which aims to mass-produce reentry capsules designed to autonomously transport valuable customer experiments and other payloads safely back from space to Earth, including for in-orbit manufacturing. \r\n\r\nStarfall is a cylindrical shaped capsule approximately 0.75 meters tall with a diameter of 3.1 meters, weighing approximately 2100 kilograms, and capable of carrying 1000 kilograms of payload. It is designed to be carried on Starship flights.",
-      "orbit": "LEO",
-      "pad": "Space Launch Complex 40",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "padTimezone": "America/New_York",
-      "padTurnaroundDays": 6,
-      "infoUrl": "https://www.spacex.com/launches/bandwagon5",
-      "webcastUrl": "https://x.com/i/broadcasts/1nxeLMddZlEJX",
-      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/3b430f81-0ff1-4d85-8a1a-cef0de326198/?format=json",
-      "stages": [
-        {
-          "id": 979,
-          "type": "Core",
-          "reused": true,
-          "flightNumber": 19,
-          "serialNumber": "B1085",
-          "vehicleStatus": "active",
-          "previousFlightDate": "2026-08-11T15:58:26Z",
-          "turnaround": "P68DT18H31M34S",
-          "landing": {
-            "attempt": true,
-            "success": null,
-            "description": "The Falcon 9 first stage B1085 will land on ASDS ASOG after its 19th flight.",
-            "downrangeDistanceKm": 600,
-            "location": "A Shortfall of Gravitas",
-            "locationAbbrev": "ASOG",
-            "type": null
-          }
-        }
-      ]
-    },
     {
       "id": "69ebbcd2-b257-4070-9ef9-21e7d1f8a883",
       "name": "H3-24 | Martian Moons eXploration (MMX)",
@@ -85,10 +40,55 @@
       "location": "Tanegashima Space Center, Japan",
       "padTimezone": "Asia/Tokyo",
       "padTurnaroundDays": 70.01,
-      "infoUrl": null,
-      "webcastUrl": null,
+      "infoUrl": "https://www.mmx.jaxa.jp/en/",
+      "webcastUrl": "https://www.youtube.com/watch?v=Fn6gzuGa-6c",
       "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/?format=json",
       "stages": []
+    },
+    {
+      "id": "3b430f81-0ff1-4d85-8a1a-cef0de326198",
+      "name": "Falcon 9 Block 5 | Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
+      "net": "2026-10-20T10:30:00Z",
+      "netPrecision": "Minute",
+      "windowStart": "2026-10-20T10:30:00Z",
+      "windowEnd": "2026-10-20T11:30:00Z",
+      "status": "Go for Launch",
+      "provider": "SpaceX",
+      "countryCode": "US",
+      "region": "us",
+      "rocket": "Falcon 9 Block 5",
+      "family": "Falcon 9",
+      "missionType": "Dedicated Rideshare",
+      "missionDescription": "Dedicated rideshare flight to a mid-inclination orbit with dozens of small microsatellites and nanosatellites for commercial and government customers.\r\n\r\nThis launch also carries the second demonstration mission for SpaceX’s Project Starfall, which aims to mass-produce reentry capsules designed to autonomously transport valuable customer experiments and other payloads safely back from space to Earth, including for in-orbit manufacturing. \r\n\r\nStarfall is a cylindrical shaped capsule approximately 0.75 meters tall with a diameter of 3.1 meters, weighing approximately 2100 kilograms, and capable of carrying 1000 kilograms of payload. It is designed to be carried on Starship flights.",
+      "orbit": "LEO",
+      "pad": "Space Launch Complex 40",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "padTimezone": "America/New_York",
+      "padTurnaroundDays": 7,
+      "infoUrl": "https://www.spacex.com/launches/bandwagon5",
+      "webcastUrl": "https://x.com/i/broadcasts/1nxeLMddZlEJX",
+      "sourceUrl": "https://ll.thespacedevs.com/2.3.0/launches/3b430f81-0ff1-4d85-8a1a-cef0de326198/?format=json",
+      "stages": [
+        {
+          "id": 979,
+          "type": "Core",
+          "reused": true,
+          "flightNumber": 19,
+          "serialNumber": "B1085",
+          "vehicleStatus": "active",
+          "previousFlightDate": "2026-08-11T15:58:26Z",
+          "turnaround": "P69DT18H31M34S",
+          "landing": {
+            "attempt": true,
+            "success": null,
+            "description": "The Falcon 9 first stage B1085 will land on ASDS ASOG after its 19th flight.",
+            "downrangeDistanceKm": 600,
+            "location": "A Shortfall of Gravitas",
+            "locationAbbrev": "ASOG",
+            "type": null
+          }
+        }
+      ]
     },
     {
       "id": "f6af629d-39b5-4f86-bc0c-f8776444a858",

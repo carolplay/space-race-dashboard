@@ -4,7 +4,7 @@
   "productionDataModified": false,
   "inputDates": [
     "2026-10-09",
-    "2026-10-17"
+    "2026-10-18"
   ],
   "summary": {
     "observations": 6,
@@ -33,22 +33,22 @@
       "metric": "tracked-payloads",
       "value": 11124,
       "unit": "satellites",
-      "asOf": "2026-10-17",
+      "asOf": "2026-10-18",
       "asOfBasis": "Latest actual rows in the HF dataset viewer, UTC snapshot date; not a README statistic",
-      "retrievedOn": "2026-10-18",
+      "retrievedOn": "2026-10-19",
       "latestRetrievalAttempt": {
-        "attemptedOn": "2026-10-18",
+        "attemptedOn": "2026-10-19",
         "status": "verified-actual-rows",
         "httpStatus": 200,
-        "endpoint": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8007&length=20",
-        "note": "Verified latest four shell rows, indices 8023–8026 of 8027. Observation date remains October 17, not retrieval date."
+        "endpoint": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8011&length=20",
+        "note": "Verified latest four actual shell rows; observation date is October 18, distinct from retrieval date."
       },
-      "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8007&length=20",
-      "evidence": "Latest October 17 actual four shell rows sum to 11124; 10017 inferred operational, 1056 raising, 51 deorbiting. State subtotals agree. Viewer reports 8027 total rows. No shell-0 row at latest date; do not infer complete physical coverage. GCAT inventory remains October 15; different-date delta is not computed.",
-      "repositoryRevisionAtRetrieval": "f9d4d3cbe74dce066c33dc02fafcdaaf4dc75422",
-      "repositoryModifiedAt": "2026-10-17T11:55:14.000Z",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8011&length=20",
+      "evidence": "Latest October 18 actual four shell rows sum to 11124; 10022 inferred operational, 1046 raising, 56 deorbiting. State subtotals agree. Viewer reports 8031 total rows. No shell-0 row at latest date; do not infer complete physical coverage. GCAT inventory remains October 15; different-date delta is not computed.",
+      "repositoryRevisionAtRetrieval": "709bd710898cd5e3529bd5f3887689d4ed2a8765",
+      "repositoryModifiedAt": "2026-10-18T12:22:07.000Z",
       "filePath": "data/daily_snapshots.parquet",
-      "fileSha256AtRetrieval": "e519c7084b444617d187f096a0913e7a7d793592bf3e869f936752fc3e4c725c",
+      "fileSha256AtRetrieval": "43c46ac2c93443c399045a4405d584fe8400a686707f565bf0f9615278e7dc79",
       "versionCaveat": "Viewer response is not a revision-pinned parquet download; repository revision and file hash describe repository metadata checked separately at retrieval.",
       "shellIdsObserved": [
         1,
