@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T12:02:55.216Z",
+  "generatedAt": "2026-10-20T12:04:25.362Z",
   "summary": {
     "productionSources": 6,
     "freshSources": 5,
@@ -21,9 +21,15 @@
       "status": "fresh",
       "coverageZh": "12,648 个 GP 对象；按星座加载",
       "coverageEn": "12,648 GP objects; loaded by constellation",
-      "noteZh": "上游未给单一更新时刻；每个对象保存要素历元，获取时间不作为更新时刻。超过七天要素不绘制，GP 数量不等于物理库存或运营数。",
-      "noteEn": "No single upstream update timestamp: per-object epochs are preserved and retrieval is not relabeled as an update. Elements over seven days old are not drawn; GP counts are not physical or operational inventory.",
-      "url": "https://celestrak.org/NORAD/elements/"
+      "noteZh": "上游未给单一更新时刻；每个对象保存要素历元，获取时间不作为更新时刻。超过七天要素不绘制，GP 数量不等于物理库存或运营数。 10 月 20 日获取返回 HTTP 503；保留 10 月 19 日快照，健康状态按已有要素历元计算，不表示今天获取成功。",
+      "noteEn": "No single upstream update timestamp: per-object epochs are preserved and retrieval is not relabeled as an update. Elements over seven days old are not drawn; GP counts are not physical or operational inventory. October 20 retrieval returned HTTP 503; October 19 snapshot retained. Health is based on retained element epochs, not a successful retrieval today.",
+      "url": "https://celestrak.org/NORAD/elements/",
+      "latestRetrievalAttempt": {
+        "attemptedOn": "2026-10-20",
+        "status": "failed-retained-previous-snapshot",
+        "httpStatus": 503,
+        "retries": 0
+      }
     },
     {
       "id": "gcat-constellations",
@@ -33,7 +39,7 @@
       "roleZh": "五个主要星座的独立在轨库存观察",
       "roleEn": "Independent in-orbit inventory for five major constellations",
       "updatedAt": "2026-10-15T19:00:26.000Z",
-      "retrievedAt": "2026-10-19T12:01:43.264Z",
+      "retrievedAt": "2026-10-20T12:03:26.410Z",
       "cadence": "daily",
       "status": "fresh",
       "coverageZh": "12,678 颗；五个已识别部署子组",
@@ -50,7 +56,7 @@
       "roleZh": "当前在轨资产、类型、轨道与运营者",
       "roleEn": "Current orbital assets, type, orbit and operator",
       "updatedAt": "2026-10-17T19:20:54.000Z",
-      "retrievedAt": "2026-10-19T12:01:48.228Z",
+      "retrievedAt": "2026-10-20T12:03:31.209Z",
       "cadence": "daily",
       "status": "fresh",
       "coverageZh": "17,074 个活跃载荷；质量字段覆盖 100%",
@@ -67,7 +73,7 @@
       "roleZh": "2000 年以来发射、在轨库存与交付历史",
       "roleEn": "Launch, inventory and delivery history since 2000",
       "updatedAt": "2026-10-17T18:32:50.000Z",
-      "retrievedAt": "2026-10-19T12:01:50.603Z",
+      "retrievedAt": "2026-10-20T12:03:34.374Z",
       "cadence": "daily",
       "status": "fresh",
       "coverageZh": "2000—2026；19,753 个年内在轨载荷对象",
@@ -83,12 +89,12 @@
       "name": "Launch Library 2",
       "roleZh": "近期轨道任务、发射台、未来清单与一级复用记录",
       "roleEn": "Recent orbital missions, pads, manifest and reusable-stage records",
-      "updatedAt": "2026-10-19T10:57:45Z",
-      "retrievedAt": "2026-10-19T12:01:42.878Z",
+      "updatedAt": "2026-10-20T11:43:03Z",
+      "retrievedAt": "2026-10-20T12:03:26.411Z",
       "cadence": "daily",
       "status": "fresh",
-      "coverageZh": "2024-01-01—2026-10-19；827 次已观测尝试；16 个未来任务",
-      "coverageEn": "2024-01-01—2026-10-19; 827 observed attempts; 16 upcoming missions",
+      "coverageZh": "2024-01-01—2026-10-20；828 次已观测尝试；16 个未来任务",
+      "coverageEn": "2024-01-01—2026-10-20; 828 observed attempts; 16 upcoming missions",
       "noteZh": "未来日期保留 LL2 精度；详细模式的一级序列号与回收字段从 2026 年开始完整积累。",
       "noteEn": "Future dates retain LL2 precision; detailed stage serial and landing fields accumulate comprehensively from 2026.",
       "url": "https://thespacedevs.com/llapi"

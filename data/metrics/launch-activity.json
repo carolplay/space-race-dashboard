@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T12:01:42.878Z",
+  "generatedAt": "2026-10-20T12:03:26.411Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-19"
+    "to": "2026-10-20"
   },
   "source": {
     "name": "Launch Library 2",
@@ -47,8 +47,8 @@
         "label": "2026 YTD",
         "us": 144,
         "cn": 72,
-        "other": 27,
-        "global": 243
+        "other": 28,
+        "global": 244
       }
     ],
     "success": [
@@ -73,8 +73,8 @@
         "label": "2026 YTD",
         "us": 143,
         "cn": 68,
-        "other": 25,
-        "global": 236
+        "other": 26,
+        "global": 237
       }
     ],
     "rocketFamilies": [
@@ -747,8 +747,8 @@
         "year": "2026",
         "region": "other",
         "family": "H3",
-        "attempts": 2,
-        "success": 2
+        "attempts": 3,
+        "success": 3
       },
       {
         "year": "2026",

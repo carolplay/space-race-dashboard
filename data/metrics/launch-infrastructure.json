@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T12:01:42.878Z",
+  "generatedAt": "2026-10-20T12:03:26.411Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-19"
+    "to": "2026-10-20"
   },
   "source": {
     "name": "Launch Library 2",
@@ -20,7 +20,7 @@
   "summary": {
     "observedSites": 28,
     "observedPads": 62,
-    "orbitalAttempts": 827,
+    "orbitalAttempts": 828,
     "activePads": 61
   },
   "sites": [
@@ -418,9 +418,9 @@
       "name": "Tanegashima Space Center, Japan",
       "countryCode": "JP",
       "region": "other",
-      "attempts": 11,
-      "success": 10,
-      "successRate": 90.9,
+      "attempts": 12,
+      "success": 11,
+      "successRate": 91.7,
       "padCount": 2,
       "rocketFamilies": [
         "H-II",
@@ -437,7 +437,7 @@
         },
         {
           "year": "2026",
-          "attempts": 2
+          "attempts": 3
         }
       ]
     },
@@ -1407,6 +1407,41 @@
       ]
     },
     {
+      "id": 209,
+      "name": "Yoshinobu Launch Complex LP-2",
+      "siteId": 26,
+      "site": "Tanegashima Space Center, Japan",
+      "countryCode": "JP",
+      "region": "other",
+      "active": true,
+      "latitude": 30.400938,
+      "longitude": 130.97564,
+      "attempts": 9,
+      "success": 8,
+      "successRate": 88.9,
+      "firstLaunch": "2024-02-17",
+      "lastLaunch": "2026-10-19",
+      "medianIntervalDays": 108.1,
+      "fastestIntervalDays": 57.1,
+      "rocketFamilies": [
+        "H3"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 3
+        },
+        {
+          "year": "2025",
+          "attempts": 3
+        },
+        {
+          "year": "2026",
+          "attempts": 3
+        }
+      ]
+    },
+    {
       "id": 175,
       "name": "101",
       "siteId": 8,
@@ -1463,41 +1498,6 @@
         "Gravity-1",
         "Long March 11",
         "Smart Dragon"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 3
-        },
-        {
-          "year": "2025",
-          "attempts": 3
-        },
-        {
-          "year": "2026",
-          "attempts": 2
-        }
-      ]
-    },
-    {
-      "id": 209,
-      "name": "Yoshinobu Launch Complex LP-2",
-      "siteId": 26,
-      "site": "Tanegashima Space Center, Japan",
-      "countryCode": "JP",
-      "region": "other",
-      "active": true,
-      "latitude": 30.400938,
-      "longitude": 130.97564,
-      "attempts": 8,
-      "success": 7,
-      "successRate": 87.5,
-      "firstLaunch": "2024-02-17",
-      "lastLaunch": "2026-08-10",
-      "medianIntervalDays": 126.2,
-      "fastestIntervalDays": 57.1,
-      "rocketFamilies": [
-        "H3"
       ],
       "annual": [
         {
