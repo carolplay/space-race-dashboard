@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T12:03:26.411Z",
+  "generatedAt": "2026-10-21T12:03:07.846Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-20"
+    "to": "2026-10-21"
   },
   "source": {
     "name": "Launch Library 2",
@@ -20,7 +20,7 @@
   "summary": {
     "observedSites": 28,
     "observedPads": 62,
-    "orbitalAttempts": 828,
+    "orbitalAttempts": 830,
     "activePads": 61
   },
   "sites": [
@@ -29,8 +29,8 @@
       "name": "Cape Canaveral SFS, FL, USA",
       "countryCode": "US",
       "region": "us",
-      "attempts": 204,
-      "success": 203,
+      "attempts": 205,
+      "success": 204,
       "successRate": 99.5,
       "padCount": 4,
       "rocketFamilies": [
@@ -51,7 +51,7 @@
         },
         {
           "year": "2026",
-          "attempts": 55
+          "attempts": 56
         }
       ]
     },
@@ -302,8 +302,8 @@
       "name": "Haiyang Oriental Spaceport",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 20,
-      "success": 20,
+      "attempts": 21,
+      "success": 21,
       "successRate": 100,
       "padCount": 5,
       "rocketFamilies": [
@@ -323,7 +323,7 @@
         },
         {
           "year": "2026",
-          "attempts": 7
+          "attempts": 8
         }
       ]
     },
@@ -744,11 +744,11 @@
       "active": true,
       "latitude": 28.56194122,
       "longitude": -80.57735736,
-      "attempts": 185,
-      "success": 185,
+      "attempts": 186,
+      "success": 186,
       "successRate": 100,
       "firstLaunch": "2024-01-03",
-      "lastLaunch": "2026-10-13",
+      "lastLaunch": "2026-10-20",
       "medianIntervalDays": 4.4,
       "fastestIntervalDays": 1.9,
       "rocketFamilies": [
@@ -765,7 +765,7 @@
         },
         {
           "year": "2026",
-          "attempts": 49
+          "attempts": 50
         }
       ]
     },
@@ -1515,6 +1515,42 @@
       ]
     },
     {
+      "id": 221,
+      "name": "Rizhao offshore launch location",
+      "siteId": 185,
+      "site": "Haiyang Oriental Spaceport",
+      "countryCode": "CN",
+      "region": "cn",
+      "active": true,
+      "latitude": 35.391667,
+      "longitude": 119.598667,
+      "attempts": 8,
+      "success": 8,
+      "successRate": 100,
+      "firstLaunch": "2024-05-29",
+      "lastLaunch": "2026-10-21",
+      "medianIntervalDays": 113.5,
+      "fastestIntervalDays": 15.5,
+      "rocketFamilies": [
+        "Ceres-1",
+        "Smart Dragon"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 2
+        },
+        {
+          "year": "2025",
+          "attempts": 4
+        },
+        {
+          "year": "2026",
+          "attempts": 2
+        }
+      ]
+    },
+    {
       "id": 34,
       "name": "Ariane Launch Area 1 (ELV)",
       "siteId": 13,
@@ -1616,42 +1652,6 @@
         {
           "year": "2026",
           "attempts": 4
-        }
-      ]
-    },
-    {
-      "id": 221,
-      "name": "Rizhao offshore launch location",
-      "siteId": 185,
-      "site": "Haiyang Oriental Spaceport",
-      "countryCode": "CN",
-      "region": "cn",
-      "active": true,
-      "latitude": 35.391667,
-      "longitude": 119.598667,
-      "attempts": 7,
-      "success": 7,
-      "successRate": 100,
-      "firstLaunch": "2024-05-29",
-      "lastLaunch": "2026-01-15",
-      "medianIntervalDays": 97.4,
-      "fastestIntervalDays": 15.5,
-      "rocketFamilies": [
-        "Ceres-1",
-        "Smart Dragon"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 2
-        },
-        {
-          "year": "2025",
-          "attempts": 4
-        },
-        {
-          "year": "2026",
-          "attempts": 1
         }
       ]
     },

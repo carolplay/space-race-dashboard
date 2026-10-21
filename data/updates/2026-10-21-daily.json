@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "version": "1.10.12",
+  "changes": {
+    "activePayloads": {
+      "before": 17074,
+      "after": 17074
+    },
+    "knownActiveMassTonnes": 9712.0,
+    "currentCatalogueObjects": 35421,
+    "launchHistory": {
+      "coverage": {
+        "fromYear": 2000,
+        "toYear": 2026,
+        "currentYearIsPartial": true,
+        "launchCutoff": "2026-10-17",
+        "payloadCutoff": "2026-10-17"
+      },
+      "attempts2026Ytd": {
+        "us": 131,
+        "cn": 72,
+        "other": 42,
+        "global": 245
+      },
+      "success2026Ytd": {
+        "us": 130,
+        "cn": 68,
+        "other": 40,
+        "global": 238
+      },
+      "sourceChanged": false,
+      "note": "Same GCAT source hashes and October 17 cutoff; October 21 rebuild is not new data."
+    },
+    "ll2": {
+      "fetchedRecords": 157,
+      "requests": 2,
+      "query": {
+        "from": "2026-09-01",
+        "to": "2027-01-19",
+        "requestCount": 2
+      },
+      "cachedRecords": 947,
+      "upcoming": 16,
+      "reusableVehicles": 20,
+      "latestSourceUpdate": "2026-10-21T07:23:26Z",
+      "attempts2026Ytd": {
+        "year": "2026",
+        "label": "2026 YTD",
+        "us": 145,
+        "cn": 73,
+        "other": 28,
+        "global": 246
+      },
+      "success2026Ytd": {
+        "year": "2026",
+        "label": "2026 YTD",
+        "us": 144,
+        "cn": 69,
+        "other": 26,
+        "global": 239
+      },
+      "note": "LL2 2026 YTD increases to 246 attempts and 239 successes; US and China each add one successful attempt. Distinct GCAT/LL2 grouping and source cutoffs retained.",
+      "recordChanges": {
+        "changedRecords": 30,
+        "addedRecords": 1,
+        "removedRecords": 0
+      }
+    },
+    "physicalConstellations": {
+      "asOf": "2026-10-15",
+      "counts": {
+        "starlink": 11154,
+        "amazon-leo": 392,
+        "oneweb": 654,
+        "guowang": 222,
+        "qianfan": 256
+      },
+      "changed": false,
+      "note": "October 21 retrieval is not a new October 15 observation."
+    },
+    "gp": {
+      "retrievedAt": "2026-10-21T12:03:12.337Z",
+      "counts": {
+        "starlink": 11121,
+        "oneweb": 651,
+        "amazon-leo": 391,
+        "guowang": 226,
+        "qianfan": 256
+      },
+      "rejected": 0,
+      "note": "Per-object epochs retained. Renderer excludes elements older than seven days; trackable counts are not physical inventory.",
+      "epochRanges": {
+        "starlink": {
+          "oldest": "2026-10-18T23:40:19.491744Z",
+          "newest": "2026-10-21T08:50:52.310400Z"
+        },
+        "oneweb": {
+          "oldest": "2026-10-20T09:38:37.310208Z",
+          "newest": "2026-10-21T05:37:13.202112Z"
+        },
+        "amazon-leo": {
+          "oldest": "2026-10-19T06:28:56.630496Z",
+          "newest": "2026-10-21T05:23:25.440864Z"
+        },
+        "guowang": {
+          "oldest": "2026-10-19T18:12:06.774336Z",
+          "newest": "2026-10-21T05:28:30.660096Z"
+        },
+        "qianfan": {
+          "oldest": "2026-10-20T12:18:20.809440Z",
+          "newest": "2026-10-21T05:36:19.711008Z"
+        }
+      },
+      "status": "verified-five-groups"
+    }
+  },
+  "sourceDates": {
+    "gcatActive": "2026-10-17T19:20:54.000Z",
+    "gcatCurrentCatalogue": "2026-10-17T19:15:34.000Z",
+    "gcatSatcat": "2026-10-17T18:32:50.000Z",
+    "gcatExtended": "2026-10-17T18:32:55.000Z",
+    "gcatLaunchlog": "2026-10-17T18:30:58.000Z",
+    "gcatConstellationEarliest": "2026-10-15T19:00:26.000Z",
+    "ll2Latest": "2026-10-21T07:23:26Z",
+    "officialEditorial": "2026-09-08"
+  },
+  "hf": {
+    "status": "verified-actual-rows",
+    "asOf": "2026-10-20",
+    "retrievedOn": "2026-10-21",
+    "trackedPayloads": 11123,
+    "inferredOperational": 9987,
+    "raising": 1062,
+    "deorbiting": 74,
+    "repositoryRevision": "7c0c3df4d47f98ae1e7e1a9d6ea747f9f13ad4f8",
+    "filePath": "data/daily_snapshots.parquet",
+    "fileSha256": "7d7cac754de5061ee219362ec9ea5650cfe7d2018719e0255f59c647ab928e2b",
+    "evidencePath": "data/research/current/hf-starlink-2026-10-21.json",
+    "note": "Viewer response is not a revision-pinned parquet download; repository revision and file hash describe repository metadata checked separately at retrieval."
+  },
+  "referenceReconciliation": {
+    "summary": {
+      "observations": 6,
+      "agreements": 0,
+      "coverageReviews": 0,
+      "dateMismatches": 6
+    },
+    "note": "All six comparison dates differ; no deltas computed. Orbital Radar saved attributed records only, zero requests, permission pending."
+  },
+  "reusableLearning": {
+    "principles": [
+      "Constellation selection should keep subgroup coverage visible.",
+      "Shell and lifecycle counts must expose inferred state and reconcile subtotals.",
+      "Deployment pace requires dated observations rather than retrieval timestamps.",
+      "Observed catalogue coverage and simulated views must remain distinguishable."
+    ],
+    "protectedInterfaceCopied": false
+  },
+  "rebuildOrder": [
+    "source refresh",
+    "constellation history and official status check",
+    "constellation model and orbit bins",
+    "2026–2036 forecast",
+    "reference reconciliation",
+    "source health"
+  ],
+  "validation": {
+    "result": "PASS_WITH_GAPS",
+    "checks": 470,
+    "errors": [],
+    "warnings": [
+      "chn-sailspace-1: candidate brand association",
+      "usa-usasat-ngso-8b: preserved upstream alias anomaly",
+      "usa-usasat-ngso-8c: preserved upstream alias anomaly",
+      "chn-gw-a59: no verified RES35 dates or denominator",
+      "chn-gw-2: no verified RES35 dates or denominator",
+      "g-l5ku: current qualifying inventory not verified",
+      "g-l5ku: Status-table deployment count differs from this report; preserve both and do not reconcile without source",
+      "g-l5ka: current qualifying inventory not verified",
+      "g-l5ka: incomplete/duplicate station identity extraction",
+      "chn-sailspace-1: current qualifying inventory not verified",
+      "nor-steam-1: current qualifying inventory not verified",
+      "nor-steam-2: current qualifying inventory not verified",
+      "nor-steam-2b: current qualifying inventory not verified",
+      "nor-steam-2b: incomplete/duplicate station identity extraction",
+      "usa-usasat-ngso-8a: current qualifying inventory not verified",
+      "usa-usasat-ngso-8b: current qualifying inventory not verified",
+      "usa-usasat-ngso-8c: current qualifying inventory not verified",
+      "chn-gw-a59: current qualifying inventory not verified",
+      "chn-gw-2: current qualifying inventory not verified"
+    ],
+    "integrationReady": false
+  },
+  "tests": {
+    "productionBuildPassed": true,
+    "passed": 35,
+    "failed": 0,
+    "coverage": "Regional totals, unknowns, partial-year scope, bilingual displays, rendered routes, deterministic output and unchanged future assumptions."
+  },
+  "unchanged": {
+    "manualFutureOutlookAssumptions": true,
+    "ituFccEvidence": true,
+    "crewedCislunarEditorial": true,
+    "unknownBiuCompliance": true
+  },
+  "publication": {
+    "required": true,
+    "audience": "public",
+    "previousUserChangesExcluded": true,
+    "status": "Build and validation passed; exact release provenance recorded separately after deployment."
+  },
+  "blockers": [],
+  "recoveredSources": [
+    "CelesTrak GP: all five groups refreshed successfully after prior HTTP 503.",
+    "HF: October 20 actual rows verified after prior HTTP 503."
+  ]
+}

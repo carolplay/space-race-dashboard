@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T12:03:26.411Z",
+  "generatedAt": "2026-10-21T12:03:07.846Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-20"
+    "to": "2026-10-21"
   },
   "source": {
     "name": "Launch Library 2",
@@ -45,10 +45,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 144,
-        "cn": 72,
+        "us": 145,
+        "cn": 73,
         "other": 28,
-        "global": 244
+        "global": 246
       }
     ],
     "success": [
@@ -71,10 +71,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 143,
-        "cn": 68,
+        "us": 144,
+        "cn": 69,
         "other": 26,
-        "global": 237
+        "global": 239
       }
     ],
     "rocketFamilies": [
@@ -676,16 +676,16 @@
       {
         "year": "2026",
         "region": "cn",
-        "family": "Gravity-1",
+        "family": "Ceres-1",
         "attempts": 2,
         "success": 2
       },
       {
         "year": "2026",
         "region": "cn",
-        "family": "Ceres-1",
-        "attempts": 1,
-        "success": 1
+        "family": "Gravity-1",
+        "attempts": 2,
+        "success": 2
       },
       {
         "year": "2026",
@@ -817,8 +817,8 @@
         "year": "2026",
         "region": "us",
         "family": "Falcon 9",
-        "attempts": 114,
-        "success": 114
+        "attempts": 115,
+        "success": 115
       },
       {
         "year": "2026",
