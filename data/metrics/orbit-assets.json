@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T12:03:12.105Z",
+  "generatedAt": "2026-10-22T11:59:46.243Z",
   "source": {
     "name": "GCAT",
     "publisher": "Jonathan C. McDowell",
@@ -525,12 +525,40 @@
         "field": "DryMass with legacy Mass / LaunchMass fallback",
         "caveat": "Dry mass is preferred for current in-orbit inventory; LaunchMass is used only when no dry-mass field is present."
       }
+    },
+    {
+      "date": "2026-10-22",
+      "activePayloads": {
+        "us": 13105,
+        "cn": 1477,
+        "other": 2492,
+        "global": 17074
+      },
+      "catalogObjects": {
+        "us": 18801,
+        "cn": 6254,
+        "other": 10366,
+        "global": 35421
+      },
+      "knownActivePayloadMassKg": {
+        "us": 7361358.48000002,
+        "cn": 1008594,
+        "other": 1342090.1010000005,
+        "global": 9712042.580999989
+      },
+      "massCoverage": {
+        "knownObjects": 17074,
+        "totalObjects": 17074,
+        "percent": 100,
+        "field": "DryMass with legacy Mass / LaunchMass fallback",
+        "caveat": "Dry mass is preferred for current in-orbit inventory; LaunchMass is used only when no dry-mass field is present."
+      }
     }
   ],
   "current": {
     "schemaVersion": 1,
-    "date": "2026-10-21",
-    "retrievedAt": "2026-10-21T12:03:12.105Z",
+    "date": "2026-10-22",
+    "retrievedAt": "2026-10-22T11:59:46.243Z",
     "source": {
       "name": "GCAT",
       "publisher": "Jonathan C. McDowell",
