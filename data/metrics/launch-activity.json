@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T11:59:42.321Z",
+  "generatedAt": "2026-10-23T11:59:15.414Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-22"
+    "to": "2026-10-23"
   },
   "source": {
     "name": "Launch Library 2",
@@ -45,10 +45,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 145,
-        "cn": 73,
+        "us": 146,
+        "cn": 74,
         "other": 28,
-        "global": 246
+        "global": 248
       }
     ],
     "success": [
@@ -71,10 +71,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 144,
-        "cn": 69,
+        "us": 145,
+        "cn": 70,
         "other": 26,
-        "global": 239
+        "global": 241
       }
     ],
     "rocketFamilies": [
@@ -607,8 +607,8 @@
         "year": "2026",
         "region": "cn",
         "family": "Long March 6",
-        "attempts": 10,
-        "success": 10
+        "attempts": 11,
+        "success": 11
       },
       {
         "year": "2026",
@@ -824,8 +824,8 @@
         "year": "2026",
         "region": "us",
         "family": "Electron",
-        "attempts": 16,
-        "success": 16
+        "attempts": 17,
+        "success": 17
       },
       {
         "year": "2026",

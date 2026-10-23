@@ -4,7 +4,7 @@
   "productionDataModified": false,
   "inputDates": [
     "2026-10-09",
-    "2026-10-21"
+    "2026-10-22"
   ],
   "summary": {
     "observations": 6,
@@ -33,22 +33,22 @@
       "metric": "tracked-payloads",
       "value": 11121,
       "unit": "satellites",
-      "asOf": "2026-10-21",
+      "asOf": "2026-10-22",
       "asOfBasis": "Latest actual rows in the HF dataset viewer, UTC snapshot date; not a README statistic",
-      "retrievedOn": "2026-10-22",
+      "retrievedOn": "2026-10-23",
       "latestRetrievalAttempt": {
-        "attemptedOn": "2026-10-22",
+        "attemptedOn": "2026-10-23",
         "status": "verified-actual-rows-with-subtotal-gap",
         "httpStatus": 200,
-        "endpoint": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8023&length=20",
-        "note": "Actual October 21 rows verified; published shell-2 state subtotal is one below total. Retain raw values and flag inconsistency; do not infer missing lifecycle state."
+        "endpoint": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8027&length=20",
+        "note": "October 22 actual rows verified; retain raw shell-2 discrepancy without state inference."
       },
-      "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8023&length=20",
-      "evidence": "Latest October 21 actual four shell rows sum to 11121; 9932 inferred operational, 1098 raising, 90 deorbiting. State subtotal is 11120: discrepancy 1 in shell 2, retained without correction or state inference. Viewer reports 8043 rows. No latest shell-0 row; do not infer complete physical coverage. GCAT inventory remains October 15; no different-date delta.",
-      "repositoryRevisionAtRetrieval": "f0b947f15a7f3e8c36b7f09794d8869cd996bc8e",
-      "repositoryModifiedAt": "2026-10-21T13:21:23.000Z",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8027&length=20",
+      "evidence": "Latest October 22 actual four shell rows sum to 11121; 9932 inferred operational, 1098 raising, 90 deorbiting. State subtotal 11120: shell-2 discrepancy 1, retained without correction. Viewer reports 8047 rows. No latest shell-0 row; do not infer complete physical coverage. GCAT inventory remains October 15; no different-date delta.",
+      "repositoryRevisionAtRetrieval": "16cb9cb3e4d2566542234c17623952c9a62ba9dc",
+      "repositoryModifiedAt": "2026-10-22T13:21:39.000Z",
       "filePath": "data/daily_snapshots.parquet",
-      "fileSha256AtRetrieval": "7359f91a39700c6e771fbb212f459fa949e16bb0385db0600e91bf47ee8f79d3",
+      "fileSha256AtRetrieval": "dbb2dc095bc8bca0eed0110e19e7f96e9f4d24657624e0fe0dcabfec2ae8ba48",
       "versionCaveat": "Viewer response is not a revision-pinned parquet download; repository revision and file hash describe repository metadata checked separately at retrieval.",
       "shellIdsObserved": [
         1,

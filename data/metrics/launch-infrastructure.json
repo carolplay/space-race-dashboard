@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T11:59:42.321Z",
+  "generatedAt": "2026-10-23T11:59:15.414Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-22"
+    "to": "2026-10-23"
   },
   "source": {
     "name": "Launch Library 2",
@@ -20,7 +20,7 @@
   "summary": {
     "observedSites": 28,
     "observedPads": 62,
-    "orbitalAttempts": 830,
+    "orbitalAttempts": 832,
     "activePads": 61
   },
   "sites": [
@@ -187,8 +187,8 @@
       "name": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
       "countryCode": "NZ",
       "region": "other",
-      "attempts": 45,
-      "success": 45,
+      "attempts": 46,
+      "success": 46,
       "successRate": 100,
       "padCount": 2,
       "rocketFamilies": [
@@ -205,7 +205,7 @@
         },
         {
           "year": "2026",
-          "attempts": 15
+          "attempts": 16
         }
       ]
     },
@@ -244,8 +244,8 @@
       "name": "Taiyuan Satellite Launch Center, People's Republic of China",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 38,
-      "success": 38,
+      "attempts": 39,
+      "success": 39,
       "successRate": 100,
       "padCount": 3,
       "rocketFamilies": [
@@ -264,7 +264,7 @@
         },
         {
           "year": "2026",
-          "attempts": 13
+          "attempts": 14
         }
       ]
     },
@@ -921,12 +921,12 @@
       "active": true,
       "latitude": 38.8583,
       "longitude": 111.5802,
-      "attempts": 25,
-      "success": 25,
+      "attempts": 26,
+      "success": 26,
       "successRate": 100,
       "firstLaunch": "2024-03-26",
-      "lastLaunch": "2026-09-24",
-      "medianIntervalDays": 31.3,
+      "lastLaunch": "2026-10-23",
+      "medianIntervalDays": 30.2,
       "fastestIntervalDays": 19.8,
       "rocketFamilies": [
         "Long March 6"
@@ -942,7 +942,7 @@
         },
         {
           "year": "2026",
-          "attempts": 9
+          "attempts": 10
         }
       ]
     },
@@ -1137,12 +1137,12 @@
       "active": true,
       "latitude": -39.262833,
       "longitude": 177.864469,
-      "attempts": 17,
-      "success": 17,
+      "attempts": 18,
+      "success": 18,
       "successRate": 100,
       "firstLaunch": "2024-09-20",
-      "lastLaunch": "2026-09-11",
-      "medianIntervalDays": 37,
+      "lastLaunch": "2026-10-23",
+      "medianIntervalDays": 37.2,
       "fastestIntervalDays": 7.6,
       "rocketFamilies": [
         "Electron"
@@ -1158,7 +1158,7 @@
         },
         {
           "year": "2026",
-          "attempts": 8
+          "attempts": 9
         }
       ]
     },

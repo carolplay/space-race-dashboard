@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "retrievedOn": "2026-10-23",
+  "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8027&length=20",
+  "repositoryRevision": "16cb9cb3e4d2566542234c17623952c9a62ba9dc",
+  "repositoryModifiedAt": "2026-10-22T13:21:39.000Z",
+  "filePath": "data/daily_snapshots.parquet",
+  "fileSha256": "dbb2dc095bc8bca0eed0110e19e7f96e9f4d24657624e0fe0dcabfec2ae8ba48",
+  "versionCaveat": "Viewer response is not a revision-pinned parquet download; repository revision and file hash describe repository metadata checked separately at retrieval.",
+  "numRowsTotal": 8047,
+  "rows": [
+    {
+      "row_idx": 8043,
+      "row": {
+        "date": "2026-10-22T00:00:00",
+        "shell_id": 2,
+        "total_count": 5089,
+        "operational_count": 4443,
+        "raising_count": 568,
+        "deorbiting_count": 77,
+        "reentered_count": null,
+        "isl_operational_count": 4022,
+        "avg_altitude": null,
+        "min_altitude": null,
+        "max_altitude": null,
+        "new_launches": 0,
+        "anomalous_count": null,
+        "shell_name": "Shell 3 (53° / 550km)"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 8044,
+      "row": {
+        "date": "2026-10-22T00:00:00",
+        "shell_id": 3,
+        "total_count": 897,
+        "operational_count": 767,
+        "raising_count": 127,
+        "deorbiting_count": 3,
+        "reentered_count": null,
+        "isl_operational_count": 733,
+        "avg_altitude": null,
+        "min_altitude": null,
+        "max_altitude": null,
+        "new_launches": 0,
+        "anomalous_count": null,
+        "shell_name": "Shell 4 (70° / 570km)"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 8045,
+      "row": {
+        "date": "2026-10-22T00:00:00",
+        "shell_id": 1,
+        "total_count": 3613,
+        "operational_count": 3244,
+        "raising_count": 360,
+        "deorbiting_count": 9,
+        "reentered_count": null,
+        "isl_operational_count": 3200,
+        "avg_altitude": null,
+        "min_altitude": null,
+        "max_altitude": null,
+        "new_launches": 0,
+        "anomalous_count": null,
+        "shell_name": "Shell 2 (43° / 340km)"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 8046,
+      "row": {
+        "date": "2026-10-22T00:00:00",
+        "shell_id": 4,
+        "total_count": 1522,
+        "operational_count": 1478,
+        "raising_count": 43,
+        "deorbiting_count": 1,
+        "reentered_count": null,
+        "isl_operational_count": 1477,
+        "avg_altitude": null,
+        "min_altitude": null,
+        "max_altitude": null,
+        "new_launches": 0,
+        "anomalous_count": null,
+        "shell_name": "Shell 5 (97.6° / 560km)"
+      },
+      "truncated_cells": []
+    }
+  ],
+  "sums": {
+    "total_count": 11121,
+    "operational_count": 9932,
+    "raising_count": 1098,
+    "deorbiting_count": 90
+  },
+  "stateReconciliation": {
+    "total": 11121,
+    "stateSubtotal": 11120,
+    "unreconciledDifference": 1,
+    "issues": [
+      {
+        "shellId": 2,
+        "total": 5089,
+        "stateSubtotal": 5088
+      }
+    ],
+    "interpretation": "Published counts retained as-is. Residual is an arithmetic discrepancy, not a verified unknown-state satellite."
+  }
+}
