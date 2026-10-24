@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T11:59:15.414Z",
+  "generatedAt": "2026-10-24T12:01:11.188Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-23"
+    "to": "2026-10-24"
   },
   "source": {
     "name": "Launch Library 2",
@@ -45,10 +45,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 146,
-        "cn": 74,
+        "us": 147,
+        "cn": 75,
         "other": 28,
-        "global": 248
+        "global": 250
       }
     ],
     "success": [
@@ -71,10 +71,10 @@
       {
         "year": "2026",
         "label": "2026 YTD",
-        "us": 145,
-        "cn": 70,
+        "us": 146,
+        "cn": 71,
         "other": 26,
-        "global": 241
+        "global": 243
       }
     ],
     "rocketFamilies": [
@@ -648,6 +648,13 @@
       {
         "year": "2026",
         "region": "cn",
+        "family": "Long March 4",
+        "attempts": 4,
+        "success": 4
+      },
+      {
+        "year": "2026",
+        "region": "cn",
         "family": "Smart Dragon",
         "attempts": 4,
         "success": 4
@@ -665,13 +672,6 @@
         "family": "Long March 3",
         "attempts": 3,
         "success": 2
-      },
-      {
-        "year": "2026",
-        "region": "cn",
-        "family": "Long March 4",
-        "attempts": 3,
-        "success": 3
       },
       {
         "year": "2026",
@@ -817,8 +817,8 @@
         "year": "2026",
         "region": "us",
         "family": "Falcon 9",
-        "attempts": 115,
-        "success": 115
+        "attempts": 116,
+        "success": 116
       },
       {
         "year": "2026",

@@ -4,7 +4,7 @@
   "productionDataModified": false,
   "inputDates": [
     "2026-10-09",
-    "2026-10-22"
+    "2026-10-23"
   ],
   "summary": {
     "observations": 6,
@@ -31,24 +31,24 @@
       "projectId": "starlink-mission-control",
       "entityId": "starlink",
       "metric": "tracked-payloads",
-      "value": 11121,
+      "value": 11116,
       "unit": "satellites",
-      "asOf": "2026-10-22",
+      "asOf": "2026-10-23",
       "asOfBasis": "Latest actual rows in the HF dataset viewer, UTC snapshot date; not a README statistic",
-      "retrievedOn": "2026-10-23",
+      "retrievedOn": "2026-10-24",
       "latestRetrievalAttempt": {
-        "attemptedOn": "2026-10-23",
+        "attemptedOn": "2026-10-24",
         "status": "verified-actual-rows-with-subtotal-gap",
         "httpStatus": 200,
-        "endpoint": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8027&length=20",
-        "note": "October 22 actual rows verified; retain raw shell-2 discrepancy without state inference."
+        "endpoint": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8031&length=20",
+        "note": "October 23 actual rows verified; retain raw counts and arithmetic discrepancy without lifecycle inference."
       },
-      "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8027&length=20",
-      "evidence": "Latest October 22 actual four shell rows sum to 11121; 9932 inferred operational, 1098 raising, 90 deorbiting. State subtotal 11120: shell-2 discrepancy 1, retained without correction. Viewer reports 8047 rows. No latest shell-0 row; do not infer complete physical coverage. GCAT inventory remains October 15; no different-date delta.",
-      "repositoryRevisionAtRetrieval": "16cb9cb3e4d2566542234c17623952c9a62ba9dc",
-      "repositoryModifiedAt": "2026-10-22T13:21:39.000Z",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=juliensimon/starlink-fleet-data&config=default&split=train&offset=8031&length=20",
+      "evidence": "Latest October 23 four actual shell rows sum to 11116; 9852 inferred operational, 1188 raising, 75 deorbiting. State subtotal 11115: discrepancy 1, retained without correction. Viewer reports 8051 rows. No latest shell-0 row; do not infer complete physical coverage. GCAT inventory is October 24; no different-date delta.",
+      "repositoryRevisionAtRetrieval": "6186e0322e4cd4c9d50df64bcca703b0b537a21b",
+      "repositoryModifiedAt": "2026-10-23T13:00:04.000Z",
       "filePath": "data/daily_snapshots.parquet",
-      "fileSha256AtRetrieval": "dbb2dc095bc8bca0eed0110e19e7f96e9f4d24657624e0fe0dcabfec2ae8ba48",
+      "fileSha256AtRetrieval": "3acd6a1104a79a836677a45930888402c47134a5d7a047b0d69af916ec8128ac",
       "versionCaveat": "Viewer response is not a revision-pinned parquet download; repository revision and file hash describe repository metadata checked separately at retrieval.",
       "shellIdsObserved": [
         1,
@@ -59,20 +59,20 @@
       "epochQuality": "dataset-viewer-snapshot-date",
       "status": "date-mismatch",
       "stateReconciliation": {
-        "total": 11121,
-        "stateSubtotal": 11120,
+        "total": 11116,
+        "stateSubtotal": 11115,
         "unreconciledDifference": 1,
         "issues": [
           {
             "shellId": 2,
-            "total": 5089,
-            "stateSubtotal": 5088
+            "total": 5085,
+            "stateSubtotal": 5084
           }
         ],
         "interpretation": "Published counts retained as-is. Residual is an arithmetic discrepancy, not a verified unknown-state satellite."
       },
-      "localValue": 11154,
-      "localAsOf": "2026-10-15",
+      "localValue": 11144,
+      "localAsOf": "2026-10-24",
       "localSource": "https://planet4589.org/space/con/star/stats.html",
       "localScope": "physical-in-orbit-estimate",
       "peerScope": "catalogue-tracked-payloads",
@@ -95,7 +95,7 @@
       "epochQuality": "page-date",
       "status": "date-mismatch",
       "localValue": 222,
-      "localAsOf": "2026-10-15",
+      "localAsOf": "2026-10-24",
       "localSource": "https://planet4589.org/space/con/xw/stats.html",
       "localScope": "physical-in-orbit-estimate",
       "peerScope": "catalogue-tracked-payloads",
@@ -118,7 +118,7 @@
       "epochQuality": "page-date",
       "status": "date-mismatch",
       "localValue": 256,
-      "localAsOf": "2026-10-15",
+      "localAsOf": "2026-10-24",
       "localSource": "https://planet4589.org/space/con/qf/stats.html",
       "localScope": "physical-in-orbit-estimate",
       "peerScope": "catalogue-tracked-payloads",
@@ -140,8 +140,8 @@
       "evidence": "In-orbit counters / provider comparison; attributed user-query retrieval",
       "epochQuality": "page-date",
       "status": "date-mismatch",
-      "localValue": 11154,
-      "localAsOf": "2026-10-15",
+      "localValue": 11144,
+      "localAsOf": "2026-10-24",
       "localSource": "https://planet4589.org/space/con/star/stats.html",
       "localScope": "physical-in-orbit-estimate",
       "peerScope": "catalogue-tracked-payloads",
@@ -164,7 +164,7 @@
       "epochQuality": "page-date",
       "status": "date-mismatch",
       "localValue": 392,
-      "localAsOf": "2026-10-15",
+      "localAsOf": "2026-10-24",
       "localSource": "https://planet4589.org/space/con/kp/stats.html",
       "localScope": "physical-in-orbit-estimate",
       "peerScope": "catalogue-tracked-payloads",
@@ -187,7 +187,7 @@
       "epochQuality": "page-date",
       "status": "date-mismatch",
       "localValue": 654,
-      "localAsOf": "2026-10-15",
+      "localAsOf": "2026-10-24",
       "localSource": "https://planet4589.org/space/con/ow/stats.html",
       "localScope": "physical-in-orbit-estimate",
       "peerScope": "catalogue-tracked-payloads",

@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "version": "1.10.15",
+  "changes": {
+    "activePayloads": {
+      "before": 17074,
+      "after": 17107
+    },
+    "knownActiveMassTonnes": 9715.7,
+    "currentCatalogueObjects": 35460,
+    "launchHistory": {
+      "coverage": {
+        "fromYear": 2000,
+        "toYear": 2026,
+        "currentYearIsPartial": true,
+        "launchCutoff": "2026-10-24",
+        "payloadCutoff": "2026-10-24"
+      },
+      "attempts2026Ytd": {
+        "us": 132,
+        "cn": 75,
+        "other": 44,
+        "global": 251
+      },
+      "success2026Ytd": {
+        "us": 131,
+        "cn": 71,
+        "other": 42,
+        "global": 244
+      },
+      "sourceChanged": true,
+      "note": "New GCAT source timestamps and hashes retained; current year remains partial and same-period comparisons use actual cutoff."
+    },
+    "ll2": {
+      "fetchedRecords": 147,
+      "requests": 2,
+      "query": {
+        "from": "2026-09-01",
+        "to": "2027-01-22",
+        "requestCount": 2
+      },
+      "cachedRecords": 937,
+      "upcoming": 16,
+      "reusableVehicles": 20,
+      "latestSourceUpdate": "2026-10-24T02:53:17Z",
+      "attempts2026Ytd": {
+        "year": "2026",
+        "label": "2026 YTD",
+        "us": 147,
+        "cn": 75,
+        "other": 28,
+        "global": 250
+      },
+      "success2026Ytd": {
+        "year": "2026",
+        "label": "2026 YTD",
+        "us": 146,
+        "cn": 71,
+        "other": 26,
+        "global": 243
+      },
+      "note": "Actual YTD totals and future plans remain separate; GCAT and LL2 grouping/cutoffs differ. Absent future records do not imply cancellation or completion.",
+      "recordChanges": {
+        "changedRecords": 15,
+        "addedRecords": 0,
+        "removedRecords": 1
+      },
+      "absentFutureEvidencePath": "data/snapshots/ll2-query-absences-2026-10-24.json"
+    },
+    "physicalConstellations": {
+      "asOf": "2026-10-24",
+      "counts": {
+        "starlink": 11144,
+        "amazon-leo": 392,
+        "oneweb": 654,
+        "guowang": 222,
+        "qianfan": 256
+      },
+      "changed": true,
+      "note": "New October 24 upstream constellation observations; Starlink physical-in-orbit estimate changes from 11154 to 11144. Other fleet counts unchanged. Not operational or compliance counts."
+    },
+    "gp": {
+      "retrievedAt": "2026-10-24T12:01:17.915Z",
+      "counts": {
+        "starlink": 11114,
+        "oneweb": 651,
+        "amazon-leo": 391,
+        "guowang": 226,
+        "qianfan": 256
+      },
+      "rejected": 0,
+      "note": "Per-object epochs retained. Renderer excludes elements older than seven days; trackable counts are not physical inventory.",
+      "epochRanges": {
+        "starlink": {
+          "oldest": "2026-10-20T05:52:09.093216Z",
+          "newest": "2026-10-24T05:46:18.925248Z"
+        },
+        "oneweb": {
+          "oldest": "2026-10-22T12:52:52.436928Z",
+          "newest": "2026-10-24T04:53:56.596992Z"
+        },
+        "amazon-leo": {
+          "oldest": "2026-10-22T12:03:16.197984Z",
+          "newest": "2026-10-23T23:43:07.350528Z"
+        },
+        "guowang": {
+          "oldest": "2026-10-21T11:32:10.317408Z",
+          "newest": "2026-10-23T23:40:24.660192Z"
+        },
+        "qianfan": {
+          "oldest": "2026-10-23T15:36:14.453856Z",
+          "newest": "2026-10-23T23:44:51.899712Z"
+        }
+      },
+      "status": "verified-five-groups"
+    }
+  },
+  "sourceDates": {
+    "gcatActive": "2026-10-24T02:06:27.000Z",
+    "gcatCurrentCatalogue": "2026-10-24T02:00:41.000Z",
+    "gcatSatcat": "2026-10-24T01:14:13.000Z",
+    "gcatExtended": "2026-10-24T01:14:18.000Z",
+    "gcatLaunchlog": "2026-10-24T01:12:21.000Z",
+    "gcatConstellationEarliest": "2026-10-24T01:26:41.000Z",
+    "ll2Latest": "2026-10-24T02:53:17Z",
+    "officialEditorial": "2026-09-08"
+  },
+  "hf": {
+    "status": "verified-actual-rows-with-subtotal-gap",
+    "asOf": "2026-10-23",
+    "retrievedOn": "2026-10-24",
+    "trackedPayloads": 11116,
+    "inferredOperational": 9852,
+    "raising": 1188,
+    "deorbiting": 75,
+    "repositoryRevision": "6186e0322e4cd4c9d50df64bcca703b0b537a21b",
+    "filePath": "data/daily_snapshots.parquet",
+    "fileSha256": "3acd6a1104a79a836677a45930888402c47134a5d7a047b0d69af916ec8128ac",
+    "evidencePath": "data/research/current/hf-starlink-2026-10-24.json",
+    "note": "Viewer response is not a revision-pinned parquet download; repository revision and file hash describe repository metadata checked separately at retrieval.",
+    "stateReconciliation": {
+      "total": 11116,
+      "stateSubtotal": 11115,
+      "unreconciledDifference": 1,
+      "issues": [
+        {
+          "shellId": 2,
+          "total": 5085,
+          "stateSubtotal": 5084
+        }
+      ],
+      "interpretation": "Published counts retained as-is. Residual is an arithmetic discrepancy, not a verified unknown-state satellite."
+    }
+  },
+  "referenceReconciliation": {
+    "summary": {
+      "observations": 6,
+      "agreements": 0,
+      "coverageReviews": 0,
+      "dateMismatches": 6
+    },
+    "note": "All six comparison dates differ; no deltas computed. Orbital Radar saved attributed records only, zero requests, permission pending."
+  },
+  "reusableLearning": {
+    "principles": [
+      "Constellation selection should keep subgroup coverage visible.",
+      "Shell and lifecycle counts must expose inferred state and reconcile subtotals.",
+      "Deployment pace requires dated observations rather than retrieval timestamps.",
+      "Observed catalogue coverage and simulated views must remain distinguishable."
+    ],
+    "protectedInterfaceCopied": false
+  },
+  "rebuildOrder": [
+    "source refresh",
+    "constellation history and official status check",
+    "constellation model and orbit bins",
+    "2026–2036 forecast",
+    "reference reconciliation",
+    "source health"
+  ],
+  "validation": {
+    "result": "PASS_WITH_GAPS",
+    "checks": 470,
+    "errors": [],
+    "warnings": [
+      "chn-sailspace-1: candidate brand association",
+      "usa-usasat-ngso-8b: preserved upstream alias anomaly",
+      "usa-usasat-ngso-8c: preserved upstream alias anomaly",
+      "chn-gw-a59: no verified RES35 dates or denominator",
+      "chn-gw-2: no verified RES35 dates or denominator",
+      "g-l5ku: current qualifying inventory not verified",
+      "g-l5ku: Status-table deployment count differs from this report; preserve both and do not reconcile without source",
+      "g-l5ka: current qualifying inventory not verified",
+      "g-l5ka: incomplete/duplicate station identity extraction",
+      "chn-sailspace-1: current qualifying inventory not verified",
+      "nor-steam-1: current qualifying inventory not verified",
+      "nor-steam-2: current qualifying inventory not verified",
+      "nor-steam-2b: current qualifying inventory not verified",
+      "nor-steam-2b: incomplete/duplicate station identity extraction",
+      "usa-usasat-ngso-8a: current qualifying inventory not verified",
+      "usa-usasat-ngso-8b: current qualifying inventory not verified",
+      "usa-usasat-ngso-8c: current qualifying inventory not verified",
+      "chn-gw-a59: current qualifying inventory not verified",
+      "chn-gw-2: current qualifying inventory not verified"
+    ],
+    "integrationReady": false
+  },
+  "tests": {
+    "productionBuildPassed": true,
+    "passed": 35,
+    "failed": 0,
+    "coverage": "Regional totals, unknowns, partial-year scope, bilingual displays, rendered routes, deterministic output and unchanged future assumptions."
+  },
+  "unchanged": {
+    "manualFutureOutlookAssumptions": true,
+    "ituFccEvidence": true,
+    "crewedCislunarEditorial": true,
+    "unknownBiuCompliance": true
+  },
+  "publication": {
+    "required": true,
+    "audience": "public",
+    "previousUserChangesExcluded": true,
+    "status": "Build and validation passed; exact release provenance recorded separately after deployment."
+  },
+  "blockers": [],
+  "sourceIssues": [
+    "HF October 23 shell 2 total 5085 versus state subtotal 5084: raw values retained, discrepancy flagged, no inference or production correction."
+  ]
+}

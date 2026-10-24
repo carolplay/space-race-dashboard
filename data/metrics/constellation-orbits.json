@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "source": {
     "url": "https://planet4589.org/space/gcat/tsv/derived/currentcat.tsv",
-    "updatedAt": "2026-10-17T19:15:34.000Z",
-    "updatedRaw": "2026 Oct 17 1915:34",
-    "retrievedAt": "2026-10-23T11:59:57.357Z",
-    "sha256": "bf1202fe5af8dfa1ff2f006288253ba8ecca71747be3ff6a18a7de808e540e11"
+    "updatedAt": "2026-10-24T02:00:41.000Z",
+    "updatedRaw": "2026 Oct 24 0200:41",
+    "retrievedAt": "2026-10-24T12:01:51.760Z",
+    "sha256": "407475f2d29299767af91d08cea592b9908ef778df649242340a5aff5ceda65d"
   },
   "method": {
     "altitude": "Arithmetic mean of catalogued perigee and apogee; not an instantaneous position.",
@@ -24,10 +24,10 @@
       "id": "starlink",
       "nameZh": "星链",
       "nameEn": "Starlink",
-      "inventory": 11154,
-      "inventoryAsOf": "2026-10-15",
-      "catalogMatched": 11151,
-      "plotted": 11151,
+      "inventory": 11144,
+      "inventoryAsOf": "2026-10-24",
+      "catalogMatched": 11144,
+      "plotted": 11144,
       "missingOrbit": 0,
       "flaggedOrbit": 0,
       "orbitalDateLabels": [
@@ -48,91 +48,93 @@
         "2026 Jul 25",
         "2026 Jul 26",
         "2026 Oct 14",
-        "2026 Oct 17",
+        "2026 Oct 21",
+        "2026 Oct 22",
+        "2026 Oct 23",
         "2026 Sep  2",
         "2026 Sep  7",
         "2026 Sep 20",
         "2026 Sep 28"
       ],
       "orbitDateCoverage": {
-        "datedRows": 11151,
+        "datedRows": 11144,
         "undatedRows": 0,
         "oldest": "2026-07-14",
-        "newest": "2026-10-17",
-        "olderThan7Days": 472
+        "newest": "2026-10-23",
+        "olderThan7Days": 499
       },
-      "inventoryDifference": -3,
+      "inventoryDifference": 0,
       "scope": "Name-matched payloads without exit dates in LEO/LLEO; subgroup catalogue coverage is not the independent fleet inventory.",
       "bins": [
         {
           "id": "43:475",
-          "count": 3231,
-          "altitudeKm": 482.64,
-          "inclinationDeg": 43,
+          "count": 3230,
+          "altitudeKm": 482.521,
+          "inclinationDeg": 43.001,
           "perigeeMinKm": 460,
-          "apogeeMaxKm": 502,
+          "apogeeMaxKm": 500,
           "flaggedCount": 0
         },
         {
           "id": "53:450",
-          "count": 2662,
-          "altitudeKm": 461.608,
-          "inclinationDeg": 53.16,
-          "perigeeMinKm": 436,
-          "apogeeMaxKm": 465,
+          "count": 2706,
+          "altitudeKm": 460.604,
+          "inclinationDeg": 53.159,
+          "perigeeMinKm": 435,
+          "apogeeMaxKm": 466,
           "flaggedCount": 0
         },
         {
           "id": "53:475",
-          "count": 1707,
-          "altitudeKm": 466.908,
-          "inclinationDeg": 53.16,
-          "perigeeMinKm": 459,
-          "apogeeMaxKm": 487,
+          "count": 1655,
+          "altitudeKm": 465.834,
+          "inclinationDeg": 53.159,
+          "perigeeMinKm": 444,
+          "apogeeMaxKm": 510,
           "flaggedCount": 0
         },
         {
           "id": "97:475",
-          "count": 1309,
-          "altitudeKm": 465.115,
+          "count": 1320,
+          "altitudeKm": 465.069,
           "inclinationDeg": 97.283,
-          "perigeeMinKm": 462,
-          "apogeeMaxKm": 487,
+          "perigeeMinKm": 461,
+          "apogeeMaxKm": 483,
           "flaggedCount": 0
         },
         {
           "id": "53:350",
-          "count": 333,
-          "altitudeKm": 358.464,
+          "count": 332,
+          "altitudeKm": 358.628,
           "inclinationDeg": 53.156,
           "perigeeMinKm": 334,
-          "apogeeMaxKm": 363,
+          "apogeeMaxKm": 364,
           "flaggedCount": 0
         },
         {
           "id": "43:350",
-          "count": 332,
-          "altitudeKm": 355.821,
+          "count": 331,
+          "altitudeKm": 355.31,
           "inclinationDeg": 43,
-          "perigeeMinKm": 327,
-          "apogeeMaxKm": 381,
+          "perigeeMinKm": 323,
+          "apogeeMaxKm": 379,
           "flaggedCount": 0
         },
         {
           "id": "70:475",
-          "count": 323,
-          "altitudeKm": 474.89,
+          "count": 314,
+          "altitudeKm": 474.207,
           "inclinationDeg": 70,
           "perigeeMinKm": 460,
-          "apogeeMaxKm": 489,
+          "apogeeMaxKm": 490,
           "flaggedCount": 0
         },
         {
           "id": "70:575",
-          "count": 256,
-          "altitudeKm": 571.525,
+          "count": 189,
+          "altitudeKm": 571.624,
           "inclinationDeg": 70,
-          "perigeeMinKm": 563,
+          "perigeeMinKm": 564,
           "apogeeMaxKm": 576,
           "flaggedCount": 0
         },
@@ -147,11 +149,11 @@
         },
         {
           "id": "53:250",
-          "count": 121,
-          "altitudeKm": 246.397,
-          "inclinationDeg": 53.156,
-          "perigeeMinKm": 235,
-          "apogeeMaxKm": 262,
+          "count": 122,
+          "altitudeKm": 246.234,
+          "inclinationDeg": 53.155,
+          "perigeeMinKm": 232,
+          "apogeeMaxKm": 258,
           "flaggedCount": 0
         },
         {
@@ -165,65 +167,74 @@
         },
         {
           "id": "97:275",
-          "count": 82,
-          "altitudeKm": 266.866,
-          "inclinationDeg": 97.282,
+          "count": 83,
+          "altitudeKm": 267.096,
+          "inclinationDeg": 97.285,
           "perigeeMinKm": 255,
-          "apogeeMaxKm": 279,
+          "apogeeMaxKm": 287,
           "flaggedCount": 0
         },
         {
           "id": "70:550",
-          "count": 74,
-          "altitudeKm": 544.966,
+          "count": 81,
+          "altitudeKm": 543.796,
           "inclinationDeg": 70,
-          "perigeeMinKm": 536,
-          "apogeeMaxKm": 560,
+          "perigeeMinKm": 535,
+          "apogeeMaxKm": 563,
           "flaggedCount": 0
         },
         {
           "id": "53:425",
-          "count": 68,
-          "altitudeKm": 424.735,
-          "inclinationDeg": 53.141,
-          "perigeeMinKm": 409,
-          "apogeeMaxKm": 439,
+          "count": 76,
+          "altitudeKm": 425.658,
+          "inclinationDeg": 53.145,
+          "perigeeMinKm": 411,
+          "apogeeMaxKm": 441,
           "flaggedCount": 0
         },
         {
-          "id": "53:500",
-          "count": 30,
-          "altitudeKm": 501.9,
-          "inclinationDeg": 53.152,
-          "perigeeMinKm": 488,
-          "apogeeMaxKm": 513,
+          "id": "70:525",
+          "count": 49,
+          "altitudeKm": 523.418,
+          "inclinationDeg": 70,
+          "perigeeMinKm": 511,
+          "apogeeMaxKm": 539,
+          "flaggedCount": 0
+        },
+        {
+          "id": "70:500",
+          "count": 35,
+          "altitudeKm": 501.357,
+          "inclinationDeg": 70,
+          "perigeeMinKm": 485,
+          "apogeeMaxKm": 516,
+          "flaggedCount": 0
+        },
+        {
+          "id": "70:450",
+          "count": 33,
+          "altitudeKm": 453.545,
+          "inclinationDeg": 70,
+          "perigeeMinKm": 446,
+          "apogeeMaxKm": 465,
           "flaggedCount": 0
         },
         {
           "id": "53:400",
-          "count": 30,
-          "altitudeKm": 400.6,
-          "inclinationDeg": 53.144,
-          "perigeeMinKm": 386,
-          "apogeeMaxKm": 415,
-          "flaggedCount": 0
-        },
-        {
-          "id": "53:550",
-          "count": 27,
-          "altitudeKm": 539.259,
-          "inclinationDeg": 53.16,
-          "perigeeMinKm": 538,
-          "apogeeMaxKm": 543,
+          "count": 28,
+          "altitudeKm": 401.946,
+          "inclinationDeg": 53.137,
+          "perigeeMinKm": 388,
+          "apogeeMaxKm": 414,
           "flaggedCount": 0
         },
         {
           "id": "53:525",
-          "count": 26,
-          "altitudeKm": 524.404,
-          "inclinationDeg": 53.179,
-          "perigeeMinKm": 512,
-          "apogeeMaxKm": 539,
+          "count": 28,
+          "altitudeKm": 523.857,
+          "inclinationDeg": 53.177,
+          "perigeeMinKm": 511,
+          "apogeeMaxKm": 534,
           "flaggedCount": 0
         },
         {
@@ -236,210 +247,246 @@
           "flaggedCount": 0
         },
         {
-          "id": "53:325",
+          "id": "53:375",
+          "count": 25,
+          "altitudeKm": 373.5,
+          "inclinationDeg": 53.13,
+          "perigeeMinKm": 357,
+          "apogeeMaxKm": 390,
+          "flaggedCount": 0
+        },
+        {
+          "id": "53:500",
           "count": 24,
-          "altitudeKm": 324,
-          "inclinationDeg": 53.05,
-          "perigeeMinKm": 308,
-          "apogeeMaxKm": 339,
+          "altitudeKm": 498.021,
+          "inclinationDeg": 53.151,
+          "perigeeMinKm": 487,
+          "apogeeMaxKm": 512,
+          "flaggedCount": 0
+        },
+        {
+          "id": "53:550",
+          "count": 24,
+          "altitudeKm": 539.167,
+          "inclinationDeg": 53.159,
+          "perigeeMinKm": 537,
+          "apogeeMaxKm": 541,
+          "flaggedCount": 0
+        },
+        {
+          "id": "53:325",
+          "count": 23,
+          "altitudeKm": 324.37,
+          "inclinationDeg": 53.062,
+          "perigeeMinKm": 309,
+          "apogeeMaxKm": 338,
           "flaggedCount": 0
         },
         {
           "id": "53:300",
-          "count": 24,
-          "altitudeKm": 300.542,
-          "inclinationDeg": 53.044,
-          "perigeeMinKm": 282,
+          "count": 23,
+          "altitudeKm": 300.543,
+          "inclinationDeg": 53.052,
+          "perigeeMinKm": 285,
           "apogeeMaxKm": 315,
           "flaggedCount": 0
         },
         {
-          "id": "70:500",
-          "count": 24,
-          "altitudeKm": 498.854,
-          "inclinationDeg": 70.001,
-          "perigeeMinKm": 485,
-          "apogeeMaxKm": 514,
-          "flaggedCount": 0
-        },
-        {
-          "id": "53:375",
-          "count": 21,
-          "altitudeKm": 372.429,
-          "inclinationDeg": 53.128,
-          "perigeeMinKm": 359,
-          "apogeeMaxKm": 387,
-          "flaggedCount": 0
-        },
-        {
-          "id": "70:525",
-          "count": 19,
-          "altitudeKm": 524.684,
-          "inclinationDeg": 70,
-          "perigeeMinKm": 509,
-          "apogeeMaxKm": 539,
-          "flaggedCount": 0
-        },
-        {
           "id": "53:275",
-          "count": 14,
-          "altitudeKm": 277.357,
-          "inclinationDeg": 53.063,
-          "perigeeMinKm": 261,
-          "apogeeMaxKm": 289,
+          "count": 15,
+          "altitudeKm": 275.5,
+          "inclinationDeg": 53.051,
+          "perigeeMinKm": 263,
+          "apogeeMaxKm": 288,
           "flaggedCount": 0
         },
         {
           "id": "97:450",
           "count": 14,
-          "altitudeKm": 454.607,
-          "inclinationDeg": 97.409,
-          "perigeeMinKm": 451,
-          "apogeeMaxKm": 458,
-          "flaggedCount": 0
-        },
-        {
-          "id": "97:500",
-          "count": 11,
-          "altitudeKm": 491.955,
-          "inclinationDeg": 97.283,
-          "perigeeMinKm": 486,
-          "apogeeMaxKm": 504,
+          "altitudeKm": 453.643,
+          "inclinationDeg": 97.401,
+          "perigeeMinKm": 447,
+          "apogeeMaxKm": 457,
           "flaggedCount": 0
         },
         {
           "id": "43:450",
           "count": 11,
-          "altitudeKm": 455.273,
-          "inclinationDeg": 42.997,
-          "perigeeMinKm": 433,
-          "apogeeMaxKm": 473,
+          "altitudeKm": 453.545,
+          "inclinationDeg": 42.995,
+          "perigeeMinKm": 430,
+          "apogeeMaxKm": 472,
           "flaggedCount": 0
         },
         {
           "id": "43:325",
           "count": 7,
-          "altitudeKm": 325.643,
-          "inclinationDeg": 42.986,
-          "perigeeMinKm": 301,
-          "apogeeMaxKm": 355,
-          "flaggedCount": 0
-        },
-        {
-          "id": "53:225",
-          "count": 6,
-          "altitudeKm": 225.5,
-          "inclinationDeg": 53.078,
-          "perigeeMinKm": 215,
-          "apogeeMaxKm": 236,
-          "flaggedCount": 0
-        },
-        {
-          "id": "70:450",
-          "count": 6,
-          "altitudeKm": 453.583,
-          "inclinationDeg": 70,
-          "perigeeMinKm": 447,
-          "apogeeMaxKm": 461,
+          "altitudeKm": 326.143,
+          "inclinationDeg": 42.984,
+          "perigeeMinKm": 295,
+          "apogeeMaxKm": 351,
           "flaggedCount": 0
         },
         {
           "id": "43:500",
           "count": 6,
-          "altitudeKm": 494.667,
-          "inclinationDeg": 43.002,
-          "perigeeMinKm": 485,
-          "apogeeMaxKm": 512,
+          "altitudeKm": 494.25,
+          "inclinationDeg": 42.998,
+          "perigeeMinKm": 484,
+          "apogeeMaxKm": 511,
           "flaggedCount": 0
         },
         {
           "id": "97:350",
           "count": 5,
-          "altitudeKm": 349.7,
-          "inclinationDeg": 97.282,
-          "perigeeMinKm": 342,
-          "apogeeMaxKm": 370,
+          "altitudeKm": 342.5,
+          "inclinationDeg": 97.28,
+          "perigeeMinKm": 333,
+          "apogeeMaxKm": 353,
           "flaggedCount": 0
         },
         {
-          "id": "98:325",
+          "id": "43:400",
           "count": 5,
-          "altitudeKm": 326.3,
-          "inclinationDeg": 97.53,
-          "perigeeMinKm": 314,
-          "apogeeMaxKm": 336,
-          "flaggedCount": 0
-        },
-        {
-          "id": "43:425",
-          "count": 5,
-          "altitudeKm": 422.8,
-          "inclinationDeg": 42.992,
-          "perigeeMinKm": 401,
-          "apogeeMaxKm": 448,
-          "flaggedCount": 0
-        },
-        {
-          "id": "43:300",
-          "count": 5,
-          "altitudeKm": 296.1,
-          "inclinationDeg": 42.992,
-          "perigeeMinKm": 279,
-          "apogeeMaxKm": 322,
+          "altitudeKm": 405.3,
+          "inclinationDeg": 42.994,
+          "perigeeMinKm": 383,
+          "apogeeMaxKm": 427,
           "flaggedCount": 0
         },
         {
           "id": "43:525",
           "count": 5,
-          "altitudeKm": 526.2,
+          "altitudeKm": 525.2,
           "inclinationDeg": 43,
-          "perigeeMinKm": 512,
-          "apogeeMaxKm": 539,
+          "perigeeMinKm": 511,
+          "apogeeMaxKm": 538,
+          "flaggedCount": 0
+        },
+        {
+          "id": "98:300",
+          "count": 4,
+          "altitudeKm": 304.875,
+          "inclinationDeg": 97.553,
+          "perigeeMinKm": 299,
+          "apogeeMaxKm": 309,
+          "flaggedCount": 0
+        },
+        {
+          "id": "43:275",
+          "count": 4,
+          "altitudeKm": 278.5,
+          "inclinationDeg": 42.995,
+          "perigeeMinKm": 267,
+          "apogeeMaxKm": 303,
           "flaggedCount": 0
         },
         {
           "id": "43:375",
           "count": 4,
-          "altitudeKm": 377,
-          "inclinationDeg": 42.99,
-          "perigeeMinKm": 352,
-          "apogeeMaxKm": 402,
+          "altitudeKm": 375,
+          "inclinationDeg": 42.993,
+          "perigeeMinKm": 351,
+          "apogeeMaxKm": 393,
+          "flaggedCount": 0
+        },
+        {
+          "id": "53:225",
+          "count": 3,
+          "altitudeKm": 227.833,
+          "inclinationDeg": 53.063,
+          "perigeeMinKm": 217,
+          "apogeeMaxKm": 233,
           "flaggedCount": 0
         },
         {
           "id": "70:425",
           "count": 3,
-          "altitudeKm": 429.5,
+          "altitudeKm": 433.667,
           "inclinationDeg": 70,
-          "perigeeMinKm": 418,
-          "apogeeMaxKm": 439,
+          "perigeeMinKm": 430,
+          "apogeeMaxKm": 438,
           "flaggedCount": 0
         },
         {
-          "id": "43:400",
+          "id": "43:250",
           "count": 3,
-          "altitudeKm": 400.333,
-          "inclinationDeg": 42.993,
-          "perigeeMinKm": 385,
-          "apogeeMaxKm": 423,
-          "flaggedCount": 0
-        },
-        {
-          "id": "70:350",
-          "count": 2,
-          "altitudeKm": 351.25,
-          "inclinationDeg": 69.99,
-          "perigeeMinKm": 340,
-          "apogeeMaxKm": 367,
-          "flaggedCount": 0
-        },
-        {
-          "id": "43:275",
-          "count": 2,
-          "altitudeKm": 275.75,
+          "altitudeKm": 251.5,
           "inclinationDeg": 43,
-          "perigeeMinKm": 273,
-          "apogeeMaxKm": 279,
+          "perigeeMinKm": 247,
+          "apogeeMaxKm": 257,
+          "flaggedCount": 0
+        },
+        {
+          "id": "43:425",
+          "count": 3,
+          "altitudeKm": 431,
+          "inclinationDeg": 42.993,
+          "perigeeMinKm": 414,
+          "apogeeMaxKm": 445,
+          "flaggedCount": 0
+        },
+        {
+          "id": "53:200",
+          "count": 2,
+          "altitudeKm": 206.5,
+          "inclinationDeg": 53.02,
+          "perigeeMinKm": 199,
+          "apogeeMaxKm": 215,
+          "flaggedCount": 0
+        },
+        {
+          "id": "98:325",
+          "count": 2,
+          "altitudeKm": 314.75,
+          "inclinationDeg": 97.52,
+          "perigeeMinKm": 312,
+          "apogeeMaxKm": 318,
+          "flaggedCount": 0
+        },
+        {
+          "id": "98:425",
+          "count": 2,
+          "altitudeKm": 429.5,
+          "inclinationDeg": 97.505,
+          "perigeeMinKm": 425,
+          "apogeeMaxKm": 434,
+          "flaggedCount": 0
+        },
+        {
+          "id": "70:400",
+          "count": 2,
+          "altitudeKm": 404.25,
+          "inclinationDeg": 69.995,
+          "perigeeMinKm": 400,
+          "apogeeMaxKm": 410,
+          "flaggedCount": 0
+        },
+        {
+          "id": "43:300",
+          "count": 2,
+          "altitudeKm": 300.5,
+          "inclinationDeg": 42.99,
+          "perigeeMinKm": 279,
+          "apogeeMaxKm": 311,
+          "flaggedCount": 0
+        },
+        {
+          "id": "97:525",
+          "count": 2,
+          "altitudeKm": 527.5,
+          "inclinationDeg": 97.28,
+          "perigeeMinKm": 520,
+          "apogeeMaxKm": 535,
+          "flaggedCount": 0
+        },
+        {
+          "id": "53:150",
+          "count": 1,
+          "altitudeKm": 142.5,
+          "inclinationDeg": 53.02,
+          "perigeeMinKm": 141,
+          "apogeeMaxKm": 144,
           "flaggedCount": 0
         },
         {
@@ -447,8 +494,17 @@
           "count": 1,
           "altitudeKm": 562.5,
           "inclinationDeg": 97.28,
-          "perigeeMinKm": 560,
-          "apogeeMaxKm": 565,
+          "perigeeMinKm": 562,
+          "apogeeMaxKm": 563,
+          "flaggedCount": 0
+        },
+        {
+          "id": "70:325",
+          "count": 1,
+          "altitudeKm": 327.5,
+          "inclinationDeg": 70,
+          "perigeeMinKm": 325,
+          "apogeeMaxKm": 330,
           "flaggedCount": 0
         },
         {
@@ -461,102 +517,39 @@
           "flaggedCount": 0
         },
         {
-          "id": "98:350",
+          "id": "98:150",
           "count": 1,
-          "altitudeKm": 339,
-          "inclinationDeg": 97.5,
-          "perigeeMinKm": 338,
-          "apogeeMaxKm": 340,
-          "flaggedCount": 0
-        },
-        {
-          "id": "98:425",
-          "count": 1,
-          "altitudeKm": 429.5,
-          "inclinationDeg": 97.51,
-          "perigeeMinKm": 429,
-          "apogeeMaxKm": 430,
-          "flaggedCount": 0
-        },
-        {
-          "id": "98:225",
-          "count": 1,
-          "altitudeKm": 234.5,
-          "inclinationDeg": 97.6,
-          "perigeeMinKm": 230,
-          "apogeeMaxKm": 239,
-          "flaggedCount": 0
-        },
-        {
-          "id": "98:300",
-          "count": 1,
-          "altitudeKm": 308,
-          "inclinationDeg": 97.61,
-          "perigeeMinKm": 307,
-          "apogeeMaxKm": 309,
-          "flaggedCount": 0
-        },
-        {
-          "id": "97:425",
-          "count": 1,
-          "altitudeKm": 435,
-          "inclinationDeg": 97.49,
-          "perigeeMinKm": 434,
-          "apogeeMaxKm": 436,
+          "altitudeKm": 156.5,
+          "inclinationDeg": 97.59,
+          "perigeeMinKm": 150,
+          "apogeeMaxKm": 163,
           "flaggedCount": 0
         },
         {
           "id": "98:475",
           "count": 1,
-          "altitudeKm": 464,
+          "altitudeKm": 462.5,
           "inclinationDeg": 97.59,
-          "perigeeMinKm": 462,
-          "apogeeMaxKm": 466,
-          "flaggedCount": 0
-        },
-        {
-          "id": "70:400",
-          "count": 1,
-          "altitudeKm": 409.5,
-          "inclinationDeg": 69.99,
-          "perigeeMinKm": 406,
-          "apogeeMaxKm": 413,
-          "flaggedCount": 0
-        },
-        {
-          "id": "43:250",
-          "count": 1,
-          "altitudeKm": 255,
-          "inclinationDeg": 42.98,
-          "perigeeMinKm": 239,
-          "apogeeMaxKm": 271,
+          "perigeeMinKm": 460,
+          "apogeeMaxKm": 465,
           "flaggedCount": 0
         },
         {
           "id": "98:550",
           "count": 1,
-          "altitudeKm": 539,
+          "altitudeKm": 538.5,
           "inclinationDeg": 97.6,
-          "perigeeMinKm": 529,
+          "perigeeMinKm": 528,
           "apogeeMaxKm": 549,
           "flaggedCount": 0
         },
         {
-          "id": "97:525",
+          "id": "70:350",
           "count": 1,
-          "altitudeKm": 533.5,
-          "inclinationDeg": 97.28,
-          "perigeeMinKm": 532,
-          "apogeeMaxKm": 535,
-          "flaggedCount": 0
-        },
-        {
-          "id": "97:550",
-          "count": 1,
-          "altitudeKm": 540,
-          "inclinationDeg": 97.28,
-          "perigeeMinKm": 539,
-          "apogeeMaxKm": 541,
+          "altitudeKm": 357,
+          "inclinationDeg": 69.98,
+          "perigeeMinKm": 351,
+          "apogeeMaxKm": 363,
           "flaggedCount": 0
         }
       ]
@@ -566,20 +559,20 @@
       "nameZh": "Amazon Leo",
       "nameEn": "Amazon Leo",
       "inventory": 392,
-      "inventoryAsOf": "2026-10-15",
+      "inventoryAsOf": "2026-10-24",
       "catalogMatched": 392,
       "plotted": 392,
       "missingOrbit": 0,
       "flaggedOrbit": 0,
       "orbitalDateLabels": [
-        "2026 Oct 16",
-        "2026 Oct 17"
+        "2026 Oct 22",
+        "2026 Oct 23"
       ],
       "orbitDateCoverage": {
         "datedRows": 392,
         "undatedRows": 0,
-        "oldest": "2026-10-16",
-        "newest": "2026-10-17",
+        "oldest": "2026-10-22",
+        "newest": "2026-10-23",
         "olderThan7Days": 0
       },
       "inventoryDifference": 0,
@@ -587,74 +580,83 @@
       "bins": [
         {
           "id": "52:625",
-          "count": 372,
-          "altitudeKm": 628.942,
+          "count": 374,
+          "altitudeKm": 629.008,
           "inclinationDeg": 51.9,
-          "perigeeMinKm": 612,
-          "apogeeMaxKm": 630,
+          "perigeeMinKm": 607,
+          "apogeeMaxKm": 631,
           "flaggedCount": 0
         },
         {
           "id": "52:650",
           "count": 8,
-          "altitudeKm": 639.625,
+          "altitudeKm": 639.688,
           "inclinationDeg": 51.9,
           "perigeeMinKm": 637,
           "apogeeMaxKm": 642,
           "flaggedCount": 0
         },
         {
-          "id": "52:575",
-          "count": 4,
-          "altitudeKm": 574.625,
-          "inclinationDeg": 51.895,
-          "perigeeMinKm": 562,
-          "apogeeMaxKm": 590,
-          "flaggedCount": 0
-        },
-        {
           "id": "52:450",
           "count": 3,
-          "altitudeKm": 448,
+          "altitudeKm": 447.833,
           "inclinationDeg": 51.86,
           "perigeeMinKm": 441,
-          "apogeeMaxKm": 454,
+          "apogeeMaxKm": 455,
           "flaggedCount": 0
         },
         {
-          "id": "52:475",
+          "id": "52:600",
           "count": 2,
-          "altitudeKm": 469.75,
-          "inclinationDeg": 51.88,
-          "perigeeMinKm": 463,
-          "apogeeMaxKm": 474,
+          "altitudeKm": 601.25,
+          "inclinationDeg": 51.9,
+          "perigeeMinKm": 593,
+          "apogeeMaxKm": 615,
           "flaggedCount": 0
         },
         {
           "id": "52:425",
           "count": 1,
-          "altitudeKm": 435.5,
+          "altitudeKm": 435,
           "inclinationDeg": 51.87,
           "perigeeMinKm": 433,
-          "apogeeMaxKm": 438,
+          "apogeeMaxKm": 437,
+          "flaggedCount": 0
+        },
+        {
+          "id": "52:575",
+          "count": 1,
+          "altitudeKm": 569,
+          "inclinationDeg": 51.89,
+          "perigeeMinKm": 566,
+          "apogeeMaxKm": 572,
           "flaggedCount": 0
         },
         {
           "id": "52:525",
           "count": 1,
-          "altitudeKm": 532,
+          "altitudeKm": 527.5,
           "inclinationDeg": 51.89,
-          "perigeeMinKm": 528,
+          "perigeeMinKm": 519,
           "apogeeMaxKm": 536,
+          "flaggedCount": 0
+        },
+        {
+          "id": "52:475",
+          "count": 1,
+          "altitudeKm": 482.5,
+          "inclinationDeg": 51.88,
+          "perigeeMinKm": 479,
+          "apogeeMaxKm": 486,
           "flaggedCount": 0
         },
         {
           "id": "52:500",
           "count": 1,
-          "altitudeKm": 501,
+          "altitudeKm": 499.5,
           "inclinationDeg": 51.88,
-          "perigeeMinKm": 493,
-          "apogeeMaxKm": 509,
+          "perigeeMinKm": 494,
+          "apogeeMaxKm": 505,
           "flaggedCount": 0
         }
       ]
@@ -664,20 +666,20 @@
       "nameZh": "OneWeb",
       "nameEn": "OneWeb",
       "inventory": 654,
-      "inventoryAsOf": "2026-10-15",
+      "inventoryAsOf": "2026-10-24",
       "catalogMatched": 654,
       "plotted": 654,
       "missingOrbit": 0,
       "flaggedOrbit": 0,
       "orbitalDateLabels": [
-        "2026 Oct 16",
-        "2026 Oct 17"
+        "2026 Oct 22",
+        "2026 Oct 23"
       ],
       "orbitDateCoverage": {
         "datedRows": 654,
         "undatedRows": 0,
-        "oldest": "2026-10-16",
-        "newest": "2026-10-17",
+        "oldest": "2026-10-22",
+        "newest": "2026-10-23",
         "olderThan7Days": 0
       },
       "inventoryDifference": 0,
@@ -685,29 +687,29 @@
       "bins": [
         {
           "id": "88:1200",
-          "count": 322,
-          "altitudeKm": 1199.455,
-          "inclinationDeg": 87.905,
+          "count": 323,
+          "altitudeKm": 1199.483,
+          "inclinationDeg": 87.906,
           "perigeeMinKm": 1187,
           "apogeeMaxKm": 1213,
           "flaggedCount": 0
         },
         {
           "id": "88:1225",
-          "count": 171,
-          "altitudeKm": 1217.523,
-          "inclinationDeg": 87.893,
+          "count": 170,
+          "altitudeKm": 1217.541,
+          "inclinationDeg": 87.891,
           "perigeeMinKm": 1211,
-          "apogeeMaxKm": 1227,
+          "apogeeMaxKm": 1226,
           "flaggedCount": 0
         },
         {
           "id": "88:1175",
           "count": 154,
-          "altitudeKm": 1181.269,
+          "altitudeKm": 1181.299,
           "inclinationDeg": 87.92,
           "perigeeMinKm": 1170,
-          "apogeeMaxKm": 1187,
+          "apogeeMaxKm": 1188,
           "flaggedCount": 0
         },
         {
@@ -724,8 +726,8 @@
           "count": 1,
           "altitudeKm": 595.5,
           "inclinationDeg": 88.94,
-          "perigeeMinKm": 595,
-          "apogeeMaxKm": 596,
+          "perigeeMinKm": 594,
+          "apogeeMaxKm": 597,
           "flaggedCount": 0
         },
         {
@@ -733,8 +735,8 @@
           "count": 1,
           "altitudeKm": 698.5,
           "inclinationDeg": 87.9,
-          "perigeeMinKm": 452,
-          "apogeeMaxKm": 945,
+          "perigeeMinKm": 451,
+          "apogeeMaxKm": 946,
           "flaggedCount": 0
         },
         {
@@ -742,8 +744,8 @@
           "count": 1,
           "altitudeKm": 1162,
           "inclinationDeg": 87.92,
-          "perigeeMinKm": 1161,
-          "apogeeMaxKm": 1163,
+          "perigeeMinKm": 1160,
+          "apogeeMaxKm": 1164,
           "flaggedCount": 0
         },
         {
@@ -780,9 +782,9 @@
       "nameZh": "国网",
       "nameEn": "Guowang",
       "inventory": 222,
-      "inventoryAsOf": "2026-10-15",
-      "catalogMatched": 220,
-      "plotted": 220,
+      "inventoryAsOf": "2026-10-24",
+      "catalogMatched": 222,
+      "plotted": 222,
       "missingOrbit": 0,
       "flaggedOrbit": 0,
       "orbitalDateLabels": [
@@ -794,43 +796,45 @@
         "2026 Aug 20",
         "2026 Aug 21",
         "2026 Oct 10",
-        "2026 Oct 16",
         "2026 Oct 17",
+        "2026 Oct 21",
+        "2026 Oct 22",
+        "2026 Oct 23",
         "2026 Sep 17",
         "2026 Sep 24"
       ],
       "orbitDateCoverage": {
-        "datedRows": 220,
+        "datedRows": 222,
         "undatedRows": 0,
         "oldest": "2026-08-07",
-        "newest": "2026-10-17",
-        "olderThan7Days": 36
+        "newest": "2026-10-23",
+        "olderThan7Days": 43
       },
-      "inventoryDifference": -2,
+      "inventoryDifference": 0,
       "scope": "Name-matched payloads without exit dates in LEO/LLEO; subgroup catalogue coverage is not the independent fleet inventory.",
       "bins": [
         {
           "id": "50:1150",
           "count": 117,
-          "altitudeKm": 1148.803,
-          "inclinationDeg": 50.004,
+          "altitudeKm": 1148.799,
+          "inclinationDeg": 50.003,
           "perigeeMinKm": 1140,
           "apogeeMaxKm": 1157,
           "flaggedCount": 0
         },
         {
           "id": "87:1175",
-          "count": 47,
-          "altitudeKm": 1167.426,
-          "inclinationDeg": 86.501,
-          "perigeeMinKm": 1165,
-          "apogeeMaxKm": 1170,
+          "count": 48,
+          "altitudeKm": 1167.479,
+          "inclinationDeg": 86.5,
+          "perigeeMinKm": 1164,
+          "apogeeMaxKm": 1171,
           "flaggedCount": 0
         },
         {
           "id": "50:925",
-          "count": 25,
-          "altitudeKm": 919.44,
+          "count": 27,
+          "altitudeKm": 919.519,
           "inclinationDeg": 50,
           "perigeeMinKm": 911,
           "apogeeMaxKm": 930,
@@ -847,11 +851,11 @@
         },
         {
           "id": "86:1175",
-          "count": 13,
-          "altitudeKm": 1167.462,
+          "count": 12,
+          "altitudeKm": 1167.458,
           "inclinationDeg": 86.49,
-          "perigeeMinKm": 1164,
-          "apogeeMaxKm": 1171,
+          "perigeeMinKm": 1166,
+          "apogeeMaxKm": 1169,
           "flaggedCount": 0
         }
       ]
@@ -861,14 +865,14 @@
       "nameZh": "千帆",
       "nameEn": "Qianfan",
       "inventory": 256,
-      "inventoryAsOf": "2026-10-15",
+      "inventoryAsOf": "2026-10-24",
       "catalogMatched": 256,
       "plotted": 256,
       "missingOrbit": 0,
       "flaggedOrbit": 0,
       "orbitalDateLabels": [
-        "2026 Oct 16",
-        "2026 Oct 17",
+        "2026 Oct 22",
+        "2026 Oct 23",
         "2026 Sep 15",
         "2026 Sep 17",
         "2026 Sep 19"
@@ -877,7 +881,7 @@
         "datedRows": 256,
         "undatedRows": 0,
         "oldest": "2026-09-15",
-        "newest": "2026-10-17",
+        "newest": "2026-10-23",
         "olderThan7Days": 18
       },
       "inventoryDifference": 0,
@@ -886,25 +890,34 @@
         {
           "id": "89:1075",
           "count": 197,
-          "altitudeKm": 1068.137,
-          "inclinationDeg": 88.993,
-          "perigeeMinKm": 1049,
-          "apogeeMaxKm": 1098,
+          "altitudeKm": 1067.992,
+          "inclinationDeg": 88.992,
+          "perigeeMinKm": 1043,
+          "apogeeMaxKm": 1092,
           "flaggedCount": 0
         },
         {
           "id": "89:900",
-          "count": 12,
-          "altitudeKm": 902.625,
-          "inclinationDeg": 88.999,
-          "perigeeMinKm": 896,
+          "count": 13,
+          "altitudeKm": 901.769,
+          "inclinationDeg": 88.998,
+          "perigeeMinKm": 886,
           "apogeeMaxKm": 917,
+          "flaggedCount": 0
+        },
+        {
+          "id": "89:975",
+          "count": 9,
+          "altitudeKm": 970.667,
+          "inclinationDeg": 88.99,
+          "perigeeMinKm": 954,
+          "apogeeMaxKm": 987,
           "flaggedCount": 0
         },
         {
           "id": "89:800",
           "count": 8,
-          "altitudeKm": 802.188,
+          "altitudeKm": 802.25,
           "inclinationDeg": 88.996,
           "perigeeMinKm": 786,
           "apogeeMaxKm": 821,
@@ -920,72 +933,63 @@
           "flaggedCount": 0
         },
         {
-          "id": "89:950",
-          "count": 7,
-          "altitudeKm": 946.357,
-          "inclinationDeg": 88.993,
-          "perigeeMinKm": 935,
-          "apogeeMaxKm": 964,
-          "flaggedCount": 0
-        },
-        {
-          "id": "89:850",
-          "count": 5,
-          "altitudeKm": 851.6,
-          "inclinationDeg": 88.996,
-          "perigeeMinKm": 838,
-          "apogeeMaxKm": 868,
-          "flaggedCount": 0
-        },
-        {
-          "id": "89:975",
-          "count": 5,
-          "altitudeKm": 966.2,
-          "inclinationDeg": 88.994,
-          "perigeeMinKm": 959,
-          "apogeeMaxKm": 976,
+          "id": "89:875",
+          "count": 4,
+          "altitudeKm": 876.625,
+          "inclinationDeg": 88.99,
+          "perigeeMinKm": 860,
+          "apogeeMaxKm": 892,
           "flaggedCount": 0
         },
         {
           "id": "89:925",
           "count": 4,
-          "altitudeKm": 930.125,
-          "inclinationDeg": 88.995,
+          "altitudeKm": 928.625,
+          "inclinationDeg": 88.99,
           "perigeeMinKm": 919,
           "apogeeMaxKm": 939,
           "flaggedCount": 0
         },
         {
-          "id": "89:875",
+          "id": "89:850",
           "count": 3,
-          "altitudeKm": 881,
+          "altitudeKm": 849.5,
           "inclinationDeg": 88.99,
-          "perigeeMinKm": 861,
-          "apogeeMaxKm": 891,
+          "perigeeMinKm": 838,
+          "apogeeMaxKm": 867,
           "flaggedCount": 0
         },
         {
           "id": "89:825",
           "count": 2,
-          "altitudeKm": 833.25,
+          "altitudeKm": 825.75,
           "inclinationDeg": 88.985,
-          "perigeeMinKm": 820,
-          "apogeeMaxKm": 843,
+          "perigeeMinKm": 806,
+          "apogeeMaxKm": 842,
+          "flaggedCount": 0
+        },
+        {
+          "id": "89:950",
+          "count": 2,
+          "altitudeKm": 947.5,
+          "inclinationDeg": 88.99,
+          "perigeeMinKm": 934,
+          "apogeeMaxKm": 958,
           "flaggedCount": 0
         },
         {
           "id": "89:1050",
           "count": 2,
-          "altitudeKm": 1046.5,
-          "inclinationDeg": 88.985,
+          "altitudeKm": 1046.75,
+          "inclinationDeg": 88.99,
           "perigeeMinKm": 1037,
-          "apogeeMaxKm": 1055,
+          "apogeeMaxKm": 1056,
           "flaggedCount": 0
         },
         {
           "id": "89:1025",
           "count": 2,
-          "altitudeKm": 1029.5,
+          "altitudeKm": 1029.25,
           "inclinationDeg": 88.99,
           "perigeeMinKm": 1010,
           "apogeeMaxKm": 1052,
@@ -993,9 +997,9 @@
         },
         {
           "id": "89:1000",
-          "count": 1,
-          "altitudeKm": 987.5,
-          "inclinationDeg": 89.01,
+          "count": 2,
+          "altitudeKm": 987.75,
+          "inclinationDeg": 89.005,
           "perigeeMinKm": 967,
           "apogeeMaxKm": 1008,
           "flaggedCount": 0

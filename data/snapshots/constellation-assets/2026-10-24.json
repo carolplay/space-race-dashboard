@@ -1,0 +1,80 @@
+{
+  "retrievedAt": "2026-10-24T12:01:12.543Z",
+  "observations": [
+    {
+      "id": "starlink",
+      "url": "https://planet4589.org/space/con/star/stats.html",
+      "rowLabel": "Total",
+      "updatedRaw": "Data last updated: 2026 Oct 24 0126:41",
+      "updatedAt": "2026-10-24T01:26:41.000Z",
+      "dataAsOf": "2026-10-24",
+      "sha256": "2739056805dcbc0193d60291d76f33767266c98b0c2ebadf5a399b3dc08f0c71",
+      "launched": 13015,
+      "failedToOrbit": 20,
+      "totalDown": 1871,
+      "inOrbit": 11144,
+      "workingEstimate": 11129,
+      "operationalOrbitEstimate": 10022
+    },
+    {
+      "id": "amazon-leo",
+      "url": "https://planet4589.org/space/con/kp/stats.html",
+      "rowLabel": "Kuiper satellites",
+      "updatedRaw": "Data last updated: 2026 Oct 24 0127:43",
+      "updatedAt": "2026-10-24T01:27:43.000Z",
+      "dataAsOf": "2026-10-24",
+      "sha256": "7011c3be8b6135c6738283bfaa4b63e121d9c249a468299faf64d72eb6540f10",
+      "launched": 398,
+      "failedToOrbit": 0,
+      "totalDown": 6,
+      "inOrbit": 392,
+      "workingEstimate": 392,
+      "operationalOrbitEstimate": 368
+    },
+    {
+      "id": "oneweb",
+      "url": "https://planet4589.org/space/con/ow/stats.html",
+      "rowLabel": "OneWeb",
+      "updatedRaw": "Data last updated: 2026 Oct 24 0131:44",
+      "updatedAt": "2026-10-24T01:31:44.000Z",
+      "dataAsOf": "2026-10-24",
+      "sha256": "c45ae83c86fb4c1c167e3160ecc53593c11f510af3d8107acdd0eef1dd141b0e",
+      "launched": 656,
+      "failedToOrbit": 0,
+      "totalDown": 2,
+      "inOrbit": 654,
+      "workingEstimate": 651,
+      "operationalOrbitEstimate": 625
+    },
+    {
+      "id": "guowang",
+      "url": "https://planet4589.org/space/con/xw/stats.html",
+      "rowLabel": "HW Digui",
+      "updatedRaw": "Data last updated: 2026 Oct 24 0133:08",
+      "updatedAt": "2026-10-24T01:33:08.000Z",
+      "dataAsOf": "2026-10-24",
+      "sha256": "8f255162deed491c329f537dd812b00e39422a62e236416a492c42bb7044b495",
+      "launched": 222,
+      "failedToOrbit": 0,
+      "totalDown": 0,
+      "inOrbit": 222,
+      "workingEstimate": 222,
+      "operationalOrbitEstimate": 191
+    },
+    {
+      "id": "qianfan",
+      "url": "https://planet4589.org/space/con/qf/stats.html",
+      "rowLabel": "Qianfan Xingzuo",
+      "updatedRaw": "Data last updated: 2026 Oct 24 0134:09",
+      "updatedAt": "2026-10-24T01:34:09.000Z",
+      "dataAsOf": "2026-10-24",
+      "sha256": "5ae13684a41896232a18c0f0c3a048b0aa21e1662cdd8cc31705c3627da1ae53",
+      "launched": 256,
+      "failedToOrbit": 0,
+      "totalDown": 0,
+      "inOrbit": 256,
+      "workingEstimate": 234,
+      "operationalOrbitEstimate": 195
+    }
+  ]
+}

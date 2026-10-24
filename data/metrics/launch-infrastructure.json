@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T11:59:15.414Z",
+  "generatedAt": "2026-10-24T12:01:11.188Z",
   "coverage": {
     "from": "2024-01-01",
-    "to": "2026-10-23"
+    "to": "2026-10-24"
   },
   "source": {
     "name": "Launch Library 2",
@@ -20,7 +20,7 @@
   "summary": {
     "observedSites": 28,
     "observedPads": 62,
-    "orbitalAttempts": 832,
+    "orbitalAttempts": 834,
     "activePads": 61
   },
   "sites": [
@@ -60,8 +60,8 @@
       "name": "Vandenberg SFB, CA, USA",
       "countryCode": "US",
       "region": "us",
-      "attempts": 180,
-      "success": 178,
+      "attempts": 181,
+      "success": 179,
       "successRate": 98.9,
       "padCount": 3,
       "rocketFamilies": [
@@ -80,7 +80,7 @@
         },
         {
           "year": "2026",
-          "attempts": 67
+          "attempts": 68
         }
       ]
     },
@@ -89,9 +89,9 @@
       "name": "Jiuquan Satellite Launch Center, People's Republic of China",
       "countryCode": "CN",
       "region": "cn",
-      "attempts": 81,
-      "success": 74,
-      "successRate": 91.4,
+      "attempts": 82,
+      "success": 75,
+      "successRate": 91.5,
       "padCount": 10,
       "rocketFamilies": [
         "Ceres-1",
@@ -118,7 +118,7 @@
         },
         {
           "year": "2026",
-          "attempts": 26
+          "attempts": 27
         }
       ]
     },
@@ -779,11 +779,11 @@
       "active": true,
       "latitude": 34.632,
       "longitude": -120.611,
-      "attempts": 175,
-      "success": 174,
+      "attempts": 176,
+      "success": 175,
       "successRate": 99.4,
       "firstLaunch": "2024-01-03",
-      "lastLaunch": "2026-10-16",
+      "lastLaunch": "2026-10-23",
       "medianIntervalDays": 4.6,
       "fastestIntervalDays": 2.3,
       "rocketFamilies": [
@@ -800,7 +800,7 @@
         },
         {
           "year": "2026",
-          "attempts": 65
+          "attempts": 66
         }
       ]
     },
@@ -841,6 +841,42 @@
       ]
     },
     {
+      "id": 22,
+      "name": "Launch Area 94 (SLS-2 / 603)",
+      "siteId": 17,
+      "site": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "countryCode": "CN",
+      "region": "cn",
+      "active": true,
+      "latitude": 40.960482,
+      "longitude": 100.298059,
+      "attempts": 28,
+      "success": 28,
+      "successRate": 100,
+      "firstLaunch": "2024-03-21",
+      "lastLaunch": "2026-10-23",
+      "medianIntervalDays": 21,
+      "fastestIntervalDays": 10.8,
+      "rocketFamilies": [
+        "Long March 2",
+        "Long March 4"
+      ],
+      "annual": [
+        {
+          "year": "2024",
+          "attempts": 8
+        },
+        {
+          "year": "2025",
+          "attempts": 13
+        },
+        {
+          "year": "2026",
+          "attempts": 7
+        }
+      ]
+    },
+    {
       "id": 185,
       "name": "Rocket Lab Launch Complex 1B",
       "siteId": 10,
@@ -872,42 +908,6 @@
         {
           "year": "2026",
           "attempts": 7
-        }
-      ]
-    },
-    {
-      "id": 22,
-      "name": "Launch Area 94 (SLS-2 / 603)",
-      "siteId": 17,
-      "site": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "countryCode": "CN",
-      "region": "cn",
-      "active": true,
-      "latitude": 40.960482,
-      "longitude": 100.298059,
-      "attempts": 27,
-      "success": 27,
-      "successRate": 100,
-      "firstLaunch": "2024-03-21",
-      "lastLaunch": "2026-09-10",
-      "medianIntervalDays": 21,
-      "fastestIntervalDays": 10.8,
-      "rocketFamilies": [
-        "Long March 2",
-        "Long March 4"
-      ],
-      "annual": [
-        {
-          "year": "2024",
-          "attempts": 8
-        },
-        {
-          "year": "2025",
-          "attempts": 13
-        },
-        {
-          "year": "2026",
-          "attempts": 6
         }
       ]
     },
